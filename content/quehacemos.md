@@ -6,18 +6,27 @@ design:
   spacing: "3rem"
 
 sections:
-  # Intro (imagen + texto)
-  - block: cta-image-paragraph
-    id: solutions
+  # ---------- HERO angosto (imagen de fondo + texto grande) ----------
+  - block: hero
     content:
-      items:
-        - title: "Qué hacemos"
-          text: "Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad."
-          image: "organigramaapaisado.png"  # asegurate de tenerla en assets/media/
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.</span>'
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]   # hero más bajo
+        margin: [0, 0, 0, 0]
+      css_class: "min-h-[40vh]"          # altura acotada (requiere Tailwind)
+      background:
+        image:
+          # ⚠️ Subí esta imagen a assets/media/ con este nombre (o cámbialo aquí):
+          filename: "quehacemos-hero.jpg"
+          filters:
+            brightness: 0.45             # oscurece para mejor contraste
+          size: cover
+          position: center
+          parallax: false
+        text_color_light: true
 
-  # Tres columnas con iconos + CTA "Ver más" que anclan a cada pilar
+  # ---------- Tres columnas con iconos + CTA "Ver más" que anclan a cada pilar ----------
   - block: features
     id: pilares
     content:
@@ -25,7 +34,7 @@ sections:
       text: ""
       items:
         - name: "Impulsamos Infraestructura"
-          icon: "cloud"   # ← icono de nube (Heroicons)
+          icon: "cloud"       # icono de nube (Heroicons)
           icon_pack: "hero"
           description: |
             Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
@@ -46,7 +55,7 @@ sections:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
 
-  # Heading centrado (mínimo espaciado y protagonismo)
+  # ---------- Heading centrado (mínimo espaciado y protagonismo) ----------
   - block: cta-card
     id: heading-proyectos
     content:
@@ -64,7 +73,7 @@ sections:
         css_class: "bg-transparent shadow-none p-0 text-center"
         css_style: "margin:0;"
 
-  # PROYECTOS DESTACADOS (tarjetas con etiqueta de pilar + botón)
+  # ---------- PROYECTOS DESTACADOS ----------
   - block: features
     id: destacados
     content:
@@ -112,7 +121,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
 
-  # PROYECTOS (Infra)
   - block: features
     id: infra-proyectos
     content:
@@ -137,7 +145,6 @@ sections:
     design:
       columns: 3
 
-  # MÉTRICAS (Infra)
   - block: stats
     content:
       items:
@@ -148,7 +155,6 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # TESTIMONIOS (Infra)
   - block: testimonials
     content:
       items:
@@ -175,7 +181,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#C83737;color:#FFFFFF;"
 
-  # PROYECTOS (Formación)
   - block: features
     id: formacion-proyectos
     content:
@@ -200,7 +205,6 @@ sections:
     design:
       columns: 3
 
-  # MÉTRICAS (Formación)
   - block: stats
     content:
       items:
@@ -213,7 +217,6 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # TESTIMONIOS (Formación)
   - block: testimonials
     content:
       items:
@@ -240,7 +243,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#F77B20;color:#FFFFFF;"
 
-  # PROYECTOS (Comunidad)
   - block: features
     id: comunidad-proyectos
     content:
@@ -265,7 +267,6 @@ sections:
     design:
       columns: 3
 
-  # MÉTRICAS (Comunidad)
   - block: stats
     content:
       items:
@@ -278,7 +279,6 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # TESTIMONIOS (Comunidad)
   - block: testimonials
     content:
       items:
