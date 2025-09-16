@@ -20,3 +20,19 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
+
+# --------- PROXIES PARA EL FEED DEL BLOG (evita CORS) ---------
+
+# Usado por el blox rss-list en /blog/:
+[[redirects]]
+  from = "/blog/feed"
+  to = "https://www.metadocencia.org/post/index.xml"
+  status = 200
+  force = true
+
+# Alternativa/compatibilidad si alguien pide /blog/index.xml:
+[[redirects]]
+  from = "/blog/index.xml"
+  to = "https://www.metadocencia.org/post/index.xml"
+  status = 200
+  force = true
