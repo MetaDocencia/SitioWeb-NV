@@ -18,7 +18,7 @@ sections:
       background:
         image:
           # ⚠️ Subí esta imagen a assets/media/ con este nombre (o cámbialo aquí):
-          filename: "quehacemos-hero.jpg"
+          filename: "1naranjaazul.png"
           filters:
             brightness: 0.45             # oscurece para mejor contraste
           size: cover
