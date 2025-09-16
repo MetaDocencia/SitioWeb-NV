@@ -10,10 +10,16 @@ design:
 sections:
   - block: hero
     content:
-      title: "Potenciemos a América Latina en el mapa de la investigación global"
-      primary_action:
-        text: "Súmate"
-        url: "https://julianbuede.github.io/cta/"
+      # Título en HTML para controlar tamaño/contraste
+      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos a América Latina en el mapa de la investigación global</span>'
+      # Botón personalizado más grande y visible
+      text: |
+        <a href="https://julianbuede.github.io/cta/"
+           class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
+                  bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
+                  text-white">
+          Súmate
+        </a>
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -28,6 +34,7 @@ sections:
           size: cover
           position: center
           parallax: false
+        text_color_light: true   # asegura textos claros sobre el fondo
 
   - block: cta-image-paragraph
     id: solutions
@@ -46,7 +53,6 @@ sections:
             - "Impulsamos infraestructura"
             - "Formamos a personas investigadoras"
             - "Construimos comunidad"
-          # Colocá el archivo en assets/media/organigramaapaisado.png
           image: "organigramaapaisado.png"
           button:
             text: "Conoce nuestros proyectos"
@@ -81,7 +87,7 @@ sections:
       items:
         - name: "3 TESTIMONIOS A DEFINIR - Julio Zetter"
           role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México"
-          image: "juliozetter.jpeg"   # colocar en assets/media/juliozetter.jpeg si lo usás
+          image: "juliozetter.jpeg"
           text: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia"
     design:
       spacing:
