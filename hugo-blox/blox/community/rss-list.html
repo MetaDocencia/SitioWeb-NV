@@ -1,0 +1,118 @@
+{{/* 
+  Bloque 'rss-list' (client-side)
+  Lee un RSS y renderiza cards estilo grid, similar al blog nuevo.
+
+  Parámetros en page YAML:
+  - content.feed_url       (string)   URL del feed RSS (proxy recomendado)
+  - content.limit          (int)      cantidad máx. de ítems (default 12)
+  - content.show_excerpt   (bool)     muestra resumen (default true)
+  - content.show_date      (bool)     muestra fecha (default true)
+  - design.columns         (2|3|4|5)  columnas responsivas (default 3)
+*/}}
+
+{{ $b := .block }}
+{{ $c := (index $b "content") | default dict }}
+{{ $d := (index $b "design")  | default dict }}
+
+{{ $feed := (index $c "feed_url") | default "https://www.metadocencia.org/post/index.xml" }}
+{{ $limit := (index $c "limit") | default 12 }}
+{{ $showExcerpt := (index $c "show_excerpt") | default true }}
+{{ $showDate := (index $c "show_date") | default true }}
+
+{{ $cols := (index $d "columns") | default 3 }}
+{{ $grid := "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }}
+{{ if eq $cols 2 }}{{ $grid = "grid-cols-1 sm:grid-cols-2" }}{{ end }}
+{{ if eq $cols 4 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" }}{{ end }}
+{{ if eq $cols 5 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5" }}{{ end }}
+
+<section id="{{ (index $b "id") | default "rss-list" }}" class="py-6">
+  <div class="container mx-auto px-6">
+    <div id="{{ (index $b "id") | default "rss-list" }}-wrap">
+      <div class="mb-4 text-sm text-gray-500 dark:text-gray-400">Cargando notas…</div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const wrapId = "{{ (index $b "id") | default "rss-list" }}-wrap";
+  const FEED_URL = "{{ $feed }}";
+  const LIMIT = {{ $limit }};
+  const SHOW_EXCERPT = {{ if $showExcerpt }}true{{ else }}false{{ end }};
+  const SHOW_DATE = {{ if $showDate }}true{{ else }}false{{ end }};
+  const GRID_CLASSES = "{{ $grid }}";
+
+  const wrap = document.getElementById(wrapId);
+  if (!wrap) return;
+
+  function sanitize(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html || "";
+    // Quitar tags potencialmente problemáticas
+    tmp.querySelectorAll('script, style, iframe').forEach(el => el.remove());
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  function truncate(str, n) {
+    if (!str) return "";
+    const s = str.trim().replace(/\s+/g, ' ');
+    return s.length > n ? s.slice(0, n) + '…' : s;
+  }
+
+  function fmtDate(dstr) {
+    try {
+      const d = new Date(dstr);
+      if (isNaN(d)) return "";
+      return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+    } catch { return ""; }
+  }
+
+  fetch(FEED_URL, { credentials: 'omit' })
+    .then(r => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    })
+    .then(xml => {
+      const doc = new DOMParser().parseFromString(xml, "text/xml");
+      let items = Array.from(doc.querySelectorAll("item"));
+      if (!items.length) items = Array.from(doc.querySelectorAll("entry")); // Atom fallback
+
+      const grid = document.createElement('div');
+      grid.className = "grid gap-6 " + GRID_CLASSES;
+
+      items.slice(0, LIMIT).forEach(item => {
+        const title = (item.querySelector("title")?.textContent || "Sin título").trim();
+        const link = (item.querySelector("link")?.getAttribute("href") || item.querySelector("link")?.textContent || "#").trim();
+        const pub = item.querySelector("pubDate")?.textContent || item.querySelector("updated")?.textContent || "";
+        const rawDesc = item.querySelector("description")?.textContent || item.querySelector("content")?.textContent || "";
+        const desc = truncate(sanitize(rawDesc), 180);
+
+        const card = document.createElement('a');
+        card.href = link;
+        card.className = "block group rounded-2xl border bg-white dark:bg-gray-900 hover:shadow-md transition no-underline";
+        card.target = "_self" ;
+
+        card.innerHTML = `
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:underline">${title}</h3>
+            ${SHOW_DATE && pub ? `<div class="text-sm text-gray-500 dark:text-gray-400 mt-1">${fmtDate(pub)}</div>` : ``}
+            ${SHOW_EXCERPT && desc ? `<p class="text-sm text-gray-700 dark:text-gray-300 mt-3">${desc}</p>` : ``}
+            <span class="mt-4 inline-block text-sm font-semibold text-[#00506F] group-hover:underline">Leer más →</span>
+          </div>`;
+        grid.appendChild(card);
+      });
+
+      wrap.innerHTML = "";
+      wrap.appendChild(grid);
+    })
+    .catch(err => {
+      wrap.innerHTML = `
+        <div class="rounded-xl border p-4 bg-white dark:bg-gray-900">
+          <div class="text-sm text-red-600 dark:text-red-400 font-semibold">No se pudo cargar el archivo del blog.</div>
+          <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">Intentá nuevamente más tarde o accedé al archivo histórico.</div>
+          <p class="mt-3"><a class="btn btn-primary" href="https://www.metadocencia.org/post/">Ir al archivo →</a></p>
+        </div>`;
+      console.error("rss-list error:", err);
+    });
+})();
+</script>
