@@ -36,7 +36,7 @@ sections:
         - name: "Impulsamos Infraestructura"
           icon: "cloud"         # Heroicons
           icon_pack: "hero"
-          icon_color: "#00506F" # azul
+          icon_color: "#00506F"
           description: |
             Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
             <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
@@ -44,7 +44,7 @@ sections:
         - name: "Formamos capacidades"
           icon: "academic-cap"
           icon_pack: "hero"
-          icon_color: "#C83737" # rojo
+          icon_color: "#C83737"
           description: |
             Creamos programas de aprendizaje colaborativo y basados en evidencia, que convierten conocimientos en acción, impulsando una investigación más abierta, eficiente y sostenible.  
             <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
@@ -52,31 +52,13 @@ sections:
         - name: "Construimos comunidad"
           icon: "user-group"
           icon_pack: "hero"
-          icon_color: "#F77B20" # naranja
+          icon_color: "#F77B20"
           description: |
             Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
             <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
-
-  # ---------- Heading centrado ----------
-  - block: cta-card
-    id: heading-proyectos
-    content:
-      title: ""
-      text: |
-        <h2 class="text-center text-4xl md:text-5xl font-extrabold tracking-tight
-                   text-gray-900 dark:text-gray-50 underline decoration-[#00506F]
-                   decoration-4 underline-offset-8 my-0">
-          Conocé nuestros proyectos
-        </h2>
-    design:
-      spacing:
-        padding: ["0rem", 0, "0rem", 0]
-      card:
-        css_class: "bg-transparent shadow-none p-0 text-center"
-        css_style: "margin:0;"
 
   # ---------- PROYECTOS DESTACADOS ----------
   - block: features
