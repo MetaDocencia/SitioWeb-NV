@@ -21,18 +21,21 @@
   [plugins.inputs]
     debug = true
 
-# --------- PROXIES PARA EL FEED DEL BLOG (evita CORS) ---------
+# ---- Functions ----
+[functions]
+  # (opcional) bundler moderno, por si lo necesitaras
+  node_bundler = "esbuild"
 
-# Usado por el blox rss-list en /blog/:
+# Proxy local del feed para evitar CORS:
 [[redirects]]
   from = "/blog/feed"
-  to = "https://www.metadocencia.org/post/index.xml"
+  to = "/.netlify/functions/blog-feed"
   status = 200
   force = true
 
-# Alternativa/compatibilidad si alguien pide /blog/index.xml:
+# Por si algún lector pide /blog/index.xml:
 [[redirects]]
   from = "/blog/index.xml"
-  to = "https://www.metadocencia.org/post/index.xml"
+  to = "/.netlify/functions/blog-feed"
   status = 200
   force = true
