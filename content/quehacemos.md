@@ -73,7 +73,7 @@ sections:
       items:
         - name: "Formación en Ciencia Abierta"
           description: |
-            Talleres y recursos para abrir, compartir y reutilizar conocimiento.
+            Bajada.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
             <a href="#formacion"
@@ -184,17 +184,17 @@ sections:
       items:
         - name: "Formación en Ciencia Abierta"
           description: |
-            Talleres y recursos para abrir, compartir y reutilizar conocimiento.
+            Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Financiamiento"
           description: |
-            Herramientas para identificar, postular y gestionar oportunidades.
+            Formación que impulsa la financiación internacional para América Latina.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Formación para Formar"
           description: |
-            Programa para multiplicar capacidades de enseñanza y mentoría.
+            Atendemos la demanda de habilidades pedagógicas prácticas en comunidades hispanohablantes dedicadas a la ciencia y la tecnología.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
@@ -259,7 +259,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Mapeo de Ciencia Abierta en Latinoamérica"
           description: |
-            Proyecto a incubar
+            Repositorio colaborativo de información sobre Ciencia Abierta en español. Proyecto a incubar.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
