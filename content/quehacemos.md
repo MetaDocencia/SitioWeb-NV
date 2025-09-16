@@ -11,20 +11,20 @@ sections:
     content:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.</span>'
     design:
-      spacing:
-        padding: ["1rem", 0, "1rem", 0]   # aún más bajo
-        margin: [0, 0, 0, 0]
-      css_class: "min-h-[20vh]"           # ~la mitad de alto
-      background:
-        image:
-          # asegurate de tener esta imagen en assets/media/
-          filename: "quehacemos-hero.jpg"
-          filters:
-            brightness: 0.45
-          size: cover
-          position: center
-          parallax: false
-        text_color_light: true
+  spacing:
+    padding: ["0.75rem", 0, "0.75rem", 0]  # aún más bajo
+    margin: [0, 0, 0, 0]
+  css_class: ""                            # sin clases
+  css_style: "min-height: 20vh;"           # altura forzada, no se purga
+  background:
+    image:
+      filename: "quehacemos-hero.jpg"
+      filters:
+        brightness: 0.45
+      size: cover
+      position: center
+      parallax: false
+    text_color_light: true
 
   # ---------- Tres columnas con iconos + CTA "Ver más" ----------
   - block: features
