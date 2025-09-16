@@ -20,22 +20,3 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
-
-# ---- Functions ----
-[functions]
-  # (opcional) bundler moderno, por si lo necesitaras
-  node_bundler = "esbuild"
-
-# Proxy local del feed para evitar CORS:
-[[redirects]]
-  from = "/blog/feed"
-  to = "/.netlify/functions/blog-feed"
-  status = 200
-  force = true
-
-# Por si algún lector pide /blog/index.xml:
-[[redirects]]
-  from = "/blog/index.xml"
-  to = "/.netlify/functions/blog-feed"
-  status = 200
-  force = true
