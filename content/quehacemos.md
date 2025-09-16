@@ -12,21 +12,21 @@ sections:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.</span>'
     design:
       spacing:
-        padding: ["2rem", 0, "2rem", 0]   # hero más bajo
+        padding: ["1rem", 0, "1rem", 0]   # aún más bajo
         margin: [0, 0, 0, 0]
-      css_class: "min-h-[40vh]"          # altura acotada (requiere Tailwind)
+      css_class: "min-h-[20vh]"           # ~la mitad de alto
       background:
         image:
-          # ⚠️ Subí esta imagen a assets/media/ con este nombre (o cámbialo aquí):
-          filename: "1naranjaazul.png"
+          # asegurate de tener esta imagen en assets/media/
+          filename: "quehacemos-hero.jpg"
           filters:
-            brightness: 0.45             # oscurece para mejor contraste
+            brightness: 0.45
           size: cover
           position: center
           parallax: false
         text_color_light: true
 
-  # ---------- Tres columnas con iconos + CTA "Ver más" que anclan a cada pilar ----------
+  # ---------- Tres columnas con iconos + CTA "Ver más" ----------
   - block: features
     id: pilares
     content:
@@ -34,20 +34,25 @@ sections:
       text: ""
       items:
         - name: "Impulsamos Infraestructura"
-          icon: "cloud"       # icono de nube (Heroicons)
+          icon: "cloud"         # Heroicons
           icon_pack: "hero"
+          icon_color: "#00506F" # azul
           description: |
             Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
             <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
+
         - name: "Formamos capacidades"
           icon: "academic-cap"
           icon_pack: "hero"
+          icon_color: "#C83737" # rojo
           description: |
             Creamos programas de aprendizaje colaborativo y basados en evidencia, que convierten conocimientos en acción, impulsando una investigación más abierta, eficiente y sostenible.  
             <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
+
         - name: "Construimos comunidad"
           icon: "user-group"
           icon_pack: "hero"
+          icon_color: "#F77B20" # naranja
           description: |
             Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
             <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
@@ -55,7 +60,7 @@ sections:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
 
-  # ---------- Heading centrado (mínimo espaciado y protagonismo) ----------
+  # ---------- Heading centrado ----------
   - block: cta-card
     id: heading-proyectos
     content:
