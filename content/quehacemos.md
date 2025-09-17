@@ -6,18 +6,16 @@ design:
   spacing: "3rem"
 
 sections:
-  # ---------- HERO angosto ----------
+  # ---------- HERO angosto (imagen de fondo + texto grande) ----------
   - block: hero
     content:
-      title: |
-        <span class="block text-2xl md:text-4xl font-extrabold tracking-tight text-white drop-shadow">
-          Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.
-        </span>
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.</span>'
     design:
       spacing:
-        padding: ["0.4rem", 0, "0.4rem", 0]
+        padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
-      css_style: "min-height: 12vh;"
+      css_class: ""
+      css_style: "min-height: 20vh;"
       background:
         image:
           filename: "1naranjaazul.png"
@@ -28,33 +26,45 @@ sections:
           parallax: false
         text_color_light: true
 
-  # ---------- Tres columnas con badges de color + CTA "Ver más" ----------
-  - block: features-colored
+  # ---------- Tres columnas por pilar (sin iconos) ----------
+  - block: features
     id: pilares
     content:
       title: ""
       text: ""
       items:
         - name: "Impulsamos Infraestructura"
-          badge: "INF"
-          icon_color: "#00506F"   # Azul
           description: |
-            Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
-            <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
+            <div style="height:4px;background:#00506F;border-radius:6px;margin:0 0 0.75rem 0;"></div>
+            Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
+            <br>
+            <a href="#infra"
+               class="mt-3 inline-block no-underline font-semibold"
+               style="background:#00506F;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
+               Ver más
+            </a>
 
         - name: "Formamos capacidades"
-          badge: "FOR"
-          icon_color: "#C83737"   # Rojo
           description: |
-            Creamos programas de aprendizaje colaborativos, contextualizados y basados en evidencia. Estos programas convierten conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.  
-            <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
+            <div style="height:4px;background:#C83737;border-radius:6px;margin:0 0 0.75rem 0;"></div>
+            Creamos programas de aprendizaje colaborativo y basados en evidencia, que convierten conocimientos en acción, impulsando una investigación más abierta, eficiente y sostenible.
+            <br>
+            <a href="#formacion"
+               class="mt-3 inline-block no-underline font-semibold"
+               style="background:#C83737;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
+               Ver más
+            </a>
 
         - name: "Construimos comunidad"
-          badge: "COM"
-          icon_color: "#F77B20"   # Naranja
           description: |
-            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
-            <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
+            <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
+            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.
+            <br>
+            <a href="#comunidad"
+               class="mt-3 inline-block no-underline font-semibold"
+               style="background:#F77B20;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
+               Ver más
+            </a>
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
@@ -70,26 +80,37 @@ sections:
           description: |
             Mejoramos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
             <a href="#infra"
-               class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
-               style="background-color:#00506F;color:#FFFFFF;">Infraestructura</a>
+               class="mt-2 inline-block no-underline font-semibold"
+               style="background:#00506F;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
+               Conocé más proyectos de Infraestructura
+            </a>
+
         - name: "Formación en Ciencia Abierta"
           description: |
             Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
             <a href="#formacion"
-               class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
-               style="background-color:#C83737;color:#FFFFFF;">Formación</a>    
+               class="mt-2 inline-block no-underline font-semibold"
+               style="background:#C83737;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
+               Conocé más proyectos de Formación
+            </a>
+
         - name: "Gobernanza"
           description: |
             Brindamos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
             <a href="#comunidad"
-               class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
-               style="background-color:#F77B20;color:#FFFFFF;">Comunidad</a>
+               class="mt-2 inline-block no-underline font-semibold"
+               style="background:#F77B20;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
+               Conocé más proyectos de Comunidad
+            </a>
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
@@ -101,7 +122,7 @@ sections:
     id: infra
     content:
       title: "Impulsamos Infraestructura"
-      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento"
+      text: "Promovemos infraestructura abierta, sostenible y orientada al reuso, para acelerar la producción y circulación del conocimiento."
     design:
       card:
         css_class: "shadow-sm"
@@ -117,17 +138,24 @@ sections:
           description: |
             Mejoramos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+
         - name: "Contextualización"
           description: |
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+
         - name: "Ciencia Abierta y Datos Abiertos en la comunidad latinoamericana de bioimagen"
           description: |
-            Bajada
-
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            Repositorio colaborativo de información sobre Ciencia Abierta en español.
+            
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
+                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
       columns: 3
 
@@ -161,7 +189,7 @@ sections:
     id: formacion
     content:
       title: "Formamos capacidades"
-      text: "Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción."
+      text: "Diseñamos experiencias de aprendizaje basadas en evidencia, centradas en la práctica y con foco en el impacto."
     design:
       card:
         css_class: "shadow-sm"
@@ -177,19 +205,31 @@ sections:
           description: |
             Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+
         - name: "Financiamiento"
           description: |
             Proyecto que impulsa la financiación internacional para América Latina.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+
         - name: "Formación para Formar"
           description: |
             Atendemos la demanda de habilidades pedagógicas prácticas en comunidades hispanohablantes dedicadas a la ciencia y la tecnología.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+
+        - name: "Cursos a medida"
+          description: |
+            Diseñamos cursos y formaciones a medida sobre habilidades blandas y técnicas.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
-      columns: 3
+      columns: 4
 
   - block: stats
     content:
@@ -223,7 +263,7 @@ sections:
     id: comunidad
     content:
       title: "Construimos comunidad"
-      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo."
+      text: "Facilitamos redes de colaboración que conectan disciplinas, instituciones y países, desde y para América Latina."
     design:
       card:
         css_class: "shadow-sm"
@@ -239,31 +279,31 @@ sections:
           description: |
             Brindamos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Conversatorios"
           description: |
             Organizamos conversatorios y espacios de diálogo para explorar, aprender y compartir conocimiento. Fomentamos la participación y el intercambio de experiencias para fortalecer redes de colaboración y el conocimiento compartido.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Mapeo de Ciencia Abierta en Latinoamérica"
           description: |
-            Repositorio colaborativo de información sobre Ciencia Abierta en español. Proyecto a incubar.
+            Repositorio colaborativo de información sobre Ciencia Abierta en español.
 
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
-        - name: "Cursos a medida"
-          description: |
-            Diseñamos cursos y formaciones a medida sobre habilidades blandas y técnicas.
-
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
+                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
-      columns: 4
+      columns: 3
 
   - block: stats
     content:
       items:
         - statistic: "+40"
           description: "comunidades amigas"
-        - statistic: "+50"
+        - statistic: "54"
           description: "personas colaboradoras"
         - statistic: "+1000"
           description: "personas en Slack"
