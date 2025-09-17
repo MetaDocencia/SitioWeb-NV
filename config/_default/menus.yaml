@@ -12,5 +12,5 @@ main:
     weight: 30
 
   - name: Blog
-    url: https://www.metadocencia.org/post/
+    url: https://mdnv.netlify.app/blog/
     weight: 40
