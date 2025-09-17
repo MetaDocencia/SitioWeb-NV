@@ -19,73 +19,96 @@ nav, .btn, .card, header, footer {
                "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* 2) Modo compacto para bloques `people` (usa css_class: "people-sm" en cada bloque) */
+/* =========================================================
+   2) BLOQUES PEOPLE COMPACTOS Y PLANOS (sin tarjetas)
+   Usá css_class: "people-sm" en cada bloque `people`
+   ========================================================= */
+
+/* Contenedor del bloque: menos aire */
 section.people-sm .container {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
-/* Título del desplegable (summary) más compacto */
+/* El <details> que envuelve el bloque: sin fondo, bordes ni sombra */
+section.people-sm details {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Summary (cabecera del desplegable): compacto */
 section.people-sm details > summary {
-  padding: 0.5rem 0.75rem !important;
+  padding: 0.4rem 0.5rem !important;
 }
 
-/* Grid más apretado */
+/* Grid de personas: gap mínimo */
 section.people-sm .grid {
-  gap: 0.5rem !important;
+  gap: 0.35rem !important;
 }
 
-/* Tarjetas con menos aire */
-section.people-sm .p-6,
-section.people-sm .p-5,
-section.people-sm .p-4 {
-  padding: 0.5rem !important;
+/* Cada “tarjeta” de persona (link .group): transparentar y quitar bordes/sombras */
+section.people-sm a.group,
+section.people-sm .group {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0.25rem !important;
 }
 
-/* Imagen de perfil circular y chica */
+/* El contenedor cuadrado de la imagen que suele ser gris: transparentarlo y sin bordes */
+section.people-sm .aspect-\[1\/1\],
+section.people-sm .overflow-hidden,
+section.people-sm .bg-gray-100 {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Imagen de perfil: chica y circular */
 section.people-sm img {
-  width: 90px !important;
-  height: 90px !important;
-  border-radius: 9999px !important;       /* círculo */
+  width: 78px !important;
+  height: 78px !important;
+  border-radius: 9999px !important;     /* círculo */
   object-fit: cover !important;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid rgba(255,255,255,0.9); /* aro sutil */
+  border: 2px solid rgba(255,255,255,0.9); /* aro sutil para cualquier fondo */
 }
 
-/* Tarjeta más discreta (borde leve, sin sombra pesada) */
-section.people-sm .shadow,
-section.people-sm .shadow-sm {
-  box-shadow: none !important;
-}
-section.people-sm .rounded-xl,
-section.people-sm .rounded-2xl {
-  border-radius: 14px !important;
-}
-section.people-sm .border {
-  border-color: rgba(0,0,0,0.06) !important;
-}
-@media (prefers-color-scheme: dark) {
-  section.people-sm .border {
-    border-color: rgba(255,255,255,0.12) !important;
-  }
+/* Zona de texto de la tarjeta: menos padding */
+section.people-sm .p-6,
+section.people-sm .p-5,
+section.people-sm .p-4,
+section.people-sm .p-3 {
+  padding: 0.25rem !important;
 }
 
-/* Tipos más pequeños dentro de la tarjeta */
+/* Tipografías más chicas */
 section.people-sm .font-semibold {
-  font-size: 0.95rem;   /* ~15px */
+  font-size: 0.92rem;  /* ~14.7px */
   line-height: 1.2;
 }
 section.people-sm .text-sm,
 section.people-sm .opacity-70 {
-  font-size: 0.75rem;   /* ~12px */
+  font-size: 0.72rem;  /* ~11.5px */
   line-height: 1.2;
   opacity: 0.85;
 }
 
-/* Hover sutil para cada persona (opcional) */
+/* Hover muy sutil solo en la foto (opcional) */
 section.people-sm a:hover img {
   transform: scale(1.02);
   transition: transform 120ms ease;
+}
+
+/* En dark mode, por si algún borde residual aparece */
+@media (prefers-color-scheme: dark) {
+  section.people-sm details {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
 }
