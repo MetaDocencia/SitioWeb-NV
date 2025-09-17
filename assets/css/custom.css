@@ -4,7 +4,7 @@
 section.people-sm details,
 section.people-sm details > div {
   background: transparent !important;
-  border: 0 !important;
+  border: 1 !important;
   box-shadow: none !important;
 }
 
@@ -15,7 +15,7 @@ section.people-sm details > summary {
 
 /* Grilla con muy poco gap */
 section.people-sm .grid {
-  gap: 0.2rem !important;
+  gap: 0.4rem !important;
 }
 
 /* Cada tarjeta de persona como columna súper compacta */
@@ -25,7 +25,7 @@ section.people-sm .group {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  gap: 2px !important;                /* casi pegado */
+  gap: 4px !important;                /* casi pegado */
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -35,8 +35,8 @@ section.people-sm .group {
 
 /* El contenedor de la imagen NO deja margen debajo */
 section.people-sm a.group > div:first-child {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 2 !important;
+  padding: 2 !important;
   background: transparent !important;
   box-shadow: none !important;
   border: 0 !important;
@@ -59,7 +59,7 @@ section.people-sm img {
   border-radius: 9999px !important;
   object-fit: cover !important;
   display: block !important;
-  margin: 0 auto !important;
+  margin: 2 auto !important;
   background: transparent !important;
   border: 0 !important;
 }
@@ -68,7 +68,7 @@ section.people-sm img {
 section.people-sm .font-semibold,
 section.people-sm .text-sm,
 section.people-sm .opacity-70 {
-  margin: 0 !important;
+  margin: 4 !important;
   line-height: 1.15 !important;
 }
 
