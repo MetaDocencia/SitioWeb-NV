@@ -20,7 +20,7 @@ sections:
       css_style: "min-height: 12vh;"          # ~mitad de alto
       background:
         image:
-          filename: "quehacemos-hero.jpg"
+          filename: "1naranjaazul.png"
           filters:
             brightness: 0.45
           size: cover
