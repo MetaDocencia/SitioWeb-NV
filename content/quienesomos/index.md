@@ -37,6 +37,9 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
 
+
+{{< youtube Mcq0-4cyGKQ >}}
+
   - block: stats
     content:
       items:
