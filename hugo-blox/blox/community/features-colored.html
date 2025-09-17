@@ -1,9 +1,19 @@
-{{/* features-colored: grid de features con badge circular coloreado por item.icon_color */}}
+{{/* features-colored: grid de features con badge circular coloreado por item.icon_color
+     - Tolera distintas claves: items | features, description | text, icon_color | color, name | title
+     - Si no hay ítems, muestra un aviso (así no “desaparece” silenciosamente)
+*/}}
+
 {{ $b := .block }}
 {{ $content := (index $b "content") | default dict }}
 {{ $design  := (index $b "design")  | default dict }}
-{{ $items   := (index $content "items") | default (slice) }}
 
+{{/* Obtener items con fallbacks */}}
+{{ $items := (index $content "items") }}
+{{ if not $items }}{{ $items = (index $content "features") }}{{ end }}
+{{ if not $items }}{{ $items = (index $b "items") }}{{ end }}
+{{ if not $items }}{{ $items = (slice) }}{{ end }}
+
+{{/* Columnas */}}
 {{ $cols := (index $design "columns") | default 3 }}
 {{ $grid := "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }}
 {{ if eq $cols 2 }}{{ $grid = "grid-cols-1 sm:grid-cols-2" }}{{ end }}
@@ -12,25 +22,31 @@
 
 <section id="{{ (index $b "id") | default "features-colored" }}" class="py-8">
   <div class="container mx-auto px-6">
-    <div class="grid {{ $grid }} gap-6">
-      {{ range $items }}
-        {{ $name := .name | default "" }}
-        {{ $desc := .description | default "" }}
-        {{ $badge := .badge | default "" }}
-        {{ $color := .icon_color | default "#4B5563" }}
-        <div class="rounded-2xl border bg-white dark:bg-gray-900 shadow-sm p-6 flex flex-col">
-          <div class="flex items-center gap-4 mb-3">
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-xs"
-                  style="background-color: {{ $color }};">
-              {{ $badge }}
-            </span>
-            <h3 class="text-lg font-semibold leading-snug m-0">{{ $name }}</h3>
+    {{ if gt (len $items) 0 }}
+      <div class="grid {{ $grid }} gap-6">
+        {{ range $items }}
+          {{ $name  := or .name .title | default "" }}
+          {{ $desc  := or .description .text | default "" }}
+          {{ $badge := .badge | default "" }}
+          {{ $color := or .icon_color .color | default "#4B5563" }}
+          <div class="rounded-2xl border bg-white dark:bg-gray-900 shadow-sm p-6 flex flex-col text-gray-900 dark:text-gray-100">
+            <div class="flex items-center gap-4 mb-3">
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-xs"
+                    style="background-color: {{ $color }};">
+                {{ $badge }}
+              </span>
+              <h3 class="text-lg font-semibold leading-snug m-0">{{ $name }}</h3>
+            </div>
+            <div class="prose dark:prose-invert max-w-none text-sm grow">
+              {{ $desc | markdownify }}
+            </div>
           </div>
-          <div class="prose dark:prose-invert max-w-none text-sm grow">
-            {{ $desc | markdownify }}
-          </div>
-        </div>
-      {{ end }}
-    </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="rounded-xl border p-6 text-center text-sm text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900">
+        No se encontraron ítems para este bloque (<code>features-colored</code>). Verifica que <code>content.items</code> o <code>content.features</code> contengan elementos.
+      </div>
+    {{ end }}
   </div>
 </section>
