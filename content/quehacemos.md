@@ -30,34 +30,34 @@ sections:
 
   # ---------- Tres columnas con badges de color + CTA "Ver más" ----------
   - block: features-colored
-    id: pilares
-    content:
-      title: ""
-      text: ""
-      items:
-        - name: "Impulsamos Infraestructura"
-          badge: "INF"
-          icon_color: "#00506F"   # Azul
-          description: |
-            Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
-            <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
+  id: pilares
+  content:
+    title: ""
+    text: ""
+    items:
+      - name: "Impulsamos Infraestructura"
+        badge: "INF"
+        icon_color: "#00506F"   # Azul
+        description: |
+          Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
+          <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
 
-        - name: "Formamos capacidades"
-          badge: "FOR"
-          icon_color: "#C83737"   # Rojo
-          description: |
-            Creamos programas de aprendizaje colaborativos, contextualizados y basados en evidencia. Estos programas convierten conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.  
-            <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
+      - name: "Formamos capacidades"
+        badge: "FOR"
+        icon_color: "#C83737"   # Rojo
+        description: |
+          Creamos programas de aprendizaje colaborativos, contextualizados y basados en evidencia. Estos programas convierten conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.  
+          <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
 
-        - name: "Construimos comunidad"
-          badge: "COM"
-          icon_color: "#F77B20"   # Naranja
-          description: |
-            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
-            <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
-    design:
-      columns: 3
-      css_class: "text-gray-900 dark:text-gray-100"
+      - name: "Construimos comunidad"
+        badge: "COM"
+        icon_color: "#F77B20"   # Naranja
+        description: |
+          Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
+          <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
+  design:
+    columns: 3
+    css_class: "text-gray-900 dark:text-gray-100"
 
   # ---------- PROYECTOS DESTACADOS ----------
   - block: features
