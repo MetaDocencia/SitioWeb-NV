@@ -69,7 +69,7 @@ sections:
       user_groups: ["Auspiciantes"]
       start_open: false
     design:
-      columns: 5
+      columns: 7
       compact: true
       css_class: "people-sm"
 
@@ -82,7 +82,7 @@ sections:
       user_groups: ["Comunidades Amigas"]
       start_open: false
     design:
-      columns: 5
+      columns: 7
       compact: true
       css_class: "people-sm"
 
@@ -95,7 +95,7 @@ sections:
       user_groups: ["Colaboradores Externos"]
       start_open: false
     design:
-      columns: 5
+      columns: 7
       compact: true
       css_class: "people-sm"
 
@@ -108,7 +108,7 @@ sections:
       user_groups: ["Consejo Asesor"]
       start_open: false
     design:
-      columns: 5
+      columns: 7
       compact: true
       css_class: "people-sm"
 
@@ -121,7 +121,7 @@ sections:
       user_groups: ["Equipo"]
       start_open: false
     design:
-      columns: 5
+      columns: 7
       compact: true
       css_class: "people-sm"
 
