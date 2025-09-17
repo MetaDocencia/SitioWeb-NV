@@ -66,8 +66,8 @@ sections:
     content:
       title: "Auspiciantes"
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups: ["Auspiciantes"]
-      start_open: false
+      user_groups: ["Auspiciantes"]   # ← filtra SOLO este grupo
+      start_open: true                 # ← desplegable abierto por defecto
     design:
       columns: 7
       compact: true
