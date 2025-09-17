@@ -1,18 +1,91 @@
 /* assets/css/custom.css */
+
+/* 1) Fuente: Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-/* Base */
+/* Base tipográfica */
 html, body {
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial,
                "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* Asegurar Open Sans en contenido tipográfico y UI (sin tocar code/monospace) */
+/* Asegurar Open Sans en contenido y UI (sin tocar code/monospace) */
 .prose :where(p, li, blockquote, figcaption, strong, em, a),
 h1, h2, h3, h4, h5, h6,
 nav, .btn, .card, header, footer {
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial,
                "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* 2) Modo compacto para bloques `people` (usa css_class: "people-sm" en cada bloque) */
+section.people-sm .container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Título del desplegable (summary) más compacto */
+section.people-sm details > summary {
+  padding: 0.5rem 0.75rem !important;
+}
+
+/* Grid más apretado */
+section.people-sm .grid {
+  gap: 0.5rem !important;
+}
+
+/* Tarjetas con menos aire */
+section.people-sm .p-6,
+section.people-sm .p-5,
+section.people-sm .p-4 {
+  padding: 0.5rem !important;
+}
+
+/* Imagen de perfil circular y chica */
+section.people-sm img {
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 9999px !important;       /* círculo */
+  object-fit: cover !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(255,255,255,0.9); /* aro sutil */
+}
+
+/* Tarjeta más discreta (borde leve, sin sombra pesada) */
+section.people-sm .shadow,
+section.people-sm .shadow-sm {
+  box-shadow: none !important;
+}
+section.people-sm .rounded-xl,
+section.people-sm .rounded-2xl {
+  border-radius: 14px !important;
+}
+section.people-sm .border {
+  border-color: rgba(0,0,0,0.06) !important;
+}
+@media (prefers-color-scheme: dark) {
+  section.people-sm .border {
+    border-color: rgba(255,255,255,0.12) !important;
+  }
+}
+
+/* Tipos más pequeños dentro de la tarjeta */
+section.people-sm .font-semibold {
+  font-size: 0.95rem;   /* ~15px */
+  line-height: 1.2;
+}
+section.people-sm .text-sm,
+section.people-sm .opacity-70 {
+  font-size: 0.75rem;   /* ~12px */
+  line-height: 1.2;
+  opacity: 0.85;
+}
+
+/* Hover sutil para cada persona (opcional) */
+section.people-sm a:hover img {
+  transform: scale(1.02);
+  transition: transform 120ms ease;
 }
