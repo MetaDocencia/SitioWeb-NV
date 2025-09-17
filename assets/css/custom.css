@@ -56,3 +56,98 @@ section.people-sm .shadow,
 section.people-sm .shadow-sm {
   box-shadow: none !important;
 }
+
+/* Quitar rectángulos y compactar tarjetas en los bloques `people` */
+section#auspiciantes details,
+section#comunidades-amigas details,
+section#colaboran details,
+section#consejo-asesor details,
+section#equipo details {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Tarjetas individuales (anchor) sin rectángulo ni borde/sombra */
+section#auspiciantes a.group,
+section#comunidades-amigas a.group,
+section#colaboran a.group,
+section#consejo-asesor a.group,
+section#equipo a.group {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Reducir separación entre tarjetas del grid */
+section#auspiciantes .grid,
+section#comunidades-amigas .grid,
+section#colaboran .grid,
+section#consejo-asesor .grid,
+section#equipo .grid {
+  gap: 10px !important;
+}
+
+/* Evitar el contenedor cuadrado gigante de la imagen */
+section#auspiciantes .aspect-square,
+section#comunidades-amigas .aspect-square,
+section#colaboran .aspect-square,
+section#consejo-asesor .aspect-square,
+section#equipo .aspect-square {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+/* Foto circular un poco más grande y centrada */
+section#auspiciantes img,
+section#comunidades-amigas img,
+section#colaboran img,
+section#consejo-asesor img,
+section#equipo img {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;
+  transform: none !important;
+}
+
+/* Compactar la caja del texto (título/rol) */
+section#auspiciantes .p-4,
+section#comunidades-amigas .p-4,
+section#colaboran .p-4,
+section#consejo-asesor .p-4,
+section#equipo .p-4 {
+  padding: 6px !important;
+}
+
+/* Juntar foto y nombre sin superponer */
+section#auspiciantes .font-semibold,
+section#comunidades-amigas .font-semibold,
+section#colaboran .font-semibold,
+section#consejo-asesor .font-semibold,
+section#equipo .font-semibold {
+  margin-top: 6px !important;
+  line-height: 1.2 !important;
+  font-size: 0.95rem !important;
+}
+
+/* Subtexto más compacto */
+section#auspiciantes .text-sm,
+section#auspiciantes .opacity-70,
+section#comunidades-amigas .text-sm,
+section#comunidades-amigas .opacity-70,
+section#colaboran .text-sm,
+section#colaboran .opacity-70,
+section#consejo-asesor .text-sm,
+section#consejo-asesor .opacity-70,
+section#equipo .text-sm,
+section#equipo .opacity-70 {
+  margin-top: 2px !important;
+  line-height: 1.15 !important;
+  font-size: 0.75rem !important;
+}
