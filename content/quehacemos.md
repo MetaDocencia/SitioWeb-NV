@@ -124,6 +124,8 @@ sections:
       title: "Impulsamos Infraestructura"
       text: "Promovemos infraestructura abierta, sostenible y orientada al reuso, para acelerar la producción y circulación del conocimiento."
     design:
+      spacing:
+        padding: ["1rem", 0, "0.25rem", 0]   # ↓ menos espacio debajo del CTA
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
@@ -157,6 +159,8 @@ sections:
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
+      spacing:
+        padding: ["0.25rem", 0, "1rem", 0]   # ↓ menos espacio arriba del listado
       columns: 3
 
   - block: stats
@@ -191,6 +195,8 @@ sections:
       title: "Formamos capacidades"
       text: "Diseñamos experiencias de aprendizaje basadas en evidencia, centradas en la práctica y con foco en el impacto."
     design:
+      spacing:
+        padding: ["1rem", 0, "0.25rem", 0]
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#C83737;color:#FFFFFF;"
@@ -210,7 +216,7 @@ sections:
 
         - name: "Financiamiento"
           description: |
-            Proyecto que impulsa la financiación internacional para América Latina.
+            Formación que impulsa la financiación internacional para América Latina.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
@@ -229,6 +235,8 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
+      spacing:
+        padding: ["0.25rem", 0, "1rem", 0]
       columns: 4
 
   - block: stats
@@ -248,10 +256,10 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: ""
-          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
+          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
         - name: "Emmanuel Iarussi"
           role: ""
-          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
+          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -265,6 +273,8 @@ sections:
       title: "Construimos comunidad"
       text: "Facilitamos redes de colaboración que conectan disciplinas, instituciones y países, desde y para América Latina."
     design:
+      spacing:
+        padding: ["1rem", 0, "0.25rem", 0]
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#F77B20;color:#FFFFFF;"
@@ -296,6 +306,8 @@ sections:
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
+      spacing:
+        padding: ["0.25rem", 0, "1rem", 0]
       columns: 3
 
   - block: stats
@@ -315,10 +327,10 @@ sections:
       items:
         - name: "Andrés Kamaid"
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
-          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
+          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
         - name: "Verónica Xhardez"
           role: "ARPHAI"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
