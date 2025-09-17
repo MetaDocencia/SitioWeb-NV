@@ -67,7 +67,10 @@ sections:
             </a>
     design:
       columns: 3
-      css_class: "text-gray-900 dark:text-gray-100"
+      css_class: "bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+      spacing:
+        padding: ["1.5rem", 0, "1.5rem", 0]
+        margin: [0, 0, 0, 0]
 
   # ---------- PROYECTOS DESTACADOS ----------
   - block: features
