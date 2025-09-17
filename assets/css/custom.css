@@ -10,20 +10,101 @@ nav, .btn, .card, header, footer {
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* PEOPLE v3 — 70% más grande + un pelín de espacio entre foto y nombre */
+/* ===== PEOPLE ultra-compact: sin rectángulos, sin aire, nombre pegado a la foto ===== */
+
+/* Quitar fondo/borde/sombra del contenedor del bloque */
+section.people-sm details,
+section.people-sm details > div {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Cabecera del desplegable súper compacta */
+section.people-sm details > summary {
+  padding: 0.25rem 0 !important;
+}
+
+/* Grilla con muy poco gap */
+section.people-sm .grid {
+  gap: 0.2rem !important;
+}
+
+/* Cada tarjeta de persona como columna súper compacta */
 section.people-sm a.group,
 section.people-sm .group {
-  gap: 4px !important; /* antes 2px */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 2px !important;                /* casi pegado */
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: auto !important;
 }
 
+/* El contenedor de la imagen NO deja margen debajo */
+section.people-sm a.group > div:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Quitar cualquier padding residual del cuerpo de la tarjeta */
+section.people-sm .p-6,
+section.people-sm .p-5,
+section.people-sm .p-4,
+section.people-sm .p-3,
+section.people-sm .p-2,
+section.people-sm .p-1 {
+  padding: 0 !important;
+}
+
+/* Imagen: más chica, circular, sin caja gris */
 section.people-sm img {
-  width: 102px !important;   /* 60px × 1.7 ≈ 102 */
-  height: 102px !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  border: 0 !important;
 }
 
-/* Opcional: apretamos aún más el texto sin tocar el gap global */
+/* Título y metadatos pegados a la foto (sin márgenes) */
 section.people-sm .font-semibold,
 section.people-sm .text-sm,
 section.people-sm .opacity-70 {
-  margin-top: 0 !important;
+  margin: 0 !important;
+  line-height: 1.15 !important;
+}
+
+/* Tamaños tipográficos compactos */
+section.people-sm .font-semibold { font-size: 0.9rem !important; }
+section.people-sm .text-sm,
+section.people-sm .opacity-70 { font-size: 0.72rem !important; opacity: 0.85; }
+
+/* Anular “rectángulos grandes” que vienen de clases utilitarias */
+section.people-sm .rounded-xl,
+section.people-sm .rounded-2xl,
+section.people-sm .bg-white,
+section.people-sm .dark\:bg-gray-900,
+section.people-sm .border,
+section.people-sm .shadow,
+section.people-sm .shadow-sm {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Hover sutil solo en la imagen (opcional) */
+section.people-sm a.group:hover img {
+  transform: scale(1.015);
+  transition: transform 120ms ease;
 }
