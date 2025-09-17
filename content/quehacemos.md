@@ -18,7 +18,7 @@ sections:
       css_style: "min-height: 20vh;"           # altura forzada, no se purga
       background:
         image:
-          filename: "quehacemos-hero.jpg"
+          filename: "1naranjaazul.png"
           filters:
             brightness: 0.45
           size: cover
