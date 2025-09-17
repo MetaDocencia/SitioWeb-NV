@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
+/* Tipografía base */
 html, body {
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
-
 .prose :where(p, li, blockquote, figcaption, strong, em, a),
 h1, h2, h3, h4, h5, h6,
 nav, .btn, .card, header, footer {
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+/* ============ PEOPLE (estilo Research Group) ============ */
+/* Quita marco del contenedor <details> */
 section#auspiciantes details,
 section#comunidades-amigas details,
 section#colaboran details,
@@ -20,31 +22,60 @@ section#equipo details {
   box-shadow: none !important;
 }
 
-section#auspiciantes a.group,
-section#comunidades-amigas a.group,
-section#colaboran a.group,
-section#consejo-asesor a.group,
-section#equipo a.group {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
+/* Grid más compacto */
 section#auspiciantes .grid,
 section#comunidades-amigas .grid,
 section#colaboran .grid,
 section#consejo-asesor .grid,
 section#equipo .grid {
-  gap: 10px !important;
+  gap: 16px !important; /* compacto pero respirable */
 }
 
+/* Tarjeta tipo “Research Group” */
+section#auspiciantes a.group,
+section#comunidades-amigas a.group,
+section#colaboran a.group,
+section#consejo-asesor a.group,
+section#equipo a.group {
+  display: block !important;
+  text-align: center !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;           /* gris claro */
+  border-radius: 14px !important;
+  padding: 14px !important;                        /* poco padding */
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%) !important;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease !important;
+}
+@media (prefers-color-scheme: dark) {
+  section#auspiciantes a.group,
+  section#comunidades-amigas a.group,
+  section#colaboran a.group,
+  section#consejo-asesor a.group,
+  section#equipo a.group {
+    background: #0b0f1a !important;
+    border-color: #1f2937 !important;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 30%) !important;
+  }
+}
+
+/* Hover sutil como la demo */
+section#auspiciantes a.group:hover,
+section#comunidades-amigas a.group:hover,
+section#colaboran a.group:hover,
+section#consejo-asesor a.group:hover,
+section#equipo a.group:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 10%) !important;
+  border-color: #d1d5db !important;
+}
+
+/* Imagen circular centrada + tamaño tipo demo */
 section#auspiciantes .aspect-square,
 section#comunidades-amigas .aspect-square,
 section#colaboran .aspect-square,
 section#consejo-asesor .aspect-square,
 section#equipo .aspect-square {
-  aspect-ratio: auto !important;
+  aspect-ratio: auto !important;   /* no fuerces cuadrado extra */
   height: auto !important;
   width: auto !important;
   margin: 0 auto !important;
@@ -55,33 +86,37 @@ section#comunidades-amigas img,
 section#colaboran img,
 section#consejo-asesor img,
 section#equipo img {
-  width: 100px !important;
-  height: 100px !important;
-  border-radius: 9999px !important;
+  width: 128px !important;         /* tamaño “demo” */
+  height: 128px !important;
+  border-radius: 9999px !important;/* círculo perfecto */
   object-fit: cover !important;
   display: block !important;
-  margin: 0 auto !important;
-  transform: none !important;
+  margin: 0 auto 8px auto !important; /* pequeño espacio con el nombre (no superpuestos) */
+  transform: none !important;      /* sin zoom hover raro */
 }
 
+/* Contenido debajo de la foto: muy compacto */
 section#auspiciantes .p-4,
 section#comunidades-amigas .p-4,
 section#colaboran .p-4,
 section#consejo-asesor .p-4,
 section#equipo .p-4 {
-  padding: 6px !important;
+  padding: 6px 4px !important;     /* mínimo */
 }
 
+/* Nombre: peso medio, poco espacio superior */
 section#auspiciantes .font-semibold,
 section#comunidades-amigas .font-semibold,
 section#colaboran .font-semibold,
 section#consejo-asesor .font-semibold,
 section#equipo .font-semibold {
-  margin-top: 6px !important;
+  margin-top: 2px !important;
   line-height: 1.2 !important;
   font-size: 0.95rem !important;
+  font-weight: 600 !important;
 }
 
+/* Rol/afiliación: líneas apretadas y más discreto */
 section#auspiciantes .text-sm,
 section#auspiciantes .opacity-70,
 section#comunidades-amigas .text-sm,
@@ -94,5 +129,37 @@ section#equipo .text-sm,
 section#equipo .opacity-70 {
   margin-top: 2px !important;
   line-height: 1.15 !important;
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
+  opacity: 0.8 !important;
+}
+
+/* Quita cualquier fondo/rectángulo gris heredado en el contenedor de la imagen */
+section#auspiciantes .overflow-hidden,
+section#comunidades-amigas .overflow-hidden,
+section#colaboran .overflow-hidden,
+section#consejo-asesor .overflow-hidden,
+section#equipo .overflow-hidden {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Resumen del colapsable: estilo limpio y compacto */
+section#auspiciantes summary,
+section#comunidades-amigas summary,
+section#colaboran summary,
+section#consejo-asesor summary,
+section#equipo summary {
+  padding: 0 0 10px 0 !important;
+  margin-bottom: 8px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+@media (prefers-color-scheme: dark) {
+  section#auspiciantes summary,
+  section#comunidades-amigas summary,
+  section#colaboran summary,
+  section#consejo-asesor summary,
+  section#equipo summary {
+    border-bottom-color: #1f2937 !important;
+  }
 }
