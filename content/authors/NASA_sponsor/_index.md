@@ -10,6 +10,6 @@ social:
   icon_pack: fas
   link: https://www.nasa.gov/
 superuser: false
-user_groups:
-- Actuales
+user_groups: [Auspiciantes]
+
 ---
