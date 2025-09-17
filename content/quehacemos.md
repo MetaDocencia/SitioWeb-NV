@@ -15,9 +15,9 @@ sections:
         </span>
     design:
       spacing:
-        padding: ["0.4rem", 0, "0.4rem", 0]   # más angosto
+        padding: ["0.4rem", 0, "0.4rem", 0]
         margin: [0, 0, 0, 0]
-      css_style: "min-height: 12vh;"          # ~mitad de alto
+      css_style: "min-height: 12vh;"
       background:
         image:
           filename: "1naranjaazul.png"
@@ -28,36 +28,30 @@ sections:
           parallax: false
         text_color_light: true
 
-  # ---------- Tres columnas con iconos + CTA "Ver más" ----------
-  - block: features
+  # ---------- Tres columnas con badges de color + CTA "Ver más" ----------
+  - block: features-colored
     id: pilares
     content:
       title: ""
       text: ""
       items:
         - name: "Impulsamos Infraestructura"
-          icon: "cloud"
-          icon_pack: "hero"
-          icon_color: "#00506F"          # si tu blox lo soporta
-          css_class: "text-[#00506F]"    # forzado por clase
+          badge: "INF"
+          icon_color: "#00506F"   # Azul
           description: |
             Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.  
             <a href="#infra" class="btn btn-primary mt-3 inline-block">Ver más</a>
 
         - name: "Formamos capacidades"
-          icon: "academic-cap"
-          icon_pack: "hero"
-          icon_color: "#C83737"
-          css_class: "text-[#C83737]"
+          badge: "FOR"
+          icon_color: "#C83737"   # Rojo
           description: |
             Creamos programas de aprendizaje colaborativos, contextualizados y basados en evidencia. Estos programas convierten conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.  
             <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
 
         - name: "Construimos comunidad"
-          icon: "user-group"
-          icon_pack: "hero"
-          icon_color: "#F77B20"
-          css_class: "text-[#F77B20]"
+          badge: "COM"
+          icon_color: "#F77B20"   # Naranja
           description: |
             Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.  
             <a href="#comunidad" class="btn btn-primary mt-3 inline-block">Ver más</a>
@@ -262,7 +256,7 @@ sections:
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
-      columns: 4   # ← ahora 4 columnas para incluir el nuevo proyecto
+      columns: 4
 
   - block: stats
     content:
