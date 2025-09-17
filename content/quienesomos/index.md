@@ -73,58 +73,6 @@ sections:
       compact: true
       css_class: "people-sm"
 
-  # --- COMUNIDADES AMIGAS (desplegable, compacto) ---
-  - block: people
-    id: comunidades-amigas
-    content:
-      title: "Comunidades Amigas"
-      text: "Redes y comunidades con las que colaboramos."
-      user_groups: ["Comunidades Amigas"]
-      start_open: false
-    design:
-      columns: 7
-      compact: true
-      css_class: "people-sm"
-
-  # --- COLABORAN (desplegable, compacto) ---
-  - block: people
-    id: colaboran
-    content:
-      title: "Colaboran"
-      text: "Profesionales y especialistas que colaboran en proyectos y cursos."
-      user_groups: ["Colaboradores Externos"]
-      start_open: false
-    design:
-      columns: 7
-      compact: true
-      css_class: "people-sm"
-
-  # --- CONSEJO ASESOR (desplegable, compacto) ---
-  - block: people
-    id: consejo-asesor
-    content:
-      title: "Consejo Asesor"
-      text: "Personas que orientan estratégicamente nuestro trabajo."
-      user_groups: ["Consejo Asesor"]
-      start_open: false
-    design:
-      columns: 7
-      compact: true
-      css_class: "people-sm"
-
-  # --- EQUIPO (desplegable, compacto) ---
-  - block: people
-    id: equipo
-    content:
-      title: "Equipo"
-      text: "Conoce al equipo que impulsa el día a día de MetaDocencia."
-      user_groups: ["Equipo"]
-      start_open: false
-    design:
-      columns: 7
-      compact: true
-      css_class: "people-sm"
-
   - block: cta-card
     content:
       title: "Apoya a la ciencia latinoamericana"
