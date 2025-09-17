@@ -1,0 +1,36 @@
+{{/* features-colored: grid de features con badge circular coloreado por item.icon_color */}}
+{{ $b := .block }}
+{{ $content := (index $b "content") | default dict }}
+{{ $design  := (index $b "design")  | default dict }}
+{{ $items   := (index $content "items") | default (slice) }}
+
+{{ $cols := (index $design "columns") | default 3 }}
+{{ $grid := "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }}
+{{ if eq $cols 2 }}{{ $grid = "grid-cols-1 sm:grid-cols-2" }}{{ end }}
+{{ if eq $cols 4 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" }}{{ end }}
+{{ if eq $cols 5 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" }}{{ end }}
+
+<section id="{{ (index $b "id") | default "features-colored" }}" class="py-8">
+  <div class="container mx-auto px-6">
+    <div class="grid {{ $grid }} gap-6">
+      {{ range $items }}
+        {{ $name := .name | default "" }}
+        {{ $desc := .description | default "" }}
+        {{ $badge := .badge | default "" }}
+        {{ $color := .icon_color | default "#4B5563" }}
+        <div class="rounded-2xl border bg-white dark:bg-gray-900 shadow-sm p-6 flex flex-col">
+          <div class="flex items-center gap-4 mb-3">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-xs"
+                  style="background-color: {{ $color }};">
+              {{ $badge }}
+            </span>
+            <h3 class="text-lg font-semibold leading-snug m-0">{{ $name }}</h3>
+          </div>
+          <div class="prose dark:prose-invert max-w-none text-sm grow">
+            {{ $desc | markdownify }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
