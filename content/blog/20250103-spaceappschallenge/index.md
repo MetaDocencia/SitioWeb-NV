@@ -1,14 +1,19 @@
 ---
-title: ""Historias de Ciencia Abierta en Acción: NASA International Space Apps Challenge Norte de México"
-summary: Aplicaciones espaciales es una iniciativa del departamento de Ciencias de la Tierra de la NASA que permite la colaboración con las nuevas generaciones para resolver problemáticas que nos aquejan como especie humana tanto en la Tierra como en el espacio
+title: "Historias de Ciencia Abierta en Acción: NASA International Space Apps Challenge Norte de México"
 date: 2025-01-03
+slug: "spaceappschallenge"
+summary: "Aplicaciones espaciales es una iniciativa del Departamento de Ciencia, Tecnología, Ingeniería y Matemáticas de Estados Unidos que convoca a estudiantes y entusiastas de la ciencia y la tecnología a crear soluciones innovadoras con datos abiertos de la NASA."
 authors:
   - jzavala
 tags:
-  - 
+  - Ciencia Abierta
+  - NASA
 categories:
   - Historias de Ciencia Abierta en acción
+draft: false
+type: post
 ---
+
 
 ## ¿De qué se trata NASA International Space Apps Challenge?
 Aplicaciones espaciales es una iniciativa del departamento de Ciencias de la Tierra de la NASA que permite la colaboración con las nuevas generaciones para resolver problemáticas que nos aquejan como especie humana tanto en la Tierra como en el espacio mediante retos de baja, media y alta fidelidad, con la organización de la Agencia Espacial Estadounidense NASA y 15 agencias espaciales del mundo. Denominado “el hackatón más grande del mundo”, ya que tiene una duración de 48 horas continuas y se desarrolla en las diferentes zonas horarias en 380 localidades de los 5 continentes de manera asincrónica. Las agencias en unión ponen a disposición sus bases de datos sobre diversos temas mediante enlaces, artículos, investigaciones, reportes o bien un buscador de temas; todo esto, con el fin de facilitarle a los competidores un acceso rápido y fácil para su posterior resolución en tiempo récord.  
