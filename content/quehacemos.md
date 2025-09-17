@@ -47,7 +47,7 @@ sections:
           icon: "academic-cap"
           icon_pack: "hero"
           description: |
-            Creamos programas de aprendizaje colaborativo y basados en evidencia, que convierten conocimientos en acción, impulsando una investigación más abierta, eficiente y sostenible.  
+            Creamos programas de aprendizaje colaborativos, contextualizados y basados en evidencia. Estos programas convierten conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.  
             <a href="#formacion" class="btn btn-primary mt-3 inline-block">Ver más</a>
           css_class: "text-[#C83737]"   # Rojo
 
@@ -69,22 +69,22 @@ sections:
       title: "Proyectos destacados"
       text: ""
       items:
-        - name: "Formación en Ciencia Abierta"
+        - name: "Catalyst"
           description: |
-            Bajada.
-
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
-            <a href="#formacion"
-               class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
-               style="background-color:#C83737;color:#FFFFFF;">Formación</a>
-        - name: "Contextualización"
-          description: |
-            Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
+            Mejoramos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
             <a href="#infra"
                class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
                style="background-color:#00506F;color:#FFFFFF;">Infraestructura</a>
+        - name: "Formación en Ciencia Abierta"
+          description: |
+            Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+            <a href="#formacion"
+               class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full no-underline"
+               style="background-color:#C83737;color:#FFFFFF;">Formación</a>    
         - name: "Gobernanza"
           description: |
             Brindamos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
@@ -104,7 +104,7 @@ sections:
     id: infra
     content:
       title: "Impulsamos Infraestructura"
-      text: "Promovemos infraestructura abierta, sostenible y orientada al reuso, para acelerar la producción y circulación del conocimiento."
+      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento"
     design:
       card:
         css_class: "shadow-sm"
@@ -128,7 +128,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Ciencia Abierta y Datos Abiertos en la comunidad latinoamericana de bioimagen"
           description: |
-            Proyecto a incubar
+            Bajada
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
     design:
@@ -164,7 +164,7 @@ sections:
     id: formacion
     content:
       title: "Formamos capacidades"
-      text: "Diseñamos experiencias de aprendizaje basadas en evidencia, centradas en la práctica y con foco en el impacto."
+      text: "Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción."
     design:
       card:
         css_class: "shadow-sm"
@@ -183,7 +183,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Financiamiento"
           description: |
-            Formación que impulsa la financiación internacional para América Latina.
+            Proyecto que impulsa la financiación internacional para América Latina.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4" href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Formación para Formar"
@@ -211,10 +211,10 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: ""
-          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
+          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
         - name: "Emmanuel Iarussi"
           role: ""
-          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
+          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -226,7 +226,7 @@ sections:
     id: comunidad
     content:
       title: "Construimos comunidad"
-      text: "Facilitamos redes de colaboración que conectan disciplinas, instituciones y países, desde y para América Latina."
+      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo."
     design:
       card:
         css_class: "shadow-sm"
@@ -261,7 +261,7 @@ sections:
       items:
         - statistic: "+40"
           description: "comunidades amigas"
-        - statistic: "54"
+        - statistic: "+50"
           description: "personas colaboradoras"
         - statistic: "+1000"
           description: "personas en Slack"
@@ -273,10 +273,10 @@ sections:
       items:
         - name: "Andrés Kamaid"
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
-          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
+          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
           role: "ARPHAI"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
