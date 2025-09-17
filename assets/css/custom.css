@@ -25,18 +25,18 @@ section.people-sm .group {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  gap: 4px !important;                /* casi pegado */
+  gap: 6px !important;                /* casi pegado */
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
-  padding: 0 !important;
+  padding: 6px !important;
   min-height: auto !important;
 }
 
 /* El contenedor de la imagen NO deja margen debajo */
 section.people-sm a.group > div:first-child {
-  margin: 2 !important;
-  padding: 2 !important;
+  margin: 10px !important;
+  padding: 2px !important;
   background: transparent !important;
   box-shadow: none !important;
   border: 0 !important;
@@ -59,7 +59,7 @@ section.people-sm img {
   border-radius: 9999px !important;
   object-fit: cover !important;
   display: block !important;
-  margin: 2 auto !important;
+  margin: 10px auto !important;
   background: transparent !important;
   border: 0 !important;
 }
@@ -68,7 +68,7 @@ section.people-sm img {
 section.people-sm .font-semibold,
 section.people-sm .text-sm,
 section.people-sm .opacity-70 {
-  margin: 4 !important;
+  margin: 20px !important;
   line-height: 1.15 !important;
 }
 
