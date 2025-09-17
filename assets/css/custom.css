@@ -1,63 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 html, body {
-  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
-               "Segoe UI", Roboto, Helvetica, Arial,
-               "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 .prose :where(p, li, blockquote, figcaption, strong, em, a),
 h1, h2, h3, h4, h5, h6,
 nav, .btn, .card, header, footer {
-  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
-               "Segoe UI", Roboto, Helvetica, Arial,
-               "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-section.people-sm .group {
-  gap: 6px !important;
-}
-
-section.people-sm img {
-  width: 90px !important;
-  height: 90px !important;
-  border-radius: 9999px !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-
-section.people-sm .font-semibold {
-  margin-top: 4px !important;
-  line-height: 1.2 !important;
-  font-size: 0.95rem !important;
-}
-
-section.people-sm .text-sm,
-section.people-sm .opacity-70 {
-  margin-top: 2px !important;
-  line-height: 1.15 !important;
-  font-size: 0.75rem !important;
-}
-
-section.people-sm .bg-white {
-  background: transparent !important;
-}
-
-section.people-sm .dark\:bg-gray-900 {
-  background: transparent !important;
-}
-
-section.people-sm .border {
-  border: 0 !important;
-}
-
-section.people-sm .shadow,
-section.people-sm .shadow-sm {
-  box-shadow: none !important;
-}
-
-/* Quitar rectángulos y compactar tarjetas en los bloques `people` */
 section#auspiciantes details,
 section#comunidades-amigas details,
 section#colaboran details,
@@ -68,7 +20,6 @@ section#equipo details {
   box-shadow: none !important;
 }
 
-/* Tarjetas individuales (anchor) sin rectángulo ni borde/sombra */
 section#auspiciantes a.group,
 section#comunidades-amigas a.group,
 section#colaboran a.group,
@@ -80,7 +31,6 @@ section#equipo a.group {
   padding: 0 !important;
 }
 
-/* Reducir separación entre tarjetas del grid */
 section#auspiciantes .grid,
 section#comunidades-amigas .grid,
 section#colaboran .grid,
@@ -89,7 +39,6 @@ section#equipo .grid {
   gap: 10px !important;
 }
 
-/* Evitar el contenedor cuadrado gigante de la imagen */
 section#auspiciantes .aspect-square,
 section#comunidades-amigas .aspect-square,
 section#colaboran .aspect-square,
@@ -101,7 +50,6 @@ section#equipo .aspect-square {
   margin: 0 auto !important;
 }
 
-/* Foto circular un poco más grande y centrada */
 section#auspiciantes img,
 section#comunidades-amigas img,
 section#colaboran img,
@@ -116,7 +64,6 @@ section#equipo img {
   transform: none !important;
 }
 
-/* Compactar la caja del texto (título/rol) */
 section#auspiciantes .p-4,
 section#comunidades-amigas .p-4,
 section#colaboran .p-4,
@@ -125,7 +72,6 @@ section#equipo .p-4 {
   padding: 6px !important;
 }
 
-/* Juntar foto y nombre sin superponer */
 section#auspiciantes .font-semibold,
 section#comunidades-amigas .font-semibold,
 section#colaboran .font-semibold,
@@ -136,7 +82,6 @@ section#equipo .font-semibold {
   font-size: 0.95rem !important;
 }
 
-/* Subtexto más compacto */
 section#auspiciantes .text-sm,
 section#auspiciantes .opacity-70,
 section#comunidades-amigas .text-sm,
