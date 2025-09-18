@@ -2,7 +2,7 @@
 title: "Home"
 date: 2023-10-24
 type: landing
-
+translationKey: "home"
 design:
   # Espaciado por defecto entre secciones
   spacing: "6rem"
