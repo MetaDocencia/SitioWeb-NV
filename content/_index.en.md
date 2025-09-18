@@ -3,18 +3,19 @@ title: "Home"
 date: 2023-10-24
 type: landing
 translationKey: "home"
+
 design:
-  # Espaciado por defecto entre secciones
+  # Default spacing between sections
   spacing: "6rem"
 
 sections:
   - block: hero
     content:
-      # Título en HTML para controlar tamaño/contraste
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">MetaDocencia builds open, equitable science from Latin America</span>'
-      # Botón personalizado más grande y visible
+      # Title in HTML to control size/contrast
+      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the map of global research</span>'
+      # Larger, high-contrast custom button
       text: |
-        <a href="https://julianbuede.github.io/cta/"
+        <a href="/en/cta/"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
@@ -34,29 +35,29 @@ sections:
           size: cover
           position: center
           parallax: false
-        text_color_light: true   # asegura textos claros sobre el fondo
+        text_color_light: true   # ensure clear text over the background
 
   - block: cta-image-paragraph
     id: solutions
     content:
       items:
-        - title: "Quiénes somos"
-          text: "TEXTO A DEFINIR. MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo."
+        - title: "Who we are"
+          text: "MetaDocencia is a nonprofit founded in 2020. Our community brings together people and organizations that build local scientific capacity to transform global science. We grow science through networks—from Latin America to the world."
           image: "quienesomos.jpg"
           button:
-            text: "Conócenos"
-            url: "https://julianbuede.github.io/quienes-somos/"
-        - title: "Qué hacemos"
-          text: "Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos."
+            text: "Learn about us"
+            url: "/en/who-we-are/"
+        - title: "What we do"
+          text: "We work so that the production, communication, and application of scientific and technical knowledge are globally equitable."
           feature_icon: check
           features:
-            - "Impulsamos infraestructura"
-            - "Formamos a personas investigadoras"
-            - "Construimos comunidad"
+            - "We strengthen research infrastructure"
+            - "We train researchers and practitioners"
+            - "We build community"
           image: "organigramaapaisado.png"
           button:
-            text: "Conoce nuestros proyectos"
-            url: "https://julianbuede.github.io/que-hacemos"
+            text: "Explore our projects"
+            url: "/en/what-we-do/"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
 
@@ -65,16 +66,16 @@ sections:
       items:
         - statistic: "NN"
           description: |
-            Proyectos  
-            financiados
-        - statistic: "+1500"
+            Funded  
+            projects
+        - statistic: "+1,500"
           description: |
-            personas  
-            formadas
-        - statistic: "+1000"
+            people  
+            trained
+        - statistic: "+1,000"
           description: |
-            personas en la   
-            comunidad de Slack
+            people in the  
+            Slack community
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
@@ -85,21 +86,21 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "3 TESTIMONIOS A DEFINIR - Julio Zetter"
-          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México"
+        - name: "Julio Zetter"
+          role: "Chief Coordinator of the SciELO Mexico database and virtual library"
           image: "juliozetter.jpeg"
-          text: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia"
+          text: "I can only thank the instructors who made this course possible; it is undoubtedly the seed of great outcomes. Thank you so much, MetaDocencia."
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
   - block: cta-card
     content:
-      title: "Apoya a la ciencia latinoamericana"
-      text: "Aquí te contamos cómo"
+      title: "Support Latin American science"
+      text: "Here’s how you can help"
       button:
-        text: "Súmate"
-        url: "https://julianbuede.github.io/cta/"
+        text: "Join us"
+        url: "/en/cta/"
     design:
       card:
         css_class: "bg-primary-700"
