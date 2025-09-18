@@ -1,0 +1,85 @@
+{{ define "main" }}
+<section class="container mx-auto px-6 py-8">
+  {{/* ==== Datos base ==== */}}
+  {{ $img := "" }}
+  {{ with .Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ end }}
+  {{ if and (not $img) (isset .Params "image") }}{{ $img = (.Params.image | relURL) }}{{ end }}
+
+  <header class="flex flex-col md:flex-row md:items-center gap-6">
+    {{ if $img }}
+      <img src="{{ $img }}" alt="{{ .Title }}" class="w-32 h-32 rounded-full object-cover" loading="lazy">
+    {{ else }}
+      <div class="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+    {{ end }}
+
+    <div>
+      <h1 class="text-3xl font-extrabold">{{ .Title }}</h1>
+      {{ with .Params.role }}<div class="text-lg opacity-80">{{ . }}</div>{{ end }}
+
+      {{ with .Params.organizations }}
+        <div class="text-sm opacity-80 mt-1">
+          {{ range $i, $org := . }}
+            {{ if gt $i 0 }}, {{ end }}
+            {{ with $org.url }}<a href="{{ . }}" class="underline">{{ $org.name }}</a>{{ else }}{{ $org.name }}{{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ with .Params.profiles }}
+        <div class="flex flex-wrap gap-3 mt-3">
+          {{ range . }}
+            <a href="{{ .url }}" {{ if .label }}aria-label="{{ .label }}"{{ end }} class="inline-flex items-center gap-2 underline">
+              {{ if .icon }}{{ partial "blox/icon.html" (dict "name" .icon) }}{{ end }}
+              {{ if .label }}<span>{{ .label }}</span>{{ end }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ with .Params.bio }}
+    <div class="prose mt-6">{{ . | markdownify }}</div>
+  {{ end }}
+
+  {{ with .Params.interests }}
+    <h2 class="text-xl font-bold mt-10">Intereses</h2>
+    <ul class="list-disc list-inside mt-2">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  {{ end }}
+
+  {{ with .Params.education.courses }}
+    <h2 class="text-xl font-bold mt-8">Educación</h2>
+    <ul class="mt-2">
+      {{ range . }}
+        <li class="mt-2">
+          <div class="font-semibold">{{ .course }}</div>
+          <div class="text-sm opacity-80">
+            {{ .institution }}{{ with .year }} — {{ . }}{{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{/* Notas del autor (si los posts tienen authors: [<slug>]) */}}
+  {{ $dir := .File.Dir | replaceRE "^content/(author|authors)/" "" | replaceRE "/$" "" }}
+  {{ $posts := where site.RegularPages "Params.authors" "intersect" (slice $dir) }}
+  {{ if gt (len $posts) 0 }}
+    <h2 class="text-xl font-bold mt-10">Notas del blog</h2>
+    <div class="grid gap-6 md:grid-cols-2 mt-4">
+      {{ range $posts.ByDate.Reverse }}
+        <a class="block p-4 border rounded-lg hover:shadow" href="{{ .RelPermalink }}">
+          {{ with .Params.image.featured }}
+            <img src="{{ . | relURL }}" class="w-full h-40 object-cover rounded mb-3" loading="lazy">
+          {{ end }}
+          <div class="text-sm opacity-70">{{ .Date.Format "2006-01-02" }}</div>
+          <div class="font-semibold">{{ .Title }}</div>
+          {{ with .Params.summary }}<div class="opacity-80 mt-1 text-sm">{{ . }}</div>{{ end }}
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>
+{{ end }}
