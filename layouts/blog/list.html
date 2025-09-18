@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="container mx-auto px-6 py-6">
+  <!-- Título -->
+  <h1 class="text-3xl font-bold mb-4">Blog</h1>
+
+  <!-- Selector de etiquetas (chips) -->
+  {{ with .Site.Taxonomies.tags }}
+  <div class="flex flex-wrap gap-2 mb-6">
+    <a href="{{ "/blog/" | relURL }}"
+       class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
+       Todas
+    </a>
+    {{ range $tag, $_ := . }}
+      <a href="{{ (printf "/tags/%s/" (urlize $tag)) | relURL }}"
+         class="px-3 py-1 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700">
+         {{ $tag }}
+      </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Listado de artículos: fecha, título (link), resumen. SIN "Read more" -->
+  <div class="space-y-8">
+    {{/* Paginamos las páginas de la sección blog. 
+          Si también quieres incluir /post/, usa el bloque alternativo más abajo. */}}
+    {{ $p := .Paginate .Pages }}
+    {{ range $p.Pages }}
+      <article class="border-b border-gray-200 dark:border-gray-800 pb-6">
+        <h2 class="text-2xl font-semibold">
+          <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+        </h2>
+
+        <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+          {{ .Date.Format "2006-01-02" }}
+          {{ with .Params.authors }} · {{ delimit . ", " }}{{ end }}
+          {{ with .Params.tags }} ·
+            {{ range $i, $t := . }}
+              <a class="underline hover:no-underline"
+                 href="{{ (printf "/tags/%s/" (urlize $t)) | relURL }}">{{ $t }}</a>{{ if lt (add $i 1) (len $.Params.tags) }}, {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+
+        {{ with .Summary }}
+          <p class="mt-3">{{ . | safeHTML }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+
+  <!-- Paginación -->
+  <div class="mt-8">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+{{ end }}
