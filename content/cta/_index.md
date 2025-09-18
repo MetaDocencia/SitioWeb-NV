@@ -18,19 +18,31 @@ sections:
       css_class: "text-gray-900 dark:text-gray-100"
       css_style: "background-color:#F9FAFB;"
 
-  # ---------- Boletín (ROJO #C83737, texto blanco) ----------
-  - block: cta-card
-    id: boletin
+  # ---------- Boletín + Form (dos columnas con shortcode) ----------
+  - block: features
+    id: boletin-embed
     content:
-      title: "Boletín MetaDocencia"
-      text: "Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés. **[Ver ediciones anteriores](https://www.metadocencia.org/boletines/)**"
-      button:
-        text: "Suscribite acá: Formulario de suscripción"
-        url: "https://www.metadocencia.org/contacto/"
+      title: ""
+      text: ""
+      items:
+        - name: "Boletín MetaDocencia"
+          description: |
+            <h2 class="text-3xl font-bold mb-3">Boletín MetaDocencia</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+            </p>
+            <p class="mb-0">
+              <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
+                Ver ediciones anteriores
+              </a>
+            </p>
+        - name: "Suscribite"
+          description: |
+            {{< mc_form >}}
     design:
-      card:
-        css_class: "text-gray-900 dark:text-gray-100"
-        css_style: "background-color:#C83737"
+      columns: 2
+      css_class: "text-gray-900 dark:text-gray-100 bg-gray-50"
+
 
   # ---------- Slack (BLANCO con texto oscuro + link oscuro) ----------
   - block: cta-card
