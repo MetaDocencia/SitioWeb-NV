@@ -27,7 +27,6 @@ sections:
       items:
         - name: "Boletín MetaDocencia"
           description: |
-            <h2 class="text-3xl font-bold mb-3">Boletín MetaDocencia</h2>
             <p class="text-lg leading-relaxed mb-4">
               Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
             </p>
