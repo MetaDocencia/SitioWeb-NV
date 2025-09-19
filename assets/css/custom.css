@@ -262,3 +262,20 @@ section.people-sm a.group:hover img {
 /* Anular el max-width de la tipografía en /cta sección boletín */
 section#boletin-embed .prose{ max-width:100% !important; }
 
+/* === Forzar el features #boletin-embed a 2 columnas reales === */
+section#boletin-embed .grid {
+  display: grid;
+  grid-template-columns: 1fr !important; /* 1 col en mobile */
+}
+
+@media (min-width: 1024px) { /* lg: */
+  section#boletin-embed .grid {
+    grid-template-columns: 1fr 1fr !important; /* 2 cols en desktop */
+  }
+}
+
+/* Opcional: que el formulario (2º item) sea un poco más angosto y alineado a la derecha */
+section#boletin-embed .grid > *:nth-child(2) > div {
+  max-width: 36rem;         /* ~576px */
+  margin-left: auto;        /* se pega a la derecha */
+}
