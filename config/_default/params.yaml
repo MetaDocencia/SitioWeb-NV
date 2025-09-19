@@ -40,7 +40,7 @@ header:
     button:
       enable: true
       text: "Súmate"
-      url: "https://julianbuede.github.io/cta/"
+      url: "/cta/"
     show_search: true
     show_theme_chooser: true
 
