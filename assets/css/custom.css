@@ -258,3 +258,7 @@ section.people-sm a.group:hover img {
 }
 .dark .hb-card-article .tags a,
 .dark .hb-card-article .tags span { background:rgba(255,255,255,.08); color:#e5e7eb; }
+
+/* Anular el max-width de la tipografía en /cta sección boletín */
+section#boletin-embed .prose{ max-width:100% !important; }
+
