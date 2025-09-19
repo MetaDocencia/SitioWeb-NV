@@ -6,17 +6,6 @@ design:
   spacing: "3rem"
 
 sections:
-  # ---------- Intro compacta ----------
-  - block: cta-image-paragraph
-    id: intro
-    content:
-      items:
-        - title: "Súmate y apoya a nuestra comunidad"
-          text: "Suscríbete al boletín, únete a Slack, conecta con comunidades amigas y apoya a MetaDocencia. Potenciemos a América Latina en el mapa de la investigación global."
-          image: "quienessomos.jpg"
-    design:
-      css_class: "text-gray-900 dark:text-gray-100"
-      css_style: "background-color:#F9FAFB;"
 
   # ---------- Boletín + Form (dos columnas con shortcode) ----------
   - block: features
@@ -27,7 +16,6 @@ sections:
       items:
         - name: "Boletín MetaDocencia"
           description: |
-            <h2 class="text-3xl font-bold mb-3">Boletín MetaDocencia</h2>
             <p class="text-lg leading-relaxed mb-4">
               Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
             </p>
