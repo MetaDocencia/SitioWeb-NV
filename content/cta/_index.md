@@ -95,7 +95,7 @@ sections:
 
         <!-- Logos auspiciantes -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
-          <img src="/authors/2i2c-sponsor/avatar.png" alt="2i2c" class="max-h-10 w-auto opacity-95">
+          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
           <img src="/authors/CSS_sponsor/avatar.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95">
           <img src="/authors/NASA_sponsor/avatar.png" alt="NASA" class="max-h-10 w-auto opacity-95">
           <img src="/authors/arecibo-sponsor/avatar.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95">
