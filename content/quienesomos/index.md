@@ -73,7 +73,7 @@ sections:
       start_open: true                           # ← se muestra abierto por defecto
     design:
       columns: 5
-      compact: true
+      compact: false
       css_class: "people-md"
 
   # 2) Auspiciantes
