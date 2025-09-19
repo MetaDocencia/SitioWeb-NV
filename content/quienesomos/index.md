@@ -64,10 +64,10 @@ sections:
   - block: people
     id: auspiciantes
     content:
-      title: "Auspiciantes"
+      title: Auspiciantes
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups: ["Auspiciantes"]   # ← filtra SOLO este grupo
-      start_open: true                 # ← desplegable abierto por defecto
+      user_groups: ["Auspiciantes"]   
+      start_open: true                
     design:
       columns: 7
       compact: true
