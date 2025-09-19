@@ -60,12 +60,17 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
 
-
-content:
-  authors: ["czi", "laura-acion"]
-
   
   # --- AUSPCIANTES (desplegable, compacto) ---
+  - block: people
+    id: auspiciantes
+    content:
+      authors: ["czi", "laura-acion"]
+    design:
+      columns: 7
+      compact: true
+      css_class: "people-sm"
+  
   - block: people
     id: auspiciantes
     content:
