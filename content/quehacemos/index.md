@@ -323,11 +323,11 @@ sections:
     content:
       items:
         - statistic: "+40"
-          description: "comunidades amigas"
-        - statistic: "54"
-          description: "personas colaboradoras"
-        - statistic: "+1000"
-          description: "personas en Slack"
+          description: "comunidades amigas y alianzas"
+        - statistic: "+60"
+          description: "personas que colaboran con MetaDocencia"
+        - statistic: "+1070"
+          description: "integrantes en la comunidad de Slack"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
