@@ -59,7 +59,7 @@ sections:
         Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <img src="/media/logos/comunidades/logo04.png" alt="Comunidad 4" class="max-h-10 w-auto opacity-95">
+          <img src="assets/media/sponsors/2i2c-sponsor.png" alt="Comunidad 4" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95">
