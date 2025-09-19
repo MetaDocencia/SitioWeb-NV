@@ -29,11 +29,12 @@ sections:
     design:
       card:
         css_class: "text-gray-900 dark:text-gray-100"
-        css_style: "background-color:#F9FAFB;"
+        css_style: "background-color:#C83737;color:#FFFFFF;"
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
-
+    
+    
   # ---------- Slack ----------
   - block: cta-card
     id: slack
