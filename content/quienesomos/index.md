@@ -61,18 +61,73 @@ sections:
         padding: ["4rem", 0, "4rem", 0]
 
   
-  # --- AUSPCIANTES (desplegable, compacto) ---
+    # === PERSONAS / ORGANIZACIONES POR GRUPO (cada uno en desplegable) ===
+
+  # 1) Equipo y Consejo Asesor
+  - block: people
+    id: equipo
+    content:
+      title: "Equipo y Consejo Asesor"
+      text: "Personas que trabajan hoy en MetaDocencia y quienes nos asesoran."
+      user_groups: ["Equipo y Consejo Asesor"]  # ← debe coincidir exactamente con los perfiles
+      start_open: true                           # ← se muestra abierto por defecto
+    design:
+      columns: 5
+      compact: true
+      css_class: "people-md"
+
+  # 2) Auspiciantes
   - block: people
     id: auspiciantes
     content:
-      title: Auspiciantes
+      title: "Auspiciantes"
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups: ["Auspiciantes"]   
-      start_open: true                
+      user_groups: ["Auspiciantes"]
+      start_open: false
     design:
       columns: 7
       compact: true
       css_class: "people-sm"
+
+  # 3) Colaboradores
+  - block: people
+    id: colaboradores
+    content:
+      title: "Colaboradores"
+      text: "Personas que trabajan de forma externa con nuestros proyectos."
+      user_groups: ["Colaboradores"]
+      start_open: false
+    design:
+      columns: 6
+      compact: true
+      css_class: "people-md"
+
+  # 4) Colaboraron con MetaDocencia (alumni / contribuciones pasadas)
+  - block: people
+    id: colaboraron
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: "Personas que contribuyeron anteriormente a MetaDocencia."
+      user_groups: ["Colaboraron con MetaDocencia"]
+      start_open: false
+    design:
+      columns: 6
+      compact: true
+      css_class: "people-sm"
+
+  # 5) Trabajamos con (otras organizaciones aliadas)
+  - block: people
+    id: trabajamos-con
+    content:
+      title: "Trabajamos con"
+      text: "Otras organizaciones con las que co-creamos y articulamos."
+      user_groups: ["Trabajamos con"]
+      start_open: false
+    design:
+      columns: 7
+      compact: true
+      css_class: "people-sm"
+
 
   - block: cta-card
     content:
