@@ -9,7 +9,7 @@ sections:
   # ---------- HERO angosto (imagen de fondo + texto grande) ----------
   - block: hero
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad.</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
     design:
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
@@ -33,7 +33,7 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Impulsamos Infraestructura"
+        - name: "Impulsamos infraestructura"
           description: |
             <div style="height:4px;background:#00506F;border-radius:6px;margin:0 0 0.75rem 0;"></div>
             Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
@@ -47,7 +47,7 @@ sections:
         - name: "Formamos capacidades"
           description: |
             <div style="height:4px;background:#C83737;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            Creamos programas de aprendizaje colaborativo y basados en evidencia, que convierten conocimientos en acción, impulsando una investigación más abierta, eficiente y sostenible.
+            Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.
             <br>
             <a href="#formacion"
                class="mt-3 inline-block no-underline font-semibold"
@@ -58,7 +58,7 @@ sections:
         - name: "Construimos comunidad"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y potenciar la ciencia desde América Latina hacia el mundo.
+            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
             <br>
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
@@ -79,41 +79,27 @@ sections:
       title: "Proyectos destacados"
       text: ""
       items:
-        - name: "Catalyst"
+        - name: "Acceso a finaciamiento para iniciativas científicas"
           description: |
-            Mejoramos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
+            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
-            <a href="#infra"
-               class="mt-2 inline-block no-underline font-semibold"
-               style="background:#00506F;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
-               Conocé más proyectos de Infraestructura
-            </a>
 
         - name: "Formación en Ciencia Abierta"
           description: |
-            Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
+            Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
-            <a href="#formacion"
-               class="mt-2 inline-block no-underline font-semibold"
-               style="background:#C83737;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
-               Conocé más proyectos de Formación
-            </a>
-
+           
         - name: "Gobernanza"
           description: |
-            Brindamos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
+            Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
-            <a href="#comunidad"
-               class="mt-2 inline-block no-underline font-semibold"
-               style="background:#F77B20;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
-               Conocé más proyectos de Comunidad
-            </a>
+           
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
@@ -125,7 +111,7 @@ sections:
     id: infra
     content:
       title: "Impulsamos Infraestructura"
-      text: "Promovemos infraestructura abierta, sostenible y orientada al reuso, para acelerar la producción y circulación del conocimiento."
+      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento."
     design:
       spacing:
         padding: ["1rem", 0, "0.25rem", 0]   # ↓ menos espacio debajo del CTA
@@ -141,7 +127,7 @@ sections:
       items:
         - name: "Catalyst"
           description: |
-            Mejoramos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
+            Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
@@ -153,9 +139,9 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
 
-        - name: "Ciencia Abierta y Datos Abiertos en la comunidad latinoamericana de bioimagen"
+        - name: "Ciencia y Datos Abiertos en Bioimagen"
           description: |
-            Repositorio colaborativo de información sobre Ciencia Abierta en español.
+            Liderado por LABI y MetaDocencia, este proyecto impulsa infraestructura, formación y redes en +10 países. Buscamos posicionar a América Latina como referente global en innovación y colaboración científica.
             
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
@@ -179,9 +165,9 @@ sections:
   - block: testimonials
     content:
       items:
-        - name: "Testimonio 1"
-          role: "Organización/Proyecto"
-          text: "Testimonio 1"
+        - name: "Nicolás Wolovick"
+          role: "Director UNC Supercómputo"
+          text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
         - name: "Testimonio 2"
           role: "Organización/Proyecto"
           text: "Testimonio 2."
@@ -196,7 +182,7 @@ sections:
     id: formacion
     content:
       title: "Formamos capacidades"
-      text: "Diseñamos experiencias de aprendizaje basadas en evidencia, centradas en la práctica y con foco en el impacto."
+      text: "Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local."
     design:
       spacing:
         padding: ["1rem", 0, "0.25rem", 0]
@@ -212,28 +198,28 @@ sections:
       items:
         - name: "Formación en Ciencia Abierta"
           description: |
-            Diseñamos formación en Ciencia Abierta en español, contextualizada a América Latina, para llevar buenas prácticas a la acción.
+            Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
 
-        - name: "Financiamiento"
+        - name: "Acceso a finaciamiento para iniciativas científicas"
           description: |
-            Formación que impulsa la financiación internacional para América Latina.
+            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
 
-        - name: "Formación para Formar"
+        - name: "Formación para enseñar"
           description: |
-            Atendemos la demanda de habilidades pedagógicas prácticas en comunidades hispanohablantes dedicadas a la ciencia y la tecnología.
+            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
 
         - name: "Cursos a medida"
           description: |
-            Diseñamos cursos y formaciones a medida sobre habilidades blandas y técnicas.
+            Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
@@ -263,6 +249,9 @@ sections:
         - name: "Emmanuel Iarussi"
           role: ""
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
+        - name: "Laura Dillon"
+          role: ""
+          text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -274,7 +263,7 @@ sections:
     id: comunidad
     content:
       title: "Construimos comunidad"
-      text: "Facilitamos redes de colaboración que conectan disciplinas, instituciones y países, desde y para América Latina."
+      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo."
     design:
       spacing:
         padding: ["1rem", 0, "0.25rem", 0]
@@ -290,13 +279,13 @@ sections:
       items:
         - name: "Gobernanza"
           description: |
-            Brindamos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
+            Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
         - name: "Conversatorios"
           description: |
-            Organizamos conversatorios y espacios de diálogo para explorar, aprender y compartir conocimiento. Fomentamos la participación y el intercambio de experiencias para fortalecer redes de colaboración y el conocimiento compartido.
+            Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
