@@ -93,13 +93,21 @@ sections:
       text: |
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 items-center mt-4">
-          <img src="/media/logos/auspiciantes/logo01.png" alt="Auspiciante 1" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/auspiciantes/logo02.png" alt="Auspiciante 2" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/auspiciantes/logo03.png" alt="Auspiciante 3" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/auspiciantes/logo04.png" alt="Auspiciante 4" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/auspiciantes/logo05.png" alt="Auspiciante 5" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/auspiciantes/logo06.png" alt="Auspiciante 6" class="max-h-10 w-auto opacity-95">
+        <!-- Logos auspiciantes -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
+          <img src="/authors/2i2c-sponsor/avatar.png" alt="2i2c" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/CSS_sponsor/avatar.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/NASA_sponsor/avatar.png" alt="NASA" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/arecibo-sponsor/avatar.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/czi_sponsor/avatar.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/gbmf_sponsor/avatar.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/ioi_sponsor/avatar.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/inta_sponsor/avatar.jpg" alt="INTA" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/labi-sponsor/avatar.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/obf_sponsor/avatar.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/ols-sponsor/avatar.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/quest_sponsor/avatar.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95">
+          <img src="/authors/rladiesba_sponsor/avatarj.jpg" alt="RLadies Buenos Aires" class="max-h-10 w-auto opacity-95">
         </div>
 
         <!-- Botones centrados -->
