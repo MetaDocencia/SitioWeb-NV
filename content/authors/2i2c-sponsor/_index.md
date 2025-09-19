@@ -10,5 +10,5 @@ social:
   icon_pack: fas
   link: https://2i2c.org/
 superuser: false
-user_groups: [Auspiciantes]
+user_groups: ["Auspiciantes"]
 ---
