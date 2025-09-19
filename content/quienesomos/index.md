@@ -60,6 +60,11 @@ sections:
       spacing:
         padding: ["4rem", 0, "4rem", 0]
 
+
+content:
+  authors: ["czi", "laura-acion"]
+
+  
   # --- AUSPCIANTES (desplegable, compacto) ---
   - block: people
     id: auspiciantes
