@@ -30,9 +30,11 @@ sections:
     design:
       columns: 2
       css_class: "text-gray-900 dark:text-gray-100 bg-gray-50"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]   # ← menos alto
+        margin: [0, 0, 0, 0]
 
-
-  # ---------- Slack (BLANCO con texto oscuro + link oscuro) ----------
+  # ---------- Slack ----------
   - block: cta-card
     id: slack
     content:
@@ -48,7 +50,7 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
-  # ---------- Comunidades amigas (NARANJA #F77B20, logos debajo del texto) ----------
+  # ---------- Comunidades amigas ----------
   - block: cta-card
     id: comunidades
     content:
@@ -86,7 +88,7 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#F77B20;color:#FFFFFF;"
 
-  # ---------- Auspiciantes / Apoya (AZUL #00506F, logos debajo del texto) ----------
+  # ---------- Auspiciantes / Apoya (incluye 2 botones: Acompañanos + Doná) ----------
   - block: cta-card
     id: auspiciantes
     content:
@@ -102,29 +104,26 @@ sections:
           <img src="/media/logos/auspiciantes/logo05.png" alt="Auspiciante 5" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/auspiciantes/logo06.png" alt="Auspiciante 6" class="max-h-10 w-auto opacity-95">
         </div>
-      button:
-        text: "Acompañanos"
-        url: "https://www.metadocencia.org/contacto/"
+
+        <!-- Botones lado a lado -->
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://www.metadocencia.org/contacto/"
+             class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+             style="background:#FFFFFF;color:#00506F;">
+             Acompañanos
+          </a>
+          <a href="https://www.metadocencia.org/contacto/"
+             class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+             style="background:transparent;border:1px solid #FFFFFF;color:#FFFFFF;">
+             Doná
+          </a>
+        </div>
     design:
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
 
-  # ---------- Doná (solo botón, SIN recuadro rojo) ----------
-  - block: cta-card
-    id: dona
-    content:
-      title: ""
-      text: ""
-      button:
-        text: "Doná — Formulario de donación"
-        url: "https://www.metadocencia.org/contacto/"
-    design:
-      card:
-        css_class: "border-0 shadow-none p-0"
-        css_style: "background-color:transparent;color:#111827;"
-
-  # ---------- Redes (nativo, sin íconos locales) ----------
+  # ---------- Redes ----------
   - block: features
     id: redes
     content:
