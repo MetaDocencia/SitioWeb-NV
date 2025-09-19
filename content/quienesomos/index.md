@@ -61,7 +61,7 @@ sections:
     content:
       title: "Equipo y Consejo Asesor"
       text: "Personas que trabajan hoy en MetaDocencia y quienes nos asesoran."
-      user_groups: ["Equipo y Consejo Asesor"]
+      authors: ["Laura Ación", "Julián Buede", "jbuede"]
       start_open: true
     design:
       columns: 5
