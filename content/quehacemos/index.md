@@ -102,11 +102,7 @@ sections:
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
-            <a href="#comunidad"
-               class="mt-2 inline-block no-underline font-semibold"
-               style="background:#F77B20;color:#FFFFFF;padding:0.45rem 0.8rem;border-radius:9999px;">
-               Conocé más proyectos de Comunidad
-            </a>
+       
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
@@ -259,13 +255,13 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: ""
-          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
+          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
         - name: "Emmanuel Iarussi"
           role: ""
-          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
+          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
         - name: "Laura Dillon"
           role: ""
-          text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real."
+          text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real"
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -336,10 +332,10 @@ sections:
       items:
         - name: "Andrés Kamaid"
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
-          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
+          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
           role: "ARPHAI"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
