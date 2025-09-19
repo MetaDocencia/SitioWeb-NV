@@ -13,7 +13,7 @@ sections:
     content:
       title: "Boletín MetaDocencia"
       text: |
-        <div class="mx-auto max-w-3xl">
+        <div class="mx-auto max-w-3xl text-gray-900">
           <p class="text-lg leading-relaxed mb-4">
             Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
           </p>
@@ -28,13 +28,44 @@ sections:
         url: "https://www.metadocencia.org/boletines/"
     design:
       card:
-        css_class: "text-gray-900 dark:text-gray-100"
-        css_style: "background-color:#00506F;color:#FFFFFF;"
+        css_class: "dark:text-gray-100"
+        css_style: "background-color:#00506F;color:#FFFFFF;"  # el form fuerza texto negro internamente
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
-    
-    
+
+  # ---------- Boletín (2 columnas: texto izq + form chico a la derecha) ----------
+  - block: features
+    id: boletin-embed-2cols
+    content:
+      title: "Boletín MetaDocencia"
+      text: ""
+      items:
+        - name: "Información"
+          description: |
+            <div class="text-gray-900">
+              <p class="text-lg leading-relaxed mb-4">
+                Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+              </p>
+              <p class="mb-0">
+                <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
+                  Ver ediciones anteriores
+                </a>
+              </p>
+            </div>
+        - name: "Formulario"
+          description: |
+            <div class="max-w-md ml-auto w-full text-gray-900">
+              {{< mc_form >}}
+            </div>
+    design:
+      columns: 2
+      css_class: "text-gray-900 dark:text-gray-100"
+      css_style: "background-color:#F9FAFB;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: [0, 0, 0, 0]
+
   # ---------- Slack ----------
   - block: cta-card
     id: slack
@@ -60,7 +91,7 @@ sections:
         Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <img src="/media/sponsors/2i2c-sponsor.png" alt="Comunidad 4" class="max-h-10 w-auto opacity-95">
+          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95">
@@ -94,7 +125,7 @@ sections:
       text: |
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
 
-        <!-- Logos auspiciantes (sirviéndose desde /static/media/sponsors/) -->
+        <!-- Logos auspiciantes -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
           <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
           <img src="/media/sponsors/CSS_sponsor.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95" loading="lazy">
