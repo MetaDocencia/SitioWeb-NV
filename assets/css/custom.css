@@ -274,8 +274,34 @@ section#boletin-embed .grid {
   }
 }
 
-/* Opcional: que el formulario (2º item) sea un poco más angosto y alineado a la derecha */
-section#boletin-embed .grid > *:nth-child(2) > div {
-  max-width: 36rem;         /* ~576px */
-  margin-left: auto;        /* se pega a la derecha */
+/* === Forzar que el features #boletin-embed tenga 2 columnas reales === */
+section#boletin-embed .grid {
+  display: grid !important;
 }
+
+/* Mobile: 1 columna */
+@media (max-width: 1023.98px) {
+  section#boletin-embed .grid,
+  section#boletin-embed [class*="grid-cols-"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Desktop: 2 columnas SÍ o SÍ (pisa grid-cols-3 del tema) */
+@media (min-width: 1024px) {
+  section#boletin-embed .grid,
+  section#boletin-embed [class*="grid-cols-"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  /* Asegurar que ningún hijo fuerce spans raros */
+  section#boletin-embed [class*="col-span-"] {
+    grid-column: auto / span 1 !important;
+  }
+}
+
+/* (Opcional) Limitar ancho del formulario y pegarlo a la derecha */
+section#boletin-embed .grid > *:nth-child(2) > div {
+  max-width: 36rem; /* ~576px */
+  margin-left: auto;
+}
+
