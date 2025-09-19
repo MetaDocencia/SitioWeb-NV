@@ -34,7 +34,41 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
+
   # ---------- Boletín (2 columnas: texto izq + form chico a la derecha) ----------
+  - block: cta-card
+    id: boletin-embed
+    content:
+      title: "Boletín MetaDocencia"
+      text: |
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-gray-900">
+          <!-- Columna izquierda -->
+            <div>
+              <p class="text-lg leading-relaxed mb-4">
+                Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+            </p>
+            <p class="mb-0">
+              <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
+                Ver ediciones anteriores
+              </a>
+            </p>
+          </div>
+
+          <!-- Columna derecha: formulario -->
+          <div class="max-w-md w-full ml-auto">
+            {{< mc_form >}}
+          </div>
+        </div>
+    design:
+      card:
+        css_class: "dark:text-gray-100"
+        css_style: "background-color:#F9FAFB;color:#111827;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: [0, 0, 0, 0]
+
+      
+  
   - block: features
     id: boletin-embed-2cols
     content:
