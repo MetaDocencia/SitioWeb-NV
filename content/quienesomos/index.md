@@ -65,15 +65,6 @@ sections:
   - block: people
     id: auspiciantes
     content:
-      authors: ["czi", "laura-acion"]
-    design:
-      columns: 7
-      compact: true
-      css_class: "people-sm"
-  
-  - block: people
-    id: auspiciantes
-    content:
       title: Auspiciantes
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
       user_groups: ["Auspiciantes"]   
