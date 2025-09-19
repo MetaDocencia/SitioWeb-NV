@@ -20,28 +20,28 @@ sections:
 
   # ---------- Boletín + Form (dos columnas con shortcode) ----------
   - block: features
-  id: boletin-embed
-  content:
-    title: ""
-    text: ""
-    items:
-      - name: "Boletín MetaDocencia"
-        description: |
-          <h2 class="text-3xl font-bold mb-3">Boletín MetaDocencia</h2>
-          <p class="text-lg leading-relaxed mb-4">
-            Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
-          </p>
-          <p class="mb-0">
-            <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
-              Ver ediciones anteriores
-            </a>
-          </p>
-      - name: "Suscribite"
-        description: |
-          {{< mc_form >}}
-  design:
-    columns: 2
-    css_class: "text-gray-900 dark:text-gray-100 bg-gray-50"
+    id: boletin-embed
+    content:
+      title: ""
+      text: ""
+      items:
+        - name: "Boletín MetaDocencia"
+          description: |
+            <h2 class="text-3xl font-bold mb-3">Boletín MetaDocencia</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              Recibí en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+            </p>
+            <p class="mb-0">
+              <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
+                Ver ediciones anteriores
+              </a>
+            </p>
+        - name: "Suscribite"
+          description: |
+            {{< mc_form >}}
+    design:
+      columns: 2
+      css_class: "text-gray-900 dark:text-gray-100 bg-gray-50"
 
 
   # ---------- Slack (BLANCO con texto oscuro + link oscuro) ----------
