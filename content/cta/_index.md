@@ -7,29 +7,36 @@ design:
 
 sections:
 
-  # ---------- Boletín + Form (dos columnas con shortcode) ----------
-  - block: features
+  # ---------- Boletín + Form (2 columnas, ancho correcto) ----------
+  - block: cta-card
     id: boletin-embed
     content:
-      title: ""
-      text: ""
-      items:
-        - name: "Boletín MetaDocencia"
-          description: |
-            <p class="text-lg leading-relaxed mb-4">
-              Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
-            </p>
-            <p class="mb-0">
-              <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
-                Ver ediciones anteriores
-              </a>
-            </p>
-        - name: "Suscríbite"
-          description: |
-            {{< mc_form >}}
+      title: "Boletín MetaDocencia"
+      text: |
+        <div class="mx-auto max-w-5xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <!-- Columna izquierda: texto -->
+            <div>
+              <p class="text-lg leading-relaxed mb-4">
+                Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+              </p>
+              <p class="mb-0">
+                <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" target="_blank" rel="noopener">
+                  Ver ediciones anteriores
+                </a>
+              </p>
+            </div>
+
+            <!-- Columna derecha: shortcode del formulario -->
+            <div class="w-full">
+              {{< mc_form >}}
+            </div>
+          </div>
+        </div>
     design:
-      columns: 2
-      css_class: "text-gray-900 dark:text-gray-100 bg-gray-50"
+      card:
+        css_class: "text-gray-900 dark:text-gray-100"
+        css_style: "background-color:#F9FAFB;"
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
@@ -59,7 +66,7 @@ sections:
         Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <img src="assets/media/sponsors/2i2c-sponsor.png" alt="Comunidad 4" class="max-h-10 w-auto opacity-95">
+          <img src="/media/sponsors/2i2c-sponsor.png" alt="Comunidad 4" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95">
           <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95">
@@ -93,21 +100,21 @@ sections:
       text: |
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
 
-        <!-- Logos auspiciantes -->
+        <!-- Logos auspiciantes (sirviéndose desde /static/media/sponsors/) -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
           <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/authors/CSS_sponsor/avatar.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/NASA_sponsor/avatar.png" alt="NASA" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/arecibo-sponsor/avatar.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/czi_sponsor/avatar.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/gbmf_sponsor/avatar.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/ioi_sponsor/avatar.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/inta_sponsor/avatar.jpg" alt="INTA" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/labi-sponsor/avatar.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/obf_sponsor/avatar.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/ols-sponsor/avatar.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/quest_sponsor/avatar.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95">
-          <img src="/authors/rladiesba_sponsor/avatarj.jpg" alt="RLadies Buenos Aires" class="max-h-10 w-auto opacity-95">
+          <img src="/media/sponsors/CSS_sponsor.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/NASA_sponsor.png" alt="NASA" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/arecibo-sponsor.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/czi_sponsor.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/gbmf_sponsor.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/ioi_sponsor.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/inta_sponsor.jpg" alt="INTA" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/labi-sponsor.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/obf_sponsor.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/ols-sponsor.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/quest_sponsor.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <img src="/media/sponsors/rladiesba_sponsor.jpg" alt="RLadies Buenos Aires" class="max-h-10 w-auto opacity-95" loading="lazy">
         </div>
 
         <!-- Botones centrados -->
