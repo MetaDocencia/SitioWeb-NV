@@ -3,7 +3,7 @@ title: "Quienes somos"
 type: landing
 slug: "quienes-somos"
 design:
-  spacing: "3rem"   # menos espacio global entre secciones
+  spacing: "3rem"
 
 sections:
   - block: hero
@@ -20,8 +20,7 @@ sections:
       background:
         image:
           filename: "quienessomos.jpg"
-          filters:
-            brightness: 0.3
+          filters: { brightness: 0.3 }
         text_color_light: true
 
   - block: cta-image-paragraph
@@ -41,42 +40,34 @@ sections:
     content:
       items:
         - statistic: "+1,000"
-          description: |
-            personas en Slack
+          description: "personas en Slack"
         - statistic: "+40"
-          description: |
-            socios y patrocinadores
+          description: "socios y patrocinadores"
         - statistic: "88"
-          description: |
-            personas contribuyen a nuestro trabajo
+          description: "personas contribuyen a nuestro trabajo"
         - statistic: "+6000"
-          description: |
-            personas conectadas en redes sociales
+          description: "personas conectadas en redes sociales"
         - statistic: "+2600"
-          description: |
-            personas suscriptas a nuestro boletín
+          description: "personas suscriptas a nuestro boletín"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
         padding: ["4rem", 0, "4rem", 0]
 
-  
-    # === PERSONAS / ORGANIZACIONES POR GRUPO (cada uno en desplegable) ===
+  # === PERSONAS / ORGANIZACIONES POR GRUPO ===
 
-  # 1) Equipo y Consejo Asesor
   - block: people
     id: equipo
     content:
       title: "Equipo y Consejo Asesor"
       text: "Personas que trabajan hoy en MetaDocencia y quienes nos asesoran."
-      user_groups: ["Equipo y Consejo Asesor"]  # ← debe coincidir exactamente con los perfiles
-      start_open: true                           # ← se muestra abierto por defecto
+      user_groups: ["Equipo y Consejo Asesor"]
+      start_open: true
     design:
       columns: 5
-      compact: false
+      compact: false          # ← título visible; probá así para validar filtrado
       css_class: "people-md"
 
-  # 2) Auspiciantes
   - block: people
     id: auspiciantes
     content:
@@ -86,10 +77,9 @@ sections:
       start_open: false
     design:
       columns: 7
-      compact: true
+      compact: false
       css_class: "people-sm"
 
-  # 3) Colaboradores
   - block: people
     id: colaboradores
     content:
@@ -99,10 +89,9 @@ sections:
       start_open: false
     design:
       columns: 6
-      compact: true
+      compact: false
       css_class: "people-md"
 
-  # 4) Colaboraron con MetaDocencia (alumni / contribuciones pasadas)
   - block: people
     id: colaboraron
     content:
@@ -112,10 +101,9 @@ sections:
       start_open: false
     design:
       columns: 6
-      compact: true
+      compact: false
       css_class: "people-sm"
 
-  # 5) Trabajamos con (otras organizaciones aliadas)
   - block: people
     id: trabajamos-con
     content:
@@ -125,9 +113,8 @@ sections:
       start_open: false
     design:
       columns: 7
-      compact: true
+      compact: false
       css_class: "people-sm"
-
 
   - block: cta-card
     content:
