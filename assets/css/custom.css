@@ -30,3 +30,71 @@ section.people-6col .opacity-70 {
   font-size: 0.75rem !important;
   line-height: 1.15 !important;
 }
+
+/* === PEOPLE "naked": sólo foto + nombre (sin tarjeta) === */
+section.people-naked a.group,
+section.people-naked .group {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Borra cualquier fondo/borde/sombra que traiga el tema */
+section.people-naked .rounded-xl,
+section.people-naked .rounded-2xl,
+section.people-naked .bg-white,
+section.people-naked .dark\:bg-gray-900,
+section.people-naked .border,
+section.people-naked .shadow,
+section.people-naked .shadow-sm {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Quita paddings sobrantes del contenedor de contenido */
+section.people-naked .p-6,
+section.people-naked .p-5,
+section.people-naked .p-4,
+section.people-naked .p-3,
+section.people-naked .p-2,
+section.people-naked .p-1 {
+  padding: 0 !important;
+}
+
+/* Imagen: centrada, circular y tamaño compacto */
+section.people-naked img {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 6px auto !important; /* pequeño espacio con el nombre */
+}
+
+/* Nombre (única línea visible) */
+section.people-naked .font-semibold {
+  text-align: center !important;
+  margin: 0 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.2 !important;
+}
+section.people-naked .font-semibold a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Oculta todo lo que no sea el nombre (rol, afiliación, links, bios, etc.) */
+section.people-naked .text-sm,
+section.people-naked .opacity-70,
+section.people-naked .prose,
+section.people-naked .mt-1,
+section.people-naked .mt-2,
+section.people-naked .mt-3,
+section.people-naked .space-x-2,
+section.people-naked .flex.gap-2,
+section.people-naked .leading-relaxed {
+  display: none !important;
+}
