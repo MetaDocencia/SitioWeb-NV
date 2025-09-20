@@ -56,32 +56,29 @@ sections:
     content:
       title: "Vamos por 5 años más"
       text: |
-        <!-- Contenedor interno más ancho -->
-        <div class="mx-auto max-w-[78rem]">
-          <div class="grid md:grid-cols-2 gap-6 items-start">
-            <!-- Columna izquierda: texto -->
-            <div>
-              <p>
-                Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-              </p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Columna izquierda: texto -->
+          <div>
+            <p>
+              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+            </p>
+          </div>
 
-            <!-- Columna derecha: video embed responsivo -->
-            <div class="relative w-full" style="padding-top:56.25%;">
-              <iframe
-                class="absolute top-0 left-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-                title="MetaDocencia - 5 años"
-                loading="lazy"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
+          <!-- Columna derecha: video embed responsivo -->
+          <div class="relative w-full" style="padding-top:56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+              title="MetaDocencia - 5 años"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
     design:
-      css_class: "bg-white wider-6xl"   # ← fondo blanco + clase para ampliar ancho
+      css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
