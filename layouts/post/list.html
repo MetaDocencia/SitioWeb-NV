@@ -1,12 +1,14 @@
 {{ define "main" }}
 <section class="container mx-auto px-6 py-8">
   <!-- Título -->
-  <h1 class="text-3xl font-extrabold tracking-tight mb-6">Blog</h1>
+  <h1 class="text-3xl font-extrabold tracking-tight mb-6">
+    {{ if eq .Site.Language.Lang "es" }}Blog{{ else }}Blog{{ end }}
+  </h1>
 
   <!-- Filtro por etiquetas -->
   {{ with site.Taxonomies.tags }}
     <div class="flex flex-wrap gap-2 mb-8">
-      <a href="{{ (printf "/%s/" .Page.Section) | relLangURL }}"
+      <a href="{{ "/post/" | relLangURL }}"
          class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100
                 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
         {{ if eq $.Site.Language.Lang "es" }}Todas{{ else }}All{{ end }}
@@ -21,27 +23,24 @@
     </div>
   {{ end }}
 
-  {{/* páginas de esta sección (post) ordenadas desc */}}
+  {{/* Páginas de ESTA sección (post), ordenadas desc */}}
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ $p := .Paginate $pages }}
 
-  <!-- Grid de tarjetas -->
+  <!-- Grid de tarjetas (similar a mdnv.netlify.app/blog) -->
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
     {{ range $p.Pages }}
       <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm
                       hover:shadow-lg hover:border-gray-300 transition
                       dark:bg-gray-900 dark:border-gray-800 dark:hover:border-gray-700">
-        {{/* Imagen destacada si existe (bundle > featured*/cover*; o .Params.image) */}}
-        {{ $imgURL := "" }}
-        {{ with .Resources.GetMatch "featured*" }}{{ $imgURL = .RelPermalink }}{{ end }}
-        {{ if eq $imgURL "" }}
-          {{ with .Resources.GetMatch "cover*" }}{{ $imgURL = .RelPermalink }}{{ end }}
-        {{ end }}
-        {{ if and (eq $imgURL "") .Params.image }}
-          {{ $imgURL = .Params.image }}
-        {{ end }}
-        {{ if $imgURL }}
-          <a href="{{ .RelPermalink }}"><img src="{{ $imgURL }}" alt="{{ .Title }}" class="w-full object-cover" style="aspect-ratio:16/9;"></a>
+        {{/* Imagen destacada si existe: featured*/cover* como Page Bundle Resource o .Params.image */}}
+        {{ $img := "" }}
+        {{ with .Resources.GetMatch "featured*" }}{{ $img = .RelPermalink }}{{ end }}
+        {{ if eq $img "" }}{{ with .Resources.GetMatch "cover*" }}{{ $img = .RelPermalink }}{{ end }}{{ end }}
+        {{ if and (eq $img "") .Params.image }}{{ $img = .Params.image }}{{ end }}
+
+        {{ if $img }}
+          <a href="{{ .RelPermalink }}"><img src="{{ $img }}" alt="{{ .Title }}" class="w-full object-cover" style="aspect-ratio:16/9;"></a>
         {{ end }}
 
         <div class="p-5">
@@ -61,8 +60,11 @@
             {{ end }}
           </div>
 
-          {{/* Resumen (sin “read more” porque no lo insertamos en el template) */}}
-          {{ $sum := (or (.Param "summary") .Summary) }}
+          {{/* Extracto sin “Read more” (tomamos summary si lo hay; si no, truncamos el texto plano) */}}
+          {{ $sum := .Params.summary }}
+          {{ if not $sum }}
+            {{ $sum = ( .Plain | truncate 220 ) }}
+          {{ end }}
           {{ with $sum }}
             <p class="text-gray-700 dark:text-gray-200 mb-3">{{ . | safeHTML }}</p>
           {{ end }}
