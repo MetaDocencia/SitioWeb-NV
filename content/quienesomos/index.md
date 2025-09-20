@@ -7,26 +7,26 @@ design:
 
 sections:
 
-  # ALT A — cta-image-paragraph (texto + imagen al lado, botones debajo del texto)
+  # ALT A — cta-image-paragraph (título + texto + imagen al lado, botones azules más grandes)
   - block: cta-image-paragraph
     id: alt-hero-a
     content:
       items:
-        - title: ""
+        - title: "Quiénes somos"
           text: |
             <p class="text-lg md:text-xl leading-snug">
               MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
             </p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
                  href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
-                 style="background:#111827;color:#FFFFFF;">Nuestra Gobernanza</a>
-              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+                 style="background:#00506F;color:#FFFFFF;">Nuestra Gobernanza</a>
+              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
                  href="https://www.metadocencia.org/pdc/"
-                 style="background:#111827;color:#FFFFFF;">Pautas de Convivencia</a>
-              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+                 style="background:#00506F;color:#FFFFFF;">Pautas de Convivencia</a>
+              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
                  href="https://www.metadocencia.org/politica_accesibilidad/"
-                 style="background:#111827;color:#FFFFFF;">Políticas de Accesibilidad</a>
+                 style="background:#00506F;color:#FFFFFF;">Políticas de Accesibilidad</a>
             </div>
           image: "quienessomos.jpg"
     design:
@@ -57,7 +57,7 @@ sections:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
-          <!-- Columna izquierda: texto + botón -->
+          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
