@@ -106,7 +106,7 @@ sections:
 
   # ===== PERSONAS / ORGANIZACIONES =====
 
-  # --- Colaboran con MetaDocencia (people) ---
+# --- Colaboran con MetaDocencia ---
 - block: community/people
   title: "Colaboran con MetaDocencia"     # ← título al nivel del bloque
   id: colaboran
