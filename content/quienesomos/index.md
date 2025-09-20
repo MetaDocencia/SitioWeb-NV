@@ -8,11 +8,33 @@ design:
 sections:
   - block: hero
     content:
-      title: "Quiénes somos"
-      text: "MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad construye capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo."
-      primary_action:
-        text: "Nuestra Gobernanza"
-        url: "https://www.metadocencia.org/suscripcion/"
+      title: ""
+      text: |
+        <p>
+          MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
+        </p>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+             href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+             style="background:#FFFFFF;color:#111827;">
+             Nuestra Gobernanza
+          </a>
+          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+             href="https://www.metadocencia.org/pdc/"
+             style="background:#FFFFFF;color:#111827;">
+             Pautas de Convivencia
+          </a>
+          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+             href="https://www.metadocencia.org/politica_accesibilidad/"
+             style="background:#FFFFFF;color:#111827;">
+             Políticas de Accesibilidad
+          </a>
+        </div>
+
+        <p class="mt-3">
+          Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, <a class="underline font-semibold" href="https://www.metadocencia.org/post/origenmd/" target="_blank" rel="noopener">Laura Ación</a>.
+        </p>
     design:
       spacing:
         padding: [0, 0, 0, 0]
@@ -28,7 +50,7 @@ sections:
     content:
       items:
         - title: "Vamos por 5 años más"
-          text: "Durante nuestros primeros 5 años tejimos lazos entre más de 2,000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y colaborando con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento. ¡Vamos por 5 años más!"
+          text: "Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento."
           image: "quienessomos.jpg"
           button:
             text: "Conócenos"
@@ -38,17 +60,18 @@ sections:
 
   - block: stats
     content:
+      title: "MetaDocencia en números"
       items:
-        - statistic: "+1,000"
-          description: "personas en Slack"
         - statistic: "+40"
-          description: "socios y patrocinadores"
+          description: "alianzas y patrocinadores"
         - statistic: "88"
-          description: "personas contribuyen a nuestro trabajo"
-        - statistic: "+6000"
+          description: "personas colaboran con MetaDocencia"
+        - statistic: "+1,070"
+          description: "integrantes en Slack"
+        - statistic: "+6,000"
           description: "personas conectadas en redes sociales"
         - statistic: "+2600"
-          description: "personas suscriptas a nuestro boletín"
+          description: "suscripciones activas a nuestro boletín"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
@@ -65,7 +88,7 @@ sections:
       start_open: true
     design:
       columns: 5
-      compact: false          # ← título visible; probá así para validar filtrado
+      compact: false
       css_class: "people-md"
 
   - block: people
