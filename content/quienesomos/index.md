@@ -6,13 +6,14 @@ design:
   spacing: "3rem"
 
 sections:
+  # === HERO (más bajo, texto grande como título) ===
   - block: hero
     content:
       title: ""
       text: |
-        <p>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
           MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
-        </p>
+        </h1>
 
         <div class="mt-4 flex flex-wrap gap-3">
           <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
@@ -31,20 +32,35 @@ sections:
              Políticas de Accesibilidad
           </a>
         </div>
-
-        <p class="mt-3">
-          Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, <a class="underline font-semibold" href="https://www.metadocencia.org/post/origenmd/" target="_blank" rel="noopener">Laura Ación</a>.
-        </p>
     design:
       spacing:
-        padding: [0, 0, 0, 0]
+        padding: ["0.75rem", 0, "0.75rem", 0]  # menos alto interno
         margin: [0, 0, 0, 0]
+      css_style: "min-height:28vh;"           # hero ~mitad de alto
       background:
         image:
           filename: "quienessomos.jpg"
-          filters: { brightness: 0.3 }
+          filters: { brightness: 0.35 }
         text_color_light: true
 
+  # === CTA rojo después del hero ===
+  - block: cta-card
+    id: origen-md
+    content:
+      title: ""
+      text: "Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación."
+      button:
+        text: "Nota en nuestro blog"
+        url: "https://www.metadocencia.org/post/origenmd/"
+    design:
+      card:
+        css_class: ""
+        css_style: "background-color:#C83737;color:#FFFFFF;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: ["0.75rem", 0, "0.75rem", 0]
+
+  # === Intro 5 años ===
   - block: cta-image-paragraph
     id: solutions
     content:
@@ -58,6 +74,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
 
+  # === Stats con menos margen superior ===
   - block: stats
     content:
       title: "MetaDocencia en números"
@@ -75,7 +92,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["4rem", 0, "4rem", 0]
+        padding: ["0.75rem", 0, "3rem", 0]   # MUCHO menos margen arriba
 
   # === PERSONAS / ORGANIZACIONES POR GRUPO ===
 
