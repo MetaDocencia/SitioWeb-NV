@@ -1,318 +1,192 @@
-/* assets/css/custom.css */
+---
+title: "Quienes somos"
+type: landing
+slug: "quienes-somos"
+design:
+  spacing: "3rem"
 
-/* 1) Fuente: Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+sections:
 
-/* Base tipográfica */
-html, body {
-  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
-               "Segoe UI", Roboto, Helvetica, Arial,
-               "Apple Color Emoji", "Segoe UI Emoji";
-}
+  # ALT A — cta-image-paragraph (texto + imagen al lado, botones debajo del texto)
+  - block: cta-image-paragraph
+    id: alt-hero-a
+    content:
+      items:
+        - title: ""
+          text: |
+            <p class="text-lg md:text-xl leading-snug">
+              MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+                 href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+                 style="background:#111827;color:#FFFFFF;">Nuestra Gobernanza</a>
+              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+                 href="https://www.metadocencia.org/pdc/"
+                 style="background:#111827;color:#FFFFFF;">Pautas de Convivencia</a>
+              <a class="inline-block no-underline font-semibold px-3 py-1.5 rounded-md text-sm"
+                 href="https://www.metadocencia.org/politica_accesibilidad/"
+                 style="background:#111827;color:#FFFFFF;">Políticas de Accesibilidad</a>
+            </div>
+          image: "quienessomos.jpg"
+    design:
+      css_class: "text-gray-900 dark:text-gray-100"
+      css_style: "align-items:center;"
 
-/* Asegurar Open Sans en contenido y UI (sin tocar code/monospace) */
-.prose :where(p, li, blockquote, figcaption, strong, em, a),
-h1, h2, h3, h4, h5, h6,
-nav, .btn, .card, header, footer {
-  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
-               "Segoe UI", Roboto, Helvetica, Arial,
-               "Apple Color Emoji", "Segoe UI Emoji";
-}
+  # ===== Banda roja: "Lee cómo nació..." =====
+  - block: cta-card
+    id: origen
+    content:
+      title: ""
+      text: "Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación."
+      button:
+        text: "Nota en nuestro blog"
+        url: "https://www.metadocencia.org/post/origenmd/"
+    design:
+      card:
+        css_class: "text-white"
+        css_style: "background-color:#C83737;color:#FFFFFF;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: [0, 0, "0.5rem", 0]
 
-/* ===== PEOPLE ultra-compact: sin rectángulos, sin aire, nombre casi pegado ===== */
+  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9) =====
+  - block: markdown
+    id: solutions
+    content:
+      title: "Vamos por 5 años más"
+      text: |
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Columna izquierda: texto + botón -->
+          <div>
+            <p>
+              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+            </p>
+          </div>
 
-/* Quitar fondo/borde/sombra del contenedor del bloque */
-section.people-sm details,
-section.people-sm details > div {
-  background: transparent !important;
-  border: 0 !important;              /* <-- corregido */
-  box-shadow: none !important;
-}
+          <!-- Columna derecha: video embed responsivo -->
+          <div class="relative w-full" style="padding-top:56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+              title="MetaDocencia - 5 años"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["1rem", 0, "1.25rem", 0]
 
-/* Cabecera del desplegable súper compacta */
-section.people-sm details > summary {
-  padding: 0.25rem 0 !important;
-}
+  # ===== MetaDocencia en números =====
+  - block: stats
+    id: numeros
+    content:
+      title: "MetaDocencia en números"
+      items:
+        - statistic: "+40"
+          description: "alianzas y patrocinadores"
+        - statistic: "88"
+          description: "personas colaboran con MetaDocencia"
+        - statistic: "+1,070"
+          description: "integrantes en Slack"
+        - statistic: "+6,000"
+          description: "personas conectadas en redes sociales"
+        - statistic: "+2,600"
+          description: "suscripciones activas a nuestro boletín"
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["1.25rem", 0, "1.75rem", 0]
 
-/* Grilla con muy poco gap */
-section.people-sm .grid {
-  gap: 0.3rem !important;
-}
+  # ===== PERSONAS / ORGANIZACIONES =====
 
-/* Cada tarjeta de persona como columna súper compacta */
-section.people-sm a.group,
-section.people-sm .group {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 2px !important;               /* nombre casi pegado a la foto */
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  min-height: auto !important;
-}
+  - block: people
+    id: equipo
+    content:
+      title: "Equipo"
+      text: "Personas que trabajan hoy en MetaDocencia."
+      user_groups: ["Equipo"]
+      start_open: true
+    design:
+      columns: 5
+      compact: false
+      css_class: "people-md"
 
-/* Wrapper de la imagen: sin márgenes/paddings y SIN overflow:hidden */
-section.people-sm a.group > div:first-child,
-section.people-sm .overflow-hidden,
-section.people-sm .aspect-square {
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  overflow: visible !important;       /* <-- clave para que no se corte el círculo */
-  height: auto !important;
-  width: auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+  - block: people
+    id: consejo-asesor
+    content:
+      title: "Consejo Asesor"
+      text: "Personas que orientan estratégicamente nuestro trabajo."
+      user_groups: ["Consejo Asesor"]
+      start_open: false
+    design:
+      columns: 5
+      compact: false
+      css_class: "people-md"
 
-/* Quitar cualquier padding residual del cuerpo de la tarjeta */
-section.people-sm .p-6,
-section.people-sm .p-5,
-section.people-sm .p-4,
-section.people-sm .p-3,
-section.people-sm .p-2,
-section.people-sm .p-1 {
-  padding: 0 !important;
-}
+  - block: people
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
+      user_groups: ["Auspiciantes"]
+      start_open: false
+    design:
+      columns: 7
+      compact: false
+      css_class: "people-sm"
 
-/* Imagen: 120px, circular, centrada y completa */
-section.people-sm img {
-  width: 120px !important;
-  height: 120px !important;
-  border-radius: 9999px !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 0 auto !important;          /* sin margen inferior para que no se recorte */
-  background: transparent !important;
-  border: 0 !important;
-  vertical-align: middle !important;
-  line-height: 0 !important;
-}
+  - block: people
+    id: colaboradores
+    content:
+      title: "Colaboradores"
+      text: "Personas que trabajan de forma externa con nuestros proyectos."
+      user_groups: ["Colaboradores"]
+      start_open: false
+    design:
+      columns: 6
+      compact: false
+      css_class: "people-md"
 
-/* Título y metadatos casi pegados a la foto */
-section.people-sm .font-semibold,
-section.people-sm .text-sm,
-section.people-sm .opacity-70 {
-  margin: 2px 0 0 0 !important;       /* separa apenas 2px de la imagen */
-  line-height: 1.15 !important;
-}
+  - block: people
+    id: colaboraron
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: "Personas que contribuyeron anteriormente a MetaDocencia."
+      user_groups: ["Colaboraron con MetaDocencia"]
+      start_open: false
+    design:
+      columns: 6
+      compact: false
+      css_class: "people-sm"
 
-/* Tamaños tipográficos compactos */
-section.people-sm .font-semibold { font-size: 0.9rem !important; }
-section.people-sm .text-sm,
-section.people-sm .opacity-70 { font-size: 0.72rem !important; opacity: 0.85; }
+  - block: people
+    id: trabajamos-con
+    content:
+      title: "Trabajamos con"
+      text: "Otras organizaciones con las que co-creamos y articulamos."
+      user_groups: ["Trabajamos con"]
+      start_open: false
+    design:
+      columns: 7
+      compact: false
+      css_class: "people-sm"
 
-/* Anular “rectángulos grandes” que vienen de utilitarias */
-section.people-sm .rounded-xl,
-section.people-sm .rounded-2xl,
-section.people-sm .bg-white,
-section.people-sm .dark\:bg-gray-900,
-section.people-sm .border,
-section.people-sm .shadow,
-section.people-sm .shadow-sm {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-/* Hover sutil solo en la imagen (opcional) */
-section.people-sm a.group:hover img {
-  transform: scale(1.015);
-  transition: transform 120ms ease;
-}
-/* ===== PEOPLE ultra-compact: sin rectángulos, sin aire, nombre pegado a la foto ===== */
-
-/* Quitar fondo/borde/sombra del contenedor del bloque */
-section.people-sm details,
-section.people-sm details > div {
-  background: transparent !important;
-  border: 1 !important;
-  box-shadow: none !important;
-}
-
-/* Cabecera del desplegable súper compacta */
-section.people-sm details > summary {
-  padding: 0.25rem 0 !important;
-}
-
-/* Grilla con muy poco gap */
-section.people-sm .grid {
-  gap: 0.4rem !important;
-}
-
-/* Cada tarjeta de persona como columna súper compacta */
-section.people-sm a.group,
-section.people-sm .group {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 6px !important;                /* casi pegado */
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 6px !important;
-  min-height: auto !important;
-}
-
-/* El contenedor de la imagen NO deja margen debajo */
-section.people-sm a.group > div:first-child {
-  margin: 5px !important;
-  padding: 15px !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  border: 0 !important;
-}
-
-/* Quitar cualquier padding residual del cuerpo de la tarjeta */
-section.people-sm .p-6,
-section.people-sm .p-5,
-section.people-sm .p-4,
-section.people-sm .p-3,
-section.people-sm .p-2,
-section.people-sm .p-1 {
-  padding: 0 !important;
-}
-
-/* Imagen: **DOBLE tamaño**, circular, sin caja gris */
-section.people-sm img {
-  width: 120px !important;   /* antes 60px */
-  height: 120px !important;  /* antes 60px */
-  border-radius: 9999px !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 10px auto !important;
-  background: transparent !important;
-  border: 0 !important;
-}
-
-/* Título y metadatos pegados a la foto (sin márgenes) */
-section.people-sm .font-semibold,
-section.people-sm .text-sm,
-section.people-sm .opacity-70 {
-  margin: 20px !important;
-  line-height: 1.15 !important;
-}
-
-/* Tamaños tipográficos compactos */
-section.people-sm .font-semibold { font-size: 0.9rem !important; }
-section.people-sm .text-sm,
-section.people-sm .opacity-70 { font-size: 0.72rem !important; opacity: 0.85; }
-
-/* Anular “rectángulos grandes” que vienen de clases utilitarias */
-section.people-sm .rounded-xl,
-section.people-sm .rounded-2xl,
-section.people-sm .bg-white,
-section.people-sm .dark\:bg-gray-900,
-section.people-sm .border,
-section.people-sm .shadow,
-section.people-sm .shadow-sm {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-/* Hover sutil solo en la imagen (opcional) */
-section.people-sm a.group:hover img {
-  transform: scale(1.015);
-  transition: transform 120ms ease;
-}
-
-/* ===== Blog cards (lista /post estilo limpio) ===== */
-.hb-card-article {
-  background: #fff;
-  border: 1px solid rgba(17,24,39,0.06);
-  border-radius: 1rem;
-  box-shadow: 0 1px 2px rgba(17,24,39,.04);
-  overflow: hidden;
-  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-}
-.dark .hb-card-article {
-  background: #0b0f19;
-  border-color: rgba(255,255,255,.08);
-}
-.hb-card-article:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(17,24,39,.08);
-}
-.hb-card-article img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  width: 100%;
-  display: block;
-}
-.hb-card-article .meta { color:#6b7280; font-size:.85rem; }
-.dark .hb-card-article .meta { color:#9ca3af; }
-.hb-card-article .tags a,
-.hb-card-article .tags span {
-  display:inline-block; font-size:.75rem; padding:.2rem .5rem; border-radius:9999px;
-  background:#f3f4f6; color:#374151; margin:.35rem .35rem 0 0; text-decoration:none;
-}
-.dark .hb-card-article .tags a,
-.dark .hb-card-article .tags span { background:rgba(255,255,255,.08); color:#e5e7eb; }
-
-/* Anular el max-width de la tipografía en /cta sección boletín */
-section#boletin-embed .prose{ max-width:100% !important; }
-
-/* === Forzar el features #boletin-embed a 2 columnas reales === */
-section#boletin-embed .grid {
-  display: grid;
-  grid-template-columns: 1fr !important; /* 1 col en mobile */
-}
-
-@media (min-width: 1024px) { /* lg: */
-  section#boletin-embed .grid {
-    grid-template-columns: 1fr 1fr !important; /* 2 cols en desktop */
-  }
-}
-
-/* === Forzar que el features #boletin-embed tenga 2 columnas reales === */
-section#boletin-embed .grid {
-  display: grid !important;
-}
-
-/* Mobile: 1 columna */
-@media (max-width: 1023.98px) {
-  section#boletin-embed .grid,
-  section#boletin-embed [class*="grid-cols-"] {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Desktop: 2 columnas SÍ o SÍ (pisa grid-cols-3 del tema) */
-@media (min-width: 1024px) {
-  section#boletin-embed .grid,
-  section#boletin-embed [class*="grid-cols-"] {
-    grid-template-columns: 1fr 1fr !important;
-  }
-  /* Asegurar que ningún hijo fuerce spans raros */
-  section#boletin-embed [class*="col-span-"] {
-    grid-column: auto / span 1 !important;
-  }
-}
-
-/* (Opcional) Limitar ancho del formulario y pegarlo a la derecha */
-section#boletin-embed .grid > *:nth-child(2) > div {
-  max-width: 36rem; /* ~576px */
-  margin-left: auto;
-}
-
-/* Bloque features asimétrico 1:2 (texto | video) */
-section#solutions.split-1-2 .grid {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
-}
-
-/* En pantallas pequeñas, que apile */
-@media (max-width: 1024px) {
-  section#solutions.split-1-2 .grid {
-    grid-template-columns: 1fr !important;
-  }
-}
+  - block: cta-card
+    id: apoya
+    content:
+      title: "Apoya a la ciencia latinoamericana"
+      text: "Aquí te contamos cómo"
+      button:
+        text: "Súmate"
+        url: "https://www.metadocencia.org/contacto/"
+    design:
+      card:
+        css_class: "bg-primary-700"
+        css_style: ""
+---
