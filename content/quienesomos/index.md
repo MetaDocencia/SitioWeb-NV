@@ -50,19 +50,42 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # ===== Vamos por 5 años más =====
-  - block: cta-image-paragraph
+  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9) =====
+  - block: markdown
     id: solutions
     content:
-      items:
-        - title: "Vamos por 5 años más"
-          text: "Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento."
-          image: "quienessomos.jpg"
-          button:
-            text: "Conócenos"
-            url: "https://hugoblox.com/templates/"
+      title: "Vamos por 5 años más"
+      text: |
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Columna izquierda: texto + botón -->
+          <div>
+            <p>
+              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+            </p>
+            <a href="https://hugoblox.com/templates/"
+               class="mt-3 inline-block no-underline font-semibold px-4 py-2 rounded-md"
+               style="background:#111827;color:#FFFFFF;">
+               Conócenos
+            </a>
+          </div>
+
+          <!-- Columna derecha: video embed responsivo -->
+          <div class="relative w-full" style="padding-top:56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+              title="MetaDocencia - 5 años"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["1rem", 0, "1.25rem", 0]
 
   # ===== MetaDocencia en números =====
   - block: stats
@@ -83,7 +106,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["1.25rem", 0, "1.75rem", 0]  # menos margen arriba del título
+        padding: ["1.25rem", 0, "1.75rem", 0]
 
   # ===== PERSONAS / ORGANIZACIONES =====
 
