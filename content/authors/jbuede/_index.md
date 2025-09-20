@@ -30,8 +30,7 @@ social:
   icon_pack: ai
   link: https://orcid.org/0000-0003-2338-648X
 superuser: false
-user_groups:
--  "Equipo y Consejo Asesor"
+user_groups: ["Equipo y Consejo Asesor"]
 ---
 
 **Experiencia y Trayectoria:**
