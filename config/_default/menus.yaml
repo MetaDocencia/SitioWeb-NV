@@ -12,5 +12,5 @@ main:
     weight: 30
 
   - name: Blog
-    url: /blog/
+    url: /post/
     weight: 40
