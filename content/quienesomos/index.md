@@ -34,8 +34,7 @@ sections:
             </a>
           </div>
         </div>
-
-design:
+    design:
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
@@ -100,10 +99,9 @@ design:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.75rem", 0, "3rem", 0]   # mucho menos margen arriba
+        padding: ["0.75rem", 0, "3rem", 0]
 
   # === PERSONAS / ORGANIZACIONES POR GRUPO ===
-
   - block: people
     id: equipo
     content:
