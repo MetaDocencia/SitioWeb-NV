@@ -57,11 +57,14 @@ sections:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
+
+          <!-- Columna derecha: video embed responsivo -->
           <div class="relative w-full" style="padding-top:56.25%;">
             <iframe
               class="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -75,7 +78,8 @@ sections:
           </div>
         </div>
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
+      # Fondo blanco (también en modo oscuro)
+      css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
@@ -96,12 +100,26 @@ sections:
         - statistic: "+2,600"
           description: "suscripciones activas a nuestro boletín"
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
+      # Menos margen superior
       spacing:
-        padding: ["1.25rem", 0, "1.75rem", 0]
+        padding: ["0.5rem", 0, "1.5rem", 0]
 
   # ===== PERSONAS / ORGANIZACIONES =====
 
+  # --- Colaboran con MetaDocencia (people) ---
+  - block: people
+    id: colaboran
+    content:
+      title: "Colaboran con MetaDocencia"
+      text: ""
+      user_groups: ["Colaboradores"]
+      start_open: true
+    design:
+      columns: 7
+      compact: false
+      css_class: "people-naked people-7col"
+
+  # --- Auspiciantes (people) ---
   - block: people
     id: auspiciantes
     content:
@@ -114,6 +132,7 @@ sections:
       compact: false
       css_class: "people-naked people-7col"
 
+  # CTA final
   - block: cta-card
     id: apoya
     content:
