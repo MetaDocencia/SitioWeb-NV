@@ -7,7 +7,7 @@ design:
 
 sections:
 
-  # === ALT A — Texto + imagen + 3 botones (sin hero clásico) ===
+  # ALT A — cta-image-paragraph (texto + imagen al lado, botones debajo del texto)
   - block: cta-image-paragraph
     id: alt-hero-a
     content:
@@ -33,7 +33,7 @@ sections:
       css_class: "text-gray-900 dark:text-gray-100"
       css_style: "align-items:center;"
 
-  # === Banda roja: "Lee cómo nació..." ===
+  # ===== Banda roja: "Lee cómo nació..." =====
   - block: cta-card
     id: origen
     content:
@@ -50,7 +50,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # === Vamos por 5 años más — (texto + video YouTube, ancho grande, fondo blanco, sin botón) ===
+  # === Vamos por 5 años más — texto (1 col) + video (2 col), fondo blanco ===
   - block: features
     id: solutions
     content:
@@ -70,12 +70,12 @@ sections:
             </div>
     design:
       columns: 2
-      css_class: "bg-white text-gray-900 dark:text-gray-100 mx-auto max-w-7xl"
+      css_class: "split-1-2 bg-white text-gray-900 dark:text-gray-100"
       css_style: "max-width:80rem;margin-left:auto;margin-right:auto;"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
-  # === MetaDocencia en números ===
+  # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
     content:
@@ -96,7 +96,7 @@ sections:
       spacing:
         padding: ["1.25rem", 0, "1.75rem", 0]
 
-  # === PERSONAS / ORGANIZACIONES ===
+  # ===== PERSONAS / ORGANIZACIONES =====
 
   - block: people
     id: equipo
