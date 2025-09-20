@@ -305,14 +305,7 @@ section#boletin-embed .grid > *:nth-child(2) > div {
   margin-left: auto;
 }
 
-/* Bloque features asimétrico 1:2 (texto | video) */
-section#solutions.split-1-2 .grid {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
-}
+/* Ensanchar solo la sección "Vamos por 5 años más" */
+section.wider-6xl .container { max-width: 78rem !important; }   /* ~1248px */
+section#solutions .container { max-width: 78rem !important; }    /* respaldo por si cambia la clase */
 
-/* En pantallas pequeñas, que apile */
-@media (max-width: 1024px) {
-  section#solutions.split-1-2 .grid {
-    grid-template-columns: 1fr !important;
-  }
-}
