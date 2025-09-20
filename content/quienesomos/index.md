@@ -110,9 +110,9 @@ sections:
       user_groups: ["Auspiciantes"]
       start_open: false
     design:
-      columns: 6
+      columns: 7
       compact: false
-      css_class: "people-sm people-6col people-naked"  # <-- AÑADIDO: people-naked
+      css_class: "people-naked people-7col"
 
   - block: cta-card
     id: apoya
