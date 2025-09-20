@@ -50,24 +50,22 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # ===== Vamos por 5 años más (full-bleed, 2 columnas, video 16:9) =====
-  - block: markdown
+  # ===== Vamos por 5 años más (FULL-BLEED, 2 columnas, video OK) =====
+  - block: features
     id: solutions
     content:
       title: "Vamos por 5 años más"
-      text: |
-        <!-- Full-bleed + padding lateral propio -->
-        <div class="w-full px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-20">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <!-- Columna izquierda: texto -->
-            <div class="text-base md:text-lg leading-relaxed">
-              <p>
-                Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-              </p>
-            </div>
-
-            <!-- Columna derecha: video responsivo 16:9 -->
-            <div class="ratio-16x9 rounded-lg overflow-hidden">
+      items:
+        # Columna izquierda: texto
+        - name: ""
+          description: |
+            <p class="text-base md:text-lg leading-relaxed">
+              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+            </p>
+        # Columna derecha: video responsivo 16:9
+        - name: ""
+          description: |
+            <div class="video-embed">
               <iframe
                 src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
                 title="MetaDocencia - 5 años"
@@ -76,11 +74,9 @@ sections:
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </div>
-          </div>
-        </div>
     design:
-      css_class: "fullbleed bg-white"
-      css_style: ""
+      columns: 2
+      css_class: "solutions-fullbleed"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
