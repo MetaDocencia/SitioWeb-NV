@@ -103,16 +103,16 @@ sections:
   # ===== PERSONAS / ORGANIZACIONES =====
 
   - block: people
-  id: auspiciantes
-  content:
-    title: "Auspiciantes"
-    text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-    user_groups: ["Auspiciantes"]
-    start_open: false
-  design:
-    columns: 6
-    compact: false
-    css_class: "people-sm people-6col people-naked"  # <-- AÑADIDO: people-naked
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
+      user_groups: ["Auspiciantes"]
+      start_open: false
+    design:
+      columns: 6
+      compact: false
+      css_class: "people-sm people-6col people-naked"  # <-- AÑADIDO: people-naked
 
   - block: cta-card
     id: apoya
