@@ -107,7 +107,7 @@ sections:
   # ===== PERSONAS / ORGANIZACIONES =====
 
   # --- Colaboran con MetaDocencia (people) ---
-  - block: community/people
+  - block: people
     id: colaboran
     content:
       title: "Colaboran con MetaDocencia"
@@ -120,7 +120,7 @@ sections:
       css_class: "people-naked people-7col"
 
   # --- Auspiciantes (people) ---
-  - block: community/people
+  - block: people
     id: auspiciantes
     content:
       title: "Auspiciantes"
