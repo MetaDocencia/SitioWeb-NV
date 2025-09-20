@@ -124,7 +124,7 @@ sections:
     content:
       title: "Consejo Asesor"
       text: "Personas que orientan estratégicamente nuestro trabajo."
-      user_groups: ["Consejo Asesor"]
+      user_groups: ["Equipo y Consejo Asesor"]
       start_open: false
     design:
       columns: 5
