@@ -11,8 +11,8 @@ sections:
     content:
       title: ""
       text: |
-        <div class="mx-auto w-full max-w-7xl px-2 md:px-4">
-          <h1 class="text-white text-xl md:text-3xl font-extrabold tracking-tight leading-snug">
+        <div class="mx-auto w-full max-w-6xl">
+          <h1 class="text-white text-2xl md:text-4xl font-extrabold tracking-tight leading-snug">
             MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
           </h1>
 
@@ -36,18 +36,13 @@ sections:
         </div>
     design:
       spacing:
-        padding: ["0.1rem", 0, "0.1rem", 0]
+        padding: ["0.75rem", 0, "0.75rem", 0]   # menos alto interno
         margin: [0, 0, 0, 0]
-      css_class: ""
-      css_style: "min-height: 20vh;"
+      css_style: "min-height:24vh;"            # hero más bajo
       background:
         image:
           filename: "quienessomos.jpg"
-          filters:
-            brightness: 0.35
-          size: cover
-          position: center
-          parallax: false
+          filters: { brightness: 0.35 }
         text_color_light: true
 
   # === CTA rojo después del hero (sin título) ===
@@ -99,9 +94,10 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.75rem", 0, "3rem", 0]
+        padding: ["0.75rem", 0, "3rem", 0]   # mucho menos margen arriba
 
   # === PERSONAS / ORGANIZACIONES POR GRUPO ===
+
   - block: people
     id: equipo
     content:
