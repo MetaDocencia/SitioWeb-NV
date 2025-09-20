@@ -50,33 +50,38 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # ===== Vamos por 5 años más (FULL-BLEED, 2 columnas, video OK) =====
-  - block: features
+  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9) =====
+  - block: markdown
     id: solutions
     content:
       title: "Vamos por 5 años más"
-      items:
-        # Columna izquierda: texto
-        - name: ""
-          description: |
-            <p class="text-base md:text-lg leading-relaxed">
-              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-            </p>
-        # Columna derecha: video responsivo 16:9
-        - name: ""
-          description: |
-            <div class="video-embed">
+      text: |
+        <!-- Contenedor interno más ancho -->
+        <div class="mx-auto max-w-[78rem]">
+          <div class="grid md:grid-cols-2 gap-6 items-start">
+            <!-- Columna izquierda: texto -->
+            <div>
+              <p>
+                Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+              </p>
+            </div>
+
+            <!-- Columna derecha: video embed responsivo -->
+            <div class="relative w-full" style="padding-top:56.25%;">
               <iframe
+                class="absolute top-0 left-0 w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
                 title="MetaDocencia - 5 años"
                 loading="lazy"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+                allowfullscreen>
+              </iframe>
             </div>
+          </div>
+        </div>
     design:
-      columns: 2
-      css_class: "solutions-fullbleed"
+      css_class: "bg-white wider-6xl"   # ← fondo blanco + clase para ampliar ancho
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
@@ -102,6 +107,7 @@ sections:
         padding: ["1.25rem", 0, "1.75rem", 0]
 
   # ===== PERSONAS / ORGANIZACIONES =====
+
   - block: people
     id: auspiciantes
     content:
