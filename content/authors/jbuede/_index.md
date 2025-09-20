@@ -31,7 +31,7 @@ social:
   link: https://orcid.org/0000-0003-2338-648X
 superuser: false
 user_groups:
--  Equipo y Consejo Asesor
+-  "Equipo y Consejo Asesor"
 ---
 
 **Experiencia y Trayectoria:**
