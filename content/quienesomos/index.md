@@ -57,14 +57,11 @@ sections:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
-          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
-
-          <!-- Columna derecha: video embed responsivo -->
           <div class="relative w-full" style="padding-top:56.25%;">
             <iframe
               class="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -104,7 +101,6 @@ sections:
         padding: ["1.25rem", 0, "1.75rem", 0]
 
   # ===== PERSONAS / ORGANIZACIONES =====
-
   - block: people
     id: auspiciantes
     content:
@@ -113,9 +109,9 @@ sections:
       user_groups: ["Auspiciantes"]
       start_open: false
     design:
-      columns: 7
+      columns: 6
       compact: false
-      css_class: "people-sm"
+      css_class: "people-sm people-6col"
 
   - block: cta-card
     id: apoya
