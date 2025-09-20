@@ -1,0 +1,85 @@
+{{ define "main" }}
+<section class="mx-auto px-6 py-10 max-w-4xl">
+
+  <h1 class="text-3xl font-extrabold tracking-tight mb-6">Blog</h1>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $p := .Paginate $pages }}
+
+  <div id="post-list" class="divide-y divide-gray-200 dark:divide-gray-800">
+    {{ range $p.Pages }}
+      {{ $cats := slice }}{{ with .Params.categories }}{{ range . }}{{ $cats = $cats | append (urlize .) }}{{ end }}{{ end }}
+      <article class="py-6" data-cats="{{ delimit $cats " " }}">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+          <time class="sm:w-28 shrink-0 text-sm text-gray-500 dark:text-gray-400 sm:mt-1"
+                datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+          <div class="min-w-0">
+            <h2 class="text-xl font-semibold leading-snug">
+              <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+            </h2>
+            <div class="mt-1 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>{{ .ReadingTime }} min</span>
+              {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
+              {{ with .Params.tags }}
+                {{ if gt (len .) 0 }}
+                  <span>·</span>
+                  <span>
+                    {{- $last := sub (len .) 1 -}}
+                    {{- range $i, $t := . -}}
+                      <a class="underline hover:no-underline"
+                         href="{{ (printf "/tags/%s/" (urlize $t)) | relLangURL }}">{{ $t }}</a>{{ if lt $i $last }}, {{ end }}
+                    {{- end -}}
+                  </span>
+                {{ end }}
+              {{ end }}
+            </div>
+            {{ $sum := .Params.summary }}{{ if not $sum }}{{ $sum = ( .Plain | truncate 220 ) }}{{ end }}
+            {{ with $sum }}<p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . | safeHTML }}</p>{{ end }}
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+
+  <!-- Minimal pager (EN) -->
+  <nav class="mt-10 flex items-center justify-center gap-2" aria-label="Pagination">
+    {{ if $p.HasPrev }}
+      <a href="{{ $p.Prev.URL }}"
+         class="inline-flex items-center rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
+         ← Previous
+      </a>
+    {{ else }}
+      <span class="inline-flex items-center rounded-full border border-transparent px-3 py-1 text-sm text-gray-400 cursor-not-allowed">
+        ← Previous
+      </span>
+    {{ end }}
+
+    {{ range $pager := $p.Pagers }}
+      {{ $isCurrent := eq $pager $p }}
+      {{ if $isCurrent }}
+        <span class="inline-flex items-center rounded-full bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 px-3 py-1 text-sm font-semibold">
+          {{ $pager.PageNumber }}
+        </span>
+      {{ else }}
+        <a href="{{ $pager.URL }}"
+           class="inline-flex items-center rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
+          {{ $pager.PageNumber }}
+        </a>
+      {{ end }}
+    {{ end }}
+
+    {{ if $p.HasNext }}
+      <a href="{{ $p.Next.URL }}"
+         class="inline-flex items-center rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
+         Next →
+      </a>
+    {{ else }}
+      <span class="inline-flex items-center rounded-full border border-transparent px-3 py-1 text-sm text-gray-400 cursor-not-allowed">
+        Next →
+      </span>
+    {{ end }}
+  </nav>
+</section>
+{{ end }}
