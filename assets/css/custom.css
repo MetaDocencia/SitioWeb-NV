@@ -170,3 +170,72 @@ section.people-naked .leading-relaxed {
   display: none !important;
 }
 
+/* === PEOPLE: avatar RESPONSIVO, nunca se superpone con el texto === */
+
+/* Asegura grid estable y sin recortes de ancho */
+section.people-7col .grid > * { min-width: 0 !important; }
+
+/* El item no usa posiciones absolutas ni efectos que puedan solapar */
+section.people-naked a.group,
+section.people-naked .group {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Avatar:
+   - width: porcentaje de la celda (escala con el marco)
+   - clamp: topes para que no quede gigante/mini
+   - aspect-ratio: 1/1 y border-radius para círculo perfecto
+   - sin hover-zoom para evitar solapes
+*/
+section.people-naked img {
+  width: clamp(72px, 62%, 150px) !important; /* ← % controla qué tanto ocupa de la celda */
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;                   /* alto sigue al ancho */
+  max-width: 100% !important;                /* nunca desbordar la celda */
+  border-radius: 9999px !important;          /* círculo */
+  object-fit: cover !important;              /* llena el círculo sin deformarse */
+  display: block !important;
+  margin: 0 auto 0.5rem auto !important;     /* separa del nombre, evita solape */
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* En desktop, podés ajustar un poco el % para afinar el tamaño relativo */
+@media (min-width: 1024px) {
+  section.people-7col.people-naked img {
+    width: clamp(80px, 58%, 160px) !important;
+  }
+}
+
+/* Desactivar cualquier zoom/hover heredado que agrande la imagen */
+section.people-naked a.group:hover img { transform: none !important; }
+
+/* Nombre pegado debajo de la foto, sin subrayados */
+section.people-naked .font-semibold {
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+}
+section.people-naked .font-semibold a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Ocultar metadatos/rol para que sólo quede el nombre */
+section.people-naked .text-sm,
+section.people-naked .opacity-70,
+section.people-naked .prose,
+section.people-naked .mt-1,
+section.people-naked .mt-2,
+section.people-naked .mt-3,
+section.people-naked .space-x-2,
+section.people-naked .flex.gap-2,
+section.people-naked .leading-relaxed {
+  display: none !important;
+}
