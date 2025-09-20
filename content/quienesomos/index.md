@@ -34,15 +34,21 @@ sections:
             </a>
           </div>
         </div>
-    design:
+
+design:
       spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]   # menos alto interno
+        padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
-      css_style: "min-height:24vh;"            # hero más bajo
+      css_class: ""
+      css_style: "min-height: 20vh;"
       background:
         image:
           filename: "quienessomos.jpg"
-          filters: { brightness: 0.35 }
+          filters:
+            brightness: 0.35
+          size: cover
+          position: center
+          parallax: false
         text_color_light: true
 
   # === CTA rojo después del hero (sin título) ===
