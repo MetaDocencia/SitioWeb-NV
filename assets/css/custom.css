@@ -98,3 +98,75 @@ section.people-naked .flex.gap-2,
 section.people-naked .leading-relaxed {
   display: none !important;
 }
+
+/* === Grid: 7 columnas en desktop / 2 en móviles === */
+section.people-7col .grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;  /* móviles: 2 col */
+  gap: 0.75rem !important;
+}
+@media (min-width: 1024px) { /* desktop */
+  section.people-7col .grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important; /* 7 col */
+  }
+}
+
+/* === Tarjeta "naked": sin rectángulo, sólo foto + nombre debajo === */
+section.people-naked a.group,
+section.people-naked .group {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Quitar cualquier contenedor gris/sombra heredado */
+section.people-naked .rounded-xl,
+section.people-naked .rounded-2xl,
+section.people-naked .bg-white,
+section.people-naked .dark\:bg-gray-900,
+section.people-naked .border,
+section.people-naked .shadow,
+section.people-naked .shadow-sm,
+section.people-naked .overflow-hidden {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Foto 30% más grande (de ~96px a ~125px), circular y centrada */
+section.people-naked img {
+  width: 125px !important;
+  height: 125px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 6px auto !important; /* nombre pegado debajo */
+}
+
+/* Mostrar sólo el nombre, centrado y sin subrayado */
+section.people-naked .font-semibold {
+  text-align: center !important;
+  margin: 0 !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.2 !important;
+}
+section.people-naked .font-semibold a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Ocultar rol/afiliación/extra debajo del nombre */
+section.people-naked .text-sm,
+section.people-naked .opacity-70,
+section.people-naked .prose,
+section.people-naked .mt-1,
+section.people-naked .mt-2,
+section.people-naked .mt-3,
+section.people-naked .space-x-2,
+section.people-naked .flex.gap-2,
+section.people-naked .leading-relaxed {
+  display: none !important;
+}
+
