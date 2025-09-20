@@ -7,7 +7,7 @@ design:
 
 sections:
 
-  # ALT A — cta-image-paragraph (texto + imagen al lado, botones debajo del texto)
+  # === ALT A — Texto + imagen + 3 botones (sin hero clásico) ===
   - block: cta-image-paragraph
     id: alt-hero-a
     content:
@@ -33,7 +33,7 @@ sections:
       css_class: "text-gray-900 dark:text-gray-100"
       css_style: "align-items:center;"
 
-  # ===== Banda roja: "Lee cómo nació..." =====
+  # === Banda roja: "Lee cómo nació..." ===
   - block: cta-card
     id: origen
     content:
@@ -50,41 +50,32 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, + ancho) =====
-  - block: markdown
+  # === Vamos por 5 años más — (texto + video YouTube, ancho grande, fondo blanco, sin botón) ===
+  - block: features
     id: solutions
     content:
       title: "Vamos por 5 años más"
-      text: |
-        <div class="mx-auto max-w-7xl">
-          <div class="grid md:grid-cols-2 gap-8 items-start">
-            <!-- Columna izquierda: texto (sin botón) -->
-            <div>
-              <p>
+      items:
+        - name: ""
+          description: |
+            <div class="mx-auto">
+              <p class="text-base md:text-lg">
                 Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
               </p>
             </div>
-
-            <!-- Columna derecha: video embed responsivo -->
-            <div class="relative w-full" style="padding-top:56.25%;">
-              <iframe
-                class="absolute inset-0 w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-                title="MetaDocencia - 5 años"
-                loading="lazy"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
+        - name: ""
+          description: |
+            <div class="rounded-lg overflow-hidden">
+              {{< youtube Mcq0-4cyGKQ >}}
             </div>
-          </div>
-        </div>
     design:
-      css_class: "bg-white"
+      columns: 2
+      css_class: "bg-white text-gray-900 dark:text-gray-100 mx-auto max-w-7xl"
+      css_style: "max-width:80rem;margin-left:auto;margin-right:auto;"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
-  # ===== MetaDocencia en números =====
+  # === MetaDocencia en números ===
   - block: stats
     id: numeros
     content:
@@ -105,7 +96,7 @@ sections:
       spacing:
         padding: ["1.25rem", 0, "1.75rem", 0]
 
-  # ===== PERSONAS / ORGANIZACIONES =====
+  # === PERSONAS / ORGANIZACIONES ===
 
   - block: people
     id: equipo
@@ -124,7 +115,7 @@ sections:
     content:
       title: "Consejo Asesor"
       text: "Personas que orientan estratégicamente nuestro trabajo."
-      user_groups: ["Equipo y Consejo Asesor"]
+      user_groups: ["Consejo Asesor"]
       start_open: false
     design:
       columns: 5
