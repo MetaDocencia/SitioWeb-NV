@@ -1,0 +1,88 @@
+{{ define "main" }}
+<section class="container mx-auto px-6 py-10">
+  <h1 class="text-3xl font-extrabold tracking-tight mb-6">
+    {{ if eq .Site.Language.Lang "es" }}Blog{{ else }}Blog{{ end }}
+  </h1>
+
+  <style>
+    .filter-chip{
+      display:inline-block; padding:.35rem .75rem; border:1px solid var(--chip-border, #e5e7eb);
+      border-radius:9999px; font-size:.875rem; line-height:1; cursor:pointer; user-select:none;
+      background:#fff; color:#374151; transition:background .15s ease, color .15s ease, border-color .15s ease;
+    }
+    .dark .filter-chip{ background:#0b0f19; color:#e5e7eb; border-color:#1f2937; }
+    .filter-chip:hover{ background:#f3f4f6; }
+    .dark .filter-chip:hover{ background:#111827; }
+    .filter-chip.is-active{ background:#111827; color:#fff; border-color:#111827; }
+    .dark .filter-chip.is-active{ background:#111827; border-color:#111827; }
+  </style>
+
+  {{ $labelAll := cond (eq .Site.Language.Lang "es") "Todas" "All" }}
+  <div id="cat-filter" class="flex flex-wrap gap-2 mb-8">
+    <button type="button" class="filter-chip is-active" data-cat="__all__">{{ $labelAll }}</button>
+    {{ with site.Taxonomies.categories }}
+      {{ range $name, $_ := . }}
+        <button type="button" class="filter-chip" data-cat="{{ $name | urlize }}">{{ $name }}</button>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $p := .Paginate $pages }}
+
+  <div id="post-list" class="divide-y divide-gray-200 dark:divide-gray-800">
+    {{ range $p.Pages }}
+      {{ $cats := slice }}
+      {{ with .Params.categories }}{{ range . }}{{ $cats = $cats | append (urlize .) }}{{ end }}{{ end }}
+      <article class="py-6" data-cats="{{ delimit $cats " " }}">
+        <h2 class="text-xl md:text-2xl font-semibold leading-tight mb-1">
+          <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+        </h2>
+
+        <div class="text-sm text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
+          <span>{{ .Date.Format "2006-01-02" }}</span>
+          <span>·</span>
+          <span>{{ if eq $.Site.Language.Lang "es" }}{{ .ReadingTime }} min de lectura{{ else }}{{ .ReadingTime }} min read{{ end }}</span>
+          {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
+          {{ with .Params.categories }}
+            <span>·</span>
+            <span class="flex flex-wrap gap-2">
+              {{ range . }}
+                <span class="inline-block text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100">{{ . }}</span>
+              {{ end }}
+            </span>
+          {{ end }}
+        </div>
+
+        {{ $sum := .Params.summary }}
+        {{ if not $sum }}{{ $sum = ( .Plain | truncate 220 ) }}{{ end }}
+        {{ with $sum }}<p class="text-gray-700 dark:text-gray-200">{{ . | safeHTML }}</p>{{ end }}
+      </article>
+    {{ end }}
+  </div>
+
+  <div class="mt-10">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+
+  <script>
+    (function () {
+      const chips = Array.from(document.querySelectorAll('#cat-filter [data-cat]'));
+      const posts = Array.from(document.querySelectorAll('#post-list article'));
+      let current = '__all__';
+      function apply() {
+        posts.forEach(a => {
+          const cats = (a.dataset.cats || '').split(/\s+/).filter(Boolean);
+          a.style.display = (current === '__all__' || cats.includes(current)) ? '' : 'none';
+        });
+      }
+      chips.forEach(btn => btn.addEventListener('click', () => {
+        chips.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        current = btn.dataset.cat;
+        apply();
+      }));
+    })();
+  </script>
+</section>
+{{ end }}
