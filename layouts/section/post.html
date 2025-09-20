@@ -1,5 +1,6 @@
 {{ define "main" }}
 <section class="mx-auto px-6 py-10 max-w-5xl">
+
   <!-- Título -->
   <h1 class="text-3xl font-extrabold tracking-tight mb-6">Blog</h1>
 
@@ -8,7 +9,7 @@
   {{ with site.Taxonomies.categories }}
     <div id="cat-filter" class="flex flex-wrap gap-2 mb-8">
       <button type="button"
-              class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-200 ring-1 ring-gray-400"
+              class="px-3 py-1 rounded-full border border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-200"
               data-cat="__all__">{{ $labelAll }}</button>
       {{ range $name, $_ := . }}
         <button type="button"
@@ -18,62 +19,78 @@
     </div>
   {{ end }}
 
-  <!-- Colección de posts (tarjetas minimalistas) -->
+  <!-- Lista de artículos (uno debajo del otro, sin recuadro) -->
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ $p := .Paginate $pages }}
-  <div id="post-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+  <div id="post-list" class="divide-y divide-gray-200 dark:divide-gray-800">
     {{ range $p.Pages }}
       {{ $cats := slice }}{{ with .Params.categories }}{{ range . }}{{ $cats = $cats | append (urlize .) }}{{ end }}{{ end }}
-      <article class="relative rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#0b0f19] p-4 hover:shadow-md transition"
-               data-cats="{{ delimit $cats " " }}">
-        <h2 class="text-lg font-semibold leading-snug mb-1">
-          <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
-        </h2>
+      <article class="py-6" data-cats="{{ delimit $cats " " }}">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+          <!-- Fecha a la izquierda -->
+          <time class="sm:w-28 shrink-0 text-sm text-gray-500 dark:text-gray-400 sm:mt-1"
+                datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
 
-        <div class="text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1 mb-2">
-          <span>{{ .Date.Format "2006-01-02" }}</span>
-          <span>·</span>
-          <span>{{ .ReadingTime }} min</span>
-          {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
-        </div>
+          <!-- Contenido a la derecha -->
+          <div class="min-w-0">
+            <h2 class="text-xl font-semibold leading-snug">
+              <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+            </h2>
 
-        {{ $sum := .Params.summary }}
-        {{ if not $sum }}{{ $sum = ( .Plain | truncate 160 ) }}{{ end }}
-        {{ with $sum }}<p class="text-sm text-gray-700 dark:text-gray-200 mb-2">{{ . | safeHTML }}</p>{{ end }}
+            <div class="mt-1 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>{{ .ReadingTime }} min</span>
+              {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
 
-        {{ with .Params.categories }}
-          <div class="flex flex-wrap gap-1.5 mt-2">
-            {{ range . }}<span class="inline-block text-[11px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100">{{ . }}</span>{{ end }}
+              {{ with .Params.tags }}
+                {{ if gt (len .) 0 }}
+                  <span>·</span>
+                  <span>
+                    {{- $last := sub (len .) 1 -}}
+                    {{- range $i, $t := . -}}
+                      <a class="underline hover:no-underline"
+                         href="{{ (printf "/tags/%s/" (urlize $t)) | relLangURL }}">{{ $t }}</a>{{ if lt $i $last }}, {{ end }}
+                    {{- end -}}
+                  </span>
+                {{ end }}
+              {{ end }}
+            </div>
+
+            {{ $sum := .Params.summary }}
+            {{ if not $sum }}{{ $sum = ( .Plain | truncate 220 ) }}{{ end }}
+            {{ with $sum }}
+              <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . | safeHTML }}</p>
+            {{ end }}
           </div>
-        {{ end }}
-
-        <a href="{{ .RelPermalink }}" class="absolute inset-0" aria-label="{{ .Title }}"></a>
+        </div>
       </article>
     {{ end }}
   </div>
 
   <!-- Paginación -->
-  <div class="mt-10">
+  <div class="mt-8">
     {{ template "_internal/pagination.html" . }}
   </div>
 
-  <!-- JS para filtrar por categoría -->
+  <!-- JS filtro por categoría -->
   <script>
     (function(){
       const chips = Array.from(document.querySelectorAll('#cat-filter [data-cat]'));
-      const cards = Array.from(document.querySelectorAll('#post-grid article'));
-      let current='__all__';
+      const items = Array.from(document.querySelectorAll('#post-list article'));
+      let current = '__all__';
       function apply(){
-        cards.forEach(c=>{
-          const cats=(c.dataset.cats||'').split(/\s+/).filter(Boolean);
-          c.style.display = (current==='__all__' || cats.includes(current)) ? '' : 'none';
+        items.forEach(el=>{
+          const cats = (el.dataset.cats || '').split(/\s+/).filter(Boolean);
+          el.style.display = (current==='__all__' || cats.includes(current)) ? '' : 'none';
         });
       }
       chips.forEach(btn=>{
         btn.addEventListener('click', ()=>{
           chips.forEach(b=>b.classList.remove('ring-1','ring-gray-400'));
           btn.classList.add('ring-1','ring-gray-400');
-          current=btn.dataset.cat;
+          current = btn.dataset.cat;
           apply();
         });
       });
