@@ -106,71 +106,11 @@ sections:
   # ===== PERSONAS / ORGANIZACIONES =====
 
   - block: people
-    id: equipo
-    content:
-      title: "Equipo"
-      text: "Personas que trabajan hoy en MetaDocencia."
-      user_groups: ["Equipo"]
-      start_open: true
-    design:
-      columns: 5
-      compact: false
-      css_class: "people-md"
-
-  - block: people
-    id: consejo-asesor
-    content:
-      title: "Consejo Asesor"
-      text: "Personas que orientan estratégicamente nuestro trabajo."
-      user_groups: ["Consejo Asesor"]
-      start_open: false
-    design:
-      columns: 5
-      compact: false
-      css_class: "people-md"
-
-  - block: people
     id: auspiciantes
     content:
       title: "Auspiciantes"
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
       user_groups: ["Auspiciantes"]
-      start_open: false
-    design:
-      columns: 7
-      compact: false
-      css_class: "people-sm"
-
-  - block: people
-    id: colaboradores
-    content:
-      title: "Colaboradores"
-      text: "Personas que trabajan de forma externa con nuestros proyectos."
-      user_groups: ["Colaboradores"]
-      start_open: false
-    design:
-      columns: 6
-      compact: false
-      css_class: "people-md"
-
-  - block: people
-    id: colaboraron
-    content:
-      title: "Colaboraron con MetaDocencia"
-      text: "Personas que contribuyeron anteriormente a MetaDocencia."
-      user_groups: ["Colaboraron con MetaDocencia"]
-      start_open: false
-    design:
-      columns: 6
-      compact: false
-      css_class: "people-sm"
-
-  - block: people
-    id: trabajamos-con
-    content:
-      title: "Trabajamos con"
-      text: "Otras organizaciones con las que co-creamos y articulamos."
-      user_groups: ["Trabajamos con"]
       start_open: false
     design:
       columns: 7
