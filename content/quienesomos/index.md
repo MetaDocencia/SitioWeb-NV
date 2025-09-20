@@ -6,44 +6,46 @@ design:
   spacing: "3rem"
 
 sections:
-  # === HERO (más bajo, texto grande como título) ===
+  # === HERO (más bajo, texto ANCHO, blanco y un poco más chico) ===
   - block: hero
     content:
       title: ""
       text: |
-        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-          MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
-        </h1>
+        <div class="mx-auto w-full max-w-6xl">
+          <h1 class="text-white text-2xl md:text-4xl font-extrabold tracking-tight leading-snug">
+            MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
+          </h1>
 
-        <div class="mt-4 flex flex-wrap gap-3">
-          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
-             href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
-             style="background:#FFFFFF;color:#111827;">
-             Nuestra Gobernanza
-          </a>
-          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
-             href="https://www.metadocencia.org/pdc/"
-             style="background:#FFFFFF;color:#111827;">
-             Pautas de Convivencia
-          </a>
-          <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
-             href="https://www.metadocencia.org/politica_accesibilidad/"
-             style="background:#FFFFFF;color:#111827;">
-             Políticas de Accesibilidad
-          </a>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+               href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+               style="background:#FFFFFF;color:#111827;">
+               Nuestra Gobernanza
+            </a>
+            <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+               href="https://www.metadocencia.org/pdc/"
+               style="background:#FFFFFF;color:#111827;">
+               Pautas de Convivencia
+            </a>
+            <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md"
+               href="https://www.metadocencia.org/politica_accesibilidad/"
+               style="background:#FFFFFF;color:#111827;">
+               Políticas de Accesibilidad
+            </a>
+          </div>
         </div>
     design:
       spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]  # menos alto interno
+        padding: ["0.75rem", 0, "0.75rem", 0]   # menos alto interno
         margin: [0, 0, 0, 0]
-      css_style: "min-height:28vh;"           # hero ~mitad de alto
+      css_style: "min-height:24vh;"            # hero más bajo
       background:
         image:
           filename: "quienessomos.jpg"
           filters: { brightness: 0.35 }
         text_color_light: true
 
-  # === CTA rojo después del hero ===
+  # === CTA rojo después del hero (sin título) ===
   - block: cta-card
     id: origen-md
     content:
@@ -92,7 +94,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.75rem", 0, "3rem", 0]   # MUCHO menos margen arriba
+        padding: ["0.75rem", 0, "3rem", 0]   # mucho menos margen arriba
 
   # === PERSONAS / ORGANIZACIONES POR GRUPO ===
 
