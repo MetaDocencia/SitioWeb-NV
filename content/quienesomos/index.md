@@ -36,7 +36,7 @@ sections:
         </div>
     design:
       spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]
+        padding: ["0.1rem", 0, "0.1rem", 0]
         margin: [0, 0, 0, 0]
       css_class: ""
       css_style: "min-height: 20vh;"
