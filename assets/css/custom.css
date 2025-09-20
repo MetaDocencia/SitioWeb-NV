@@ -1,38 +1,318 @@
-/* === Forzar layout 1:2 en #solutions (texto | video) y anular spans del tema === */
-section#solutions.split-1-2 .grid {
-  display: grid !important;
-  /* En desktop: 1 fr para el texto, 2 fr para el video */
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
-  gap: 1.25rem !important;
+/* assets/css/custom.css */
+
+/* 1) Fuente: Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Base tipográfica */
+html, body {
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial,
+               "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Asegurar Open Sans en contenido y UI (sin tocar code/monospace) */
+.prose :where(p, li, blockquote, figcaption, strong, em, a),
+h1, h2, h3, h4, h5, h6,
+nav, .btn, .card, header, footer {
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial,
+               "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* ===== PEOPLE ultra-compact: sin rectángulos, sin aire, nombre casi pegado ===== */
+
+/* Quitar fondo/borde/sombra del contenedor del bloque */
+section.people-sm details,
+section.people-sm details > div {
+  background: transparent !important;
+  border: 0 !important;              /* <-- corregido */
+  box-shadow: none !important;
+}
+
+/* Cabecera del desplegable súper compacta */
+section.people-sm details > summary {
+  padding: 0.25rem 0 !important;
+}
+
+/* Grilla con muy poco gap */
+section.people-sm .grid {
+  gap: 0.3rem !important;
+}
+
+/* Cada tarjeta de persona como columna súper compacta */
+section.people-sm a.group,
+section.people-sm .group {
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 2px !important;               /* nombre casi pegado a la foto */
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-height: auto !important;
 }
 
-/* Si el tema inyecta grid-cols-* en la grid, pisarlo igual */
-section#solutions.split-1-2 .grid[class*="grid-cols-"] {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
+/* Wrapper de la imagen: sin márgenes/paddings y SIN overflow:hidden */
+section.people-sm a.group > div:first-child,
+section.people-sm .overflow-hidden,
+section.people-sm .aspect-square {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;       /* <-- clave para que no se corte el círculo */
+  height: auto !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-/* MUY IMPORTANTE: que los hijos no ocupen toda la fila */
-section#solutions.split-1-2 .grid > [class*="col-span-"] {
-  grid-column: auto / span 1 !important;
-}
-section#solutions.split-1-2 .grid > * {
-  grid-column: auto / span 1 !important;
+/* Quitar cualquier padding residual del cuerpo de la tarjeta */
+section.people-sm .p-6,
+section.people-sm .p-5,
+section.people-sm .p-4,
+section.people-sm .p-3,
+section.people-sm .p-2,
+section.people-sm .p-1 {
+  padding: 0 !important;
 }
 
-/* Mobile: apilar */
-@media (max-width: 1024px) {
-  section#solutions.split-1-2 .grid,
-  section#solutions.split-1-2 .grid[class*="grid-cols-"] {
+/* Imagen: 120px, circular, centrada y completa */
+section.people-sm img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;          /* sin margen inferior para que no se recorte */
+  background: transparent !important;
+  border: 0 !important;
+  vertical-align: middle !important;
+  line-height: 0 !important;
+}
+
+/* Título y metadatos casi pegados a la foto */
+section.people-sm .font-semibold,
+section.people-sm .text-sm,
+section.people-sm .opacity-70 {
+  margin: 2px 0 0 0 !important;       /* separa apenas 2px de la imagen */
+  line-height: 1.15 !important;
+}
+
+/* Tamaños tipográficos compactos */
+section.people-sm .font-semibold { font-size: 0.9rem !important; }
+section.people-sm .text-sm,
+section.people-sm .opacity-70 { font-size: 0.72rem !important; opacity: 0.85; }
+
+/* Anular “rectángulos grandes” que vienen de utilitarias */
+section.people-sm .rounded-xl,
+section.people-sm .rounded-2xl,
+section.people-sm .bg-white,
+section.people-sm .dark\:bg-gray-900,
+section.people-sm .border,
+section.people-sm .shadow,
+section.people-sm .shadow-sm {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Hover sutil solo en la imagen (opcional) */
+section.people-sm a.group:hover img {
+  transform: scale(1.015);
+  transition: transform 120ms ease;
+}
+/* ===== PEOPLE ultra-compact: sin rectángulos, sin aire, nombre pegado a la foto ===== */
+
+/* Quitar fondo/borde/sombra del contenedor del bloque */
+section.people-sm details,
+section.people-sm details > div {
+  background: transparent !important;
+  border: 1 !important;
+  box-shadow: none !important;
+}
+
+/* Cabecera del desplegable súper compacta */
+section.people-sm details > summary {
+  padding: 0.25rem 0 !important;
+}
+
+/* Grilla con muy poco gap */
+section.people-sm .grid {
+  gap: 0.4rem !important;
+}
+
+/* Cada tarjeta de persona como columna súper compacta */
+section.people-sm a.group,
+section.people-sm .group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;                /* casi pegado */
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 6px !important;
+  min-height: auto !important;
+}
+
+/* El contenedor de la imagen NO deja margen debajo */
+section.people-sm a.group > div:first-child {
+  margin: 5px !important;
+  padding: 15px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Quitar cualquier padding residual del cuerpo de la tarjeta */
+section.people-sm .p-6,
+section.people-sm .p-5,
+section.people-sm .p-4,
+section.people-sm .p-3,
+section.people-sm .p-2,
+section.people-sm .p-1 {
+  padding: 0 !important;
+}
+
+/* Imagen: **DOBLE tamaño**, circular, sin caja gris */
+section.people-sm img {
+  width: 120px !important;   /* antes 60px */
+  height: 120px !important;  /* antes 60px */
+  border-radius: 9999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 10px auto !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Título y metadatos pegados a la foto (sin márgenes) */
+section.people-sm .font-semibold,
+section.people-sm .text-sm,
+section.people-sm .opacity-70 {
+  margin: 20px !important;
+  line-height: 1.15 !important;
+}
+
+/* Tamaños tipográficos compactos */
+section.people-sm .font-semibold { font-size: 0.9rem !important; }
+section.people-sm .text-sm,
+section.people-sm .opacity-70 { font-size: 0.72rem !important; opacity: 0.85; }
+
+/* Anular “rectángulos grandes” que vienen de clases utilitarias */
+section.people-sm .rounded-xl,
+section.people-sm .rounded-2xl,
+section.people-sm .bg-white,
+section.people-sm .dark\:bg-gray-900,
+section.people-sm .border,
+section.people-sm .shadow,
+section.people-sm .shadow-sm {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Hover sutil solo en la imagen (opcional) */
+section.people-sm a.group:hover img {
+  transform: scale(1.015);
+  transition: transform 120ms ease;
+}
+
+/* ===== Blog cards (lista /post estilo limpio) ===== */
+.hb-card-article {
+  background: #fff;
+  border: 1px solid rgba(17,24,39,0.06);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(17,24,39,.04);
+  overflow: hidden;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.dark .hb-card-article {
+  background: #0b0f19;
+  border-color: rgba(255,255,255,.08);
+}
+.hb-card-article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(17,24,39,.08);
+}
+.hb-card-article img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+.hb-card-article .meta { color:#6b7280; font-size:.85rem; }
+.dark .hb-card-article .meta { color:#9ca3af; }
+.hb-card-article .tags a,
+.hb-card-article .tags span {
+  display:inline-block; font-size:.75rem; padding:.2rem .5rem; border-radius:9999px;
+  background:#f3f4f6; color:#374151; margin:.35rem .35rem 0 0; text-decoration:none;
+}
+.dark .hb-card-article .tags a,
+.dark .hb-card-article .tags span { background:rgba(255,255,255,.08); color:#e5e7eb; }
+
+/* Anular el max-width de la tipografía en /cta sección boletín */
+section#boletin-embed .prose{ max-width:100% !important; }
+
+/* === Forzar el features #boletin-embed a 2 columnas reales === */
+section#boletin-embed .grid {
+  display: grid;
+  grid-template-columns: 1fr !important; /* 1 col en mobile */
+}
+
+@media (min-width: 1024px) { /* lg: */
+  section#boletin-embed .grid {
+    grid-template-columns: 1fr 1fr !important; /* 2 cols en desktop */
+  }
+}
+
+/* === Forzar que el features #boletin-embed tenga 2 columnas reales === */
+section#boletin-embed .grid {
+  display: grid !important;
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 1023.98px) {
+  section#boletin-embed .grid,
+  section#boletin-embed [class*="grid-cols-"] {
     grid-template-columns: 1fr !important;
   }
 }
 
-/* Asegurar que el contenedor del video ocupe 100% del ancho de su columna */
-section#solutions.split-1-2 .grid > :nth-child(2) iframe,
-section#solutions.split-1-2 .grid > :nth-child(2) .video-container,
-section#solutions.split-1-2 .grid > :nth-child(2) > div {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block !important;
+/* Desktop: 2 columnas SÍ o SÍ (pisa grid-cols-3 del tema) */
+@media (min-width: 1024px) {
+  section#boletin-embed .grid,
+  section#boletin-embed [class*="grid-cols-"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  /* Asegurar que ningún hijo fuerce spans raros */
+  section#boletin-embed [class*="col-span-"] {
+    grid-column: auto / span 1 !important;
+  }
+}
+
+/* (Opcional) Limitar ancho del formulario y pegarlo a la derecha */
+section#boletin-embed .grid > *:nth-child(2) > div {
+  max-width: 36rem; /* ~576px */
+  margin-left: auto;
+}
+
+/* Bloque features asimétrico 1:2 (texto | video) */
+section#solutions.split-1-2 .grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) !important;
+}
+
+/* En pantallas pequeñas, que apile */
+@media (max-width: 1024px) {
+  section#solutions.split-1-2 .grid {
+    grid-template-columns: 1fr !important;
+  }
 }
