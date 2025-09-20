@@ -11,8 +11,8 @@ sections:
     content:
       title: ""
       text: |
-        <div class="mx-auto w-full max-w-6xl">
-          <h1 class="text-white text-2xl md:text-4xl font-extrabold tracking-tight leading-snug">
+        <div class="mx-auto w-full max-w-7xl px-2 md:px-4">
+          <h1 class="text-white text-xl md:text-3xl font-extrabold tracking-tight leading-snug">
             MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
           </h1>
 
