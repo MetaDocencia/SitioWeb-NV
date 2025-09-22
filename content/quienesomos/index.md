@@ -6,8 +6,6 @@ design:
   spacing: "3rem"
 
 sections:
-
-  # ALT A — cta-image-paragraph (título + texto + imagen al lado, botones azules más grandes)
   - block: cta-image-paragraph
     id: alt-hero-a
     content:
@@ -33,7 +31,6 @@ sections:
       css_class: "text-gray-900 dark:text-gray-100"
       css_style: "align-items:center;"
 
-  # ===== Banda roja: "Lee cómo nació..." =====
   - block: cta-card
     id: origen
     content:
@@ -50,21 +47,17 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, "0.5rem", 0]
 
-  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9) =====
   - block: markdown
     id: solutions
     content:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
-          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
-
-          <!-- Columna derecha: video embed responsivo -->
           <div class="relative w-full" style="padding-top:56.25%;">
             <iframe
               class="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -78,12 +71,10 @@ sections:
           </div>
         </div>
     design:
-      # Fondo blanco (también en modo oscuro)
       css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
-  # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
     content:
@@ -100,29 +91,31 @@ sections:
         - statistic: "+2,600"
           description: "suscripciones activas a nuestro boletín"
     design:
-      # Menos margen superior
       spacing:
         padding: ["0.5rem", 0, "1.5rem", 0]
 
-  # ===== PERSONAS / ORGANIZACIONES =====
+  # === PERSONAS / ORGANIZACIONES ===
 
-  # --- Colaboran con MetaDocencia ---
   - block: community/people
-  content:
-    title: "Colaboran con MetaDocencia"
-    user_groups: ["Colaboran con MetaDocencia"]
-  design:
-    columns: 7
+    id: colaboradores
+    content:
+      title: "Colaboradores"
+      text: ""
+      user_groups:
+        - "Colaboradores"
+    design:
+      columns: 7
 
-  # --- Auspiciantes ---
   - block: community/people
-  content:
-    title: "Auspiciantes"
-    user_groups: ["Auspiciantes"]
-  design:
-    columns: 7
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
+      user_groups:
+        - "Auspiciantes"
+    design:
+      columns: 7
 
-  # CTA final
   - block: cta-card
     id: apoya
     content:
