@@ -1,4 +1,6 @@
-{{ warnf "USING custom blox/people" }}
+{{ $b := .block }}
+{{ $content := (index $b "content") | default dict }}
+{{ warnf "USING custom blox/community/people | title=%q | groups=%v" (or (index $content "title") (index $b "title")) (index $content "user_groups") }}
 
 {{/* Bloque PEOPLE con filtro por user_groups y título del contenido (override local)
      - Lee content.title / content.text.
