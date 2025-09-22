@@ -94,34 +94,40 @@ sections:
       spacing:
         padding: ["0.5rem", 0, "1.5rem", 0]
 
-  # === PERSONAS / ORGANIZACIONES con shortcode ===
+  # === PERSONAS / ORGANIZACIONES (full-bleed, sin bordes) ===
   - block: markdown
     id: personas
     content:
       title: ""
       text: |
-        <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900" open>
-          <summary class="flex items-center justify-between cursor-pointer p-4">
-            <span class="text-2xl font-bold">Colaboradores</span>
-            <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-          </summary>
-          <div class="px-4 pb-4">
-            {{< people_group group="Colaboradores" columns="7" >}}
-          </div>
-        </details>
+        <!-- Wrapper full-bleed: ocupa todo el ancho del viewport -->
+        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 
-        <div class="h-4"></div>
+          <!-- Colaboradores -->
+          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8" open>
+            <summary class="flex items-center justify-between cursor-pointer py-4">
+              <span class="text-2xl font-bold">Colaboradores</span>
+              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
+            </summary>
+            <div class="pb-6">
+              {{< people_group group="Colaboradores" columns="7" >}}
+            </div>
+          </details>
 
-        <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900">
-          <summary class="flex items-center justify-between cursor-pointer p-4">
-            <span class="text-2xl font-bold">Auspiciantes</span>
-            <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-          </summary>
-          <div class="px-4 pb-4">
-            {{< people_group group="Auspiciantes" columns="7" >}}
-          </div>
-        </details>
+          <div class="h-4 md:h-6"></div>
 
+          <!-- Auspiciantes -->
+          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8">
+            <summary class="flex items-center justify-between cursor-pointer py-4">
+              <span class="text-2xl font-bold">Auspiciantes</span>
+              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
+            </summary>
+            <div class="pb-6">
+              {{< people_group group="Auspiciantes" columns="7" >}}
+            </div>
+          </details>
+
+        </div>
   - block: cta-card
     id: apoya
     content:
