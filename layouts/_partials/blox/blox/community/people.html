@@ -1,43 +1,49 @@
-{{/* Bloque 'community/people' nativo con filtro por content.user_groups */}}
+{{/* Bloque 'people' colapsable (details/summary) con filtro por content.user_groups
+     - Usa el estilo nativo del blox community/people
+     - Lee content.title (o block.title) y content.text/subtitle/description
+     - Filtra por content.user_groups (o content.groups). Si no hay, lista todos.
+     - start_open: bool para abrir por defecto.
+     - design.columns: 2–5 columnas. design.compact: reduce padding vertical.
+*/}}
 
 {{- $b := .block -}}
 {{- $content := (index $b "content") | default dict -}}
 {{- $design  := (index $b "design")  | default dict -}}
 
-/* --------- Título y texto --------- */
-{{- $title := "Personas" -}}
-{{- with (index $content "title") }}{{ $title = . }}{{ end -}}
-{{- with (index $b "title") }}{{ $title = . }}{{ end -}}
-{{- $text := "" -}}
-{{- with (index $content "text") }}{{ $text = . }}{{ end -}}
-{{- with (index $content "subtitle") }}{{ $text = . }}{{ end -}}
-{{- with (index $content "description") }}{{ $text = . }}{{ end -}}
+{{/* ---- Título y texto ---- */}}
+{{- $sc := newScratch -}}
+{{- $sc.Set "title" "Personas" -}}
+{{- with (index $content "title") }}{{- $sc.Set "title" . -}}{{- end -}}
+{{- with (index $b "title") }}{{- $sc.Set "title" . -}}{{- end -}}
+{{- $title := $sc.Get "title" -}}
 
-/* --------- Grupos solicitados --------- */
-{{- $groups := slice -}}
-{{- with (index $content "user_groups") }}{{ $groups = . }}{{ end -}}
-{{- if and (eq (len $groups) 0) (isset $content "groups") -}}
-  {{- $groups = (index $content "groups") -}}
-{{- end -}}
-{{- if and $groups (not (reflect.IsSlice $groups)) -}}
+{{- $sc.Set "text" "" -}}
+{{- with (index $content "text") }}{{- $sc.Set "text" . -}}{{- end -}}
+{{- with (index $content "subtitle") }}{{- $sc.Set "text" . -}}{{- end -}}
+{{- with (index $content "description") }}{{- $sc.Set "text" . -}}{{- end -}}
+{{- $text := $sc.Get "text" -}}
+
+{{/* ---- Grupos (normalizado a slice) ---- */}}
+{{- $groups := (index $content "user_groups") | default (index $content "groups") | default (slice) -}}
+{{- if and (not (reflect.IsSlice $groups)) $groups -}}
   {{- $groups = (slice $groups) -}}
 {{- end -}}
 
-/* --------- Grid y opciones visuales --------- */
+{{/* ---- Columnas / padding ---- */}}
 {{- $cols := (index $design "columns") | default 4 -}}
 {{- $grid := "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" -}}
-{{- if eq $cols 2 }}{{ $grid = "grid-cols-1 sm:grid-cols-2" }}{{ end -}}
-{{- if eq $cols 3 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }}{{ end -}}
-{{- if eq $cols 5 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5" }}{{ end -}}
-{{- $pad := "py-8" -}}
-{{- if and (isset $design "compact") (index $design "compact") }}{{ $pad = "py-4" }}{{ end -}}
-{{- $open := false -}}
-{{- with (index $content "start_open") }}{{ $open = . }}{{ end -}}
+{{- if eq $cols 2 }}{{- $grid = "grid-cols-1 sm:grid-cols-2" -}}{{- end -}}
+{{- if eq $cols 3 }}{{- $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" -}}{{- end -}}
+{{- if eq $cols 5 }}{{- $grid = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5" -}}{{- end -}}
 
-/* --------- Colección de autores --------- */
+{{- $pad := "py-8" -}}
+{{- if and (isset $design "compact") (index $design "compact") -}}
+  {{- $pad = "py-4" -}}
+{{- end -}}
+
+{{/* ---- Autores (única sección esperada por el blox nativo) ---- */}}
 {{- $authors := where site.Pages "Section" "authors" -}}
 
-/* Filtrado robusto por user_groups (intersección) */
 {{- if and $authors (gt (len $groups) 0) -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
@@ -49,17 +55,23 @@
   {{- $authors = $filtered -}}
 {{- end -}}
 
-/* Orden por weight y luego título */
-{{- $authors = sort (sort $authors "Params.weight" "asc") "Title" "asc" -}}
+{{/* ---- Orden: weight asc, luego Title asc (en 2 pasos para evitar el bug del pipe) ---- */}}
+{{- $authors = sort $authors "Params.weight" "asc" -}}
+{{- $authors = sort $authors "Title" "asc" -}}
 
-/* --------- Render --------- */
+{{/* ---- Abierto por defecto ---- */}}
+{{- $open := false -}}
+{{- with (index $content "start_open") -}}{{- $open = . -}}{{- end -}}
+
 <section id="{{ (index $b "id") | default (anchorize $title) }}" class="{{ $pad }}">
   <div class="container mx-auto px-6">
     <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900" {{ if $open }}open{{ end }}>
       <summary class="flex items-center justify-between cursor-pointer p-4">
         <div class="min-w-0">
           <span class="block text-2xl font-bold">{{ $title }}</span>
-          {{- if $text -}}<span class="block text-gray-600 dark:text-gray-300 mt-1">{{ $text | markdownify }}</span>{{- end -}}
+          {{- if $text -}}
+            <span class="block text-gray-600 dark:text-gray-300 mt-1">{{ $text | markdownify }}</span>
+          {{- end -}}
         </div>
         <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
       </summary>
@@ -67,8 +79,7 @@
       <div class="px-4 pb-4">
         {{- if gt (len $authors) 0 -}}
           <div class="grid {{ $grid }} gap-6">
-            {{- range $authors -}}
-              {{- $p := . -}}
+            {{- range $p := $authors -}}
               <a class="block group rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition bg-white dark:bg-gray-900" href="{{ $p.RelPermalink }}">
                 <div class="aspect-[4/3] bg-gray-100 dark:bg-gray-800 overflow-hidden">
                   {{- with $p.Resources.GetMatch "avatar*" -}}
@@ -98,7 +109,7 @@
             </div>
           {{- else -}}
             <div class="text-gray-500 dark:text-gray-400">
-              No se encontraron perfiles de autores. Verificá <code>content/authors/&lt;slug&gt;/_index.md</code>.
+              No se encontraron perfiles de autores. Verifica <code>content/authors/&lt;slug&gt;/_index.md</code>.
             </div>
           {{- end -}}
         {{- end -}}
@@ -106,6 +117,3 @@
     </details>
   </div>
 </section>
-
-{{/* Depuración mínima en HTML (comentarios) */}}
-<!-- people.html OK | title="{{ $title }}" | groups="{{ delimit $groups "," }}" | authors={{ len $authors }} -->
