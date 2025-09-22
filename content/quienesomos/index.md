@@ -7,7 +7,7 @@ design:
 
 sections:
 
-  # ===== HERO con imagen de fondo + botones rojos centrados + textos grandes =====
+  # ===== HERO con imagen de fondo + botones rojos centrados + textos =====
   - block: hero
     id: hero-qs
     content:
@@ -31,8 +31,8 @@ sections:
           </a>
         </div>
 
-        <!-- Textos más grandes, con margen y link -->
-        <div class="mt-4 space-y-2">
+        <!-- Textos adicionales -->
+        <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
@@ -42,7 +42,7 @@ sections:
         </div>
     design:
       spacing:
-        padding: ["0.5rem", 0, "0.5rem", 0]        # hero más bajo
+        padding: ["0.5rem", 0, "0.5rem", 0]   # hero más bajo
         margin: [0, 0, "0.5rem", 0]
       background:
         image:
@@ -53,7 +53,7 @@ sections:
           position: center
           parallax: false
         text_color_light: true
-      css_style: "min-height: 24vh;"               # aún más corto
+      css_style: "min-height: 24vh;"
 
   # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
   - block: markdown
@@ -82,7 +82,7 @@ sections:
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
-        padding: ["1rem", 0, "1.25rem", 0]
+        padding: ["1.5rem", 0, "1.25rem", 0]   # ↑ un poco más de espacio arriba del título
 
   # ===== MetaDocencia en números (fondo gris) =====
   - block: stats
@@ -103,16 +103,22 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.5rem", 0, "1.5rem", 0]
+        padding: ["0.25rem", 0, "0.75rem", 0]   # ↓ bastante menos arriba/abajo del título
 
-  # ===== Aumentar el espacio entre estadísticas (estilo inline solo para esta página) =====
+  # ===== Estilos locales: comprimir márgenes del título y aumentar gap entre stats =====
   - block: markdown
     content:
       title: ""
       text: |
         <style>
-          /* Más espacio entre ítems dentro del bloque #numeros sin tocar CSS global */
+          /* Más espacio entre ítems de estadísticas */
           section#numeros .grid { gap: 1.75rem !important; }
+
+          /* Comprimir margen del título en la sección de números */
+          section#numeros h1, section#numeros h2, section#numeros .section-title {
+            margin-top: 0.15rem !important;
+            margin-bottom: 0.35rem !important;
+          }
         </style>
 
   # === PERSONAS / ORGANIZACIONES (full-bleed, sin bordes) ===
