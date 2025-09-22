@@ -1,53 +1,36 @@
-{{/* Bloque 'people' colapsable (details/summary) con filtro por content.user_groups
-     - Usa el estilo nativo del blox community/people
-     - Lee content.title (o block.title) y content.text/subtitle/description
-     - Filtra por content.user_groups (o content.groups). Si no hay, lista todos.
-     - start_open: bool para abrir por defecto.
-     - design.columns: 2–5 columnas. design.compact: reduce padding vertical.
-*/}}
+{{/* Bloque 'people' filtrable por user_groups, con título y texto desde content.* */}}
 
 {{- $b := .block -}}
 {{- $content := (index $b "content") | default dict -}}
 {{- $design  := (index $b "design")  | default dict -}}
 
-{{/* ---- Título y texto ---- */}}
-{{- $sc := newScratch -}}
-{{- $sc.Set "title" "Personas" -}}
-{{- with (index $content "title") }}{{- $sc.Set "title" . -}}{{- end -}}
-{{- with (index $b "title") }}{{- $sc.Set "title" . -}}{{- end -}}
-{{- $title := $sc.Get "title" -}}
+{{/* Título y texto (content.title tiene prioridad) */}}
+{{- $title := or (index $content "title") (index $b "title") "Personas" -}}
+{{- $text  := or (index $content "text")  (index $content "description") "" -}}
 
-{{- $sc.Set "text" "" -}}
-{{- with (index $content "text") }}{{- $sc.Set "text" . -}}{{- end -}}
-{{- with (index $content "subtitle") }}{{- $sc.Set "text" . -}}{{- end -}}
-{{- with (index $content "description") }}{{- $sc.Set "text" . -}}{{- end -}}
-{{- $text := $sc.Get "text" -}}
-
-{{/* ---- Grupos (normalizado a slice) ---- */}}
-{{- $groups := (index $content "user_groups") | default (index $content "groups") | default (slice) -}}
-{{- if and (not (reflect.IsSlice $groups)) $groups -}}
+{{/* Grupos solicitados (acepta string o lista) */}}
+{{- $groups := slice -}}
+{{- with (index $content "user_groups") -}} {{- $groups = . -}} {{- end -}}
+{{- if and (eq (len $groups) 0) (isset $content "groups") -}}
+  {{- $groups = (index $content "groups") -}}
+{{- end -}}
+{{- if and $groups (not (reflect.IsSlice $groups)) -}}
   {{- $groups = (slice $groups) -}}
 {{- end -}}
 
-{{/* ---- Columnas / padding ---- */}}
+{{/* Columnas, padding y abierto por defecto */}}
 {{- $cols := (index $design "columns") | default 4 -}}
-{{- $grid := "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" -}}
-{{- if eq $cols 2 }}{{- $grid = "grid-cols-1 sm:grid-cols-2" -}}{{- end -}}
-{{- if eq $cols 3 }}{{- $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" -}}{{- end -}}
-{{- if eq $cols 5 }}{{- $grid = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5" -}}{{- end -}}
+{{- $pad := cond ((index $design "compact")) "py-4" "py-8" -}}
+{{- $open := (index $content "start_open") | default false -}}
 
-{{- $pad := "py-8" -}}
-{{- if and (isset $design "compact") (index $design "compact") -}}
-  {{- $pad = "py-4" -}}
-{{- end -}}
-
-{{/* ---- Autores (única sección esperada por el blox nativo) ---- */}}
+{{/* Armar listado base: solo sección authors (evitamos que se cuelen otros tipos) */}}
 {{- $authors := where site.Pages "Section" "authors" -}}
 
-{{- if and $authors (gt (len $groups) 0) -}}
+{{/* Filtrar por user_groups si se pidieron */}}
+{{- if gt (len $groups) 0 -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
-    {{- $ug := .Params.user_groups | default (slice) -}}
+    {{- $ug := .Params.user_groups -}}
     {{- if and $ug (gt (len (intersect $ug $groups)) 0) -}}
       {{- $filtered = $filtered | append . -}}
     {{- end -}}
@@ -55,13 +38,9 @@
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{/* ---- Orden: weight asc, luego Title asc (en 2 pasos para evitar el bug del pipe) ---- */}}
-{{- $authors = sort $authors "Params.weight" "asc" -}}
-{{- $authors = sort $authors "Title" "asc" -}}
-
-{{/* ---- Abierto por defecto ---- */}}
-{{- $open := false -}}
-{{- with (index $content "start_open") -}}{{- $open = . -}}{{- end -}}
+{{/* Orden estable: primero weight (si existe), luego título */}}
+{{- $authors = sort $authors ".Params.weight" -}}
+{{- $authors = sort $authors "Title" -}}
 
 <section id="{{ (index $b "id") | default (anchorize $title) }}" class="{{ $pad }}">
   <div class="container mx-auto px-6">
@@ -78,8 +57,9 @@
 
       <div class="px-4 pb-4">
         {{- if gt (len $authors) 0 -}}
-          <div class="grid {{ $grid }} gap-6">
-            {{- range $p := $authors -}}
+          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-{{ $cols }}">
+            {{- range $authors -}}
+              {{- $p := . -}}
               <a class="block group rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition bg-white dark:bg-gray-900" href="{{ $p.RelPermalink }}">
                 <div class="aspect-[4/3] bg-gray-100 dark:bg-gray-800 overflow-hidden">
                   {{- with $p.Resources.GetMatch "avatar*" -}}
@@ -104,13 +84,9 @@
           </div>
         {{- else -}}
           {{- if gt (len $groups) 0 -}}
-            <div class="text-gray-500 dark:text-gray-400">
-              No se encontraron perfiles en: {{ delimit $groups ", " " y " }}.
-            </div>
+            <div class="text-gray-500 dark:text-gray-400">No se encontraron perfiles en: {{ delimit $groups ", " " y " }}.</div>
           {{- else -}}
-            <div class="text-gray-500 dark:text-gray-400">
-              No se encontraron perfiles de autores. Verifica <code>content/authors/&lt;slug&gt;/_index.md</code>.
-            </div>
+            <div class="text-gray-500 dark:text-gray-400">No se encontraron perfiles en <code>content/authors/</code>.</div>
           {{- end -}}
         {{- end -}}
       </div>
