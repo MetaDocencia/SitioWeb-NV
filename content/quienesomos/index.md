@@ -94,27 +94,33 @@ sections:
       spacing:
         padding: ["0.5rem", 0, "1.5rem", 0]
 
-  # === PERSONAS / ORGANIZACIONES ===
-
-  - block: community/people
-    id: colaboradores
+  # === PERSONAS / ORGANIZACIONES con shortcode ===
+  - block: markdown
+    id: personas
     content:
-      title: "Colaboradores"
-      text: ""
-      user_groups:
-        - "Colaboradores"
-    design:
-      columns: 7
+      title: ""
+      text: |
+        <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900" open>
+          <summary class="flex items-center justify-between cursor-pointer p-4">
+            <span class="text-2xl font-bold">Colaboradores</span>
+            <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
+          </summary>
+          <div class="px-4 pb-4">
+            {{< people_group group="Colaboradores" columns="7" >}}
+          </div>
+        </details>
 
-  - block: community/people
-    id: auspiciantes
-    content:
-      title: "Auspiciantes"
-      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups:
-        - "Auspiciantes"
-    design:
-      columns: 7
+        <div class="h-4"></div>
+
+        <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900">
+          <summary class="flex items-center justify-between cursor-pointer p-4">
+            <span class="text-2xl font-bold">Auspiciantes</span>
+            <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
+          </summary>
+          <div class="px-4 pb-4">
+            {{< people_group group="Auspiciantes" columns="7" >}}
+          </div>
+        </details>
 
   - block: cta-card
     id: apoya
