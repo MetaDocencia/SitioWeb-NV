@@ -1,67 +1,57 @@
 {{/* Shortcode: people_group
-     Uso: {{< people_group group="Auspiciantes" columns="7" >}}
-     Filtra autores por .Params.user_groups y muestra grilla limpia. */}}
+     Params:
+       - group   : nombre del user_group a listar (obligatorio)
+       - columns : columnas en desktop (default "7")
+   Comportamiento:
+       - En mobile/base usa 3 columnas.
+       - En desktop (xl) usa "columns".
+       - Sin subrayado en toda la tarjeta (no-underline).
+*/}}
 
 {{- $group := .Get "group" | default "" -}}
 {{- $cols  := .Get "columns" | default "7" -}}
 
-{{/* Base: solo sección authors */}}
 {{- $authors := where site.Pages "Section" "authors" -}}
 
-{{/* Filtro por user_groups cuando se pasa "group" */}}
 {{- if $group -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
-    {{- $hit := false -}}
-    {{- with .Params.user_groups -}}
-      {{- range . -}}
-        {{- if eq . $group -}}
-          {{- $hit = true -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if $hit -}}
+    {{- $ug := .Params.user_groups -}}
+    {{- if and $ug (in $ug $group) -}}
       {{- $filtered = $filtered | append . -}}
     {{- end -}}
   {{- end -}}
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{/* Orden estable: por Título y (si existe) weight como primario */}}
+{{- /* Orden estable: primero weight (si existe), luego título) */ -}}
+{{- $authors = sort $authors ".Params.weight" -}}
 {{- $authors = sort $authors "Title" -}}
-{{- $authors = sort $authors "Params.weight" -}}
 
-{{- if gt (len $authors) 0 -}}
-  <div class="grid gap-2" style="grid-template-columns: repeat({{ $cols }}, minmax(0,1fr));">
-    {{- range $p := $authors -}}
-      {{- $img := "" -}}
-      {{- with $p.Params.image }}{{ $img = . }}{{ end -}}
-      {{- if not $img -}}
-        {{- with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ end -}}
-      {{- end -}}
-
-      <a class="group block text-center" href="{{ $p.RelPermalink }}">
-        <div class="mx-auto">
-          {{- if $img -}}
-            <img class="w-24 h-24 rounded-full object-cover mx-auto" loading="lazy" src="{{ $img | relURL }}" alt="{{ $p.Title }}">
-          {{- else -}}
-            <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto"></div>
+<div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} gap-4 md:gap-6">
+  {{- range $p := $authors -}}
+    <a class="block no-underline hover:no-underline group rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition bg-white dark:bg-gray-900"
+       href="{{ $p.RelPermalink }}">
+      <div class="aspect-[4/3] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+        {{- with $p.Resources.GetMatch "avatar*" -}}
+          <img class="w-full h-full object-cover group-hover:scale-[1.02] transition"
+               loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
+        {{- else -}}
+          {{- with $p.Params.image -}}
+            <img class="w-full h-full object-cover group-hover:scale-[1.02] transition"
+                 loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
           {{- end -}}
-        </div>
-        <div class="mt-1">
-          <div class="font-semibold leading-tight">{{ $p.Title }}</div>
-          {{- with $p.Params.role }}<div class="text-xs opacity-80 leading-tight">{{ . }}</div>{{- end -}}
-          {{- with (index $p.Params "organizations") -}}
-            {{- with (index . 0) -}}
-              {{- with .name }}<div class="text-xs opacity-80 leading-tight">{{ . }}</div>{{- end -}}
-            {{- end -}}
+        {{- end -}}
+      </div>
+      <div class="p-4">
+        <div class="font-semibold no-underline">{{ $p.Title }}</div>
+        {{- with $p.Params.role -}}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
+        {{- with (index $p.Params "organizations") -}}
+          {{- with (index . 0) -}}
+            {{- with .name -}}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
           {{- end -}}
-        </div>
-      </a>
-    {{- end -}}
-  </div>
-{{- else -}}
-  <div class="text-gray-500 dark:text-gray-400">
-    {{ if $group }}No se encontraron perfiles en: {{ $group }}.{{ else }}No se encontraron perfiles.{{ end }}
-  </div>
-{{- end -}}
+        {{- end -}}
+      </div>
+    </a>
+  {{- end -}}
+</div>
