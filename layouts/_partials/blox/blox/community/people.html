@@ -1,0 +1,111 @@
+{{/* Bloque 'community/people' nativo con filtro por content.user_groups */}}
+
+{{- $b := .block -}}
+{{- $content := (index $b "content") | default dict -}}
+{{- $design  := (index $b "design")  | default dict -}}
+
+/* --------- Título y texto --------- */
+{{- $title := "Personas" -}}
+{{- with (index $content "title") }}{{ $title = . }}{{ end -}}
+{{- with (index $b "title") }}{{ $title = . }}{{ end -}}
+{{- $text := "" -}}
+{{- with (index $content "text") }}{{ $text = . }}{{ end -}}
+{{- with (index $content "subtitle") }}{{ $text = . }}{{ end -}}
+{{- with (index $content "description") }}{{ $text = . }}{{ end -}}
+
+/* --------- Grupos solicitados --------- */
+{{- $groups := slice -}}
+{{- with (index $content "user_groups") }}{{ $groups = . }}{{ end -}}
+{{- if and (eq (len $groups) 0) (isset $content "groups") -}}
+  {{- $groups = (index $content "groups") -}}
+{{- end -}}
+{{- if and $groups (not (reflect.IsSlice $groups)) -}}
+  {{- $groups = (slice $groups) -}}
+{{- end -}}
+
+/* --------- Grid y opciones visuales --------- */
+{{- $cols := (index $design "columns") | default 4 -}}
+{{- $grid := "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" -}}
+{{- if eq $cols 2 }}{{ $grid = "grid-cols-1 sm:grid-cols-2" }}{{ end -}}
+{{- if eq $cols 3 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" }}{{ end -}}
+{{- if eq $cols 5 }}{{ $grid = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5" }}{{ end -}}
+{{- $pad := "py-8" -}}
+{{- if and (isset $design "compact") (index $design "compact") }}{{ $pad = "py-4" }}{{ end -}}
+{{- $open := false -}}
+{{- with (index $content "start_open") }}{{ $open = . }}{{ end -}}
+
+/* --------- Colección de autores --------- */
+{{- $authors := where site.Pages "Section" "authors" -}}
+
+/* Filtrado robusto por user_groups (intersección) */
+{{- if and $authors (gt (len $groups) 0) -}}
+  {{- $filtered := slice -}}
+  {{- range $authors -}}
+    {{- $ug := .Params.user_groups | default (slice) -}}
+    {{- if and $ug (gt (len (intersect $ug $groups)) 0) -}}
+      {{- $filtered = $filtered | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $authors = $filtered -}}
+{{- end -}}
+
+/* Orden por weight y luego título */
+{{- $authors = sort (sort $authors "Params.weight" "asc") "Title" "asc" -}}
+
+/* --------- Render --------- */
+<section id="{{ (index $b "id") | default (anchorize $title) }}" class="{{ $pad }}">
+  <div class="container mx-auto px-6">
+    <details class="group rounded-2xl border shadow-sm bg-white dark:bg-gray-900" {{ if $open }}open{{ end }}>
+      <summary class="flex items-center justify-between cursor-pointer p-4">
+        <div class="min-w-0">
+          <span class="block text-2xl font-bold">{{ $title }}</span>
+          {{- if $text -}}<span class="block text-gray-600 dark:text-gray-300 mt-1">{{ $text | markdownify }}</span>{{- end -}}
+        </div>
+        <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
+      </summary>
+
+      <div class="px-4 pb-4">
+        {{- if gt (len $authors) 0 -}}
+          <div class="grid {{ $grid }} gap-6">
+            {{- range $authors -}}
+              {{- $p := . -}}
+              <a class="block group rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition bg-white dark:bg-gray-900" href="{{ $p.RelPermalink }}">
+                <div class="aspect-[4/3] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+                  {{- with $p.Resources.GetMatch "avatar*" -}}
+                    <img class="w-full h-full object-cover group-hover:scale-[1.02] transition" loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
+                  {{- else -}}
+                    {{- with $p.Params.image -}}
+                      <img class="w-full h-full object-cover group-hover:scale-[1.02] transition" loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
+                    {{- end -}}
+                  {{- end -}}
+                </div>
+                <div class="p-4">
+                  <div class="font-semibold">{{ $p.Title }}</div>
+                  {{- with $p.Params.role }}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
+                  {{- with (index $p.Params "organizations") -}}
+                    {{- with (index . 0) -}}
+                      {{- with .name }}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                </div>
+              </a>
+            {{- end -}}
+          </div>
+        {{- else -}}
+          {{- if gt (len $groups) 0 -}}
+            <div class="text-gray-500 dark:text-gray-400">
+              No se encontraron perfiles en: {{ delimit $groups ", " " y " }}.
+            </div>
+          {{- else -}}
+            <div class="text-gray-500 dark:text-gray-400">
+              No se encontraron perfiles de autores. Verificá <code>content/authors/&lt;slug&gt;/_index.md</code>.
+            </div>
+          {{- end -}}
+        {{- end -}}
+      </div>
+    </details>
+  </div>
+</section>
+
+{{/* Depuración mínima en HTML (comentarios) */}}
+<!-- people.html OK | title="{{ $title }}" | groups="{{ delimit $groups "," }}" | authors={{ len $authors }} -->
