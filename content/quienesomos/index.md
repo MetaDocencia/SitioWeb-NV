@@ -6,58 +6,66 @@ design:
   spacing: "3rem"
 
 sections:
-  - block: cta-image-paragraph
-    id: alt-hero-a
-    content:
-      items:
-        - title: "Quiénes somos"
-          text: |
-            <p class="text-lg md:text-xl leading-snug">
-              MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-3">
-              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
-                 href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
-                 style="background:#00506F;color:#FFFFFF;">Nuestra Gobernanza</a>
-              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
-                 href="https://www.metadocencia.org/pdc/"
-                 style="background:#00506F;color:#FFFFFF;">Pautas de Convivencia</a>
-              <a class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
-                 href="https://www.metadocencia.org/politica_accesibilidad/"
-                 style="background:#00506F;color:#FFFFFF;">Políticas de Accesibilidad</a>
-            </div>
-          image: "quienessomos.jpg"
-    design:
-      css_class: "text-gray-900 dark:text-gray-100"
-      css_style: "align-items:center;"
 
-  - block: cta-card
-    id: origen
+  # ===== HERO con imagen de fondo + botones + texto extra =====
+  - block: hero
+    id: hero-qs
     content:
-      title: ""
-      text: "Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación."
-      button:
-        text: "Nota en nuestro blog"
-        url: "https://www.metadocencia.org/post/origenmd/"
+      title: "Quienes somos"
+      text: |
+        <p class="text-white text-lg md:text-xl leading-snug max-w-3xl">
+          MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
+        </p>
+
+        <!-- Botones -->
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="https://www.metadocencia.org/pdc/"
+             class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
+             style="background:#00506F;color:#FFFFFF;">
+             Pautas de Convivencia
+          </a>
+          <a href="https://www.metadocencia.org/institucional/"
+             class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
+             style="background:#00506F;color:#FFFFFF;">
+             Institucional
+          </a>
+        </div>
+
+        <!-- Texto extra dentro del hero -->
+        <div class="mt-3 text-white/90">
+          <p class="mb-1">Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación.</p>
+          <p class="mb-0">MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society.</p>
+        </div>
     design:
-      card:
-        css_class: "text-white"
-        css_style: "background-color:#C83737;color:#FFFFFF;"
       spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]
+        padding: ["1.25rem", 0, "1.25rem", 0]   # hero bajito
         margin: [0, 0, "0.5rem", 0]
+      background:
+        image:
+          filename: "quienessomos.jpg"
+          filters:
+            brightness: 0.35
+          size: cover
+          position: center
+          parallax: false
+        text_color_light: true
+      css_style: "min-height: 32vh;"   # altura contenida para que no requiera scroll
 
+  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
   - block: markdown
     id: solutions
     content:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
+          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
+
+          <!-- Columna derecha: video embed responsivo -->
           <div class="relative w-full" style="padding-top:56.25%;">
             <iframe
               class="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -75,6 +83,7 @@ sections:
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
+  # ===== MetaDocencia en números (menos margen superior) =====
   - block: stats
     id: numeros
     content:
@@ -128,6 +137,8 @@ sections:
           </details>
 
         </div>
+
+  # CTA final
   - block: cta-card
     id: apoya
     content:
