@@ -55,23 +55,6 @@ sections:
         text_color_light: true
       css_style: "min-height: 24vh;"               # aún más corto
 
-  # ===== Banda roja: "Lee cómo nació..." (se mantiene igual, por si querés conservarla) =====
-  - block: cta-card
-    id: origen
-    content:
-      title: ""
-      text: "Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación."
-      button:
-        text: "Nota en nuestro blog"
-        url: "https://www.metadocencia.org/post/origenmd/"
-    design:
-      card:
-        css_class: "text-white"
-        css_style: "background-color:#C83737;color:#FFFFFF;"
-      spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]
-        margin: [0, 0, "0.5rem", 0]
-
   # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
   - block: markdown
     id: solutions
@@ -101,7 +84,7 @@ sections:
       spacing:
         padding: ["1rem", 0, "1.25rem", 0]
 
-  # ===== MetaDocencia en números (menos margen superior) =====
+  # ===== MetaDocencia en números (fondo gris) =====
   - block: stats
     id: numeros
     content:
@@ -118,8 +101,19 @@ sections:
         - statistic: "+2,600"
           description: "suscripciones activas a nuestro boletín"
     design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
         padding: ["0.5rem", 0, "1.5rem", 0]
+
+  # ===== Aumentar el espacio entre estadísticas (estilo inline solo para esta página) =====
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Más espacio entre ítems dentro del bloque #numeros sin tocar CSS global */
+          section#numeros .grid { gap: 1.75rem !important; }
+        </style>
 
   # === PERSONAS / ORGANIZACIONES (full-bleed, sin bordes) ===
   - block: markdown
