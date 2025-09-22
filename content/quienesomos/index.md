@@ -108,31 +108,19 @@ sections:
 
   # --- Colaboran con MetaDocencia ---
   - block: community/people
+  content:
     title: "Colaboran con MetaDocencia"
-    id: colaboran
-    content:
-      title: "Colaboran con MetaDocencia"
-      text: ""
-      user_groups: ["Colaboradores"]
-      start_open: true
-    design:
-      columns: 7
-      compact: false
-      css_class: "people-naked people-7col"
+    user_groups: ["Colaboran con MetaDocencia"]
+  design:
+    columns: 7
 
   # --- Auspiciantes ---
   - block: community/people
+  content:
     title: "Auspiciantes"
-    id: auspiciantes
-    content:
-      title: "Auspiciantes"
-      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups: ["Auspiciantes"]
-      start_open: false
-    design:
-      columns: 7
-      compact: false
-      css_class: "people-naked people-7col"
+    user_groups: ["Auspiciantes"]
+  design:
+    columns: 7
 
   # CTA final
   - block: cta-card
