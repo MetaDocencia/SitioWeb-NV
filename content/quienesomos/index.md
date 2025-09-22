@@ -106,35 +106,35 @@ sections:
 
   # ===== PERSONAS / ORGANIZACIONES =====
 
-# --- Colaboran con MetaDocencia ---
-- block: community/people
-  title: "Colaboran con MetaDocencia"     # ← título al nivel del bloque
-  id: colaboran
-  content:
-    title: "Colaboran con MetaDocencia"   # ← y también dentro de content (doble seguro)
-    text: ""
-    user_groups:
-      - "Colaboradores"                   # ← comillas por acentos/espacios
-    start_open: true
-  design:
-    columns: 7
-    compact: false
-    css_class: "people-naked people-7col"
+  # --- Colaboran con MetaDocencia ---
+  - block: community/people
+    title: "Colaboran con MetaDocencia"
+    id: colaboran
+    content:
+      title: "Colaboran con MetaDocencia"
+      text: ""
+      user_groups:
+        - "Colaboradores"
+      start_open: true
+    design:
+      columns: 7
+      compact: false
+      css_class: "people-naked people-7col"
 
-# --- Auspiciantes ---
-- block: community/people
-  title: "Auspiciantes"
-  id: auspiciantes
-  content:
+  # --- Auspiciantes ---
+  - block: community/people
     title: "Auspiciantes"
-    text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-    user_groups:
-      - "Auspiciantes"
-    start_open: false
-  design:
-    columns: 7
-    compact: false
-    css_class: "people-naked people-7col"
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
+      user_groups:
+        - "Auspiciantes"
+      start_open: false
+    design:
+      columns: 7
+      compact: false
+      css_class: "people-naked people-7col"
 
   # CTA final
   - block: cta-card
