@@ -113,8 +113,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: ""
-      user_groups:
-        - "Colaboradores"
+      user_groups: ["Colaboradores"]
       start_open: true
     design:
       columns: 7
@@ -128,8 +127,7 @@ sections:
     content:
       title: "Auspiciantes"
       text: "Organizaciones que apoyan y hacen posible nuestro trabajo."
-      user_groups:
-        - "Auspiciantes"
+      user_groups: ["Auspiciantes"]
       start_open: false
     design:
       columns: 7
