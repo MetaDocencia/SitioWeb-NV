@@ -7,38 +7,42 @@ design:
 
 sections:
 
-  # ===== HERO con imagen de fondo + botones + texto extra =====
+  # ===== HERO con imagen de fondo + botones rojos centrados + textos grandes =====
   - block: hero
     id: hero-qs
     content:
       title: "Quienes somos"
       text: |
-        <p class="text-white text-lg md:text-xl leading-snug max-w-3xl">
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl">
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
 
-        <!-- Botones -->
-        <div class="mt-4 flex flex-wrap gap-3">
+        <!-- Botones rojos centrados -->
+        <div class="mt-4 flex flex-wrap justify-center gap-3">
           <a href="https://www.metadocencia.org/pdc/"
-             class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
-             style="background:#00506F;color:#FFFFFF;">
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">
              Pautas de Convivencia
           </a>
           <a href="https://www.metadocencia.org/institucional/"
-             class="inline-block no-underline font-semibold px-4 py-2 rounded-md text-base"
-             style="background:#00506F;color:#FFFFFF;">
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">
              Institucional
           </a>
         </div>
 
-        <!-- Texto extra dentro del hero -->
-        <div class="mt-3 text-white/90">
-          <p class="mb-1">Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación.</p>
-          <p class="mb-0">MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society.</p>
+        <!-- Textos más grandes, con margen y link -->
+        <div class="mt-4 space-y-2">
+          <p class="text-white/95 text-base md:text-lg">
+            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
+          </p>
+          <p class="text-white/95 text-base md:text-lg">
+            MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society.
+          </p>
         </div>
     design:
       spacing:
-        padding: ["1.25rem", 0, "1.25rem", 0]   # hero bajito
+        padding: ["0.5rem", 0, "0.5rem", 0]        # hero más bajo
         margin: [0, 0, "0.5rem", 0]
       background:
         image:
@@ -49,7 +53,24 @@ sections:
           position: center
           parallax: false
         text_color_light: true
-      css_style: "min-height: 32vh;"   # altura contenida para que no requiera scroll
+      css_style: "min-height: 24vh;"               # aún más corto
+
+  # ===== Banda roja: "Lee cómo nació..." (se mantiene igual, por si querés conservarla) =====
+  - block: cta-card
+    id: origen
+    content:
+      title: ""
+      text: "Lee cómo nació MetaDocencia en palabras de nuestra Co-Directora, Laura Ación."
+      button:
+        text: "Nota en nuestro blog"
+        url: "https://www.metadocencia.org/post/origenmd/"
+    design:
+      card:
+        css_class: "text-white"
+        css_style: "background-color:#C83737;color:#FFFFFF;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: [0, 0, "0.5rem", 0]
 
   # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
   - block: markdown
@@ -58,14 +79,11 @@ sections:
       title: "Vamos por 5 años más"
       text: |
         <div class="grid md:grid-cols-2 gap-6 items-start">
-          <!-- Columna izquierda: texto -->
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
-
-          <!-- Columna derecha: video embed responsivo -->
           <div class="relative w-full" style="padding-top:56.25%;">
             <iframe
               class="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -109,7 +127,7 @@ sections:
     content:
       title: ""
       text: |
-        <!-- Wrapper full-bleed: ocupa todo el ancho del viewport -->
+        <!-- Wrapper full-bleed -->
         <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
 
           <!-- Colaboradores -->
