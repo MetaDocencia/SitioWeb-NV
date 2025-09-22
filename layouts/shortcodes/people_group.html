@@ -1,0 +1,67 @@
+{{/* Shortcode: people_group
+     Uso: {{< people_group group="Auspiciantes" columns="7" >}}
+     Filtra autores por .Params.user_groups y muestra grilla limpia. */}}
+
+{{- $group := .Get "group" | default "" -}}
+{{- $cols  := .Get "columns" | default "7" -}}
+
+{{/* Base: solo sección authors */}}
+{{- $authors := where site.Pages "Section" "authors" -}}
+
+{{/* Filtro por user_groups cuando se pasa "group" */}}
+{{- if $group -}}
+  {{- $filtered := slice -}}
+  {{- range $authors -}}
+    {{- $hit := false -}}
+    {{- with .Params.user_groups -}}
+      {{- range . -}}
+        {{- if eq . $group -}}
+          {{- $hit = true -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $hit -}}
+      {{- $filtered = $filtered | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $authors = $filtered -}}
+{{- end -}}
+
+{{/* Orden estable: por Título y (si existe) weight como primario */}}
+{{- $authors = sort $authors "Title" -}}
+{{- $authors = sort $authors "Params.weight" -}}
+
+{{- if gt (len $authors) 0 -}}
+  <div class="grid gap-2" style="grid-template-columns: repeat({{ $cols }}, minmax(0,1fr));">
+    {{- range $p := $authors -}}
+      {{- $img := "" -}}
+      {{- with $p.Params.image }}{{ $img = . }}{{ end -}}
+      {{- if not $img -}}
+        {{- with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ end -}}
+      {{- end -}}
+
+      <a class="group block text-center" href="{{ $p.RelPermalink }}">
+        <div class="mx-auto">
+          {{- if $img -}}
+            <img class="w-24 h-24 rounded-full object-cover mx-auto" loading="lazy" src="{{ $img | relURL }}" alt="{{ $p.Title }}">
+          {{- else -}}
+            <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto"></div>
+          {{- end -}}
+        </div>
+        <div class="mt-1">
+          <div class="font-semibold leading-tight">{{ $p.Title }}</div>
+          {{- with $p.Params.role }}<div class="text-xs opacity-80 leading-tight">{{ . }}</div>{{- end -}}
+          {{- with (index $p.Params "organizations") -}}
+            {{- with (index . 0) -}}
+              {{- with .name }}<div class="text-xs opacity-80 leading-tight">{{ . }}</div>{{- end -}}
+            {{- end -}}
+          {{- end -}}
+        </div>
+      </a>
+    {{- end -}}
+  </div>
+{{- else -}}
+  <div class="text-gray-500 dark:text-gray-400">
+    {{ if $group }}No se encontraron perfiles en: {{ $group }}.{{ else }}No se encontraron perfiles.{{ end }}
+  </div>
+{{- end -}}
