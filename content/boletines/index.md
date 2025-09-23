@@ -7,7 +7,6 @@ design:
 ---
 
 sections:
-
   # ===== Listado de ediciones anteriores (estilo tarjetas minimalista) =====
   - block: markdown
     id: ediciones
