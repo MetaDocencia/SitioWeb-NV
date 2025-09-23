@@ -8,16 +8,24 @@
           {{ range . }}
             <p class="leading-relaxed">{{ . | safeHTML }}</p>
           {{ end }}
+        {{ else }}
+          <p class="leading-relaxed">MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society. Licencia</p>
+          <p class="leading-relaxed">Publicado con Hugo Blox Builder.</p>
         {{ end }}
       </div>
 
       <!-- Redes -->
       <nav class="flex flex-wrap items-center gap-3">
         {{ range site.Params.contact_links }}
+          {{ $isBsky := eq .icon "bluesky" }}
           <a class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300/70 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
              href="{{ .link }}" target="_blank" rel="noopener"
              aria-label="{{ .name }}" title="{{ .name }}">
-            <i class="{{ .icon_pack }} fa-{{ .icon }} text-gray-700 dark:text-gray-200"></i>
+            {{ if $isBsky }}
+              <img src="{{ "media/icons/brands/bluesky.svg" | relURL }}" alt="Bluesky" class="w-5 h-5" loading="lazy">
+            {{ else }}
+              <i class="{{ .icon_pack }} fa-{{ .icon }} text-gray-700 dark:text-gray-200"></i>
+            {{ end }}
           </a>
         {{ end }}
       </nav>
