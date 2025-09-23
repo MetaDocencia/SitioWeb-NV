@@ -1,48 +1,71 @@
 {{/* Shortcode: people_list
-     Uso: {{</* people_list group="Colaboradores" */>}}
+     Params:
+       - group    : string o lista separada por comas (ej: "Colaboradores" o "Auspiciantes,Colaboradores")
+       - columns  : número de columnas en desktop (default 7). En mobile se fuerza a 3.
+       - fit      : "cover" (default) o "contain" para el recorte de la foto.
 */}}
 
-{{- $group    := (.Get "group") | default "Colaboradores" -}}
-{{- $authors  := where site.Pages "Section" "authors" -}}
-{{- $filtered := slice -}}
+{{- $groupsParam := .Get "group" | default "" -}}
+{{- $cols        := .Get "columns" | default "7" -}}
+{{- $fit         := .Get "fit" | default "cover" -}}
 
-{{- range $authors -}}
-  {{- $ug := .Params.user_groups -}}
-  {{- if and $ug (gt (len (intersect $ug (slice $group))) 0) -}}
-    {{- $filtered = $filtered | append . -}}
+{{/* Normalizo grupos a slice */}}
+{{- $groups := slice -}}
+{{- if $groupsParam -}}
+  {{- range (split $groupsParam ",") -}}
+    {{- $g := trim . " " -}}
+    {{- if $g }}{{ $groups = $groups | append $g }}{{ end -}}
   {{- end -}}
 {{- end -}}
 
-{{- $filtered = sort $filtered ".Params.weight" | sort "Title" -}}
+{{/* Tomo autores */}}
+{{- $authors := where site.Pages "Section" "authors" -}}
 
-<div class="w-full">
-  <!-- Más separación entre tarjetas: gap-x-12 gap-y-14 -->
-  <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-12 gap-y-14 place-items-center">
-    {{- range $p := $filtered -}}
-      <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
-        <div class="mx-auto w-28 h-28 rounded-full overflow-hidden">
-          {{- with $p.Resources.GetMatch "avatar*" -}}
-            <img src="{{ .RelPermalink }}" alt="{{ $p.Title }}" loading="lazy"
-                 class="w-full h-full object-cover object-center">
-          {{- else -}}
-            {{- with $p.Params.image -}}
-              <img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy"
-                   class="w-full h-full object-cover object-center">
-            {{- else -}}
-              <div class="w-full h-full bg-gray-200 dark:bg-gray-700"></div>
-            {{- end -}}
-          {{- end -}}
-        </div>
-        <div class="mt-2">
-          <div class="font-semibold leading-tight">{{ $p.Title }}</div>
-          {{- with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{- end -}}
-          {{- with (index $p.Params "organizations") -}}
-            {{- with (index . 0) -}}
-              {{- with .name }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{- end -}}
-            {{- end -}}
-          {{- end -}}
-        </div>
-      </a>
+{{/* Filtro por user_groups si se pidió */}}
+{{- if gt (len $groups) 0 -}}
+  {{- $filtered := slice -}}
+  {{- range $authors -}}
+    {{- $ug := .Params.user_groups -}}
+    {{- if and $ug (gt (len (intersect $ug $groups)) 0) -}}
+      {{- $filtered = $filtered | append . -}}
     {{- end -}}
-  </div>
+  {{- end -}}
+  {{- $authors = $filtered -}}
+{{- end -}}
+
+{{/* Orden: weight, luego Title */}}
+{{- $authors = sort $authors "Params.weight" "asc" -}}
+{{- $authors = sort $authors "Title" "asc" -}}
+
+<div class="w-full px-0 mx-auto">
+  {{ if gt (len $authors) 0 }}
+    <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }}">
+      {{ range $p := $authors }}
+        {{- $img := "" -}}
+        {{- with $p.Resources.GetMatch "avatar*" -}}
+          {{- $img = .RelPermalink -}}
+        {{- else -}}
+          {{- with $p.Params.image -}}{{ $img = ( . | relURL ) }}{{- end -}}
+        {{- end -}}
+
+        <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
+          <div class="mx-auto rounded-full"
+               style="width:7rem;height:7rem; background:#e5e7eb; {{ if $img }}background-image:url('{{ $img }}');{{ end }} background-size:{{ $fit }}; background-position:center;">
+          </div>
+          <div class="mt-3">
+            <div class="font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
+            {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="text-center text-gray-500 dark:text-gray-400">
+      {{ if gt (len $groups) 0 }}
+        No se encontraron perfiles en: {{ delimit $groups ", " " y " }}.
+      {{ else }}
+        No se encontraron perfiles en <code>content/authors/</code>.
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
