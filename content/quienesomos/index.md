@@ -121,40 +121,117 @@ sections:
           }
         </style>
 
-  # === PERSONAS / ORGANIZACIONES (full-bleed, sin bordes) ===
-  - block: markdown
-    id: personas
-    content:
-      title: ""
-      text: |
-        <!-- Wrapper full-bleed -->
-        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+  # --- Colaboran con MetaDocencia ---
+- block: markdown
+  id: colaboradores
+  content:
+    title: "Colaboran con MetaDocencia"
+    text: |
+      {{/* Lista de autores filtrada por user_groups = "Colaboradores" */}}
+      {{ $grupo := slice "Colaboradores" }}
+      {{ $autores := where site.Pages "Section" "authors" }}
 
-          <!-- Colaboradores -->
-          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8" open>
-            <summary class="flex items-center justify-between cursor-pointer py-4">
-              <span class="text-2xl font-bold">Colaboradores</span>
-              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-            </summary>
-            <div class="pb-6">
-              {{< people_group group="Colaboradores" columns="7" fit="cover" >}}
-            </div>
-          </details>
+      {{ $autores_filtrados := slice }}
+      {{ range $autores }}
+        {{ $ug := .Params.user_groups }}
+        {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
+          {{ $autores_filtrados = $autores_filtrados | append . }}
+        {{ end }}
+      {{ end }}
 
-          <div class="h-4 md:h-6"></div>
+      {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
 
-          <!-- Auspiciantes -->
-          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8">
-            <summary class="flex items-center justify-between cursor-pointer py-4">
-              <span class="text-2xl font-bold">Auspiciantes</span>
-              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-            </summary>
-            <div class="pb-6">
-              {{< people_group group="Auspiciantes" columns="7" fit="cover" >}}
-            </div>
-          </details>
+      <div class="w-full px-0">
+        <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
+          {{ range $p := $autores_filtrados }}
+            {{ $img := "" }}
+            {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
+              {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
+            {{ end }}
 
+            <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
+              <div class="mx-auto">
+                {{ if $img }}
+                  <img
+                    src="{{ $img }}"
+                    alt="{{ $p.Title }}"
+                    loading="lazy"
+                    class="block rounded-full object-cover object-center"
+                    style="width: 7rem; height: 7rem;"
+                  />
+                {{ else }}
+                  <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
+                {{ end }}
+              </div>
+              <div class="mt-3">
+                <div class="font-semibold leading-tight">{{ $p.Title }}</div>
+                {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                {{ with (index $p.Params "organizations") }}
+                  {{ with (index . 0) }}
+                    {{ with .name }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                  {{ end }}
+                {{ end }}
+              </div>
+            </a>
+          {{ end }}
         </div>
+      </div>
+
+# --- Auspiciantes ---
+- block: markdown
+  id: auspiciantes
+  content:
+    title: "Auspiciantes"
+    text: |
+      {{/* Lista de autores filtrada por user_groups = "Auspiciantes" */}}
+      {{ $grupo := slice "Auspiciantes" }}
+      {{ $autores := where site.Pages "Section" "authors" }}
+
+      {{ $autores_filtrados := slice }}
+      {{ range $autores }}
+        {{ $ug := .Params.user_groups }}
+        {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
+          {{ $autores_filtrados = $autores_filtrados | append . }}
+        {{ end }}
+      {{ end }}
+
+      {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
+
+      <div class="w-full px-0">
+        <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
+          {{ range $p := $autores_filtrados }}
+            {{ $img := "" }}
+            {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
+              {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
+            {{ end }}
+
+            <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
+              <div class="mx-auto">
+                {{ if $img }}
+                  <img
+                    src="{{ $img }}"
+                    alt="{{ $p.Title }}"
+                    loading="lazy"
+                    class="block rounded-full object-cover object-center"
+                    style="width: 7rem; height: 7rem;"
+                  />
+                {{ else }}
+                  <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
+                {{ end }}
+              </div>
+              <div class="mt-3">
+                <div class="font-semibold leading-tight">{{ $p.Title }}</div>
+                {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                {{ with (index $p.Params "organizations") }}
+                  {{ with (index . 0) }}
+                    {{ with .name }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                  {{ end }}
+                {{ end }}
+              </div>
+            </a>
+          {{ end }}
+        </div>
+      </div>
 
   # CTA final
   - block: cta-card
