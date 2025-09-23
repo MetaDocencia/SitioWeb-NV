@@ -4,6 +4,7 @@ summary: "Desarrollamos recursos de calidad en español a partir de material ori
 date: 2025-09-14
 tags:
   - Infraestructura
+  - Proyectos
 ---
 
 ## El problema
