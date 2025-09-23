@@ -142,7 +142,7 @@ sections:
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/contextualizacion-/">Ver más →</a>
 
         - name: "Ciencia y Datos Abiertos en Bioimagen"
           description: |
@@ -174,9 +174,9 @@ sections:
         - name: "Nicolás Wolovick"
           role: "Director UNC Supercómputo"
           text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
-        - name: "Testimonio 2"
-          role: "Organización/Proyecto"
-          text: "Testimonio 2."
+        - name: "Andres Olivera"
+          role: "Network Manager, LABI"
+          text: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -254,13 +254,13 @@ sections:
     content:
       items:
         - name: "Walter Sosa Escudero"
-          role: ""
+          role: "PhD in Economics, profesor e investigador"
           text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
         - name: "Emmanuel Iarussi"
-          role: ""
+          role: "Científico en CONICET y profesor UTDT"
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
         - name: "Laura Dillon"
-          role: ""
+          role: "Participante de ALTa Ciencia Abierta"
           text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real"
     design:
       spacing:
@@ -334,7 +334,7 @@ sections:
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
-          role: "ARPHAI"
+          role: "Coordinadora Técnica, ARPHAI"
           text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
