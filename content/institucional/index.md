@@ -38,7 +38,7 @@ sections:
         a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles
         para comunidades hispanohablantes.
 
-  # ===== Valores =====
+  # ===== Valores (tarjetas) =====
   - block: features
     id: valores
     content:
@@ -47,21 +47,23 @@ sections:
         - name: "Comunidad"
           description: "Trabajar para y con otras personas, anteponiendo los intereses colectivos por sobre los intereses individuales."
         - name: "Integridad"
-          description: "Actuar siguiendo estos valores, construyendo y cuidando la confianza, mediante la apertura y la transparencia."
+          description: "Actuar siguiendo estos valores, construyendo y cuidando la confianza, mediante la apertura y la transparencia (con atención a la privacidad), rindiendo cuentas por nuestras acciones."
         - name: "Educación"
           description: "Contribuir al progreso de la sociedad mediante los aprendizajes comunitarios y personales."
         - name: "Bienestar"
-          description: "Tratar a las demás personas con amabilidad, empatía y respeto, priorizando la salud mental y física."
+          description: "Tratar a las demás personas con amabilidad, empatía y respeto, priorizando la salud mental y física, para mantener un ambiente de trabajo saludable y seguro."
         - name: "Diversidad"
-          description: "Reconocer nuestras diferencias y darle la bienvenida respetuosa a todas ellas."
+          description: "Reconocer nuestras diferencias con las demás personas y darle la bienvenida respetuosa a todas las diferencias."
         - name: "Inclusión"
-          description: "Abrir todas las puertas posibles, garantizando accesibilidad universal y reconociendo el trabajo realizado."
+          description: "Abrir todas las puertas para la mayor cantidad de personas posible, mediante la accesibilidad universal y el reconocimiento por el trabajo realizado."
         - name: "Ciencia e Investigación"
-          description: "Promover la ciencia y la investigación basándose en la teoría, el razonamiento, la experiencia y la evidencia."
+          description: "Promover la ciencia y la investigación basándose en la teoría, el razonamiento, la experiencia y la evidencia resultante."
         - name: "Autonomía"
-          description: "Actuar con responsabilidad y criterio propio, individual, colectivo o regional, según corresponda."
+          description: "Actuar con responsabilidad y criterio individual, colectivo o regional, según corresponda en cada caso."
         - name: "Versatilidad"
           description: "Adaptar las acciones a las situaciones que se presentan."
+    design:
+      columns: 3
 
   # ===== Organización =====
   - block: markdown
@@ -70,12 +72,10 @@ sections:
       title: "Nos organizamos"
       text: |
         En MetaDocencia diseñamos este mapa conceptual que institucionaliza nuestra forma de trabajo.
-        Lo hicimos pensando en una estructura organizacional eficiente y versátil a la altura de los desafíos
-        que tenemos por delante.
-
-        Este esquema permite identificar grados de responsabilidad pero a la vez, busca ser lo suficientemente
-        dinámico para promover el trabajo colaborativo, la confianza, el reconocimiento y las oportunidades de
-        crecimiento de las personas que hacemos MetaDocencia.
+        Lo hicimos pensando en una estructura organizacional eficiente y versátil a la altura de los desafíos que tenemos por delante.
+        Así, este esquema permite identificar grados de responsabilidad pero, a la vez, busca ser lo suficientemente dinámico
+        para promover el trabajo colaborativo y el compromiso, la confianza, el reconocimiento y las oportunidades de crecimiento
+        de las personas que hacemos MetaDocencia.
 
         👉 [Accede al documento completo sobre el organigrama publicado en Zenodo](https://zenodo.org/)
 
@@ -101,5 +101,3 @@ sections:
         que configuran nuestro marco de trabajo.
 
         👉 [Política de Accesibilidad](https://www.metadocencia.org/politica_accesibilidad/)
-
----
