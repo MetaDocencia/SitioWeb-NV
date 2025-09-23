@@ -1,0 +1,27 @@
+<footer class="mt-8 border-t border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-6 py-6">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+
+      <!-- Texto -->
+      <div class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+        {{ with site.Params.footer.lines }}
+          {{ range . }}
+            <p class="leading-relaxed">{{ . | safeHTML }}</p>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      <!-- Redes -->
+      <nav class="flex flex-wrap items-center gap-3">
+        {{ range site.Params.contact_links }}
+          <a class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-gray-300/70 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+             href="{{ .link }}" target="_blank" rel="noopener"
+             aria-label="{{ .name }}" title="{{ .name }}">
+            <i class="{{ .icon_pack }} fa-{{ .icon }} text-gray-700 dark:text-gray-200"></i>
+          </a>
+        {{ end }}
+      </nav>
+
+    </div>
+  </div>
+</footer>
