@@ -58,7 +58,7 @@ sections:
         - name: "Construimos comunidad"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            FFomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
+            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
             <br>
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
@@ -79,13 +79,13 @@ sections:
       title: "Proyectos destacados"
       text: ""
       items:
-        - name: "Acceso a finaciamiento para iniciativas científicas"
+        - name: "Finaciamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a><br>
 
         - name: "Formación en Ciencia Abierta"
           description: |
@@ -93,7 +93,7 @@ sections:
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish//">Ver más →</a><br>
 
         - name: "Gobernanza"
           description: |
@@ -101,7 +101,7 @@ sections:
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a><br>
        
     design:
       columns: 3
@@ -134,7 +134,7 @@ sections:
             Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/catalyst/">Ver más →</a>
 
         - name: "Contextualización"
           description: |
@@ -142,7 +142,7 @@ sections:
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/contextualizacion-/">Ver más →</a>
 
         - name: "Ciencia y Datos Abiertos en Bioimagen"
           description: |
@@ -174,9 +174,9 @@ sections:
         - name: "Nicolás Wolovick"
           role: "Director UNC Supercómputo"
           text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
-        - name: "Testimonio 2"
-          role: "Organización/Proyecto"
-          text: "Testimonio 2."
+        - name: "Andres Olivera"
+          role: "Network Manager, LABI"
+          text: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -208,15 +208,15 @@ sections:
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
 
-        - name: "Acceso a finaciamiento para iniciativas científicas"
+        - name: "Finaciamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
 
         - name: "Formación para enseñar"
           description: |
@@ -224,7 +224,7 @@ sections:
             Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/formacion-para-ensenar/">Ver más →</a>
 
         - name: "Cursos a medida"
           description: |
@@ -232,7 +232,7 @@ sections:
             Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -254,13 +254,13 @@ sections:
     content:
       items:
         - name: "Walter Sosa Escudero"
-          role: ""
+          role: "PhD in Economics, profesor e investigador"
           text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
         - name: "Emmanuel Iarussi"
-          role: ""
+          role: "Científico en CONICET y profesor UTDT"
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
         - name: "Laura Dillon"
-          role: ""
+          role: "Participante de ALTa Ciencia Abierta"
           text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real"
     design:
       spacing:
@@ -293,7 +293,7 @@ sections:
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a>
         - name: "Conversatorios"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -307,7 +307,7 @@ sections:
             Repositorio colaborativo de información sobre Ciencia Abierta en español.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Ver más →</a><br>
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
@@ -334,7 +334,7 @@ sections:
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
-          role: "ARPHAI"
+          role: "Coordinadora Técnica, ARPHAI"
           text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
