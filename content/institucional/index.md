@@ -4,7 +4,7 @@ type: landing
 slug: "institucional"
 design:
   spacing: "2rem"
-
+---
 sections:
 
   # ===== Gobernanza (2 columnas) =====
@@ -130,4 +130,4 @@ sections:
           </div>
         </div>
 
----
+
