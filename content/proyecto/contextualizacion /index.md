@@ -22,10 +22,10 @@ MetaDocencia cuenta con otros proyectos en los que la accesibilidad de contenido
 
 ## Testimonios
 
-> Vanesa Ruiz  
-> Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen realizado la contextualización de los contenidos de Ciencia Abierta para América Latina.  
-> Un gran equipo colaborativo!  
-> https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ/
+{{< quote author="Vanesa Ruiz" link="https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ/" >}}
+Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen realizado la contextualización de los contenidos de Ciencia Abierta para América Latina.  
+Un gran equipo colaborativo!
+{{< /quote >}}
 
 ## Para seguir leyendo
 ¿De qué hablamos cuando hablamos de Contextualización?: https://www.metadocencia.org/post/2024/20240725-contextualizacion/
