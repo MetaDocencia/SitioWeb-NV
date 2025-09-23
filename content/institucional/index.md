@@ -91,7 +91,7 @@ sections:
             de las personas que hacemos MetaDocencia.
 
             <br><br>
-            👉 <a href="https://zenodo.org/" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
+            👉 <a href="https://doi.org/10.5281/zenodo.11456152" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
           image: "organigramaES.jpg"   # coloca esta imagen en static/media/organigrama.png o ajusta la ruta
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
@@ -111,7 +111,7 @@ sections:
               Todas las personas que participan en nuestras iniciativas se comprometen a respetarlas y promoverlas.
             </p>
             <p class="mt-2">
-              👉 <a href="https://www.metadocencia.org/pdc/" class="underline">Consulta las Pautas de Convivencia</a>
+              👉 <a href="https://zenodo.org/records/12534196" class="underline">Consulta las Pautas de Convivencia</a>
             </p>
           </section>
 
@@ -122,7 +122,7 @@ sections:
               que configuran nuestro marco de trabajo.
             </p>
             <p class="mt-2">
-              👉 <a href="https://www.metadocencia.org/politica_accesibilidad/" class="underline">Política de Accesibilidad</a>
+              👉 <a href="https://zenodo.org/records/10514982" class="underline">Política de Accesibilidad</a>
             </p>
           </section>
         </div>
