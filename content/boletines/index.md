@@ -81,6 +81,7 @@ sections:
         - [Boletín N° 1 - Construyendo en comunidad](https://mailchi.mp/90070af3dfd3/construyendo-en-comunidad-newsletter-n-1) - [English version](https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=a9cc2ef2f2)
 
         </div>
+    
   # ---------- Boletín (1 columna: título, texto, form y link debajo) ----------
   - block: cta-card
     id: boletin-embed
