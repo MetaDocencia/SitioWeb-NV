@@ -4,7 +4,6 @@ type: landing
 slug: "institucional"
 design:
   spacing: "2rem"
----
 
 sections:
 
@@ -130,3 +129,5 @@ sections:
             </p>
           </div>
         </div>
+
+---
