@@ -2,18 +2,19 @@
      Params:
        - group   : nombre del user_group (obligatorio)
        - columns : columnas en desktop (default "7")
+       - fit     : "contain" (default) o "cover" para recortar y llenar el círculo
      Comportamiento:
        - Mobile/tablet: 3 columnas
        - Desktop (xl): columns
        - Avatar circular, sin bordes, nombre sin subrayado
-       - La imagen usa object-contain para mostrar el 100% (sin recorte)
 */}}
 
 {{- $group := .Get "group" | default "" -}}
 {{- $cols  := .Get "columns" | default "7" -}}
+{{- $fit   := .Get "fit" | default "contain" -}}
+{{- $fitclass := cond (eq $fit "cover") "object-cover" "object-contain" -}}
 
 {{- $authors := where site.Pages "Section" "authors" -}}
-
 {{- if $group -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
@@ -26,7 +27,7 @@
 {{- end -}}
 
 {{- /* Orden: primero weight (si existe), luego título */ -}}
-{{- $authors = sort $authors ".Params.weight" -}}
+{{- $authors = sort $authors "Params.weight" -}}
 {{- $authors = sort $authors "Title" -}}
 
 <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} gap-4 md:gap-6">
@@ -35,10 +36,10 @@
       <!-- Avatar circular, sin bordes -->
       <div class="mx-auto w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-800">
         {{- with $p.Resources.GetMatch "avatar*" -}}
-          <img class="w-full h-full object-contain" loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
+          <img class="w-full h-full {{ $fitclass }}" loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
         {{- else -}}
           {{- with $p.Params.image -}}
-            <img class="w-full h-full object-contain" loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
+            <img class="w-full h-full {{ $fitclass }}" loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
           {{- end -}}
         {{- end -}}
       </div>
