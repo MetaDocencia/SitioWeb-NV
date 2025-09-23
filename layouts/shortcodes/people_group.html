@@ -1,11 +1,12 @@
 {{/* Shortcode: people_group
      Params:
-       - group   : nombre del user_group a listar (obligatorio)
+       - group   : nombre del user_group (obligatorio)
        - columns : columnas en desktop (default "7")
-   Comportamiento:
-       - En mobile/base usa 3 columnas.
-       - En desktop (xl) usa "columns".
-       - Sin subrayado en toda la tarjeta (no-underline).
+     Comportamiento:
+       - Mobile/tablet: 3 columnas
+       - Desktop (xl): columns
+       - Avatar circular, sin bordes, nombre sin subrayado
+       - La imagen usa object-contain para mostrar el 100% (sin recorte)
 */}}
 
 {{- $group := .Get "group" | default "" -}}
@@ -24,28 +25,28 @@
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{- /* Orden estable: primero weight (si existe), luego título) */ -}}
+{{- /* Orden: primero weight (si existe), luego título */ -}}
 {{- $authors = sort $authors ".Params.weight" -}}
 {{- $authors = sort $authors "Title" -}}
 
 <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} gap-4 md:gap-6">
   {{- range $p := $authors -}}
-    <a class="block no-underline hover:no-underline group rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition bg-white dark:bg-gray-900"
-       href="{{ $p.RelPermalink }}">
-      <div class="aspect-[4/3] bg-gray-100 dark:bg-gray-800 overflow-hidden">
+    <a class="block no-underline hover:no-underline group text-center" href="{{ $p.RelPermalink }}">
+      <!-- Avatar circular, sin bordes -->
+      <div class="mx-auto w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-800">
         {{- with $p.Resources.GetMatch "avatar*" -}}
-          <img class="w-full h-full object-cover group-hover:scale-[1.02] transition"
-               loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
+          <img class="w-full h-full object-contain" loading="lazy" src="{{ .RelPermalink }}" alt="{{ $p.Title }}">
         {{- else -}}
           {{- with $p.Params.image -}}
-            <img class="w-full h-full object-cover group-hover:scale-[1.02] transition"
-                 loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
+            <img class="w-full h-full object-contain" loading="lazy" src="{{ . | relURL }}" alt="{{ $p.Title }}">
           {{- end -}}
         {{- end -}}
       </div>
-      <div class="p-4">
-        <div class="font-semibold no-underline">{{ $p.Title }}</div>
-        {{- with $p.Params.role -}}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
+
+      <!-- Texto sin subrayado -->
+      <div class="mt-2">
+        <div class="font-semibold">{{ $p.Title }}</div>
+        {{- with $p.Params.role }}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
         {{- with (index $p.Params "organizations") -}}
           {{- with (index . 0) -}}
             {{- with .name -}}<div class="text-sm opacity-70">{{ . }}</div>{{- end -}}
