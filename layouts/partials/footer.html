@@ -1,17 +1,15 @@
-<footer class="mt-8 border-t border-gray-200 dark:border-gray-800">
+<footer id="md-footer" class="mt-8 border-t border-gray-200 dark:border-gray-800">
   <div class="container mx-auto px-6 py-6">
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 
       <!-- Texto -->
       <div class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-        {{ with site.Params.footer.lines }}
-          {{ range . }}
-            <p class="leading-relaxed">{{ . | safeHTML }}</p>
-          {{ end }}
-        {{ else }}
-          <p class="leading-relaxed">MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society. Licencia</p>
-          <p class="leading-relaxed">Publicado con Hugo Blox Builder.</p>
-        {{ end }}
+        <p class="leading-relaxed">
+          MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society. Licencia
+        </p>
+        <p class="leading-relaxed">
+          Publicado con Hugo Blox Builder.
+        </p>
       </div>
 
       <!-- Redes -->
