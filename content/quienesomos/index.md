@@ -137,7 +137,7 @@ sections:
               <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
             </summary>
             <div class="pb-6">
-              {{< people_group group="Colaboradores" columns="7" >}}
+              {{< people_group group="Colaboradores" columns="7" fit="cover" >}}
             </div>
           </details>
 
@@ -150,7 +150,7 @@ sections:
               <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
             </summary>
             <div class="pb-6">
-              {{< people_group group="Auspiciantes" columns="7" >}}
+              {{< people_group group="Auspiciantes" columns="7" fit="cover" >}}
             </div>
           </details>
 
