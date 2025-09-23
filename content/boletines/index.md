@@ -8,26 +8,6 @@ design:
 
 sections:
 
-  # ===== CTA de suscripción (fondo rojo) =====
-  - block: cta-card
-    id: suscripcion
-    content:
-      title: "Boletín MetaDocencia"
-      text: |
-        <p class="text-white text-lg leading-relaxed mb-2">
-          Suscríbete para recibir nuestras novedades, oportunidades y eventos.
-        </p>
-      button:
-        text: "Suscribirse al boletín"
-        url: "https://www.metadocencia.org/suscripcion/"
-    design:
-      card:
-        css_class: "text-white"
-        css_style: "background-color:#C83737;color:#FFFFFF;"
-      spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]
-        margin: [0, 0, "0.75rem", 0]
-
   # ===== Listado de ediciones anteriores (estilo tarjetas minimalista) =====
   - block: markdown
     id: ediciones
