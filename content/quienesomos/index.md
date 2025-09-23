@@ -21,7 +21,7 @@ sections:
           <a href="https://www.metadocencia.org/pdc/"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Pautas de Convivencia</a>
-          <a href="https://mdnv.netlify.app/institucional/"
+          <a href="https://www.metadocencia.org/institucional/"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Institucional</a>
         </div>
