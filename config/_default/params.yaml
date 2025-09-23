@@ -44,10 +44,72 @@ header:
     show_search: true
     show_theme_chooser: true
 
-# Site footer
+# === Footer: texto + redes ===
 footer:
-  copyright:
-    notice: '© {year} My Company'
+  enable: true
+
+  # Si el tema aplica un fondo translúcido, esto lo apaga (opcional).
+  show_translucent: false
+
+  # Líneas de texto (pueden llevar HTML si querés enlaces)
+  lines:
+    - 'MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society. Licencia'
+    - 'Publicado con Hugo Blox Builder.'
+
+# Redes sociales para el footer (renderizadas por el partial de abajo)
+contact_links:
+  - icon: envelope
+    icon_pack: fas
+    link: "mailto:hola@metadocencia.org"
+    name: "Email"
+
+  - icon: mastodon
+    icon_pack: fab
+    link: "https://floss.social/@MetaDocencia"
+    name: "Mastodon"
+
+  - icon: twitter
+    icon_pack: fab
+    link: "https://twitter.com/MetaDocencia"
+    name: "Twitter/X"
+
+  - icon: github
+    icon_pack: fab
+    link: "https://github.com/MetaDocencia"
+    name: "GitHub"
+
+  - icon: youtube
+    icon_pack: fab
+    link: "https://www.youtube.com/metadocencia"
+    name: "YouTube"
+
+  - icon: instagram
+    icon_pack: fab
+    link: "https://www.instagram.com/metadocencia/"
+    name: "Instagram"
+
+  - icon: linkedin
+    icon_pack: fab
+    link: "https://www.linkedin.com/company/metadocencia/"
+    name: "LinkedIn"
+
+  # Nota: Font Awesome puede no tener 'bluesky' según versión del tema.
+  # Si no aparece, ver nota al final para icono personalizado.
+  - icon: bluesky
+    icon_pack: fab
+    link: "https://bsky.app/profile/metadocencia.org"
+    name: "Bluesky"
+
+  - icon: slack
+    icon_pack: fab
+    link: "https://w3id.org/metadocencia/slack"
+    name: "Slack"
+
+  - icon: facebook
+    icon_pack: fab
+    link: "https://www.facebook.com/metadocencia"
+    name: "Facebook"
+
 
 # Localization
 locale:
