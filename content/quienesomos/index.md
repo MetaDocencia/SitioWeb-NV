@@ -82,7 +82,7 @@ sections:
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
-        padding: ["1.5rem", 0, "1.25rem", 0]   # ↑ un poco más de espacio arriba del título
+        padding: ["2rem", 0, "1.25rem", 0]   # ↑ un poco más de espacio arriba del título
 
   # ===== MetaDocencia en números (fondo gris) =====
   - block: stats
@@ -103,7 +103,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.25rem", 0, "0.75rem", 0]   # ↓ bastante menos arriba/abajo del título
+        padding: ["0.25rem", 0, "0.25rem", 0]   # ↓ bastante menos arriba/abajo del título
 
   # ===== Estilos locales: comprimir márgenes del título y aumentar gap entre stats =====
   - block: markdown
