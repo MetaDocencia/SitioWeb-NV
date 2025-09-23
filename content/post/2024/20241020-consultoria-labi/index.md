@@ -1,17 +1,23 @@
 ---
-title: "Trabajo intercomunidades: la experiencia de apoyo al fortalecimiento de la gobernanza comunitaria de LABI"
-summary: "En 2024, establecimos un acuerdo de colaboración entre LABI y MetaDocencia, en cuyo marco desarrollamos una propuesta de asistencia técnica que comentamos en esta publicación."
-date: 2024-11-19
-translationKey: "20241020-consultoria-labi"
-tags:
-  - MetaDocencia
-categories:
-  - Proyectos
+title: 'Trabajo intercomunidades: la experiencia de apoyo al fortalecimiento de la
+  gobernanza comunitaria de LABI'
+summary: En 2024, establecimos un acuerdo de colaboración entre LABI y MetaDocencia,
+  en cuyo marco desarrollamos una propuesta de asistencia técnica que comentamos en
+  esta publicación.
+date: '2024-10-20'
+type: post
+slug: consultoria-labi
 authors:
-  - laurel
-  - pazmiguez
-  - jformoso
+- laurel
+- pazmiguez
+- jformoso
+tags:
+- MetaDocencia
+categories:
+- Proyectos
+draft: false
 ---
+
 
 En 2022, cuando [MetaDocencia avanzaba en su proceso colaborativo de gobernanza](https://www.metadocencia.org/post/avances-gobernanza/), decíamos que “nuestra mayor expectativa es que el camino recorrido aporte al fortalecimiento de otras comunidades de todo el mundo, tejidos y puestas en común de lo que hoy también es la cosa pública: espacios de saber, intercambio, redes y crecimiento colaborativo y participativo”. 
 
