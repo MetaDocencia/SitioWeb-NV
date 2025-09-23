@@ -92,7 +92,7 @@ sections:
 
             <br><br>
             👉 <a href="https://zenodo.org/" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
-          image: "organigramaES.png"   # coloca esta imagen en static/media/organigrama.png o ajusta la ruta
+          image: "organigramaES.jpg"   # coloca esta imagen en static/media/organigrama.png o ajusta la ruta
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
