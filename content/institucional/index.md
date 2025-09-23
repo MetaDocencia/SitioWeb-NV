@@ -4,7 +4,6 @@ type: landing
 slug: "institucional"
 design:
   spacing: "2rem"
----
 
 sections:
 
@@ -101,3 +100,5 @@ sections:
         que configuran nuestro marco de trabajo.
 
         👉 [Política de Accesibilidad](https://www.metadocencia.org/politica_accesibilidad/)
+
+---
