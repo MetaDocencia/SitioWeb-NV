@@ -6,32 +6,26 @@ design:
   spacing: "3rem"
 
 sections:
-
-  # ===== HERO con imagen de fondo + botones rojos centrados + textos =====
+  # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
     id: hero-qs
     content:
       title: "Quienes somos"
       text: |
-        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl">
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
 
-        <!-- Botones rojos centrados -->
+        <!-- Botones centrados -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
           <a href="https://www.metadocencia.org/pdc/"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">
-             Pautas de Convivencia
-          </a>
+             style="background:#C83737;color:#FFFFFF;">Pautas de Convivencia</a>
           <a href="https://www.metadocencia.org/institucional/"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">
-             Institucional
-          </a>
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
         </div>
 
-        <!-- Textos adicionales -->
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
@@ -42,7 +36,7 @@ sections:
         </div>
     design:
       spacing:
-        padding: ["0.5rem", 0, "0.5rem", 0]   # hero más bajo
+        padding: ["0.5rem", 0, "0.5rem", 0]
         margin: [0, 0, "0.5rem", 0]
       background:
         image:
@@ -55,7 +49,7 @@ sections:
         text_color_light: true
       css_style: "min-height: 24vh;"
 
-  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
+  # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
     content:
@@ -82,9 +76,9 @@ sections:
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
-        padding: ["2rem", 0, "1.25rem", 0]   # ↑ un poco más de espacio arriba del título
+        padding: ["2rem", 0, "1.25rem", 0]
 
-  # ===== MetaDocencia en números (fondo gris) =====
+  # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
     content:
@@ -103,60 +97,135 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]   # ↓ bastante menos arriba/abajo del título
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos locales: comprimir márgenes del título y aumentar gap entre stats =====
+  # ===== Estilos locales para ajustar márgenes y gaps =====
   - block: markdown
+    id: estilos-locales
     content:
       title: ""
       text: |
         <style>
-          /* Más espacio entre ítems de estadísticas */
           section#numeros .grid { gap: 1.75rem !important; }
-
-          /* Comprimir margen del título en la sección de números */
           section#numeros h1, section#numeros h2, section#numeros .section-title {
             margin-top: 0.15rem !important;
             margin-bottom: 0.35rem !important;
           }
         </style>
 
-  # === PERSONAS / ORGANIZACIONES (full-bleed, sin bordes) ===
+  # --- Colaboran con MetaDocencia (sin borde, 7 col desktop / 3 mobile) ---
   - block: markdown
-    id: personas
+    id: colaboradores
     content:
-      title: ""
+      title: "Colaboran con MetaDocencia"
       text: |
-        <!-- Wrapper full-bleed -->
-        <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        {{/* Lista de autores filtrada por user_groups = "Colaboradores" */}}
+        {{ $grupo := slice "Colaboradores" }}
+        {{ $autores := where site.Pages "Section" "authors" }}
 
-          <!-- Colaboradores -->
-          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8" open>
-            <summary class="flex items-center justify-between cursor-pointer py-4">
-              <span class="text-2xl font-bold">Colaboradores</span>
-              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-            </summary>
-            <div class="pb-6">
-              {{< people_group group="Colaboradores" columns="7" fit="cover" >}}
-            </div>
-          </details>
+        {{ $autores_filtrados := slice }}
+        {{ range $autores }}
+          {{ $ug := .Params.user_groups }}
+          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
+            {{ $autores_filtrados = $autores_filtrados | append . }}
+          {{ end }}
+        {{ end }}
 
-          <div class="h-4 md:h-6"></div>
+        {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
 
-          <!-- Auspiciantes -->
-          <details class="group border-0 shadow-none bg-transparent px-4 md:px-8">
-            <summary class="flex items-center justify-between cursor-pointer py-4">
-              <span class="text-2xl font-bold">Auspiciantes</span>
-              <span aria-hidden="true" class="ml-4 select-none text-xl leading-none">▾</span>
-            </summary>
-            <div class="pb-6">
-              {{< people_group group="Auspiciantes" columns="7" fit="cover" >}}
-            </div>
-          </details>
+        <div class="w-full px-0">
+          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
+            {{ range $p := $autores_filtrados }}
+              {{ $img := "" }}
+              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
+                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
+              {{ end }}
 
+              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
+                <div class="mx-auto">
+                  {{ if $img }}
+                    <img
+                      src="{{ $img }}"
+                      alt="{{ $p.Title }}"
+                      loading="lazy"
+                      class="block rounded-full object-cover object-center"
+                      style="width: 7rem; height: 7rem;"
+                    />
+                  {{ else }}
+                    <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
+                  {{ end }}
+                </div>
+                <div class="mt-3">
+                  <div class="font-semibold leading-tight">{{ $p.Title }}</div>
+                  {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                  {{ with (index $p.Params "organizations") }}
+                    {{ with (index . 0) }}
+                      {{ with .name }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </a>
+            {{ end }}
+          </div>
         </div>
 
-  # CTA final
+  # --- Auspiciantes (sin borde, 7 col desktop / 3 mobile) ---
+  - block: markdown
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: |
+        {{/* Lista de autores filtrada por user_groups = "Auspiciantes" */}}
+        {{ $grupo := slice "Auspiciantes" }}
+        {{ $autores := where site.Pages "Section" "authors" }}
+
+        {{ $autores_filtrados := slice }}
+        {{ range $autores }}
+          {{ $ug := .Params.user_groups }}
+          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
+            {{ $autores_filtrados = $autores_filtrados | append . }}
+          {{ end }}
+        {{ end }}
+
+        {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
+
+        <div class="w-full px-0">
+          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
+            {{ range $p := $autores_filtrados }}
+              {{ $img := "" }}
+              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
+                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
+              {{ end }}
+
+              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
+                <div class="mx-auto">
+                  {{ if $img }}
+                    <img
+                      src="{{ $img }}"
+                      alt="{{ $p.Title }}"
+                      loading="lazy"
+                      class="block rounded-full object-cover object-center"
+                      style="width: 7rem; height: 7rem;"
+                    />
+                  {{ else }}
+                    <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
+                  {{ end }}
+                </div>
+                <div class="mt-3">
+                  <div class="font-semibold leading-tight">{{ $p.Title }}</div>
+                  {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                  {{ with (index $p.Params "organizations") }}
+                    {{ with (index . 0) }}
+                      {{ with .name }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+
+  # ===== CTA final =====
   - block: cta-card
     id: apoya
     content:
