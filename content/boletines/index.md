@@ -81,3 +81,35 @@ sections:
         - [Boletín N° 1 - Construyendo en comunidad](https://mailchi.mp/90070af3dfd3/construyendo-en-comunidad-newsletter-n-1) - [English version](https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=a9cc2ef2f2)
 
         </div>
+  # ---------- Boletín (1 columna: título, texto, form y link debajo) ----------
+  - block: cta-card
+    id: boletin-embed
+    content:
+      title: "Boletín MetaDocencia"
+      text: |
+        <div class="mx-auto max-w-3xl text-white">
+          <p class="text-lg leading-relaxed mb-4">
+            Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
+          </p>
+
+          <!-- Formulario embebido -->
+          <div class="mt-2">
+            {{< mc_form >}}
+          </div>
+
+          <!-- Link centrado, blanco, sin botón -->
+          <p class="text-center mt-4">
+            <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" style="color:#FFFFFF">
+              Ver ediciones anteriores
+            </a>
+          </p>
+        </div>
+    design:
+      card:
+        css_class: ""
+        css_style: "background-color:#00506F;color:#FFFFFF;"
+      spacing:
+        padding: ["0.75rem", 0, "0.75rem", 0]
+        margin: [0, 0, 0, 0]
+
+---
