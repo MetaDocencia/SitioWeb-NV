@@ -20,12 +20,5 @@ El recorrido de contextualización comenzó formalmente con la tarea concreta de
 Los consensos alcanzados por el trabajo en comunidad guiaron la adecuación de los contenidos de Ciencia Abierta de NASA para que representaran la identidad en Latinoamérica. 87.493 palabras fueron contextualizadas al español por XX personas que trabajaron coordinadamente durante YY semanas.
 MetaDocencia cuenta con otros proyectos en los que la accesibilidad de contenidos al español es clave. Por ejemplo, como parte de los servicios que brinda, MetaDocencia realizó la contextualización de diversas convocatorias y material de apoyo relacionado publicadas originalmente en inglés por Invest in Open Infrastructure (IOI).
 
-## Testimonios
-
-{{< quote author="Vanesa Ruiz" link="https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ/" >}}
-Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen realizado la contextualización de los contenidos de Ciencia Abierta para América Latina.  
-Un gran equipo colaborativo!
-{{< /quote >}}
-
 ## Para seguir leyendo
 ¿De qué hablamos cuando hablamos de Contextualización?: https://www.metadocencia.org/post/2024/20240725-contextualizacion/
