@@ -25,7 +25,7 @@ sections:
 
           <!-- Link centrado, blanco, sin botón -->
           <p class="text-center mt-4">
-            <a href="https://www.metadocencia.org/boletines/" class="underline font-semibold" style="color:#FFFFFF">
+            <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
             </a>
           </p>
