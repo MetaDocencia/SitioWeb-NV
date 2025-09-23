@@ -7,27 +7,23 @@ design:
 
 sections:
 
-  # ===== Gobernanza (2 columnas) =====
+  # ===== Gobernanza (1 columna ancha) =====
   - block: markdown
     id: gobernanza
     content:
       title: "Nuestra gobernanza"
       text: |
-        <div class="grid md:grid-cols-2 gap-6 items-start">
-          <div>
-            <p>
-              Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-            </p>
-            <ul class="list-disc pl-5">
-              <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2022/" class="underline">Gobernanza de MetaDocencia (2022)</a></li>
-              <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2024/" class="underline">Gobernanza 2.0 (2024)</a></li>
-            </ul>
-          </div>
-          <div>
-            <p class="opacity-90">
-              Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-            </p>
-          </div>
+        <div class="max-w-none">
+          <p>
+            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
+          </p>
+          <ul class="list-disc pl-5">
+            <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2022/" class="underline">Gobernanza de MetaDocencia (2022)</a></li>
+            <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2024/" class="underline">Gobernanza 2.0 (2024)</a></li>
+          </ul>
+          <p class="opacity-90 mt-3">
+            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
+          </p>
         </div>
 
   # ===== Visión y Misión (2 columnas) =====
@@ -96,18 +92,18 @@ sections:
 
             <br><br>
             👉 <a href="https://zenodo.org/" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
-          image: "organigramaES.jpg"
+          image: "organigrama.png"   # coloca esta imagen en static/media/organigrama.png o ajusta la ruta
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # ===== PdC y Accesibilidad (2 columnas) =====
+  # ===== PdC y Accesibilidad (1 columna ancha) =====
   - block: markdown
     id: pautas-accesibilidad
     content:
       title: ""
       text: |
-        <div class="grid md:grid-cols-2 gap-6 items-start">
-          <div>
+        <div class="max-w-none space-y-8">
+          <section>
             <h3 class="text-2xl font-semibold mb-2">Pautas de convivencia</h3>
             <p>
               Nuestras <strong>Pautas de Convivencia (PdC)</strong> son la base que guía cada actividad y colaboración en MetaDocencia.
@@ -117,8 +113,9 @@ sections:
             <p class="mt-2">
               👉 <a href="https://www.metadocencia.org/pdc/" class="underline">Consulta las Pautas de Convivencia</a>
             </p>
-          </div>
-          <div>
+          </section>
+
+          <section>
             <h3 class="text-2xl font-semibold mb-2">Política de accesibilidad</h3>
             <p>
               Consulta la política de accesibilidad que sigue MetaDocencia para conocer los criterios y buenas prácticas
@@ -127,7 +124,6 @@ sections:
             <p class="mt-2">
               👉 <a href="https://www.metadocencia.org/politica_accesibilidad/" class="underline">Política de Accesibilidad</a>
             </p>
-          </div>
+          </section>
         </div>
-
 ---
