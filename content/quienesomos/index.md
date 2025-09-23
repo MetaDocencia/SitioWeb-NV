@@ -113,87 +113,21 @@ sections:
           }
         </style>
 
-    # --- Colaboran con MetaDocencia (sin borde, 7 col desktop / 3 mobile) ---
+     # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{/* Filtrar autores por user_groups = "Colaboradores" */}}
-        {{ $grupo := slice "Colaboradores" }}
-        {{ $autores := where site.Pages "Section" "authors" }}
+        {{< people_list group="Colaboradores" columns="7" fit="cover" >}}
 
-        {{ $filtrados := slice }}
-        {{ range $autores }}
-          {{ $ug := .Params.user_groups }}
-          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
-            {{ $filtrados = $filtrados | append . }}
-          {{ end }}
-        {{ end }}
-
-        {{ $filtrados = sort $filtrados ".Params.weight" | sort "Title" }}
-
-        <div class="w-full">
-          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-3 xl:grid-cols-7">
-            {{ range $p := $filtrados }}
-              {{ $img := "" }}
-              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
-                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
-              {{ end }}
-
-              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
-                <div class="mx-auto rounded-full"
-                     style="width:7rem;height:7rem; background:#e5e7eb; background-image:url('{{ $img }}'); background-size:cover; background-position:center;">
-                </div>
-                <div class="mt-3">
-                  <div class="font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
-                  {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
-                </div>
-              </a>
-            {{ end }}
-          </div>
-        </div>
-
-  # --- Auspiciantes (sin borde, 7 col desktop / 3 mobile) ---
+  # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
     content:
       title: "Auspiciantes"
       text: |
-        {{/* Filtrar autores por user_groups = "Auspiciantes" */}}
-        {{ $grupo := slice "Auspiciantes" }}
-        {{ $autores := where site.Pages "Section" "authors" }}
-
-        {{ $filtrados := slice }}
-        {{ range $autores }}
-          {{ $ug := .Params.user_groups }}
-          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
-            {{ $filtrados = $filtrados | append . }}
-          {{ end }}
-        {{ end }}
-
-        {{ $filtrados = sort $filtrados ".Params.weight" | sort "Title" }}
-
-        <div class="w-full">
-          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-3 xl:grid-cols-7">
-            {{ range $p := $filtrados }}
-              {{ $img := "" }}
-              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
-                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
-              {{ end }}
-
-              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
-                <div class="mx-auto rounded-full"
-                     style="width:7rem;height:7rem; background:#e5e7eb; background-image:url('{{ $img }}'); background-size:cover; background-position:center;">
-                </div>
-                <div class="mt-3">
-                  <div class="font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
-                  {{ with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{ end }}
-                </div>
-              </a>
-            {{ end }}
-          </div>
-        </div>
+        {{< people_list group="Auspiciantes" columns="7" fit="cover" >}}
 
 
   # ===== CTA final =====
