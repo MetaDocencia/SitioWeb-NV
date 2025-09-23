@@ -58,7 +58,7 @@ sections:
         - name: "Construimos comunidad"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            FFomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
+            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
             <br>
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
@@ -79,13 +79,13 @@ sections:
       title: "Proyectos destacados"
       text: ""
       items:
-        - name: "Acceso a finaciamiento para iniciativas científicas"
+        - name: "Finaciamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a><br>
 
         - name: "Formación en Ciencia Abierta"
           description: |
@@ -93,7 +93,7 @@ sections:
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish//">Ver más →</a><br>
 
         - name: "Gobernanza"
           description: |
@@ -101,7 +101,7 @@ sections:
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a><br>
        
     design:
       columns: 3
@@ -134,7 +134,7 @@ sections:
             Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/catalyst/">Ver más →</a>
 
         - name: "Contextualización"
           description: |
@@ -208,15 +208,15 @@ sections:
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
 
-        - name: "Acceso a finaciamiento para iniciativas científicas"
+        - name: "Finaciamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
 
         - name: "Formación para enseñar"
           description: |
@@ -224,7 +224,7 @@ sections:
             Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/formacion-para-ensenar/">Ver más →</a>
 
         - name: "Cursos a medida"
           description: |
@@ -232,7 +232,7 @@ sections:
             Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -293,7 +293,7 @@ sections:
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a>
         - name: "Conversatorios"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -307,7 +307,7 @@ sections:
             Repositorio colaborativo de información sobre Ciencia Abierta en español.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Ver más →</a><br>
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
