@@ -1,0 +1,19 @@
+{{/* Renderiza nombres completos de autores a partir de los aliases en .Params.authors
+     Uso: {{ partial "authors-list.html" (dict "Page" . "Authors" .Params.authors) }} */}}
+
+{{- $p := .Page -}}
+{{- $authors := .Authors | default (slice) -}}
+
+{{- if gt (len $authors) 0 -}}
+  <span>·</span>
+  <span>
+    {{- $last := sub (len $authors) 1 -}}
+    {{- range $i, $auth := $authors -}}
+      {{- with site.GetPage (printf "/authors/%s" $auth) -}}
+        {{- .Title -}}
+      {{- else -}}
+        {{- $auth -}}
+      {{- end -}}{{- if lt $i $last }}, {{ end -}}
+    {{- end -}}
+  </span>
+{{- end -}}
