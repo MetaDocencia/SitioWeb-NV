@@ -111,8 +111,6 @@ sections:
   #  SECCIÓN: INFRAESTRUCTURA (AZUL)
   # ======================
   # ======================
-#  SECCIÓN: INFRAESTRUCTURA (AZUL) — banda full-width
-# ======================
   - block: hero
     id: infra
     content:
@@ -120,12 +118,11 @@ sections:
       text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento."
     design:
       spacing:
-        padding: ["1.25rem", 0, "1rem", 0]
-      css_class: ""
-      css_style: "background:#00506F;color:#FFFFFF;"
+        padding: ["0.8rem", 0, "0.8rem", 0]   # alto compacto
+      css_class: "py-3 md:py-4 hero-compact"
+      css_style: "background:#00506F;color:#FFFFFF;min-height:auto;"
       background:
         text_color_light: true
-
   
   - block: cta-card
     id: infra
