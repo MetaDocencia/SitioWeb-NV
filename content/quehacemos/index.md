@@ -351,7 +351,7 @@ sections:
           <p class="text-gray-700 dark:text-gray-300 mb-4">
             Conocé qué dicen de MetaDocencia en prensa y blogs.
           </p>
-          <a href="/en-los-medios/"
+          <a href="https://mdnv.netlify.app/prensas"
              class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
              Ver menciones →
           </a>
