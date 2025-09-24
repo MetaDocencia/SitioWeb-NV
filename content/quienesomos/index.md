@@ -16,14 +16,17 @@ sections:
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
 
-        <!-- Botones centrados -->
+        <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="https://www.metadocencia.org/pdc/"
+          <a href="/institucional"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Nuestra Gobernanza</a>
+          <a href="https://zenodo.org/records/12534196"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Pautas de Convivencia</a>
-          <a href="https://mdnv.netlify.app/institucional/"
+          <a href="https://zenodo.org/records/10514982"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+             style="background:#C83737;color:#FFFFFF;">Políticas de Accesibilidad</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
@@ -113,7 +116,7 @@ sections:
           }
         </style>
 
-     # --- Colaboran con MetaDocencia ---
+  # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
     content:
@@ -128,7 +131,6 @@ sections:
       title: "Auspiciantes"
       text: |
         {{< people_list group="Auspiciantes" columns="7" fit="cover" >}}
-
 
   # ===== CTA final =====
   - block: cta-card
