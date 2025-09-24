@@ -209,14 +209,6 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
 
-        - name: "Finaciamiento para iniciativas científicas"
-          description: |
-            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
-
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
-
         - name: "Formación para enseñar"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
