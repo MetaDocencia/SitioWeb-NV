@@ -84,7 +84,7 @@ contact_links:
     icon_pack: fab
     link: "https://bsky.app/profile/metadocencia.org"
     name: "Bluesky"
-  - icon: slack
+  - icon: globe
     icon_pack: fab
     link: "https://w3id.org/metadocencia/slack"
     name: "Slack"
