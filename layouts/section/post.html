@@ -26,21 +26,13 @@
               <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
             </h2>
 
+            <!-- Meta: lectura y autorías (SIN tags) -->
             <div class="mt-1 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>{{ .ReadingTime }} min</span>
               {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
-              {{ with .Params.tags }}
-                {{ if gt (len .) 0 }}
-                  <span>·</span>
-                  <span>
-                    {{- $last := sub (len .) 1 -}}
-                    {{- range $i, $t := . -}}
-                      <a class="underline hover:no-underline"
-                         href="{{ (printf "/tags/%s/" (urlize $t)) | relLangURL }}">{{ $t }}</a>{{ if lt $i $last }}, {{ end }}
-                    {{- end -}}
-                  </span>
-                {{ end }}
-              {{ end }}
+              {{/* Tags removidos a pedido:
+              {{ with .Params.tags }} ... {{ end }}
+              */}}
             </div>
 
             {{ $sum := .Params.summary }}
