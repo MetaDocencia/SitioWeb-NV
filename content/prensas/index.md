@@ -52,18 +52,9 @@ sections:
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">25 de abril de 2023</div>
+            <div class="font-semibold">Metadocencia, el arte de divulgar al mundo la enseñanza de la ciencia en español</div>    
             <p class="text-sm text-gray-700 dark:text-gray-300">Laura Ación comentó la misión, recorrido y siguientes pasos de MetaDocencia, y el impulso que tuvimos gracias al apoyo y la libertad de trabajo que nos dio CZI Science.</p>
             <a href="https://www.infobae.com/tendencias/2023/04/25/metadocencia-el-arte-de-divulgar-al-mundo-la-ensenanza-de-la-ciencia-en-espanol-y-con-el-apoyo-de-mark-zuckerberg/?utm_medium=Echobox&utm_source=Twitter#Echobox=1682405050" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
-
-        - name: |
-            <div class="flex items-center gap-2">
-              <img src="/media/prensa/medife.png" alt="La Ciencia y la Salud, Fundación Medifé" class="h-24 md:h-28 object-contain" loading="lazy">
-              <span>La Ciencia y la Salud, Fundación Medifé</span>
-            </div>
-          description: |
-            <div class="text-xs text-gray-500 dark:text-gray-400">29 de agosto de 2022</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Laura Ación en La Ciencia y la Salud, Fundación Medifé: “Mitos y verdades sobre la IA y big data”.</p>
-            <a href="https://soundcloud.com/fundacionmedife/dra-laura-acion-dir?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
             <div class="flex items-center gap-2">
@@ -72,17 +63,19 @@ sections:
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">13 de agosto de 2022</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Laura Ación en #AgendaAcadémica: “El problema surge cuando la inteligencia artificial se mete con la democracia, la salud o la justicia”.</p>
+            <div class="font-semibold">Laura Ación: “El problema surge cuando la inteligencia artificial se mete con la democracia, la salud o la justicia”</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">Reflexiones sobre los mitos del big data y la supremacía del algoritmo. La relación entre el procesamiento masivo de datos y el peligro de las redes sociales. La ética de la tecnología.</p>
             <a href="https://www.perfil.com/noticias/agenda-academica/laura-acion-el-problema-surge-cuando-la-inteligencia-artificial-se-mete-con-la-democracia-la-salud-o-la-justicia.phtml" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
             <div class="flex items-center gap-2">
               <img src="/media/prensa/hospitalitaliano.png" alt="Revista Innova Hospital Italiano" class="h-24 md:h-28 object-contain" loading="lazy">
-              <span>Revista Innova Hospital Italiano</span>
+              <span>Revista Innova Salud Digital - Hospital Italiano</span>
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">9 de mayo de 2020</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Laura Ación: “Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”.</p>
+            <div class="font-semibold">Laura Ación: “Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”.</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">Dialogo con Innova Salud Digital sobre los cambios generados por la pandemia en el plano de la educación superior.</p>
             <a href="https://www.hospitalitaliano.org.ar/multimedia/archivos/noticias_archivos/11/Revista/11_InnovaNoviembreDobles.pdf" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
@@ -92,7 +85,8 @@ sections:
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">9 de mayo de 2020</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Capacitación docente sobre enseñanza virtual.</p>
+            <div class="font-semibold">Capacitación docente sobre enseñanza virtual.</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">Presentamos a MetaDocencia, nuestros origenes y nuestras propuestas de formación.</p>
             <a href="https://www.lacapital.com.ar/educacion/capacitacion-docente-ensenanza-virtual-n2582884.html" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
@@ -102,8 +96,9 @@ sections:
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">22 de abril de 2020</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Investigadora de INTA Anguil participa de Metadocencia, un proyecto para capacitar a docentes en educación virtual.</p>
-            <a href="https://www.defrentealcampo.com.ar/investigadora-de-inta-anguil-participa-de-metadocencia-un-proyecto-para-capacitar-a-docentes-en-educacion-virtual/" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
+            <div class="font-semibold">Investigadora de INTA Anguil participa de Metadociencia, un proyecto para capacitar a docentes en educación virtual</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">Yanina Bellini Saibene cuenta de qué se trata MetaDocencia y quienes forman parte de nuestra comunidad.</p>
+            <a href="https://www.defrentealcampo.com.ar/investigadora-de-inta-anguil-participa-de-metadociencia-un-proyecto-para-capacitar-a-docentes-en-educacion-virtual/" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
             <div class="flex items-center gap-2">
@@ -112,7 +107,8 @@ sections:
             </div>
           description: |
             <div class="text-xs text-gray-500 dark:text-gray-400">7 de abril de 2020</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">La felicidad compartida se multiplica, la pena compartida disminuye.</p>
+            <div class="font-semibold">La felicidad compartida se multiplica, la pena compartida disminuye.</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">“Nos dimos cuenta que podíamos ayudar a las personas que se dedican a la docencia que, desde la suspensión de las clases están en una trinchera menos visible que el personal de salud, pero también muy estresante”, explica Laura Ación.</p>
             <a href="https://eldoce.tv/opinion/metadocencia-clase-virtual-cuarentena-coronavirus-la-felicidad-compartida-se-multiplica-la-pena-compartida-disminuye_97495/" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
@@ -121,8 +117,9 @@ sections:
               <span>La Pampa Noticias</span>
             </div>
           description: |
-            <div class="text-xs text-gray-500 dark:text-gray-400">Última actualización: 1 de enero de 0001</div>
-            <p class="text-sm text-gray-700 dark:text-gray-300">MetaDocencia: Cómo virtualizar la educación.</p>
+            <div class="text-xs text-gray-500 dark:text-gray-400">Última actualización: 13 de abril de 2020</div>
+            <div class="font-semibold">MetaDocencia: Cómo virtualizar la educación.</div>    
+            <p class="text-sm text-gray-700 dark:text-gray-300">En esta nota presentamos a MetaDocencia, contamos sobre su origen y objetivos.</p>
             <a href="https://www.facebook.com/lapampanoticias/posts/metadocencia-cómo-virtualizar-la-educacióninvestigadores-del-inta-del-conicet-y-/1305419322983230/" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
     design:
       columns: 3
