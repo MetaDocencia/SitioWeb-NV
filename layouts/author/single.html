@@ -1,9 +1,10 @@
 {{ define "main" }}
 <section class="mx-auto px-6 py-10 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10">
 
-  {{/* ====== Sidebar (foto + nombre + rol + redes) ====== */}}
+  {{/* ============= SIDEBAR (izquierda) ============= */}}
   <aside class="md:col-span-4 lg:col-span-3">
-    {{/* Resolver avatar: front matter -> avatar.* en carpeta -> primera imagen */}}
+
+    {{/* Avatar opcional: front matter -> avatar.* recurso -> primera imagen */}}
     {{ $avatar := "" }}
     {{ with .Params.avatar }}{{ $avatar = . }}{{ end }}
     {{ if not $avatar }}
@@ -12,22 +13,22 @@
     {{ if not $avatar }}
       {{ with .Resources.ByType "image" }}{{ with index . 0 }}{{ $avatar = .RelPermalink }}{{ end }}{{ end }}
     {{ end }}
-
     {{ if $avatar }}
       <img src="{{ $avatar }}" alt="{{ .Title }}"
            class="w-40 h-40 rounded-full object-cover mb-4 mx-auto md:mx-0 shadow" />
     {{ end }}
 
+    <!-- Nombre -->
     <h1 class="text-2xl font-bold mb-1">{{ .Title }}</h1>
 
-    {{/* Rol (puede venir vacío) */}}
+    <!-- Rol (si existe) -->
     {{ with .Params.role }}
       {{ if . }}
         <p class="text-gray-600 dark:text-gray-400 mb-1">{{ . }}</p>
       {{ end }}
     {{ end }}
 
-    {{/* Organización (lista) */}}
+    <!-- Organización (si hay) -->
     {{ with .Params.organizations }}
       {{ range . }}
         {{ if .name }}
@@ -40,35 +41,58 @@
       {{ end }}
     {{ end }}
 
-    {{/* Redes sociales (icon_pack/icon/link como en Academic/Blox) */}}
+    <!-- Email SIEMPRE que exista en front matter -->
+    {{ with .Params.email }}
+      <div class="mt-4">
+        <a href="mailto:{{ . }}"
+           class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <!-- ícono simple ASCII para no depender de FA -->
+          <span>✉️</span><span>{{ . }}</span>
+        </a>
+      </div>
+    {{ end }}
+
+    <!-- Redes sociales (texto visible, sin depender de icon fonts) -->
     {{ with .Params.social }}
-      <div class="flex flex-wrap gap-3 mt-4">
+      <div class="flex flex-col gap-2 mt-4">
         {{ range . }}
-          {{/* Normalizar mailto si falta */}}
+          {{/* Normalizar mailto si es envelope sin prefijo */}}
+          {{ $label := "" }}
           {{ $href := .link }}
           {{ if and (eq .icon "envelope") (not (hasPrefix $href "mailto:")) }}
             {{ $href = printf "mailto:%s" $href }}
           {{ end }}
+          {{/* Etiquetas legibles por tipo */}}
+          {{ if eq .icon "twitter" }}{{ $label = "Twitter" }}{{ end }}
+          {{ if eq .icon "github" }}{{ $label = "GitHub" }}{{ end }}
+          {{ if eq .icon "linkedin" }}{{ $label = "LinkedIn" }}{{ end }}
+          {{ if eq .icon "orcid" }}{{ $label = "ORCID" }}{{ end }}
+          {{ if eq .icon "mastodon" }}{{ $label = "Mastodon" }}{{ end }}
+          {{ if eq .icon "envelope" }}{{ $label = "Email" }}{{ end }}
+          {{ if not $label }}{{ $label = "Sitio" }}{{ end }}
+
           <a href="{{ $href }}" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
-            <i class="{{ .icon_pack }} fa-{{ .icon }}"></i>
+             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 w-max">
+            <span>{{ $label }}</span>
+            <span class="truncate max-w-[260px] text-gray-500">{{ $href }}</span>
           </a>
         {{ end }}
       </div>
     {{ end }}
+
   </aside>
 
-  {{/* ====== Columna principal ====== */}}
+  {{/* ============= COLUMNA PRINCIPAL (derecha) ============= */}}
   <div class="md:col-span-8 lg:col-span-9 space-y-10">
 
-    {{/* Experiencia y trayectoria: usa el contenido del author */}}
+    <!-- Experiencia y trayectoria (contenido del author) -->
     {{ with .Content }}
       <div class="prose dark:prose-invert max-w-none">
         {{ . }}
       </div>
     {{ end }}
 
-    {{/* Intereses */}}
+    <!-- Intereses -->
     {{ with .Params.interests }}
       {{ if gt (len .) 0 }}
         <section>
@@ -80,7 +104,7 @@
       {{ end }}
     {{ end }}
 
-    {{/* Educación (education.courses) */}}
+    <!-- Educación (education.courses) -->
     {{ with .Params.education.courses }}
       {{ if gt (len .) 0 }}
         <section>
@@ -98,11 +122,11 @@
       {{ end }}
     {{ end }}
 
-    {{/* Publicaciones del autor: minimalista con "ver más" si hay muchas */}}
+    <!-- Publicaciones minimalistas (siempre seguro) -->
     <section>
       <h2 class="text-xl font-semibold mb-3">Publicaciones</h2>
 
-      {{/* Derivar el slug del autor desde la ruta del archivo (carpeta de _index.md) */}}
+      {{/* Obtener el slug del autor (carpeta que contiene _index.md) */}}
       {{ $slug := path.Base (path.Dir .File.Path) }}
       {{ $all := where site.RegularPages "Params.authors" "intersect" (slice $slug) }}
       {{ $all = sort $all "Date" "desc" }}
