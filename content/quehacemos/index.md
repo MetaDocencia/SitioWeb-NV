@@ -58,7 +58,7 @@ sections:
         - name: "Construimos comunidad"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo.
+            Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo.
             <br>
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
@@ -102,7 +102,6 @@ sections:
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a><br>
-       
     design:
       columns: 3
       css_class: "text-gray-900 dark:text-gray-100"
@@ -110,7 +109,6 @@ sections:
   # ======================
   #  SECCIÓN: INFRAESTRUCTURA (AZUL)
   # ======================
-  
   - block: cta-card
     id: infra
     content:
@@ -341,26 +339,25 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
-# ======================
-#  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
-# ======================
-- block: markdown
-  id: prensa
-  content:
-    text: |
-      <div class="text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia en los medios</h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-          Conocé qué dicen de MetaDocencia en prensa y blogs.
-        </p>
-        <a href="/en-los-medios/"
-           class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-           Ver menciones →
-        </a>
-      </div>
-  design:
-    spacing:
-      padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
-    css_style: "background:#F9FAFB;"
-
+  # ======================
+  #  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
+  # ======================
+  - block: markdown
+    id: prensa
+    content:
+      text: |
+        <div class="text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia en los medios</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Conocé qué dicen de MetaDocencia en prensa y blogs.
+          </p>
+          <a href="/en-los-medios/"
+             class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+             Ver menciones →
+          </a>
+        </div>
+    design:
+      spacing:
+        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
+      css_style: "background:#F9FAFB;"
 ---
