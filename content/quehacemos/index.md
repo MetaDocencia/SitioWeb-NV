@@ -356,4 +356,29 @@ sections:
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
+
+# ======================
+#  SECCIÓN FINAL: MetaDocencia en los medios (minimalista)
+# ======================
+  - block: features
+    id: prensa
+    content:
+      title: "MetaDocencia en los medios"
+      text: ""
+      items:
+        - name: ""
+          description: |
+            Conocé qué dicen de MetaDocencia en prensa y blogs.
+            <br>
+            <a href="/en-los-medios/" class="mt-2 inline-block no-underline font-semibold"
+               style="background:#111827;color:#FFFFFF;padding:0.55rem 0.9rem;border-radius:0.5rem;">
+               Ver menciones →
+            </a>
+    design:
+      columns: 1
+      css_class: "bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+      spacing:
+        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
+
+    
 ---
