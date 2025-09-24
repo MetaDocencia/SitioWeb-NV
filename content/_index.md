@@ -63,10 +63,10 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "NN"
+        - statistic: "+200"
           description: |
-            Proyectos  
-            financiados
+            Documentos  
+            en Zenodo
         - statistic: "+1500"
           description: |
             personas  
@@ -85,10 +85,18 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "3 TESTIMONIOS A DEFINIR - Julio Zetter"
-          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México"
-          image: "juliozetter.jpeg"
-          text: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia"
+        - name: "Carly Strasser"
+          role: "Directora Senior de programas de CZI"
+          text: |
+            💬 Carly Strasser, Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica: "Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes".
+        - name: "Marina Compagnucci"
+          role: "Bióloga y colaboradora de MetaDocencia"
+          text: |
+            “Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio”
+        - name: "Verónica Xhardez"
+          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
+          text: |
+            "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
