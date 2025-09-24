@@ -110,19 +110,6 @@ sections:
   # ======================
   #  SECCIÓN: INFRAESTRUCTURA (AZUL)
   # ======================
-  # ======================
-  - block: hero
-    id: infra
-    content:
-      title: "Impulsamos Infraestructura"
-      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento."
-    design:
-      spacing:
-        padding: ["0.8rem", 0, "0.8rem", 0]   # alto compacto
-      css_class: "py-3 md:py-4 hero-compact"
-      css_style: "background:#00506F;color:#FFFFFF;min-height:auto;"
-      background:
-        text_color_light: true
   
   - block: cta-card
     id: infra
@@ -273,9 +260,9 @@ sections:
         - name: "Emmanuel Iarussi"
           role: "Científico en CONICET y profesor UTDT"
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
-        - name: "Laura Dillon"
-          role: "Participante de ALTa Ciencia Abierta"
-          text: "Gracias al equipo de Metadocencia que hacen una #educacióninclusiva real"
+        - name: "Marina Compagnucci"
+          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
+          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio"
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -355,27 +342,25 @@ sections:
         padding: ["2rem", 0, "2rem", 0]
 
 # ======================
-#  SECCIÓN FINAL: MetaDocencia en los medios (minimalista)
+#  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
 # ======================
-  - block: features
-    id: prensa
-    content:
-      title: "MetaDocencia en los medios"
-      text: ""
-      items:
-        - name: ""
-          description: |
-            Conocé qué dicen de MetaDocencia en prensa y blogs.
-            <br>
-            <a href="/en-los-medios/" class="mt-2 inline-block no-underline font-semibold"
-               style="background:#111827;color:#FFFFFF;padding:0.55rem 0.9rem;border-radius:0.5rem;">
-               Ver menciones →
-            </a>
-    design:
-      columns: 1
-      css_class: "bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
-      spacing:
-        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
+- block: markdown
+  id: prensa
+  content:
+    text: |
+      <div class="text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia en los medios</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Conocé qué dicen de MetaDocencia en prensa y blogs.
+        </p>
+        <a href="/en-los-medios/"
+           class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+           Ver menciones →
+        </a>
+      </div>
+  design:
+    spacing:
+      padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
+    css_style: "background:#F9FAFB;"
 
-    
 ---
