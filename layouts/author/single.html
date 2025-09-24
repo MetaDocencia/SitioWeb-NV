@@ -12,38 +12,29 @@
     <!-- Nombre -->
     <h1 class="text-2xl font-bold mb-1">{{ .Title }}</h1>
 
-    <!-- Rol -->
+    <!-- Rol / institución -->
     {{ with .Params.role }}
-      <p class="text-gray-600 dark:text-gray-400 mb-3">{{ . }}</p>
+      <p class="text-gray-600 dark:text-gray-400 mb-1">{{ . }}</p>
+    {{ end }}
+    {{ with .Params.organizations }}
+      {{ range . }}
+        {{ if .name }}
+          <p class="text-gray-500 dark:text-gray-400 text-sm">{{ .name }}</p>
+        {{ end }}
+      {{ end }}
     {{ end }}
 
     <!-- Redes sociales -->
-    <div class="flex justify-center lg:justify-start gap-3 mb-6">
-      {{ with .Params.twitter }}
-        <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener"
+    {{ with .Params.social }}
+    <div class="flex justify-center lg:justify-start gap-3 mt-4">
+      {{ range . }}
+        <a href="{{ .link }}" target="_blank" rel="noopener"
            class="text-gray-500 hover:text-blue-500">
-          <i class="fab fa-twitter"></i>
-        </a>
-      {{ end }}
-      {{ with .Params.mastodon }}
-        <a href="{{ . }}" target="_blank" rel="noopener"
-           class="text-gray-500 hover:text-purple-500">
-          <i class="fab fa-mastodon"></i>
-        </a>
-      {{ end }}
-      {{ with .Params.linkedin }}
-        <a href="{{ . }}" target="_blank" rel="noopener"
-           class="text-gray-500 hover:text-blue-700">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      {{ end }}
-      {{ with .Params.github }}
-        <a href="https://github.com/{{ . }}" target="_blank" rel="noopener"
-           class="text-gray-500 hover:text-black dark:hover:text-white">
-          <i class="fab fa-github"></i>
+          <i class="{{ .icon_pack }} fa-{{ .icon }}"></i>
         </a>
       {{ end }}
     </div>
+    {{ end }}
   </aside>
 
   <!-- Columna derecha: contenido -->
@@ -57,7 +48,7 @@
     {{ end }}
 
     <!-- Intereses -->
-    {{ with .Params.intereses }}
+    {{ with .Params.interests }}
       <section>
         <h2 class="text-xl font-semibold mb-3">Intereses</h2>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
@@ -69,12 +60,16 @@
     {{ end }}
 
     <!-- Educación -->
-    {{ with .Params.educacion }}
+    {{ with .Params.education.courses }}
       <section>
         <h2 class="text-xl font-semibold mb-3">Educación</h2>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
           {{ range . }}
-            <li>{{ . }}</li>
+            <li>
+              {{ .course }}
+              {{ with .institution }} — {{ . }}{{ end }}
+              {{ with .year }} ({{ . }}){{ end }}
+            </li>
           {{ end }}
         </ul>
       </section>
