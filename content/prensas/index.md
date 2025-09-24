@@ -6,212 +6,228 @@ design:
   spacing: "2rem"
 
 sections:
-  # ===== 1) Tarjetas (features, 3 columnas) =====
   - block: features
     id: medios-cards
     content:
-      title: "Formato tarjeta"
-      text: ""
+      title: "En los medios — formato tarjetas"
       items:
-        - name: "Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA"
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/infobae.jpg" alt="Infobae" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>Infobae</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">iProfesional</div>
-            En diálogo con iProfesional, Nicolás Palopoli contó los detalles del apoyo de la NASA democratizar el acceso al conocimiento científico.
-        - name: "MetaDocencia crece con cursos para la comunidad"
+            <div class="font-semibold">MetaDocencia: el arte de divulgar al mundo la enseñanza de la ciencia en español (apoyo de CZI)</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Laura Ación comentó misión, recorrido y próximos pasos de MetaDocencia.</p>
+          link: "https://www.infobae.com/tendencias/2023/04/25/metadocencia-el-arte-de-divulgar-al-mundo-la-ensenanza-de-la-ciencia-en-espanol-y-con-el-apoyo-de-mark-zuckerberg/?utm_medium=Echobox&utm_source=Twitter#Echobox=1682405050"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/hospitalitaliano.png" alt="Revista Innova — Hospital Italiano" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>Revista Innova — Hospital Italiano</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">La Capital</div>
-            En diálogo con Micaela Pereyra del periódico La Capital (Rosario, Argentina), Romina Pendino y Nicolás Palopoli compartieron la trayectoria y presente de MetaDocencia.
-        - name: "ChatGPT: ante falta de control, la Inteligencia Artificial pone en alerta a las escuelas argentinas"
+            <div class="font-semibold">“Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Entrevista a Laura Ación (PDF).</p>
+          link: "https://www.hospitalitaliano.org.ar/multimedia/archivos/noticias_archivos/11/Revista/11_InnovaNoviembreDobles.pdf"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/lapampanoticias.jpg" alt="La Pampa Noticias" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>La Pampa Noticias</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">iProfesional</div>
-        - name: "Declaración de Montevideo sobre IA en América Latina"
+            <div class="font-semibold">MetaDocencia: Cómo virtualizar la educación</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Cobertura en redes.</p>
+          link: "https://www.facebook.com/lapampanoticias/posts/metadocencia-cómo-virtualizar-la-educacióninvestigadores-del-inta-del-conicet-y-/1305419322983230/"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/defrentealcampo.jpg" alt="De Frente al Campo (INTA)" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>De Frente al Campo (INTA)</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">iProfesional</div>
-            Laura Ación fue una de las más de 400 personas del mundo de la ciencia y la investigación que firmó la Declaración de Montevideo sobre Inteligencia Artificial y su impacto en América Latina, y advirtió sobre la irresponsabilidad con la que se lanzó al mundo esta herramienta de IA.
-        - name: "MetaDocencia: misión, recorrido y próximos pasos (apoyo de CZI Science)"
+            <div class="font-semibold">Investigadora de INTA Anguil participa de MetaDocencia</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Proyecto para capacitar a docentes en educación virtual.</p>
+          link: "https://www.defrentealcampo.com.ar/investigadora-de-inta-anguil-participa-de-metadociencia-un-proyecto-para-capacitar-a-docentes-en-educacion-virtual/"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/eldocetv.jpg" alt="eldoce.tv" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>eldoce.tv</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">Infobae</div>
-            Laura Ación comentó la misión, recorrido y siguientes pasos de MetaDocencia, y el impulso que tuvimos gracias al apoyo y la libertad de trabajo que nos dio CZI Science.
-        - name: "Mitos y verdades sobre la IA y big data"
+            <div class="font-semibold">La felicidad compartida se multiplica, la pena compartida disminuye</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Opinión sobre clases virtuales en pandemia.</p>
+          link: "https://eldoce.tv/opinion/metadocencia-clase-virtual-cuarentena-coronavirus-la-felicidad-compartida-se-multiplica-la-pena-compartida-disminuye_97495/"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/lacapital.jpg" alt="La Capital" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>La Capital</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">La Ciencia y la Salud — Fundación Medifé</div>
-            Laura Ación en La Ciencia y la Salud, Fundación Medifé: “Mitos y verdades sobre la IA y big data”.
-        - name: "El problema surge cuando la IA se mete con la democracia, la salud o la justicia"
+            <div class="font-semibold">Capacitación docente sobre enseñanza virtual</div>
+          link: "https://www.lacapital.com.ar/educacion/capacitacion-docente-ensenanza-virtual-n2582884.html"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-gray-700 text-xs font-semibold">P</span>
+              <span>Diario Perfil</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">Diario Perfil</div>
-            Laura Ación en #AgendaAcadémica.
-        - name: "Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial"
+            <div class="font-semibold">“El problema surge cuando la IA se mete con la democracia, la salud o la justicia”</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">#AgendaAcadémica — entrevista a Laura Ación.</p>
+          link: "https://www.perfil.com/noticias/agenda-academica/laura-acion-el-problema-surge-cuando-la-inteligencia-artificial-se-mete-con-la-democracia-la-salud-o-la-justicia.phtml"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/medife.png" alt="La Ciencia y la Salud — Fundación Medifé" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>La Ciencia y la Salud — Fundación Medifé</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">Revista Innova — Hospital Italiano</div>
-            Laura Ación: “Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”.
-        - name: "Capacitación docente sobre enseñanza virtual"
+            <div class="font-semibold">Mitos y verdades sobre la IA y big data</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Entrevista (audio en SoundCloud).</p>
+          link: "https://soundcloud.com/fundacionmedife/dra-laura-acion-dir?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/iprofesional.jpg" alt="iProfesional" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>iProfesional</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">La Capital</div>
-        - name: "Investigadora de INTA Anguil participa de MetaDocencia"
+            <div class="font-semibold">ChatGPT: la IA pone en alerta a la educación</div>
+          link: "https://www.iprofesional.com/tecnologia/381359-chatgpt-la-inteligencia-artificial-pone-en-alerta-a-la-educacion"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/lacapital.jpg" alt="La Capital" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>La Capital</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">INTA Anguil</div>
-            Investigadora de INTA Anguil participa de Metadocencia, un proyecto para capacitar a docentes en educación virtual.
-        - name: "La felicidad compartida se multiplica, la pena compartida disminuye"
+            <div class="font-semibold">MetaDocencia, un espacio que crece con cursos gratuitos para la comunidad</div>
+          link: "https://www.lacapital.com.ar/educacion/metadocencia-un-espacio-que-crece-cursos-gratuitos-la-comunidad-n10071055.html"
+
+        - name: |
+            <div class="flex items-center gap-2">
+              <img src="/prensa/iprofesional.jpg" alt="iProfesional" class="h-6 md:h-7 object-contain" loading="lazy">
+              <span>iProfesional</span>
+            </div>
           description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">eldoce.tv</div>
-        - name: "MetaDocencia: Cómo virtualizar la educación"
-          description: |
-            <div class="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400 mb-1">La Pampa Noticias</div>
+            <div class="font-semibold">Educación remota: el emprendimiento argentino que apoya la NASA</div>
+          link: "https://www.iprofesional.com/actualidad/383886-educacion-remota-el-emprendimiento-argentino-que-apoya-la-nasa"
     design:
       columns: 3
 
-  # ===== 2) Lista simple (markdown) =====
-  - block: markdown
-    id: medios-lista
-    content:
-      title: "Formato lista simple"
-      text: |
-        - **iProfesional** — *Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA*.  
-          En diálogo con iProfesional, Nicolás Palopoli contó los detalles del apoyo de la NASA democratizar el acceso al conocimiento científico.
-        - **La Capital** — *MetaDocencia crece con cursos para la comunidad*.  
-          En diálogo con Micaela Pereyra (Rosario, Argentina), Romina Pendino y Nicolás Palopoli compartieron la trayectoria y presente de MetaDocencia.
-        - **iProfesional** — *ChatGPT: ante falta de control, la IA pone en alerta a las escuelas argentinas*.
-        - **iProfesional** — *Declaración de Montevideo sobre IA en América Latina*.  
-          Laura Ación, firmante, advirtió sobre la irresponsabilidad en el lanzamiento global de esta herramienta.
-        - **Infobae** — *MetaDocencia: misión, recorrido y próximos pasos (apoyo de CZI Science)*.
-        - **La Ciencia y la Salud — Fundación Medifé** — *Mitos y verdades sobre la IA y big data*.
-        - **Diario Perfil** — *El problema surge cuando la IA se mete con la democracia, la salud o la justicia*.
-        - **Revista Innova — Hospital Italiano** — *Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial*.
-        - **La Capital** — *Capacitación docente sobre enseñanza virtual*.
-        - **INTA Anguil** — *Investigadora de INTA Anguil participa de MetaDocencia*.
-        - **eldoce.tv** — *La felicidad compartida se multiplica, la pena compartida disminuye*.
-        - **La Pampa Noticias** — *MetaDocencia: Cómo virtualizar la educación*.
-
-  # ===== 3) Testimoniales (bloques de cita) =====
-  - block: testimonials
-    id: medios-testimoniales
-    content:
-      title: "Formato testimoniales"
-      items:
-        - name: "Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA"
-          role: "iProfesional"
-          text: "En diálogo con iProfesional, Nicolás Palopoli contó los detalles del apoyo de la NASA democratizar el acceso al conocimiento científico."
-        - name: "MetaDocencia crece con cursos para la comunidad"
-          role: "La Capital"
-          text: "Romina Pendino y Nicolás Palopoli compartieron la trayectoria y presente de MetaDocencia."
-        - name: "ChatGPT y escuelas argentinas"
-          role: "iProfesional"
-          text: "Ante falta de control, la IA pone en alerta a las escuelas argentinas."
-        - name: "Declaración de Montevideo sobre IA"
-          role: "iProfesional"
-          text: "Laura Ación, una de las firmantes, advirtió sobre la irresponsabilidad del lanzamiento global de la herramienta."
-        - name: "MetaDocencia y CZI Science"
-          role: "Infobae"
-          text: "Misión, recorrido y próximos pasos gracias al apoyo y la libertad de trabajo de CZI Science."
-        - name: "Mitos y verdades sobre la IA y big data"
-          role: "La Ciencia y la Salud — Fundación Medifé"
-          text: "Entrevista a Laura Ación."
-        - name: "IA, democracia, salud y justicia"
-          role: "Diario Perfil"
-          text: "Laura Ación en #AgendaAcadémica."
-        - name: "Virtualidad y presencialidad"
-          role: "Revista Innova — Hospital Italiano"
-          text: "Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial."
-        - name: "Capacitación docente sobre enseñanza virtual"
-          role: "La Capital"
-          text: ""
-        - name: "INTA Anguil"
-          role: "INTA Anguil"
-          text: "Investigadora de INTA Anguil participa de MetaDocencia."
-        - name: "La felicidad compartida se multiplica"
-          role: "eldoce.tv"
-          text: ""
-        - name: "MetaDocencia: Cómo virtualizar la educación"
-          role: "La Pampa Noticias"
-          text: ""
-
-  # ===== 4) Tarjetas apiladas (features, 1 columna) =====
   - block: features
     id: medios-stack
     content:
-      title: "Formato tarjetas apiladas"
+      title: "En los medios — formato tarjetas apiladas"
       items:
-        - name: "iProfesional"
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/infobae.jpg" alt="Infobae" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>Infobae</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">En diálogo con iProfesional, Nicolás Palopoli contó los detalles del apoyo de la NASA para democratizar el acceso al conocimiento científico.</div>
-        - name: "La Capital"
+            <div class="text-base md:text-lg font-semibold">MetaDocencia: el arte de divulgar al mundo la enseñanza de la ciencia en español (apoyo de CZI)</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Nota de tendencias.</p>
+          link: "https://www.infobae.com/tendencias/2023/04/25/metadocencia-el-arte-de-divulgar-al-mundo-la-ensenanza-de-la-ciencia-en-espanol-y-con-el-apoyo-de-mark-zuckerberg/?utm_medium=Echobox&utm_source=Twitter#Echobox=1682405050"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/hospitalitaliano.png" alt="Revista Innova — Hospital Italiano" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>Revista Innova — Hospital Italiano</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">MetaDocencia crece con cursos para la comunidad</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Entrevista a Romina Pendino y Nicolás Palopoli.</div>
-        - name: "iProfesional"
+            <div class="text-base md:text-lg font-semibold">“Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Entrevista a Laura Ación (PDF).</p>
+          link: "https://www.hospitalitaliano.org.ar/multimedia/archivos/noticias_archivos/11/Revista/11_InnovaNoviembreDobles.pdf"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/lapampanoticias.jpg" alt="La Pampa Noticias" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>La Pampa Noticias</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">ChatGPT: la IA pone en alerta a las escuelas argentinas</div>
-        - name: "iProfesional"
+            <div class="text-base md:text-lg font-semibold">MetaDocencia: Cómo virtualizar la educación</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Cobertura en redes.</p>
+          link: "https://www.facebook.com/lapampanoticias/posts/metadocencia-cómo-virtualizar-la-educacióninvestigadores-del-inta-del-conicet-y-/1305419322983230/"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/defrentealcampo.jpg" alt="De Frente al Campo (INTA)" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>De Frente al Campo (INTA)</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Declaración de Montevideo sobre IA en América Latina</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Laura Ación, firmante, advirtió sobre su lanzamiento irresponsable.</div>
-        - name: "Infobae"
+            <div class="text-base md:text-lg font-semibold">Investigadora de INTA Anguil participa de MetaDocencia</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Capacitación docente en educación virtual.</p>
+          link: "https://www.defrentealcampo.com.ar/investigadora-de-inta-anguil-participa-de-metadociencia-un-proyecto-para-capacitar-a-docentes-en-educacion-virtual/"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/eldocetv.jpg" alt="eldoce.tv" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>eldoce.tv</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">MetaDocencia: misión, recorrido y próximos pasos (apoyo de CZI)</div>
-        - name: "La Ciencia y la Salud — Fundación Medifé"
+            <div class="text-base md:text-lg font-semibold">La felicidad compartida se multiplica, la pena compartida disminuye</div>
+          link: "https://eldoce.tv/opinion/metadocencia-clase-virtual-cuarentena-coronavirus-la-felicidad-compartida-se-multiplica-la-pena-compartida-disminuye_97495/"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/lacapital.jpg" alt="La Capital" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>La Capital</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Mitos y verdades sobre la IA y big data</div>
-        - name: "Diario Perfil"
+            <div class="text-base md:text-lg font-semibold">Capacitación docente sobre enseñanza virtual</div>
+          link: "https://www.lacapital.com.ar/educacion/capacitacion-docente-ensenanza-virtual-n2582884.html"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center h-7 w-7 rounded-full bg-gray-200 text-gray-700 text-sm font-semibold">P</span>
+              <span>Diario Perfil</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">El problema surge cuando la IA se mete con la democracia, la salud o la justicia</div>
-        - name: "Revista Innova — Hospital Italiano"
+            <div class="text-base md:text-lg font-semibold">“El problema surge cuando la IA se mete con la democracia, la salud o la justicia”</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">#AgendaAcadémica — entrevista a Laura Ación.</p>
+          link: "https://www.perfil.com/noticias/agenda-academica/laura-acion-el-problema-surge-cuando-la-inteligencia-artificial-se-mete-con-la-democracia-la-salud-o-la-justicia.phtml"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/medife.png" alt="La Ciencia y la Salud — Fundación Medifé" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>La Ciencia y la Salud — Fundación Medifé</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial</div>
-        - name: "La Capital"
+            <div class="text-base md:text-lg font-semibold">Mitos y verdades sobre la IA y big data</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Entrevista (audio).</p>
+          link: "https://soundcloud.com/fundacionmedife/dra-laura-acion-dir?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/iprofesional.jpg" alt="iProfesional" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>iProfesional</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Capacitación docente sobre enseñanza virtual</div>
-        - name: "INTA Anguil"
+            <div class="text-base md:text-lg font-semibold">ChatGPT: la IA pone en alerta a la educación</div>
+          link: "https://www.iprofesional.com/tecnologia/381359-chatgpt-la-inteligencia-artificial-pone-en-alerta-a-la-educacion"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/lacapital.jpg" alt="La Capital" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>La Capital</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">Investigadora de INTA Anguil participa de MetaDocencia</div>
-        - name: "eldoce.tv"
+            <div class="text-base md:text-lg font-semibold">MetaDocencia: un espacio que crece con cursos gratuitos</div>
+          link: "https://www.lacapital.com.ar/educacion/metadocencia-un-espacio-que-crece-cursos-gratuitos-la-comunidad-n10071055.html"
+
+        - name: |
+            <div class="flex items-center gap-3">
+              <img src="/prensa/iprofesional.jpg" alt="iProfesional" class="h-7 md:h-8 object-contain" loading="lazy">
+              <span>iProfesional</span>
+            </div>
           description: |
-            <div class="text-lg font-semibold">La felicidad compartida se multiplica, la pena compartida disminuye</div>
-        - name: "La Pampa Noticias"
-          description: |
-            <div class="text-lg font-semibold">MetaDocencia: Cómo virtualizar la educación</div>
+            <div class="text-base md:text-lg font-semibold">Educación remota: el emprendimiento argentino que apoya la NASA</div>
+          link: "https://www.iprofesional.com/actualidad/383886-educacion-remota-el-emprendimiento-argentino-que-apoya-la-nasa"
     design:
       columns: 1
-
-  # ===== 5) Cards en grid (markdown con HTML/Tailwind) =====
-  - block: markdown
-    id: medios-cards-grid
-    content:
-      title: "Formato cards (grid HTML)"
-      text: |
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">iProfesional</div><div class="font-semibold">Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA</div><p class="text-sm text-gray-600">En diálogo con iProfesional, Nicolás Palopoli contó los detalles…</p></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">La Capital</div><div class="font-semibold">MetaDocencia crece con cursos para la comunidad</div><p class="text-sm text-gray-600">Entrevista a Romina Pendino y Nicolás Palopoli.</p></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">iProfesional</div><div class="font-semibold">ChatGPT: la IA alerta a las escuelas argentinas</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">iProfesional</div><div class="font-semibold">Declaración de Montevideo sobre IA en América Latina</div><p class="text-sm text-gray-600">Laura Ación, firmante, advirtió sobre su lanzamiento irresponsable.</p></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">Infobae</div><div class="font-semibold">MetaDocencia: misión, recorrido y próximos pasos (apoyo de CZI)</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">Fundación Medifé</div><div class="font-semibold">Mitos y verdades sobre la IA y big data</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">Diario Perfil</div><div class="font-semibold">La IA y su impacto en democracia, salud y justicia</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">Revista Innova</div><div class="font-semibold">Aprovechar lo mejor de lo virtual y lo presencial</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">La Capital</div><div class="font-semibold">Capacitación docente sobre enseñanza virtual</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">INTA Anguil</div><div class="font-semibold">Investigadora de INTA Anguil participa de MetaDocencia</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">eldoce.tv</div><div class="font-semibold">La felicidad compartida se multiplica…</div></div>
-          <div class="border rounded-lg p-4"><div class="text-xs uppercase text-gray-500">La Pampa Noticias</div><div class="font-semibold">MetaDocencia: Cómo virtualizar la educación</div></div>
-        </div>
-
-  # ===== 6) Tabla resumida (markdown) =====
-  - block: markdown
-    id: medios-tabla
-    content:
-      title: "Formato tabla"
-      text: |
-        | Medio | Título / Descripción |
-        |---|---|
-        | iProfesional | Educación científica gratuita y remota: cómo es el emprendimiento argentino que apoya la NASA — En diálogo con iProfesional, Nicolás Palopoli contó los detalles del apoyo de la NASA. |
-        | La Capital | MetaDocencia crece con cursos para la comunidad — Entrevista a Romina Pendino y Nicolás Palopoli. |
-        | iProfesional | ChatGPT: ante falta de control, la IA alerta a las escuelas argentinas. |
-        | iProfesional | Declaración de Montevideo sobre IA en América Latina — Laura Ación, firmante, advirtió sobre el lanzamiento irresponsable. |
-        | Infobae | MetaDocencia: misión, recorrido y próximos pasos (apoyo de CZI Science). |
-        | Fundación Medifé | Mitos y verdades sobre la IA y big data. |
-        | Diario Perfil | “El problema surge cuando la IA se mete con la democracia, la salud o la justicia”. |
-        | Revista Innova — Hospital Italiano | “Con el tiempo vamos a aprovechar lo mejor de lo virtual y lo presencial”. |
-        | La Capital | Capacitación docente sobre enseñanza virtual. |
-        | INTA Anguil | Investigadora de INTA Anguil participa de MetaDocencia. |
-        | eldoce.tv | La felicidad compartida se multiplica, la pena compartida disminuye. |
-        | La Pampa Noticias | MetaDocencia: Cómo virtualizar la educación. |
 ---
