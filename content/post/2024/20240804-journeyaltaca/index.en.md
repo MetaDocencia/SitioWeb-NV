@@ -20,7 +20,7 @@ categories:
   - Training
   - Institutional
 weight: 1
-translationKey: "20240724-journey-alta-ca"
+translationKey: 20240704-RecorridoALTaCA
 ---
 
 Since partnering with NASA to champion Open Science, as we mentioned in [this post](https://www.metadocencia.org/en/post/nasatops/), we began designing, developing, contextualizing, and implementing [virtual training cohorts for Spanish speakers](https://zenodo.org/record/8215456), covering the five modules of [Open Science 101](https://nasa.github.io/Transform-to-Open-Science/open-science-101/), originally designed for English speakers and high-income research environments.
