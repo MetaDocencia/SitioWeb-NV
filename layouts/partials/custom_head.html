@@ -12,33 +12,46 @@ m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" referrerpolicy="no-referrer" />
 
 <style>
-  /* === Tamaño del logo en la navbar === */
+  /* === LOGO EN NAVBAR, DOBLE TAMAÑO & MENOS AIRE === */
   [data-widget="navbar"] .navbar-brand img {
-    height: 44px;     /* móvil */
-    max-height: 44px;
+    display: block;
+    height: 88px !important;   /* móvil ~x2 */
+    max-height: 88px !important;
     width: auto;
+    object-fit: contain;
+    /* “Comer” margen interno del archivo con margen negativo externo */
+    margin-top: -8px;   /* ajustá a ojo según tu logo */
+    margin-bottom: -8px;
+    margin-left: -6px;
+    margin-right: -6px;
   }
   @media (min-width: 640px){ /* sm */
-    [data-widget="navbar"] .navbar-brand img { height: 52px; max-height: 52px; }
+    [data-widget="navbar"] .navbar-brand img {
+      height: 104px !important;
+      max-height: 104px !important;
+      margin-top: -10px; margin-bottom: -10px;
+    }
   }
   @media (min-width: 1024px){ /* lg */
-    [data-widget="navbar"] .navbar-brand img { height: 60px; max-height: 60px; }
+    [data-widget="navbar"] .navbar-brand img {
+      height: 120px !important;   /* antes 60px → ahora x2 */
+      max-height: 120px !important;
+      margin-top: -12px; margin-bottom: -12px;
+    }
   }
 
-  /* Compactar/expandir la barra para que el logo grande no “empuje” todo */
+  /* Compactar la barra para que el logo grande no rompa el layout */
   [data-widget="navbar"] .navbar {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
   }
-
-  /* Centrado vertical fino de marca y botón */
+  /* Alinear verticalmente todo */
   [data-widget="navbar"] .navbar-brand,
   [data-widget="navbar"] .navbar .navbar-nav,
   [data-widget="navbar"] .navbar .navbar-extra {
-    display: flex;
-    align-items: center;
+    display: flex; align-items: center;
   }
 
-  /* Si tu logo tiene “aire” (margen blanco alrededor), quitá algo de padding */
-  [data-widget="navbar"] .navbar-brand { padding: 2px 6px; }
+  /* Si el tema trae un max-height por defecto, lo pisamos */
+  .navbar-brand img { max-height: none !important; }
 </style>
