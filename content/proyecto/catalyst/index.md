@@ -15,13 +15,22 @@ Mejorar la accesibilidad y la utilidad de la infraestructura en la nube para las
 ## Al unirse al Proyecto Catalyst, tendrán acceso a:
 - Un centro de computación en la nube interactivo gratuito durante 1 año
 - Soporte y capacitación técnica sobre cómo aprovechar al máximo el recurso de computación en la nube
-- Un programa de entrenamienro de entrenadores para que puedan aprender habilidades de enseñanza y pedagógicas, y así transferir experiencia a sus comunidades de usuarios
+- Un programa de entrenamiento de entrenadores para que puedan aprender habilidades de enseñanza y pedagógicas, y así transferir experiencia a sus comunidades de usuarios
 - Capacitación y tutoría en Ciencia Abierta para desarrollar buenas prácticas de liderazgo para una investigación transparente y accesible
 - Traducción y contextualización de recursos al español para comunidades latinoamericanas
 - Dar forma a nuestro modelo de gobernanza para ayudarnos a mantener, escalar y maximizar el impacto
+
 Desde MetaDocencia tenemos el rol clave de identificar y contactar comunidades latinoamericanas que puedan beneficiarse de participar de esta prueba piloto. Esto es clave para otro proyecto MetaDocente, el [Mapeo de Comunidades](https://www.metadocencia.org/proyecto/mapeo-comunidades/).
 
+## Testimonios
+
+> “Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro.”  
+> **Nicolás Wolovick** — Director UNC Supercómputo
+
+> “Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional.”  
+> **Andres Olivera** — Network Manager, LABI
+
 ## Para seguir leyendo
-- **Página web de Catalyst**: <https://catalystproject.cloud/index.html>  
-- **Formulario de registro**: <https://catalystproject.cloud/register.html>  
-- **Blogpost MetaDocencia**: <https://www.metadocencia.org/post/20231215-comunidadescatalyst/>
+- [**Página web de Catalyst**](https://catalystproject.cloud/index)
+- [**Formulario de registro**](https://catalystproject.cloud/register)
+- [**Blogpost MetaDocencia**](https://www.metadocencia.org/post/20231215-comunidadescatalyst/)
