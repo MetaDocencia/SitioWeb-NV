@@ -10,3 +10,35 @@ m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
 
 <!-- Academicons (para ORCID, etc.) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" referrerpolicy="no-referrer" />
+
+<style>
+  /* === Tamaño del logo en la navbar === */
+  [data-widget="navbar"] .navbar-brand img {
+    height: 44px;     /* móvil */
+    max-height: 44px;
+    width: auto;
+  }
+  @media (min-width: 640px){ /* sm */
+    [data-widget="navbar"] .navbar-brand img { height: 52px; max-height: 52px; }
+  }
+  @media (min-width: 1024px){ /* lg */
+    [data-widget="navbar"] .navbar-brand img { height: 60px; max-height: 60px; }
+  }
+
+  /* Compactar/expandir la barra para que el logo grande no “empuje” todo */
+  [data-widget="navbar"] .navbar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  /* Centrado vertical fino de marca y botón */
+  [data-widget="navbar"] .navbar-brand,
+  [data-widget="navbar"] .navbar .navbar-nav,
+  [data-widget="navbar"] .navbar .navbar-extra {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Si tu logo tiene “aire” (margen blanco alrededor), quitá algo de padding */
+  [data-widget="navbar"] .navbar-brand { padding: 2px 6px; }
+</style>
