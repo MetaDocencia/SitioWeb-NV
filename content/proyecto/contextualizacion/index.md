@@ -18,8 +18,10 @@ Basada en los valores diversidad, autonomía y versatilidad, la contextualizaci�
 
 ## Modelo e Impacto
 El recorrido de contextualización comenzó formalmente con la tarea concreta de adaptar el material del curso de Ciencia Abierta de NASA. Contemplando la fuerza de reflexionar y construir en español, MetaDocencia organizó la conversación en comunidad sobre la mejor manera de pensar en el trabajo a realizar. El intercambio logró superar la cuestión del idioma para que incluyera también la definición del sentido y el objetivo del texto, enmarcando su uso político y comunicacional. 
-Los consensos alcanzados por el trabajo en comunidad guiaron la adecuación de los contenidos de Ciencia Abierta de NASA para que representaran la identidad en Latinoamérica. 87.493 palabras fueron contextualizadas al español por XX personas que trabajaron coordinadamente durante YY semanas.
+Los consensos alcanzados por el trabajo en comunidad guiaron la adecuación de los contenidos de Ciencia Abierta de NASA para que representaran la identidad en Latinoamérica. 87.493 palabras fueron contextualizadas al español por 22 personas que trabajaron coordinadamente durante más de 6 semanas.
 MetaDocencia cuenta con otros proyectos en los que la accesibilidad de contenidos al español es clave. Por ejemplo, como parte de los servicios que brinda, MetaDocencia realizó la contextualización de diversas convocatorias y material de apoyo relacionado publicadas originalmente en inglés por Invest in Open Infrastructure (IOI).
 
 ## Para seguir leyendo
-¿De qué hablamos cuando hablamos de Contextualización?: https://www.metadocencia.org/post/2024/20240725-contextualizacion/
+* Nota de nuestro Blogpost: [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
+* Nota de nuestro Blogpost: [¿De qué hablamos cuando hablamos de Contextualización?](https://mdnv.netlify.app/post/2024/20240725-contextualizacion/)
+* Nota de nuestro Blogpost: [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
