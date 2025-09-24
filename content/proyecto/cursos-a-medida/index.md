@@ -5,6 +5,32 @@ date: 2025-09-23
 tags:
   - Formación
   - Proyectos
+authors:
+  - abellini
+  - andreasancheztapia
+  - beatrizmilz
+  - claudianoneto
+  - elianagonzalez
+  - eliocampitelli
+  - ernestomirt
+  - irenevazano
+  - ivanpoggio
+  - jformoso
+  - jbuede
+  - lacion
+  - laurel
+  - mgayol
+  - mcnanton
+  - pazmiguez
+  - okus
+  - maxwelloliveira
+  - monicaalonso
+  - npalopoli
+  - paocorrales
+  - patriloto
+  - rominapendino
+  - violeta
+  - yabellini
 ---
 
 ## Introducción
