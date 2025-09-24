@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="mx-auto px-6 py-10 max-w-4xl">
+  <!-- Título -->
+  <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
+    {{ .Title }}
+  </h1>
+
+  <!-- Metadata (opcional: autores, fecha, etc.) -->
+  <div class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+    {{ .Date.Format "2006-01-02" }}
+    {{ with .Params.authors }} · {{ delimit . ", " }}{{ end }}
+  </div>
+
+  <!-- Contenido -->
+  <div class="prose dark:prose-invert max-w-none">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}
