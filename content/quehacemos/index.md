@@ -110,6 +110,23 @@ sections:
   # ======================
   #  SECCIÓN: INFRAESTRUCTURA (AZUL)
   # ======================
+  # ======================
+#  SECCIÓN: INFRAESTRUCTURA (AZUL) — banda full-width
+# ======================
+  - block: hero
+    id: infra
+    content:
+      title: "Impulsamos Infraestructura"
+      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento."
+    design:
+      spacing:
+        padding: ["1.25rem", 0, "1rem", 0]
+      css_class: ""
+      css_style: "background:#00506F;color:#FFFFFF;"
+      background:
+        text_color_light: true
+
+  
   - block: cta-card
     id: infra
     content:
