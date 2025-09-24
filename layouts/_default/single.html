@@ -8,16 +8,33 @@
       {{ .Title }}
     </h1>
 
-    <!-- Metadata (fecha + autores opcional) -->
+    <!-- Metadata (fecha + autores con nombres completos y links) -->
     <div class="mb-6 text-sm text-gray-500 dark:text-gray-400">
       {{ .Date.Format "2006-01-02" }}
-      {{ with .Params.authors }} · {{ delimit . ", " }}{{ end }}
+      {{ $auth := .Params.authors }}
+      {{ if $auth }}
+        · {{ partial "authors-list.html" (dict "Page" . "Authors" $auth) }}
+      {{ end }}
+      {{/* Importante: NO mostramos tags aquí para no mezclarlos con autorías */}}
     </div>
 
     <!-- Contenido -->
     <div class="prose dark:prose-invert max-w-none
                 prose-img:rounded-xl prose-img:mx-auto
                 prose-video:mx-auto prose-iframe:mx-auto">
+
+      <!-- Embeds responsivos (iframe / video) -->
+      <style>
+        .prose iframe,
+        .prose video {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 16/9;
+        }
+        .prose figure > img { margin: 0 auto; height: auto; max-width: 100%; }
+        .prose img { height: auto; max-width: 100%; }
+      </style>
+
       {{ .Content }}
     </div>
   </div>
