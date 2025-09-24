@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="mx-auto px-6 py-10 max-w-3xl">
+
+  <!-- Título -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">{{ .Title }}</h1>
+
+  <!-- Meta: fecha, autores (nombres completos), tiempo de lectura -->
+  <div class="text-sm text-gray-500 dark:text-gray-400 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    {{ partial "authors-list.html" (dict "Page" . "Authors" .Params.authors) }}
+    <span>·</span><span>{{ .ReadingTime }} min</span>
+  </div>
+
+  <!-- Contenido -->
+  <article class="prose dark:prose-invert max-w-none">
+    {{ .Content }}
+  </article>
+
+</section>
+{{ end }}
