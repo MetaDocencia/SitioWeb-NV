@@ -1,85 +1,103 @@
 {{ define "main" }}
-<section class="container mx-auto px-6 py-8">
-  {{/* ==== Datos base ==== */}}
-  {{ $img := "" }}
-  {{ with .Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ end }}
-  {{ if and (not $img) (isset .Params "image") }}{{ $img = (.Params.image | relURL) }}{{ end }}
+<section class="mx-auto px-6 py-10 max-w-6xl grid grid-cols-1 lg:grid-cols-4 gap-10">
 
-  <header class="flex flex-col md:flex-row md:items-center gap-6">
-    {{ if $img }}
-      <img src="{{ $img }}" alt="{{ .Title }}" class="w-32 h-32 rounded-full object-cover" loading="lazy">
-    {{ else }}
-      <div class="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+  <!-- Columna izquierda: perfil -->
+  <aside class="lg:col-span-1 text-center lg:text-left">
+    <!-- Foto circular -->
+    {{ with .Params.avatar }}
+      <img src="{{ . | relURL }}" alt="{{ $.Title }}"
+           class="w-40 h-40 rounded-full object-cover mx-auto lg:mx-0 mb-4 shadow">
     {{ end }}
 
-    <div>
-      <h1 class="text-3xl font-extrabold">{{ .Title }}</h1>
-      {{ with .Params.role }}<div class="text-lg opacity-80">{{ . }}</div>{{ end }}
+    <!-- Nombre -->
+    <h1 class="text-2xl font-bold mb-1">{{ .Title }}</h1>
 
-      {{ with .Params.organizations }}
-        <div class="text-sm opacity-80 mt-1">
-          {{ range $i, $org := . }}
-            {{ if gt $i 0 }}, {{ end }}
-            {{ with $org.url }}<a href="{{ . }}" class="underline">{{ $org.name }}</a>{{ else }}{{ $org.name }}{{ end }}
-          {{ end }}
-        </div>
+    <!-- Rol -->
+    {{ with .Params.role }}
+      <p class="text-gray-600 dark:text-gray-400 mb-3">{{ . }}</p>
+    {{ end }}
+
+    <!-- Redes sociales -->
+    <div class="flex justify-center lg:justify-start gap-3 mb-6">
+      {{ with .Params.twitter }}
+        <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener"
+           class="text-gray-500 hover:text-blue-500">
+          <i class="fab fa-twitter"></i>
+        </a>
       {{ end }}
-
-      {{ with .Params.profiles }}
-        <div class="flex flex-wrap gap-3 mt-3">
-          {{ range . }}
-            <a href="{{ .url }}" {{ if .label }}aria-label="{{ .label }}"{{ end }} class="inline-flex items-center gap-2 underline">
-              {{ if .icon }}{{ partial "blox/icon.html" (dict "name" .icon) }}{{ end }}
-              {{ if .label }}<span>{{ .label }}</span>{{ end }}
-            </a>
-          {{ end }}
-        </div>
+      {{ with .Params.mastodon }}
+        <a href="{{ . }}" target="_blank" rel="noopener"
+           class="text-gray-500 hover:text-purple-500">
+          <i class="fab fa-mastodon"></i>
+        </a>
       {{ end }}
-    </div>
-  </header>
-
-  {{ with .Params.bio }}
-    <div class="prose mt-6">{{ . | markdownify }}</div>
-  {{ end }}
-
-  {{ with .Params.interests }}
-    <h2 class="text-xl font-bold mt-10">Intereses</h2>
-    <ul class="list-disc list-inside mt-2">
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
-  {{ end }}
-
-  {{ with .Params.education.courses }}
-    <h2 class="text-xl font-bold mt-8">Educación</h2>
-    <ul class="mt-2">
-      {{ range . }}
-        <li class="mt-2">
-          <div class="font-semibold">{{ .course }}</div>
-          <div class="text-sm opacity-80">
-            {{ .institution }}{{ with .year }} — {{ . }}{{ end }}
-          </div>
-        </li>
+      {{ with .Params.linkedin }}
+        <a href="{{ . }}" target="_blank" rel="noopener"
+           class="text-gray-500 hover:text-blue-700">
+          <i class="fab fa-linkedin"></i>
+        </a>
       {{ end }}
-    </ul>
-  {{ end }}
-
-  {{/* Notas del autor (si los posts tienen authors: [<slug>]) */}}
-  {{ $dir := .File.Dir | replaceRE "^content/(author|authors)/" "" | replaceRE "/$" "" }}
-  {{ $posts := where site.RegularPages "Params.authors" "intersect" (slice $dir) }}
-  {{ if gt (len $posts) 0 }}
-    <h2 class="text-xl font-bold mt-10">Notas del blog</h2>
-    <div class="grid gap-6 md:grid-cols-2 mt-4">
-      {{ range $posts.ByDate.Reverse }}
-        <a class="block p-4 border rounded-lg hover:shadow" href="{{ .RelPermalink }}">
-          {{ with .Params.image.featured }}
-            <img src="{{ . | relURL }}" class="w-full h-40 object-cover rounded mb-3" loading="lazy">
-          {{ end }}
-          <div class="text-sm opacity-70">{{ .Date.Format "2006-01-02" }}</div>
-          <div class="font-semibold">{{ .Title }}</div>
-          {{ with .Params.summary }}<div class="opacity-80 mt-1 text-sm">{{ . }}</div>{{ end }}
+      {{ with .Params.github }}
+        <a href="https://github.com/{{ . }}" target="_blank" rel="noopener"
+           class="text-gray-500 hover:text-black dark:hover:text-white">
+          <i class="fab fa-github"></i>
         </a>
       {{ end }}
     </div>
-  {{ end }}
+  </aside>
+
+  <!-- Columna derecha: contenido -->
+  <div class="lg:col-span-3 space-y-10">
+
+    <!-- Experiencia y trayectoria -->
+    {{ with .Content }}
+      <div class="prose dark:prose-invert max-w-none">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <!-- Intereses -->
+    {{ with .Params.intereses }}
+      <section>
+        <h2 class="text-xl font-semibold mb-3">Intereses</h2>
+        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    <!-- Educación -->
+    {{ with .Params.educacion }}
+      <section>
+        <h2 class="text-xl font-semibold mb-3">Educación</h2>
+        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    <!-- Notas donde aparece como autor -->
+    <section>
+      <h2 class="text-xl font-semibold mb-3">Publicaciones</h2>
+      <div class="space-y-4">
+        {{ $author := .File.BaseFileName }}
+        {{ $pages := where site.RegularPages "Params.authors" "intersect" (slice $author) }}
+        {{ range $pages }}
+          <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
+            <a href="{{ .RelPermalink }}" class="text-base font-medium hover:underline">
+              {{ .Title }}
+            </a>
+            <p class="text-sm text-gray-500">{{ .Date.Format "2006-01-02" }}</p>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+  </div>
+
 </section>
 {{ end }}
