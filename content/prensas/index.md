@@ -1,7 +1,7 @@
 ---
 title: "MetaDocencia en los medios"
 type: landing
-slug: "prensas"
+slug: "en-los-medios"
 design:
   spacing: "2rem"
 
@@ -29,6 +29,7 @@ sections:
           description: |
             <div class="font-semibold">MetaDocencia crece con cursos para la comunidad</div>
             <p class="text-sm text-gray-700 dark:text-gray-300">En diálogo con Micaela Pereyra del periódico La Capital (Rosario, Argentina), Romina Pendino y Nicolás Palopoli compartieron la trayectoria y presente de MetaDocencia.</p>
+            <a href="https://www.lacapital.com.ar/educacion/metadocencia-un-espacio-que-crece-cursos-gratuitos-la-comunidad-n10071055.html" class="inline-block mt-2 px-3 py-1 rounded-md text-sm font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">Ver nota</a>
 
         - name: |
             <div class="flex items-center gap-2">
@@ -59,7 +60,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <span class="inline-flex items-center justify-center h-24 w-24 md:h-28 md:w-28 rounded-full bg-gray-200 text-gray-700 text-base md:text-lg font-semibold">P</span>
+              <img src="/media/prensa/perfil.jpg" alt="Diario Perfil" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>Diario Perfil</span>
             </div>
           description: |
