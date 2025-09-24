@@ -258,3 +258,6 @@ section.people-7col .grid {
 section.people-naked details > summary {
   margin-bottom: 0.8rem !important;  /* más espacio antes de la primera fila */
 }
+
+.hero-compact { min-height: auto !important; }
+.hero-compact .section-heading { margin: 0.1rem 0 !important; }
