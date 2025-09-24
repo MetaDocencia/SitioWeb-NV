@@ -7,30 +7,19 @@ tags:
   - Proyectos
 ---
 
-## El problema
-Las comunidades históricamente marginadas de los proyectos de infraestructura científica a gran escala —en especial en América Latina y África— tienen barreras para **acceder, usar y sostener** servicios de computación en la nube. La falta de recursos, de acompañamiento pedagógico y de modelos de gobernanza adaptados limita la adopción y el impacto.
+Catalyst tiene como objetivo crear un servicio comunitario de infraestructura en la nube y ofrecer flujos de trabajo en biociencias basados en prácticas comunitarias abiertas e inclusivas, la infraestructura que permita estas prácticas y un enfoque de “formación de formadores”, que capacite a líderes de comunidades locales para compartir su experiencia en infraestructura en la nube con otras personas de sus comunidades.
+Para ello, nos centraremos en comunidades de América Latina y África, y esperamos aprender cómo este modelo podría extenderse a otras comunidades globales históricamente marginadas de los proyectos de infraestructura científica a gran escala.
+Se trata de un esfuerzo de colaboración entre 2i2c, The Carpentries, Center for Scientific Collaboration and Community Engagement, Invest in Open Infrastructure, MetaDocencia y Open Life Science.
+Mejorar la accesibilidad y la utilidad de la infraestructura en la nube para las comunidades globales requiere una combinación de expertise en muchas áreas como pedagogía, infraestructura y conocimientos locales. MetaDocencia está orgullosa de colaborar en este proyecto con 2i2c, OLS, IOI, CSCCE y The Carpentries, con el objetivo de reunir las habilidades que permitan aumentar el acceso a los servicios de computación interactiva para las comunidades de ciencia abierta en América Latina y África
 
-## Cómo encararlo
-**Catalyst** busca crear un **servicio comunitario de infraestructura en la nube** y ofrecer **flujos de trabajo en biociencias** basados en prácticas abiertas e inclusivas. El enfoque combina **infraestructura**, **pedagogía** y **conocimiento local**, junto con un esquema de **“formación de formadores”** que habilita a líderes regionales a transferir capacidades en sus propias comunidades.
-
-Nos centraremos en **América Latina y África**, con la expectativa de **escalar** lo aprendido a otras comunidades globales.
-
-## Acerca de
-Catalyst es una colaboración entre **2i2c**, **The Carpentries**, **Center for Scientific Collaboration and Community Engagement (CSCCE)**, **Invest in Open Infrastructure (IOI)**, **MetaDocencia** y **Open Life Science (OLS)**. Cada organización aporta expertise complementaria para mejorar la **accesibilidad** y la **utilidad** de la nube en investigación.
-
-MetaDocencia contribuye con **contextualización al español**, **formación con mirada local** y **vínculo con comunidades** de ciencia abierta en América Latina.
-
-## Modelo e Impacto
-Al unirse al Proyecto Catalyst, las comunidades acceden a:
-
-- Un **centro de computación en la nube interactivo gratuito durante 1 año**.  
-- **Soporte y capacitación técnica** para aprovechar al máximo el recurso.  
-- Un **programa de entrenamiento de formadores** para desarrollar habilidades pedagógicas y transferir experiencia.  
-- **Capacitación y mentoría en Ciencia Abierta**, para liderar prácticas transparentes y accesibles.  
-- **Traducción y contextualización** de recursos al español para comunidades latinoamericanas.  
-- Participación en el **modelo de gobernanza**, para ayudar a mantener, escalar y maximizar el impacto.
-
-Desde MetaDocencia tenemos un rol clave en **identificar y contactar comunidades latinoamericanas** que puedan beneficiarse de esta prueba piloto. Este trabajo se potencia con el proyecto **[Mapeo de Comunidades](https://www.metadocencia.org/proyecto/mapeo-comunidades/)**.
+## Al unirse al Proyecto Catalyst, tendrán acceso a:
+- Un centro de computación en la nube interactivo gratuito durante 1 año
+- Soporte y capacitación técnica sobre cómo aprovechar al máximo el recurso de computación en la nube
+- Un programa de entrenamienro de entrenadores para que puedan aprender habilidades de enseñanza y pedagógicas, y así transferir experiencia a sus comunidades de usuarios
+- Capacitación y tutoría en Ciencia Abierta para desarrollar buenas prácticas de liderazgo para una investigación transparente y accesible
+- Traducción y contextualización de recursos al español para comunidades latinoamericanas
+- Dar forma a nuestro modelo de gobernanza para ayudarnos a mantener, escalar y maximizar el impacto
+Desde MetaDocencia tenemos el rol clave de identificar y contactar comunidades latinoamericanas que puedan beneficiarse de participar de esta prueba piloto. Esto es clave para otro proyecto MetaDocente, el [Mapeo de Comunidades](https://www.metadocencia.org/proyecto/mapeo-comunidades/).
 
 ## Para seguir leyendo
 - **Página web de Catalyst**: <https://catalystproject.cloud/index.html>  
