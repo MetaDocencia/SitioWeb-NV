@@ -102,19 +102,6 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos locales para ajustar márgenes y gaps =====
-  - block: markdown
-    id: estilos-locales
-    content:
-      title: ""
-      text: |
-        <style>
-          section#numeros .grid { gap: 1.75rem !important; }
-          section#numeros h1, section#numeros h2, section#numeros .section-title {
-            margin-top: 0.15rem !important;
-            margin-bottom: 0.35rem !important;
-          }
-        </style>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
