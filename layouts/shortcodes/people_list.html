@@ -1,15 +1,15 @@
 {{/* Shortcode: people_list — Lista de autores filtrada por uno o varios user_groups.
      Parámetros:
        - group="Nombre"                → un grupo
-       - groups="Grupo A, Grupo B"     → varios grupos (separados por coma o |)
-       - cols=7                        → columnas en XL (3 en mobile, 4 en md)
-       - gapx=12 gapy=14               → separación horizontal/vertical (Tailwind gap)
-       - limit=0                       → 0 o vacío = sin límite
-     Si no se pasa group/groups → muestra TODOS los autores.
+       - groups="Grupo A, Grupo B"     → varios (coma o |)
+       - cols=7                        → columnas en XL (3 mobile, 4 md)
+       - gapx=12 gapy=14               → separación horizontal/vertical
+       - limit=0                       → 0/omitido = sin límite
+     Sin group(s) → muestra TODOS los autores.
 */}}
 
+{{- /* --- Parseo de parámetros --- */ -}}
 {{- $paramGroups := or (.Get "groups") (.Get "group") -}}
-{{- /* Construir slice de grupos pedido(s) */ -}}
 {{- $wanted := slice -}}
 {{- if $paramGroups -}}
   {{- $sep := "," -}}
@@ -20,15 +20,15 @@
   {{- end -}}
 {{- end -}}
 
-{{- $cols := or (.Get "cols") 7 -}}
-{{- $gapx := or (.Get "gapx") 12 -}}
-{{- $gapy := or (.Get "gapy") 14 -}}
+{{- $cols  := or (.Get "cols") 7 -}}
+{{- $gapx  := or (.Get "gapx") 12 -}}
+{{- $gapy  := or (.Get "gapy") 14 -}}
 {{- $limit := or (.Get "limit") 0 -}}
 
-{{- /* Base: sección authors */ -}}
-{{- $authors := where site.Pages "Section" "authors" -}}
+{{- /* --- Base: solo páginas de la sección authors --- */ -}}
+{{- $authors := where site.RegularPages "Section" "authors" -}}
 
-{{- /* Filtrar si pidieron grupos; si no, mostrar todos */ -}}
+{{- /* --- Filtro por grupos si los pidieron --- */ -}}
 {{- if gt (len $wanted) 0 -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
@@ -40,8 +40,9 @@
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{- /* Orden: weight, luego título */ -}}
-{{- $authors = sort $authors ".Params.weight" | sort "Title" -}}
+{{- /* --- Orden estable: primero weight, luego Title (separado, sin pipes) --- */ -}}
+{{- $authors = sort $authors "Params.weight" -}}
+{{- $authors = sort $authors "Title" -}}
 
 {{- if and $limit (gt $limit 0) -}}
   {{- $authors = first $limit $authors -}}
