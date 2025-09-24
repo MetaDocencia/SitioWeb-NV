@@ -1,7 +1,7 @@
 ---
 title: "MetaDocencia en los medios"
 type: landing
-slug: "en-los-medios"
+slug: "prensas"
 design:
   spacing: "2rem"
 
