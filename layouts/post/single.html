@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="mx-auto px-6 py-10 max-w-4xl">
+
+  <!-- Título -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+
+  <!-- Metadatos: fecha · autores (nombres completos) · tiempo de lectura -->
+  <div class="mt-2 text-sm text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+
+    {{ with .Params.authors }}
+      <span>·</span>
+      <span>{{ partial "author_names.html" (dict "authors" .) }}</span>
+    {{ end }}
+
+    <span>·</span>
+    <span>{{ .ReadingTime }} min</span>
+  </div>
+
+  <!-- Contenido + TOC a la derecha (si existe) -->
+  <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <article class="prose dark:prose-invert max-w-none lg:col-span-8">
+      {{ .Content }}
+    </article>
+
+    {{ with .TableOfContents }}
+      {{ if gt (len (plainify .)) 0 }}
+        <aside class="lg:col-span-4">
+          <div class="sticky top-24">
+            <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Contenido</h2>
+            <nav class="text-sm toc prose-ul:my-0 prose-li:my-0">
+              {{ . | safeHTML }}
+            </nav>
+          </div>
+        </aside>
+      {{ end }}
+    {{ end }}
+  </div>
+
+</section>
+
+<!-- CSS mínimo para TOC y media responsiva -->
+<style>
+  /* Media responsiva (iframes, videos, presentaciones) */
+  .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
+  .prose img { height: auto; }
+  /* TOC: listas compactas */
+  .toc ul { list-style: none; padding-left: 0; }
+  .toc li { margin: .25rem 0; }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+</style>
+{{ end }}
