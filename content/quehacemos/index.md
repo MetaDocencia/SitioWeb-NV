@@ -232,6 +232,14 @@ sections:
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
+
+        - name: "Finaciamiento para iniciativas científicas"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>    
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
