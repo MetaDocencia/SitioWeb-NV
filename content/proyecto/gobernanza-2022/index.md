@@ -8,39 +8,47 @@ tags:
 ---
 
 ## El problema
-En comunidades de práctica, la **gobernanza** es clave para orientar decisiones y dar **claridad y transparencia** a los procesos. Muchas comunidades surgen de forma orgánica y su gobernanza puede ser **impracticable o inexistente**, generando **ambigüedades** que afectan sostenibilidad, eficacia y bienestar.
+En el ecosistema de las comunidades de práctica, la gobernanza cumple un rol esencial: establece un marco regulatorio que orienta la toma de decisiones estratégicas y aporta claridad y transparencia en los procesos.  
+Muchas comunidades surgen de manera orgánica, impulsadas por intereses compartidos y vínculos informales. Esto puede llevar a que su gobernanza sea impracticable o no esté definida, causando ambigüedades que afecten la sostenibilidad y eficacia de la comunidad y el bienestar de sus integrantes.
 
 ## Cómo encararlo
-La gobernanza debe ajustarse a **cada comunidad**: tan **robusta** como sea necesario y lo suficientemente **flexible** para adaptarse a contextos y prioridades dinámicas. Como señala Jo Freeman en *La Tiranía de la Falta de Estructuras*: para que todas las personas puedan involucrarse, la **estructura debe ser explícita**, con reglas y procesos **formales y accesibles**.
+La Gobernanza debe atender las particularidades de cada comunidad. Debe ser tan robusta como sea necesario y, al mismo tiempo, lo suficientemente flexible como para adaptarse a la naturaleza de la colaboración entre personas y organizaciones con prioridades, contextos dinámicos.  
+Como dice Jo Freeman en su imprescindible [*La Tiranía de la Falta de Estructuras*](https://utopia.partidopirata.com.ar/la_tirania_de_la_falta_de_estructuras.html) (traducción al español de [*The Tyranny of Structurelessness*](https://www.jofreeman.com/joreen/tyranny.htm), publicado originalmente en 1971):
+
+> “Cualquier grupo de personas que se reúna durante un período de tiempo cualquiera para cualquier propósito inevitablemente se estructurará a sí mismo de alguna manera. (...) Para que todas las personas del grupo tengan la oportunidad de involucrarse y participar en sus actividades, la estructura debe ser explícita, no implícita. Las reglas de toma de decisiones deben estar abiertas y disponibles. Esto solo puede suceder si están formalizadas.”
 
 ## El modelo de trabajo
-Trabajamos en línea con los valores de **comunidad, autonomía y versatilidad**. En **consultoría directa** o con **financiación conjunta**, MetaDocencia acompaña a comunidades para diseñar e implementar una gobernanza **transparente y funcional** que refleje sus compromisos. Los pasos típicos incluyen:
+MetaDocencia confía en que trabajar acorde a los valores de comunidad, autonomía y versatilidad apoya su misión de construir capacidades científicas y técnicas en forma responsable y con mirada local.  
+Por eso, MetaDocencia pone a disposición su experiencia para trabajar en conjunto con la comunidad que busque diseñar e implementar una gobernanza transparente, funcional y que refleje sus prioridades y compromisos.  
 
-- **Aprender** sobre modelos y herramientas de gobernanza.  
-- **Dialogar** en comunidad para construir **consensos**.  
-- **Definir** valores, misión y visión.  
-- **Personalizar** pautas de convivencia e intercambio.  
-- **Organizar** pautas de trabajo del equipo y del **Consejo Asesor**.  
-- **Explorar** mecanismos de toma de decisiones e **instrumentación**.  
-- **Diseñar y redactar** la gobernanza incorporando los aprendizajes comunitarios.
+En el formato de consultoría directa o con financiación conjunta externa, MetaDocencia será la guía para:  
+- Aprender sobre modelos de gobernanza  
+- Generar un diálogo comunitario para la búsqueda de consensos  
+- Definir valores, misión y visión  
+- Personalizar las pautas de convivencia en los espacios de intercambio  
+- Organiizar las pautas de trabajo del equipo y del Consejo Asesor  
+- Explorar modelos para la toma de las decisiones y cómo instrumentarla  
+- Diseñar y redactar la gobernanza incluyendo los aprendizajes comunitarios  
 
 ## Los antecedentes
-En **2022** realizamos un proceso interno de aprendizaje y diseño colaborativo:  
-- **32 actividades** sincrónicas, **10 personas** involucradas, **55+ horas** en **4 meses**.  
-- **8 encuentros abiertos** con especialistas internacionales.  
-- Implementación desde **diciembre de 2022**, con redefinición de equipos y un **Consejo Asesor** renovado.  
-- **Actualización anual** formal desde **2024**, consolidando un modelo de **mejora continua**.  
+MetaDocencia completó en 2022 un proceso de aprendizaje y diseño colaborativo de su gobernanza. Se construyó un modelo transparente, centrado en su contexto cultural y regional, para la toma de decisiones estratégicas y el desarrollo de sus actividades.  
 
-Como parte de nuestros servicios, hemos acompañado el fortalecimiento de la gobernanza de **Latin America Bioimaging (LABI)**.
+El proceso incluyó 32 actividades internas en las que 10 personas del equipo trabajaron activamente de forma sincrónica durante más de 55 horas a lo largo de 4 meses. Fue acompañado de 8 encuentros abiertos a la comunidad, en los que 7 referentes y especialistas de organizaciones de distintos lugares del mundo compartieron sus experiencias. Todo este proceso culminó en la definición de una nueva forma de trabajo.  
+
+La implementación de la nueva Gobernanza de MetaDocencia comenzó en diciembre de 2022 con la redefinición de los equipos de trabajo y la conformación de un Consejo Asesor (CA) renovado. Anualmente, desde 2024, se repiensa, enriquece y actualiza formalmente la documentación de Gobernanza, consolidando así un modelo probado de mejora continua.  
+
+MetaDocencia está formada por profesionales con experiencia en disciplinas y ámbitos diversos. Como parte de sus servicios de consultoría tanto para personas como para organizaciones, en español e inglés. MetaDocencia apoyó el fortalecimiento de la gobernanza comunitaria de Latin America Bioimaging (LABI).
+
 
 ## Lee más
-- **Trabajo intercomunidades**: experiencia de apoyo a la gobernanza de LABI.  
-- **Gobernanza de MetaDocencia**: versión 2.0 y 1.0 (también en inglés).  
-- **Video**: diseño colaborativo de la Gobernanza de MetaDocencia.
+- **Blogpost**: [Trabajo intercomunidades: la experiencia de apoyo al fortalecimiento de la gobernanza comunitaria de LABI](https://mdnv.netlify.app/post/2024/consultoria-labi/)  
+- **Gobernanza de MetaDocencia**: [versión 2.0](https://zenodo.org/records/12522913), [versión 1.0](https://zenodo.org/records/7398893#.Y7gW1HaZNPY), (también [en inglés](https://zenodo.org/records/7399003#.Y7gfDnaZNPZ))  
+- **Video**: [el diseño colaborativo de la Gobernanza de MetaDocencia](https://www.youtube.com/watch?v=02NLFbEwgmQ)
+- **Lista de reproducción**: [Ciclo de encuentros de Gobernanza MetaDocencia](https://www.youtube.com/playlist?list=PLNsHbWOM6tUc3hPxo-EvCtn03Lp_ZcXKy)  
 
-## Para seguir leyendo
-- **The Tyranny of Structurelessness**, Jo Freeman (traducción Partido Pirata de Argentina).  
-- **Governing the Commons: An Appreciation**, Win Grant (en inglés, sobre Elinor Ostrom).  
-- **CommunityRule** — un *toolkit* de gobernanza comunitaria: <https://communityrule.info/>  
-- **Liberating Structures** — patrones para facilitar colaboración: <https://www.liberatingstructures.com/>  
-- **Guía interactiva** para producir gobernanzas en comunidades de práctica — el caso MetaDocencia.
+## Para seguir leyendo:
+- [*The Tyranny of Structurelessness*](https://www.jofreeman.com/joreen/tyranny.htm), por Jo Freeman ([*La tiranía de la falta de estructura*](https://utopia.partidopirata.com.ar/la_tirania_de_la_falta_de_estructuras.html), traducción del Partido Pirata de Argentina)  
+- El trabajo de Elinor Ostrom en [*Governing The Commons: An Appreciation*, por Win Grant (en inglés)](https://blogs.lse.ac.uk/lsereviewofbooks/2012/06/17/elinor-ostroms-work-on-governing-the-commons-an-appreciation/)  
+- [**CommunityRule**](https://communityrule.info/), “a governance toolkit for great communities”. 
+- [**Liberating Structures**](https://www.liberatingstructures.com/), formas sencillas de relacionarse con otras personas que mejoran la forma de construir colectivamente. 
+- Elaboración de una [**guía interactiva**](https://zw4rzzxp.play.borogove.io) para la producción de gobernanzas en comunidades de práctica. El caso de MetaDocencia. Estudiante: Romina Pendino
