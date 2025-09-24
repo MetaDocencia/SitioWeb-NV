@@ -29,7 +29,11 @@
             <!-- Meta: lectura y autorías (SIN tags) -->
             <div class="mt-1 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>{{ .ReadingTime }} min</span>
-              {{ with .Params.authors }}<span>·</span><span>{{ delimit . ", " }}</span>{{ end }}
+              {{ with .Params.authors }}
+  <span>·</span>
+  <span>{{ partial "author_names.html" (dict "authors" .) }}</span>
+{{ end }}
+
               {{/* Tags removidos a pedido:
               {{ with .Params.tags }} ... {{ end }}
               */}}
