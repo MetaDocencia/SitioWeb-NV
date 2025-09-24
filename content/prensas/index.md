@@ -13,7 +13,7 @@ sections:
       items:
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/iprofesional.jpg" alt="iProfesional" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/iprofesional.jpg" alt="iProfesional" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>iProfesional</span>
             </div>
           description: |
@@ -23,7 +23,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/lacapital.jpg" alt="La Capital" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/lacapital.jpg" alt="La Capital" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>La Capital</span>
             </div>
           description: |
@@ -32,7 +32,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/iprofesional.jpg" alt="iProfesional" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/iprofesional.jpg" alt="iProfesional" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>iProfesional</span>
             </div>
           description: |
@@ -41,7 +41,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/infobae.jpg" alt="Infobae" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/infobae.jpg" alt="Infobae" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>Infobae</span>
             </div>
           description: |
@@ -50,7 +50,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/medife.png" alt="La Ciencia y la Salud, Fundación Medifé" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/medife.png" alt="La Ciencia y la Salud, Fundación Medifé" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>La Ciencia y la Salud, Fundación Medifé</span>
             </div>
           description: |
@@ -59,7 +59,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-gray-700 text-xs font-semibold">P</span>
+              <span class="inline-flex items-center justify-center h-24 w-24 md:h-28 md:w-28 rounded-full bg-gray-200 text-gray-700 text-base md:text-lg font-semibold">P</span>
               <span>Diario Perfil</span>
             </div>
           description: |
@@ -68,7 +68,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/hospitalitaliano.png" alt="Revista Innova Hospital Italiano" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/hospitalitaliano.png" alt="Revista Innova Hospital Italiano" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>Revista Innova Hospital Italiano</span>
             </div>
           description: |
@@ -77,7 +77,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/lacapital.jpg" alt="La Capital" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/lacapital.jpg" alt="La Capital" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>La Capital</span>
             </div>
           description: |
@@ -86,7 +86,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="media/prensa/defrentealcampo.jpg" alt="INTA Anguil / De Frente al Campo" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/defrentealcampo.jpg" alt="INTA Anguil / De Frente al Campo" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>INTA Anguil</span>
             </div>
           description: |
@@ -95,7 +95,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="/media/prensa/eldocetv.jpg" alt="eldoce.tv" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/eldocetv.jpg" alt="eldoce.tv" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>eldoce.tv</span>
             </div>
           description: |
@@ -104,7 +104,7 @@ sections:
 
         - name: |
             <div class="flex items-center gap-2">
-              <img src="/media/prensa/lapampanoticias.jpg" alt="La Pampa Noticias" class="h-6 md:h-7 object-contain" loading="lazy">
+              <img src="/media/prensa/lapampanoticias.jpg" alt="La Pampa Noticias" class="h-24 md:h-28 object-contain" loading="lazy">
               <span>La Pampa Noticias</span>
             </div>
           description: |
