@@ -1,14 +1,14 @@
-{{/* Shortcode: people_list — Lista de autores filtrada por uno o varios user_groups.
-     Parámetros:
-       - group="Nombre"                → un grupo
-       - groups="Grupo A, Grupo B"     → varios (coma o |)
-       - cols=7                        → columnas en XL (3 mobile, 4 md)
-       - gapx=12 gapy=14               → separación horizontal/vertical
-       - limit=0                       → 0/omitido = sin límite
-     Sin group(s) → muestra TODOS los autores.
+{{/* Shortcode: people_list — Lista de autores por user_groups.
+
+Parámetros:
+  - group="Nombre"              → un grupo
+  - groups="A, B"  ó "A|B"      → varios
+  - cols=7  (o columns=7)       → columnas en XL (3 mobile, 4 md)
+  - gapx=12  gapy=14            → separación horizontal/vertical
+  - limit=0                     → 0/omitido = sin límite
 */}}
 
-{{- /* --- Parseo de parámetros --- */ -}}
+{{- /* --- Grupos solicitados --- */ -}}
 {{- $paramGroups := or (.Get "groups") (.Get "group") -}}
 {{- $wanted := slice -}}
 {{- if $paramGroups -}}
@@ -20,15 +20,17 @@
   {{- end -}}
 {{- end -}}
 
-{{- $cols  := or (.Get "cols") 7 -}}
+{{- /* --- Opciones visuales --- */ -}}
+{{- $colsA := or (.Get "cols") 7 -}}
+{{- $cols  := or (.Get "columns") $colsA -}}
 {{- $gapx  := or (.Get "gapx") 12 -}}
 {{- $gapy  := or (.Get "gapy") 14 -}}
 {{- $limit := or (.Get "limit") 0 -}}
 
-{{- /* --- Base: solo páginas de la sección authors --- */ -}}
-{{- $authors := where site.RegularPages "Section" "authors" -}}
+{{- /* --- Base: sección authors (¡ojo! usar site.Pages, no RegularPages) --- */ -}}
+{{- $authors := where site.Pages "Section" "authors" -}}
 
-{{- /* --- Filtro por grupos si los pidieron --- */ -}}
+{{- /* --- Filtro por grupos si se pidieron --- */ -}}
 {{- if gt (len $wanted) 0 -}}
   {{- $filtered := slice -}}
   {{- range $authors -}}
@@ -40,10 +42,9 @@
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{- /* --- Orden estable: primero weight, luego Title (separado, sin pipes) --- */ -}}
+{{- /* --- Orden: weight luego Title (en pasos separados) --- */ -}}
 {{- $authors = sort $authors "Params.weight" -}}
 {{- $authors = sort $authors "Title" -}}
-
 {{- if and $limit (gt $limit 0) -}}
   {{- $authors = first $limit $authors -}}
 {{- end -}}
@@ -54,12 +55,10 @@
       <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
         <div class="mx-auto w-28 h-28 rounded-full overflow-hidden">
           {{- with $p.Resources.GetMatch "avatar*" -}}
-            <img src="{{ .RelPermalink }}" alt="{{ $p.Title }}" loading="lazy"
-                 class="w-full h-full object-cover object-center">
+            <img src="{{ .RelPermalink }}" alt="{{ $p.Title }}" loading="lazy" class="w-full h-full object-cover object-center">
           {{- else -}}
             {{- with $p.Params.image -}}
-              <img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy"
-                   class="w-full h-full object-cover object-center">
+              <img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" class="w-full h-full object-cover object-center">
             {{- else -}}
               <div class="w-full h-full bg-gray-200 dark:bg-gray-700"></div>
             {{- end -}}
