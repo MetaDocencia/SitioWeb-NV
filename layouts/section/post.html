@@ -26,17 +26,10 @@
               <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
             </h2>
 
-            <!-- Meta: lectura y autorías (SIN tags) -->
             <div class="mt-1 text-xs text-gray-500 dark:text-gray-400 flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>{{ .ReadingTime }} min</span>
-              {{ with .Params.authors }}
-  <span>·</span>
-  <span>{{ partial "author_names.html" (dict "authors" .) }}</span>
-{{ end }}
-
-              {{/* Tags removidos a pedido:
-              {{ with .Params.tags }} ... {{ end }}
-              */}}
+              {{ partial "authors-list.html" (dict "Page" . "Authors" .Params.authors) }}
+              {{/* OJO: no mostramos tags aquí para que no aparezcan junto a autorías */}}
             </div>
 
             {{ $sum := .Params.summary }}
