@@ -41,7 +41,7 @@ sections:
     content:
       items:
         - title: "Quiénes somos"
-          text: "TEXTO A DEFINIR. MetaDocencia es una organización sin fines de lucro fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer la ciencia en red, desde América Latina hacia el mundo."
+          text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
           image: "quienesomos.jpg"
           button:
             text: "Conócenos"
@@ -71,7 +71,7 @@ sections:
           description: |
             personas  
             formadas
-        - statistic: "+1000"
+        - statistic: "+1070"
           description: |
             personas en la   
             comunidad de Slack
@@ -86,17 +86,17 @@ sections:
       text: ""
       items:
         - name: "Carly Strasser"
-          role: "Directora Senior de programas de CZI"
+          role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
           text: |
-            💬 Carly Strasser, Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica: "Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes".
+            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
         - name: "Marina Compagnucci"
-          role: "Bióloga y colaboradora de MetaDocencia"
+          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
           text: |
-            “Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio”
+            Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio.
         - name: "Verónica Xhardez"
           role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
           text: |
-            "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
+            ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
