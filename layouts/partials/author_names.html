@@ -1,0 +1,15 @@
+{{/* Devuelve la lista de nombres completos a partir de los slugs en .authors */}}
+{{- $names := slice -}}
+{{- with .authors -}}
+  {{- range . -}}
+    {{- $slug := . -}}
+    {{- $p := site.GetPage (printf "authors/%s" $slug) -}}
+    {{- if $p -}}
+      {{- $display := or $p.Title $p.Params.name $slug -}}
+      {{- $names = $names | append $display -}}
+    {{- else -}}
+      {{- $names = $names | append $slug -}} {{/* Fallback si no existe la página del autor */}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- delimit $names ", " -}}
