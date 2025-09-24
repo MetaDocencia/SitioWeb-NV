@@ -1,24 +1,55 @@
-{{/* Shortcode: people_list
-     Uso: {{</* people_list group="Colaboradores" */>}}
+{{/* Shortcode: people_list — Lista de autores filtrada por uno o varios user_groups.
+     Parámetros:
+       - group="Nombre"                → un grupo
+       - groups="Grupo A, Grupo B"     → varios grupos (separados por coma o |)
+       - cols=7                        → columnas en XL (3 en mobile, 4 en md)
+       - gapx=12 gapy=14               → separación horizontal/vertical (Tailwind gap)
+       - limit=0                       → 0 o vacío = sin límite
+     Si no se pasa group/groups → muestra TODOS los autores.
 */}}
 
-{{- $group    := (.Get "group") | default "Colaboradores" -}}
-{{- $authors  := where site.Pages "Section" "authors" -}}
-{{- $filtered := slice -}}
-
-{{- range $authors -}}
-  {{- $ug := .Params.user_groups -}}
-  {{- if and $ug (gt (len (intersect $ug (slice $group))) 0) -}}
-    {{- $filtered = $filtered | append . -}}
+{{- $paramGroups := or (.Get "groups") (.Get "group") -}}
+{{- /* Construir slice de grupos pedido(s) */ -}}
+{{- $wanted := slice -}}
+{{- if $paramGroups -}}
+  {{- $sep := "," -}}
+  {{- if in $paramGroups "|" }}{{ $sep = "|" }}{{ end -}}
+  {{- range (split $paramGroups $sep) -}}
+    {{- $g := strings.TrimSpace . -}}
+    {{- if $g }}{{ $wanted = $wanted | append $g }}{{ end -}}
   {{- end -}}
 {{- end -}}
 
-{{- $filtered = sort $filtered ".Params.weight" | sort "Title" -}}
+{{- $cols := or (.Get "cols") 7 -}}
+{{- $gapx := or (.Get "gapx") 12 -}}
+{{- $gapy := or (.Get "gapy") 14 -}}
+{{- $limit := or (.Get "limit") 0 -}}
+
+{{- /* Base: sección authors */ -}}
+{{- $authors := where site.Pages "Section" "authors" -}}
+
+{{- /* Filtrar si pidieron grupos; si no, mostrar todos */ -}}
+{{- if gt (len $wanted) 0 -}}
+  {{- $filtered := slice -}}
+  {{- range $authors -}}
+    {{- $ug := .Params.user_groups | default (slice) -}}
+    {{- if gt (len (intersect $ug $wanted)) 0 -}}
+      {{- $filtered = $filtered | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $authors = $filtered -}}
+{{- end -}}
+
+{{- /* Orden: weight, luego título */ -}}
+{{- $authors = sort $authors ".Params.weight" | sort "Title" -}}
+
+{{- if and $limit (gt $limit 0) -}}
+  {{- $authors = first $limit $authors -}}
+{{- end -}}
 
 <div class="w-full">
-  <!-- Más separación entre tarjetas: gap-x-12 gap-y-14 -->
-  <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-x-12 gap-y-14 place-items-center">
-    {{- range $p := $filtered -}}
+  <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-{{ $cols }} gap-x-{{ $gapx }} gap-y-{{ $gapy }} place-items-center">
+    {{- range $p := $authors -}}
       <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
         <div class="mx-auto w-28 h-28 rounded-full overflow-hidden">
           {{- with $p.Resources.GetMatch "avatar*" -}}
