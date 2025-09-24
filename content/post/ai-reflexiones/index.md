@@ -1,6 +1,5 @@
 ---
 date: "2023-09-14"
-translationKey: "ai-reflexiones"
 draft: false
 type: page
 linktitle: AI reflexiones
@@ -19,7 +18,9 @@ tags:
 categories:
   - Temas
   - Recursos
+translationKey: "ai-reflexiones"
 ---
+
 **Actualización:** Al final del artículo agregamos lecturas útiles publicadas recientemente que respaldan y amplían esta publicación. 
 
 ------
