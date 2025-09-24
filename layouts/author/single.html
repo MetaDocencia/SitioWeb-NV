@@ -1,98 +1,148 @@
 {{ define "main" }}
-<section class="mx-auto px-6 py-10 max-w-6xl grid grid-cols-1 lg:grid-cols-4 gap-10">
+<section class="mx-auto px-6 py-10 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10">
 
-  <!-- Columna izquierda: perfil -->
-  <aside class="lg:col-span-1 text-center lg:text-left">
-    <!-- Foto circular -->
-    {{ with .Params.avatar }}
-      <img src="{{ . | relURL }}" alt="{{ $.Title }}"
-           class="w-40 h-40 rounded-full object-cover mx-auto lg:mx-0 mb-4 shadow">
+  {{/* ====== Sidebar (foto + nombre + rol + redes) ====== */}}
+  <aside class="md:col-span-4 lg:col-span-3">
+    {{/* Resolver avatar: front matter -> avatar.* en carpeta -> primera imagen */}}
+    {{ $avatar := "" }}
+    {{ with .Params.avatar }}{{ $avatar = . }}{{ end }}
+    {{ if not $avatar }}
+      {{ with .Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
+    {{ end }}
+    {{ if not $avatar }}
+      {{ with .Resources.ByType "image" }}{{ with index . 0 }}{{ $avatar = .RelPermalink }}{{ end }}{{ end }}
     {{ end }}
 
-    <!-- Nombre -->
+    {{ if $avatar }}
+      <img src="{{ $avatar }}" alt="{{ .Title }}"
+           class="w-40 h-40 rounded-full object-cover mb-4 mx-auto md:mx-0 shadow" />
+    {{ end }}
+
     <h1 class="text-2xl font-bold mb-1">{{ .Title }}</h1>
 
-    <!-- Rol / institución -->
+    {{/* Rol (puede venir vacío) */}}
     {{ with .Params.role }}
-      <p class="text-gray-600 dark:text-gray-400 mb-1">{{ . }}</p>
+      {{ if . }}
+        <p class="text-gray-600 dark:text-gray-400 mb-1">{{ . }}</p>
+      {{ end }}
     {{ end }}
+
+    {{/* Organización (lista) */}}
     {{ with .Params.organizations }}
       {{ range . }}
         {{ if .name }}
-          <p class="text-gray-500 dark:text-gray-400 text-sm">{{ .name }}</p>
+          {{ if .url }}
+            <p class="text-sm"><a href="{{ .url }}" class="text-gray-500 dark:text-gray-400 hover:underline">{{ .name }}</a></p>
+          {{ else }}
+            <p class="text-sm text-gray-500 dark:text-gray-400">{{ .name }}</p>
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
 
-    <!-- Redes sociales -->
+    {{/* Redes sociales (icon_pack/icon/link como en Academic/Blox) */}}
     {{ with .Params.social }}
-    <div class="flex justify-center lg:justify-start gap-3 mt-4">
-      {{ range . }}
-        <a href="{{ .link }}" target="_blank" rel="noopener"
-           class="text-gray-500 hover:text-blue-500">
-          <i class="{{ .icon_pack }} fa-{{ .icon }}"></i>
-        </a>
-      {{ end }}
-    </div>
+      <div class="flex flex-wrap gap-3 mt-4">
+        {{ range . }}
+          {{/* Normalizar mailto si falta */}}
+          {{ $href := .link }}
+          {{ if and (eq .icon "envelope") (not (hasPrefix $href "mailto:")) }}
+            {{ $href = printf "mailto:%s" $href }}
+          {{ end }}
+          <a href="{{ $href }}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <i class="{{ .icon_pack }} fa-{{ .icon }}"></i>
+          </a>
+        {{ end }}
+      </div>
     {{ end }}
   </aside>
 
-  <!-- Columna derecha: contenido -->
-  <div class="lg:col-span-3 space-y-10">
+  {{/* ====== Columna principal ====== */}}
+  <div class="md:col-span-8 lg:col-span-9 space-y-10">
 
-    <!-- Experiencia y trayectoria -->
+    {{/* Experiencia y trayectoria: usa el contenido del author */}}
     {{ with .Content }}
       <div class="prose dark:prose-invert max-w-none">
         {{ . }}
       </div>
     {{ end }}
 
-    <!-- Intereses -->
+    {{/* Intereses */}}
     {{ with .Params.interests }}
-      <section>
-        <h2 class="text-xl font-semibold mb-3">Intereses</h2>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
-          {{ range . }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-      </section>
+      {{ if gt (len .) 0 }}
+        <section>
+          <h2 class="text-xl font-semibold mb-3">Intereses</h2>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </section>
+      {{ end }}
     {{ end }}
 
-    <!-- Educación -->
+    {{/* Educación (education.courses) */}}
     {{ with .Params.education.courses }}
-      <section>
-        <h2 class="text-xl font-semibold mb-3">Educación</h2>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
-          {{ range . }}
-            <li>
-              {{ .course }}
-              {{ with .institution }} — {{ . }}{{ end }}
-              {{ with .year }} ({{ . }}){{ end }}
-            </li>
-          {{ end }}
-        </ul>
-      </section>
+      {{ if gt (len .) 0 }}
+        <section>
+          <h2 class="text-xl font-semibold mb-3">Educación</h2>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+            {{ range . }}
+              <li>
+                {{ .course }}
+                {{ with .institution }} — {{ . }}{{ end }}
+                {{ with .year }} ({{ . }}){{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
     {{ end }}
 
-    <!-- Notas donde aparece como autor -->
+    {{/* Publicaciones del autor: minimalista con "ver más" si hay muchas */}}
     <section>
       <h2 class="text-xl font-semibold mb-3">Publicaciones</h2>
-      <div class="space-y-4">
-        {{ $author := .File.BaseFileName }}
-        {{ $pages := where site.RegularPages "Params.authors" "intersect" (slice $author) }}
-        {{ range $pages }}
-          <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
-            <a href="{{ .RelPermalink }}" class="text-base font-medium hover:underline">
-              {{ .Title }}
-            </a>
-            <p class="text-sm text-gray-500">{{ .Date.Format "2006-01-02" }}</p>
-          </article>
+
+      {{/* Derivar el slug del autor desde la ruta del archivo (carpeta de _index.md) */}}
+      {{ $slug := path.Base (path.Dir .File.Path) }}
+      {{ $all := where site.RegularPages "Params.authors" "intersect" (slice $slug) }}
+      {{ $all = sort $all "Date" "desc" }}
+      {{ $n := len $all }}
+
+      {{ if eq $n 0 }}
+        <p class="text-sm text-gray-500">Aún no hay publicaciones listadas para este autor/a.</p>
+      {{ else }}
+        {{ $limit := 8 }}
+        <div class="space-y-4">
+          {{ range $i, $p := $all }}
+            {{ if lt $i $limit }}
+              <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
+                <a href="{{ $p.RelPermalink }}" class="text-base font-medium hover:underline">{{ $p.Title }}</a>
+                <p class="text-xs text-gray-500">{{ $p.Date.Format "2006-01-02" }}</p>
+              </article>
+            {{ end }}
+          {{ end }}
+        </div>
+
+        {{ if gt $n $limit }}
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm text-gray-700 dark:text-gray-300 hover:underline">
+              Mostrar {{ sub $n $limit }} más
+            </summary>
+            <div class="mt-3 space-y-4">
+              {{ range $i, $p := $all }}
+                {{ if ge $i $limit }}
+                  <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
+                    <a href="{{ $p.RelPermalink }}" class="text-base font-medium hover:underline">{{ $p.Title }}</a>
+                    <p class="text-xs text-gray-500">{{ $p.Date.Format "2006-01-02" }}</p>
+                  </article>
+                {{ end }}
+              {{ end }}
+            </div>
+          </details>
         {{ end }}
-      </div>
+      {{ end }}
     </section>
 
   </div>
-
 </section>
 {{ end }}
