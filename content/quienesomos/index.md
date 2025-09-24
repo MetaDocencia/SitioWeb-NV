@@ -109,7 +109,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=7 gapx="8rem" gapy="5rem" items-start>}}
+        {{< people_list group="Colaboradores" columns=7 gapx="8rem" gapy="5rem" >}}
 
   # --- Auspiciantes ---
   - block: markdown
