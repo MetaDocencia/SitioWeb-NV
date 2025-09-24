@@ -109,7 +109,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=7 gapx="10rem" gapy="5rem" >}}
+        {{< people_list group="Colaboradores" columns=7 gapx="8rem" gapy="3rem" >}}
 
   # --- Auspiciantes ---
   - block: markdown
@@ -117,7 +117,7 @@ sections:
     content:
       title: "Auspiciantes"
       text: |
-        {{< people_list group="Auspiciantes" columns=7 gapx="2.5rem" gapy="3rem" >}}
+        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: cta-card
