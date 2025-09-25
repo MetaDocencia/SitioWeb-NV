@@ -7,47 +7,35 @@ design:
 
 sections:
 
-  # ===== Gobernanza (1 columna ancha) =====
+  # ===== Visión =====
   - block: markdown
-    id: gobernanza
-    content:
-      title: "Nuestra gobernanza"
-      text: |
-        <div class="max-w-none">
-          <p>
-            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-          </p>
-          <ul class="list-disc pl-5">
-            <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2022/" class="underline">Gobernanza de MetaDocencia (2022)</a></li>
-            <li><a href="https://www.metadocencia.org/proyecto/gobernanza-2024/" class="underline">Gobernanza 2.0 (2024)</a></li>
-          </ul>
-          <p class="opacity-90 mt-3">
-            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-          </p>
-        </div>
-
-  # ===== Visión y Misión (2 columnas) =====
-  - block: markdown
-    id: vision-mision
+    id: vision
     content:
       title: ""
       text: |
-        <div class="grid md:grid-cols-2 gap-6 items-start">
-          <div>
-            <h3 class="text-2xl font-semibold mb-2">Visión</h3>
-            <p>
-              Trabajamos para que la producción, la comunicación y la aplicación de saberes
-              científicos y técnicos sean globalmente equitativas.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold mb-2">Misión</h3>
-            <p>
-              Construir capacidades científicas y técnicas en forma responsable y con mirada local,
-              a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles
-              para comunidades hispanohablantes.
-            </p>
-          </div>
+        <div class="text-center max-w-3xl mx-auto">
+          <h3 class="text-2xl font-semibold mb-3">Visión</h3>
+          <p class="text-lg">
+            Trabajamos para que la producción, la comunicación y la aplicación de saberes
+            científicos y técnicos sean globalmente equitativas.
+          </p>
+          <div style="height:4px;background:#00506F;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
+        </div>
+
+  # ===== Misión =====
+  - block: markdown
+    id: mision
+    content:
+      title: ""
+      text: |
+        <div class="text-center max-w-3xl mx-auto">
+          <h3 class="text-2xl font-semibold mb-3">Misión</h3>
+          <p class="text-lg">
+            Construir capacidades científicas y técnicas en forma responsable y con mirada local,
+            a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles
+            para comunidades hispanohablantes.
+          </p>
+          <div style="height:4px;background:#C83737;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
         </div>
 
   # ===== Valores (tarjetas) =====
@@ -76,6 +64,7 @@ sections:
           description: "Adaptar las acciones a las situaciones que se presentan."
     design:
       columns: 3
+      css_class: "bg-gray-50 dark:bg-gray-900"
 
   # ===== Nos organizamos (imagen + texto) =====
   - block: cta-image-paragraph
@@ -92,38 +81,30 @@ sections:
 
             <br><br>
             👉 <a href="https://doi.org/10.5281/zenodo.11456152" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
-          image: "organigramaES.jpg"   # coloca esta imagen en static/media/organigrama.png o ajusta la ruta
+          image: "organigramaES.jpg"
     design:
-      css_class: "bg-gray-50 dark:bg-gray-900"
+      css_class: "bg-white"
 
-  # ===== PdC y Accesibilidad (1 columna ancha) =====
+  # ===== Gobernanza (1 columna ancha con botones) =====
   - block: markdown
-    id: pautas-accesibilidad
+    id: gobernanza
     content:
-      title: ""
+      title: "Nuestra gobernanza"
       text: |
-        <div class="max-w-none space-y-8">
-          <section>
-            <h3 class="text-2xl font-semibold mb-2">Pautas de convivencia</h3>
-            <p>
-              Nuestras <strong>Pautas de Convivencia (PdC)</strong> son la base que guía cada actividad y colaboración en MetaDocencia.
-              Fueron construidas colectivamente y reflejan nuestra visión, misión y valores.
-              Todas las personas que participan en nuestras iniciativas se comprometen a respetarlas y promoverlas.
-            </p>
-            <p class="mt-2">
-              👉 <a href="https://zenodo.org/records/12534196" class="underline">Consulta las Pautas de Convivencia</a>
-            </p>
-          </section>
-
-          <section>
-            <h3 class="text-2xl font-semibold mb-2">Política de accesibilidad</h3>
-            <p>
-              Consulta la política de accesibilidad que sigue MetaDocencia para conocer los criterios y buenas prácticas
-              que configuran nuestro marco de trabajo.
-            </p>
-            <p class="mt-2">
-              👉 <a href="https://zenodo.org/records/10514982" class="underline">Política de Accesibilidad</a>
-            </p>
-          </section>
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="mb-6 text-lg">
+            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+               class="px-5 py-2 rounded-md font-semibold text-white"
+               style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
+            <a href="https://www.metadocencia.org/proyecto/gobernanza-2024/"
+               class="px-5 py-2 rounded-md font-semibold text-white"
+               style="background:#F77B20;">Gobernanza 2.0 (2024)</a>
+          </div>
+          <p class="opacity-90 mt-6">
+            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
+          </p>
         </div>
 ---
