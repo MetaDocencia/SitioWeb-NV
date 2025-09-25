@@ -2,7 +2,6 @@
 title: "MetaDocencia en los medios"
 slug: "prensas"
 type: "page"
----
 
 <section class="mx-auto px-6 py-10 max-w-4xl">
 
@@ -277,3 +276,5 @@ type: "page"
   #press-list a { text-decoration: none; }
   #press-list a:hover { filter: brightness(1.05); }
 </style>
+
+---
