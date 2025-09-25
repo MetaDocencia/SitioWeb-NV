@@ -121,11 +121,3 @@ Esta formación en habilidades técnicas, con un enfoque inclusivo y accesible, 
 - Este curso es parte de la serie de _Research Software Engineering con R_.
 * [Sitio web del curso](https://yabellini.github.io/fromSpreadSheetToR)
 
-## Club de lectura
-Aprendemos mejor cuando aprendemos en comunidad.
-
-Durante 2022 organizamos y coordinamos un Club de Lectura sobre el libro Enseñar Tecnología en Comunidad (Teaching Tech Together), la obra de Greg Wilson que reúne muchos de los conceptos y prácticas de enseñanza que usamos y promovemos en MetaDocencia.
-
-A través de 8 encuentros virtuales, abiertos y gratuitos, nos encontramos para analizar los contenidos y construir nuevos aprendizajes colectivos.
-
-- Blogposts: https://www.metadocencia.org/tags/club-de-lectura/ 
