@@ -68,20 +68,28 @@ sections:
       columns: 3
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # ===== Texto con enlaces de Gobernanza (debajo de Valores) =====
+  # ===== Botones de Gobernanza (debajo de Valores) =====
   - block: markdown
     id: gobernanza-enlaces
     content:
       title: ""
       text: |
-        <div class="max-w-3xl mx-auto">
-          <p class="mb-3">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="mb-4">
             Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
           </p>
-          <ul class="list-disc pl-5">
-            <li>Gobernanza de MetaDocencia (2022) <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY" class="underline">https://zenodo.org/records/7398893#.Y7gW1HaZNPY</a></li>
-            <li>Gobernanza 2.0 (2024) <a href="https://zenodo.org/records/12522913" class="underline">https://zenodo.org/records/12522913</a></li>
-          </ul>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="https://zenodo.org/records/12522913"
+               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#C83737;">
+               Gobernanza 2.0 (2024)
+            </a>
+            <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
+               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#00506F;">
+               Gobernanza de MetaDocencia (2022)
+            </a>
+          </div>
         </div>
 
   # ===== Nos organizamos (fondo blanco en light / oscuro en dark) =====
