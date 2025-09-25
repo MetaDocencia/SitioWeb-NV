@@ -103,20 +103,42 @@ sections:
         padding: ["0.25rem", 0, "0.25rem", 0]
     
   # ===== Estilos locales: SOLO márgenes de acordeones =====
-  - block: markdown
-    id: people-accordion-margins
-    content:
-      title: ""
-      text: |
-        <style>
-          /* Márgenes entre acordeones (sin tocar tipografías) */
-          details.md-acc { margin: .125rem 0 !important; }
-          details.md-acc[open] { margin: .125rem 0 1rem !important; }
+# ===== Estilos locales: acordeones + tipografías de people_list =====
+- block: markdown
+  id: people-accordion-styles
+  content:
+    title: ""
+    text: |
+      <style>
+        /* ——— Acordeones (details/summary) ——— */
 
-          /* Reducir separación superior del PRIMER bloque de acordeón */
-          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
-          section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
-        </style>
+        /* Menos separación entre acordeones */
+        details.md-acc { margin: .125rem 0 !important; }
+        details.md-acc[open] { margin: .125rem 0 1rem !important; }
+
+        /* Título del desplegable (Ej: Equipo y Consejo Asesor) en negrita y con menos margen superior */
+        details.md-acc > summary {
+          font-weight: 700 !important;     /* negrita */
+          margin-top: .25rem !important;   /* menos margen superior */
+          line-height: 1.25 !important;
+        }
+        /* Ícono/flechita conserva peso normal */
+        details.md-acc > summary span:last-child { font-weight: 400 !important; }
+
+        /* Quitar margen de la primera sección de acordeón */
+        section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
+        section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
+
+        /* ——— Nombres de perfiles más pequeños (solo dentro de las grillas de people_list) ——— */
+        section#equipo-y-consejo-asesor .grid .font-semibold,
+        section#colaboradores .grid .font-semibold,
+        section#auspiciantes .grid .font-semibold,
+        section#colaboraron-con-metadocencia .grid .font-semibold {
+          font-size: 0.9rem !important;
+          line-height: 1.2 !important;
+          font-weight: 700 !important;
+        }
+      </style>
 
   # --- Equipo y Consejo Asesor ---
   - block: markdown
