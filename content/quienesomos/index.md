@@ -4,8 +4,6 @@ type: landing
 slug: "quienes-somos"
 design:
   spacing: "3rem"
-
-
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
@@ -103,26 +101,28 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos del acordeón de perfiles (una sola vez) =====
+  # ===== Estilos del acordeón de perfiles =====
   - block: markdown
     id: people-accordion-styles
     content:
       title: ""
       text: |
         <style>
-          /* Acordeón para grupos de perfiles */
-          section.people-acc details {
-            margin: 0.75rem 0 1rem 0;
-          }
+          /* Márgenes: más compactos cerrados, un poco más abiertos cuando está expandido */
+          section.people-acc details { margin: .25rem 0; }
+          section.people-acc details[open] { margin: .25rem 0 1rem; }
+
+          /* Título del acordeón más grande y con buen click-area */
           section.people-acc summary {
             display: flex;
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
-            padding: .875rem 0;
+            padding: .7rem 0; /* un poco menos alto para compactar */
             list-style: none;
             font-weight: 700;
-            font-size: 1.25rem; /* ~text-xl */
+            font-size: 1.375rem; /* ↑ más grande que 1.25rem */
+            line-height: 1.25;
           }
           section.people-acc summary::-webkit-details-marker { display: none; }
           section.people-acc .chev { transition: transform .2s ease; }
