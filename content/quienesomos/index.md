@@ -4,7 +4,7 @@ type: landing
 slug: "quienes-somos"
 design:
   spacing: "3rem"
----
+
 
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
@@ -215,3 +215,4 @@ sections:
       card:
         css_class: "bg-primary-700"
         css_style: ""
+---
