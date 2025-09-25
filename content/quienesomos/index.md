@@ -4,6 +4,7 @@ type: landing
 slug: "quienes-somos"
 design:
   spacing: "3rem"
+
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
@@ -101,51 +102,38 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos FUERTES del acordeón de perfiles =====
+  # ===== Solo estilos de márgenes del acordeón =====
   - block: markdown
-    id: people-accordion-styles
+    id: people-accordion-margins
     content:
       title: ""
       text: |
         <style>
-          /* Usamos una clase propia y !important para asegurar override del tema */
-          details.people-acc-d { margin: .25rem 0 !important; }
-          details.people-acc-d[open] { margin: .25rem 0 1rem !important; }
-
-          details.people-acc-d > summary {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            cursor: pointer !important;
-            padding: .6rem 0 !important;   /* más compacto */
-            list-style: none !important;
-            font-weight: 800 !important;
-            font-size: 1.375rem !important; /* 22px aprox */
-            line-height: 1.2 !important;
-          }
-          details.people-acc-d > summary::-webkit-details-marker { display: none; }
-          details.people-acc-d .chev { transition: transform .2s ease; }
-          details.people-acc-d[open] .chev { transform: rotate(180deg); }
-
-          /* Cuerpo del acordeón un poco separado del título */
-          details.people-acc-d .acc-body { padding-top: .5rem !important; }
+          /* Márgenes del acordeón (sin tocar tipografías) */
+          details.md-acc { margin: .125rem 0 !important; }
+          details.md-acc[open] { margin: .125rem 0 1rem !important; }
         </style>
 
-  # --- Equipo y Consejo Asesor (abierto por defecto) ---
+  # --- Equipo y Consejo Asesor (margen superior reducido) ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
       title: ""
       text: |
-        <details class="people-acc-d" open style="margin:.25rem 0;">
-          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
-            Equipo y Consejo Asesor
-            <span class="chev" aria-hidden="true">▾</span>
+        <details class="md-acc" open>
+          <summary class="flex items-center justify-between">
+            <span>Equipo y Consejo Asesor</span>
+            <span class="select-none">▾</span>
           </summary>
-          <div class="acc-body">
+          <div class="pt-2">
             {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      spacing:
+        # ↓ margen superior muy chico solo para este primer bloque
+        margin: ["0rem", 0, "0.25rem", 0]
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -153,15 +141,18 @@ sections:
     content:
       title: ""
       text: |
-        <details class="people-acc-d" style="margin:.25rem 0;">
-          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
-            Colaboran con MetaDocencia
-            <span class="chev" aria-hidden="true">▾</span>
+        <details class="md-acc">
+          <summary class="flex items-center justify-between">
+            <span>Colaboran con MetaDocencia</span>
+            <span class="select-none">▾</span>
           </summary>
-          <div class="acc-body">
+          <div class="pt-2">
             {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Auspiciantes ---
   - block: markdown
@@ -169,15 +160,18 @@ sections:
     content:
       title: ""
       text: |
-        <details class="people-acc-d" style="margin:.25rem 0;">
-          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
-            Auspiciantes
-            <span class="chev" aria-hidden="true">▾</span>
+        <details class="md-acc">
+          <summary class="flex items-center justify-between">
+            <span>Auspiciantes</span>
+            <span class="select-none">▾</span>
           </summary>
-          <div class="acc-body">
+          <div class="pt-2">
             {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
@@ -185,15 +179,18 @@ sections:
     content:
       title: ""
       text: |
-        <details class="people-acc-d" style="margin:.25rem 0;">
-          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
-            Colaboraron con MetaDocencia
-            <span class="chev" aria-hidden="true">▾</span>
+        <details class="md-acc">
+          <summary class="flex items-center justify-between">
+            <span>Colaboraron con MetaDocencia</span>
+            <span class="select-none">▾</span>
           </summary>
-          <div class="acc-body">
+          <div class="pt-2">
             {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # ===== CTA final =====
   - block: cta-card
