@@ -20,12 +20,11 @@ sections:
             <div class="mt-4 flex flex-wrap justify-center gap-4">
               <a href="https://zenodo.org/records/12522913"
                  class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#C83737;">Gobernanza 2.0 (2024)</a>
+                 style="background:#C83737;">Gobernanza MetaDocencia 2.0 (2024)</a>
               <a href="https://zenodo.org/records/7398893"
                  class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
+                 style="background:#00506F;">Gobernanza MetaDocencia (2022)</a>
             </div>
-            <div style="height:4px;background:#C83737;border-radius:6px;margin:2rem auto 0 auto;width:140px;"></div>
           image: "quienesomos.jpg"
     design:
       css_class: ""
@@ -37,6 +36,7 @@ sections:
       title: ""
       text: |
         <div class="text-center max-w-3xl mx-auto">
+          <div style="height:4px;background:#C83737;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
           <h3 class="text-2xl font-semibold mb-3">Visión</h3>
           <p class="text-lg">
             Trabajamos para que la producción, la comunicación y la aplicación de saberes
