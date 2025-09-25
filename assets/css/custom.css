@@ -297,3 +297,10 @@ section.people-naked details > summary {
 
 .hero-compact { min-height: auto !important; }
 .hero-compact .section-heading { margin: 0.1rem 0 !important; }
+
+/* Quitar espacio de iconos en links del footer cuando no hay icono */
+.site-footer .contact-icons i,
+.site-footer .contact-icons svg {
+  display: none !important;
+}
+
