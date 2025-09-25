@@ -106,7 +106,7 @@ sections:
   - block: markdown
     id: people-accordion-styles
     content:
-      title: ""
+      title: "Nuestra comunidad"
       text: |
         <style>
           /* ——— Acordeones (details/summary) ——— */
@@ -148,7 +148,7 @@ sections:
       text: |
         <details class="md-acc" open>
           <summary class="flex items-center justify-between cursor-pointer select-none">
-            <span>Equipo y Consejo Asesor</span>
+            <span>  Equipo y Consejo Asesor  </span>
             <span>▾</span>
           </summary>
           <!-- Primera fila: un poco de margen superior -->
