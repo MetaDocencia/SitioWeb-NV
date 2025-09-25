@@ -79,7 +79,7 @@ sections:
       title: "Proyectos destacados"
       text: ""
       items:
-        - name: "Finaciamiento para iniciativas científicas"
+        - name: "Financiamiento a iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
@@ -124,7 +124,7 @@ sections:
   - block: features
     id: infra-proyectos
     content:
-      title: "Proyectos de Infraestructura"
+      title: ""
       text: ""
       items:
         - name: "Catalyst"
@@ -198,7 +198,7 @@ sections:
   - block: features
     id: formacion-proyectos
     content:
-      title: "Proyectos de Formación"
+      title: ""
       text: ""
       items:
         - name: "Formación en Ciencia Abierta"
@@ -225,7 +225,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
 
-        - name: "Finaciamiento para iniciativas científicas"
+        - name: "Financiamiento a iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
@@ -283,7 +283,7 @@ sections:
   - block: features
     id: comunidad-proyectos
     content:
-      title: "Proyectos de Comunidad"
+      title: ""
       text: ""
       items:
         - name: "Gobernanza"
