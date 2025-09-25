@@ -6,6 +6,7 @@ design:
   spacing: "3rem"
 
 sections:
+  # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
     id: hero-qs
     content:
@@ -14,6 +15,8 @@ sections:
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
+
+        <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
           <a href="/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
@@ -25,6 +28,7 @@ sections:
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Valores</a>
         </div>
+
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
@@ -48,6 +52,7 @@ sections:
         text_color_light: true
       css_style: "min-height: 24vh;"
 
+  # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
     content:
@@ -76,6 +81,7 @@ sections:
       spacing:
         padding: ["2rem", 0, "1.25rem", 0]
 
+  # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
     content:
@@ -96,39 +102,34 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
+  # ===== Estilos locales: acordeones + tipografías de people_list =====
   - block: markdown
     id: people-accordion-styles
     content:
-      title: "Nuestra comunidad"
+      title: ""
       text: |
         <style>
-          /* Compactar aún más títulos y acordeones */
-          section#people-accordion-styles .section-title,
-          section#equipo-y-consejo-asesor .section-title,
-          section#colaboradores .section-title,
-          section#auspiciantes .section-title,
-          section#colaboraron-con-metadocencia .section-title {
-            margin-top: .25rem !important;
-            margin-bottom: .25rem !important;
-          }
+          /* ——— Acordeones (details/summary) ——— */
 
-          /* Menos separación vertical entre acordeones */
-          details.md-acc { margin: 0 !important; }
-          details.md-acc + details.md-acc { margin-top: .25rem !important; }
+          /* Menos separación entre acordeones */
+          details.md-acc { margin: .125rem 0 !important; }
+          details.md-acc[open] { margin: .125rem 0 1rem !important; }
 
-          /* Título del desplegable: negrita + menos margen superior e inferior */
-          details.md-acc > summary {
-            margin: .15rem 0 .15rem 0 !important;
-            line-height: 1.2 !important;
-          }
+          /* Título del desplegable en negrita y con menos margen superior */
+          /* más específico: el primer <span> del <summary> (el texto) */
           details.md-acc > summary > span:first-child {
-            font-weight: 800 !important;
+            font-weight: 800 !important;     /* negrita real */
+          }
+          details.md-acc > summary {
+            margin-top: .2rem !important;    /* menos margen superior */
+            line-height: 1.25 !important;
           }
 
-          /* Espacio sólo antes de la primera fila del grid */
-          .md-acc .grid-wrap { padding-top: .4rem !important; }
+          /* Quitar margen de la primera sección de acordeón */
+          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
+          section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
 
-          /* Nombres de perfiles más pequeños */
+          /* ——— Nombres de perfiles más pequeños ——— */
           section#equipo-y-consejo-asesor .grid .font-semibold,
           section#colaboradores .grid .font-semibold,
           section#auspiciantes .grid .font-semibold,
@@ -139,6 +140,7 @@ sections:
           }
         </style>
 
+  # --- Equipo y Consejo Asesor ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
@@ -149,11 +151,13 @@ sections:
             <span>Equipo y Consejo Asesor</span>
             <span>▾</span>
           </summary>
-          <div class="grid-wrap">
-            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="4rem" gapy="0.5rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
+  # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
     content:
@@ -164,11 +168,13 @@ sections:
             <span>Colaboran con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <div class="grid-wrap">
-            {{< people_list group="Colaboradores" columns=8 gapx="4rem" gapy="0.5rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
+  # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
     content:
@@ -179,11 +185,13 @@ sections:
             <span>Auspiciantes</span>
             <span>▾</span>
           </summary>
-          <div class="grid-wrap">
-            {{< people_list group="Auspiciantes" columns=7 gapx="4rem" gapy="0.5rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
+  # --- Colaboraron con MetaDocencia ---
   - block: markdown
     id: colaboraron-con-metadocencia
     content:
@@ -194,11 +202,13 @@ sections:
             <span>Colaboraron con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <div class="grid-wrap">
-            {{< people_list group="Colaboradores" columns=8 gapx="4rem" gapy="0.5rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
+  # ===== CTA final =====
   - block: cta-card
     id: apoya
     content:
