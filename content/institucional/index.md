@@ -7,47 +7,21 @@ design:
 
 sections:
 
-  # ===== Gobernanza (arriba, 1 columna ancha con botones) =====
-
-
-   - block: cta-image-paragraph
-    id: solutions
+  # ===== Gobernanza =====
+  - block: cta-image-paragraph
+    id: gobernanza
     content:
       items:
         - title: "Nuestra gobernanza"
-          text: "Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-          Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:"
-          image: "quienesomos.jpg"
-          button:
-            text: "Conócenos"
-            url: "https://julianbuede.github.io/quienes-somos/"
-          button:
-            text: "Conócenos"
-            url: "https://julianbuede.github.io/quienes-somos/"
-
-          
-  - block: markdown
-    id: gobernanza
-    content:
-      title: "Nuestra gobernanza"
-      text: |
-        <div class="max-w-4xl mx-auto text-center">
-          <p class="mb-6 text-lg">
+          text: |
+            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.  
             Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://zenodo.org/records/12522913"
-               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#C83737;">Gobernanza 2.0 (2024)</a>
-            <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
-               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
-          </div>
-          <p class="opacity-90 mt-6">
-            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-          </p>
-          <div style="height:4px;background:#F77B20;border-radius:6px;margin:2rem auto 0 auto;width:140px;"></div>
-        </div>
+          image: "quienesomos.jpg"
+          buttons:
+            - text: "Gobernanza 2.0"
+              url: "https://zenodo.org/records/12522913"
+            - text: "Gobernanza 1.0"
+              url: "https://zenodo.org/records/7398893"
 
   # ===== Visión =====
   - block: markdown
