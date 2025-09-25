@@ -1,1 +1,21 @@
-{{ partial "footer.html" . }}
+{{/* layouts/partials/site_footer.html */}}
+{{ $footer := site.Params.footer }}
+<footer class="mt-12">
+  <div class="mx-auto max-w-6xl px-6 py-8 text-sm text-gray-600 dark:text-gray-300">
+    {{ with $footer.lines }}
+      {{ range . }}
+        <p class="mb-1">{{ . | safeHTML }}</p>
+      {{ end }}
+    {{ end }}
+
+    {{/* Línea extra con enlaces en texto (opcional si quieres separar) */}}
+    {{ with $footer.link_items }}
+      {{ $links := . }}
+      <p class="mt-2">
+        {{ range $i, $l := $links }}
+          <a href="{{ $l.url }}" class="underline hover:no-underline">{{ $l.text }}</a>{{ if lt $i (sub (len $links) 1) }} · {{ end }}
+        {{ end }}
+      </p>
+    {{ end }}
+  </div>
+</footer>
