@@ -333,7 +333,7 @@ sections:
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
-          role: "Coordinadora Técnica, ARPHAI"
+          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
           text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
