@@ -8,20 +8,25 @@ design:
 sections:
 
   # ===== Gobernanza =====
-  - block: cta-image-paragraph
+  - block: markdown
     id: gobernanza
     content:
-      items:
-        - title: "Nuestra gobernanza"
-          text: |
-            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.  
-            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-          image: "quienesomos.jpg"
-          buttons:
-            - text: "Gobernanza 2.0"
-              url: "https://zenodo.org/records/12522913"
-            - text: "Gobernanza 1.0"
-              url: "https://zenodo.org/records/7398893"
+      title: "Nuestra gobernanza"
+      text: |
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="mb-6 text-lg">
+            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://zenodo.org/records/12522913"
+               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#C83737;">Gobernanza 2.0 (2024)</a>
+            <a href="https://zenodo.org/records/7398893"
+               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
+          </div>
+          <div style="height:4px;background:#C83737;border-radius:6px;margin:2rem auto 0 auto;width:140px;"></div>
+        </div>
 
   # ===== Visión =====
   - block: markdown
@@ -51,7 +56,7 @@ sections:
             a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles
             para comunidades hispanohablantes.
           </p>
-          <div style="height:4px;background:#C83737;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
+          <div style="height:4px;background:#F77B20;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
         </div>
 
   # ===== Valores (tarjetas) =====
@@ -99,5 +104,5 @@ sections:
             👉 <a href="https://doi.org/10.5281/zenodo.11456152" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
           image: "organigramaES.jpg"
     design:
-      css_class: "bg-white"
+      css_class: "bg-white dark:bg-gray-900 dark:text-white"
 ---
