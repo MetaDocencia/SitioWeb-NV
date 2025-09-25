@@ -87,12 +87,12 @@ sections:
             <a href="https://zenodo.org/records/12522913"
                class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
                style="background:#C83737;">
-               Gobernanza 2.0 (2024)
+               Gobernanza MD 2.0 (2024)
             </a>
             <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
                class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
                style="background:#00506F;">
-               Gobernanza de MetaDocencia (2022)
+               Gobernanza MD (2022)
             </a>
           </div>
         </div>
