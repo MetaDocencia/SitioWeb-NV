@@ -8,6 +8,24 @@ design:
 sections:
 
   # ===== Gobernanza (arriba, 1 columna ancha con botones) =====
+
+
+   - block: cta-image-paragraph
+    id: solutions
+    content:
+      items:
+        - title: "Nuestra gobernanza"
+          text: "Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
+          Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:"
+          image: "quienesomos.jpg"
+          button:
+            text: "Conócenos"
+            url: "https://julianbuede.github.io/quienes-somos/"
+          button:
+            text: "Conócenos"
+            url: "https://julianbuede.github.io/quienes-somos/"
+
+          
   - block: markdown
     id: gobernanza
     content:
@@ -18,10 +36,10 @@ sections:
             Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://www.metadocencia.org/proyecto/gobernanza-2024/"
+            <a href="https://zenodo.org/records/12522913"
                class="px-5 py-2 rounded-md font-semibold text-white no-underline"
                style="background:#C83737;">Gobernanza 2.0 (2024)</a>
-            <a href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+            <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
                class="px-5 py-2 rounded-md font-semibold text-white no-underline"
                style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
           </div>
