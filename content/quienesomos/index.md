@@ -102,63 +102,20 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos locales para "MetaDocencia en números" =====
+  # ===== Estilos locales: SOLO márgenes de acordeones =====
   - block: markdown
-    id: numeros-estilos
+    id: people-accordion-margins
     content:
       title: ""
       text: |
         <style>
-          /* Título del bloque: margen muy reducido arriba y abajo */
-          section#numeros h2,
-          section#numeros .section-title {
-            margin-top: 0.15rem !important;
-            margin-bottom: 0.25rem !important;
-          }
-
-          /* Más distancia entre la fila de 3 (arriba) y la de 2 (abajo) */
-          section#numeros .grid {
-            row-gap: 2.5rem !important; /* probá 2rem–3rem según gusto */
-          }
-        </style>
-
-
-  # ===== Estilos locales: acordeones + tipografías de people_list =====
-  - block: markdown
-    id: people-accordion-styles
-    content:
-      title: ""
-      text: |
-        <style>
-          /* ——— Acordeones (details/summary) ——— */
-
-          /* Menos separación entre acordeones */
+          /* Márgenes entre acordeones (sin tocar tipografías) */
           details.md-acc { margin: .125rem 0 !important; }
           details.md-acc[open] { margin: .125rem 0 1rem !important; }
 
-          /* Título del desplegable en negrita y con menos margen superior */
-          /* más específico: el primer <span> del <summary> (el texto) */
-          details.md-acc > summary > span:first-child {
-            font-weight: 800 !important;     /* negrita real */
-          }
-          details.md-acc > summary {
-            margin-top: .1rem !important;    /* menos margen superior */
-            line-height: 1.25 !important;
-          }
-
-          /* Quitar margen de la primera sección de acordeón */
-          section#equipo-y-consejo-asesor { margin-top: 0rem !important; }
+          /* Reducir separación superior del PRIMER bloque de acordeón */
+          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
           section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
-
-          /* ——— Nombres de perfiles más pequeños ——— */
-          section#equipo-y-consejo-asesor .grid .font-semibold,
-          section#colaboradores .grid .font-semibold,
-          section#auspiciantes .grid .font-semibold,
-          section#colaboraron-con-metadocencia .grid .font-semibold {
-            font-size: 0.9rem !important;
-            line-height: 1.2 !important;
-            font-weight: 700 !important;
-          }
         </style>
 
   # --- Equipo y Consejo Asesor ---
@@ -172,9 +129,8 @@ sections:
             <span>Equipo y Consejo Asesor</span>
             <span>▾</span>
           </summary>
-          <!-- Primera fila: un poco de margen superior -->
-          <div class="pt-3">
-            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="1rem" >}}
+          <div class="pt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
@@ -189,9 +145,8 @@ sections:
             <span>Colaboran con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <!-- Primera fila: un poco de margen superior -->
-          <div class="pt-3">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
+          <div class="pt-2">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
@@ -206,9 +161,8 @@ sections:
             <span>Auspiciantes</span>
             <span>▾</span>
           </summary>
-          <!-- Primera fila: un poco de margen superior -->
-          <div class="pt-3">
-            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="1rem" >}}
+          <div class="pt-2">
+            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
@@ -223,9 +177,8 @@ sections:
             <span>Colaboraron con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <!-- Primera fila: un poco de margen superior -->
-          <div class="pt-3">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
+          <div class="pt-2">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
