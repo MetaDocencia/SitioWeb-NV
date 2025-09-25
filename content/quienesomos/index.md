@@ -89,7 +89,7 @@ sections:
       items:
         - statistic: "+40"
           description: "alianzas y patrocinadores"
-        - statistic: "88"
+        - statistic: "+60"
           description: "personas colaboran con MetaDocencia"
         - statistic: "+1,070"
           description: "integrantes en Slack"
