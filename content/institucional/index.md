@@ -20,10 +20,10 @@ sections:
             <div class="mt-4 flex flex-wrap justify-center gap-4">
               <a href="https://zenodo.org/records/12522913"
                  class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#C83737;">Gobernanza MetaDocencia 2.0 (2024)</a>
+                 style="background:#C83737;">Gobernanza 2.0 (2024)</a>
               <a href="https://zenodo.org/records/7398893"
                  class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#00506F;">Gobernanza MetaDocencia (2022)</a>
+                 style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
             </div>
           image: "quienesomos.jpg"
     design:
@@ -36,13 +36,13 @@ sections:
       title: ""
       text: |
         <div class="text-center max-w-3xl mx-auto">
+          <!-- Línea ROJA arriba de Visión -->
           <div style="height:4px;background:#C83737;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
           <h3 class="text-2xl font-semibold mb-3">Visión</h3>
           <p class="text-lg">
             Trabajamos para que la producción, la comunicación y la aplicación de saberes
             científicos y técnicos sean globalmente equitativas.
           </p>
-          <div style="height:4px;background:#00506F;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
         </div>
 
   # ===== Misión =====
@@ -52,13 +52,14 @@ sections:
       title: ""
       text: |
         <div class="text-center max-w-3xl mx-auto">
+          <!-- Línea AZUL arriba de Misión -->
+          <div style="height:4px;background:#00506F;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
           <h3 class="text-2xl font-semibold mb-3">Misión</h3>
           <p class="text-lg">
             Construir capacidades científicas y técnicas en forma responsable y con mirada local,
             a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles
             para comunidades hispanohablantes.
           </p>
-          <div style="height:4px;background:#F77B20;border-radius:6px;margin:1.5rem auto 0 auto;width:120px;"></div>
         </div>
 
   # ===== Valores (tarjetas, fondo gris) =====
@@ -89,7 +90,7 @@ sections:
       columns: 3
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  # ===== Nos organizamos (fondo blanco/light y oscuro/dark) =====
+  # ===== Nos organizamos (fondo blanco en light / oscuro en dark) =====
   - block: cta-image-paragraph
     id: organizacion
     content:
