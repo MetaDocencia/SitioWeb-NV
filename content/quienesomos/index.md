@@ -20,13 +20,13 @@ sections:
         <div class="mt-4 flex flex-wrap justify-center gap-3">
           <a href="/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Nuestra Gobernanza</a>
-          <a href="https://zenodo.org/records/12534196"
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+          <a href="/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Pautas de Convivencia</a>
-          <a href="https://zenodo.org/records/10514982"
+             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+          <a href="/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Políticas de Accesibilidad</a>
+             style="background:#C83737;color:#FFFFFF;">Valores</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
