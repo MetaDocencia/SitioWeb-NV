@@ -101,45 +101,44 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos del acordeón de perfiles =====
+  # ===== Estilos FUERTES del acordeón de perfiles =====
   - block: markdown
     id: people-accordion-styles
     content:
       title: ""
       text: |
         <style>
-          /* Márgenes: más compactos cerrados, un poco más abiertos cuando está expandido */
-          section.people-acc details { margin: .5rem 0; }
-          section.people-acc details[open] { margin: .25rem 0 1rem; }
+          /* Usamos una clase propia y !important para asegurar override del tema */
+          details.people-acc-d { margin: .25rem 0 !important; }
+          details.people-acc-d[open] { margin: .25rem 0 1rem !important; }
 
-          /* Título del acordeón más grande y con buen click-area */
-          section.people-acc summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            padding: .7rem 0; /* un poco menos alto para compactar */
-            list-style: none;
-            font-weight: 700;
-            font-size: 1.375rem; /* ↑ más grande que 1.25rem */
-            line-height: 1.25;
+          details.people-acc-d > summary {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            cursor: pointer !important;
+            padding: .6rem 0 !important;   /* más compacto */
+            list-style: none !important;
+            font-weight: 800 !important;
+            font-size: 1.375rem !important; /* 22px aprox */
+            line-height: 1.2 !important;
           }
-          section.people-acc summary::-webkit-details-marker { display: none; }
-          section.people-acc .chev { transition: transform .2s ease; }
-          section.people-acc details[open] .chev { transform: rotate(180deg); }
-          section.people-acc .acc-body { padding-top: .5rem; }
+          details.people-acc-d > summary::-webkit-details-marker { display: none; }
+          details.people-acc-d .chev { transition: transform .2s ease; }
+          details.people-acc-d[open] .chev { transform: rotate(180deg); }
+
+          /* Cuerpo del acordeón un poco separado del título */
+          details.people-acc-d .acc-body { padding-top: .5rem !important; }
         </style>
 
   # --- Equipo y Consejo Asesor (abierto por defecto) ---
   - block: markdown
     id: equipo-y-consejo-asesor
-    design:
-      css_class: "people-acc"
     content:
       title: ""
       text: |
-        <details open>
-          <summary>
+        <details class="people-acc-d" open style="margin:.25rem 0;">
+          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
             Equipo y Consejo Asesor
             <span class="chev" aria-hidden="true">▾</span>
           </summary>
@@ -151,13 +150,11 @@ sections:
   # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
-    design:
-      css_class: "people-acc"
     content:
       title: ""
       text: |
-        <details>
-          <summary>
+        <details class="people-acc-d" style="margin:.25rem 0;">
+          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
             Colaboran con MetaDocencia
             <span class="chev" aria-hidden="true">▾</span>
           </summary>
@@ -169,13 +166,11 @@ sections:
   # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
-    design:
-      css_class: "people-acc"
     content:
       title: ""
       text: |
-        <details>
-          <summary>
+        <details class="people-acc-d" style="margin:.25rem 0;">
+          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
             Auspiciantes
             <span class="chev" aria-hidden="true">▾</span>
           </summary>
@@ -187,13 +182,11 @@ sections:
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
     id: colaboraron-con-metaDocencia
-    design:
-      css_class: "people-acc"
     content:
       title: ""
       text: |
-        <details>
-          <summary>
+        <details class="people-acc-d" style="margin:.25rem 0;">
+          <summary style="font-size:1.375rem;font-weight:800;line-height:1.2;padding:.6rem 0;">
             Colaboraron con MetaDocencia
             <span class="chev" aria-hidden="true">▾</span>
           </summary>
