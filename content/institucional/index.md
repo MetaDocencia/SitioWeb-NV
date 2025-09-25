@@ -77,7 +77,7 @@ sections:
   - block: markdown
     id: gobernanza-enlaces
     content:
-      title: ""
+      title: "Gobernanza MD"
       text: |
         <div class="max-w-3xl mx-auto text-center">
           <p class="mb-4">
