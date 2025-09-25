@@ -109,7 +109,7 @@ sections:
       text: |
         <style>
           /* Márgenes: más compactos cerrados, un poco más abiertos cuando está expandido */
-          section.people-acc details { margin: .25rem 0; }
+          section.people-acc details { margin: .5rem 0; }
           section.people-acc details[open] { margin: .25rem 0 1rem; }
 
           /* Título del acordeón más grande y con buen click-area */
