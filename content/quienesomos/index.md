@@ -102,6 +102,27 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
+# ===== Estilos locales para "MetaDocencia en números" =====
+- block: markdown
+  id: numeros-estilos
+  content:
+    title: ""
+    text: |
+      <style>
+        /* Título del bloque: margen muy reducido arriba y abajo */
+        section#numeros h2,
+        section#numeros .section-title {
+          margin-top: 0.15rem !important;
+          margin-bottom: 0.25rem !important;
+        }
+
+        /* Más distancia entre la fila de 3 (arriba) y la de 2 (abajo) */
+        section#numeros .grid {
+          row-gap: 2.5rem !important; /* probá 2rem–3rem según gusto */
+        }
+      </style>
+
+
   # ===== Estilos locales: acordeones + tipografías de people_list =====
   - block: markdown
     id: people-accordion-styles
