@@ -40,11 +40,16 @@ sections:
           </p>
         </div>
 
-  # ===== Valores (tarjetas, fondo gris) =====
+  # ===== Valores (sin fondo, con línea NARANJA arriba) =====
   - block: features
     id: valores
     content:
-      title: "Valores"
+      title: ""
+      text: |
+        <div class="text-center">
+          <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
+          <h3 class="text-2xl font-semibold mb-2">Valores</h3>
+        </div>
       items:
         - name: "Comunidad"
           description: "Trabajar para y con otras personas, anteponiendo los intereses colectivos por sobre los intereses individuales."
@@ -66,9 +71,9 @@ sections:
           description: "Adaptar las acciones a las situaciones que se presentan."
     design:
       columns: 3
-      css_class: "bg-gray-50 dark:bg-gray-900"
+      # sin fondo gris aquí
 
-  # ===== Botones de Gobernanza (debajo de Valores) =====
+  # ===== Botones de Gobernanza (fondo gris, botones en fila) =====
   - block: markdown
     id: gobernanza-enlaces
     content:
@@ -78,7 +83,7 @@ sections:
           <p class="mb-4">
             Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
           </p>
-          <div class="flex flex-wrap justify-center gap-3">
+          <div class="flex flex-wrap md:flex-nowrap justify-center gap-3">
             <a href="https://zenodo.org/records/12522913"
                class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
                style="background:#C83737;">
@@ -91,6 +96,8 @@ sections:
             </a>
           </div>
         </div>
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-800"
 
   # ===== Nos organizamos (fondo blanco en light / oscuro en dark) =====
   - block: cta-image-paragraph
