@@ -1,3 +1,48 @@
+/* === Global font: Open Sans for the entire site ========================= */
+/* Carga desde Google Fonts (variable + pesos clásicos) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Suavizado */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Familia por defecto para texto general */
+html, body {
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+/* Tipografía consistente en elementos comunes y tipografía de Tailwind Typography (.prose) */
+h1, h2, h3, h4, h5, h6,
+p, a, span, li, dt, dd, blockquote, small, strong, em,
+label, input, textarea, button, select,
+table, th, td, figcaption,
+nav, header, footer, section, article, aside,
+.prose, .prose :where(p, li, blockquote, h1, h2, h3, h4, h5, h6) {
+  font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+/* Mantener monoespaciada en código */
+code, kbd, samp, pre,
+.prose code, .prose pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+               "Courier New", monospace !important;
+}
+
+/* No alterar fuentes de iconos (Font Awesome, etc.) */
+[class^="fa-"], [class*=" fa-"],
+.fab, .fas, .far, .fal, .fat, .fa,
+.ai, /* Academic Icons / ORCID packs si los usás */
+.icon, .icon-pack {
+  font-family: inherit; /* o su propia fuente, según tu carga de iconos */
+}
+
+
 /* === People: 6 columnas desktop / 2 columnas móvil === */
 section.people-6col .grid {
   display: grid !important;
