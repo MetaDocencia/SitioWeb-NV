@@ -34,7 +34,7 @@ sections:
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society.
+            MetaDocencia es un proyecto con patrocinio fiscal de [Code for Science &amp; Society](https://www.codeforsociety.org/).
           </p>
         </div>
     design:
