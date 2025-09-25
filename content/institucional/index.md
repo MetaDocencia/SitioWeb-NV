@@ -7,28 +7,6 @@ design:
 
 sections:
 
-  # ===== Nuestra gobernanza (cta-image-paragraph con 2 botones) =====
-  - block: cta-image-paragraph
-    id: gobernanza
-    content:
-      items:
-        - title: "Nuestra gobernanza"
-          text: |
-            <p class="text-lg">
-              Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-            </p>
-            <div class="mt-4 flex flex-wrap justify-center gap-4">
-              <a href="https://zenodo.org/records/12522913"
-                 class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#C83737;">Gobernanza 2.0 (2024)</a>
-              <a href="https://zenodo.org/records/7398893"
-                 class="px-5 py-2 rounded-md font-semibold text-white no-underline"
-                 style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
-            </div>
-          image: "quienesomos.jpg"
-    design:
-      css_class: ""
-
   # ===== Visión =====
   - block: markdown
     id: vision
@@ -89,6 +67,22 @@ sections:
     design:
       columns: 3
       css_class: "bg-gray-50 dark:bg-gray-900"
+
+  # ===== Texto con enlaces de Gobernanza (debajo de Valores) =====
+  - block: markdown
+    id: gobernanza-enlaces
+    content:
+      title: ""
+      text: |
+        <div class="max-w-3xl mx-auto">
+          <p class="mb-3">
+            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
+          </p>
+          <ul class="list-disc pl-5">
+            <li>Gobernanza de MetaDocencia (2022) <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY" class="underline">https://zenodo.org/records/7398893#.Y7gW1HaZNPY</a></li>
+            <li>Gobernanza 2.0 (2024) <a href="https://zenodo.org/records/12522913" class="underline">https://zenodo.org/records/12522913</a></li>
+          </ul>
+        </div>
 
   # ===== Nos organizamos (fondo blanco en light / oscuro en dark) =====
   - block: cta-image-paragraph
