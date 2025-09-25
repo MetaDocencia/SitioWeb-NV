@@ -14,7 +14,7 @@ sections:
       title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos a América Latina en el mapa de la investigación global</span>'
       # Botón personalizado más grande y visible
       text: |
-        <a href="https://julianbuede.github.io/cta/"
+        <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
@@ -34,7 +34,7 @@ sections:
           size: cover
           position: center
           parallax: false
-        text_color_light: true   # asegura textos claros sobre el fondo
+        text_color_light: true 
 
   - block: cta-image-paragraph
     id: solutions
@@ -45,7 +45,7 @@ sections:
           image: "quienesomos.jpg"
           button:
             text: "Conócenos"
-            url: "https://julianbuede.github.io/quienes-somos/"
+            url: "/quienes-somos"
         - title: "Qué hacemos"
           text: "Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos."
           feature_icon: check
@@ -56,7 +56,7 @@ sections:
           image: "organigramaapaisado.png"
           button:
             text: "Conoce nuestros proyectos"
-            url: "https://julianbuede.github.io/que-hacemos"
+            url: "/que-hacemos"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
 
@@ -107,7 +107,7 @@ sections:
       text: "Aquí te contamos cómo"
       button:
         text: "Súmate"
-        url: "https://julianbuede.github.io/cta/"
+        url: "/cta"
     design:
       card:
         css_class: "bg-primary-700"
