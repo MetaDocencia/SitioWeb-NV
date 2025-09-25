@@ -115,20 +115,21 @@ sections:
           details.md-acc { margin: .125rem 0 !important; }
           details.md-acc[open] { margin: .125rem 0 1rem !important; }
 
-          /* Título del desplegable (Ej: Equipo y Consejo Asesor) en negrita y con menos margen superior */
+          /* Título del desplegable en negrita y con menos margen superior */
+          /* más específico: el primer <span> del <summary> (el texto) */
+          details.md-acc > summary > span:first-child {
+            font-weight: 800 !important;     /* negrita real */
+          }
           details.md-acc > summary {
-            font-weight: 700 !important;     /* negrita */
-            margin-top: .25rem !important;   /* menos margen superior */
+            margin-top: .2rem !important;    /* menos margen superior */
             line-height: 1.25 !important;
           }
-          /* Ícono/flechita conserva peso normal */
-          details.md-acc > summary span:last-child { font-weight: 400 !important; }
 
           /* Quitar margen de la primera sección de acordeón */
           section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
           section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
 
-          /* ——— Nombres de perfiles más pequeños (solo dentro de las grillas de people_list) ——— */
+          /* ——— Nombres de perfiles más pequeños ——— */
           section#equipo-y-consejo-asesor .grid .font-semibold,
           section#colaboradores .grid .font-semibold,
           section#auspiciantes .grid .font-semibold,
@@ -150,8 +151,9 @@ sections:
             <span>Equipo y Consejo Asesor</span>
             <span>▾</span>
           </summary>
-          <div class="pt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
@@ -166,8 +168,9 @@ sections:
             <span>Colaboran con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <div class="pt-2">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
@@ -182,8 +185,9 @@ sections:
             <span>Auspiciantes</span>
             <span>▾</span>
           </summary>
-          <div class="pt-2">
-            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
@@ -198,8 +202,9 @@ sections:
             <span>Colaboraron con MetaDocencia</span>
             <span>▾</span>
           </summary>
-          <div class="pt-2">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+          <!-- Primera fila: un poco de margen superior -->
+          <div class="pt-3">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="1rem" >}}
           </div>
         </details>
 
