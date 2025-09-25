@@ -104,11 +104,21 @@ sections:
 
 # --- Equipo y CA ---
   - block: markdown
-    id: equipo-y-consejo-asesor
-    content:
-      title: "Equipo y Consejo Asesor"
-      text: |
-        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+  id: equipo-y-consejo-asesor
+  design:
+    css_class: "people-acc"
+  content:
+    title: ""
+    text: |
+      <details open>
+        <summary>
+          Equipo y Consejo Asesor
+          <span class="chev" aria-hidden="true">▾</span>
+        </summary>
+        <div class="acc-body">
+          {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+        </div>
+      </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
