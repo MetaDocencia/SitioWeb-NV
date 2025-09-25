@@ -49,17 +49,7 @@ footer:
   lines:
     - 'MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society. Licencia'
     - 'Publicado con Hugo Blox Builder.'
-
-# Enlaces del footer (sin iconos, solo texto)
-contact_links:
-  - icon: ""           # sin icono
-    icon_pack: ""      # sin pack
-    link: "https://zenodo.org/records/12534196"
-    name: "Pautas de Convivencia"
-  - icon: ""           # sin icono
-    icon_pack: ""      # sin pack
-    link: "https://zenodo.org/records/10514982"
-    name: "Políticas de Accesibilidad"
+    - '<a href="https://zenodo.org/records/12534196">Pautas de Convivencia</a> · <a href="https://zenodo.org/records/10514982">Política de Accesibilidad</a>'
 
 
 # Localization
