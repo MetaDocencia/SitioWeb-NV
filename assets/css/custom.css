@@ -304,3 +304,11 @@ section.people-naked details > summary {
   display: none !important;
 }
 
+/* Subrayar SIEMPRE todos los enlaces del footer */
+footer a {
+  text-decoration: underline !important;
+}
+footer a:hover,
+footer a:focus {
+  text-decoration: underline !important;
+}
