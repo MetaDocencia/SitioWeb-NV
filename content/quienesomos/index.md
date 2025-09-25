@@ -142,12 +142,12 @@ sections:
             font-weight: 800 !important;     /* negrita real */
           }
           details.md-acc > summary {
-            margin-top: .2rem !important;    /* menos margen superior */
+            margin-top: .1rem !important;    /* menos margen superior */
             line-height: 1.25 !important;
           }
 
           /* Quitar margen de la primera sección de acordeón */
-          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
+          section#equipo-y-consejo-asesor { margin-top: 0rem !important; }
           section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
 
           /* ——— Nombres de perfiles más pequeños ——— */
