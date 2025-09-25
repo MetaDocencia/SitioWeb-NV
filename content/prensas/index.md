@@ -2,7 +2,7 @@
 title: "MetaDocencia en los medios"
 slug: "prensas"
 type: "page"
----
+
 
 <section class="mx-auto px-6 py-10 max-w-4xl">
 
