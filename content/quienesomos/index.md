@@ -101,44 +101,43 @@ sections:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
-    
-  # ===== Estilos locales: SOLO márgenes de acordeones =====
-# ===== Estilos locales: acordeones + tipografías de people_list =====
-- block: markdown
-  id: people-accordion-styles
-  content:
-    title: ""
-    text: |
-      <style>
-        /* ——— Acordeones (details/summary) ——— */
 
-        /* Menos separación entre acordeones */
-        details.md-acc { margin: .125rem 0 !important; }
-        details.md-acc[open] { margin: .125rem 0 1rem !important; }
+  # ===== Estilos locales: acordeones + tipografías de people_list =====
+  - block: markdown
+    id: people-accordion-styles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ——— Acordeones (details/summary) ——— */
 
-        /* Título del desplegable (Ej: Equipo y Consejo Asesor) en negrita y con menos margen superior */
-        details.md-acc > summary {
-          font-weight: 700 !important;     /* negrita */
-          margin-top: .25rem !important;   /* menos margen superior */
-          line-height: 1.25 !important;
-        }
-        /* Ícono/flechita conserva peso normal */
-        details.md-acc > summary span:last-child { font-weight: 400 !important; }
+          /* Menos separación entre acordeones */
+          details.md-acc { margin: .125rem 0 !important; }
+          details.md-acc[open] { margin: .125rem 0 1rem !important; }
 
-        /* Quitar margen de la primera sección de acordeón */
-        section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
-        section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
+          /* Título del desplegable (Ej: Equipo y Consejo Asesor) en negrita y con menos margen superior */
+          details.md-acc > summary {
+            font-weight: 700 !important;     /* negrita */
+            margin-top: .25rem !important;   /* menos margen superior */
+            line-height: 1.25 !important;
+          }
+          /* Ícono/flechita conserva peso normal */
+          details.md-acc > summary span:last-child { font-weight: 400 !important; }
 
-        /* ——— Nombres de perfiles más pequeños (solo dentro de las grillas de people_list) ——— */
-        section#equipo-y-consejo-asesor .grid .font-semibold,
-        section#colaboradores .grid .font-semibold,
-        section#auspiciantes .grid .font-semibold,
-        section#colaboraron-con-metadocencia .grid .font-semibold {
-          font-size: 0.9rem !important;
-          line-height: 1.2 !important;
-          font-weight: 700 !important;
-        }
-      </style>
+          /* Quitar margen de la primera sección de acordeón */
+          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
+          section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
+
+          /* ——— Nombres de perfiles más pequeños (solo dentro de las grillas de people_list) ——— */
+          section#equipo-y-consejo-asesor .grid .font-semibold,
+          section#colaboradores .grid .font-semibold,
+          section#auspiciantes .grid .font-semibold,
+          section#colaboraron-con-metadocencia .grid .font-semibold {
+            font-size: 0.9rem !important;
+            line-height: 1.2 !important;
+            font-weight: 700 !important;
+          }
+        </style>
 
   # --- Equipo y Consejo Asesor ---
   - block: markdown
@@ -203,7 +202,6 @@ sections:
             {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-
 
   # ===== CTA final =====
   - block: cta-card
