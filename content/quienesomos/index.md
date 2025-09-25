@@ -108,7 +108,7 @@ sections:
     content:
       title: "Equipo y Consejo Asesor"
       text: |
-        {{< people_list group="Equipo y Consejo Asesor" columns=7 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -116,7 +116,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
 
   # --- Auspiciantes ---
   - block: markdown
@@ -132,7 +132,7 @@ sections:
     content:
       title: "Colaboraron con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: cta-card
