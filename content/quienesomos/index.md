@@ -102,38 +102,37 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Solo estilos de márgenes del acordeón =====
+  # ===== Estilos locales: SOLO márgenes de acordeones =====
   - block: markdown
     id: people-accordion-margins
     content:
       title: ""
       text: |
         <style>
-          /* Márgenes del acordeón (sin tocar tipografías) */
+          /* Márgenes entre acordeones (sin tocar tipografías) */
           details.md-acc { margin: .125rem 0 !important; }
           details.md-acc[open] { margin: .125rem 0 1rem !important; }
+
+          /* Reducir separación superior del PRIMER bloque de acordeón */
+          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
+          section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
         </style>
 
-  # --- Equipo y Consejo Asesor (margen superior reducido) ---
+  # --- Equipo y Consejo Asesor ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
       title: ""
       text: |
         <details class="md-acc" open>
-          <summary class="flex items-center justify-between">
+          <summary class="flex items-center justify-between cursor-pointer select-none">
             <span>Equipo y Consejo Asesor</span>
-            <span class="select-none">▾</span>
+            <span>▾</span>
           </summary>
           <div class="pt-2">
             {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      spacing:
-        # ↓ margen superior muy chico solo para este primer bloque
-        margin: ["0rem", 0, "0.25rem", 0]
-        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -142,17 +141,14 @@ sections:
       title: ""
       text: |
         <details class="md-acc">
-          <summary class="flex items-center justify-between">
+          <summary class="flex items-center justify-between cursor-pointer select-none">
             <span>Colaboran con MetaDocencia</span>
-            <span class="select-none">▾</span>
+            <span>▾</span>
           </summary>
           <div class="pt-2">
             {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Auspiciantes ---
   - block: markdown
@@ -161,36 +157,30 @@ sections:
       title: ""
       text: |
         <details class="md-acc">
-          <summary class="flex items-center justify-between">
+          <summary class="flex items-center justify-between cursor-pointer select-none">
             <span>Auspiciantes</span>
-            <span class="select-none">▾</span>
+            <span>▾</span>
           </summary>
           <div class="pt-2">
             {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
-    id: colaboraron-con-metaDocencia
+    id: colaboraron-con-metadocencia
     content:
       title: ""
       text: |
         <details class="md-acc">
-          <summary class="flex items-center justify-between">
+          <summary class="flex items-center justify-between cursor-pointer select-none">
             <span>Colaboraron con MetaDocencia</span>
-            <span class="select-none">▾</span>
+            <span>▾</span>
           </summary>
           <div class="pt-2">
             {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # ===== CTA final =====
   - block: cta-card
