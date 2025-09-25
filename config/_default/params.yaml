@@ -47,7 +47,7 @@ footer:
   enable: true
   show_translucent: false
   lines:
-    - 'MetaDocencia, un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.'
+    - 'MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.'
     - 'Publicado con <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.'
   link_items:
     - text: "Pautas de Convivencia"
