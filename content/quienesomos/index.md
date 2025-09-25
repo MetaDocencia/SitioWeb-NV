@@ -4,6 +4,7 @@ type: landing
 slug: "quienes-somos"
 design:
   spacing: "3rem"
+---
 
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
@@ -34,7 +35,7 @@ sections:
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia es un proyecto con patrocinio fiscal de [Code for Science &amp; Society](https://www.codeforsociety.org/).
+            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
           </p>
         </div>
     design:
@@ -102,47 +103,104 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-# --- Equipo y CA ---
+  # ===== Estilos del acordeón de perfiles (una sola vez) =====
   - block: markdown
-  id: equipo-y-consejo-asesor
-  design:
-    css_class: "people-acc"
-  content:
-    title: ""
-    text: |
-      <details open>
-        <summary>
-          Equipo y Consejo Asesor
-          <span class="chev" aria-hidden="true">▾</span>
-        </summary>
-        <div class="acc-body">
-          {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
-        </div>
-      </details>
+    id: people-accordion-styles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Acordeón para grupos de perfiles */
+          section.people-acc details {
+            margin: 0.75rem 0 1rem 0;
+          }
+          section.people-acc summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: .875rem 0;
+            list-style: none;
+            font-weight: 700;
+            font-size: 1.25rem; /* ~text-xl */
+          }
+          section.people-acc summary::-webkit-details-marker { display: none; }
+          section.people-acc .chev { transition: transform .2s ease; }
+          section.people-acc details[open] .chev { transform: rotate(180deg); }
+          section.people-acc .acc-body { padding-top: .5rem; }
+        </style>
+
+  # --- Equipo y Consejo Asesor (abierto por defecto) ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    design:
+      css_class: "people-acc"
+    content:
+      title: ""
+      text: |
+        <details open>
+          <summary>
+            Equipo y Consejo Asesor
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="acc-body">
+            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
+    design:
+      css_class: "people-acc"
     content:
-      title: "Colaboran con MetaDocencia"
+      title: ""
       text: |
-        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        <details>
+          <summary>
+            Colaboran con MetaDocencia
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="acc-body">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
+    design:
+      css_class: "people-acc"
     content:
-      title: "Auspiciantes"
+      title: ""
       text: |
-        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+        <details>
+          <summary>
+            Auspiciantes
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="acc-body">
+            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
     id: colaboraron-con-metaDocencia
+    design:
+      css_class: "people-acc"
     content:
-      title: "Colaboraron con MetaDocencia"
+      title: ""
       text: |
-        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        <details>
+          <summary>
+            Colaboraron con MetaDocencia
+            <span class="chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="acc-body">
+            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # ===== CTA final =====
   - block: cta-card
@@ -157,4 +215,3 @@ sections:
       card:
         css_class: "bg-primary-700"
         css_style: ""
----
