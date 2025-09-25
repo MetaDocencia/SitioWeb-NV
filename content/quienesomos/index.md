@@ -102,6 +102,13 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
+# --- Equipo y CA ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    content:
+      title: "Equipo y Consejo Asesor"
+      text: |
+        {{< people_list group="Equipo y Consejo Asesor" columns=7 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -109,7 +116,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=7 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Auspiciantes ---
   - block: markdown
@@ -118,6 +125,14 @@ sections:
       title: "Auspiciantes"
       text: |
         {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: colaboraron-con-metaDocencia
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: |
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: cta-card
