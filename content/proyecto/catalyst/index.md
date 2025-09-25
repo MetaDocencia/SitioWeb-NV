@@ -7,30 +7,30 @@ tags:
   - Proyectos
 ---
 
-Catalyst tiene como objetivo crear un servicio comunitario de infraestructura en la nube y ofrecer flujos de trabajo en biociencias basados en prácticas comunitarias abiertas e inclusivas, la infraestructura que permita estas prácticas y un enfoque de “formación de formadores”, que capacite a líderes de comunidades locales para compartir su experiencia en infraestructura en la nube con otras personas de sus comunidades.
-Para ello, nos centraremos en comunidades de América Latina y África, y esperamos aprender cómo este modelo podría extenderse a otras comunidades globales históricamente marginadas de los proyectos de infraestructura científica a gran escala.
-Se trata de un esfuerzo de colaboración entre 2i2c, The Carpentries, Center for Scientific Collaboration and Community Engagement, Invest in Open Infrastructure, MetaDocencia y Open Life Science.
-Mejorar la accesibilidad y la utilidad de la infraestructura en la nube para las comunidades globales requiere una combinación de expertise en muchas áreas como pedagogía, infraestructura y conocimientos locales. MetaDocencia está orgullosa de colaborar en este proyecto con 2i2c, OLS, IOI, CSCCE y The Carpentries, con el objetivo de reunir las habilidades que permitan aumentar el acceso a los servicios de computación interactiva para las comunidades de ciencia abierta en América Latina y África
+La implementación de infraestructura en la nube, que promete democratizar el acceso al cómputo científico, se enfrenta a una serie de problemas. La complejidad de navegar la abundancia de herramientas de código abierto disponibles, la falta de formación y apoyo para aprovechar adecuadamente estas herramientas y la escasez de recursos adecuados, especialmente en comunidades históricamente marginadas, limitan el alcance y el potencial de los flujos de trabajo en la nube.
 
-## Al unirse al Proyecto Catalyst, tendrán acceso a:
-- Un centro de computación en la nube interactivo gratuito durante 1 año
-- Soporte y capacitación técnica sobre cómo aprovechar al máximo el recurso de computación en la nube
-- Un programa de entrenamiento de entrenadores para que puedan aprender habilidades de enseñanza y pedagógicas, y así transferir experiencia a sus comunidades de usuarios
-- Capacitación y tutoría en Ciencia Abierta para desarrollar buenas prácticas de liderazgo para una investigación transparente y accesible
-- Traducción y contextualización de recursos al español para comunidades latinoamericanas
-- Dar forma a nuestro modelo de gobernanza para ayudarnos a mantener, escalar y maximizar el impacto
+Este proyecto tuvo como objetivo crear un servicio comunitario de infraestructura en la nube y ofrecer flujos de trabajo en biociencias basados en prácticas comunitarias abiertas e inclusivas, la infraestructura que permitiera estas prácticas y un enfoque de “formación de formadores” que capacitara a líderes de comunidades locales para compartir su experiencia en infraestructura en la nube con otras personas de sus comunidades. Tomó forma como [un proyecto](https://doi.org/10.5281/zenodo.7025287) colaborativo entre [MetaDocencia](https://www.metadocencia.org/) y [2i2c](https://2i2c.org/), [The Carpentries](https://carpentries.org/about-us/), [CSSCE](https://www.cscce.org/), [IOI](https://investinopen.org/) y [OLS](https://we-are-ols.org/), que [resultó financiado](https://www.metadocencia.org/post/infraestructura-nube/) en 2022 por [Chan Zuckerberg Initiative](https://chanzuckerberg.com/) y se lanzó públicamente como [Proyecto Catalyst](https://catalystproject.cloud/) para servir a comunidades de África y América Latina.
 
-Desde MetaDocencia tenemos el rol clave de identificar y contactar comunidades latinoamericanas que puedan beneficiarse de participar de esta prueba piloto. Esto es clave para otro proyecto MetaDocente, el [Mapeo de Comunidades](https://www.metadocencia.org/proyecto/mapeo-comunidades/).
+MetaDocencia tomó el rol clave de identificar y contactar a distintas comunidades latinoamericanas que pudieran beneficiarse de participar. Al unirse al Proyecto Catalyst, recibieron acceso a:
+* Una máquina virtual gratuita y en la nube JupyterHub, con gran capacidad de almacenamiento y cómputo, durante 1 año.
+* Soporte y capacitación técnica para aprovechar al máximo este recurso
+* Un programa de entrenamienro de entrenadores para incorporar habilidades de enseñanza, y así transferir su experiencia a sus comunidades locales
+* Capacitación y tutoría en Ciencia Abierta para desarrollar buenas prácticas de liderazgo para una investigación transparente y accesible
+* Recursos contextualizados al español para comunidades latinoamericanas
+> Dar forma a la gobernanza del proyecto para ayudar a mantener, escalar y maximizar el impacto
 
-## Testimonios
+**Testimonios de algunas de las [10 comunidades latinoamericanas](https://catalystproject.cloud/current-community-partners.html#latin-america) que participaron de la primera edición del proyecto**:
+> Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
+Nicolás Wolovick
+Director UNC Supercómputo
 
-> Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro.  
-**Nicolás Wolovick** — Director UNC Supercómputo
+> Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+Andres Olivera
+Network Manager, LABI
 
-> Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional.  
-**Andres Olivera** — Network Manager, LABI
+**Para seguir leyendo**:
+* Propuesta original en Zenodo, financiada por CZI: [https://doi.org/10.5281/zenodo.7025287](https://doi.org/10.5281/zenodo.7025287)
+* Blogpost original de anuncio de la iniciativa (en inglés): [Open grant narrative: A Collaborative Interactive Computing Service Model for Global Communities](https://2i2c.org/blog/2022/czi-global-communities-proposal/) 
+* Traducción del blogpost al español: Narrativa abierta de financiamiento: [Modelo de servicio computacional interactivo y colaborativo para comunidades globales](https://www.metadocencia.org/post/narrativafinanciamiento/) (por [Laura Ascenzi](https://www.metadocencia.org/authors/laurel/) y [Laura Ación](https://www.metadocencia.org/authors/lacion/))
+* Blogpost: [MetaDocencia le da la bienvenida a las primeras comunidades latinoamericanas que participan en el proyecto Catalyst](https://www.metadocencia.org/post/20231215-comunidadescatalyst/)
 
-## Para seguir leyendo
-- [**Página web de Catalyst**](https://catalystproject.cloud/index)
-- [**Formulario de registro**](https://catalystproject.cloud/register)
-- [**Blogpost MetaDocencia**](https://www.metadocencia.org/post/20231215-comunidadescatalyst/)
