@@ -48,7 +48,8 @@ sections:
       text: |
         <div class="text-center">
           <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
-          <h3 class="text-2xl font-semibold mb-2">Valores</h3>
+          <!-- Igual tamaño que Visión/Misión -->
+          <h3 class="text-2xl font-semibold mb-3">Valores</h3>
         </div>
       items:
         - name: "Comunidad"
@@ -71,7 +72,6 @@ sections:
           description: "Adaptar las acciones a las situaciones que se presentan."
     design:
       columns: 3
-      # sin fondo gris aquí
 
   # ===== Botones de Gobernanza (fondo gris, botones en fila) =====
   - block: markdown
