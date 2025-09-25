@@ -4,15 +4,12 @@ date: 2023-10-24
 type: landing
 translationKey: "home"
 design:
-  # Espaciado por defecto entre secciones
   spacing: "6rem"
 
 sections:
   - block: hero
     content:
-      # Título en HTML para controlar tamaño/contraste
       title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos a América Latina en el mapa de la investigación global</span>'
-      # Botón personalizado más grande y visible
       text: |
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
@@ -34,8 +31,9 @@ sections:
           size: cover
           position: center
           parallax: false
-        text_color_light: true 
+        text_color_light: true
 
+  # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
   - block: cta-image-paragraph
     id: solutions
     content:
@@ -58,7 +56,7 @@ sections:
             text: "Conoce nuestros proyectos"
             url: "/que-hacemos"
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
+      css_class: ""   # ← sin fondo gris
 
   - block: stats
     content:
@@ -110,6 +108,6 @@ sections:
         url: "/cta"
     design:
       card:
-        css_class: "bg-primary-700"
-        css_style: ""
+        css_class: ""
+        css_style: "background-color:#C83737;color:#FFFFFF;"
 ---
