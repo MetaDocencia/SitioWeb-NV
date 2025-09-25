@@ -7,6 +7,30 @@ design:
 
 sections:
 
+  # ===== Gobernanza (arriba, 1 columna ancha con botones) =====
+  - block: markdown
+    id: gobernanza
+    content:
+      title: "Nuestra gobernanza"
+      text: |
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="mb-6 text-lg">
+            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.metadocencia.org/proyecto/gobernanza-2024/"
+               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#C83737;">Gobernanza 2.0 (2024)</a>
+            <a href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
+               class="px-5 py-2 rounded-md font-semibold text-white no-underline"
+               style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
+          </div>
+          <p class="opacity-90 mt-6">
+            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
+          </p>
+          <div style="height:4px;background:#F77B20;border-radius:6px;margin:2rem auto 0 auto;width:140px;"></div>
+        </div>
+
   # ===== Visión =====
   - block: markdown
     id: vision
@@ -84,27 +108,4 @@ sections:
           image: "organigramaES.jpg"
     design:
       css_class: "bg-white"
-
-  # ===== Gobernanza (1 columna ancha con botones) =====
-  - block: markdown
-    id: gobernanza
-    content:
-      title: "Nuestra gobernanza"
-      text: |
-        <div class="max-w-4xl mx-auto text-center">
-          <p class="mb-6 text-lg">
-            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://www.metadocencia.org/proyecto/gobernanza-2022/"
-               class="px-5 py-2 rounded-md font-semibold text-white"
-               style="background:#00506F;">Gobernanza de MetaDocencia (2022)</a>
-            <a href="https://www.metadocencia.org/proyecto/gobernanza-2024/"
-               class="px-5 py-2 rounded-md font-semibold text-white"
-               style="background:#F77B20;">Gobernanza 2.0 (2024)</a>
-          </div>
-          <p class="opacity-90 mt-6">
-            Nuestro enfoque de gobernanza prioriza la construcción de confianza, la rendición de cuentas y la transparencia (con atención a la privacidad), apoyando procesos abiertos y la participación comunitaria.
-          </p>
-        </div>
 ---
