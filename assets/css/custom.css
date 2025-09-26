@@ -304,11 +304,27 @@ section.people-naked details > summary {
   display: none !important;
 }
 
-/* Subrayar SIEMPRE todos los enlaces del footer */
-footer a {
+/* ====== Footer: subrayar links SOLO en el pie ====== */
+/* Ajustá ".site-footer" por la clase real de tu pie si difiere */
+footer.site-footer a,
+footer#site-footer a,
+footer .footer-links a,
+footer .footer-legal a {
   text-decoration: underline !important;
 }
-footer a:hover,
-footer a:focus {
-  text-decoration: underline !important;
+
+/* No subrayar botones/CTAs ni pseudo-botones del pie */
+footer.site-footer a.btn,
+footer.site-footer .btn,
+footer.site-footer [class*="btn"],
+footer.site-footer [class*="px-"],
+footer.site-footer [role="button"] {
+  text-decoration: none !important;
 }
+
+/* Asegurar negritas dentro de enlaces del pie (por si algún reset las aplana) */
+footer.site-footer a b,
+footer.site-footer a strong {
+  font-weight: 700 !important;
+}
+
