@@ -1,6 +1,6 @@
 ---
 title: "Revisión abierta y equitativa en Latinoamérica"
-summary: "Empoderamos las redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos."
+summary: "Empoderamos redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos."
 date: 2025-09-23
 tags:
   - Infraestructura
