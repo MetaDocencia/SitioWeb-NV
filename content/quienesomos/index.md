@@ -109,7 +109,23 @@ sections:
       title: ""
       text: |
         <style>
-          /* Flecha y comportamiento del colapsable (no toca tipografías) */
+          /* ===== Ajustes del bloque SOLUTIONS (full-bleed + 2→1 columnas) ===== */
+          /* Ensancha el contenedor interno del bloque markdown a todo el ancho */
+          section#solutions .container { max-width: none !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; }
+          /* Si el tema aplica .prose con max-width, lo neutralizamos en este bloque */
+          section#solutions .prose { max-width: none !important; }
+
+          /* Mantener 2 columnas en desktop y 1 en móviles sin usar clases en el div */
+          section#solutions [data-2col] { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+          @media (max-width: 900px) {
+            section#solutions [data-2col] { grid-template-columns: 1fr; }
+          }
+          /* Un poco de respiro lateral en pantallas angostas */
+          @media (max-width: 900px) {
+            section#solutions [data-2col] { padding-left: 1rem; padding-right: 1rem; }
+          }
+
+          /* ===== Colapsables (no toca tipografías globales) ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -132,7 +148,7 @@ sections:
             padding-top: .25rem !important;
           }
 
-          /* === Reducir tamaño SOLO de los nombres bajo avatar en ESTA página === */
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
@@ -146,12 +162,6 @@ sections:
             section#colaboraron-con-metadocencia .mdnv-people-name {
               font-size: 0.9rem !important;
             }
-          }
-
-          /* 2 columnas en desktop y 1 en móviles para el bloque de video/texto, sin clases en el div */
-          section#solutions [data-2col] { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
-          @media (max-width: 900px) {
-            section#solutions [data-2col] { grid-template-columns: 1fr; }
           }
         </style>
 
