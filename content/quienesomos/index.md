@@ -58,22 +58,26 @@ sections:
     content:
       title: "Vamos por 5 años más"
       text: |
-        <div data-2col
-             style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
-          <div>
-            <p>
-              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-            </p>
-          </div>
-          <div style="position:relative;width:100%;padding-top:56.25%;">
-            <iframe
-              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0.5rem;"
-              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-              title="MetaDocencia - 5 años"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        <!-- Breakout full-bleed que ignora el wrapper central del tema -->
+        <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
+          <!-- Contenido centrado y con respiro lateral -->
+          <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
+            <div data-2col>
+              <div>
+                <p>
+                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+                </p>
+              </div>
+              <div data-16x9>
+                <iframe
+                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+                  title="MetaDocencia - 5 años"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
     design:
@@ -109,20 +113,29 @@ sections:
       title: ""
       text: |
         <style>
-          /* ===== Ajustes del bloque SOLUTIONS (full-bleed + 2→1 columnas) ===== */
-          /* Ensancha el contenedor interno del bloque markdown a todo el ancho */
-          section#solutions .container { max-width: none !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; }
-          /* Si el tema aplica .prose con max-width, lo neutralizamos en este bloque */
-          section#solutions .prose { max-width: none !important; }
-
-          /* Mantener 2 columnas en desktop y 1 en móviles sin usar clases en el div */
-          section#solutions [data-2col] { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
-          @media (max-width: 900px) {
-            section#solutions [data-2col] { grid-template-columns: 1fr; }
+          /* ====== Grid 2→1 sin clases en el HTML ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            gap: 1.5rem;
           }
-          /* Un poco de respiro lateral en pantallas angostas */
           @media (max-width: 900px) {
-            section#solutions [data-2col] { padding-left: 1rem; padding-right: 1rem; }
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
           }
 
           /* ===== Colapsables (no toca tipografías globales) ===== */
