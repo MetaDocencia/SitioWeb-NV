@@ -5,6 +5,7 @@ slug: "que-hacemos"
 design:
   spacing: "3rem"
 
+
 sections:
   # ---------- HERO angosto (imagen de fondo + texto grande) ----------
   - block: hero
@@ -344,3 +345,5 @@ sections:
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
           role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordin
+
+---
