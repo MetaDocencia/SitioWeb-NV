@@ -153,7 +153,7 @@ sections:
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
 
-            - name: "Procesamiento de datos abiertos para redes latinoamericanas de investigación"
+        - name: "Procesamiento de datos abiertos para redes latinoamericanas de investigación"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Garantizamos el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica.
@@ -343,31 +343,4 @@ sections:
           role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
         - name: "Verónica Xhardez"
-          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
-    design:
-      spacing:
-        padding: ["2rem", 0, "2rem", 0]
-
-  # ======================
-  #  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
-  # ======================
-  - block: markdown
-    id: prensa
-    content:
-      text: |
-        <div class="text-center">
-          <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia en los medios</h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Conocé qué dicen de MetaDocencia en prensa y blogs.
-          </p>
-          <a href="https://mdnv.netlify.app/prensas"
-             class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-             Ver menciones →
-          </a>
-        </div>
-    design:
-      spacing:
-        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
-      css_style: "background:#F9FAFB;"
----
+          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordin
