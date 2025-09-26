@@ -58,19 +58,19 @@ sections:
     content:
       title: "Vamos por 5 años más"
       text: |
-        <div class="grid md:grid-cols-2 gap-6 items-start">
+        <div data-2col
+             style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
           <div>
             <p>
               Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
             </p>
           </div>
-          <div class="relative w-full" style="padding-top:56.25%;">
+          <div style="position:relative;width:100%;padding-top:56.25%;">
             <iframe
-              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0.5rem;"
               src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
               title="MetaDocencia - 5 años"
               loading="lazy"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
             </iframe>
@@ -137,7 +137,7 @@ sections:
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
-            font-size: 0.95rem !important;  /* ~15px si base=16px */
+            font-size: 0.95rem !important;
           }
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
@@ -147,6 +147,12 @@ sections:
               font-size: 0.9rem !important;
             }
           }
+
+          /* 2 columnas en desktop y 1 en móviles para el bloque de video/texto, sin clases en el div */
+          section#solutions [data-2col] { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+          @media (max-width: 900px) {
+            section#solutions [data-2col] { grid-template-columns: 1fr; }
+          }
         </style>
 
   # --- Equipo y CA ---
@@ -155,9 +161,12 @@ sections:
     content:
       title: "Equipo y Consejo Asesor"
       text: |
-        {{< collapsible open=true summary="Mostrar/ocultar" >}}
-        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
-        {{< /collapsible >}}
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -165,9 +174,12 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
-        {{< /collapsible >}}
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Auspiciantes ---
   - block: markdown
@@ -175,9 +187,12 @@ sections:
     content:
       title: "Auspiciantes"
       text: |
-        {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
-        {{< /collapsible >}}
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
@@ -185,9 +200,12 @@ sections:
     content:
       title: "Colaboraron con MetaDocencia"
       text: |
-        {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
-        {{< /collapsible >}}
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # ===== CTA final =====
   - block: cta-card
