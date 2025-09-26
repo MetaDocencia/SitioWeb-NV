@@ -156,7 +156,7 @@ sections:
       title: "Equipo y Consejo Asesor"
       text: |
         {{< collapsible open=true summary="Mostrar/ocultar" >}}
-        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Colaboran con MetaDocencia ---
@@ -166,7 +166,7 @@ sections:
       title: "Colaboran con MetaDocencia"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Auspiciantes ---
@@ -176,7 +176,7 @@ sections:
       title: "Auspiciantes"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Colaboraron con MetaDocencia ---
@@ -186,7 +186,7 @@ sections:
       title: "Colaboraron con MetaDocencia"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # ===== CTA final =====
