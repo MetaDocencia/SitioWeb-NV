@@ -123,13 +123,29 @@ sections:
           .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
 
-          /* === Reducir espacio ANTES de cada título colapsable === */
+          /* Reducir espacio ANTES de cada título colapsable */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#auspiciantes,
           section#colaboraron-con-metadocencia {
-            margin-top: .25rem !important;   /* menos separación desde el bloque anterior */
-            padding-top: .25rem !important;  /* reduce padding superior del bloque */
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
+
+          /* === Reducir tamaño SOLO de los nombres bajo avatar en ESTA página === */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;  /* ~15px si base=16px */
+          }
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
           }
         </style>
 
@@ -140,7 +156,7 @@ sections:
       title: "Equipo y Consejo Asesor"
       text: |
         {{< collapsible open=true summary="Mostrar/ocultar" >}}
-        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Colaboran con MetaDocencia ---
@@ -150,7 +166,7 @@ sections:
       title: "Colaboran con MetaDocencia"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Auspiciantes ---
@@ -160,7 +176,7 @@ sections:
       title: "Auspiciantes"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # --- Colaboraron con MetaDocencia ---
@@ -170,7 +186,7 @@ sections:
       title: "Colaboraron con MetaDocencia"
       text: |
         {{< collapsible open=false summary="Mostrar/ocultar" >}}
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
         {{< /collapsible >}}
 
   # ===== CTA final =====
