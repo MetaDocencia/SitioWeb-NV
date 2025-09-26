@@ -328,3 +328,26 @@ footer.site-footer a strong {
   font-weight: 700 !important;
 }
 
+/* ===== Blog (.prose): mantener el bold dentro de links ===== */
+
+/* 1) Que el link no imponga un peso distinto */
+.prose a {
+  font-weight: inherit !important;   /* respeta el peso del texto circundante */
+  text-decoration: underline;        /* (si quisieras quitarlo, modificalo aquí) */
+}
+
+/* 2) Casos: <a><strong>…</strong></a> y <strong><a>…</a></strong> */
+.prose a strong,
+.prose a b,
+.prose strong a,
+.prose b a {
+  font-weight: 700 !important;       /* mantiene/negrita dentro del link */
+}
+
+/* 3) (Opcional) si querés que en headings también se respete el bold cuando hay link */
+.prose :is(h1,h2,h3,h4,h5,h6) a strong,
+.prose :is(h1,h2,h3,h4,h5,h6) a b,
+.prose :is(h1,h2,h3,h4,h5,h6) strong a,
+.prose :is(h1,h2,h3,h4,h5,h6) b a {
+  font-weight: 800 !important;       /* títulos suelen ser más pesados */
+}
