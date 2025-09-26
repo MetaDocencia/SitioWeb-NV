@@ -146,7 +146,7 @@ sections:
         - name: "Revisión abierta y equitativa en Latinoamérica"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Empoderamiento de las redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos.
+            Empoderamos de las redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos.
             
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/revision-abierta/">Ver más →</a><br>
