@@ -141,15 +141,15 @@ sections:
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
 
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/contextualizacion-/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/contextualizacion/">Ver más →</a>
 
-        - name: "Ciencia y Datos Abiertos en Bioimagen"
+        - name: "Revisión abierta y equitativa en Latinoamérica"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Liderado por LABI y MetaDocencia, este proyecto impulsa infraestructura, formación y redes en +10 países. Buscamos posicionar a América Latina como referente global en innovación y colaboración científica.
+            Empoderamiento de las redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos.
             
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a><br>
+               href="https://mdnv.netlify.app/proyecto/revision-abierta/">Ver más →</a><br>
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
