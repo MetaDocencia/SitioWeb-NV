@@ -34,7 +34,7 @@ sections:
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia es un proyecto con patrocinio fiscal de [Code for Science &amp; Society](https://www.codeforsociety.org/).
+            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
           </p>
         </div>
     design:
@@ -102,13 +102,37 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
+  # ===== Estilos LOCALES solo para esta página (punto 3) =====
+  - block: markdown
+    id: estilos-collapsibles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Ocultar el marcador nativo y agregar una flecha al toggle */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes compactos solo para los colapsables de esta página */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+        </style>
+
   # --- Equipo y CA ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
       title: "Equipo y Consejo Asesor"
       text: |
-        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+        {{< collapsible open=true summary="Mostrar/ocultar" >}}
+        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
+        {{< /collapsible >}}
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -116,7 +140,9 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< collapsible open=false summary="Mostrar/ocultar" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        {{< /collapsible >}}
 
   # --- Auspiciantes ---
   - block: markdown
@@ -124,15 +150,19 @@ sections:
     content:
       title: "Auspiciantes"
       text: |
-        {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
+        {{< collapsible open=false summary="Mostrar/ocultar" >}}
+        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+        {{< /collapsible >}}
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
-    id: colaboraron-con-metaDocencia
+    id: colaboraron-con-metadocencia
     content:
       title: "Colaboraron con MetaDocencia"
       text: |
-        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+        {{< collapsible open=false summary="Mostrar/ocultar" >}}
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+        {{< /collapsible >}}
 
   # ===== CTA final =====
   - block: cta-card
