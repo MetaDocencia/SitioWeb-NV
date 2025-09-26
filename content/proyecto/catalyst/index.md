@@ -17,14 +17,16 @@ MetaDocencia tomó el rol clave de identificar y contactar a distintas comunidad
 * Un programa de entrenamienro de entrenadores para incorporar habilidades de enseñanza, y así transferir su experiencia a sus comunidades locales
 * Capacitación y tutoría en Ciencia Abierta para desarrollar buenas prácticas de liderazgo para una investigación transparente y accesible
 * Recursos contextualizados al español para comunidades latinoamericanas
-> Dar forma a la gobernanza del proyecto para ayudar a mantener, escalar y maximizar el impacto
+* Dar forma a la gobernanza del proyecto para ayudar a mantener, escalar y maximizar el impacto
 
 **Testimonios de algunas de las [10 comunidades latinoamericanas](https://catalystproject.cloud/current-community-partners.html#latin-america) que participaron de la primera edición del proyecto**:
 > Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
+
 Nicolás Wolovick
 Director UNC Supercómputo
 
 > Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+
 Andres Olivera
 Network Manager, LABI
 
