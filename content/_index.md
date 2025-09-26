@@ -1,113 +1,150 @@
 ---
-title: "Home"
-date: 2023-10-24
+title: "Quienes somos"
 type: landing
-translationKey: "home"
+slug: "quienes-somos"
 design:
-  spacing: "6rem"
+  spacing: "3rem"
 
 sections:
+  # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
+    id: hero-qs
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos a América Latina en el mapa de la investigación global</span>'
+      title: "Quienes somos"
       text: |
-        <a href="/cta"
-           class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
-                  bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
-                  text-white">
-          Súmate
-        </a>
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
+          MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
+        </p>
+
+        <!-- Botones centrados (3) -->
+        <div class="mt-4 flex flex-wrap justify-center gap-3">
+          <a href="/institucional"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+          <a href="/institucional#vision"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+          <a href="/institucional#valores"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Valores</a>
+        </div>
+
+        <div class="mt-4 space-y-2 text-center">
+          <p class="text-white/95 text-base md:text-lg">
+            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
+          </p>
+          <p class="text-white/95 text-base md:text-lg">
+            MetaDocencia es un proyecto con patrocinio fiscal de [Code for Science &amp; Society](https://www.codeforsociety.org/).
+          </p>
+        </div>
     design:
       spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
-      css_class: "dark"
+        padding: ["0.5rem", 0, "0.5rem", 0]
+        margin: [0, 0, "0.5rem", 0]
       background:
-        color: "navy"
         image:
-          filename: "3azulrojo.png"
+          filename: "quienessomos.jpg"
           filters:
-            brightness: 0.5
+            brightness: 0.35
           size: cover
           position: center
           parallax: false
         text_color_light: true
+      css_style: "min-height: 24vh;"
 
-  # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
-  - block: cta-image-paragraph
+  # ===== Vamos por 5 años más (texto + video) =====
+  - block: markdown
     id: solutions
     content:
-      items:
-        - title: "Quiénes somos"
-          text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
-          image: "quienesomos.jpg"
-          button:
-            text: "Conócenos"
-            url: "/quienes-somos"
-        - title: "Qué hacemos"
-          text: "Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos."
-          feature_icon: check
-          features:
-            - "Impulsamos infraestructura"
-            - "Formamos a personas investigadoras"
-            - "Construimos comunidad"
-          image: "organigramaapaisado.png"
-          button:
-            text: "Conoce nuestros proyectos"
-            url: "/que-hacemos"
+      title: "Vamos por 5 años más"
+      text: |
+        <div class="grid md:grid-cols-2 gap-6 items-start">
+          <div>
+            <p>
+              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+            </p>
+          </div>
+          <div class="relative w-full" style="padding-top:56.25%;">
+            <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+              title="MetaDocencia - 5 años"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
     design:
-      css_class: ""   # ← sin fondo gris
+      css_style: "background-color:#FFFFFF;color:#111827;"
+      spacing:
+        padding: ["2rem", 0, "1.25rem", 0]
 
+  # ===== MetaDocencia en números =====
   - block: stats
+    id: numeros
     content:
+      title: "MetaDocencia en números"
       items:
-        - statistic: "+200"
-          description: |
-            Documentos  
-            en Zenodo
-        - statistic: "+1500"
-          description: |
-            personas  
-            formadas
-        - statistic: "+1070"
-          description: |
-            personas en la   
-            comunidad de Slack
+        - statistic: "+40"
+          description: "alianzas y patrocinadores"
+        - statistic: "+60"
+          description: "personas colaboran con MetaDocencia"
+        - statistic: "+1,070"
+          description: "integrantes en Slack"
+        - statistic: "+6,000"
+          description: "personas conectadas en redes sociales"
+        - statistic: "+2,600"
+          description: "suscripciones activas a nuestro boletín"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["1rem", 0, "1rem", 0]
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
-  - block: testimonials
+  # --- Equipo y CA ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
     content:
-      title: ""
-      text: ""
-      items:
-        - name: "Carly Strasser"
-          role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
-          text: |
-            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
-        - name: "Marina Compagnucci"
-          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
-          text: |
-            Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio.
-        - name: "Verónica Xhardez"
-          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
-          text: |
-            ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo
-    design:
-      spacing:
-        padding: ["6rem", 0, 0, 0]
+      title: "Equipo y Consejo Asesor"
+      text: |
+        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
 
+  # --- Colaboran con MetaDocencia ---
+  - block: markdown
+    id: colaboradores
+    content:
+      title: "Colaboran con MetaDocencia"
+      text: |
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+
+  # --- Auspiciantes ---
+  - block: markdown
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: |
+        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: colaboraron-con-metaDocencia
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: |
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
+
+  # ===== CTA final =====
   - block: cta-card
+    id: apoya
     content:
       title: "Apoya a la ciencia latinoamericana"
       text: "Aquí te contamos cómo"
       button:
         text: "Súmate"
-        url: "/cta"
+        url: "https://www.metadocencia.org/contacto/"
     design:
       card:
-        css_class: ""
-        css_style: "background-color:#C83737;color:#FFFFFF;"
+        css_class: "bg-primary-700"
+        css_style: ""
 ---
