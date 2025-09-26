@@ -135,16 +135,184 @@ sections:
     design:
       columns: 4
 
-  # ---------- FORMACIÓN ----------
+ # ======================
+  #  SECCIÓN: FORMACIÓN (ROJO)
+  # ======================
   - block: cta-card
     id: formacion
     content:
       title: "Formamos capacidades"
-      text: "Creamos programas de aprendizaje basados en evidencia..."
+      text: "Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local."
     design:
+      spacing:
+        padding: ["1rem", 0, "0.25rem", 0]
       card:
+        css_class: "shadow-sm"
         css_style: "background-color:#C83737;color:#FFFFFF;"
 
+  - block: features
+    id: formacion-proyectos
+    content:
+      title: ""
+      text: ""
+      items:
+        - name: "Formación en Ciencia Abierta"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
 
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
+
+        - name: "Formación para enseñar"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/formacion-para-ensenar/">Ver más →</a>
+
+        - name: "Cursos a medida"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
+
+        - name: "Financiamiento a iniciativas científicas"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>    
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "1rem", 0]
+      columns: 4
+
+  - block: stats
+    content:
+      items:
+        - statistic: "94"
+          description: "ediciones (388 horas)"
+        - statistic: "+1500"
+          description: "personas de 33 países formadas"
+        - statistic: "89%"
+          description: "Net Promoter Score"
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+
+  - block: testimonials
+    content:
+      items:
+        - name: "Walter Sosa Escudero"
+          role: "PhD in Economics, profesor e investigador"
+          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
+        - name: "Emmanuel Iarussi"
+          role: "Científico en CONICET y profesor UTDT"
+          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
+        - name: "Marina Compagnucci"
+          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
+          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio"
+    design:
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+
+  # ======================
+  #  SECCIÓN: COMUNIDAD (NARANJA)
+  # ======================
+  - block: cta-card
+    id: comunidad
+    content:
+      title: "Construimos comunidad"
+      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo."
+    design:
+      spacing:
+        padding: ["1rem", 0, "0.25rem", 0]
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#F77B20;color:#FFFFFF;"
+
+  - block: features
+    id: comunidad-proyectos
+    content:
+      title: ""
+      text: ""
+      items:
+        - name: "Gobernanza"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a>
+        - name: "Conversatorios"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+        - name: "Mapeo de Ciencia Abierta en Latinoamérica"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Repositorio colaborativo de información sobre Ciencia Abierta en español.
+
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Ver más →</a><br>
+            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
+                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "1rem", 0]
+      columns: 3
+
+  - block: stats
+    content:
+      items:
+        - statistic: "+40"
+          description: "comunidades amigas y alianzas"
+        - statistic: "+60"
+          description: "personas que colaboran con MetaDocencia"
+        - statistic: "+1070"
+          description: "integrantes en la comunidad de Slack"
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+
+  - block: testimonials
+    content:
+      items:
+        - name: "Andrés Kamaid"
+          role: "Researcher, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging"
+          text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings"
+        - name: "Verónica Xhardez"
+          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
+    design:
+      spacing:
+        padding: ["2rem", 0, "2rem", 0]
+
+  # ======================
+  #  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
+  # ======================
+  - block: markdown
+    id: prensa
+    content:
+      text: |
+        <div class="text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia en los medios</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Conocé qué dicen de MetaDocencia en prensa y blogs.
+          </p>
+          <a href="https://mdnv.netlify.app/prensas"
+             class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+             Ver menciones →
+          </a>
+        </div>
+    design:
+      spacing:
+        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
+      css_style: "background:#F9FAFB;"
 ---
-
