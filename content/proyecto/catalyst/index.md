@@ -19,7 +19,7 @@ MetaDocencia tomó el rol clave de identificar y contactar a distintas comunidad
 * Recursos contextualizados al español para comunidades latinoamericanas
 * Dar forma a la gobernanza del proyecto para ayudar a mantener, escalar y maximizar el impacto
 
-Testimonios de algunas de las [10 comunidades latinoamericanas](https://catalystproject.cloud/current-community-partners.html#latin-america) que participaron de la primera edición del proyecto:
+**Testimonios de algunas de las [10 comunidades latinoamericanas](https://catalystproject.cloud/current-community-partners.html#latin-america) que participaron de la primera edición del proyecto:**
 > Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro"
 
 Nicolás Wolovick
