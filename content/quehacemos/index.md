@@ -272,7 +272,7 @@ sections:
     id: comunidad
     content:
       title: "Construimos comunidad"
-      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizarla ciencia desde América Latina hacia el mundo."
+      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo."
     design:
       spacing:
         padding: ["1rem", 0, "0.25rem", 0]
