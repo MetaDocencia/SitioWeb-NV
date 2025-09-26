@@ -1,17 +1,17 @@
 {{/* Shortcode: people_list (centrado + separación)
 
 Params:
-  - group="Colaboradores"  (o "Auspiciantes, Colaboradores")
-  - columns=7              (desktop/XL)
-  - fit="cover|contain"    (recorte del avatar)
-  - gapx="2rem"  gapy="2rem"
+  - group="Colaboradores"            (o "Auspiciantes, Colaboradores")
+  - columns=7                        (cantidad en XL/desktop)
+  - fit="cover|contain"              (recorte del avatar)
+  - gapx="2rem"  gapy="2rem"         (separaciones)
 */}}
 
 {{- $groupsParam := .Get "group"   | default "" -}}
-{{- $cols       := .Get "columns" | default 7 -}}
-{{- $fit        := .Get "fit"     | default "cover" -}}
-{{- $gapx       := .Get "gapx"    | default "2rem" -}}
-{{- $gapy       := .Get "gapy"    | default "2rem" -}}
+{{- $cols        := .Get "columns" | default 7 -}}
+{{- $fit         := .Get "fit"     | default "cover" -}}
+{{- $gapx        := .Get "gapx"    | default "2rem" -}}
+{{- $gapy        := .Get "gapy"    | default "2rem" -}}
 
 {{/* Normalizo grupos a slice */}}
 {{- $groups := slice -}}
@@ -42,26 +42,40 @@ Params:
 {{- $authors = sort $authors "Title" -}}
 
 <div class="w-full mx-auto">
-  <!-- contenedor centrado y con ancho máximo razonable -->
+  <!-- contenedor centrado y con ancho máximo -->
   <div class="max-w-[1600px] mx-auto px-6">
     <!-- grid centrado (tracks y celdas) + gaps controlados inline -->
-    <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} justify-center justify-items-center"
-         style="column-gap: {{ $gapx }}; row-gap: {{ $gapy }};">
+    <div
+      class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} justify-center justify-items-center"
+      style="column-gap: {{ $gapx }}; row-gap: {{ $gapy }};"
+    >
       {{- range $p := $authors -}}
         {{- $img := "" -}}
         {{- with $p.Resources.GetMatch "avatar*" -}}
           {{- $img = .RelPermalink -}}
         {{- else -}}
-          {{- with $p.Params.image -}}{{- $img = ( . | relURL ) -}}{{- end -}}
+          {{- with $p.Params.image -}}
+            {{- $img = ( . | relURL ) -}}
+          {{- end -}}
         {{- end -}}
 
-        <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90" style="padding:0.125rem;">
-          <div class="rounded-full"
-               style="width:7rem;height:7rem;background:#e5e7eb;{{ if $img }}background-image:url('{{ $img }}');{{ end }}background-repeat:no-repeat;background-size:{{ $fit }};background-position:center;">
-          </div>
+        <a
+          href="{{ $p.RelPermalink }}"
+          class="block text-center no-underline hover:opacity-90"
+          style="padding: 0.125rem;"
+        >
+          <div
+            class="rounded-full"
+            style="width: 7rem; height: 7rem; background: #e5e7eb; {{ if $img }}background-image: url('{{ $img }}');{{ end }} background-repeat: no-repeat; background-size: {{ $fit }}; background-position: center;"
+          ></div>
+
           <div class="mt-3">
-            <div class="font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
-            {{- with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{- end -}}
+            <div class="font-semibold leading-tight" style="text-decoration: none;">
+              {{ $p.Title }}
+            </div>
+            {{- with $p.Params.role -}}
+              <div class="text-sm opacity-70 leading-tight">{{ . }}</div>
+            {{- end -}}
           </div>
         </a>
       {{- end -}}
