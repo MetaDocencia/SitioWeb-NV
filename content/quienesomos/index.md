@@ -34,7 +34,7 @@ sections:
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
+            MetaDocencia es un proyecto con patrocinio fiscal de [Code for Science &amp; Society](https://www.codeforsociety.org/).
           </p>
         </div>
     design:
@@ -102,85 +102,37 @@ sections:
       spacing:
         padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos locales: SOLO márgenes de acordeones =====
-  - block: markdown
-    id: people-accordion-margins
-    content:
-      title: ""
-      text: |
-        <style>
-          /* Márgenes entre acordeones (sin tocar tipografías) */
-          details.md-acc { margin: .125rem 0 !important; }
-          details.md-acc[open] { margin: .125rem 0 1rem !important; }
-
-          /* Reducir separación superior del PRIMER bloque de acordeón */
-          section#equipo-y-consejo-asesor { margin-top: .25rem !important; }
-          section#equipo-y-consejo-asesor .container { padding-top: 0 !important; }
-        </style>
-
-  # --- Equipo y Consejo Asesor ---
+  # --- Equipo y CA ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
-      title: ""
+      title: "Equipo y Consejo Asesor"
       text: |
-        <details class="md-acc" open>
-          <summary class="flex items-center justify-between cursor-pointer select-none">
-            <span>Equipo y Consejo Asesor</span>
-            <span>▾</span>
-          </summary>
-          <div class="pt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Equipo y Consejo Asesor" columns=5 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
     id: colaboradores
     content:
-      title: ""
+      title: "Colaboran con MetaDocencia"
       text: |
-        <details class="md-acc">
-          <summary class="flex items-center justify-between cursor-pointer select-none">
-            <span>Colaboran con MetaDocencia</span>
-            <span>▾</span>
-          </summary>
-          <div class="pt-2">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
 
   # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
     content:
-      title: ""
+      title: "Auspiciantes"
       text: |
-        <details class="md-acc">
-          <summary class="flex items-center justify-between cursor-pointer select-none">
-            <span>Auspiciantes</span>
-            <span>▾</span>
-          </summary>
-          <div class="pt-2">
-            {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Auspiciantes" columns=7 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
-    id: colaboraron-con-metadocencia
+    id: colaboraron-con-metaDocencia
     content:
-      title: ""
+      title: "Colaboraron con MetaDocencia"
       text: |
-        <details class="md-acc">
-          <summary class="flex items-center justify-between cursor-pointer select-none">
-            <span>Colaboraron con MetaDocencia</span>
-            <span>▾</span>
-          </summary>
-          <div class="pt-2">
-            {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Colaboradores" columns=8 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: cta-card
