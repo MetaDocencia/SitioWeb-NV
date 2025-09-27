@@ -1,9 +1,9 @@
-{{/* Shortcode: people_list
+{{/* Shortcode: people_list (centrado + separación)
 
 Params:
   - group="Colaboradores"  (o "Auspiciantes, Colaboradores")
-  - columns=7
-  - fit="cover|contain"
+  - columns=7              (desktop/XL)
+  - fit="cover|contain"    (recorte del avatar)
   - gapx="2rem"  gapy="2rem"
 */}}
 
@@ -13,7 +13,7 @@ Params:
 {{- $gapx        := .Get "gapx"    | default "2rem" -}}
 {{- $gapy        := .Get "gapy"    | default "2rem" -}}
 
-{{/* Normalizar grupos a slice */}}
+{{/* Normalizo grupos a slice */}}
 {{- $groups := slice -}}
 {{- if $groupsParam -}}
   {{- range (split $groupsParam ",") -}}
@@ -22,18 +22,8 @@ Params:
   {{- end -}}
 {{- end -}}
 
-{{/* Recolectar páginas de autores desde secciones 'author' y 'authors' */}}
-{{- $authors := slice -}}
-
-{{- with site.GetPage "section" "author" -}}
-  {{- range .Pages }}{{ $authors = $authors | append . }}{{ end -}}
-  {{- range .RegularPagesRecursive }}{{ $authors = $authors | append . }}{{ end -}}
-{{- end -}}
-
-{{- with site.GetPage "section" "authors" -}}
-  {{- range .Pages }}{{ $authors = $authors | append . }}{{ end -}}
-  {{- range .RegularPagesRecursive }}{{ $authors = $authors | append . }}{{ end -}}
-{{- end -}}
+{{/* Autores */}}
+{{- $authors := where site.Pages "Section" "authors" -}}
 
 {{/* Filtro por user_groups si se pidió */}}
 {{- if gt (len $groups) 0 -}}
@@ -52,7 +42,9 @@ Params:
 {{- $authors = sort $authors "Title" -}}
 
 <div class="w-full mx-auto">
+  <!-- contenedor centrado y con ancho máximo razonable -->
   <div class="max-w-[1600px] mx-auto px-6">
+    <!-- grid centrado (tracks y celdas) + gaps controlados inline -->
     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} justify-center justify-items-center"
          style="column-gap: {{ $gapx }}; row-gap: {{ $gapy }};">
       {{- range $p := $authors -}}
@@ -68,6 +60,7 @@ Params:
                style="width:7rem;height:7rem;background:#e5e7eb;{{ if $img }}background-image:url('{{ $img }}');{{ end }}background-repeat:no-repeat;background-size:{{ $fit }};background-position:center;">
           </div>
           <div class="mt-3">
+            <!-- Clase específica para poder ajustar fuente localmente en la página -->
             <div class="mdnv-people-name font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
             {{- with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{- end -}}
           </div>
