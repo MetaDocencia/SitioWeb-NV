@@ -6,43 +6,40 @@ design:
   spacing: "3rem"
 
 sections:
-
-  # ===== HERO con imagen de fondo + botones rojos centrados + textos =====
+  # ===== HERO con imagen de fondo + botones centrados =====
   - block: hero
     id: hero-qs
     content:
       title: "Quienes somos"
       text: |
-        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl">
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
 
-        <!-- Botones rojos centrados -->
+        <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="https://www.metadocencia.org/pdc/"
+          <a href="/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">
-             Pautas de Convivencia
-          </a>
-          <a href="https://www.metadocencia.org/institucional/"
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+          <a href="/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">
-             Institucional
-          </a>
+             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+          <a href="/institucional#valores"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Valores</a>
         </div>
 
-        <!-- Textos adicionales -->
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia, un proyecto con patrocinio fiscal de Code for Science &amp; Society.
+            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
           </p>
         </div>
     design:
       spacing:
-        padding: ["0.5rem", 0, "0.5rem", 0]   # hero más bajo
+        padding: ["0.5rem", 0, "0.5rem", 0]
         margin: [0, 0, "0.5rem", 0]
       background:
         image:
@@ -55,36 +52,40 @@ sections:
         text_color_light: true
       css_style: "min-height: 24vh;"
 
-  # ===== Vamos por 5 años más (TEXTO + VIDEO YouTube 16:9, fondo blanco) =====
+  # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
     content:
       title: "Vamos por 5 años más"
       text: |
-        <div class="grid md:grid-cols-2 gap-6 items-start">
-          <div>
-            <p>
-              Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-            </p>
-          </div>
-          <div class="relative w-full" style="padding-top:56.25%;">
-            <iframe
-              class="absolute top-0 left-0 w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-              title="MetaDocencia - 5 años"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        <!-- Breakout full-bleed que ignora el wrapper central del tema -->
+        <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
+          <!-- Contenido centrado y con respiro lateral -->
+          <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
+            <div data-2col>
+              <div>
+                <p>
+                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+                </p>
+              </div>
+              <div data-16x9>
+                <iframe
+                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+                  title="MetaDocencia - 5 años"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
       spacing:
-        padding: ["2rem", 0, "1.25rem", 0]   # ↑ un poco más de espacio arriba del título
+        padding: ["2rem", 0, "1.25rem", 0]
 
-  # ===== MetaDocencia en números (fondo gris) =====
+  # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
     content:
@@ -92,7 +93,7 @@ sections:
       items:
         - statistic: "+40"
           description: "alianzas y patrocinadores"
-        - statistic: "88"
+        - statistic: "+60"
           description: "personas colaboran con MetaDocencia"
         - statistic: "+1,070"
           description: "integrantes en Slack"
@@ -103,24 +104,95 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]   # ↓ bastante menos arriba/abajo del título
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
-  # ===== Estilos locales: comprimir márgenes del título y aumentar gap entre stats =====
+  # ===== Estilos LOCALES solo para esta página =====
   - block: markdown
-    id: estilos-locales
+    id: estilos-collapsibles
     content:
       title: ""
       text: |
         <style>
-          /* Más espacio entre ítems de estadísticas */
-          section#numeros .grid { gap: 1.75rem !important; }
+          /* ====== Grid 2→1 sin clases en el HTML ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            gap: 1.5rem;
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
 
-          /* Comprimir margen del título en la sección de números */
-          section#numeros h1, section#numeros h2, section#numeros .section-title {
-            margin-top: 0.15rem !important;
-            margin-bottom: 0.35rem !important;
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
+          }
+
+          /* ===== Colapsables (no toca tipografías globales) ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
+
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;
+          }
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
           }
         </style>
+
+  # --- Equipo y Consejo Asesor ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    content:
+      title: "Equipo y Consejo Asesor"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -128,49 +200,12 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        {{/* Lista de autores filtrada por user_groups = "Colaboradores" */}}
-        {{ $grupo := slice "Colaboradores" }}
-        {{ $autores := where site.Pages "Section" "authors" }}
-
-        {{ $autores_filtrados := slice }}
-        {{ range $autores }}
-          {{ $ug := .Params.user_groups }}
-          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
-            {{ $autores_filtrados = $autores_filtrados | append . }}
-          {{ end }}
-        {{ end }}
-
-        {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
-
-        <div class="w-full px-0">
-          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
-            {{ range $p := $autores_filtrados }}
-              {{ $img := "" }}
-              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
-                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
-              {{ end }}
-
-              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
-                <div class="mx-auto">
-                  {{ if $img }}
-                    <img
-                      src="{{ $img }}"
-                      alt="{{ $p.Title }}"
-                      loading="lazy"
-                      class="block rounded-full object-cover object-center"
-                      style="width: 7rem; height: 7rem;"
-                    />
-                  {{ else }}
-                    <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
-                  {{ end }}
-                </div>
-                <div class="mt-3">
-                  <div class="font-semibold leading-tight">{{ $p.Title }}</div>
-                </div>
-              </a>
-            {{ end }}
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
-        </div>
+        </details>
 
   # --- Auspiciantes ---
   - block: markdown
@@ -178,51 +213,40 @@ sections:
     content:
       title: "Auspiciantes"
       text: |
-        {{/* Lista de autores filtrada por user_groups = "Auspiciantes" */}}
-        {{ $grupo := slice "Auspiciantes" }}
-        {{ $autores := where site.Pages "Section" "authors" }}
-
-        {{ $autores_filtrados := slice }}
-        {{ range $autores }}
-          {{ $ug := .Params.user_groups }}
-          {{ if and $ug (gt (len (intersect $ug $grupo)) 0) }}
-            {{ $autores_filtrados = $autores_filtrados | append . }}
-          {{ end }}
-        {{ end }}
-
-        {{ $autores_filtrados = sort $autores_filtrados ".Params.weight" | sort "Title" }}
-
-        <div class="w-full px-0">
-          <div class="grid gap-x-8 gap-y-10 grid-cols-3 md:grid-cols-4 xl:grid-cols-7">
-            {{ range $p := $autores_filtrados }}
-              {{ $img := "" }}
-              {{ with $p.Resources.GetMatch "avatar*" }}{{ $img = .RelPermalink }}{{ else }}
-                {{ with $p.Params.image }}{{ $img = ( . | relURL ) }}{{ end }}
-              {{ end }}
-
-              <a href="{{ $p.RelPermalink }}" class="block text-center no-underline hover:opacity-90">
-                <div class="mx-auto">
-                  {{ if $img }}
-                    <img
-                      src="{{ $img }}"
-                      alt="{{ $p.Title }}"
-                      loading="lazy"
-                      class="block rounded-full object-cover object-center"
-                      style="width: 7rem; height: 7rem;"
-                    />
-                  {{ else }}
-                    <div class="rounded-full" style="width: 7rem; height: 7rem; background:#e5e7eb;"></div>
-                  {{ end }}
-                </div>
-                <div class="mt-3">
-                  <div class="font-semibold leading-tight">{{ $p.Title }}</div>
-                </div>
-              </a>
-            {{ end }}
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
           </div>
-        </div>
+        </details>
 
-  # CTA final
+  # --- Comunidades Amigas (NUEVO) ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Comunidades Amigas"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboraron con MetaDocencia (correcto grupo y 7 columnas) ---
+  - block: markdown
+    id: colaboraron-con-metadocencia
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # ===== CTA final =====
   - block: cta-card
     id: apoya
     content:
