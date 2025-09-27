@@ -181,7 +181,7 @@ sections:
           }
         </style>
 
-  # --- Equipo y Consejo Asesor ---
+  # --- Equipo y CA ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
@@ -220,7 +220,7 @@ sections:
           </div>
         </details>
 
-  # --- Comunidades Amigas (NUEVO) ---
+  # --- Comunidades Amigas (titulo) / grupo "Comunidades amigas" (clave exacta) ---
   - block: markdown
     id: comunidades-amigas
     content:
@@ -233,7 +233,7 @@ sections:
           </div>
         </details>
 
-  # --- Colaboraron con MetaDocencia (correcto grupo y 7 columnas) ---
+  # --- Colaboraron con MetaDocencia (clave exacta) ---
   - block: markdown
     id: colaboraron-con-metadocencia
     content:
