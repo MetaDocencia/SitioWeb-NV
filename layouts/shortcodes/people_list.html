@@ -1,9 +1,9 @@
-{{/* Shortcode: people_list (centrado + separación)
+{{/* Shortcode: people_list
 
 Params:
   - group="Colaboradores"  (o "Auspiciantes, Colaboradores")
-  - columns=7              (desktop/XL)
-  - fit="cover|contain"    (recorte del avatar)
+  - columns=7
+  - fit="cover|contain"
   - gapx="2rem"  gapy="2rem"
 */}}
 
@@ -22,22 +22,29 @@ Params:
   {{- end -}}
 {{- end -}}
 
-{{/* Traer páginas de autores: soportar 'author' y 'authors' */}}
-{{- $authorPages  := where site.Pages "Section" "author"  -}}
-{{- $authorsPages := where site.Pages "Section" "authors" -}}
-{{- $allAuthors   := union $authorPages $authorsPages -}}
+{{/* Recolectar páginas de autores desde secciones 'author' y 'authors' */}}
+{{- $authors := slice -}}
+
+{{- with site.GetPage "section" "author" -}}
+  {{- range .Pages }}{{ $authors = $authors | append . }}{{ end -}}
+  {{- range .RegularPagesRecursive }}{{ $authors = $authors | append . }}{{ end -}}
+{{- end -}}
+
+{{- with site.GetPage "section" "authors" -}}
+  {{- range .Pages }}{{ $authors = $authors | append . }}{{ end -}}
+  {{- range .RegularPagesRecursive }}{{ $authors = $authors | append . }}{{ end -}}
+{{- end -}}
 
 {{/* Filtro por user_groups si se pidió */}}
-{{- $authors := slice -}}
 {{- if gt (len $groups) 0 -}}
-  {{- range $allAuthors -}}
+  {{- $filtered := slice -}}
+  {{- range $authors -}}
     {{- $ug := .Params.user_groups | default (slice) -}}
     {{- if gt (len (intersect $ug $groups)) 0 -}}
-      {{- $authors = $authors | append . -}}
+      {{- $filtered = $filtered | append . -}}
     {{- end -}}
   {{- end -}}
-{{- else -}}
-  {{- $authors = $allAuthors -}}
+  {{- $authors = $filtered -}}
 {{- end -}}
 
 {{/* Orden: weight, luego Title */}}
