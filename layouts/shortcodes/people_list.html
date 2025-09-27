@@ -13,7 +13,7 @@ Params:
 {{- $gapx        := .Get "gapx"    | default "2rem" -}}
 {{- $gapy        := .Get "gapy"    | default "2rem" -}}
 
-{{/* Normalizo grupos a slice */}}
+{{/* Normalizar grupos a slice */}}
 {{- $groups := slice -}}
 {{- if $groupsParam -}}
   {{- range (split $groupsParam ",") -}}
@@ -22,19 +22,22 @@ Params:
   {{- end -}}
 {{- end -}}
 
-{{/* Autores */}}
-{{- $authors := where site.Pages "Section" "authors" -}}
+{{/* Traer páginas de autores: soportar 'author' y 'authors' */}}
+{{- $authorPages  := where site.Pages "Section" "author"  -}}
+{{- $authorsPages := where site.Pages "Section" "authors" -}}
+{{- $allAuthors   := union $authorPages $authorsPages -}}
 
 {{/* Filtro por user_groups si se pidió */}}
+{{- $authors := slice -}}
 {{- if gt (len $groups) 0 -}}
-  {{- $filtered := slice -}}
-  {{- range $authors -}}
+  {{- range $allAuthors -}}
     {{- $ug := .Params.user_groups | default (slice) -}}
     {{- if gt (len (intersect $ug $groups)) 0 -}}
-      {{- $filtered = $filtered | append . -}}
+      {{- $authors = $authors | append . -}}
     {{- end -}}
   {{- end -}}
-  {{- $authors = $filtered -}}
+{{- else -}}
+  {{- $authors = $allAuthors -}}
 {{- end -}}
 
 {{/* Orden: weight, luego Title */}}
@@ -42,9 +45,7 @@ Params:
 {{- $authors = sort $authors "Title" -}}
 
 <div class="w-full mx-auto">
-  <!-- contenedor centrado y con ancho máximo razonable -->
   <div class="max-w-[1600px] mx-auto px-6">
-    <!-- grid centrado (tracks y celdas) + gaps controlados inline -->
     <div class="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-{{ $cols }} justify-center justify-items-center"
          style="column-gap: {{ $gapx }}; row-gap: {{ $gapy }};">
       {{- range $p := $authors -}}
@@ -60,7 +61,6 @@ Params:
                style="width:7rem;height:7rem;background:#e5e7eb;{{ if $img }}background-image:url('{{ $img }}');{{ end }}background-repeat:no-repeat;background-size:{{ $fit }};background-position:center;">
           </div>
           <div class="mt-3">
-            <!-- Clase específica para poder ajustar fuente localmente en la página -->
             <div class="mdnv-people-name font-semibold leading-tight" style="text-decoration:none;">{{ $p.Title }}</div>
             {{- with $p.Params.role }}<div class="text-sm opacity-70 leading-tight">{{ . }}</div>{{- end -}}
           </div>
