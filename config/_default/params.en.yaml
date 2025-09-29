@@ -1,0 +1,30 @@
+# Site header
+header:
+  navbar:
+    enable: true
+    blox: "navbar"
+    align: "center"
+    fixed_to_top: true
+    logo:
+      text: "MetaDocencia"
+    button:
+      enable: true
+      text: "Join us"
+      url: "en/cta/"
+    show_search: true
+    show_theme_chooser: true
+
+# === Footer: texto + accesos ===
+footer:
+  enable: true
+  show_translucent: false
+  lines:
+    - 'MetaDocencia is a fiscally sponsored project of <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.'
+    - 'Published with <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.'
+  link_items:
+    - text: "Code of Conduct"
+      url: "https://zenodo.org/records/12534196"
+    - text: "Accessibility Policy"
+      url: "https://zenodo.org/records/10514982"
+    - text: "Licence"
+      url: "https://mdnv.netlify.app/en/licencia/"
