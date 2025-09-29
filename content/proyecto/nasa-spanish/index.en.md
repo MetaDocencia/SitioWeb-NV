@@ -21,7 +21,7 @@ We have over five years of experience training the Latin American community in b
 A key milestone was the  Spanish contextualization of NASA Open Science content, followed by its adaptation into free, synchronous, six-week online cohorts with active lessons, peer-to-peer discussions, presentations of local initiatives, and dual certification (NASA + MetaDocencia).
 
 ## Más información
-* Grants NASA en Zenodo y OGrants 
+* Grants NASA en [Zenodo](https://zenodo.org/records/8215455) y [OGrants](https://www.ogrants.org/grants/team_ols_2023) 
 * Blogpost [2024 Report](https://mdnv.netlify.app/en/post/2025/20250313-reporte2024/)
 * [Post “10 puntos” (NASA TOPS) — marco, aliados y alcance](https://mdnv.netlify.app/post/nasatops10puntos/) 
 * [Justicia epistémica y ciencia abierta en América Latina y el Caribe: El caso de MetaDocencia. Capítulo del libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio “Dominique Babini”](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
