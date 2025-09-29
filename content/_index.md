@@ -111,7 +111,7 @@ sections:
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
+            align-items: stretch;
           }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
@@ -119,7 +119,7 @@ sections:
           .mdnv-vcenter {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* centra verticalmente el texto */
+            justify-content: center;
           }
           .mdnv-text-pad {
             padding-left: clamp(.5rem, 3vw, 2rem);
@@ -140,7 +140,7 @@ sections:
             border: 0; border-radius: .5rem;
           }
 
-          /* ===== Colapsables (no toca tipografías globales) ===== */
+          /* ===== Colapsables ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -182,6 +182,16 @@ sections:
             }
           }
         </style>
+
+  # ===== Título de bloque para la comunidad =====
+  - block: markdown
+    id: titulo-nuestra-comunidad
+    content:
+      title: "Nuestra Comunidad"
+      text: ""
+    design:
+      spacing:
+        padding: ["0.25rem", 0, "0.25rem", 0]
 
   # --- Equipo y CA ---
   - block: markdown
@@ -248,8 +258,7 @@ sections:
           </div>
         </details>
 
-
-  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
+  # ===== CTA final =====
   - block: markdown
     id: apoya
     content:
