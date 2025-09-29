@@ -149,21 +149,53 @@ sections:
     content:
       title: ""
       text: |
-        <div class="bg-gray-50 dark:bg-gray-900 py-8">
-          <div class="max-w-3xl mx-auto grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center">
-            <div class="px-6">
-              <p class="text-5xl font-extrabold text-gray-900 dark:text-white">+200</p>
-              <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">documentos en Zenodo</p>
-            </div>
-            <div class="px-6">
-              <p class="text-5xl font-extrabold text-gray-900 dark:text-white">+85.000</p>
-              <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">palabras contextualizadas</p>
+        <!-- Franja full-bleed (gris a todo lo ancho) -->
+        <div style="position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;">
+          <div class="bg-gray-50 dark:bg-gray-900 py-12">
+            <div class="max-w-5xl mx-auto grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center px-6">
+              <div class="px-6">
+                <p class="text-6xl md:text-7xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
+                <p class="mt-1 text-lg md:text-xl font-semibold leading-tight text-gray-700 dark:text-gray-300">documentos en Zenodo</p>
+              </div>
+              <div class="px-6">
+                <p class="text-6xl md:text-7xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
+                <p class="mt-1 text-lg md:text-xl font-semibold leading-tight text-gray-700 dark:text-gray-300">palabras contextualizadas</p>
+              </div>
             </div>
           </div>
         </div>
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
+  - block: markdown
+    id: infra-metricas
+    content:
+      title: ""
+      text: |
+        <!-- Sección full-bleed (100vw) con fondo gris y métricas centradas -->
+        <div class="bg-gray-50 dark:bg-gray-900"
+             style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
+          <div class="max-w-5xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center">
+              <div class="px-6">
+                <p class="text-7xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
+                <p class="mt-1 text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-300">
+                  documentos en Zenodo
+                </p>
+              </div>
+              <div class="px-6">
+                <p class="text-7xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
+                <p class="mt-1 text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-300">
+                  palabras contextualizadas
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    design:
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
+
 
 
 
