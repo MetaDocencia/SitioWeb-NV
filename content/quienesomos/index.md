@@ -119,13 +119,13 @@ sections:
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            align-items: center; /* centrado vertical del texto respecto al video */
+            align-items: center; /* texto centrado verticalmente respecto al video */
             gap: 1.5rem;
           }
-          .mdnv-text-col { margin-top:auto; margin-bottom:auto; } /* columna de texto centrada entre top/bottom */
+          .mdnv-text-col { margin-top:auto; margin-bottom:auto; }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
-            .mdnv-text-col { margin: 0; } /* sin efecto en mobile */
+            .mdnv-text-col { margin: 0; }
           }
 
           /* Wrapper 16:9 para el iframe */
@@ -142,7 +142,7 @@ sections:
             border: 0; border-radius: .5rem;
           }
 
-          /* ===== Colapsables (no toca tipografías globales) ===== */
+          /* ===== Colapsables ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -152,7 +152,6 @@ sections:
           }
           .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
 
-          /* Márgenes del propio colapsable (contenido) */
           .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
 
@@ -250,7 +249,7 @@ sections:
           </div>
         </details>
 
-  # ===== CTA final (LOCAL con shortcode y colores por bloque) =====
+  # ===== CTA final (FULL BACKGROUND) =====
   - block: markdown
     id: apoya
     content:
@@ -261,40 +260,28 @@ sections:
             text="Aquí te contamos cómo"
             button_text="Súmate"
             button_url="https://www.metadocencia.org/contacto/"
-            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737" maxw="1600px"
+            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            maxw="1600px" variant="background" py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <!-- Si querés, podés dejar los sociales aquí como slot opcional -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Twitter
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             LinkedIn
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             YouTube
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Instagram
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Mastodon
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Bluesky
-          </a>
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
 ---
