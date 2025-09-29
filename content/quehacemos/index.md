@@ -149,19 +149,22 @@ sections:
     content:
       title: ""
       text: |
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center text-center max-w-3xl mx-auto">
-          <div>
-            <p class="text-4xl font-extrabold text-gray-900 dark:text-white">+200</p>
-            <p class="text-lg text-gray-600 dark:text-gray-300">documentos en Zenodo</p>
-          </div>
-          <div>
-            <p class="text-4xl font-extrabold text-gray-900 dark:text-white">+85.000</p>
-            <p class="text-lg text-gray-600 dark:text-gray-300">palabras contextualizadas</p>
+        <div class="bg-gray-50 dark:bg-gray-900 py-8">
+          <div class="max-w-3xl mx-auto grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center">
+            <div class="px-6">
+              <p class="text-5xl font-extrabold text-gray-900 dark:text-white">+200</p>
+              <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">documentos en Zenodo</p>
+            </div>
+            <div class="px-6">
+              <p class="text-5xl font-extrabold text-gray-900 dark:text-white">+85.000</p>
+              <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">palabras contextualizadas</p>
+            </div>
           </div>
         </div>
     design:
       spacing:
-        padding: ["1.5rem", 0, "1.5rem", 0]
+        padding: ["0rem", 0, "0rem", 0]
+
 
 
   # ======================
