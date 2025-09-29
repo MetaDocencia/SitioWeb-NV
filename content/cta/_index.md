@@ -150,7 +150,7 @@ sections:
       title: "Sigue el intercambio"
       text: |
         <div style="color:#FFFFFF">
-          <p>Escribe a <strong style="color:#FFFFFF">info@metadocencia.org</strong> o súmate al intercambio en redes sociales: <strong style="color:#FFFFFF">@metadocencia</strong></p>
+          <p>Acompañanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
