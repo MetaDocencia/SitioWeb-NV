@@ -42,23 +42,23 @@ sections:
   - block: cta-card
     id: slack
     content:
-      title: "Súmate a nuestro Slack"
+      title: "Súmate a nuestra comunidad en Slack"
       text: |
         <div style="color:#FFFFFF">
           <p>
-            Conecta con más de <strong style="color:#FFFFFF">+1000 personas</strong> que comparten interés por la
+            Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> que comparten interés por la
             <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
-            y la <strong style="color:#FFFFFF">colaboración</strong>.
+            y la <strong style="color:#FFFFFF">colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
           </p>
           <p class="mt-2">
-            <a href="https://zenodo.org/records/10028136"
+            <a href="[https://zenodo.org/records/10028136](https://mdnv.netlify.app/post/20231219-mdenslack/)"
                style="color:#FFFFFF; text-decoration:underline;">
-               Qué es Slack y cómo puedo sumarme a la conversación
+               Qué es y cómo sumarme
             </a>
           </p>
         </div>
       button:
-        text: "Unirme al espacio de Slack de MetaDocencia"
+        text: "Unirme al espacio de MetaDocencia"
         url: "https://w3id.org/metadocencia/slack"
     design:
       card:
@@ -94,7 +94,7 @@ sections:
         </div>
       button:
         text: "Suma tu comunidad"
-        url: "mailto:info@metadocencia.org?subject=Sumar%20mi%20comunidad"
+        url: "mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
     design:
       card:
         css_class: "shadow-sm"
@@ -106,7 +106,7 @@ sections:
     content:
       title: "Apoya a MetaDocencia"
       text: |
-        Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
+        Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión. 
 
         <!-- Logos auspiciantes -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
