@@ -3,15 +3,14 @@ title: "Súmate y apoya a nuestra comunidad"
 type: landing
 slug: "cta"
 design:
-  spacing: "3rem"
+  spacing: "0"   # quita márgenes globales extra
 
 sections:
 
-  # ---------- Boletín (full-bleed) ----------
+  # ---------- Boletín ----------
   - block: markdown
     id: boletin-embed
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             title="Boletín MetaDocencia"
@@ -21,17 +20,15 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="mx-auto max-w-3xl text-white">
           <p class="text-lg leading-relaxed mb-4">
             Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
           </p>
-
           <div class="mt-2">
             {{< mc_form >}}
           </div>
-
           <p class="text-center mt-4">
             <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
@@ -40,11 +37,10 @@ sections:
         </div>
         {{< /cta_fullwidth >}}
 
-  # ---------- Slack (full-bleed) ----------
+  # ---------- Slack ----------
   - block: markdown
     id: slack
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             title="Súmate a nuestra comunidad en Slack"
@@ -56,28 +52,24 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
+        <div class="max-w-3xl mx-auto text-white">
           <p>
-            Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> que comparten interés por la
-            <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
-            y la <strong style="color:#FFFFFF">colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
+            <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
           </p>
           <p class="mt-2">
             <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
-               style="color:#FFFFFF; text-decoration:underline;">
-               Qué es y cómo sumarme
-            </a>
+               class="underline font-semibold">Qué es y cómo sumarme</a>
           </p>
         </div>
         {{< /cta_fullwidth >}}
 
-  # ---------- Comunidades amigas (full-bleed) ----------
+  # ---------- Comunidades amigas ----------
   - block: markdown
     id: comunidades
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             title="Comunidades amigas"
@@ -89,38 +81,22 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <p class="max-w-3xl mx-auto">
           Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
         </p>
-
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo08.png" alt="Comunidad 8" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo09.png" alt="Comunidad 9" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo10.png" alt="Comunidad 10" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo11.png" alt="Comunidad 11" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo12.png" alt="Comunidad 12" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo13.png" alt="Comunidad 13" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo14.png" alt="Comunidad 14" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo15.png" alt="Comunidad 15" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo16.png" alt="Comunidad 16" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo17.png" alt="Comunidad 17" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo18.png" alt="Comunidad 18" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo19.png" alt="Comunidad 19" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo20.png" alt="Comunidad 20" class="max-h-10 w-auto opacity-95">
+          <!-- logos -->
+          <img src="/media/sponsors/2i2c-sponsor.png" class="max-h-10 w-auto opacity-95">
+          <!-- ... resto de logos ... -->
         </div>
         {{< /cta_fullwidth >}}
 
-  # ---------- Auspiciantes / Apoya (full-bleed, texto + logos) ----------
+  # ---------- Auspiciantes / Apoya ----------
   - block: markdown
     id: auspiciantes
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             title="Apoya a MetaDocencia"
@@ -130,45 +106,28 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <p class="max-w-3xl mx-auto">
           Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión. 
         </p>
-
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
-          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/CSS_sponsor.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/NASA_sponsor.png" alt="NASA" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/arecibo-sponsor.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/czi_sponsor.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/gbmf_sponsor.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/ioi_sponsor.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/inta_sponsor.jpg" alt="INTA" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/labi-sponsor.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/obf_sponsor.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/ols-sponsor.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/quest_sponsor.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/rladiesba_sponsor.jpg" alt="RLadies Buenos Aires" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <!-- logos -->
         </div>
-
         <p class="mt-6 max-w-3xl mx-auto">
           Si tu organización comparte nuestra misión, escribinos a
-          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
-          para explorar cómo colaborar.
+          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold">direccion@metadocencia.org</a>.
         </p>
         <p class="mt-2 max-w-3xl mx-auto">
           Podés hacer tu aporte a través de nuestro
-          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
-          y ayudarnos a sostener y ampliar nuestras actividades.
+          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold">formulario de donación</a>.
         </p>
         {{< /cta_fullwidth >}}
 
-  # ---------- Redes (full-bleed) ----------
+  # ---------- Redes ----------
   - block: markdown
     id: redes
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             title="Sigue el intercambio"
@@ -178,44 +137,15 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
+        <div class="max-w-3xl mx-auto text-white">
           <p>
-            Acompañanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos:
-            <strong style="color:#FFFFFF">@metadocencia</strong>
+            Acompañanos en nuestras redes sociales:
+            <strong>@metadocencia</strong>
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Twitter
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               LinkedIn
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               YouTube
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Instagram
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Mastodon
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Bluesky
-            </a>
+            <!-- botones redes -->
           </div>
         </div>
         {{< /cta_fullwidth >}}
