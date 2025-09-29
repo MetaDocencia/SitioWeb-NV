@@ -21,7 +21,7 @@ MetaDocencia acumula más de 5 años formando a la comunidad latinoamericana en 
 En esta trayectoria destaca  la contextualización e implementación en español del curso Open Science 101 de NASA. Se trató del diseño y facilitación de cohortes sincrónicas, virtuales y gratuitas de 6 semanas, consistentes de clases activas sobre los fundamentos y las prácticas de la Ciencia Abierta, debate entre pares con experiencias diversas, presentación de iniciativas locales y doble certificación disponible (NASA + MetaDocencia).
 
 ## Más información
-* Grants NASA en Zenodo y OGrants 
+* Grants NASA en [Zenodo](https://zenodo.org/records/8215455) y [OGrants](https://www.ogrants.org/grants/team_metadocencia_2023) 
 * Blogpost [Reporte 2024](https://mdnv.netlify.app/post/2025/20250313-reporte2024/)
 * [Post “10 puntos” (NASA TOPS) — marco, aliados y alcance](https://mdnv.netlify.app/post/nasatops10puntos/) 
 * [Justicia epistémica y ciencia abierta en América Latina y el Caribe: El caso de MetaDocencia. Capítulo del libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio “Dominique Babini”](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
