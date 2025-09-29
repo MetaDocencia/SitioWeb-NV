@@ -236,7 +236,6 @@ sections:
     content:
       title: "Apoya a la ciencia latinoamericana"
       text: |
-        Aquí te contamos cómo
         <div class="mt-3">
           <a href="https://www.metadocencia.org/contacto/"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
@@ -279,7 +278,7 @@ sections:
           </div>
         </div>
       button:
-        text: ""   # dejamos vacío porque ya renderizamos el botón arriba
+        text: ""  
         url: ""
     design:
       card:
