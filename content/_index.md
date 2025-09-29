@@ -249,15 +249,44 @@ sections:
         </details>
 
 
-  - block: cta-card
+  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
+  - block: markdown
+    id: apoya
     content:
-      title: "Apoya a la ciencia latinoamericana"
-      text: "Aquí te contamos cómo"
-      button:
-        text: "Súmate"
-        url: "/cta"
-    design:
-      card:
-        css_class: ""
-        css_style: "background-color:#C83737;color:#FFFFFF;"
+      title: ""
+      text: |
+        {{< cta_fullwidth
+            title="Apoya a la ciencia latinoamericana"
+            text=""
+            button_text="Aquí te contamos cómo"
+            button_url="https://www.metadocencia.org/contacto/"
+            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <p>Nuestras redes:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
+        </div>
+        {{< /cta_fullwidth >}}
 ---
