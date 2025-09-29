@@ -230,17 +230,60 @@ sections:
           </div>
         </details>
 
-  # ===== CTA final =====
+    # ===== CTA final =====
   - block: cta-card
     id: apoya
     content:
       title: "Apoya a la ciencia latinoamericana"
-      text: "Aquí te contamos cómo"
+      text: |
+        Aquí te contamos cómo
+        <div class="mt-3">
+          <a href="https://www.metadocencia.org/contacto/"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#FFFFFF;color:#C83737;">
+             Súmate
+          </a>
+
+          <!-- Línea de botones sociales -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Twitter
+            </a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               LinkedIn
+            </a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               YouTube
+            </a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Instagram
+            </a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Mastodon
+            </a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Bluesky
+            </a>
+          </div>
+        </div>
       button:
-        text: "Súmate"
-        url: "https://www.metadocencia.org/contacto/"
+        text: ""   # dejamos vacío porque ya renderizamos el botón arriba
+        url: ""
     design:
       card:
-        css_class: "bg-primary-700"
-        css_style: ""
+        css_class: "shadow-sm"
+        css_style: "background-color:#C83737;color:#FFFFFF;"
+
 ---
