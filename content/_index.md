@@ -146,3 +146,5 @@ sections:
             {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+
+---
