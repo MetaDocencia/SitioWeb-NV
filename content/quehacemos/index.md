@@ -9,7 +9,7 @@ sections:
   # ---------- HERO ----------
   - block: hero
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciamos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
     design:
       spacing:
         padding: ["0.75rem", 0, "0.75rem", 0]
