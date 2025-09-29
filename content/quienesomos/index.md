@@ -63,7 +63,7 @@ sections:
           <!-- Contenido centrado y con respiro lateral -->
           <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
             <div data-2col>
-              <div style="align-self:center;">
+              <div data-text style="align-self:center;">
                 <p>
                   Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
@@ -119,11 +119,16 @@ sections:
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            align-items: center; /* antes: start */
+            align-items: center; /* centra vertical el contenido */
             gap: 1.5rem;
           }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
+          }
+
+          /* Margen/padding solo en la columna de TEXTO */
+          [data-2col] > [data-text] {
+            padding-inline: clamp(1rem, 3vw, 2.25rem);
           }
 
           /* Wrapper 16:9 para el iframe */
