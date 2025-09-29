@@ -104,7 +104,7 @@ sections:
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]
+        padding: ["0rem", 0, "0.25rem", 0]
 
   # ===== Estilos LOCALES solo para esta página =====
   - block: markdown
