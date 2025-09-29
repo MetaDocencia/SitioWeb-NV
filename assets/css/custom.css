@@ -377,3 +377,48 @@ section#numeros .grid {
     row-gap: 1.75rem !important; /* desktop: separa más la 1ª y 2ª fila */
   }
 }
+
+/* === No subrayar enlaces que funcionan como BOTONES === */
+/* Cubre: .btn del tema, anchors con utilidades Tailwind tipo px-/py-, 
+   bordes redondeados, fondos, o marcados explícitamente con .no-underline */
+a.btn,
+.btn,
+a.button,
+.button,
+a[class*="btn-"],
+[role="button"],
+a.inline-block[class*="px-"][class*="py-"],
+a.rounded,
+a.rounded-md,
+a.rounded-lg,
+a.rounded-xl,
+a[class*="bg-"],
+a[style*="background"],
+a.no-underline {
+  text-decoration: none !important;
+}
+a.btn:hover,
+.btn:hover,
+a.button:hover,
+.button:hover,
+a[class*="btn-"]:hover,
+[role="button"]:hover,
+a.inline-block[class*="px-"][class*="py-"]:hover,
+a.rounded:hover,
+a.rounded-md:hover,
+a.rounded-lg:hover,
+a.rounded-xl:hover,
+a[class*="bg-"]:hover,
+a[style*="background"]:hover,
+a.no-underline:hover {
+  text-decoration: none !important;
+}
+
+/* Seguridad: mantener la negrita si el botón contiene <strong> */
+a.btn strong,
+.btn strong,
+a.button strong,
+.button strong,
+a.inline-block[class*="px-"][class*="py-"] strong {
+  font-weight: 700 !important;
+}
