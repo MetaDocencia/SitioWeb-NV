@@ -63,7 +63,8 @@ sections:
           <!-- Contenido centrado y con respiro lateral -->
           <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
             <div data-2col>
-              <div class="mdnv-text-col">
+              <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
+              <div class="mdnv-vcenter mdnv-text-pad">
                 <p>
                   Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
@@ -115,17 +116,24 @@ sections:
       title: ""
       text: |
         <style>
-          /* ====== Grid 2→1 sin clases en el HTML ====== */
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            align-items: center; /* texto centrado verticalmente respecto al video */
             gap: 1.5rem;
+            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
           }
-          .mdnv-text-col { margin-top:auto; margin-bottom:auto; }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
-            .mdnv-text-col { margin: 0; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centra verticalmente el texto */
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
           }
 
           /* Wrapper 16:9 para el iframe */
@@ -142,7 +150,7 @@ sections:
             border: 0; border-radius: .5rem;
           }
 
-          /* ===== Colapsables ===== */
+          /* ===== Colapsables (no toca tipografías globales) ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -152,6 +160,7 @@ sections:
           }
           .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
 
+          /* Márgenes del propio colapsable (contenido) */
           .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
 
@@ -249,7 +258,7 @@ sections:
           </div>
         </details>
 
-  # ===== CTA final (FULL BACKGROUND) =====
+  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
   - block: markdown
     id: apoya
     content:
@@ -261,7 +270,11 @@ sections:
             button_text="Súmate"
             button_url="https://www.metadocencia.org/contacto/"
             bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
-            maxw="1600px" variant="background" py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
