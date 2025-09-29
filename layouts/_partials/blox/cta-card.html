@@ -1,65 +1,70 @@
-{{/* CTA full-bleed global override */}}
-{{- $b := .block -}}
+{{/* layouts/_partials/blox/cta-card.html
+     CTA full-width (bleed) que respeta content.title, content.text, content.button
+     y design.card.css_class / design.card.css_style. */}}
+
+{{- $b := .block | default dict -}}
+{{- if not (isset . "block") -}}
+  {{- /* Si se llamara mal, evitamos romper el build. */ -}}
+  {{- /* Debug: */ -}}<!-- mdnv: cta-card override recibió contexto sin ".block" -->
+  {{- return -}}
+{{- end -}}
+
 {{- $content := (index $b "content") | default dict -}}
 {{- $design  := (index $b "design")  | default dict -}}
 {{- $card    := (index $design "card") | default dict -}}
 
-{{- $title   := (index $content "title") | default "" -}}
-{{- $text    := (index $content "text")  | default "" -}}
-{{- $button  := (index $content "button") | default dict -}}
-{{- $btnTxt  := (index $button "text") | default "" -}}
-{{- $btnURL  := (index $button "url")  | default "" -}}
+{{- $id     := or (index $b "id") (anchorize (index $content "title")) | default "cta-card" -}}
+{{- $title  := (index $content "title") | default "" -}}
+{{- $text   := (index $content "text")  | default "" -}}
 
-{{- $id        := (index $b "id") | default (anchorize $title) -}}
-{{- $cssClass  := (index $card "css_class") | default "" -}}
-{{- $cssStyle  := (index $card "css_style") | default "" -}}
+{{- $btn        := (index $content "button") | default dict -}}
+{{- $btn_text   := (index $btn "text")   | default "" -}}
+{{- $btn_url    := (index $btn "url")    | default "" -}}
+{{- $btn_target := (index $btn "target") | default "" -}}
 
-{{/* Inyectar CSS una sola vez por página */}}
-{{- if not (.Page.Scratch.Get "mdnv-cta-fw-css") -}}
-  <style>
-    /* Romper el contenedor central del tema para ir a 100vw */
-    .mdnv-bleed {
-      position: relative;
-      left: 50vw;
-      right: 50vw;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      width: 100vw;
-    }
-    /* La tarjeta ocupa todo el ancho; el contenido interno se centra */
-    .mdnv-cta-card {
-      width: 100%;
-      display: block;
-    }
-    .mdnv-cta-inner {
-      max-width: 1200px;           /* ajusta si querés más/menos ancho de contenido */
-      margin: 0 auto;
-      padding: clamp(1rem, 4vw, 2rem);
-    }
-  </style>
-  {{- .Page.Scratch.Set "mdnv-cta-fw-css" true -}}
-{{- end -}}
+{{- $css_class := (index $card "css_class") | default "" -}}
+{{- $css_style := (index $card "css_style") | default "" -}}
 
-<section id="{{ $id }}" class="py-8">
-  <div class="mdnv-bleed">
-    <div class="mdnv-cta-card {{ $cssClass }}" style="{{ $cssStyle }}">
-      <div class="mdnv-cta-inner">
-        {{- if $title -}}
-          <h2 class="text-2xl md:text-3xl font-bold mb-2">{{ $title }}</h2>
-        {{- end -}}
+<!-- mdnv: cta-card override activo -->
+<section id="{{ $id }}" class="mdnv-cta my-6">
+  <!-- Bleed: ocupa todo el ancho real de la ventana -->
+  <div class="mdnv-cta-bleed">
+    <!-- Contenido centrado con padding lateral fluido -->
+    <div class="mdnv-cta-inner {{ $css_class }}" style="{{ $css_style }}">
+      <div class="mdnv-cta-content">
+        {{- if $title }}
+          <h2 class="section-title">{{ $title }}</h2>
+        {{- end }}
+        {{- with $text }}
+          <div class="prose max-w-none">{{ . | markdownify }}</div>
+        {{- end }}
 
-        {{- if $text -}}
-          <div class="prose max-w-none">{{ $text | safeHTML | markdownify }}</div>
-        {{- end -}}
-
-        {{- if and $btnTxt $btnURL -}}
+        {{- if and $btn_text $btn_url }}
           <div class="mt-4">
-            <a href="{{ $btnURL }}"
-               class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
-               >{{ $btnTxt }}</a>
+            <a href="{{ $btn_url }}"
+               {{ if $btn_target }}target="{{ $btn_target }}" rel="noopener"{{ end }}
+               class="inline-block no-underline font-semibold px-5 py-2 rounded-md">
+              {{ $btn_text }}
+            </a>
           </div>
-        {{- end -}}
+        {{- end }}
       </div>
     </div>
   </div>
 </section>
+
+<style>
+/* ===== Estilos locales del CTA (seguros para reusar) ===== */
+.mdnv-cta-bleed{
+  position:relative; left:50%; right:50%;
+  margin-left:-50vw; margin-right:-50vw; width:100vw;
+}
+.mdnv-cta-inner{
+  max-width:1600px; margin:0 auto;
+  padding: clamp(1rem, 4vw, 3rem);
+  border-radius: .75rem;
+}
+.mdnv-cta-content .section-title{
+  margin: 0 0 .5rem 0;
+}
+</style>
