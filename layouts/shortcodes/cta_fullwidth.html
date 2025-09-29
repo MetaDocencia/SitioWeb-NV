@@ -1,84 +1,75 @@
-{{/* 
-  Shortcode: cta_fullwidth
-  Uso (ejemplo):
-  {{< cta_fullwidth
-      title="Apoya a la ciencia latinoamericana"
-      text="Aquí te contamos cómo"
-      button_text="Súmate"
-      button_url="https://www.metadocencia.org/contacto/"
-      bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
-      variant="background"
-      maxw="1600px"
-      content_maxw="1100px"
-      align="center"
-      py="2.5rem" px="clamp(1rem,4vw,3rem)"
-  >}}
-  ...contenido opcional adentro...
-  {{< /cta_fullwidth >}}
+{{/* Shortcode: cta_fullwidth
+     Variantes:
+       - variant="card"        -> tarjeta (por defecto)
+       - variant="background"  -> fondo a todo el ancho (full-bleed)
+
+     Nuevos params:
+       - align="left|center|right"      (alineación del contenido; default "left")
+       - content_maxw="1200px"          (ancho máx. del bloque de contenido dentro del inner)
+       - bg, fg, btn_bg, btn_fg, maxw, px, py (como antes)
 */}}
 
-{{- $title         := .Get "title"         | default "" -}}
-{{- $text          := .Get "text"          | default "" -}}
-{{- $btn_text      := .Get "button_text"   | default "" -}}
-{{- $btn_url       := .Get "button_url"    | default "" -}}
-{{- $bg            := .Get "bg"            | default "#C83737" -}}
-{{- $fg            := .Get "fg"            | default "#FFFFFF" -}}
-{{- $btn_bg        := .Get "btn_bg"        | default "#FFFFFF" -}}
-{{- $btn_fg        := .Get "btn_fg"        | default "#C83737" -}}
-{{- $variant       := .Get "variant"       | default "background" -}} {{/* "background" o "card" */}}
-{{- $maxw          := .Get "maxw"          | default "1600px" -}}
-{{- $content_maxw  := .Get "content_maxw"  | default "1100px" -}}
-{{- $align         := .Get "align"         | default "center" -}}
-{{- $py            := .Get "py"            | default "2rem" -}}
-{{- $px            := .Get "px"            | default "clamp(1rem,4vw,3rem)" -}}
+{{- $title        := .Get "title"        | default "" -}}
+{{- $text         := .Get "text"         | default "" -}}
+{{- $button_text  := .Get "button_text"  | default "" -}}
+{{- $button_url   := .Get "button_url"   | default "" -}}
 
-<section class="mdnv-cta-fullwidth"
-  style="
-    position:relative; left:50%; right:50%;
-    margin-left:-50vw; margin-right:-50vw; width:100vw;
-    {{- if eq $variant "background" -}}
-      background: {{ $bg }};
-      color: {{ $fg }};
-    {{- end -}}
-  "
->
-  <div style="max-width: {{ $maxw }}; margin: 0 auto;">
-    <div style="max-width: {{ $content_maxw }}; margin: 0 auto; text-align: {{ $align }};
-                padding: {{ $py }} {{ $px }};">
-      {{- if $title -}}
-        <h2 style="margin:0 0 .6rem 0; line-height:1.2; {{ if eq $variant "background" }}color: {{ $fg }};{{ end }}">
-          {{ $title | safeHTML }}
-        </h2>
-      {{- end -}}
+{{- $bg           := .Get "bg"           | default "#C83737" -}}
+{{- $fg           := .Get "fg"           | default "#FFFFFF" -}}
+{{- $btn_bg       := .Get "btn_bg"       | default "#FFFFFF" -}}
+{{- $btn_fg       := .Get "btn_fg"       | default $bg -}}
+{{- $maxw         := .Get "maxw"         | default "1600px" -}}
+{{- $px           := .Get "px"           | default "clamp(1rem, 4vw, 3rem)" -}}
+{{- $py           := .Get "py"           | default "2rem" -}}
+{{- $variant      := .Get "variant"      | default "card" -}}
+{{- $align        := .Get "align"        | default "left" -}}
+{{- $content_maxw := .Get "content_maxw" | default "" -}}
 
-      {{- if $text -}}
-        <p style="margin:.25rem 0 1rem 0;">{{ $text | safeHTML }}</p>
-      {{- end -}}
-
-      {{- if and $btn_text $btn_url -}}
-        <a class="mdnv-cta-btn"
-           href="{{ $btn_url }}"
-           style="
-             display:inline-block; font-weight:800;
-             padding:.9rem 1.4rem; border-radius:1rem;
-             background: {{ $btn_bg }}; color: {{ $btn_fg }};
-             text-decoration:none;            /* << quita el subrayado */
-             box-shadow: 0 1px 2px rgba(0,0,0,.08);
-           ">
-          {{ $btn_text }}
-        </a>
-      {{- end -}}
-
-      {{- .Inner -}}
-    </div>
-  </div>
-</section>
+{{- $isBg := eq (lower $variant) "background" -}}
 
 <style>
-/* Hover del botón del CTA (opcional) */
-.mdnv-cta-btn:hover { opacity: .92; }
-/* Variante "card" (si se usa) */
-.mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card {
-  background: #fff; color: #111827; border-radius: 1rem; padding: 1.25rem;
-}
+  .mdnv-cta-bleed { position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw; }
+  .mdnv-cta-inner { max-width: var(--maxw); margin:0 auto; padding-left:var(--px); padding-right:var(--px); }
+  .mdnv-cta-content { margin:0 auto; text-align: var(--align); }
+  .mdnv-cta-bleed.mdnv-bg { background:var(--bg); color:var(--fg); }
+  .mdnv-cta-bleed.mdnv-bg .mdnv-cta-inner { padding-top:var(--py); padding-bottom:var(--py); }
+
+  .mdnv-cta-card {
+    background:var(--bg); color:var(--fg);
+    border-radius:.75rem; padding:1.25rem; box-shadow:0 1px 2px rgba(0,0,0,.07);
+  }
+  @media (min-width:768px){ .mdnv-cta-card{ padding:2rem; } }
+
+  .mdnv-cta-title{ margin:0 0 .25rem 0; color: var(--fg) !important; }
+  .mdnv-cta-text { margin:.25rem 0 .75rem 0; }
+  .mdnv-cta-actions { margin-top: .75rem; }
+
+  .mdnv-cta-button{
+    display:inline-block; text-decoration:none; font-weight:800;
+    padding:.875rem 1.75rem; border-radius:1rem; box-shadow:0 1px 2px rgba(0,0,0,.07);
+    background:var(--btn-bg); color:var(--btn-fg);
+  }
+
+  .mdnv-cta-slot{ margin-top:1rem; }
 </style>
+
+<div class="mdnv-cta-bleed {{ if $isBg }}mdnv-bg{{ end }}"
+     style="--bg:{{ $bg }}; --fg:{{ $fg }}; --btn-bg:{{ $btn_bg }}; --btn-fg:{{ $btn_fg }}; --maxw:{{ $maxw }}; --px:{{ $px }}; --py:{{ $py }}; --align:{{ $align }};">
+  <div class="mdnv-cta-inner">
+    <div class="mdnv-cta-content" {{ if $content_maxw }}style="max-width: {{ $content_maxw }};"{{ end }}>
+      {{ if $isBg }}
+        {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
+        {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
+        {{- if $button_url -}}<div class="mdnv-cta-actions"><a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a></div>{{- end -}}
+        {{- if .Inner -}}<div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>{{- end -}}
+      {{ else }}
+        <div class="mdnv-cta-card shadow-sm">
+          {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
+          {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
+          {{- if $button_url -}}<div class="mdnv-cta-actions"><a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a></div>{{- end -}}
+          {{- if .Inner -}}<div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>{{- end -}}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
