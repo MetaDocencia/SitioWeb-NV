@@ -1,24 +1,9 @@
 {{/* 
   Shortcode: cta_fullwidth (full-bleed opcional)
-  Cambios:
-  - Botón sin subrayado (text-decoration:none)
-  - No altera el alto: padding por defecto 0 (usa py/px si querés espacio)
 
-  Ejemplo:
-  {{< cta_fullwidth
-      title="Apoya a la ciencia latinoamericana"
-      text=""
-      button_text="Aquí te contamos cómo"
-      button_url="https://www.metadocencia.org/contacto/"
-      bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
-      variant="background"
-      maxw="1600px"
-      content_maxw="1100px"
-      align="center"
-      py="2.5rem" px="clamp(1rem,4vw,3rem)"
-  >}}
-  ...contenido opcional...
-  {{< /cta_fullwidth >}}
+  Objetivo de esta versión:
+  - Quitar subrayado del botón SIN modificar el alto del bloque.
+  - No alteramos márgenes/paddings/line-height fuera de lo que vos pases por props.
 */}}
 
 {{- $title         := .Get "title"         | default "" -}}
@@ -33,8 +18,8 @@
 {{- $maxw          := .Get "maxw"          | default "1600px" -}}
 {{- $content_maxw  := .Get "content_maxw"  | default "1100px" -}}
 {{- $align         := .Get "align"         | default "center" -}}
-{{- $py            := .Get "py"            | default "0" -}}  {{/* <- sin padding por defecto */}}
-{{- $px            := .Get "px"            | default "0" -}}  {{/* <- sin padding por defecto */}}
+{{- $py            := .Get "py"            | default "2.5rem" -}}  {{/* mantenemos el mismo default habitual */}}
+{{- $px            := .Get "px"            | default "clamp(1rem,4vw,3rem)" -}}
 
 <section class="mdnv-cta-fullwidth"
   style="
@@ -50,23 +35,25 @@
     <div style="max-width: {{ $content_maxw }}; margin: 0 auto; text-align: {{ $align }};
                 padding: {{ $py }} {{ $px }};">
       {{- if $title -}}
-        <h2 style="margin:0 0 .6rem 0; line-height:1.2; {{ if eq $variant "background" }}color: {{ $fg }};{{ end }}">
+        <h2 style="{{ if eq $variant "background" }}color: {{ $fg }};{{ end }}">
           {{ $title | safeHTML }}
         </h2>
       {{- end -}}
 
       {{- if $text -}}
-        <p style="margin:.25rem 0 1rem 0;">{{ $text | safeHTML }}</p>
+        <p>{{ $text | safeHTML }}</p>
       {{- end -}}
 
       {{- if and $btn_text $btn_url -}}
         <a class="mdnv-cta-btn"
            href="{{ $btn_url }}"
            style="
-             display:inline-block; font-weight:800;
-             padding:.9rem 1.4rem; border-radius:1rem;
+             display:inline-block;
              background: {{ $btn_bg }}; color: {{ $btn_fg }};
-             text-decoration:none;            /* sin subrayado */
+             border-radius: 1rem;
+             padding: .9rem 1.4rem;     /* igual que antes */
+             font-weight: 800;
+             text-decoration: none;     /* ← sin subrayado */
              box-shadow: 0 1px 2px rgba(0,0,0,.08);
            ">
           {{ $btn_text }}
@@ -79,10 +66,10 @@
 </section>
 
 <style>
-/* Hover del botón del CTA (no afecta alto) */
+/* Solo comportamiento/hover del botón (no cambia alturas) */
 .mdnv-cta-btn:hover { opacity: .92; }
 
-/* Variante "card" (si se usa) */
+/* Variante "card" opcional, sin tocar alturas globales */
 .mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card {
   background: #fff; color: #111827; border-radius: 1rem; padding: 1.25rem;
 }
