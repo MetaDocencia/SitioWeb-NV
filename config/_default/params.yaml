@@ -54,6 +54,8 @@ footer:
       url: "https://zenodo.org/records/12534196"
     - text: "Política de Accesibilidad"
       url: "https://zenodo.org/records/10514982"
+    - text: "Licencia"
+      url: "https://mdnv.netlify.app/licencia/"
 
 
 # Localization
