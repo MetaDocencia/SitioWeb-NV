@@ -8,22 +8,23 @@ tags:
 ---
 
 ## El problema
-La adopción de la Ciencia Abierta en comunidades hispanohablantes enfrenta barreras como la falta de **material adaptado al contexto local** y la **escasez de oportunidades de entrenamiento y aprendizaje entre pares**.
+La adopción de la Ciencia Abierta en comunidades hispanohablantes enfrenta barreras tales como el acceso a material de estudio adaptado al contexto local y más oportunidades de entrenamiento y aprendizaje entre pares. 
 
 ## La solución
-Ofrecemos **formación en español** contextualizada a América Latina para reducir **brechas de conocimiento** y facilitar la **aplicación práctica** de buenas políticas y herramientas de Ciencia Abierta por parte de personas vinculadas a la **investigación, docencia, comunicación, datos y software**.
+La formación en español, contextualizada a América Latina, ayudará a reducir brechas de conocimiento sobre las buenas prácticas de ciencia abierta y facilitar su aplicación a personas de la región vinculadas con la ciencia y técnica (en investigación, docencia, comunicación, datos, software, etc.).
 
 ## Por qué MetaDocencia
-Nuestra misión es **construir capacidades científicas y técnicas con perspectiva local** mediante **redes, espacios de aprendizaje y recursos accesibles**. La **Ciencia Abierta** es el medio; la **formación en español con mirada local**, la estrategia.
+MetaDocencia tiene la misión de “construir capacidades científicas y técnicas con perspectiva local mediante redes, espacios de aprendizaje y recursos accesibles”. Para cumplirla, la Ciencia Abierta es el medio y la formación en español con mirada local, la mejor estrategia.
 
 ## El modelo de trabajo
-Acumulamos **más de 5 años** formando a la comunidad latinoamericana en habilidades blandas y conocimientos técnicos en línea con la Ciencia Abierta.  
-Destaca la **contextualización e implementación en español del curso Open Science 101 de NASA** y el diseño de **cohortes sincrónicas, virtuales y gratuitas de 6 semanas**: clases activas sobre fundamentos y prácticas, **debate entre pares**, **presentación de iniciativas locales** y **doble certificación** (NASA + MetaDocencia).
+MetaDocencia acumula más de 5 años formando a la comunidad latinoamericana en habilidades blandas y conocimientos técnicos de acuerdo a los lineamientos de la ciencia abierta.
+En esta trayectoria destaca  la contextualización e implementación en español del curso Open Science 101 de NASA. Se trató del diseño y facilitación de cohortes sincrónicas, virtuales y gratuitas de 6 semanas, consistentes de clases activas sobre los fundamentos y las prácticas de la Ciencia Abierta, debate entre pares con experiencias diversas, presentación de iniciativas locales y doble certificación disponible (NASA + MetaDocencia).
 
 ## Más información
-- Grants NASA en **Zenodo** y **OGrants**  
-- **Blogpost ALTa CA / Reporte 2024** (hasta publicación definitiva)  
-- **“10 puntos” (NASA TOPS)** — marco, aliados y alcance  
-- **Justicia epistémica y ciencia abierta en América Latina y el Caribe: el caso de MetaDocencia** — capítulo en *Conocimiento como bien común* (Premio “Dominique Babini”)  
-- **Paper** _More than a NASA Badge_  
-- **Reporte de datos** en Zenodo
+* Grants NASA en Zenodo y OGrants 
+* Blogpost [Reporte 2024](https://mdnv.netlify.app/post/2025/20250313-reporte2024/)
+* [Post “10 puntos” (NASA TOPS) — marco, aliados y alcance](https://mdnv.netlify.app/post/nasatops10puntos/) 
+* [Justicia epistémica y ciencia abierta en América Latina y el Caribe: El caso de MetaDocencia. Capítulo del libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio “Dominique Babini”](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
+* Paper More than a NASA Badge
+* [Reporte datos en Zenodo](https://zenodo.org/records/15882571) 
+
