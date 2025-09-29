@@ -63,7 +63,7 @@ sections:
           <!-- Contenido centrado y con respiro lateral -->
           <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
             <div data-2col>
-              <div>
+              <div style="align-self:center;">
                 <p>
                   Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
@@ -115,11 +115,11 @@ sections:
       title: ""
       text: |
         <style>
-          /* ====== Grid 2→1 sin clases en el HTML ====== */
+          /* ====== Grid 2→1 sin clases en el HTML (centrado vertical) ====== */
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            align-items: start;
+            align-items: center; /* antes: start */
             gap: 1.5rem;
           }
           @media (max-width: 900px) {
