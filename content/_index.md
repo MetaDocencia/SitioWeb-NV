@@ -98,7 +98,17 @@ sections:
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
-
+    
+  # ===== Título de bloque para la comunidad =====
+  - block: markdown
+    id: titulo-nuestra-comunidad
+    content:
+      title: "Nuestra Comunidad"
+      text: ""
+    design:
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
+    
   # ===== Estilos LOCALES solo para esta página =====
   - block: markdown
     id: estilos-collapsibles
@@ -183,15 +193,7 @@ sections:
           }
         </style>
 
-  # ===== Título de bloque para la comunidad =====
-  - block: markdown
-    id: titulo-nuestra-comunidad
-    content:
-      title: "Nuestra Comunidad"
-      text: ""
-    design:
-      spacing:
-        padding: ["0.25rem", 0, "0.25rem", 0]
+
 
   # --- Equipo y CA ---
   - block: markdown
