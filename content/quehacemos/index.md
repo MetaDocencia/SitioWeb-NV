@@ -144,19 +144,25 @@ sections:
 
 
  # ======================
-  - block: stats
+  - block: markdown
     id: infra-metricas
     content:
-      items:
-        - statistic: "+200"
-          description: "documentos en Zenodo"
-        - statistic: "+85.000"
-          description: "palabras contextualizadas"
+      title: ""
+      text: |
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center text-center max-w-3xl mx-auto">
+          <div>
+            <p class="text-4xl font-extrabold text-gray-900 dark:text-white">+200</p>
+            <p class="text-lg text-gray-600 dark:text-gray-300">documentos en Zenodo</p>
+          </div>
+          <div>
+            <p class="text-4xl font-extrabold text-gray-900 dark:text-white">+85.000</p>
+            <p class="text-lg text-gray-600 dark:text-gray-300">palabras contextualizadas</p>
+          </div>
+        </div>
     design:
-      columns: 2
-      css_class: "text-center"
       spacing:
-        padding: ["1rem", 0, "1rem", 0]
+        padding: ["1.5rem", 0, "1.5rem", 0]
+
 
   # ======================
 
