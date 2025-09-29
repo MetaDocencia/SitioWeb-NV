@@ -2,7 +2,7 @@
 date: "2023-08-07"
 translationKey: "NASA_TOPS_10_puntos"
 draft: false
-type: post
+type: page
 title: "Arrancamos a transformarnos hacia la Ciencia Abierta junto con la NASA: ¡10 puntos!"
 linktitle: "NASA TOPS: 10 puntos"
 summary: "¿Cómo lo conseguimos? ¿Qué representa? ¿Cómo lo haremos? ¿Qué alcance e impacto esperamos que tenga? Te contamos más en estos 10 puntos."
