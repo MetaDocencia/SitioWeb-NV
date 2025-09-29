@@ -351,3 +351,29 @@ footer.site-footer a strong {
 .prose :is(h1,h2,h3,h4,h5,h6) b a {
   font-weight: 800 !important;       /* títulos suelen ser más pesados */
 }
+/* ===== Quienes somos → sección "MetaDocencia en números" ===== */
+section#numeros {
+  padding-top: 0 !important; /* por si el tema agrega extra */
+}
+
+/* Menos espacio arriba del título y menos espacio entre título y datos */
+section#numeros h2,
+section#numeros .section-heading {
+  margin-top: 0 !important;
+  margin-bottom: 0.35rem !important; /* acercamos título a la grilla */
+}
+
+/* Si el contenedor de la grilla tiene margen superior (mt-*), lo reducimos */
+section#numeros h2 + div {
+  margin-top: 0.35rem !important;
+}
+
+/* Más distancia entre filas de métricas (sin tocar columnas) */
+section#numeros .grid {
+  row-gap: 1.25rem !important; /* móvil/tablet */
+}
+@media (min-width: 1024px) {
+  section#numeros .grid {
+    row-gap: 1.75rem !important; /* desktop: separa más la 1ª y 2ª fila */
+  }
+}
