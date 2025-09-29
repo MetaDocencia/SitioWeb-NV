@@ -156,6 +156,7 @@ sections:
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#auspiciantes,
+          section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
             margin-top: .25rem !important;
             padding-top: .25rem !important;
@@ -165,6 +166,7 @@ sections:
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
             font-size: 0.95rem !important;
           }
@@ -172,6 +174,7 @@ sections:
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
             section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
               font-size: 0.9rem !important;
             }
@@ -217,6 +220,19 @@ sections:
           </div>
         </details>
 
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Comunidades Amigas"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
     id: colaboraron-con-metadocencia
@@ -226,11 +242,11 @@ sections:
         <details class="mdnv-collapsible">
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
-    # ===== CTA final =====
+  # ===== CTA final =====
   - block: cta-card
     id: apoya
     content:
@@ -244,7 +260,7 @@ sections:
              style="background:#FFFFFF;color:#C83737;">
              Súmate
           </a>
-  
+
           <!-- Línea de botones sociales (más chicos) -->
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
             <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
@@ -279,12 +295,11 @@ sections:
             </a>
           </div>
         </div>
-      button:
-        text: ""   # vacío para no duplicar botón
-        url: ""
-   design:
+    button:
+      text: ""   # vacío para no duplicar botón
+      url: ""
+    design:
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#C83737;color:#FFFFFF;"
-
 ---
