@@ -1,54 +1,48 @@
 {{/* Shortcode: cta_fullwidth
      Variantes:
-       - variant="card"        -> tarjeta con borde redondeado (por defecto)
-       - variant="background"  -> pinta TODO el ancho como fondo
+       - variant="card"        -> tarjeta (por defecto)
+       - variant="background"  -> fondo a todo el ancho (full-bleed)
 
-     Ejemplo:
-     {{< cta_fullwidth
-          title="Apoya a la ciencia latinoamericana"
-          text="Aquí te contamos cómo"
-          button_text="Súmate"
-          button_url="/contacto/"
-          bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
-          maxw="1600px" variant="background" py="2.5rem" px="clamp(1rem,4vw,3rem)"
-     >}}
-       <!-- slot opcional: más contenido debajo del botón -->
-     {{< /cta_fullwidth >}}
+     Nuevos params:
+       - align="left|center|right"      (alineación del contenido; default "left")
+       - content_maxw="1200px"          (ancho máx. del bloque de contenido dentro del inner)
+       - bg, fg, btn_bg, btn_fg, maxw, px, py (como antes)
 */}}
 
-{{- $title       := .Get "title"       | default "" -}}
-{{- $text        := .Get "text"        | default "" -}}
-{{- $button_text := .Get "button_text" | default "" -}}
-{{- $button_url  := .Get "button_url"  | default "" -}}
+{{- $title        := .Get "title"        | default "" -}}
+{{- $text         := .Get "text"         | default "" -}}
+{{- $button_text  := .Get "button_text"  | default "" -}}
+{{- $button_url   := .Get "button_url"   | default "" -}}
 
-{{- $bg     := .Get "bg"     | default "#C83737" -}}
-{{- $fg     := .Get "fg"     | default "#FFFFFF" -}}
-{{- $btn_bg := .Get "btn_bg" | default "#FFFFFF" -}}
-{{- $btn_fg := .Get "btn_fg" | default $bg -}}
-{{- $maxw   := .Get "maxw"   | default "1600px" -}}
-{{- $px     := .Get "px"     | default "clamp(1rem, 4vw, 3rem)" -}}
-{{- $py     := .Get "py"     | default "2rem" -}}
-{{- $variant:= .Get "variant"| default "card" -}}
+{{- $bg           := .Get "bg"           | default "#C83737" -}}
+{{- $fg           := .Get "fg"           | default "#FFFFFF" -}}
+{{- $btn_bg       := .Get "btn_bg"       | default "#FFFFFF" -}}
+{{- $btn_fg       := .Get "btn_fg"       | default $bg -}}
+{{- $maxw         := .Get "maxw"         | default "1600px" -}}
+{{- $px           := .Get "px"           | default "clamp(1rem, 4vw, 3rem)" -}}
+{{- $py           := .Get "py"           | default "2rem" -}}
+{{- $variant      := .Get "variant"      | default "card" -}}
+{{- $align        := .Get "align"        | default "left" -}}
+{{- $content_maxw := .Get "content_maxw" | default "" -}}
 
 {{- $isBg := eq (lower $variant) "background" -}}
 
 <style>
   .mdnv-cta-bleed { position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw; }
   .mdnv-cta-inner { max-width: var(--maxw); margin:0 auto; padding-left:var(--px); padding-right:var(--px); }
-
-  /* Variante: background -> el color va en el contenedor full-bleed */
+  .mdnv-cta-content { margin:0 auto; text-align: var(--align); }
   .mdnv-cta-bleed.mdnv-bg { background:var(--bg); color:var(--fg); }
   .mdnv-cta-bleed.mdnv-bg .mdnv-cta-inner { padding-top:var(--py); padding-bottom:var(--py); }
 
-  /* Variante: card -> tarjeta centrada con sombra y radio */
   .mdnv-cta-card {
     background:var(--bg); color:var(--fg);
     border-radius:.75rem; padding:1.25rem; box-shadow:0 1px 2px rgba(0,0,0,.07);
   }
   @media (min-width:768px){ .mdnv-cta-card{ padding:2rem; } }
 
-  .mdnv-cta-title{ margin:0 0 .25rem 0; }
+  .mdnv-cta-title{ margin:0 0 .25rem 0; color: var(--fg) !important; }
   .mdnv-cta-text { margin:.25rem 0 .75rem 0; }
+  .mdnv-cta-actions { margin-top: .75rem; }
 
   .mdnv-cta-button{
     display:inline-block; text-decoration:none; font-weight:800;
@@ -59,22 +53,23 @@
   .mdnv-cta-slot{ margin-top:1rem; }
 </style>
 
-<div class="mdnv-cta-bleed {{ if $isBg }}mdnv-bg{{ end }}" style="--bg:{{ $bg }}; --fg:{{ $fg }}; --btn-bg:{{ $btn_bg }}; --btn-fg:{{ $btn_fg }}; --maxw:{{ $maxw }}; --px:{{ $px }}; --py:{{ $py }};">
+<div class="mdnv-cta-bleed {{ if $isBg }}mdnv-bg{{ end }}"
+     style="--bg:{{ $bg }}; --fg:{{ $fg }}; --btn-bg:{{ $btn_bg }}; --btn-fg:{{ $btn_fg }}; --maxw:{{ $maxw }}; --px:{{ $px }}; --py:{{ $py }}; --align:{{ $align }};">
   <div class="mdnv-cta-inner">
-    {{ if $isBg }}
-      <!-- Fondo a todo el ancho (sin tarjeta) -->
-      {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
-      {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
-      {{- if $button_url -}}<a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a>{{- end -}}
-      {{- if .Inner -}}<div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>{{- end -}}
-    {{ else }}
-      <!-- Tarjeta (comportamiento anterior) -->
-      <div class="mdnv-cta-card shadow-sm">
+    <div class="mdnv-cta-content" {{ if $content_maxw }}style="max-width: {{ $content_maxw }};"{{ end }}>
+      {{ if $isBg }}
         {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
         {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
-        {{- if $button_url -}}<a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a>{{- end -}}
+        {{- if $button_url -}}<div class="mdnv-cta-actions"><a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a></div>{{- end -}}
         {{- if .Inner -}}<div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>{{- end -}}
-      </div>
-    {{ end }}
+      {{ else }}
+        <div class="mdnv-cta-card shadow-sm">
+          {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
+          {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
+          {{- if $button_url -}}<div class="mdnv-cta-actions"><a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a></div>{{- end -}}
+          {{- if .Inner -}}<div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>{{- end -}}
+        </div>
+      {{ end }}
+    </div>
   </div>
 </div>
