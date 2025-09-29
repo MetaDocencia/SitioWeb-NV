@@ -1,0 +1,57 @@
+{{/* Shortcode: cta_fullwidth
+     Uso básico:
+     {{< cta_fullwidth
+          title="Título"
+          text="Texto del CTA"
+          button_text="Súmate"
+          button_url="/contacto/"
+          bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+          maxw="1600px"
+     >}}
+     <!-- Contenido opcional adicional (quedará debajo del botón) -->
+     {{< /cta_fullwidth >}}
+*/}}
+
+{{- $title       := .Get "title"       | default "" -}}
+{{- $text        := .Get "text"        | default "" -}}
+{{- $button_text := .Get "button_text" | default "" -}}
+{{- $button_url  := .Get "button_url"  | default "" -}}
+
+{{- $bg     := .Get "bg"     | default "#C83737" -}}
+{{- $fg     := .Get "fg"     | default "#FFFFFF" -}}
+{{- $btn_bg := .Get "btn_bg" | default "#FFFFFF" -}}
+{{- $btn_fg := .Get "btn_fg" | default $bg -}}
+{{- $maxw   := .Get "maxw"   | default "1600px" -}}
+
+<style>
+  .mdnv-cta-bleed { position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw; }
+  .mdnv-cta-inner { max-width: var(--maxw); margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem); }
+  .mdnv-cta-card  { background:var(--bg); color:var(--fg); border-radius:.75rem; padding:1.25rem; }
+  @media (min-width:768px){ .mdnv-cta-card{ padding:2rem; } }
+
+  .mdnv-cta-title{ margin:0 0 .25rem 0; }
+  .mdnv-cta-text { margin:.25rem 0 .75rem 0; }
+
+  .mdnv-cta-button{
+    display:inline-block; text-decoration:none; font-weight:800;
+    padding:.875rem 1.75rem; border-radius:1rem; box-shadow:0 1px 2px rgba(0,0,0,.07);
+    background:var(--btn-bg); color:var(--btn-fg);
+  }
+
+  .mdnv-cta-slot{ margin-top:1rem; }
+</style>
+
+<div class="mdnv-cta-bleed" style="--bg:{{ $bg }}; --fg:{{ $fg }}; --btn-bg:{{ $btn_bg }}; --btn-fg:{{ $btn_fg }}; --maxw:{{ $maxw }};">
+  <div class="mdnv-cta-inner">
+    <div class="mdnv-cta-card shadow-sm">
+      {{- if $title -}}<h2 class="mdnv-cta-title section-title">{{ $title }}</h2>{{- end -}}
+      {{- if $text  -}}<p class="mdnv-cta-text">{{ $text | safeHTML }}</p>{{- end -}}
+      {{- if $button_url -}}
+        <a href="{{ $button_url }}" class="mdnv-cta-button">{{ $button_text }}</a>
+      {{- end -}}
+      {{- if .Inner -}}
+        <div class="mdnv-cta-slot">{{ .Inner | markdownify }}</div>
+      {{- end -}}
+    </div>
+  </div>
+</div>
