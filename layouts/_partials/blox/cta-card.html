@@ -1,0 +1,65 @@
+{{/* CTA full-bleed global override */}}
+{{- $b := .block -}}
+{{- $content := (index $b "content") | default dict -}}
+{{- $design  := (index $b "design")  | default dict -}}
+{{- $card    := (index $design "card") | default dict -}}
+
+{{- $title   := (index $content "title") | default "" -}}
+{{- $text    := (index $content "text")  | default "" -}}
+{{- $button  := (index $content "button") | default dict -}}
+{{- $btnTxt  := (index $button "text") | default "" -}}
+{{- $btnURL  := (index $button "url")  | default "" -}}
+
+{{- $id        := (index $b "id") | default (anchorize $title) -}}
+{{- $cssClass  := (index $card "css_class") | default "" -}}
+{{- $cssStyle  := (index $card "css_style") | default "" -}}
+
+{{/* Inyectar CSS una sola vez por página */}}
+{{- if not (.Page.Scratch.Get "mdnv-cta-fw-css") -}}
+  <style>
+    /* Romper el contenedor central del tema para ir a 100vw */
+    .mdnv-bleed {
+      position: relative;
+      left: 50vw;
+      right: 50vw;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+    }
+    /* La tarjeta ocupa todo el ancho; el contenido interno se centra */
+    .mdnv-cta-card {
+      width: 100%;
+      display: block;
+    }
+    .mdnv-cta-inner {
+      max-width: 1200px;           /* ajusta si querés más/menos ancho de contenido */
+      margin: 0 auto;
+      padding: clamp(1rem, 4vw, 2rem);
+    }
+  </style>
+  {{- .Page.Scratch.Set "mdnv-cta-fw-css" true -}}
+{{- end -}}
+
+<section id="{{ $id }}" class="py-8">
+  <div class="mdnv-bleed">
+    <div class="mdnv-cta-card {{ $cssClass }}" style="{{ $cssStyle }}">
+      <div class="mdnv-cta-inner">
+        {{- if $title -}}
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">{{ $title }}</h2>
+        {{- end -}}
+
+        {{- if $text -}}
+          <div class="prose max-w-none">{{ $text | safeHTML | markdownify }}</div>
+        {{- end -}}
+
+        {{- if and $btnTxt $btnURL -}}
+          <div class="mt-4">
+            <a href="{{ $btnURL }}"
+               class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
+               >{{ $btnTxt }}</a>
+          </div>
+        {{- end -}}
+      </div>
+    </div>
+  </div>
+</section>
