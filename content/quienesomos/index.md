@@ -276,7 +276,7 @@ sections:
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <p>Nuestras redes</p>
+        <p>Nuestras redes:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
