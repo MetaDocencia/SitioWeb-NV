@@ -101,6 +101,8 @@ sections:
           description: "personas conectadas en redes sociales"
         - statistic: "+2,600"
           description: "suscripciones activas a nuestro boletín"
+        - statistic: "+10%"
+          description: "porcentaje de interacción en LinkdeIn (2025)"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
