@@ -287,5 +287,4 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#C83737;color:#FFFFFF;"
 
-
 ---
