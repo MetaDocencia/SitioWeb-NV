@@ -1,0 +1,46 @@
+{{/* layouts/partials/blox/cta-card.html */}}
+
+{{- $b       := .block        | default dict -}}
+{{- $content := index $b "content" | default dict -}}
+{{- $design  := index $b "design"  | default dict -}}
+{{- $card    := index $design "card" | default dict -}}
+
+{{- $title := index $content "title" | default "" -}}
+{{- $text  := index $content "text"  | default "" -}}
+
+{{- $btn      := index $content "button" | default dict -}}
+{{- $btnText  := index $btn "text" | default "" -}}
+{{- $btnURL   := index $btn "url"  | default "" -}}
+{{- $cardCls  := index $card "css_class" | default "" -}}
+{{- $cardCSS  := index $card "css_style" | default "" -}}
+
+<div class="mdnv-cta-bleed" data-debug="cta-card-override">
+  <div class="mdnv-cta-inner {{ $cardCls }}" style="{{ $cardCSS }}">
+    <div class="mx-auto" style="max-width:1600px; padding-left:clamp(1rem,4vw,3rem); padding-right:clamp(1rem,4vw,3rem);">
+      {{- if $title -}}
+        <h2 class="text-3xl font-bold mb-2">{{ $title }}</h2>
+      {{- end -}}
+
+      {{- if $text -}}
+        <div class="mb-4">{{ $text | safeHTML }}</div>
+      {{- end -}}
+
+      {{- if and $btnText $btnURL -}}
+        <a href="{{ $btnURL }}"
+           class="inline-block no-underline font-semibold px-5 py-2 rounded-md">
+           {{ $btnText }}
+        </a>
+      {{- end -}}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Hace que el CTA ocupe ancho completo (full-bleed) */
+  .mdnv-cta-bleed{
+    position:relative; left:50%; right:50%;
+    margin-left:-50vw; margin-right:-50vw; width:100vw;
+  }
+  /* Respira un poco verticalmente por defecto */
+  .mdnv-cta-inner{ padding-top:1.25rem; padding-bottom:1.25rem; }
+</style>
