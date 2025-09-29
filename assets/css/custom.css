@@ -422,3 +422,75 @@ a.button strong,
 a.inline-block[class*="px-"][class*="py-"] strong {
   font-weight: 700 !important;
 }
+
+/* ===== Testimonials compact ===== */
+section.testimonials-compact {
+  --t-pad: .85rem;         /* padding interno de cada tarjeta */
+  --t-gap: .9rem;          /* separación entre tarjetas */
+  --t-fs: .95rem;          /* tamaño del texto del testimonio */
+  --t-line: 1.45;          /* interlineado del testimonio */
+  --t-author-fs: .95rem;   /* tamaño del autor */
+  --t-role-fs: .8rem;      /* tamaño del rol */
+  --t-avatar: 52px;        /* tamaño del avatar */
+}
+
+/* Gaps del grid */
+section.testimonials-compact .grid,
+section.testimonials-compact [class*="grid"] {
+  row-gap: var(--t-gap) !important;
+  column-gap: var(--t-gap) !important;
+}
+
+/* Tarjeta más chica (cubre la mayoría de variantes del tema) */
+section.testimonials-compact .p-6,
+section.testimonials-compact .p-5,
+section.testimonials-compact .p-4,
+section.testimonials-compact .px-6.py-6,
+section.testimonials-compact .px-6.py-5,
+section.testimonials-compact .px-5.py-5,
+section.testimonials-compact .px-4.py-4 {
+  padding: var(--t-pad) !important;
+}
+
+/* Texto del testimonio más chico */
+section.testimonials-compact .prose,
+section.testimonials-compact .prose p,
+section.testimonials-compact blockquote,
+section.testimonials-compact blockquote p,
+section.testimonials-compact p {
+  font-size: var(--t-fs) !important;
+  line-height: var(--t-line) !important;
+}
+
+/* Autor y rol más chicos */
+section.testimonials-compact .name,
+section.testimonials-compact .author,
+section.testimonials-compact h3 {
+  font-size: var(--t-author-fs) !important;
+  line-height: 1.3 !important;
+  margin-bottom: .15rem !important;
+}
+section.testimonials-compact .role,
+section.testimonials-compact .text-sm,
+section.testimonials-compact .opacity-70 {
+  font-size: var(--t-role-fs) !important;
+  line-height: 1.2 !important;
+  opacity: .8 !important;
+}
+
+/* Avatar compacto */
+section.testimonials-compact img,
+section.testimonials-compact .avatar img,
+section.testimonials-compact .rounded-full {
+  width: var(--t-avatar) !important;
+  height: var(--t-avatar) !important;
+  min-width: var(--t-avatar) !important;
+  min-height: var(--t-avatar) !important;
+  object-fit: cover !important;
+}
+
+/* Menos aire vertical dentro de cada testimonio */
+section.testimonials-compact .space-y-2 > * + *,
+section.testimonials-compact .space-y-3 > * + * {
+  margin-top: .4rem !important;
+}
