@@ -3,7 +3,7 @@ title: "Súmate y apoya a nuestra comunidad"
 type: landing
 slug: "cta"
 design:
-  spacing: "0"   # quita márgenes globales extra
+  spacing: "0"
 
 sections:
 
@@ -20,7 +20,7 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="1.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.25rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="mx-auto max-w-3xl text-white">
           <p class="text-lg leading-relaxed mb-4">
@@ -52,7 +52,7 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="1.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.25rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="max-w-3xl mx-auto text-white">
           <p>
@@ -66,7 +66,7 @@ sections:
         </div>
         {{< /cta_fullwidth >}}
 
-  # ---------- Comunidades amigas ----------
+  # ---------- Comunidades amigas (logos desde authors) ----------
   - block: markdown
     id: comunidades
     content:
@@ -81,19 +81,19 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="1.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.25rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <p class="max-w-3xl mx-auto">
           Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <!-- logos -->
-          <img src="/media/sponsors/2i2c-sponsor.png" class="max-h-10 w-auto opacity-95">
-          <!-- ... resto de logos ... -->
+
+        <!-- Logos traídos de authors.user_groups = "Comunidades amigas" -->
+        <div class="mt-4">
+          {{< people_list group="Comunidades amigas" columns=6 gapx="2rem" gapy="1.25rem" fit="contain" >}}
         </div>
         {{< /cta_fullwidth >}}
 
-  # ---------- Auspiciantes / Apoya ----------
+  # ---------- Auspiciantes / Apoya (logos desde authors) ----------
   - block: markdown
     id: auspiciantes
     content:
@@ -106,14 +106,17 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="1.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.25rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <p class="max-w-3xl mx-auto">
           Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión. 
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
-          <!-- logos -->
+
+        <!-- Logos traídos de authors.user_groups = "Auspiciantes" -->
+        <div class="mt-4">
+          {{< people_list group="Auspiciantes" columns=6 gapx="2rem" gapy="1.25rem" fit="contain" >}}
         </div>
+
         <p class="mt-6 max-w-3xl mx-auto">
           Si tu organización comparte nuestra misión, escribinos a
           <a href="mailto:direccion@metadocencia.org" class="underline font-semibold">direccion@metadocencia.org</a>.
@@ -137,7 +140,7 @@ sections:
             maxw="1600px"
             content_maxw="1100px"
             align="center"
-            py="1.5rem" px="clamp(1rem,4vw,3rem)"
+            py="1.25rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="max-w-3xl mx-auto text-white">
           <p>
@@ -145,7 +148,24 @@ sections:
             <strong>@metadocencia</strong>
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
-            <!-- botones redes -->
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
           </div>
         </div>
         {{< /cta_fullwidth >}}
