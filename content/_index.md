@@ -100,114 +100,98 @@ sections:
         padding: ["6rem", 0, 0, 0]
     
   # ===== Título de bloque para la comunidad =====
-- block: markdown
-  id: titulo-nuestra-comunidad
-  content:
-    title: "Nuestra Comunidad"
-    text: ""
-  design:
-    spacing:
-      padding: ["0rem", 0, "0rem", 0]
+  - block: markdown
+    id: titulo-nuestra-comunidad
+    content:
+      title: "Nuestra Comunidad"
+      text: ""
+    design:
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
+    
+  # ===== Estilos LOCALES solo para esta página =====
+  - block: markdown
+    id: estilos-collapsibles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch;
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
+          }
 
-# ===== Estilos LOCALES solo para esta página =====
-- block: markdown
-  id: estilos-collapsibles
-  content:
-    title: ""
-    text: |
-      <style>
-        /* Ocultar el bloque en sí mismo (no ocupa espacio) */
-        section#estilos-collapsibles {
-          display: contents !important; /* no agrega margen ni padding */
-        }
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
+          }
 
-        /* ===== Título grande: "Nuestra Comunidad" ===== */
-        section#titulo-nuestra-comunidad h2,
-        section#titulo-nuestra-comunidad .section-heading {
-          margin-top: 0 !important;
-          margin-bottom: .35rem !important;
-          font-size: clamp(2.2rem, 4vw, 3rem); /* más grande */
-          line-height: 1.1;
-          font-weight: 800;
-        }
+          /* ===== Colapsables ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
 
-        /* ===== Grid 2→1, con centrado vertical solo del texto ===== */
-        [data-2col] {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1.5rem;
-          align-items: stretch;
-        }
-        @media (max-width: 900px) {
-          [data-2col] { grid-template-columns: 1fr; }
-        }
-        .mdnv-vcenter {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .mdnv-text-pad {
-          padding-left: clamp(.5rem, 3vw, 2rem);
-          padding-right: clamp(.5rem, 3vw, 2rem);
-        }
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
 
-        /* Wrapper 16:9 para el iframe */
-        [data-16x9] {
-          position: relative;
-          width: 100%;
-          padding-top: 56.25%;
-          border-radius: .5rem;
-          overflow: hidden;
-        }
-        [data-16x9] iframe {
-          position: absolute; inset: 0;
-          width: 100%; height: 100%;
-          border: 0; border-radius: .5rem;
-        }
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
 
-        /* ===== Colapsables ===== */
-        .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-        .mdnv-collapsible > summary::after {
-          content: "▾";
-          margin-left: .5rem;
-          display: inline-block;
-          transition: transform .15s ease;
-        }
-        .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-
-        /* Márgenes del propio colapsable (contenido) */
-        .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-        .mdnv-collapsible[open] { margin-bottom: 1rem; }
-
-        /* Reducir espacio ANTES de cada título colapsable */
-        section#equipo-y-consejo-asesor,
-        section#colaboradores,
-        section#auspiciantes,
-        section#comunidades-amigas,
-        section#colaboraron-con-metadocencia {
-          margin-top: .25rem !important;
-          padding-top: .25rem !important;
-        }
-
-        /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
-        section#equipo-y-consejo-asesor .mdnv-people-name,
-        section#colaboradores .mdnv-people-name,
-        section#auspiciantes .mdnv-people-name,
-        section#comunidades-amigas .mdnv-people-name,
-        section#colaboraron-con-metadocencia .mdnv-people-name {
-          font-size: 0.95rem !important;
-        }
-        @media (max-width: 640px) {
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
-            font-size: 0.9rem !important;
+            font-size: 0.95rem !important;
           }
-        }
-      </style>
-
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
+          }
+        </style>
   # --- Equipo y CA ---
   - block: markdown
     id: equipo-y-consejo-asesor
