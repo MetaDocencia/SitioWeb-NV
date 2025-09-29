@@ -1,24 +1,27 @@
 ---
-title: "Contextualización"
-summary: "Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma."
+title: "Contextualization"
+summary: "We develop high-quality resources in Spanish based on material originally published in other languages."
 date: 2025-09-14
 tags:
   - Infraestructura
+  - Proyectos
 ---
 
-## El problema
-Quienes hacen investigación en el Sur Global enfrentan desafíos e injusticias al aplicar los principios de la Ciencia Abierta. Particularmente visible en América Latina, las barreras idiomáticas limitan el intercambio libre de conocimiento. El predominio del inglés como lengua científica excluye valiosos aportes de quienes no sienten comodidad comunicando en ese idioma, lo que genera un aumento en la brecha de distribución del conocimiento y del reconocimiento en la ciencia a nivel mundial.
+## The problem
+Researchers in many Global South countries face challenges and injustices when applying the principles of Open Science. Language barriers limit the free exchange of knowledge, which is particularly visible in Latin America. The predominance of English in science excludes valuable contributions from those who are not comfortable communicating in this language, widening the gap in the global distribution of knowledge and recognition in science.
 
-## Cómo encararlo
- La Contextualización es uno de los pilares que sostienen el trabajo de MetaDocencia. El objetivo principal es desarrollar recursos de calidad en español a partir de material originalmente publicado en otro idioma. La calidad implica una correcta traducción del contenido, su adaptación al contexto regional de manera accesible y significativa. La forma de trabajo y los consensos alcanzados son compartidos abiertamente para beneficio de la comunidad. La contextualización también contempla el trabajo sobre material en español para aumentar su visibilidad en comunidades angloparlantes.
+## The approach
+Contextualization is one of the areas that supports the work of MetaDocencia. Its main goal is to develop high-quality resources in Spanish based on contents originally published in other languages. Quality involves not only an accurate translation, but also its adaptation to the local context in an accessible and meaningful way. The method and consensus reached in each open project are also shared for the benefit of others. Contextualization also works on improving the visibility of materials originally in Spanish within English-speaking communities.
 
-## Acerca de
-Basada en los valores diversidad, autonomía y versatilidad, la contextualización de recursos promueve el desarrollo de una mirada latinoamericana sobre todos los proyectos en los que trabaja MetaDocencia para apoyar a distintas comunidades hispanohablantes.
+## About
+The contextualization of resources puts into practice MetaDocencia's core values like diversity, autonomy and versatility to bring a Latin American perspective that strengthens and supports Spanish-speaking communities.
 
-## Modelo e Impacto
-El recorrido de contextualización comenzó formalmente con la tarea concreta de adaptar el material del curso de Ciencia Abierta de NASA. Contemplando la fuerza de reflexionar y construir en español, MetaDocencia organizó la conversación en comunidad sobre la mejor manera de pensar en el trabajo a realizar. El intercambio logró superar la cuestión del idioma para que incluyera también la definición del sentido y el objetivo del texto, enmarcando su uso político y comunicacional. 
-Los consensos alcanzados por el trabajo en comunidad guiaron la adecuación de los contenidos de Ciencia Abierta de NASA para que representaran la identidad en Latinoamérica. 87.493 palabras fueron contextualizadas al español por XX personas que trabajaron coordinadamente durante YY semanas.
-MetaDocencia cuenta con otros proyectos en los que la accesibilidad de contenidos al español es clave. Por ejemplo, como parte de los servicios que brinda, MetaDocencia realizó la contextualización de diversas convocatorias y material de apoyo relacionado publicadas originalmente en inglés por Invest in Open Infrastructure (IOI).
+## Model and Impact
+MetaDocencia formally embraced contextualization with the specific task of adapting the original NASA TOPS Open Science materials. MetaDocencia organized a community-wide reflection on how to best approach building knowledge in Spanish this way. The conversation went beyond language itself, encompassing the definition of the text’s purpose and framing its communicational meaning.
+The community-driven agreements guided the adaptation of NASA’s Open Science content so that it can represent Latin American identity. A total of 87,493 words were contextualized into Spanish by the coordinated work of 22 people for more than six weeks.
+MetaDocencia also undertakes other projects where accessibility of content in Spanish is key. For example, as part of its consultancy services, MetaDocencia has contextualized several calls and related support materials originally published in English by Invest in Open Infrastructure (IOI).
 
-## Para seguir leyendo
-¿De qué hablamos cuando hablamos de Contextualización?: https://www.metadocencia.org/post/2024/20240725-contextualizacion/
+## More information
+* Blogpost (in Spanish): [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
+* Nota de nuestro Blogpost (in Spanish): [¿De qué hablamos cuando hablamos de Contextualización?](https://mdnv.netlify.app/post/2024/20240725-contextualizacion/)
+* Nota de nuestro Blogpost (in Spanish): [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
