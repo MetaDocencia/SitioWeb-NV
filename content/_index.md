@@ -53,7 +53,7 @@ sections:
             - "Construimos comunidad"
           image: "organigramaapaisado.png"
           button:
-            text: "Conoce nuestros proyectos"
+            text: "Lee más sobre nuestros proyectos"
             url: "/que-hacemos"
     design:
       css_class: ""   # ← sin fondo gris
@@ -98,6 +98,156 @@ sections:
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
+
+  # ===== Estilos LOCALES solo para esta página =====
+  - block: markdown
+    id: estilos-collapsibles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centra verticalmente el texto */
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
+          }
+
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
+          }
+
+          /* ===== Colapsables (no toca tipografías globales) ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
+
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;
+          }
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
+          }
+        </style>
+
+  # --- Equipo y CA ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    content:
+      title: "Equipo y Consejo Asesor"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboran con MetaDocencia ---
+  - block: markdown
+    id: colaboradores
+    content:
+      title: "Colaboran con MetaDocencia"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Auspiciantes ---
+  - block: markdown
+    id: auspiciantes
+    content:
+      title: "Auspiciantes"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Comunidades Amigas"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: colaboraron-con-metadocencia
+    content:
+      title: "Colaboraron con MetaDocencia"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
 
   - block: cta-card
     content:
