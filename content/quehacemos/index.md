@@ -142,7 +142,24 @@ sections:
     design:
       columns: 4
 
+
  # ======================
+  - block: stats
+    id: infra-metricas
+    content:
+      items:
+        - statistic: "+200"
+          description: "documentos en Zenodo"
+        - statistic: "+85.000"
+          description: "palabras contextualizadas"
+    design:
+      columns: 2
+      css_class: "text-center"
+      spacing:
+        padding: ["1rem", 0, "1rem", 0]
+
+  # ======================
+
   #  SECCIÓN: FORMACIÓN (ROJO)
   # ======================
   - block: cta-card
