@@ -1,9 +1,10 @@
 {{/* 
   Shortcode: cta_fullwidth (full-bleed opcional)
 
-  Objetivo de esta versión:
-  - Quitar subrayado del botón SIN modificar el alto del bloque.
-  - No alteramos márgenes/paddings/line-height fuera de lo que vos pases por props.
+  Cambios en esta versión:
+  - +10px de padding arriba y abajo (calc(py + 10px)).
+  - No se tocan otros márgenes/altos.
+  - Botón sin subrayado.
 */}}
 
 {{- $title         := .Get "title"         | default "" -}}
@@ -18,7 +19,7 @@
 {{- $maxw          := .Get "maxw"          | default "1600px" -}}
 {{- $content_maxw  := .Get "content_maxw"  | default "1100px" -}}
 {{- $align         := .Get "align"         | default "center" -}}
-{{- $py            := .Get "py"            | default "2.5rem" -}}  {{/* mantenemos el mismo default habitual */}}
+{{- $py            := .Get "py"            | default "2.5rem" -}}  {{/* valor vertical base */}}
 {{- $px            := .Get "px"            | default "clamp(1rem,4vw,3rem)" -}}
 
 <section class="mdnv-cta-fullwidth"
@@ -32,8 +33,18 @@
   "
 >
   <div style="max-width: {{ $maxw }}; margin: 0 auto;">
-    <div style="max-width: {{ $content_maxw }}; margin: 0 auto; text-align: {{ $align }};
-                padding: {{ $py }} {{ $px }};">
+    <div
+      style="
+        max-width: {{ $content_maxw }};
+        margin: 0 auto;
+        text-align: {{ $align }};
+        /* +10px arriba/abajo, laterales iguales */
+        padding-top: calc({{ $py }} + 10px);
+        padding-bottom: calc({{ $py }} + 10px);
+        padding-left: {{ $px }};
+        padding-right: {{ $px }};
+      "
+    >
       {{- if $title -}}
         <h2 style="{{ if eq $variant "background" }}color: {{ $fg }};{{ end }}">
           {{ $title | safeHTML }}
@@ -51,9 +62,9 @@
              display:inline-block;
              background: {{ $btn_bg }}; color: {{ $btn_fg }};
              border-radius: 1rem;
-             padding: .9rem 1.4rem;     /* igual que antes */
+             padding: .9rem 1.4rem;
              font-weight: 800;
-             text-decoration: none;     /* ← sin subrayado */
+             text-decoration: none;  /* sin subrayado */
              box-shadow: 0 1px 2px rgba(0,0,0,.08);
            ">
           {{ $btn_text }}
@@ -66,10 +77,10 @@
 </section>
 
 <style>
-/* Solo comportamiento/hover del botón (no cambia alturas) */
+/* Hover del botón (no afecta alturas) */
 .mdnv-cta-btn:hover { opacity: .92; }
 
-/* Variante "card" opcional, sin tocar alturas globales */
+/* Variante "card" opcional */
 .mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card {
   background: #fff; color: #111827; border-radius: 1rem; padding: 1.25rem;
 }
