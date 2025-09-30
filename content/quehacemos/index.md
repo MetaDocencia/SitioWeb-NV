@@ -159,11 +159,11 @@ sections:
                    style="top:25%;height:50%;width:1px;background:rgba(17,24,39,0.2);"></div>
               <div class="px-3">
                 <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
-                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-2px;">documentos en Zenodo</p>
+                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-20px;">documentos en Zenodo</p>
               </div>
               <div class="px-3">
                 <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
-                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-2px;">palabras contextualizadas</p>
+                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-20px;">palabras contextualizadas</p>
               </div>
             </div>
           </div>
