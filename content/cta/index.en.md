@@ -111,11 +111,6 @@ sections:
             </a>
           </p>
         </div>
-
-        <!-- Logos desde authors: user_group: Comunidades Amigas -->
-        <div class="mt-2">
-          {{< people user_group="Comunidades Amigas" columns="7" >}}
-        </div>
         {{< /cta_fullwidth >}}
     design:
       spacing:
@@ -145,11 +140,6 @@ sections:
           <p class="mb-2">
             Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
           </p>
-        </div>
-
-        <!-- Logos desde authors: user_group: Auspiciantes -->
-        <div class="mt-2">
-          {{< people user_group="Auspiciantes" columns="6" >}}
         </div>
 
         <div class="mt-6 max-w-3xl mx-auto">
