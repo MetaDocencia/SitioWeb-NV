@@ -3,7 +3,7 @@ title: "Quienes somos"
 type: landing
 slug: "quienes-somos"
 design:
-  spacing: "3rem"
+  spacing: "1rem"
 
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
@@ -50,6 +50,8 @@ sections:
           position: center
           parallax: false
         text_color_light: true
+        css_style: "min-height: 24vh;"
+
 
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
