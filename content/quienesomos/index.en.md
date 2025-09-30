@@ -195,46 +195,46 @@ sections:
 
   # --- Equipo y CA ---
   - block: markdown
-    id: equipo-y-consejo-asesor
+    id: team-adn-advisory-committee
     content:
-      title: "Equipo y Consejo Asesor"
+      title: "Team and Advisory Committee"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
-    id: colaboradores
+    id: contributors
     content:
-      title: "Colaboran con MetaDocencia"
+      title: "Contributors"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Auspiciantes ---
   - block: markdown
-    id: auspiciantes
+    id: sponsors
     content:
-      title: "Auspiciantes"
+      title: "Sponsors"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Auspiciantes" columns=6 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="Current" columns=6 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Comunidades Amigas ---
   - block: markdown
-    id: comunidades-amigas
+    id: fellow-communities
     content:
       title: "Fellow Communities"
       text: |
@@ -247,14 +247,14 @@ sections:
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
-    id: colaboraron-con-metadocencia
+    id: former-contributors
     content:
-      title: "Colaboraron con MetaDocencia"
+      title: "Former Contributors"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
