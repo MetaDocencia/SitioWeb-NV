@@ -39,10 +39,6 @@ sections:
           </p>
         </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
 
   # ---------- Slack (full-bleed) ----------
   - block: markdown
@@ -76,10 +72,6 @@ sections:
           </p>
         </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
 
   # ---------- Comunidades amigas (full-bleed) ----------
   - block: markdown
@@ -90,7 +82,6 @@ sections:
         {{< cta_fullwidth
             title="Comunidades amigas"
             text=""
-            # Botón principal: "Suma tu comunidad"
             button_text="Suma tu comunidad"
             button_url="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
             bg="#F77B20" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#F77B20"
@@ -111,11 +102,12 @@ sections:
             </a>
           </p>
         </div>
+
+        <!-- Logos desde authors: user_groups = Comunidades amigas -->
+        <div class="mt-2">
+          {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
+        </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
 
   # ---------- Auspiciantes / Apoya (full-bleed, texto + logos dinámicos) ----------
   - block: markdown
@@ -136,15 +128,22 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         <div class="max-w-3xl mx-auto">
-          <p class="mb-2">
+          <p class="mb-4">
             Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
           </p>
+        </div>
+
+        <!-- Logos desde authors: user_groups = Auspiciantes -->
+        <div class="mt-2">
+          {{< people_list group="Auspiciantes" columns=6 gapx="8rem" gapy="3rem" >}}
         </div>
 
         <div class="mt-6 max-w-3xl mx-auto">
           <p class="mb-2">
             Si tu organización comparte nuestra misión, escribinos a
-            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">
+              direccion@metadocencia.org
+            </a>
             para explorar cómo colaborar.
           </p>
           <p class="mt-2">
@@ -156,10 +155,6 @@ sections:
           </p>
         </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
 
   # ---------- Redes (full-bleed) ----------
   - block: markdown
@@ -216,8 +211,4 @@ sections:
           </div>
         </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
 ---
