@@ -3,7 +3,7 @@ title: "Quienes somos"
 type: landing
 slug: "quienes-somos"
 design:
-  spacing: "1rem"
+  spacing: "3rem"
 
 sections:
   # ===== HERO con imagen de fondo + botones centrados =====
