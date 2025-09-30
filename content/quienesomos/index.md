@@ -50,7 +50,6 @@ sections:
           position: center
           parallax: false
         text_color_light: true
-      css_style: "min-height: 24vh;"
 
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
