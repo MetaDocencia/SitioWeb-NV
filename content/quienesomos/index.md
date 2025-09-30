@@ -50,6 +50,8 @@ sections:
       css_class: "hero-max-bounded"
       spacing:
         padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
+      css_style: ""  # no usar @media acá (inline style)
+    
 # ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
 - block: markdown
   id: estilos-hero-qs
