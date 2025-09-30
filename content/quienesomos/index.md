@@ -43,37 +43,37 @@ sections:
           filename: "quienessomos.jpg"
           size: cover
           position: center
-          parallax: true   # o true si querés fondo fijo en desktop
+          parallax: true   # fondo con parallax en desktop
         text_color_light: true
-        overlay_opacity: 0.65   # ← subí/bajá este valor (0..1) para más/menos overlay
-        overlay_color: "#000"   # ← opcional, por defecto negro
+        overlay_opacity: 0.65
+        overlay_color: "#000"
       css_class: "hero-max-bounded"
       spacing:
-        padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
-      css_style: ""  # no usar @media acá (inline style)
-    
-# ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
-- block: markdown
-  id: estilos-hero-qs
-  content:
-    title: ""
-    text: |
-      <style>
-        /* Solo Quienes somos: #hero-qs */
-        @media (max-width: 768px) {
-          section#hero-qs.hero-max-bounded,
-          section#hero-qs.hero-max-bounded .hero-bg {
-            max-height: 64vh;   /* ajustá 64–70vh a gusto */
-            min-height: 44vh;
+        padding: ["0rem", 0, "0rem", 0]
+      css_style: ""
+
+  # ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
+  - block: markdown
+    id: estilos-hero-qs
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Solo Quienes somos: #hero-qs */
+          @media (max-width: 768px) {
+            section#hero-qs.hero-max-bounded,
+            section#hero-qs.hero-max-bounded .hero-bg {
+              max-height: 64vh;   /* ajustá 64–70vh a gusto */
+              min-height: 44vh;
+            }
+            /* Menos padding interno para que no “empuje” el texto */
+            section#hero-qs .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
           }
-          /* Un poco menos de padding interno para que no “empuje” el texto */
-          section#hero-qs .container {
-            padding-top: .75rem !important;
-            padding-bottom: .75rem !important;
-          }
-        }
-      </style>
-      
+        </style>
+
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
@@ -143,7 +143,7 @@ sections:
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
+            align-items: stretch;
           }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
@@ -151,7 +151,7 @@ sections:
           .mdnv-vcenter {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* centra verticalmente el texto */
+            justify-content: center;
           }
           .mdnv-text-pad {
             padding-left: clamp(.5rem, 3vw, 2rem);
@@ -292,7 +292,7 @@ sections:
             text=""
             button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
-            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
