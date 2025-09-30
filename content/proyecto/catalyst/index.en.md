@@ -9,8 +9,11 @@ tags:
 ---
 
 The deployment of cloud infrastructure, which promises to advance democratizing access to scientific computing, faces a number of challenges. The complexity of navigating the abundance of available open-source tools, the lack of training and support to make good use of them, and the scarcity of appropriate resources—especially in historically marginalized communities—limit the reach and potential of cloud computing workflows.
+
 This project sought to create a community-based cloud infrastructure service for the biosciences, based on open and inclusive community practices, the infrastructure that would enable those practices, and a 'train the trainer' approach to impulse local community leaders to share their infrastructure knowledge with others in their communities.
+
 Catalyst took shape as [a collaborative project](https://doi.org/10.5281/zenodo.7025287) between [MetaDocencia](https://www.metadocencia.org/en) and [2i2c](https://2i2c.org/), [The Carpentries](https://carpentries.org/about-us/), [CSSCE](https://www.cscce.org/), [IOI](https://investinopen.org/), and [OLS](https://we-are-ols.org/). The project [was funded](https://www.metadocencia.org/post/infraestructura-nube/) in 2022 by the [Chan Zuckerberg Initiative](https://chanzuckerberg.com/) and publicly launched as [Catalyst Project](https://catalystproject.cloud/) to serve communities in Africa and Latin America.
+
 MetaDocencia took on the key role of identifying and contacting various Latin American communities that could benefit from participating. By joining the Catalyst Project, they gained access to:
 * A free, cloud-based JupyterHub virtual machine with large storage and computing capacity, for one year
 * Technical support and training to make full use of that resource
