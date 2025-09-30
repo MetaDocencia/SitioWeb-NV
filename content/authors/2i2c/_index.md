@@ -1,5 +1,5 @@
 ---
-title: "ABRIR"
+title: "2i2c"
 bio: ""
 email: ""
 name: 2i2c
