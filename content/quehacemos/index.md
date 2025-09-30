@@ -12,7 +12,7 @@ sections:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
     design:
       spacing:
-        padding: ["0.75rem", 0, "0.75rem", 0]
+        padding: ["0rem", 0, "0rem", 0]
         margin: [0, 0, 0, 0]
       css_style: "min-height: 20vh;"
       background:
