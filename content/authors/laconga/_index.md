@@ -14,7 +14,7 @@ social:
   link: https://twitter.com/lacongaphysics
 superuser: false
 user_groups:
--  Comunidades amigas
+-  También construyen y formaron parte de este Panal
 ---
 
 ### Conócela en este video
