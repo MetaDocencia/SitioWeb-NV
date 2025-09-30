@@ -115,9 +115,7 @@ sections:
         <p class="max-w-3xl mx-auto">
           Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
         </p>
-        <p class="max-w-3xl mx-auto mt-1">
-          <a href="https://mdnv.netlify.app/quienes-somos/#comunidades-amigas" class="underline font-semibold">Conoce la red de organizaciones</a>
-        </p>
+        
 
         <div class="mt-4 mdnv-logos">
           {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
