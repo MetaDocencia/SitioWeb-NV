@@ -95,9 +95,9 @@ sections:
           Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
         </p>
 
-        <!-- Lista dinámica desde authors: user_groups: Comunidades amigas -->
+        <!-- Lista dinámica desde authors: user_group="Comunidades Amigas" -->
         <div class="mt-4">
-          {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
+          {{< people user_group="Comunidades Amigas" columns="7" >}}
         </div>
         {{< /cta_fullwidth >}}
 
@@ -121,9 +121,9 @@ sections:
           Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión. 
         </p>
 
-        <!-- Lista dinámica desde authors: user_groups: Auspiciantes -->
+        <!-- Lista dinámica desde authors: user_group="Auspiciantes" -->
         <div class="mt-4">
-          {{< people_list group="Auspiciantes" columns=6 gapx="8rem" gapy="3rem" >}}
+          {{< people user_group="Auspiciantes" columns="6" >}}
         </div>
 
         <p class="mt-6 max-w-3xl mx-auto">
