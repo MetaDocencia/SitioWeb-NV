@@ -50,7 +50,12 @@ sections:
       css_class: "hero-max-bounded"
       spacing:
         padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
-
+      css_style: |
+      /* Alto específico móvil SOLO para este hero */
+      @media (max-width: 768px) {
+        max-height: 64vh;   /* probá 64–70vh */
+        min-height: 44vh;   /* piso para que no quede demasiado chico */
+      }
 
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
