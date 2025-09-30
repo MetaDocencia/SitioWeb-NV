@@ -14,6 +14,7 @@ user_groups:
 -  Comunidades amigas
 ---
 
+
 ### Conócela en este video
 
 {{< youtube en0-YQl5IT4 >}} 
