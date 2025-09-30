@@ -1,5 +1,6 @@
 ---
 title: "Catalyst"
+translationKey: "catalyst"
 summary: "Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales."
 date: 2025-09-23
 tags:
