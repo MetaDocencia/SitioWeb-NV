@@ -150,17 +150,17 @@ sections:
     content:
       title: ""
       text: |
-        <!-- Franja full-bleed (gris a todo lo ancho), más baja y responsiva -->
+        <!-- Franja full-bleed, bajita, con 2 columnas en una sola fila en todos los tamaños -->
         <div style="position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;">
-          <div class="bg-gray-50 dark:bg-gray-900 py-6 md:py-8">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-300 dark:divide-gray-700 text-center px-5">
-              <div class="px-6 py-3 sm:py-0">
-                <p class="text-5xl md:text-6xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
-                <p class="text-base md:text-lg font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:2px;">documentos en Zenodo</p>
+          <div class="bg-gray-50 dark:bg-gray-900 py-3 md:py-5">
+            <div class="max-w-3xl mx-auto grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center px-3">
+              <div class="px-3 py-1">
+                <p class="text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
+                <p class="text-sm sm:text-base font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:1px;">documentos en Zenodo</p>
               </div>
-              <div class="px-6 py-3 sm:py-0">
-                <p class="text-5xl md:text-6xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
-                <p class="text-base md:text-lg font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:2px;">palabras contextualizadas</p>
+              <div class="px-3 py-1">
+                <p class="text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
+                <p class="text-sm sm:text-base font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:1px;">palabras contextualizadas</p>
               </div>
             </div>
           </div>
