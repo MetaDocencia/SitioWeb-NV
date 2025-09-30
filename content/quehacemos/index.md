@@ -93,15 +93,21 @@ sections:
     design:
       columns: 3
 
-  # ---------- INFRA ----------
-  - block: cta-card
+  # ======================
+  #  SECCIÓN: INFRA (AZUL) — usa shortcode cta_fullwidth
+  # ======================
+  - block: markdown
     id: infra
     content:
-      title: "Impulsamos Infraestructura"
-      text: "Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento"
-    design:
-      card:
-        css_style: "background-color:#00506F;color:#FFFFFF;"
+      text: |
+        {{< cta_fullwidth
+            id="infra"
+            title="Impulsamos Infraestructura"
+            bg="#00506F"
+            color="#FFFFFF"
+        >}}
+        Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
+        {{</ cta_fullwidth >}}
 
   - block: features
     id: infra-proyectos
@@ -142,9 +148,9 @@ sections:
     design:
       columns: 4
 
-
- # ======================
-  
+  # ======================
+  #  MÉTRICAS FULL-BLEED
+  # ======================
   - block: markdown
     id: infra-metricas
     content:
@@ -172,23 +178,21 @@ sections:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
 
-
-
   # ======================
-
-  #  SECCIÓN: FORMACIÓN (ROJO)
+  #  SECCIÓN: FORMACIÓN (ROJO) — usa shortcode cta_fullwidth
   # ======================
-  - block: cta-card
+  - block: markdown
     id: formacion
     content:
-      title: "Formamos capacidades"
-      text: "Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local."
-    design:
-      spacing:
-        padding: ["1rem", 0, "0.25rem", 0]
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#C83737;color:#FFFFFF;"
+      text: |
+        {{< cta_fullwidth
+            id="formacion"
+            title="Formamos capacidades"
+            bg="#C83737"
+            color="#FFFFFF"
+        >}}
+        Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.
+        {{</ cta_fullwidth >}}
 
   - block: features
     id: formacion-proyectos
@@ -226,7 +230,7 @@ sections:
             Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>    
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -261,19 +265,20 @@ sections:
         padding: ["2rem", 0, "2rem", 0]
 
   # ======================
-  #  SECCIÓN: COMUNIDAD (NARANJA)
+  #  SECCIÓN: COMUNIDAD (NARANJA) — usa shortcode cta_fullwidth
   # ======================
-  - block: cta-card
+  - block: markdown
     id: comunidad
     content:
-      title: "Construimos comunidad"
-      text: "Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo."
-    design:
-      spacing:
-        padding: ["1rem", 0, "0.25rem", 0]
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#F77B20;color:#FFFFFF;"
+      text: |
+        {{< cta_fullwidth
+            id="comunidad"
+            title="Construimos comunidad"
+            bg="#F77B20"
+            color="#FFFFFF"
+        >}}
+        Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo.
+        {{</ cta_fullwidth >}}
 
   - block: features
     id: comunidad-proyectos
