@@ -1,7 +1,7 @@
 ---
 title: "Catalyst"
 translationKey: "catalyst"
-summary: "Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales."
+summary: "We make cloud-computing infrastructure more accessible and useful for global life-sciences communities."
 date: 2025-09-23
 tags:
   - Infraestructura
