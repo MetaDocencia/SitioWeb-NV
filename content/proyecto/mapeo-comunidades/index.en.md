@@ -1,5 +1,6 @@
 ---
 title: "Mapping Open Science in Latin America"
+translationKey: "mapeo-comunidades"
 summary: "A collaborative repository of information on Open Science in Spanish."
 date: 2025-09-23
 tags:
