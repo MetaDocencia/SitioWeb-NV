@@ -258,15 +258,15 @@ sections:
           </div>
         </details>
 
-  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
+  # ===== CTA final (full-bleed, misma lógica que "Qué hacemos") =====
   - block: markdown
     id: apoya
     content:
       title: ""
       text: |
         {{< cta_fullwidth
-            title="Apoya a la ciencia latinoamericana"
             id="apoya"
+            title="Apoya a la ciencia latinoamericana"
             text=""
             button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
@@ -301,7 +301,6 @@ sections:
         </div>
         {{< /cta_fullwidth >}}
     design:
-    # Si querés sumarle aire externo al bloque (además del py interno del shortcode):
-    spacing:
-      padding: ["0rem", 0, "0rem", 0]
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
 ---
