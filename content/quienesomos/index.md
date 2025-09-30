@@ -50,13 +50,28 @@ sections:
       css_class: "hero-max-bounded"
       spacing:
         padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
-      css_style: |
-        /* Alto específico móvil SOLO para este hero */
+# ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
+- block: markdown
+  id: estilos-hero-qs
+  content:
+    title: ""
+    text: |
+      <style>
+        /* Solo Quienes somos: #hero-qs */
         @media (max-width: 768px) {
-          max-height: 64vh;   /* probá 64–70vh */
-          min-height: 44vh;   /* piso para que no quede demasiado chico */
+          section#hero-qs.hero-max-bounded,
+          section#hero-qs.hero-max-bounded .hero-bg {
+            max-height: 64vh;   /* ajustá 64–70vh a gusto */
+            min-height: 44vh;
+          }
+          /* Un poco menos de padding interno para que no “empuje” el texto */
+          section#hero-qs .container {
+            padding-top: .75rem !important;
+            padding-bottom: .75rem !important;
+          }
         }
-
+      </style>
+      
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
