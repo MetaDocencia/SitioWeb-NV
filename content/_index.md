@@ -257,16 +257,18 @@ sections:
       title: ""
       text: |
         {{< cta_fullwidth
+            id="apoya"
             title="Apoya a la ciencia latinoamericana"
             text=""
             button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
-            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
         >}}
         <p>Nuestras redes:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
