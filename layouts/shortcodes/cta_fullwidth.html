@@ -1,58 +1,72 @@
 {{/* 
   Shortcode: cta_fullwidth (full-bleed opcional)
 
-  Cambios en esta versión:
-  - +10px de padding arriba y abajo (calc(py + 10px)).
-  - No se tocan otros márgenes/altos.
-  - Botón sin subrayado.
+  Cambios:
+  - Extra de padding vertical en rem: +0.625rem (≈ 10px si 1rem=16px)
 */}}
 
+{{- $id            := .Get "id"            | default "" -}}
 {{- $title         := .Get "title"         | default "" -}}
 {{- $text          := .Get "text"          | default "" -}}
 {{- $btn_text      := .Get "button_text"   | default "" -}}
 {{- $btn_url       := .Get "button_url"    | default "" -}}
+
 {{- $bg            := .Get "bg"            | default "#C83737" -}}
-{{- $fg            := .Get "fg"            | default "#FFFFFF" -}}
+{{- $fgDirect      := .Get "fg"            | default "" -}}
+{{- $fgAlias       := .Get "color"         | default "" -}}  {{/* alias compat */}}
+{{- $fgResolved    := cond (ne $fgDirect "") $fgDirect (cond (ne $fgAlias "") $fgAlias "#FFFFFF") -}}
+
 {{- $btn_bg        := .Get "btn_bg"        | default "#FFFFFF" -}}
 {{- $btn_fg        := .Get "btn_fg"        | default "#C83737" -}}
-{{- $variant       := .Get "variant"       | default "background" -}} {{/* "background" o "card" */}}
+
+{{- $variant       := .Get "variant"       | default "background" -}} {{/* "background" | "card" */}}
 {{- $maxw          := .Get "maxw"          | default "1600px" -}}
 {{- $content_maxw  := .Get "content_maxw"  | default "1100px" -}}
 {{- $align         := .Get "align"         | default "center" -}}
-{{- $py            := .Get "py"            | default "0rem" -}}  {{/* valor vertical base */}}
+{{- $py            := .Get "py"            | default "0rem" -}}   {{/* base vertical, ej. "2.5rem" */}}
 {{- $px            := .Get "px"            | default "clamp(1rem,4vw,3rem)" -}}
 
-<section class="mdnv-cta-fullwidth"
+<section
+  {{- if $id }} id="{{ $id }}"{{ end -}}
+  class="mdnv-cta-fullwidth"
+  data-variant="{{ $variant }}"
   style="
     position:relative; left:50%; right:50%;
     margin-left:-50vw; margin-right:-50vw; width:100vw;
     {{- if eq $variant "background" -}}
       background: {{ $bg }};
-      color: {{ $fg }};
+      color: {{ $fgResolved }};
     {{- end -}}
   "
 >
   <div style="max-width: {{ $maxw }}; margin: 0 auto;">
     <div
+      class="{{ if eq $variant "card" }}mdnv-cta-card{{ end }}"
       style="
         max-width: {{ $content_maxw }};
         margin: 0 auto;
         text-align: {{ $align }};
-        /* +10px arriba/abajo, laterales iguales */
-        padding-top: calc({{ $py }} - 35px);
-        padding-bottom: calc({{ $py }} + 25px);
+        /* Extra de padding vertical en rem (≈10px): */
+        padding-top: calc({{ $py }} + 0.625rem);
+        padding-bottom: calc({{ $py }} + 0.625rem);
         padding-left: {{ $px }};
         padding-right: {{ $px }};
+        {{- if eq $variant "card" -}}
+          background: #ffffff;
+          color: #111827;
+          border-radius: 1rem;
+          box-shadow: 0 1px 2px rgba(0,0,0,.08);
+        {{- end -}}
       "
     >
       {{- if $title -}}
-        <h2 style="{{ if eq $variant "background" }}color: {{ $fg }};{{ end }}">
+        <h2 style="{{ if eq $variant "background" }}color: {{ $fgResolved }};{{ end }} margin-top:0;">
           {{ $title | safeHTML }}
         </h2>
       {{- end -}}
 
       {{- if $text -}}
-        <p>{{ $text | safeHTML }}</p>
+        <p style="margin-top:.5rem; margin-bottom:1rem;">{{ $text | safeHTML }}</p>
       {{- end -}}
 
       {{- if and $btn_text $btn_url -}}
@@ -64,24 +78,24 @@
              border-radius: 1rem;
              padding: .9rem 1.4rem;
              font-weight: 800;
-             text-decoration: none;  /* sin subrayado */
+             text-decoration: none;
              box-shadow: 0 1px 2px rgba(0,0,0,.08);
            ">
           {{ $btn_text }}
         </a>
       {{- end -}}
 
-      {{- .Inner -}}
+      {{- if .Inner -}}
+        <div class="mdnv-cta-inner">
+          {{ .Inner | markdownify }}
+        </div>
+      {{- end -}}
     </div>
   </div>
 </section>
 
 <style>
-/* Hover del botón (no afecta alturas) */
 .mdnv-cta-btn:hover { opacity: .92; }
-
-/* Variante "card" opcional */
-.mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card {
-  background: #fff; color: #111827; border-radius: 1rem; padding: 1.25rem;
-}
+.mdnv-cta-fullwidth a { text-decoration: none; }
+.mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card { /* ya estilizada inline */ }
 </style>
