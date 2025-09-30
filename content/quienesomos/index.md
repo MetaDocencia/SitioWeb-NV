@@ -48,7 +48,7 @@ sections:
             brightness: 0.35
           size: cover
           position: center
-          parallax: false
+          parallax: true
         text_color_light: true
         css_style: "min-height: 24vh;"
 
