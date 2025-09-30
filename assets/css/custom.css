@@ -207,6 +207,7 @@ section.people-naked .leading-relaxed {
 }
 
 /* === PEOPLE: avatar RESPONSIVO, nunca se superpone con el texto === */
+
 /* Asegura grid estable y sin recortes de ancho */
 section.people-7col .grid > * { min-width: 0 !important; }
 
@@ -350,7 +351,6 @@ footer.site-footer a strong {
 .prose :is(h1,h2,h3,h4,h5,h6) b a {
   font-weight: 800 !important;       /* títulos suelen ser más pesados */
 }
-
 /* ===== Quienes somos → sección "MetaDocencia en números" ===== */
 section#numeros {
   padding-top: 0 !important; /* por si el tema agrega extra */
@@ -493,58 +493,4 @@ section.testimonials-compact .rounded-full {
 section.testimonials-compact .space-y-2 > * + *,
 section.testimonials-compact .space-y-3 > * + * {
   margin-top: .4rem !important;
-}
-
-
-/* ==========================================================================
-   HERO (hero-max-bounded): centrado vertical + altura máxima
-   -------------------------------------------------------------------------- */
-/* Contenedor del hero: no exceder y centrar verticalmente
-   (activa cuando el bloque tenga css_class: "hero-max-bounded") */
-.hero-max-bounded,
-.hero-max-bounded .hero-bg {
-  display: flex;
-  align-items: center;          /* centra en eje Y */
-  justify-content: center;      /* centra el wrapper interno en eje X */
-  /* Limites de altura: no más que ~3/4 de pantalla en desktop */
-  min-height: 48vh;             /* piso para que se note el hero */
-  max-height: 92vh;             /* tope en desktop */
-  overflow: hidden;             /* evita que el cover empuje el layout */
-}
-
-/* El contenedor interno no debe sumar padding vertical */
-.hero-max-bounded .container {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Ajuste de márgenes para que nada empuje hacia abajo */
-.hero-max-bounded h1 { margin-top: 0 !important; }
-.hero-max-bounded p  { margin-bottom: 0.5rem !important; }
-
-/* Móvil: un poco más bajo para no tapar todo el viewport */
-@media (max-width: 768px) {
-  .hero-max-bounded,
-  .hero-max-bounded .hero-bg {
-    min-height: 44vh;
-    max-height: 70vh;
-  }
-  /* Fallback móvil: parallax fijo suele dar jitter */
-  .hero-max-bounded .hero-bg { background-attachment: scroll !important; }
-}
-
-/* Laptops con poca altura: compactar padding interno */
-@media (max-height: 700px) {
-  .hero-max-bounded .container {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
-}
-
-/* (Opcional) Si usás el hero extendido con clase .hero-bounded del template,
-   forzamos flex para centrar verticalmente sin depender de inline styles. */
-.hero-bounded .hero-bg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
