@@ -140,7 +140,7 @@ sections:
         - name: "Procesamiento de datos abiertos"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Garantizamos el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica.
+            Buscamos garantizar el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/datosabiertos-latam/">Ver más →</a><br>
@@ -149,35 +149,30 @@ sections:
     design:
       columns: 4
 
-  # ======================
-  #  MÉTRICAS FULL-BLEED
-  # ======================
-  - block: markdown
-    id: infra-metricas
+  - block: stats
     content:
-      title: ""
-      text: |
-        <!-- Franja full-bleed con 2 métricas en una sola fila y divisor vertical a media altura -->
-        <div style="position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;">
-          <div class="bg-gray-50 dark:bg-gray-900 py-3 md:py-4">
-            <div class="relative max-w-3xl mx-auto grid grid-cols-2 text-center px-3">
-              <!-- Divisor vertical a media altura (centrado) -->
-              <div class="hidden sm:block absolute left-1/2 -translate-x-1/2"
-                   style="top:25%;height:50%;width:1px;background:rgba(17,24,39,0.2);"></div>
-              <div class="px-3">
-                <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
-                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-20px;">documentos en Zenodo</p>
-              </div>
-              <div class="px-3">
-                <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
-                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-20px;">palabras contextualizadas</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      items:
+        - statistic: "+200"
+          description: "documentos en Zenodo"
+        - statistic: "+85.000"
+          description: "palabras contextualizadas"
+        - statistic: "10"
+          description: "comunidades latinoamericanas acompañadas desde Catalyst"
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+
+  - block: testimonials
+    content:
+      items:
+        - name: "Nicolás Wolovick"
+          role: "Director UNC Supercómputo"
+          text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
+        - name: "Andres Olivera"
+          role: "Network Manager, LABI"
+          text: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
     design:
       spacing:
-        padding: ["0rem", 0, "0rem", 0]
+        padding: ["2rem", 0, "2rem", 0]
 
   # ======================
   #  SECCIÓN: FORMACIÓN (ROJO) — usa shortcode cta_fullwidth
@@ -253,15 +248,16 @@ sections:
   - block: testimonials
     content:
       items:
+        - name: "Marina Compagnucci"
+          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
+          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio"
         - name: "Walter Sosa Escudero"
           role: "PhD in Economics, profesor e investigador"
           text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
         - name: "Emmanuel Iarussi"
           role: "Científico en CONICET y profesor UTDT"
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
-        - name: "Marina Compagnucci"
-          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
-          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio"
+        
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
