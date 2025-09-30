@@ -238,7 +238,7 @@ sections:
 
         <!-- Lista dinámica desde authors: user_groups: Current -->
         <div class="mt-4 mdnv-logos">
-          {{< people_list group="Current" columns=6 gapx="8rem" gapy="3rem" >}}
+          {{< people_list group="Current" columns=5 gapx="8rem" gapy="3rem" >}}
         </div>
 
         <p class="mt-6 max-w-3xl mx-auto">
