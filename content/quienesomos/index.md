@@ -266,10 +266,11 @@ sections:
       text: |
         {{< cta_fullwidth
             title="Apoya a la ciencia latinoamericana"
+            id="apoya"
             text=""
             button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
-            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
