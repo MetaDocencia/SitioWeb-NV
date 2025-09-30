@@ -7,6 +7,103 @@ design:
 
 sections:
 
+  # ===== Estilos locales: logos (Comunidades & Auspiciantes) =====
+  - block: markdown
+    id: estilos-logos
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Quitar espacio vertical extra de estos bloques */
+          section#boletin-embed, section#slack, section#comunidades,
+          section#auspiciantes, section#redes {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+          }
+
+          /* Ajustes generales para secciones con logos */
+          section#comunidades,
+          section#auspiciantes {
+            --mdnv-logo-size: clamp(56px, 9vw, 92px);   /* tamaño de los círculos */
+            --mdnv-gap: clamp(0.6rem, 2.2vw, 1.25rem);  /* separación consistente */
+            color: #FFFFFF !important;                  /* texto en blanco */
+          }
+          section#comunidades a, section#auspiciantes a {
+            color: #FFFFFF !important;                  /* enlaces en blanco */
+          }
+
+          /* Scope SOLO dentro de la grilla de logos para no tocar otros textos/enlaces */
+          section#comunidades .mdnv-logos .grid,
+          section#auspiciantes .mdnv-logos .grid {
+            gap: var(--mdnv-gap) !important;
+            justify-items: center !important;
+            align-items: center !important;             /* alinear verticalmente */
+          }
+          /* Cada item se centra y usa el mismo alto interno, evitando desalineaciones */
+          section#comunidades .mdnv-logos .grid > *,
+          section#auspiciantes .mdnv-logos .grid > * {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+          }
+
+          /* Avatares/logos redondos con tamaño uniforme y alineación vertical */
+          section#comunidades .mdnv-logos img,
+          section#auspiciantes .mdnv-logos img,
+          section#comunidades .mdnv-logos .avatar,
+          section#auspiciantes .mdnv-logos .avatar {
+            width: var(--mdnv-logo-size) !important;
+            height: var(--mdnv-logo-size) !important;
+            border-radius: 9999px !important;
+            object-fit: cover !important;
+            display: block !important;
+            margin: 0 !important;
+            background: transparent !important;
+          }
+
+          /* Eliminar paddings internos que desalinean los círculos */
+          section#comunidades .mdnv-logos [class*="p-"],
+          section#auspiciantes .mdnv-logos [class*="p-"] {
+            padding: 0 !important;
+          }
+
+          /* Nombre/leyendas bajo cada logo: chico y blanco SOLO dentro de la grilla */
+          section#comunidades .mdnv-logos .font-semibold,
+          section#auspiciantes .mdnv-logos .font-semibold,
+          section#comunidades .mdnv-logos .text-sm,
+          section#auspiciantes .mdnv-logos .text-sm,
+          section#comunidades .mdnv-logos .opacity-70,
+          section#auspiciantes .mdnv-logos .opacity-70 {
+            font-size: 0.72rem !important;
+            line-height: 1.1 !important;
+            color: #FFFFFF !important;
+          }
+
+          /* Fuera de la grilla de logos, mantener tamaño normal de párrafos/enlaces */
+          section#comunidades p a,
+          section#auspiciantes p a {
+            font-size: inherit !important; /* no reducir enlaces que no son nombres de perfil */
+          }
+
+          /* Botón estilo “Suma tu comunidad” con texto naranja sobre fondo blanco */
+          .mdnv-btn-white-orange {
+            display: inline-block;
+            font-weight: 700;
+            padding: .5rem .9rem;
+            border-radius: .5rem;
+            background: #FFFFFF;
+            color: #F77B20 !important;   /* texto naranja */
+            text-decoration: none !important;
+          }
+        </style>
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+
   # ---------- Boletín (full-bleed) ----------
   - block: markdown
     id: boletin-embed
@@ -39,6 +136,9 @@ sections:
           </p>
         </div>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
 
   # ---------- Slack (full-bleed) ----------
   - block: markdown
@@ -72,77 +172,11 @@ sections:
           </p>
         </div>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
 
-  - block: markdown
-    id: estilos-logos
-    content:
-      title: ""
-      text: |
-        <style>
-          /* ===== Ajustes para bloques con logos (Comunidades & Auspiciantes) ===== */
-          section#comunidades,
-          section#auspiciantes {
-            --mdnv-logo-size: clamp(56px, 8vw, 84px);   /* tamaño de los círculos */
-            --mdnv-gap: clamp(0.6rem, 2vw, 1.1rem);     /* separación consistente */
-            color: #FFFFFF !important;                   /* texto blanco */
-          }
-  
-          /* Enlaces en blanco (mantiene subrayado si lo tenés globalmente) */
-          section#comunidades a,
-          section#auspiciantes a {
-            color: #FFFFFF !important;
-          }
-  
-          /* Grilla: misma distancia y centrado de cada item */
-          section#comunidades .grid,
-          section#auspiciantes .grid {
-            gap: var(--mdnv-gap) !important;
-            justify-items: center !important;
-            align-items: center !important;
-          }
-  
-          /* Círculos (avatares/logos) con tamaño uniforme */
-          section#comunidades img,
-          section#auspiciantes img,
-          section#comunidades .avatar,
-          section#auspiciantes .avatar {
-            width: var(--mdnv-logo-size) !important;
-            height: var(--mdnv-logo-size) !important;
-            border-radius: 9999px !important;
-            object-fit: cover !important;
-            display: block !important;
-            margin: 0 !important; /* quita márgenes desalineados */
-          }
-  
-          /* Quita paddings que a veces meten separación desigual en cada tarjeta */
-          section#comunidades .p-6, section#comunidades .p-5, section#comunidades .p-4,
-          section#comunidades .p-3, section#comunidades .p-2, section#comunidades .p-1,
-          section#auspiciantes .p-6, section#auspiciantes .p-5, section#auspiciantes .p-4,
-          section#auspiciantes .p-3, section#auspiciantes .p-2, section#auspiciantes .p-1 {
-            padding: 0 !important;
-          }
-  
-          /* Texto mucho más chico y blanco bajo cada logo (si existe) */
-          section#comunidades .font-semibold,
-          section#auspiciantes .font-semibold,
-          section#comunidades .text-sm,
-          section#auspiciantes .text-sm,
-          section#comunidades .opacity-70,
-          section#auspiciantes .opacity-70 {
-            font-size: 0.72rem !important;
-            line-height: 1.1 !important;
-            color: #FFFFFF !important;
-            text-align: center !important;
-          }
-  
-          /* Centrado vertical del contenido dentro de cada item */
-          section#comunidades .flex,
-          section#auspiciantes .flex {
-            align-items: center !important;
-            justify-content: center !important;
-          }
-        </style>
-# ---------- Comunidades amigas (full-bleed) ----------
+  # ---------- Comunidades amigas (full-bleed) ----------
   - block: markdown
     id: comunidades
     content:
@@ -151,32 +185,35 @@ sections:
         {{< cta_fullwidth
             title="Comunidades amigas"
             text=""
-            button_text="Suma tu comunidad"
-            button_url="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
-            bg="#F77B20" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#F77B20"
+            bg="#F77B20" fg="#FFFFFF"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div class="max-w-3xl mx-auto">
-          <p class="mb-2">
-            Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
-          </p>
-          <p class="mb-4">
-            <a href="https://mdnv.netlify.app/quienes-somos/#comunidades-amigas"
-               class="underline font-semibold" style="color:#FFFFFF">
-               Conoce la red de organizaciones
-            </a>
-          </p>
-        </div>
+        <p class="max-w-3xl mx-auto">
+          Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
+        </p>
+        <p class="max-w-3xl mx-auto mt-1">
+          <a href="https://mdnv.netlify.app/quienes-somos/#comunidades-amigas" class="underline font-semibold">Conoce la red de organizaciones</a>
+        </p>
 
-        <!-- Logos desde authors: user_groups = Comunidades amigas -->
-        <div class="mt-2">
+        <!-- Lista dinámica desde authors: user_groups: Comunidades amigas -->
+        <div class="mt-4 mdnv-logos">
           {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
         </div>
+
+        <!-- Botón debajo de los logos con texto en naranja -->
+        <p class="mt-5">
+          <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad" class="mdnv-btn-white-orange">
+            Suma tu comunidad
+          </a>
+        </p>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
 
   # ---------- Auspiciantes / Apoya (full-bleed, texto + logos dinámicos) ----------
   - block: markdown
@@ -188,42 +225,35 @@ sections:
             title="Apoya a MetaDocencia"
             text=""
             bg="#00506F" fg="#FFFFFF"
-            button_text="Auspiciantes"
-            button_url="https://mdnv.netlify.app/quienes-somos/#auspiciantes"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div class="max-w-3xl mx-auto">
-          <p class="mb-4">
-            Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
-          </p>
-        </div>
+        <p class="max-w-3xl mx-auto">
+          Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
+        </p>
 
-        <!-- Logos desde authors: user_groups = Auspiciantes -->
-        <div class="mt-2">
+        <!-- Lista dinámica desde authors: user_groups: Auspiciantes -->
+        <div class="mt-4 mdnv-logos">
           {{< people_list group="Auspiciantes" columns=6 gapx="8rem" gapy="3rem" >}}
         </div>
 
-        <div class="mt-6 max-w-3xl mx-auto">
-          <p class="mb-2">
-            Si tu organización comparte nuestra misión, escribinos a
-            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">
-              direccion@metadocencia.org
-            </a>
-            para explorar cómo colaborar.
-          </p>
-          <p class="mt-2">
-            Podés hacer tu aporte a través de nuestro
-            <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">
-              formulario de donación
-            </a>
-            y ayudarnos a sostener y ampliar nuestras actividades.
-          </p>
-        </div>
+        <p class="mt-6 max-w-3xl mx-auto">
+          Si tu organización comparte nuestra misión, escribinos a
+          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+          para explorar cómo colaborar.
+        </p>
+        <p class="mt-2 max-w-3xl mx-auto">
+          Podés hacer tu aporte a través de nuestro
+          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+          y ayudarnos a sostener y ampliar nuestras actividades.
+        </p>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
 
   # ---------- Redes (full-bleed) ----------
   - block: markdown
@@ -280,4 +310,7 @@ sections:
           </div>
         </div>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
 ---
