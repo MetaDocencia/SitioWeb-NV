@@ -1,5 +1,5 @@
 ---
-title: "Join us"
+title: "Join & support our community"
 type: landing
 slug: "cta"
 design:
@@ -7,14 +7,14 @@ design:
 
 sections:
 
-  # ===== Local styles: logos (Partner Communities & Supporters) =====
+  # ===== Local styles: logos (Partner Communities & Sponsors) =====
   - block: markdown
     id: estilos-logos
     content:
       title: ""
       text: |
         <style>
-          /* Remove extra vertical space on these sections */
+          /* Remove vertical whitespace on these blocks */
           section#boletin-embed, section#slack, section#comunidades,
           section#auspiciantes, section#redes {
             margin-top: 0 !important;
@@ -23,26 +23,26 @@ sections:
             padding-bottom: 0 !important;
           }
 
-          /* Shared adjustments for logo sections */
+          /* General adjustments for sections with logos */
           section#comunidades,
           section#auspiciantes {
-            --mdnv-logo-size: clamp(56px, 9vw, 92px);   /* circle size */
-            --mdnv-gap: clamp(0.6rem, 2.2vw, 1.25rem);  /* consistent spacing */
-            color: #FFFFFF !important;                  /* white text */
+            --mdnv-logo-size: clamp(56px, 9vw, 92px);
+            --mdnv-gap: clamp(0.6rem, 2.2vw, 1.25rem);
+            color: #FFFFFF !important;     /* white text on color bg */
           }
           section#comunidades a,
           section#auspiciantes a {
-            color: #FFFFFF !important;                  /* links white by default */
+            color: #FFFFFF !important;     /* links default to white in these blocks */
           }
 
-          /* Scope only inside the logo grid to avoid changing other text/links */
+          /* Scope ONLY inside the logos grid */
           section#comunidades .mdnv-logos .grid,
           section#auspiciantes .mdnv-logos .grid {
             gap: var(--mdnv-gap) !important;
             justify-items: center !important;
-            align-items: center !important;             /* vertical align */
+            align-items: center !important;
           }
-          /* Each item centered with uniform internal height */
+          /* Center each item, uniform internal height */
           section#comunidades .mdnv-logos .grid > *,
           section#auspiciantes .mdnv-logos .grid > * {
             display: flex !important;
@@ -52,7 +52,7 @@ sections:
             text-align: center !important;
           }
 
-          /* Round logo avatars with uniform size */
+          /* Round logos/avatars, uniform size & vertical alignment */
           section#comunidades .mdnv-logos img,
           section#auspiciantes .mdnv-logos img,
           section#comunidades .mdnv-logos .avatar,
@@ -72,7 +72,7 @@ sections:
             padding: 0 !important;
           }
 
-          /* Names/captions under each logo: small & white ONLY inside the grid */
+          /* Small, white captions ONLY under each logo */
           section#comunidades .mdnv-logos .font-semibold,
           section#auspiciantes .mdnv-logos .font-semibold,
           section#comunidades .mdnv-logos .text-sm,
@@ -84,13 +84,13 @@ sections:
             color: #FFFFFF !important;
           }
 
-          /* Outside the logo grids, keep normal paragraph/link sizes */
+          /* Outside the logos grid: keep default paragraph/link sizes */
           section#comunidades p a,
           section#auspiciantes p a {
             font-size: inherit !important;
           }
 
-          /* White button with orange text (for "Add your community") */
+          /* White button with orange text (stronger specificity to beat white links) */
           .mdnv-btn-white-orange,
           section#comunidades .mdnv-btn-white-orange {
             display: inline-block;
@@ -98,7 +98,7 @@ sections:
             padding: .5rem .9rem;
             border-radius: .5rem;
             background: #FFFFFF !important;
-            color: #F77B20 !important;   /* orange text readable over white */
+            color: #F77B20 !important;
             text-decoration: none !important;
             border: 1px solid rgba(0,0,0,.06);
           }
@@ -164,8 +164,8 @@ sections:
         <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
           <p>
             Connect with <strong style="color:#FFFFFF">1,070+ people</strong> interested in
-            <strong style="color:#FFFFFF">education</strong>, <strong style="color:#FFFFFF">open science</strong>,
-            and <strong style="color:#FFFFFF">collaboration</strong>. Share experiences, learn from others, and join conversations that spark new ideas.
+            <strong style="color:#FFFFFF">education</strong>, <strong style="color:#FFFFFF">open science</strong>, and
+            <strong style="color:#FFFFFF">collaboration</strong>. Share experiences, learn from others, and join conversations that spark new ideas.
           </p>
           <p class="mt-2">
             <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
@@ -199,12 +199,15 @@ sections:
           We amplify the work of organizations that make open science a global, collective, community-driven effort.
         </p>
 
-        <!-- Dynamic list from authors: user_groups: Comunidades amigas (keep group key in Spanish) -->
+        <!-- Dynamic list from authors: user_groups: Fellow communities + (Spanish) Comunidades amigas -->
+        <div class="mt-4 mdnv-logos">
+          {{< people_list group="Fellow communities" columns=7 gapx="8rem" gapy="3rem" >}}
+        </div>
         <div class="mt-4 mdnv-logos">
           {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
         </div>
 
-        <!-- Button below logos with orange text over white -->
+        <!-- Button below the logos -->
         <p class="mt-5">
           <a href="mailto:comunidades@metadocencia.org?subject=Add%20my%20community" class="mdnv-btn-white-orange">
             Add your community
@@ -215,7 +218,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
 
-  # ---------- Support MetaDocencia (full-bleed, text + dynamic logos) ----------
+  # ---------- Sponsors / Support (full-bleed, text + dynamic logos) ----------
   - block: markdown
     id: auspiciantes
     content:
@@ -235,7 +238,10 @@ sections:
           Our work is possible thanks to institutions and organizations that share our mission.
         </p>
 
-        <!-- Dynamic list from authors: user_groups: Auspiciantes (keep group key in Spanish) -->
+        <!-- Dynamic list from authors: user_groups: Sponsors + (Spanish) Auspiciantes -->
+        <div class="mt-4 mdnv-logos">
+          {{< people_list group="Sponsors" columns=6 gapx="8rem" gapy="3rem" >}}
+        </div>
         <div class="mt-4 mdnv-logos">
           {{< people_list group="Auspiciantes" columns=6 gapx="8rem" gapy="3rem" >}}
         </div>
@@ -255,7 +261,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
 
-  # ---------- Keep the conversation going (full-bleed) ----------
+  # ---------- Social (full-bleed) ----------
   - block: markdown
     id: redes
     content:
@@ -273,8 +279,7 @@ sections:
         >}}
         <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
           <p>
-            Join us on social media and follow <strong style="color:#FFFFFF">@metadocencia</strong>
-            for updates, discussions, and resources:
+            Join us on social media and follow <strong style="color:#FFFFFF">@metadocencia</strong> for updates, discussions, and resources:
           </p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
