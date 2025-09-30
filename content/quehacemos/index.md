@@ -105,6 +105,7 @@ sections:
             title="Impulsamos Infraestructura"
             bg="#00506F"
             color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
         {{</ cta_fullwidth >}}
@@ -190,6 +191,7 @@ sections:
             title="Formamos capacidades"
             bg="#C83737"
             color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         Creamos programas de aprendizaje basados en evidencia, que transforman el conocimiento en acción y fortalecen a la comunidad científica con competencias de impacto local.
         {{</ cta_fullwidth >}}
@@ -276,6 +278,7 @@ sections:
             title="Construimos comunidad"
             bg="#F77B20"
             color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
         Fomentamos redes de apoyo y colaboración que trascienden disciplinas, instituciones y países, para crecer y visibilizar la ciencia desde América Latina hacia el mundo.
         {{</ cta_fullwidth >}}
