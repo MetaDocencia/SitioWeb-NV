@@ -1,5 +1,6 @@
 ---
 title: "Mapeo de Ciencia Abierta en Latinoamérica"
+translationKey: "mapeo-comunidades"
 summary: "Repositorio colaborativo de información sobre Ciencia Abierta en español."
 date: 2025-09-23
 tags:
