@@ -17,7 +17,7 @@ sections:
       css_style: "min-height: 20vh;"
       background:
         image:
-          filename: "1naranjaazul.png"
+          filename: "quehacemos.jpg"
           filters:
             brightness: 0.45
           size: cover
