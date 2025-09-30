@@ -212,7 +212,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
@@ -225,10 +225,10 @@ sections:
     content:
       title: "Auspiciantes"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Auspiciantes" columns=4 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Auspiciantes" columns=6 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
@@ -238,7 +238,7 @@ sections:
     content:
       title: "Comunidades Amigas"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
@@ -251,7 +251,7 @@ sections:
     content:
       title: "Colaboraron con MetaDocencia"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
