@@ -51,6 +51,7 @@ sections:
           parallax: true
         text_color_light: true
         css_style: "min-height: 24vh;"
+        css_class: "hero-max-bounded"
 
 
   # ===== Vamos por 5 años más (texto + video) =====
