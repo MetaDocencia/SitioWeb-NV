@@ -38,20 +38,16 @@ sections:
           </p>
         </div>
     design:
-      spacing:
-        padding: ["0rem", 0, "0rem", 0]
-        margin: [0, 0, "0.5rem", 0]
-      background:
-        image:
-          filename: "quienessomos.jpg"
-          filters:
-            brightness: 0.35
-          size: cover
-          position: center
-          parallax: true
-        text_color_light: true
-        css_style: "min-height: 24vh;"
-        css_class: "hero-max-bounded"
+  background:
+    image:
+      filename: "quienessomos.jpg"
+      size: cover
+      position: center
+      parallax: false   # o true si querés fondo fijo en desktop
+    text_color_light: true
+  css_class: "hero-max-bounded"
+  spacing:
+    padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
 
 
   # ===== Vamos por 5 años más (texto + video) =====
