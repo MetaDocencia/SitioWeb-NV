@@ -31,7 +31,7 @@ Andres Olivera
 Network Manager, LABI
 
 **Para seguir leyendo**:
-* Propuesta original en Zenodo, financiada por CZI: [https://doi.org/10.5281/zenodo.7025287](https://doi.org/10.5281/zenodo.7025287)
+* [Propuesta original en Zenodo, financiada por CZI](https://doi.org/10.5281/zenodo.7025287)
 * Blogpost original de anuncio de la iniciativa (en inglés): [Open grant narrative: A Collaborative Interactive Computing Service Model for Global Communities](https://2i2c.org/blog/2022/czi-global-communities-proposal/) 
 * Traducción del blogpost al español: Narrativa abierta de financiamiento: [Modelo de servicio computacional interactivo y colaborativo para comunidades globales](https://www.metadocencia.org/post/narrativafinanciamiento/) (por [Laura Ascenzi](https://www.metadocencia.org/authors/laurel/) y [Laura Ación](https://www.metadocencia.org/authors/lacion/))
 * Blogpost: [MetaDocencia le da la bienvenida a las primeras comunidades latinoamericanas que participan en el proyecto Catalyst](https://www.metadocencia.org/post/20231215-comunidadescatalyst/)
