@@ -25,7 +25,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: "3azulrojo.png"
+          filename: "quienes-somos.jpg"
           filters:
             brightness: 0.5
           size: cover
