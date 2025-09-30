@@ -41,6 +41,8 @@ sections:
       background:
         image:
           filename: "quienessomos.jpg"
+          filters:
+            brightness: 0.5
           size: cover
           position: center
           parallax: true   # fondo con parallax en desktop
