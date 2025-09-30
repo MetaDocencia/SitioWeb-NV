@@ -45,6 +45,8 @@ sections:
           position: center
           parallax: true   # o true si querés fondo fijo en desktop
         text_color_light: true
+        overlay_opacity: 0.65   # ← subí/bajá este valor (0..1) para más/menos overlay
+        overlay_color: "#000"   # ← opcional, por defecto negro
       css_class: "hero-max-bounded"
       spacing:
         padding: ["0rem", 0, "0rem", 0]  # para no sumar relleno extra
