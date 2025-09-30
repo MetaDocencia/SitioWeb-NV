@@ -299,4 +299,8 @@ sections:
              style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
+    design:
+    # Si querés sumarle aire externo al bloque (además del py interno del shortcode):
+    spacing:
+      padding: ["0rem", 0, "0rem", 0]
 ---
