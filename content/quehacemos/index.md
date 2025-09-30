@@ -150,17 +150,20 @@ sections:
     content:
       title: ""
       text: |
-        <!-- Franja full-bleed, bajita, con 2 columnas en una sola fila en todos los tamaños -->
+        <!-- Franja full-bleed con 2 métricas en una sola fila y divisor vertical a media altura -->
         <div style="position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;width:100vw;">
-          <div class="bg-gray-50 dark:bg-gray-900 py-3 md:py-5">
-            <div class="max-w-3xl mx-auto grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-700 text-center px-3">
-              <div class="px-3 py-1">
-                <p class="text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
-                <p class="text-sm sm:text-base font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:1px;">documentos en Zenodo</p>
+          <div class="bg-gray-50 dark:bg-gray-900 py-3 md:py-4">
+            <div class="relative max-w-3xl mx-auto grid grid-cols-2 text-center px-3">
+              <!-- Divisor vertical a media altura (centrado) -->
+              <div class="hidden sm:block absolute left-1/2 -translate-x-1/2"
+                   style="top:25%;height:50%;width:1px;background:rgba(17,24,39,0.2);"></div>
+              <div class="px-3">
+                <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+200</p>
+                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-2px;">documentos en Zenodo</p>
               </div>
-              <div class="px-3 py-1">
-                <p class="text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
-                <p class="text-sm sm:text-base font-semibold leading-tight text-gray-700 dark:text-gray-300" style="margin-top:1px;">palabras contextualizadas</p>
+              <div class="px-3">
+                <p class="m-0 text-4xl sm:text-5xl font-extrabold leading-none text-gray-900 dark:text-white">+85.000</p>
+                <p class="m-0 text-sm sm:text-base font-semibold leading-none text-gray-700 dark:text-gray-300" style="margin-top:-2px;">palabras contextualizadas</p>
               </div>
             </div>
           </div>
@@ -168,6 +171,7 @@ sections:
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
+
 
 
   # ======================
