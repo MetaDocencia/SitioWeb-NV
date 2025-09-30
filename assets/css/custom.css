@@ -508,7 +508,7 @@ section.testimonials-compact .space-y-3 > * + * {
   justify-content: center;      /* centra el wrapper interno en eje X */
   /* Limites de altura: no más que ~3/4 de pantalla en desktop */
   min-height: 48vh;             /* piso para que se note el hero */
-  max-height: 76vh;             /* tope en desktop */
+  max-height: 82vh;             /* tope en desktop */
   overflow: hidden;             /* evita que el cover empuje el layout */
 }
 
