@@ -17,17 +17,15 @@ social:
   link: "mailto:eunice@orcaopen.org "
 superuser: false
 user_groups:
--  Fellow Communities
+-  Comunidades amigas
 ---
 
-### Learn more
+### Conócela en este video
 
 {{< youtube 6CezCdl25qM >}} 
 
-### About ORCA
+### Sobre ORCA
 
-**[The Open Research Community Accelerator (ORCA)](https://orcaopen.org/)** is an organization that seeks to make scientific research more transparent, equitable, and useful to society. ORCA promotes the adoption of open science as the default practice in research, working with all stakeholders in the ecosystem: researchers, funders, academic institutions, governments, industry, and philanthropic organizations.
-To achieve this, the accelerator builds cross-sector coalitions that identify opportunities for joint action—whether by transforming policies, creating incentives, or developing evaluation frameworks that strengthen openness and equity in science.
-Its working model focuses on developing prototypes or proof-of-concept initiatives that help demonstrate that change is possible, with the goal of making it scalable.
-
-
+La **[Open Research Community Accelerator (ORCA)](https://orcaopen.org/)**, o Aceleradora de la Comunidad de Investigación Abierta, es una organización que busca que la investigación científica sea más transparente, equitativa y útil para la sociedad. ORCA promueve la adopción de la ciencia abierta como práctica por defecto en la investigación, trabajando con todos los actores del ecosistema: investigadores, financiadores, instituciones académicas, gobiernos, industria y organizaciones filantrópicas.
+Para lograrlo, la aceleradora construye coaliciones intersectoriales que identifican oportunidades de acción conjunta, ya sea transformando políticas, creando incentivos o desarrollando marcos de evaluación que fortalezcan la apertura y la equidad en la ciencia.
+Su modelo de trabajo se enfoca en desarrollar prototipos o pruebas de concepto que ayuden a demostrar que el cambio es posible con miras a hacerlo escalable. 
