@@ -20,7 +20,7 @@ Este proyecto tiene como propósitos:
 * **Empoderar a las personas que se encuentran en etapa inicial de su carrera de investigación**, proporcionando recursos y programas de mentoría dedicados para respaldar su desarrollo en línea con las buenas prácticas de Ciencia Abierta.
 
 ## Más información
-- [Blogpost de OLS sobre el proyecto](https://openlifesci.org/posts/2023/07/17/ols-7-mapping-open-science-communities-LATAM/)
+- Este proyecto fue desarrollado en la cohorte 7 de OLS. [Blogpost sobre el proyecto](https://openlifesci.org/posts/2023/07/17/ols-7-mapping-open-science-communities-LATAM/)
 - [Shiny App (demo, trabajo en progreso)](https://metadocencia.shinyapps.io/mapeo_comunidades/)
 
 <iframe height="600" width="100%" frameborder="no" src="https://metadocencia.shinyapps.io/mapeo_comunidades/"></iframe>
