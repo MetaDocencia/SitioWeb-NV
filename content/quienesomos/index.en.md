@@ -1,334 +1,301 @@
 ---
-title: "Join & support our community"
+title: "Quienes somos"
 type: landing
-slug: "cta"
+slug: "quienes-somos"
 design:
   spacing: "3rem"
 
 sections:
+  # ===== HERO con imagen de fondo + botones centrados =====
+  - block: hero
+    id: hero-qs
+    content:
+      title: "Quienes somos"
+      text: |
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
+          MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
+        </p>
 
-  # ===== Local styles: logos (Partner Communities & Sponsors) =====
+        <!-- Botones centrados (3) -->
+        <div class="mt-4 flex flex-wrap justify-center gap-3">
+          <a href="/institucional"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+          <a href="/institucional#vision"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+          <a href="/institucional#valores"
+             class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
+             style="background:#C83737;color:#FFFFFF;">Valores</a>
+        </div>
+
+        <div class="mt-4 space-y-2 text-center">
+          <p class="text-white/95 text-base md:text-lg">
+            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
+          </p>
+          <p class="text-white/95 text-base md:text-lg">
+            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
+          </p>
+        </div>
+    design:
+      spacing:
+        padding: ["0.5rem", 0, "0.5rem", 0]
+        margin: [0, 0, "0.5rem", 0]
+      background:
+        image:
+          filename: "quienessomos.jpg"
+          filters:
+            brightness: 0.35
+          size: cover
+          position: center
+          parallax: false
+        text_color_light: true
+      css_style: "min-height: 24vh;"
+
+  # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
-    id: estilos-logos
+    id: solutions
+    content:
+      title: "Vamos por 5 años más"
+      text: |
+        <!-- Breakout full-bleed que ignora el wrapper central del tema -->
+        <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
+          <!-- Contenido centrado y con respiro lateral -->
+          <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
+            <div data-2col>
+              <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
+              <div class="mdnv-vcenter mdnv-text-pad">
+                <p>
+                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+                </p>
+              </div>
+              <div data-16x9>
+                <iframe
+                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+                  title="MetaDocencia - 5 años"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+    design:
+      css_style: "background-color:#FFFFFF;color:#111827;"
+      spacing:
+        padding: ["2rem", 0, "1.25rem", 0]
+
+  # ===== MetaDocencia en números =====
+  - block: stats
+    id: numeros
+    content:
+      title: "MetaDocencia en números"
+      items:
+        - statistic: "+40"
+          description: "alianzas y patrocinadores"
+        - statistic: "+60"
+          description: "personas colaboran con MetaDocencia"
+        - statistic: "+1,070"
+          description: "integrantes en Slack"
+        - statistic: "+6,000"
+          description: "personas conectadas en redes sociales"
+        - statistic: "+2,600"
+          description: "suscripciones activas a nuestro boletín"
+        - statistic: "+10%"
+          description: "porcentaje de interacción (LinkedIn 2025)"
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "0.25rem", 0]
+
+  # ===== Estilos LOCALES solo para esta página =====
+  - block: markdown
+    id: estilos-collapsibles
     content:
       title: ""
       text: |
         <style>
-          /* Remove extra vertical whitespace on these blocks */
-          section#boletin-embed, section#slack, section#comunidades,
-          section#auspiciantes, section#redes {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centra verticalmente el texto */
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
           }
 
-          /* General adjustments for sections with logos */
-          section#comunidades,
-          section#auspiciantes {
-            --mdnv-logo-size: clamp(56px, 9vw, 92px);   /* circle size */
-            --mdnv-gap: clamp(0.6rem, 2.2vw, 1.25rem);  /* consistent spacing */
-            --mdnv-cell-minh: calc(var(--mdnv-logo-size) + 2.2rem); /* uniform cell height */
-            color: #FFFFFF !important;                  /* white text on color bg */
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
           }
-          section#comunidades a,
-          section#auspiciantes a {
-            color: #FFFFFF !important;
-          }
-
-          /* Scope ONLY inside the logos grid */
-          section#comunidades .mdnv-logos .grid,
-          section#auspiciantes .mdnv-logos .grid {
-            gap: var(--mdnv-gap) !important;
-            justify-items: center !important;     /* center items in their cells (horizontal) */
-            align-items: center !important;       /* center items in their cells (vertical) */
-            justify-content: center !important;   /* center the whole grid content */
-            align-content: center !important;     /* center rows as a block */
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
           }
 
-          /* Each item: centered layout & uniform minimum height to align circles vertically */
-          section#comunidades .mdnv-logos .grid > *,
-          section#auspiciantes .mdnv-logos .grid > * {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            text-align: center !important;
-            min-height: var(--mdnv-cell-minh) !important; /* keeps circles aligned across rows */
+          /* ===== Colapsables (no toca tipografías globales) ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
           }
 
-          /* Round logos/avatars, uniform size & vertical alignment */
-          section#comunidades .mdnv-logos img,
-          section#auspiciantes .mdnv-logos img,
-          section#comunidades .mdnv-logos .avatar,
-          section#auspiciantes .mdnv-logos .avatar {
-            width: var(--mdnv-logo-size) !important;
-            height: var(--mdnv-logo-size) !important;
-            border-radius: 9999px !important;
-            object-fit: cover !important;
-            display: block !important;
-            margin: 0 !important;
-            background: transparent !important;
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;
           }
-
-          /* Remove inner paddings that misalign circles */
-          section#comunidades .mdnv-logos [class*="p-"],
-          section#auspiciantes .mdnv-logos [class*="p-"] {
-            padding: 0 !important;
-          }
-
-          /* Small, white captions ONLY under each logo (smaller than before) */
-          section#comunidades .mdnv-logos .font-semibold,
-          section#auspiciantes .mdnv-logos .font-semibold,
-          section#comunidades .mdnv-logos .text-sm,
-          section#auspiciantes .mdnv-logos .text-sm,
-          section#comunidades .mdnv-logos .opacity-70,
-          section#auspiciantes .mdnv-logos .opacity-70 {
-            font-size: 0.65rem !important;
-            line-height: 1.05 !important;
-            color: #FFFFFF !important;
-          }
-
-          /* Outside the logos grid: keep default paragraph/link sizes */
-          section#comunidades p a,
-          section#auspiciantes p a {
-            font-size: inherit !important;
-          }
-
-          /* Enforce 5 centered columns on Sponsors at large screens */
-          @media (min-width: 1024px) {
-            section#auspiciantes .mdnv-logos .grid {
-              grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-              justify-content: center !important;   /* center the 5-col grid block */
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
             }
           }
-
-          /* White button with orange text (strong specificity) */
-          .mdnv-btn-white-orange,
-          section#comunidades .mdnv-btn-white-orange {
-            display: inline-block;
-            font-weight: 700;
-            padding: .5rem .9rem;
-            border-radius: .5rem;
-            background: #FFFFFF !important;
-            color: #F77B20 !important;
-            text-decoration: none !important;
-            border: 1px solid rgba(0,0,0,.06);
-          }
         </style>
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
 
-  # ---------- Newsletter (full-bleed) ----------
+  # --- Equipo y CA ---
   - block: markdown
-    id: boletin-embed
+    id: team-adn-advisory-committee
     content:
-      title: ""
+      title: "Team and Advisory Committee"
       text: |
-        {{< cta_fullwidth
-            title="MetaDocencia Newsletter"
-            text=""
-            bg="#00506F" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <div class="mx-auto max-w-3xl text-white">
-          <p class="text-lg leading-relaxed mb-4">
-            Receive our latest news, training opportunities, calls, and events in your inbox.
-          </p>
-
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< mc_form >}}
+            {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
           </div>
+        </details>
 
-          <p class="text-center mt-4">
-            <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
-              See past editions
-            </a>
-          </p>
-        </div>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Slack (full-bleed) ----------
+  # --- Colaboran con MetaDocencia ---
   - block: markdown
-    id: slack
+    id: contributors
     content:
-      title: ""
+      title: "Contributors"
       text: |
-        {{< cta_fullwidth
-            title="Join our Slack community"
-            text=""
-            button_text="Join MetaDocencia’s space"
-            button_url="https://w3id.org/metadocencia/slack"
-            bg="#E01E5A" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#E01E5A"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
-          <p>
-            Connect with <strong style="color:#FFFFFF">1,070+ people</strong> interested in
-            <strong style="color:#FFFFFF">education</strong>, <strong style="color:#FFFFFF">open science</strong>, and
-            <strong style="color:#FFFFFF">collaboration</strong>. Share experiences, learn from others, and join conversations that spark new ideas.
-          </p>
-          <p class="mt-2">
-            <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
-               style="color:#FFFFFF; text-decoration:underline;">
-               What it is and how to join
-            </a>
-          </p>
-        </div>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Partner Communities (full-bleed) ----------
-  - block: markdown
-    id: comunidades
-    content:
-      title: ""
-      text: |
-        {{< cta_fullwidth
-            title="Partner Communities"
-            text=""
-            bg="#F77B20" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <p class="max-w-3xl mx-auto">
-          We amplify the work of organizations that make open science a global, collective, community-driven effort.
-        </p>
-
-        <!-- Dynamic list from authors: user_groups: Fellow communities + (Spanish) Comunidades amigas -->
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Fellow communities" columns=7 gapx="8rem" gapy="3rem" >}}
-        </div>
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
-        </div>
-
-        <!-- Button below the logos -->
-        <p class="mt-5">
-          <a href="mailto:comunidades@metadocencia.org?subject=Add%20my%20community" class="mdnv-btn-white-orange">
-            Add your community
-          </a>
-        </p>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Sponsors / Support (full-bleed, text + dynamic logos) ----------
-  - block: markdown
-    id: auspiciantes
-    content:
-      title: ""
-      text: |
-        {{< cta_fullwidth
-            title="Support MetaDocencia"
-            text=""
-            bg="#00506F" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <p class="max-w-3xl mx-auto">
-          Our work is possible thanks to institutions and organizations that share our mission.
-        </p>
-
-        <!-- Dynamic list from authors: user_groups: Sponsors + (Spanish) Auspiciantes -->
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Sponsors" columns=5 gapx="8rem" gapy="3rem" >}}
-        </div>
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Auspiciantes" columns=5 gapx="8rem" gapy="3rem" >}}
-        </div>
-
-        <p class="mt-6 max-w-3xl mx-auto">
-          If your organization shares our mission, email us at
-          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
-          to explore ways to collaborate.
-        </p>
-        <p class="mt-2 max-w-3xl mx-auto">
-          You can also make a contribution through our
-          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">donation form</a>
-          to help sustain and expand our activities.
-        </p>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Social (full-bleed) ----------
-  - block: markdown
-    id: redes
-    content:
-      title: ""
-      text: |
-        {{< cta_fullwidth
-            title="Keep the conversation going"
-            text=""
-            bg="#C83737" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
-          <p>
-            Join us on social media and follow <strong style="color:#FFFFFF">@metadocencia</strong> for updates, discussions, and resources:
-          </p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Twitter
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               LinkedIn
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               YouTube
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Instagram
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Mastodon
-            </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Bluesky
-            </a>
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
+        </details>
+
+  # --- Auspiciantes ---
+  - block: markdown
+    id: sponsors
+    content:
+      title: "Sponsors"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Current" columns=6 gapx="12rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: fellow-communities
+    content:
+      title: "Fellow Communities"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: former-contributors
+    content:
+      title: "Former Contributors"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
+  - block: markdown
+    id: apoya
+    content:
+      title: ""
+      text: |
+        {{< cta_fullwidth
+            title="Apoya a la ciencia latinoamericana"
+            text=""
+            button_text="Aquí te contamos cómo"
+            button_url="https://www.metadocencia.org/contacto/"
+            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <p>Nuestras redes:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
 ---
