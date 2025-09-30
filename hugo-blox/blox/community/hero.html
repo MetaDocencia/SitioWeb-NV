@@ -1,5 +1,11 @@
-{{/* hugo-blox/blox/community/hero.html
-     Hero extendido: soporta `actions` (lista de botones) además de los campos clásicos.
+{{/* 
+  hugo-blox/blox/community/hero.html
+  Hero extendido con:
+  - Imagen de fondo desde .design.background.image
+  - Overlay automático si text_color_light = true
+  - Altura acotada por defecto con clamp(44vh, 60vh, 76vh)
+  - Parallax (background-attachment: fixed) si .design.background.image.parallax = true
+  - Soporte de actions (lista) + fallback a primary/secondary
 */}}
 
 {{ $page := .page }}
@@ -10,7 +16,7 @@
 {{ $title := $content.title | default "" }}
 {{ $text  := $content.text  | default "" }}
 
-{{/* Botones: preferimos `actions` (lista). Si no hay, caemos a primary/secondary. */}}
+/* Botones: preferimos `actions` (lista). Si no hay, caemos a primary/secondary. */
 {{ $actions := $content.actions | default (slice) }}
 {{ if and (eq (len $actions) 0) (or (isset $content "primary_action") (isset $content "secondary_action")) }}
   {{ if isset $content "primary_action" }}
@@ -23,26 +29,80 @@
   {{ end }}
 {{ end }}
 
-<section id="{{ $block.id | default (anchorize $title) }}" class="py-16">
-  <div class="container mx-auto px-6 text-center">
-    {{ if $title }}<h1 class="text-4xl font-extrabold tracking-tight mb-4">{{ $title }}</h1>{{ end }}
-    {{ if $text  }}<p class="mx-auto max-w-3xl text-lg opacity-90 mb-8">{{ $text | markdownify }}</p>{{ end }}
+/* === Fondo (imagen + opciones) === */
+{{ $bg := $design.background }}
+{{ $img := cond (and (isset $bg "image") (isset $bg.image "filename")) $bg.image nil }}
+{{ $filename := "" }}
+{{ $size     := "cover" }}
+{{ $position := "center" }}
+{{ $parallax := false }}
+{{ if $img }}
+  {{ $filename = $img.filename | relURL }}
+  {{ if (isset $img "size")     }}{{ $size     = $img.size     }}{{ end }}
+  {{ if (isset $img "position") }}{{ $position = $img.position }}{{ end }}
+  {{ if (isset $img "parallax") }}{{ $parallax = $img.parallax }}{{ end }}
+{{ end }}
 
-    {{ if gt (len $actions) 0 }}
-      <div class="flex flex-wrap items-center justify-center gap-3">
-        {{ range $actions }}
-          {{ $style := .style | default "primary" }}
-          {{/* Clases básicas; si tu tema define `.btn`, `.btn-primary` etc., se aplican.
-               Si no, usamos utilidades Tailwind genéricas. */}}
-          {{ $isPrimary := eq $style "primary" }}
-          {{ $btn := cond $isPrimary "btn btn-primary" "btn btn-secondary" }}
-          <a href="{{ .url | relURL }}"
-             class="{{ $btn }} inline-flex items-center justify-center rounded-lg px-5 py-2.5 font-medium transition
-                    {{ if not $isPrimary }}border{{ end }}">
-            {{ .text }}
-          </a>
-        {{ end }}
-      </div>
-    {{ end }}
+/* Overlay por contraste si text_color_light */
+{{ $overlay := "" }}
+{{ if and $bg (isset $bg "text_color_light") ($bg.text_color_light) }}
+  {{/* Opacidad fija razonable; si necesitás afinar, hacelo aquí o expón un parámetro. */}}
+  {{ $overlay = "linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55))," }}
+{{ end }}
+
+/* Altura: por defecto usamos clamp para no exceder una pantalla típica */
+{{ $minHeightStyle := "min-height: clamp(44vh, 60vh, 76vh);" }}
+{{ if (isset $design "css_style") }}
+  {{/* Si ya definiste min-height en css_style, respetamos tu css_style tal cual al final. */}}
+{{ end }}
+
+/* Color de texto por accesibilidad */
+{{ $textColorClass := "" }}
+{{ if and $bg (isset $bg "text_color_light") ($bg.text_color_light) }}
+  {{ $textColorClass = "text-white" }}
+{{ end }}
+
+/* Attachment según parallax + fallback móvil */
+{{ $attachment := cond $parallax "fixed" "scroll" }}
+
+/* Clases extra del bloque (por si las definiste) */
+{{ $cssClass := $design.css_class | default "" }}
+
+/* Construimos el style inline del hero */
+{{ $style := printf "background-image: %s url('%s'); background-size:%s; background-position:%s; background-repeat:no-repeat; background-attachment:%s; %s"
+    $overlay $filename $size $position $attachment $minHeightStyle }}
+
+<section id="{{ $block.id | default (anchorize $title) }}" class="hero-bounded {{ $cssClass }} {{ $textColorClass }}">
+  <div class="hero-bg" style="{{ $style }} {{ $design.css_style }}">
+    <div class="container mx-auto px-6 text-center py-8 md:py-12">
+      {{ if $title }}
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">{{ $title }}</h1>
+      {{ end }}
+      {{ if $text }}
+        <p class="mx-auto max-w-3xl text-lg opacity-95 mb-6">{{ $text | markdownify }}</p>
+      {{ end }}
+
+      {{ if gt (len $actions) 0 }}
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          {{ range $actions }}
+            {{ $style := .style | default "primary" }}
+            {{ $isPrimary := eq $style "primary" }}
+            {{ $btn := cond $isPrimary "btn btn-primary" "btn btn-secondary" }}
+            <a href="{{ .url | relURL }}"
+               class="{{ $btn }} inline-flex items-center justify-center rounded-lg px-5 py-2.5 font-medium transition
+                      {{ if not $isPrimary }}border{{ end }}">
+              {{ .text }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
   </div>
 </section>
+
+<style>
+/* Fallback móvil para background-attachment: fixed (evita jitter) */
+@media (max-width: 768px) {
+  .hero-bounded .hero-bg { background-attachment: scroll !important; }
+}
+</style>
