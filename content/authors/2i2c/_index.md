@@ -1,6 +1,5 @@
 ---
-authors:
-- 2i2c
+title: "ABRIR"
 bio: ""
 email: ""
 name: 2i2c
