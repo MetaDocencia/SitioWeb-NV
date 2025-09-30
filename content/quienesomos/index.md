@@ -275,6 +275,7 @@ sections:
             content_maxw="1100px"
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
         >}}
         <p>Nuestras redes:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
