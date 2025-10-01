@@ -10,53 +10,77 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: "Quienes somos"
+      title: "ABOUT US"
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
-          MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
+          MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world.
         </p>
 
         <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
           <a href="/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+             style="background:#C83737;color:#FFFFFF;">Institutional</a>
           <a href="/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+             style="background:#C83737;color:#FFFFFF;">Mission &amp; Vision</a>
           <a href="/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Valores</a>
+             style="background:#C83737;color:#FFFFFF;">Our Values</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
+            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> in the words of our Co-Director, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
+            MetaDocencia is fiscally sponsored by <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
           </p>
         </div>
     design:
-      spacing:
-        padding: ["0.5rem", 0, "0.5rem", 0]
-        margin: [0, 0, "0.5rem", 0]
       background:
         image:
-          filename: "quienessomos.jpg"
+          filename: "que-hacemos.jpg"
           filters:
-            brightness: 0.35
+            brightness: 0.5
           size: cover
           position: center
-          parallax: false
+          parallax: true   # fondo con parallax en desktop
         text_color_light: true
-      css_style: "min-height: 24vh;"
+        overlay_opacity: 0.65
+        overlay_color: "#000"
+      css_class: "hero-max-bounded"
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
+      css_style: ""
+
+  # ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
+  - block: markdown
+    id: estilos-hero-qs
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Solo Quienes somos: #hero-qs */
+          @media (max-width: 768px) {
+            section#hero-qs.hero-max-bounded,
+            section#hero-qs.hero-max-bounded .hero-bg {
+              max-height: 64vh;   /* ajustá 64–70vh a gusto */
+              min-height: 44vh;
+            }
+            /* Menos padding interno para que no “empuje” el texto */
+            section#hero-qs .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
 
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
     content:
-      title: "Vamos por 5 años más"
+      title: "Join us for 5 more wonderful years!"
       text: |
         <!-- Breakout full-bleed que ignora el wrapper central del tema -->
         <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
@@ -66,7 +90,7 @@ sections:
               <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
               <div class="mdnv-vcenter mdnv-text-pad">
                 <p>
-                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+                  During these five years, we built ties between more than 2,000 researchers and technicians. We did this by working as a team, collectively, and collaborating with more than 40 communities. Thank you for these first 5 years.
                 </p>
               </div>
               <div data-16x9>
@@ -90,20 +114,20 @@ sections:
   - block: stats
     id: numeros
     content:
-      title: "MetaDocencia en números"
+      title: "MetaDocencia by the Numbers"
       items:
         - statistic: "+40"
-          description: "alianzas y patrocinadores"
+          description: "strategic partners and sponsors"
         - statistic: "+60"
-          description: "personas colaboran con MetaDocencia"
+          description: "collaborators"
         - statistic: "+1,070"
-          description: "integrantes en Slack"
+          description: "members on Slack"
         - statistic: "+6,000"
-          description: "personas conectadas en redes sociales"
+          description: "followers on social media"
         - statistic: "+2,600"
-          description: "suscripciones activas a nuestro boletín"
+          description: "active newsletter subscribers"
         - statistic: "+10%"
-          description: "porcentaje de interacción (LinkedIn 2025)"
+          description: "engagement rate (LinkedIn 2025)"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
@@ -121,7 +145,7 @@ sections:
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            align-items: stretch; /* no centra todo; dejamos que el texto se centre con su propia clase */
+            align-items: stretch; /* no centra todo; el texto se centra con su propia clase */
           }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
@@ -195,76 +219,77 @@ sections:
 
   # --- Equipo y CA ---
   - block: markdown
-    id: team-adn-advisory-committee
+    id: equipo-y-consejo-asesor
     content:
-      title: "Team and Advisory Committee"
+      title: "Equipo y Consejo Asesor"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
-    id: contributors
+    id: colaboradores
     content:
-      title: "Contributors"
+      title: "Colaboran con MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Auspiciantes ---
   - block: markdown
-    id: sponsors
+    id: auspiciantes
     content:
-      title: "Sponsors"
+      title: "Auspiciantes"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Current" columns=6 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="Auspiciantes" columns=5 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Comunidades Amigas ---
   - block: markdown
-    id: fellow-communities
+    id: comunidades-amigas
     content:
-      title: "Fellow Communities"
+      title: "Comunidades Amigas"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
-    id: former-contributors
+    id: colaboraron-con-metadocencia
     content:
-      title: "Former Contributors"
+      title: "Colaboraron con MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Colaboraron con MetaDocencia" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
-  # ===== CTA final (full-bleed con contenido centrado y no full-width) =====
+  # ===== CTA final (full-bleed, misma lógica que "Qué hacemos") =====
   - block: markdown
     id: apoya
     content:
       title: ""
       text: |
         {{< cta_fullwidth
+            id="apoya"
             title="Apoya a la ciencia latinoamericana"
             text=""
             button_text="Aquí te contamos cómo"
@@ -275,6 +300,7 @@ sections:
             content_maxw="1100px"
             align="center"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
         >}}
         <p>Nuestras redes:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
@@ -298,4 +324,7 @@ sections:
              style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        padding: ["0rem", 0, "0rem", 0]
 ---
