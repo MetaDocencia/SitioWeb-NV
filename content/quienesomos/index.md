@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: "Quienes somos"
+      title: "Quiénes somos"
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
@@ -40,7 +40,7 @@ sections:
     design:
       background:
         image:
-          filename: "quienessomos.jpg"
+          filename: "que-hacemos.jpg"
           filters:
             brightness: 0.5
           size: cover
