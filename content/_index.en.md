@@ -29,7 +29,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: "3azulrojo.png"
+          filename: "quienes-somos.jpg"
           filters:
             brightness: 0.5
           size: cover
@@ -43,7 +43,7 @@ sections:
       items:
         - title: "About us"
           text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
-          image: "quienes-somos.jpg"
+          image: "quienessomos.jpg"
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
