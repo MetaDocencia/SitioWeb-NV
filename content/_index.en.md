@@ -59,7 +59,7 @@ sections:
             text: "Learn more about our projects"
             url: "/en/que-hacemos/"
     design:
-      css_class: "bg-gray-100 dark:bg-gray-900"
+      css_class: ""
 
   - block: stats
     content:
