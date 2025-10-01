@@ -1,7 +1,7 @@
 ---
 title: "What we do"
 type: landing
-slug: "what-we-do"
+slug: "que-hacemos"
 design:
   spacing: "3rem"
 
