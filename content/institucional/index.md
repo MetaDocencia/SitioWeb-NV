@@ -99,22 +99,17 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-800"
 
-  # ===== Nos organizamos (fondo blanco en light / oscuro en dark) =====
-  - block: cta-image-paragraph
+  # ===== Nos organizamos (CTA card con botón a Zenodo) =====
+  - block: cta-card
     id: organizacion
     content:
-      items:
-        - title: "Nos organizamos"
-          text: |
-            En MetaDocencia diseñamos este mapa conceptual que institucionaliza nuestra forma de trabajo.
-            Lo hicimos pensando en una estructura organizacional eficiente y versátil a la altura de los desafíos que tenemos por delante.
-            Así, este esquema permite identificar grados de responsabilidad pero, a la vez, busca ser lo suficientemente dinámico
-            para promover el trabajo colaborativo y el compromiso, la confianza, el reconocimiento y las oportunidades de crecimiento
-            de las personas que hacemos MetaDocencia.
-
-            <br><br>
-            👉 <a href="https://doi.org/10.5281/zenodo.11456152" class="underline">Para conocer más sobre la organización de MetaDocencia, accede al documento completo sobre el organigrama publicado en Zenodo.</a>
-          image: "organigramaES.jpg"
+      title: "Nos organizamos"
+      text: "En MetaDocencia definimos una estructura organizacional eficiente y versátil para afrontar los desafíos que tenemos por delante."
+      button:
+        text: "Conoce el organigrama completo en Zenodo"
+        url: "https://doi.org/10.5281/zenodo.11456152"
     design:
-      css_class: "bg-white text-gray-900 dark:bg-gray-900 dark:text-white"
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#FFFFFF;color:#111827;"  # claro en light / legible en dark por herencia
 ---
