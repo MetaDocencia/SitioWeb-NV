@@ -10,31 +10,31 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: "About us"
+      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Quiénes somos</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
-          MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world.
+          MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.
         </p>
 
         <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="/en/institucional"
+          <a href="/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Institutional</a>
-          <a href="/en/institucional#vision"
+             style="background:#C83737;color:#FFFFFF;">Institucional</a>
+          <a href="/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Mission &amp; Vision</a>
-          <a href="/en/institucional#valores"
+             style="background:#C83737;color:#FFFFFF;">Visión y Misión</a>
+          <a href="/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Our Values</a>
+             style="background:#C83737;color:#FFFFFF;">Valores</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="[en/post/](https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/)" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> in the words of our Co-Director, Laura Ación.
+            <a href="https://mdnv.netlify.app/post/origenmd/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia is fiscally sponsored by <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
+            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
           </p>
         </div>
     design:
@@ -80,7 +80,7 @@ sections:
   - block: markdown
     id: solutions
     content:
-      title: "Join us for 5 more wonderful years!"
+      title: "Vamos por 5 años más"
       text: |
         <!-- Breakout full-bleed que ignora el wrapper central del tema -->
         <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
@@ -90,13 +90,13 @@ sections:
               <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
               <div class="mdnv-vcenter mdnv-text-pad">
                 <p>
-                  During these five years, we built ties between more than 2,000 researchers and technicians. We did this by working as a team, collectively, and collaborating with more than 40 communities. Thank you for these first 5 years.
+                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
               </div>
               <div data-16x9>
                 <iframe
-                  src="https://www.youtube.com/embed/bj59_0v2a1U"
-                  title="MetaDocencia - 5 years"
+                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
+                  title="MetaDocencia - 5 años"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen>
@@ -114,20 +114,20 @@ sections:
   - block: stats
     id: numeros
     content:
-      title: "MetaDocencia by the Numbers"
+      title: "MetaDocencia en números"
       items:
         - statistic: "+40"
-          description: "strategic partners and sponsors"
+          description: "alianzas y patrocinadores"
         - statistic: "+60"
-          description: "collaborators"
+          description: "personas colaboran con MetaDocencia"
         - statistic: "+1,070"
-          description: "members on Slack"
+          description: "integrantes en Slack"
         - statistic: "+6,000"
-          description: "followers on social media"
+          description: "personas conectadas en redes sociales"
         - statistic: "+2,600"
-          description: "active newsletter subscribers"
+          description: "suscripciones activas a nuestro boletín"
         - statistic: "+10%"
-          description: "engagement rate (LinkedIn 2025)"
+          description: "porcentaje de interacción (LinkedIn 2025)"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
@@ -145,7 +145,7 @@ sections:
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            align-items: stretch; /* no centra todo; el texto se centra con su propia clase */
+            align-items: stretch;
           }
           @media (max-width: 900px) {
             [data-2col] { grid-template-columns: 1fr; }
@@ -153,7 +153,7 @@ sections:
           .mdnv-vcenter {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* centra verticalmente el texto */
+            justify-content: center;
           }
           .mdnv-text-pad {
             padding-left: clamp(.5rem, 3vw, 2rem);
@@ -247,15 +247,38 @@ sections:
   - block: markdown
     id: auspiciantes
     content:
-      title: "Auspiciantes"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Auspiciantes" columns=5 gapx="12rem" gapy="3rem" >}}
+        {{< cta_fullwidth
+            id="auspiciantes"
+            title="Apoya a MetaDocencia"
+            bg="#00506F"
+            color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <div class="mx-auto max-w-6xl">
+          <p>
+            Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
+          </p>
+  
+          <!-- Logos gestionados desde People/Team con el grupo "Auspiciantes" -->
+          <div class="mt-6">
+            {{< people_list group="Auspiciantes" columns="5" >}}
           </div>
-        </details>
-
+  
+          <!-- Texto de contacto + donación -->
+          <p class="mt-6">
+            Si tu organización comparte nuestra misión, escribinos a
+            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+            para explorar cómo colaborar.
+          </p>
+          <p class="mt-2">
+            Podés hacer tu aporte a través de nuestro
+            <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+            y ayudarnos a sostener y ampliar nuestras actividades.
+          </p>
+        </div>
+        {{</ cta_fullwidth >}}
+    
   # --- Comunidades Amigas ---
   - block: markdown
     id: comunidades-amigas
@@ -290,9 +313,9 @@ sections:
       text: |
         {{< cta_fullwidth
             id="apoya"
-            title="Support Latin American science"
+            title="Apoya a la ciencia latinoamericana"
             text=""
-            button_text="Join us"
+            button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
             bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
@@ -302,7 +325,7 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-        <p>Our social media channels:</p>
+        <p>Nuestras redes:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
