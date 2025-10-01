@@ -16,7 +16,6 @@ education:
   - course: Maestra de Música
     institution: Instituto de Bellas Artes, La Pampa
     year: 1999
-    
 email: ""
 interests:
 name: Alejandra Bellini
