@@ -35,11 +35,12 @@ authors:
 
 ## Introducción
 Desde nuestro primer taller sobre buenas prácticas para conducir encuentros activos hasta capacitaciones sobre herramientas digitales, R o python, en MetaDocencia impulsamos espacios de aprendizaje que combinan pedagogía y tecnología.
-A lo largo de los años, desarrollamos cursos y construimos recursos abiertos que ayudan a miles de personas a mejorar sus prácticas de enseñanza, aumentar la accesibilidad de sus propuestas, incorporar herramientas técnicas y promover una ciencia más abierta, reproducible e inclusiva. Siempre con el mismo objetivo: construir conocimiento en comunidad y transformar la forma en que compartimos saberes.
+A lo largo de los años, desarrollamos cursos y construimos recursos abiertos que ayudan a miles de personas a mejorar sus prácticas de enseñanza, aumentarla accesibilidad de sus propuestas, incorporar herramientas técnicas y promover una ciencia más abierta, reproducible e inclusiva. Siempre con el mismo objetivo: construir conocimiento en comunidad y transformar la forma en que compartimos saberes.
 
 Agradecemos especialmente a quienes colaboraron en el diseño, la organización y la facilitación de estas actividades. Su compromiso y generosidad hicieron crecer a MetaDocencia y expandir su impacto mucho más allá de lo que imaginamos en los primeros días.
 
 MetaDocencia ofrece instancias de formación adaptables a diferentes contextos y necesidades institucionales. Para coordinar propuestas o recibir más información, escribinos a formacion@metadocencia.org
+
 
 
 ## Presente! Recursos para Encuentros Activos (antes: Intro al ABC para enseñar online)
