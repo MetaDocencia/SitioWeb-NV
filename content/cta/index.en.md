@@ -21,14 +21,29 @@ sections:
         >}}
 
         <style>
-        /* Scope: solo dentro del bloque del boletín */
-        #boletin-embed .md-newsletter,
+        /* ====== SCOPE ESTRICTO AL BLOQUE ====== */
+        #boletin-embed * { box-sizing: border-box; }
+
+        /* Contenedores del embed más comunes (Mailchimp y genéricos) */
+        #boletin-embed #mc_embed_shell,
+        #boletin-embed #mc_embed_signup,
         #boletin-embed .mc-embed,
         #boletin-embed form {
-          width: 100%;
+          width: 100% !important;
+          max-width: 48rem !important; /* ~768px */
+          margin: 0 auto !important;
+          background: transparent !important;
+          color: #FFFFFF !important;
         }
 
+        /* Layout de filas */
         #boletin-embed .form-row {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+          width: 100%;
+        }
+        #boletin-embed .form-row--split {
           display: grid;
           grid-template-columns: 1fr;
           gap: 0.75rem;
@@ -39,71 +54,85 @@ sections:
           }
         }
 
-        /* Campos comunes (intenta cubrir Mailchimp y similares) */
+        /* Etiquetas */
+        #boletin-embed label,
+        #boletin-embed .mc-field-group label {
+          display: block !important;
+          margin-bottom: 0.25rem !important;
+          font-weight: 700 !important;
+          color: #FFFFFF !important;
+        }
+
+        /* Campos (forzamos estilo sobre posibles inline-styles del embed) */
         #boletin-embed input[type="email"],
         #boletin-embed input[type="text"],
+        #boletin-embed input[type="tel"],
         #boletin-embed select,
         #boletin-embed textarea,
         #boletin-embed .mc-field-group input,
         #boletin-embed .mc-field-group select,
         #boletin-embed .mc-field-group textarea {
-          width: 100%;
-          background: #FFFFFF;
-          color: #111827;
-          border: 1px solid rgba(255,255,255,0.4);
-          border-radius: 0.5rem;
-          padding: 0.65rem 0.8rem;
-          line-height: 1.4;
-          box-sizing: border-box;
+          width: 100% !important;
+          background: #FFFFFF !important;
+          color: #111827 !important;
+          border: 1px solid rgba(0,0,0,0.15) !important;
+          border-radius: 0.5rem !important;
+          padding: 0.65rem 0.8rem !important;
+          line-height: 1.4 !important;
+          min-height: 2.5rem !important;
         }
 
-        #boletin-embed label,
-        #boletin-embed .mc-field-group label {
-          color: #FFFFFF;
-          font-weight: 600;
-          display: block;
-          margin-bottom: 0.25rem;
-        }
+        /* Placeholders legibles */
+        #boletin-embed ::placeholder { color: #6B7280 !important; opacity: 1; }
 
-        /* Estados de foco accesibles */
+        /* Foco accesible */
         #boletin-embed input:focus,
         #boletin-embed select:focus,
         #boletin-embed textarea:focus {
-          outline: 3px solid rgba(255,255,255,0.5);
-          outline-offset: 1px;
-          border-color: #FFFFFF;
+          outline: 3px solid rgba(255,255,255,0.6) !important;
+          outline-offset: 1px !important;
+          border-color: #FFFFFF !important;
         }
 
-        /* Botón */
+        /* Botones de envío del embed (Mailchimp: .button, input[type=submit]) */
         #boletin-embed .button,
         #boletin-embed button[type="submit"],
         #boletin-embed input[type="submit"] {
-          background: #FFFFFF;
-          color: #00506F;
-          border: none;
-          font-weight: 700;
-          border-radius: 9999px;
-          padding: 0.65rem 1rem;
-          cursor: pointer;
+          display: inline-block !important;
+          background: #FFFFFF !important;
+          color: #00506F !important;
+          border: none !important;
+          font-weight: 800 !important;
+          border-radius: 9999px !important;
+          padding: 0.65rem 1rem !important;
+          cursor: pointer !important;
+          text-decoration: none !important;
+          white-space: nowrap !important;
         }
         #boletin-embed .button:hover,
         #boletin-embed button[type="submit"]:hover,
         #boletin-embed input[type="submit"]:hover {
-          filter: brightness(0.95);
+          filter: brightness(0.95) !important;
         }
 
-        /* Mensajes de error/ok básicos */
+        /* Mensajes de estado */
         #boletin-embed .error, #boletin-embed .mce_inline_error {
-          color: #FFE4E6;
-          background: rgba(255, 0, 0, 0.15);
-          padding: 0.4rem 0.6rem;
-          border-radius: 0.375rem;
+          color: #FFE4E6 !important;
+          background: rgba(255, 0, 0, 0.15) !important;
+          padding: 0.4rem 0.6rem !important;
+          border-radius: 0.375rem !important;
         }
-        #boletin-embed .success {
-          color: #ECFDF5;
-          background: rgba(16,185,129,0.2);
-          padding: 0.4rem 0.6rem;
-          border-radius: 0.375rem;
+        #boletin-embed .success, #boletin-embed .mc4wp-success {
+          color: #ECFDF5 !important;
+          background: rgba(16,185,129,0.2) !important;
+          padding: 0.4rem 0.6rem !important;
+          border-radius: 0.375rem !important;
+        }
+
+        /* Reset de listas/espacios que a veces rompen el layout del embed */
+        #boletin-embed ul, #boletin-embed ol {
+          padding-left: 1rem !important;
+          margin: 0.5rem 0 !important;
         }
         </style>
 
@@ -112,30 +141,11 @@ sections:
             Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
           </p>
 
-          <!-- Wrapper opcional para ordenar campos si el embed lo permite -->
+          <!-- Wrapper opcional; el shortcode inserta el form dentro -->
           <div class="mt-2">
-            <!-- Si tu shortcode expone slots/campos, podés envolverlos así:
-            <div class="form-row">
-              <div>
-                <label for="mce-EMAIL">Correo electrónico *</label>
-                <input id="mce-EMAIL" type="email" required>
-              </div>
-            </div>
-            <div class="form-row form-row--split">
-              <div>
-                <label for="mce-FNAME">Nombre</label>
-                <input id="mce-FNAME" type="text">
-              </div>
-              <div>
-                <label for="mce-LNAME">Apellido</label>
-                <input id="mce-LNAME" type="text">
-              </div>
-            </div>
-            ... -->
             {{< mc_form >}}
           </div>
 
-          <!-- Link centrado -->
           <p class="text-center mt-4">
             <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
@@ -144,33 +154,53 @@ sections:
         </div>
         {{</ cta_fullwidth >}}
 
-  # ---------- Slack (convertido a cta-image-paragraph) ----------
-  - block: cta-image-paragraph
+  # ---------- Slack (full-width con imagen + texto) ----------
+  - block: markdown
     id: slack
     content:
-      title: "Súmate a nuestra comunidad en Slack"
       text: |
-        Conecta con más de <strong>+1070 personas</strong> interesadas en
-        <strong>educación</strong>, <strong>ciencia abierta</strong> y <strong>colaboración</strong>.
-        Comparte experiencias, aprende de otras personas y participa de conversaciones que inspiran nuevas ideas.
+        {{< cta_fullwidth
+            id="slack"
+            title="Súmate a nuestra comunidad en Slack"
+            bg="#E01E5A"
+            color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <!-- Columna imagen -->
+          <div class="flex justify-center md:justify-start">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png"
+              alt="Slack"
+              style="width:min(180px,40vw); height:auto;"
+              loading="lazy">
+          </div>
 
-        <p class="mt-2">
-          <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" style="text-decoration:underline;">
-            Qué es y cómo sumarme
-          </a>
-        </p>
-      button:
-        text: "Unirme al espacio de MetaDocencia"
-        url: "https://w3id.org/metadocencia/slack"
-      image:
-        src: "/media/logos/slack-logo.svg"   # <-- ajusta el path si usás otro archivo
-        alt: "Slack"
-    design:
-      columns: "2"
-      background:
-        color: "#E01E5A"
-      text_color_light: true
-      padding: ["2.5rem", "clamp(1rem,4vw,3rem)"]
+          <!-- Columna texto + botón -->
+          <div>
+            <p>
+              Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> interesadas en
+              <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
+              y la <strong style="color:#FFFFFF">colaboración</strong>. Comparte experiencias, aprende de otras personas
+              y participa de conversaciones que inspiran nuevas ideas.
+            </p>
+            <p class="mt-2">
+              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
+                 style="color:#FFFFFF; text-decoration:underline;">
+                 Qué es y cómo sumarme
+              </a>
+            </p>
+
+            <div class="mt-4">
+              <a href="https://w3id.org/metadocencia/slack"
+                 class="inline-block font-semibold px-4 py-2 rounded-full"
+                 style="background:#FFFFFF;color:#E01E5A;text-decoration:none;border:0;">
+                 Unirme al espacio de MetaDocencia
+              </a>
+            </div>
+          </div>
+        </div>
+        {{</ cta_fullwidth >}}
 
   # ---------- Comunidades amigas (full-width) ----------
   - block: markdown
