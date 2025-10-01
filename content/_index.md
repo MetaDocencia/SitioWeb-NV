@@ -53,7 +53,7 @@ sections:
           @media (max-width: 768px) {
             section#hero-home.hero-max-bounded,
             section#hero-home.hero-max-bounded .hero-bg {
-              max-height: 64vh;
+              max-height: 90vh;
               min-height: 44vh;
             }
             section#hero-home .container {
