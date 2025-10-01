@@ -1,0 +1,16 @@
+main:
+  - name: Home
+    url: /en/
+    weight: 10
+
+  - name: About us
+    url: /en/quienes-somos/
+    weight: 20
+
+  - name: What we do
+    url: /en/que-hacemos/
+    weight: 30
+
+  - name: Blog
+    url: /en/post/
+    weight: 40
