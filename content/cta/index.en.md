@@ -81,12 +81,12 @@ sections:
           <p class="mb-6">
             Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
           </p>
-
-          <!-- Logos generados automáticamente desde authors con user_group = "Comunidades Amigas" -->
+  
+          <!-- Logos generados automáticamente desde authors con user_groups = "Comunidades Amigas" -->
           <div class="mt-4">
-            {{< people_list group="Comunidades Amigas" columns="4" >}}
+            {{< people user_groups="Comunidades Amigas" columns="4" >}}
           </div>
-
+  
           <div class="mt-6">
             <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
                class="inline-block font-semibold px-4 py-2 rounded"
@@ -96,6 +96,7 @@ sections:
           </div>
         </div>
         {{</ cta_fullwidth >}}
+
 
   # ---------- Auspiciantes / Apoya (FULL-WIDTH + people_list en 5 columnas) ----------
   - block: markdown
