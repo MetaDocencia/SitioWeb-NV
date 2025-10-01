@@ -117,10 +117,10 @@ sections:
           role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
           text: |
             Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
-        - name: "Marina Compagnucci"
-          role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
+         - name: "Julio Zetter"
+          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de una formación en Ciencia Abierta"
           text: |
-            Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio.
+            No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia.
         - name: "Verónica Xhardez"
           role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
           text: |
