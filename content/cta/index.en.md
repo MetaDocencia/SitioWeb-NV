@@ -65,81 +65,73 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
-  # ---------- Comunidades amigas ----------
-  - block: cta-card
+  # ---------- Comunidades amigas (FULL-WIDTH + people_list) ----------
+  - block: markdown
     id: comunidades
     content:
-      title: "Comunidades amigas"
       text: |
-        Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
+        {{< cta_fullwidth
+            id="comunidades"
+            title="Comunidades amigas"
+            bg="#F77B20"
+            color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-6">
+            Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
+          </p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center mt-4">
-          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo08.png" alt="Comunidad 8" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo09.png" alt="Comunidad 9" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo10.png" alt="Comunidad 10" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo11.png" alt="Comunidad 11" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo12.png" alt="Comunidad 12" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo13.png" alt="Comunidad 13" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo14.png" alt="Comunidad 14" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo15.png" alt="Comunidad 15" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo16.png" alt="Comunidad 16" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo17.png" alt="Comunidad 17" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo18.png" alt="Comunidad 18" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo19.png" alt="Comunidad 19" class="max-h-10 w-auto opacity-95">
-          <img src="/media/logos/comunidades/logo20.png" alt="Comunidad 20" class="max-h-10 w-auto opacity-95">
+          <!-- Logos generados automáticamente desde authors con user_group = "Comunidades Amigas" -->
+          <div class="mt-4">
+            {{< people_list group="Comunidades Amigas" columns="4" >}}
+          </div>
+
+          <div class="mt-6">
+            <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
+               class="inline-block font-semibold px-4 py-2 rounded"
+               style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;text-decoration:none;">
+               Suma tu comunidad
+            </a>
+          </div>
         </div>
-      button:
-        text: "Suma tu comunidad"
-        url: "mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
-    design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#F77B20;color:#FFFFFF;"
+        {{</ cta_fullwidth >}}
 
-  # ---------- Auspiciantes / Apoya (texto con links) ----------
-  - block: cta-card
+  # ---------- Auspiciantes / Apoya (FULL-WIDTH + people_list en 5 columnas) ----------
+  - block: markdown
     id: auspiciantes
     content:
-      title: "Apoya a MetaDocencia"
       text: |
-        Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión. 
+        {{< cta_fullwidth
+            id="auspiciantes"
+            title="Apoya a MetaDocencia"
+            bg="#00506F"
+            color="#FFFFFF"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+        >}}
+        <div class="mx-auto max-w-6xl">
+          <p>
+            Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
+          </p>
 
-        <!-- Logos auspiciantes -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
-          <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/CSS_sponsor.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/NASA_sponsor.png" alt="NASA" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/arecibo-sponsor.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/czi_sponsor.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/gbmf_sponsor.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/ioi_sponsor.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/inta_sponsor.jpg" alt="INTA" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/labi-sponsor.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/obf_sponsor.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/ols-sponsor.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/quest_sponsor.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95" loading="lazy">
-          <img src="/media/sponsors/rladiesba_sponsor.jpg" alt="RLadies Buenos Aires" class="max-h-10 w-auto opacity-95" loading="lazy">
+          <!-- Logos generados automáticamente desde authors con user_group = "Auspiciantes" -->
+          <div class="mt-6">
+            {{< people_list group="Auspiciantes" columns="5" >}}
+          </div>
+
+          <!-- Texto de contacto + donación -->
+          <p class="mt-6">
+            Si tu organización comparte nuestra misión, escribinos a
+            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+            para explorar cómo colaborar.
+          </p>
+          <p class="mt-2">
+            Podés hacer tu aporte a través de nuestro
+            <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+            y ayudarnos a sostener y ampliar nuestras actividades.
+          </p>
         </div>
-
-        <!-- Texto de contacto + donación -->
-        <p class="mt-6">
-          Si tu organización comparte nuestra misión, escribinos a
-          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
-          para explorar cómo colaborar.
-        </p>
-        <p class="mt-2">
-          Podés hacer tu aporte a través de nuestro
-          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
-          y ayudarnos a sostener y ampliar nuestras actividades.
-        </p>
-    design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#00506F;color:#FFFFFF;"
+        {{</ cta_fullwidth >}}
 
   # ---------- Redes (botones clicables en grid) ----------
   - block: cta-card
