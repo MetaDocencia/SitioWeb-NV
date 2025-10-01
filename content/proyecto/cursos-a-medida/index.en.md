@@ -1,6 +1,6 @@
 ---
 title: "Skills training"
-summary: "Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales."
+summary: "We design bespoke courses and trainings, tailored to the needs of each institution or community, to strengthen capacities in open science, data analysis, and digital tools."
 date: 2025-09-23
 tags:
   - Formación
