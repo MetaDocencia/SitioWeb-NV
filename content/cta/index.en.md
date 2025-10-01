@@ -65,38 +65,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
-  # ---------- Comunidades amigas (FULL-WIDTH + people_list) ----------
-  - block: markdown
-    id: comunidades
-    content:
-      text: |
-        {{< cta_fullwidth
-            id="comunidades"
-            title="Comunidades amigas"
-            bg="#F77B20"
-            color="#FFFFFF"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <div class="mx-auto max-w-6xl">
-          <p class="mb-6">
-            Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
-          </p>
-  
-          <!-- Logos generados automáticamente desde authors con user_groups = "Comunidades Amigas" -->
-          <div class="mt-4">
-            {{< people user_groups="Comunidades Amigas" columns="4" >}}
-          </div>
-  
-          <div class="mt-6">
-            <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
-               class="inline-block font-semibold px-4 py-2 rounded"
-               style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;text-decoration:none;">
-               Suma tu comunidad
-            </a>
-          </div>
-        </div>
-        {{</ cta_fullwidth >}}
-
 
   # ---------- Auspiciantes / Apoya (FULL-WIDTH + people_list en 5 columnas) ----------
   - block: markdown
@@ -114,13 +82,12 @@ sections:
           <p>
             Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
           </p>
-
-          <!-- Logos generados automáticamente desde authors con user_group = "Auspiciantes" -->
+  
+          <!-- Logos generados automáticamente desde authors con user_groups = "Auspiciantes" -->
           <div class="mt-6">
-            {{< people_list group="Auspiciantes" columns="5" >}}
+            {{< people user_groups="Auspiciantes" columns="5" >}}
           </div>
-
-          <!-- Texto de contacto + donación -->
+  
           <p class="mt-6">
             Si tu organización comparte nuestra misión, escribinos a
             <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
@@ -133,6 +100,7 @@ sections:
           </p>
         </div>
         {{</ cta_fullwidth >}}
+
 
   # ---------- Redes (botones clicables en grid) ----------
   - block: cta-card
