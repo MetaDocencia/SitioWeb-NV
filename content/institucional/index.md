@@ -111,5 +111,6 @@ sections:
     design:
       card:
         css_class: "shadow-sm"
-        css_style: "background-color:#FFFFFF;color:#111827;"  # claro en light / legible en dark por herencia
+        css_style: "background-color:#F77B20;color:#FFFFFF;"
+
 ---
