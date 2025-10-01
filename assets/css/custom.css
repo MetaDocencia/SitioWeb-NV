@@ -549,61 +549,27 @@ section.testimonials-compact .space-y-3 > * + * {
   justify-content: center;
 }
 
-/* === Footer: 2 columnas, últimos 3 links a la derecha (ES y EN) === */
-
-/* Contenedor de enlaces del footer (Hugo Blox suele usar .footer-links).
-   También agregamos selectores alternativos por si la plantilla usa ul/li. */
-.site-footer .footer-links,
-.site-footer .footer-links ul {
+/* ===== Footer en 2 columnas: textos a la izquierda, 3 enlaces a la derecha ===== */
+.mdnv-footer-grid {
   display: grid;
-  grid-template-columns: 1fr auto;  /* izquierda flexible, derecha ajustada */
+  grid-template-columns: 1fr auto;
   align-items: start;
   gap: 0.35rem 2rem;
+  margin-top: 0.35rem;
+}
+.mdnv-footer-left { /* opcional por si quieres poner otros links a la izquierda */ }
+.mdnv-footer-right a {
+  display: block;
+  text-align: right;
 }
 
-/* Normaliza hijos directos: enlaces sueltos o items de lista */
-.site-footer .footer-links > a,
-.site-footer .footer-links > * > a,
-.site-footer .footer-links > li,
-.site-footer .footer-links ul > li {
-  grid-column: 1;              /* por defecto, columna izquierda */
-}
-
-/* Mueve los 3 últimos a la columna derecha y alínealos a la derecha */
-.site-footer .footer-links > a:nth-last-child(3),
-.site-footer .footer-links > a:nth-last-child(2),
-.site-footer .footer-links > a:nth-last-child(1),
-.site-footer .footer-links > *:nth-last-child(3),
-.site-footer .footer-links > *:nth-last-child(2),
-.site-footer .footer-links > *:nth-last-child(1),
-.site-footer .footer-links ul > li:nth-last-child(3),
-.site-footer .footer-links ul > li:nth-last-child(2),
-.site-footer .footer-links ul > li:nth-last-child(1) {
-  grid-column: 2;
-  justify-self: end;           /* alineado a la derecha dentro de la col derecha */
-}
-
-/* Si el ítem de la derecha es un <li>, asegúrate de alinear su <a> también */
-.site-footer .footer-links > li:nth-last-child(-n+3) > a,
-.site-footer .footer-links ul > li:nth-last-child(-n+3) > a {
-  justify-self: end;
-}
-
-/* Responsivo: en pantallas chicas, todo en una sola columna a la izquierda */
+/* Responsivo: una sola columna en móvil */
 @media (max-width: 768px) {
-  .site-footer .footer-links,
-  .site-footer .footer-links ul {
+  .mdnv-footer-grid {
     grid-template-columns: 1fr;
     gap: 0.35rem 0;
   }
-  .site-footer .footer-links > a,
-  .site-footer .footer-links > * > a,
-  .site-footer .footer-links > li,
-  .site-footer .footer-links ul > li,
-  .site-footer .footer-links > a:nth-last-child(-n+3),
-  .site-footer .footer-links > *:nth-last-child(-n+3),
-  .site-footer .footer-links ul > li:nth-last-child(-n+3) {
-    grid-column: 1 !important;
-    justify-self: start !important;
+  .mdnv-footer-right a {
+    text-align: left;
   }
 }
