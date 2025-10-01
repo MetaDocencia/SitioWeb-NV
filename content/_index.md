@@ -7,7 +7,9 @@ design:
   spacing: "6rem"
 
 sections:
+  # === HERO (con alto acotado) ===
   - block: hero
+    id: hero-home
     content:
       title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos a América Latina en el mapa de la investigación global</span>'
       text: |
@@ -21,7 +23,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark"
+      css_class: "dark hero-max-bounded"
       background:
         color: "navy"
         image:
@@ -32,6 +34,34 @@ sections:
           position: center
           parallax: true
         text_color_light: true
+
+  # === ESTILOS LOCALES para limitar el alto del HERO ===
+  - block: markdown
+    id: estilos-hero-home
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
+          section#hero-home.hero-max-bounded,
+          section#hero-home.hero-max-bounded .hero-bg {
+            max-height: 70vh;   /* ajustá 64–72vh según preferencia */
+            min-height: 46vh;   /* evita que quede demasiado “chato” */
+          }
+
+          /* Móvil: achicar un poco más y recortar padding interno */
+          @media (max-width: 768px) {
+            section#hero-home.hero-max-bounded,
+            section#hero-home.hero-max-bounded .hero-bg {
+              max-height: 64vh;
+              min-height: 44vh;
+            }
+            section#hero-home .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
 
   # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
   - block: cta-image-paragraph
@@ -182,8 +212,6 @@ sections:
             }
           }
         </style>
-
-
 
   # --- Equipo y CA ---
   - block: markdown
