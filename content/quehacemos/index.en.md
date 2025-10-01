@@ -205,7 +205,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Learn more →</a>
 
-        - name: "Train-the-Trainers"
+        - name: "Train the Trainers"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We created a Spanish-language program to teach and certify pedagogical and practical skills, multiplying learning and boosting collective impact.
