@@ -6,15 +6,17 @@ design:
   spacing: "3rem"
 
 sections:
-  # ---------- HERO ----------
+  # ---------- HERO (con alto acotado como Home) ----------
   - block: hero
+    id: hero-que-hacemos
     content:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
         margin: [0, 0, 0, 0]
-      css_style: "min-height: 20vh;"
+      css_class: "hero-max-bounded"
+      css_style: ""
       background:
         image:
           filename: "quienessomos.jpg"
@@ -22,7 +24,36 @@ sections:
             brightness: 0.45
           size: cover
           position: center
+          parallax: true
         text_color_light: true
+
+  # === ESTILOS LOCALES para limitar el alto del HERO ===
+  - block: markdown
+    id: estilos-hero-que-hacemos
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ===== Qué hacemos: acotar alto del hero y reducir padding interno ===== */
+          section#hero-que-hacemos.hero-max-bounded,
+          section#hero-que-hacemos.hero-max-bounded .hero-bg {
+            max-height: 90vh;   /* replicado de Home */
+            min-height: 70vh;   /* replicado de Home */
+          }
+
+          /* Móvil: achicar un poco más y recortar padding interno */
+          @media (max-width: 768px) {
+            section#hero-que-hacemos.hero-max-bounded,
+            section#hero-que-hacemos.hero-max-bounded .hero-bg {
+              max-height: 90vh;
+              min-height: 44vh;
+            }
+            section#hero-que-hacemos .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
 
   # ---------- PILARES ----------
   - block: features
@@ -257,7 +288,6 @@ sections:
         - name: "Emmanuel Iarussi"
           role: "Científico en CONICET y profesor UTDT"
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
-        
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
