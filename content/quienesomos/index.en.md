@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: "ABOUT US"
+      title: "About us"
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world.
@@ -18,20 +18,20 @@ sections:
 
         <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="/institucional"
+          <a href="/en/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Institutional</a>
-          <a href="/institucional#vision"
+          <a href="/en/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Mission &amp; Vision</a>
-          <a href="/institucional#valores"
+          <a href="/en/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Our Values</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="https://mdnv.netlify.app/post/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> in the words of our Co-Director, Laura Ación.
+            <a href="[en/post/](https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/)" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> in the words of our Co-Director, Laura Ación.
           </p>
           <p class="text-white/95 text-base md:text-lg">
             MetaDocencia is fiscally sponsored by <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
@@ -95,8 +95,8 @@ sections:
               </div>
               <div data-16x9>
                 <iframe
-                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-                  title="MetaDocencia - 5 años"
+                  src="https://www.youtube.com/embed/bj59_0v2a1U"
+                  title="MetaDocencia - 5 years"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen>
@@ -290,9 +290,9 @@ sections:
       text: |
         {{< cta_fullwidth
             id="apoya"
-            title="Apoya a la ciencia latinoamericana"
+            title="Support Latin American science"
             text=""
-            button_text="Aquí te contamos cómo"
+            button_text="Join us"
             button_url="https://www.metadocencia.org/contacto/"
             bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
@@ -302,7 +302,7 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-        <p>Nuestras redes:</p>
+        <p>Our social media channels:</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
