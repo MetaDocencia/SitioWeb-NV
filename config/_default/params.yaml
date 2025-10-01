@@ -42,20 +42,23 @@ header:
     show_search: true
     show_theme_chooser: true
 
-# === Footer: texto + accesos ===
 footer:
   enable: true
   show_translucent: false
   lines:
     - 'MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.'
     - 'Publicado con <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.'
-  link_items:
-    - text: "Pautas de Convivencia"
-      url: "https://zenodo.org/records/12534196"
-    - text: "Política de Accesibilidad"
-      url: "https://zenodo.org/records/10514982"
-    - text: "Licencia"
-      url: "https://mdnv.netlify.app/licencia/"
+    - |
+      <div class="mdnv-footer-grid">
+        <div class="mdnv-footer-left"><!-- Podés poner otros enlaces a la izquierda si querés --></div>
+        <nav class="mdnv-footer-right" aria-label="Enlaces legales">
+          <a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener">Pautas de Convivencia</a>
+          <a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener">Política de Accesibilidad</a>
+          <a href="https://mdnv.netlify.app/licencia/">Licencia</a>
+        </nav>
+      </div>
+  link_items: []   # Vacío para no duplicar enlaces
+
 
 
 # Localization
