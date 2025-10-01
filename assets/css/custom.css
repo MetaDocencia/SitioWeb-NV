@@ -549,45 +549,69 @@ section.testimonials-compact .space-y-3 > * + * {
   justify-content: center;
 }
 
-/* ===== Footer aún más compacto ===== */
-
-/* 1) Quitar margen del último section antes del footer */
-main > section:last-of-type,
-.page-body > section:last-of-type {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+/* ===== Footer en 2 columnas (se mantiene igual) ===== */
+.mdnv-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;          /* alinea arriba ambos lados */
+  gap: 0.3rem 2rem;
+  margin: 0;
+  padding: 0;
+}
+.mdnv-footer-left p { margin: 0.12rem 0; }
+.mdnv-footer-right a {
+  display: block;
+  text-align: right;
+  margin: 0.12rem 0;
 }
 
-/* 2) Reducir padding vertical del footer */
-footer, .site-footer, .footer, .page-footer {
+/* ===== Compactación extrema del bloque footer ===== */
+footer, .footer, .site-footer {
   margin-top: 0 !important;
-  padding-top: 0.25rem !important;   /* ↓ ajustá 0–0.5rem */
-  padding-bottom: 0.5rem !important; /* ↓ ajustá 0.35–0.75rem */
-  border-top-width: 0 !important;    /* por si el tema suma borde con “altura” */
+  padding-top: 0.2rem !important;    /* ← ajusta entre 0–0.4rem si quieres menos/más */
+  padding-bottom: 0.25rem !important;
 }
 
-/* 3) Compactar el contenedor interno del footer (por si trae padding extra) */
+/* Quitar rellenos y márgenes del contenedor del tema dentro del footer */
 footer .container,
 .site-footer .container,
 .footer .container {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-/* 4) Por si el tema usa utilidades tipo .py-* en el wrapper */
-footer [class*="py-"],
-.site-footer [class*="py-"] {
+/* El wrapper interior que a veces agrega separación extra */
+footer .prose,
+footer .content,
+.site-footer .prose,
+.site-footer .content {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
-/* 5) Mantener alineación en 2 columnas que ya tenés */
-.mdnv-footer-grid {
-  align-items: start;  /* alinear arriba */
-  gap: 0.25rem 2rem;   /* un poco menos de gap vertical */
+/* Asegurar que no aparezca un “espacio fantasma” por márgenes de primer/último hijo */
+footer .mdnv-footer-grid,
+footer .mdnv-footer-grid > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
-.mdnv-footer-left p,
-.mdnv-footer-right a {
-  margin: 0.1rem 0;    /* líneas super compactas */
+footer .mdnv-footer-left p:first-child { margin-top: 0 !important; }
+footer .mdnv-footer-left p:last-child { margin-bottom: 0 !important; }
+
+/* Ajuste fino para que ambas columnas arranquen a la misma altura visual */
+footer .mdnv-footer-right { padding-top: 0.02rem; }
+
+/* Responsivo: una columna en móvil */
+@media (max-width: 768px) {
+  .mdnv-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 0.3rem 0;
+  }
+  .mdnv-footer-right a { text-align: left; }
 }
+
 
