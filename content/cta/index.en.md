@@ -7,161 +7,44 @@ design:
 
 sections:
 
-  # ===== Estilos locales: logos (Comunidades & Auspiciantes) =====
-  - block: markdown
-    id: estilos-logos
-    content:
-      title: ""
-      text: |
-        <style>
-          /* Quitar espacio vertical extra de estos bloques */
-          section#boletin-embed, section#slack, section#comunidades,
-          section#auspiciantes, section#redes {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
-          }
-
-          /* Ajustes generales para secciones con logos */
-          section#comunidades,
-          section#auspiciantes {
-            --mdnv-logo-size: clamp(56px, 9vw, 92px);   /* tamaño de los círculos */
-            --mdnv-gap: clamp(0.6rem, 2.2vw, 1.25rem);  /* separación consistente */
-            color: #FFFFFF !important;                  /* texto en blanco */
-          }
-          section#comunidades a,
-          section#auspiciantes a {
-            color: #FFFFFF !important;                  /* enlaces en blanco por defecto */
-          }
-
-          /* Scope SOLO dentro de la grilla de logos para no tocar otros textos/enlaces */
-          section#comunidades .mdnv-logos .grid,
-          section#auspiciantes .mdnv-logos .grid {
-            gap: var(--mdnv-gap) !important;
-            justify-items: center !important;
-            align-items: center !important;             /* alinear verticalmente */
-          }
-          /* Cada item centrado y con el mismo alto interno */
-          section#comunidades .mdnv-logos .grid > *,
-          section#auspiciantes .mdnv-logos .grid > * {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            text-align: center !important;
-          }
-
-          /* Avatares/logos redondos uniformes */
-          section#comunidades .mdnv-logos img,
-          section#auspiciantes .mdnv-logos img,
-          section#comunidades .mdnv-logos .avatar,
-          section#auspiciantes .mdnv-logos .avatar {
-            width: var(--mdnv-logo-size) !important;
-            height: var(--mdnv-logo-size) !important;
-            border-radius: 9999px !important;
-            object-fit: cover !important;
-            display: block !important;
-            margin: 0 !important;
-            background: transparent !important;
-          }
-
-          /* Eliminar paddings internos que desalinean los círculos */
-          section#comunidades .mdnv-logos [class*="p-"],
-          section#auspiciantes .mdnv-logos [class*="p-"] {
-            padding: 0 !important;
-          }
-
-          /* Nombre/leyendas bajo cada logo: chico y blanco SOLO dentro de la grilla */
-          section#comunidades .mdnv-logos .font-semibold,
-          section#auspiciantes .mdnv-logos .font-semibold,
-          section#comunidades .mdnv-logos .text-sm,
-          section#auspiciantes .mdnv-logos .text-sm,
-          section#comunidades .mdnv-logos .opacity-70,
-          section#auspiciantes .mdnv-logos .opacity-70 {
-            font-size: 0.72rem !important;
-            line-height: 1.1 !important;
-            color: #FFFFFF !important;
-          }
-
-          /* Fuera de la grilla de logos, mantener tamaño normal de párrafos/enlaces */
-          section#comunidades p a,
-          section#auspiciantes p a {
-            font-size: inherit !important;
-          }
-
-          /* Botón blanco con texto naranja (reforzado para Ganar sobre el scope de enlaces blancos) */
-          .mdnv-btn-white-orange,
-          section#comunidades .mdnv-btn-white-orange {
-            display: inline-block;
-            font-weight: 700;
-            padding: .5rem .9rem;
-            border-radius: .5rem;
-            background: #FFFFFF !important;
-            color: #F77B20 !important;   /* texto naranja visible */
-            text-decoration: none !important;
-            border: 1px solid rgba(0,0,0,.06);
-          }
-        </style>
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Boletín (full-bleed) ----------
+  # ---------- Boletín (full-width) ----------
   - block: markdown
     id: boletin-embed
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
+            id="boletin-embed"
             title="Boletín MetaDocencia"
-            text=""
-            bg="#00506F" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
+            bg="#00506F"
+            color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div class="mx-auto max-w-3xl text-white">
+        <div class="mx-auto max-w-3xl">
           <p class="text-lg leading-relaxed mb-4">
             Recibe en tu correo nuestras novedades, propuestas de formación, oportunidades y eventos de interés.
           </p>
 
+          <!-- Formulario embebido -->
           <div class="mt-2">
             {{< mc_form >}}
           </div>
 
+          <!-- Link centrado -->
           <p class="text-center mt-4">
             <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
             </a>
           </p>
         </div>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
+        {{</ cta_fullwidth >}}
 
-  # ---------- Slack (full-bleed) ----------
-  - block: markdown
+  # ---------- Slack (se mantiene como card) ----------
+  - block: cta-card
     id: slack
     content:
-      title: ""
+      title: "Súmate a nuestra comunidad en Slack"
       text: |
-        {{< cta_fullwidth
-            title="Súmate a nuestra comunidad en Slack"
-            text=""
-            button_text="Unirme al espacio de MetaDocencia"
-            button_url="https://w3id.org/metadocencia/slack"
-            bg="#E01E5A" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#E01E5A"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-        >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
+        <div style="color:#FFFFFF">
           <p>
             Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> que comparten interés por la
             <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
@@ -174,109 +57,129 @@ sections:
             </a>
           </p>
         </div>
-        {{< /cta_fullwidth >}}
+      button:
+        text: "Unirme al espacio de MetaDocencia"
+        url: "https://w3id.org/metadocencia/slack"
     design:
-      spacing:
-        padding: [0, 0, 0, 0]
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
-  # ---------- Comunidades amigas (full-bleed) ----------
+  # ---------- Comunidades amigas (full-width) ----------
   - block: markdown
     id: comunidades
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
+            id="comunidades"
             title="Comunidades amigas"
-            text=""
-            bg="#F77B20" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
+            bg="#F77B20"
+            color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <p class="max-w-3xl mx-auto">
-          Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
-        </p>
-        
+        <div class="mx-auto max-w-6xl">
+          <p class="mb-6">
+            Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.
+          </p>
 
-        <!-- Lista dinámica desde authors: user_groups: Fellow Communities -->
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
+          <!-- Logos -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
+            <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo05.png" alt="Comunidad 5" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo06.png" alt="Comunidad 6" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo07.png" alt="Comunidad 7" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo08.png" alt="Comunidad 8" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo09.png" alt="Comunidad 9" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo10.png" alt="Comunidad 10" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo11.png" alt="Comunidad 11" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo12.png" alt="Comunidad 12" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo13.png" alt="Comunidad 13" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo14.png" alt="Comunidad 14" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo15.png" alt="Comunidad 15" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo16.png" alt="Comunidad 16" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo17.png" alt="Comunidad 17" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo18.png" alt="Comunidad 18" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo19.png" alt="Comunidad 19" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/logos/comunidades/logo20.png" alt="Comunidad 20" class="max-h-10 w-auto opacity-95" loading="lazy">
+          </div>
+
+          <!-- Botón -->
+          <div class="mt-6">
+            <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
+               class="inline-block font-semibold px-4 py-2 rounded"
+               style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;text-decoration:none;">
+               Suma tu comunidad
+            </a>
+          </div>
         </div>
+        {{</ cta_fullwidth >}}
 
-        <!-- Botón debajo de los logos con texto en naranja -->
-        <p class="mt-5">
-          <a href="mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad" class="mdnv-btn-white-orange">
-            Suma tu comunidad
-          </a>
-        </p>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Auspiciantes / Apoya (full-bleed, texto + logos dinámicos) ----------
+  # ---------- Apoya a MetaDocencia (full-width) ----------
   - block: markdown
     id: auspiciantes
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
+            id="auspiciantes"
             title="Apoya a MetaDocencia"
-            text=""
-            bg="#00506F" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
+            bg="#00506F"
+            color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <p class="max-w-3xl mx-auto">
-          Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
-        </p>
+        <div class="mx-auto max-w-6xl">
+          <p>
+            Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.
+          </p>
 
-        <!-- Lista dinámica desde authors: user_groups: Current -->
-        <div class="mt-4 mdnv-logos">
-          {{< people_list group="Current" columns=6 gapx="8rem" gapy="3rem" >}}
+          <!-- Logos auspiciantes -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center mt-4">
+            <img src="/media/sponsors/2i2c-sponsor.png" alt="2i2c" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/CSS_sponsor.png" alt="Center for Scientific Software" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/NASA_sponsor.png" alt="NASA" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/arecibo-sponsor.jpg" alt="Arecibo" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/czi_sponsor.png" alt="Chan Zuckerberg Initiative" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/gbmf_sponsor.png" alt="Gordon and Betty Moore Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/ioi_sponsor.png" alt="Invest in Open Infrastructure" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/inta_sponsor.jpg" alt="INTA" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/labi-sponsor.jpg" alt="Latin American Bioimaging" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/obf_sponsor.png" alt="Open Bioinformatics Foundation" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/ols-sponsor.jpg" alt="Open Life Science" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/quest_sponsor.jpg" alt="QUEST" class="max-h-10 w-auto opacity-95" loading="lazy">
+            <img src="/media/sponsors/rladiesba_sponsor.jpg" alt="R-Ladies Buenos Aires" class="max-h-10 w-auto opacity-95" loading="lazy">
+          </div>
+
+          <!-- Texto de contacto + donación -->
+          <p class="mt-6">
+            Si tu organización comparte nuestra misión, escribinos a
+            <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+            para explorar cómo colaborar.
+          </p>
+          <p class="mt-2">
+            Podés hacer tu aporte a través de nuestro
+            <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+            y ayudarnos a sostener y ampliar nuestras actividades.
+          </p>
         </div>
+        {{</ cta_fullwidth >}}
 
-        <p class="mt-6 max-w-3xl mx-auto">
-          Si tu organización comparte nuestra misión, escribinos a
-          <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
-          para explorar cómo colaborar.
-        </p>
-        <p class="mt-2 max-w-3xl mx-auto">
-          Podés hacer tu aporte a través de nuestro
-          <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
-          y ayudarnos a sostener y ampliar nuestras actividades.
-        </p>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
-
-  # ---------- Redes (full-bleed) ----------
+  # ---------- Sigue el intercambio (redes, full-width) ----------
   - block: markdown
     id: redes
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
+            id="redes"
             title="Sigue el intercambio"
-            text=""
-            bg="#C83737" fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
+            bg="#C83737"
+            color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        <div style="color:#FFFFFF" class="max-w-3xl mx-auto">
+        <div class="mx-auto max-w-6xl">
           <p>
             Acompañanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos:
             <strong style="color:#FFFFFF">@metadocencia</strong>
           </p>
+
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
@@ -310,8 +213,5 @@ sections:
             </a>
           </div>
         </div>
-        {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        padding: [0, 0, 0, 0]
+        {{</ cta_fullwidth >}}
 ---
