@@ -117,7 +117,7 @@ sections:
           role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
           text: |
             Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
-         - name: "Julio Zetter"
+        - name: "Julio Zetter"
           role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de una formación en Ciencia Abierta"
           text: |
             No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia.
