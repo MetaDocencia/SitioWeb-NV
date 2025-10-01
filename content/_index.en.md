@@ -12,7 +12,7 @@ sections:
   - block: hero
     content:
       # Title in HTML to control size/contrast
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the map of global research</span>'
+      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the global research map</span>'
       # Larger, high-contrast custom button
       text: |
         <a href="/en/cta/"
@@ -41,40 +41,40 @@ sections:
     id: solutions
     content:
       items:
-        - title: "Who we are"
-          text: "MetaDocencia is a nonprofit founded in 2020. Our community brings together people and organizations that build local scientific capacity to transform global science. We grow science through networks—from Latin America to the world."
-          image: "quienesomos.jpg"
+        - title: "About us"
+          text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
+          image: "quienes-somos.jpg"
           button:
-            text: "Learn about us"
-            url: "/en/who-we-are/"
+            text: "Meet us"
+            url: "/en/quienes-somos/"
         - title: "What we do"
-          text: "We work so that the production, communication, and application of scientific and technical knowledge are globally equitable."
+          text: "We cultivate the Latin American scientific ecosystem through infrastructure, training, and community."
           feature_icon: check
           features:
-            - "We strengthen research infrastructure"
-            - "We train researchers and practitioners"
-            - "We build community"
+            - "Enhancing infrastructure"
+            - "Training for researchers"
+            - "Fostering  community"
           image: "organigramaapaisado.png"
           button:
-            text: "Explore our projects"
-            url: "/en/what-we-do/"
+            text: "Learn more about our projects"
+            url: "/en/que-hacemos/"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
 
   - block: stats
     content:
       items:
-        - statistic: "NN"
+        - statistic: "+200"
           description: |
-            Funded  
-            projects
+            documents  
+            on Zenodo
         - statistic: "+1,500"
           description: |
             people  
             trained
         - statistic: "+1,000"
           description: |
-            people in the  
+            people in our  
             Slack community
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
@@ -86,23 +86,212 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Julio Zetter"
-          role: "Chief Coordinator of the SciELO Mexico database and virtual library"
-          image: "juliozetter.jpeg"
-          text: "I can only thank the instructors who made this course possible; it is undoubtedly the seed of great outcomes. Thank you so much, MetaDocencia."
+        - name: "Carly Strasser"
+          role: "Senior Program Officer, CZI, after the first-ever CZI event in Latin America"
+          text: "I'm in awe of the professionalism, thoughtfulness, and kindness of everyone from MetaDocencia. It was a special treat to be able to work with you all."
+        - name: "Marina Compagnucci"
+          role: "Biologist and MetaDocencia Contributor; participated in designing and contextualizing NASA Open Science educational content"
+          text: "Working with MetaDocencia means proudly feeling part of a team that is attentive, warm, diverse, responsible, and committed to its mission and to the people who make MetaDocencia. It’s no surprise the proposals are creative when dialogue in that space feels naturally comfortable and reassuring."
+        - name: "Verónica Xhardez"
+          role: "Researcher at UNTREF and CIECTI, Technical Coordinator at ARPHAI"
+          text: "So much collective learning along the way! 🍎 Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
-  - block: cta-card
+    # ===== Estilos LOCALES solo para esta página =====
+  - block: markdown
+    id: estilos-collapsibles
     content:
-      title: "Support Latin American science"
-      text: "Here’s how you can help"
-      button:
-        text: "Join us"
-        url: "/en/cta/"
-    design:
-      card:
-        css_class: "bg-primary-700"
-        css_style: ""
+      title: ""
+      text: |
+        <style>
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch;
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
+          }
+
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
+          }
+
+          /* ===== Colapsables ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
+
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;
+          }
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
+          }
+        </style>
+
+
+
+  # --- Equipo y CA ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    content:
+      title: "Team and Advisory Committee"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboran con MetaDocencia ---
+  - block: markdown
+    id: colaboradores
+    content:
+      title: "Contributors"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Auspiciantes ---
+  - block: markdown
+    id: auspiciantes
+    content:
+      title: "Sponsors"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Current" columns=4 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Fellow Communities"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: colaboraron-con-metadocencia
+    content:
+      title: "Former Contributors"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # ===== CTA final =====
+  - block: markdown
+    id: apoya
+    content:
+      title: ""
+      text: |
+        {{< cta_fullwidth
+            id="apoya"
+            title="Support Latin American science"
+            text=""
+            button_text="Join us"
+            button_url="/en/cta/"
+            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+        <p>Nuestras redes:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
+        </div>
+        {{< /cta_fullwidth >}}
+---
+
 ---
