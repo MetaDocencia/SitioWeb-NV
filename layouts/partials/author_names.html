@@ -2,13 +2,27 @@
 {{- $names := slice -}}
 {{- with .authors -}}
   {{- range . -}}
-    {{- $slug := . -}}
-    {{- $p := site.GetPage (printf "authors/%s" $slug) -}}
-    {{- if $p -}}
-      {{- $display := or $p.Title $p.Params.name $slug -}}
+    {{- $slug := lower (urlize .) -}}
+    {{- $page := site.GetPage (printf "authors/%s" $slug) -}}
+
+    {{/* Búsqueda secundaria: matchea por .Params.slug o por BaseFileName */}}
+    {{- if not $page -}}
+      {{- with site.GetPage "authors" -}}
+        {{- range .Pages -}}
+          {{- $pSlug := lower (urlize (or .Params.slug .File.BaseFileName)) -}}
+          {{- if eq $pSlug $slug -}}
+            {{- $page = . -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if $page -}}
+      {{- $display := or $page.Title $page.Params.name $slug -}}
       {{- $names = $names | append $display -}}
     {{- else -}}
-      {{- $names = $names | append $slug -}} {{/* Fallback si no existe la página del autor */}}
+      {{- $names = $names | append $slug -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
