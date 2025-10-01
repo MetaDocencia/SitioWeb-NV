@@ -45,8 +45,8 @@ sections:
           /* ===== Home: acotar alto del hero y reducir padding interno ===== */
           section#hero-home.hero-max-bounded,
           section#hero-home.hero-max-bounded .hero-bg {
-            max-height: 70vh;   /* ajustá 64–72vh según preferencia */
-            min-height: 46vh;   /* evita que quede demasiado “chato” */
+            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
+            min-height: 70vh;   /* evita que quede demasiado “chato” */
           }
 
           /* Móvil: achicar un poco más y recortar padding interno */
