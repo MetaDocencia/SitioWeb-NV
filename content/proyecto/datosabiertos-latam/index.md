@@ -1,5 +1,6 @@
 ---
 title: "Procesamiento de datos abiertos para redes latinoamericanas de investigación"
+traslationKey: "datosabiertos-latam"
 summary: "Garantizamos el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica."
 date: 2025-09-23
 tags:
