@@ -328,7 +328,7 @@ sections:
     content:
       items:
         - name: "Andrés Kamaid"
-          role: "Researcher, Institut Pasteur Montevideo — following a consultancy for Latin American Bioimaging"
+          role: "Researcher, Advanced Bioimaging Unit, Institut Pasteur Montevideo — following a consultancy for Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
         - name: "Verónica Xhardez"
           role: "ARPHAI"
