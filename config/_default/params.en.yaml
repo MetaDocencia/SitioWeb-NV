@@ -1,30 +1,36 @@
-# Site header
-header:
-  navbar:
-    enable: true
-    blox: "navbar"
-    align: "center"
-    fixed_to_top: true
-    logo:
-      text: "MetaDocencia"
-    button:
-      enable: true
-      text: "Join us"
-      url: "en/cta/"
-    show_search: true
-    show_theme_chooser: true
+/* Footer: 2 columnas, con los 3 últimos links a la derecha */
+.site-footer .footer-links {
+  display: grid;
+  grid-template-columns: 1fr auto;         /* izquierda flexible, derecha ajustada */
+  align-items: start;
+  gap: 0.35rem 2rem;                        /* espacio entre filas/columnas */
+}
 
-# === Footer: texto + accesos ===
-footer:
-  enable: true
-  show_translucent: false
-  lines:
-    - 'MetaDocencia is a fiscally sponsored project of <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.'
-    - 'Published with <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.'
-  link_items:
-    - text: "Code of Conduct"
-      url: "https://zenodo.org/records/12534196"
-    - text: "Accessibility Policy"
-      url: "https://zenodo.org/records/10514982"
-    - text: "Licence"
-      url: "https://mdnv.netlify.app/en/licencia/"
+/* Por defecto, todos a la columna izquierda */
+.site-footer .footer-links > a {
+  grid-column: 1;
+}
+
+/* Los 3 últimos enlaces (License, Code of Conduct, Accessibility Policy) a la derecha */
+.site-footer .footer-links > a:nth-last-child(3),
+.site-footer .footer-links > a:nth-last-child(2),
+.site-footer .footer-links > a:nth-last-child(1) {
+  grid-column: 2;
+  justify-self: end;                        /* alinea a la derecha dentro de la col derecha */
+  display: block;
+}
+
+/* En pantallas chicas: una sola columna, todo a la izquierda */
+@media (max-width: 768px) {
+  .site-footer .footer-links {
+    grid-template-columns: 1fr;
+    gap: 0.35rem 0;
+  }
+  .site-footer .footer-links > a,
+  .site-footer .footer-links > a:nth-last-child(3),
+  .site-footer .footer-links > a:nth-last-child(2),
+  .site-footer .footer-links > a:nth-last-child(1) {
+    grid-column: 1 !important;
+    justify-self: start;
+  }
+}
