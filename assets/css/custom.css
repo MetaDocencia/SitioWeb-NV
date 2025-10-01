@@ -549,18 +549,32 @@ section.testimonials-compact .space-y-3 > * + * {
   justify-content: center;
 }
 
-/* ===== Footer en 2 columnas: textos a la izquierda, 3 enlaces a la derecha ===== */
+/* ===== Footer compacto en 2 columnas ===== */
 .mdnv-footer-grid {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;
+  align-items: start;          /* alinea arriba ambos lados */
   gap: 0.35rem 2rem;
-  margin-top: 0.35rem;
+  margin: 0;                   /* sin margen extra en el bloque */
+  padding: 0;                  /* sin padding extra en el bloque */
 }
-.mdnv-footer-left { /* opcional por si quieres poner otros links a la izquierda */ }
+
+/* Columna izquierda: párrafos/lineas del texto institucional */
+.mdnv-footer-left p {
+  margin: 0.15rem 0;           /* líneas bien compactas */
+}
+
+/* Columna derecha: enlaces legales uno debajo del otro */
 .mdnv-footer-right a {
   display: block;
   text-align: right;
+  margin: 0.15rem 0;           /* mismo ritmo vertical que la izquierda */
+}
+
+/* Quitar altura extra del footer del tema (padding/margen superiores) */
+footer, .footer, .site-footer {
+  margin-top: 0 !important;
+  padding-top: 0.5rem !important;  /* ajusta a 0–0.75rem a gusto */
 }
 
 /* Responsivo: una sola columna en móvil */
