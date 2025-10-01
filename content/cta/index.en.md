@@ -39,16 +39,31 @@ sections:
         margin: [0, 0, 0, 0]
 
   # ---------- Slack ----------
-  - block: cta-image-paragraph
+  - block: cta-card
     id: slack
     content:
-      items:
-        - title: "Súmate a nuestra comunidad en Slack"
-          text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png"
-          button:
-            text: "Unirme al espacio de MetaDocencia"
-            url: "https://w3id.org/metadocencia/slack"
+      title: "Súmate a nuestra comunidad en Slack"
+      text: |
+        <div style="color:#FFFFFF">
+          <p>
+            Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> que comparten interés por la
+            <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
+            y la <strong style="color:#FFFFFF">colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+          </p>
+          <p class="mt-2">
+            <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
+               style="color:#FFFFFF; text-decoration:underline;">
+               Qué es y cómo sumarme
+            </a>
+          </p>
+        </div>
+      button:
+        text: "Unirme al espacio de MetaDocencia"
+        url: "https://w3id.org/metadocencia/slack"
+    design:
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
   # ---------- Comunidades amigas ----------
   - block: cta-card
