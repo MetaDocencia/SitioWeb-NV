@@ -53,7 +53,7 @@ sections:
             - "Impulsamos infraestructura"
             - "Formamos capacidades"
             - "Construimos comunidad"
-          image: "organigramaapaisado.png"
+          image: "circuloES.png"
           button:
             text: "Lee más sobre nuestros proyectos"
             url: "/que-hacemos"
