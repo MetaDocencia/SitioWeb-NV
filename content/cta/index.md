@@ -38,26 +38,42 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (reemplazado por cta-image-paragraph) ----------
+  # ---------- Slack (cta-image-paragraph con fondo blanco e imagen al 40%) ----------
   - block: cta-image-paragraph
     id: slack
     content:
       items:
         - title: "Súmate a nuestra comunidad en Slack"
           text: |
-            Conecta con más de **+1070 personas** que comparten interés por la **educación**, la **ciencia abierta**
-            y la **colaboración**. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+            <!-- Estilos locales SOLO para este section -->
+            <style>
+              /* Imagen al 40% en desktop/tablet y 100% en móvil */
+              section#slack img {
+                width: 40% !important;
+                max-width: 40% !important;
+                height: auto !important;
+              }
+              @media (max-width: 768px) {
+                section#slack img {
+                  width: 40% !important;
+                  max-width: 40% !important;
+                }
+              }
+            </style>
+
+            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
+            y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
 
             <p class="mt-3">
-              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
-                 class="underline font-semibold" style="color:#FFFFFF;">Qué es y cómo sumarme</a>
+              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
             </p>
           image: "slack.png"
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
     design:
-      css_style: "background-color:#E01E5A;color:#FFFFFF;"
+      css_style: "background-color:#FFFFFF;color:#111827;"
+
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
