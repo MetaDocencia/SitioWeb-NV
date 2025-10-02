@@ -47,14 +47,24 @@ sections:
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Contenedor más angosto para generar gran margen lateral en desktop */
+              /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
               section#slack .container {
-                max-width: 420px
+                max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
-              /* Imagen SIEMPRE al 40% y centrada (también en móviles) */
+              /* Dos columnas iguales y separación coherente */
+              section#slack [data-2col],
+              section#slack .flex, /* fallback si el bloque usa flex */
+              section#slack .grid { 
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: clamp(1rem, 3vw, 2rem) !important;
+                align-items: center !important;
+              }
+  
+              /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
               section#slack img {
                 width: 40% !important;
                 max-width: 40% !important;
@@ -62,6 +72,14 @@ sections:
                 display: block !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
+              }
+  
+              /* En móviles mantenemos 40% y apilamos si fuera necesario */
+              @media (max-width: 768px) {
+                section#slack [data-2col],
+                section#slack .grid {
+                  grid-template-columns: 1fr !important;
+                }
               }
             </style>
   
@@ -77,6 +95,7 @@ sections:
             url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
+
 
 
   # ---------- Comunidades amigas (sin logos) ----------
