@@ -35,34 +35,6 @@ sections:
           parallax: true
         text_color_light: true
 
-  # === ESTILOS LOCALES para limitar el alto del HERO ===
-  - block: markdown
-    id: estilos-hero-home
-    content:
-      title: ""
-      text: |
-        <style>
-          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
-          section#hero-home.hero-max-bounded,
-          section#hero-home.hero-max-bounded .hero-bg {
-            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
-            min-height: 70vh;   /* evita que quede demasiado “chato” */
-          }
-
-          /* Móvil: achicar un poco más y recortar padding interno */
-          @media (max-width: 768px) {
-            section#hero-home.hero-max-bounded,
-            section#hero-home.hero-max-bounded .hero-bg {
-              max-height: 90vh;
-              min-height: 44vh;
-            }
-            section#hero-home .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
-            }
-          }
-        </style>
-
   # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
   - block: cta-image-paragraph
     id: solutions
@@ -129,89 +101,7 @@ sections:
       spacing:
         padding: ["6rem", 0, 0, 0]
     
-  # ===== Estilos LOCALES solo para esta página =====
-  - block: markdown
-    id: estilos-collapsibles
-    content:
-      title: ""
-      text: |
-        <style>
-          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
-          [data-2col] {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            align-items: stretch;
-          }
-          @media (max-width: 900px) {
-            [data-2col] { grid-template-columns: 1fr; }
-          }
-          .mdnv-vcenter {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mdnv-text-pad {
-            padding-left: clamp(.5rem, 3vw, 2rem);
-            padding-right: clamp(.5rem, 3vw, 2rem);
-          }
 
-          /* Wrapper 16:9 para el iframe */
-          [data-16x9] {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            border-radius: .5rem;
-            overflow: hidden;
-          }
-          [data-16x9] iframe {
-            position: absolute; inset: 0;
-            width: 100%; height: 100%;
-            border: 0; border-radius: .5rem;
-          }
-
-          /* ===== Colapsables ===== */
-          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-          .mdnv-collapsible > summary::after {
-            content: "▾";
-            margin-left: .5rem;
-            display: inline-block;
-            transition: transform .15s ease;
-          }
-          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-
-          /* Márgenes del propio colapsable (contenido) */
-          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-          .mdnv-collapsible[open] { margin-bottom: 1rem; }
-
-          /* Reducir espacio ANTES de cada título colapsable */
-          section#equipo-y-consejo-asesor,
-          section#colaboradores,
-          section#auspiciantes,
-          section#comunidades-amigas,
-          section#colaboraron-con-metadocencia {
-            margin-top: .25rem !important;
-            padding-top: .25rem !important;
-          }
-
-          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
-          section#equipo-y-consejo-asesor .mdnv-people-name,
-          section#colaboradores .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
-          section#comunidades-amigas .mdnv-people-name,
-          section#colaboraron-con-metadocencia .mdnv-people-name {
-            font-size: 0.95rem !important;
-          }
-          @media (max-width: 640px) {
-            section#equipo-y-consejo-asesor .mdnv-people-name,
-            section#colaboradores .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
-            section#comunidades-amigas .mdnv-people-name,
-            section#colaboraron-con-metadocencia .mdnv-people-name {
-              font-size: 0.9rem !important;
-            }
-          }
-        </style>
 
   # --- Equipo y CA ---
   - block: markdown
@@ -320,4 +210,115 @@ sections:
              style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
+  # ===== Estilos LOCALES solo para esta página =====
+  - block: markdown
+    id: estilos-collapsibles
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
+          [data-2col] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: stretch;
+          }
+          @media (max-width: 900px) {
+            [data-2col] { grid-template-columns: 1fr; }
+          }
+          .mdnv-vcenter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .mdnv-text-pad {
+            padding-left: clamp(.5rem, 3vw, 2rem);
+            padding-right: clamp(.5rem, 3vw, 2rem);
+          }
+
+          /* Wrapper 16:9 para el iframe */
+          [data-16x9] {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: .5rem;
+            overflow: hidden;
+          }
+          [data-16x9] iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            border: 0; border-radius: .5rem;
+          }
+
+          /* ===== Colapsables ===== */
+          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
+          .mdnv-collapsible > summary::after {
+            content: "▾";
+            margin-left: .5rem;
+            display: inline-block;
+            transition: transform .15s ease;
+          }
+          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+
+          /* Márgenes del propio colapsable (contenido) */
+          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
+          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+
+          /* Reducir espacio ANTES de cada título colapsable */
+          section#equipo-y-consejo-asesor,
+          section#colaboradores,
+          section#auspiciantes,
+          section#comunidades-amigas,
+          section#colaboraron-con-metadocencia {
+            margin-top: .25rem !important;
+            padding-top: .25rem !important;
+          }
+
+          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          section#equipo-y-consejo-asesor .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
+          section#auspiciantes .mdnv-people-name,
+          section#comunidades-amigas .mdnv-people-name,
+          section#colaboraron-con-metadocencia .mdnv-people-name {
+            font-size: 0.95rem !important;
+          }
+          @media (max-width: 640px) {
+            section#equipo-y-consejo-asesor .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
+            section#auspiciantes .mdnv-people-name,
+            section#comunidades-amigas .mdnv-people-name,
+            section#colaboraron-con-metadocencia .mdnv-people-name {
+              font-size: 0.9rem !important;
+            }
+          }
+        </style>
+ 
+  - block: markdown
+    id: estilos-hero-home
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
+          section#hero-home.hero-max-bounded,
+          section#hero-home.hero-max-bounded .hero-bg {
+            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
+            min-height: 70vh;   /* evita que quede demasiado “chato” */
+          }
+
+          /* Móvil: achicar un poco más y recortar padding interno */
+          @media (max-width: 768px) {
+            section#hero-home.hero-max-bounded,
+            section#hero-home.hero-max-bounded .hero-bg {
+              max-height: 90vh;
+              min-height: 44vh;
+            }
+            section#hero-home .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
+    
 ---
