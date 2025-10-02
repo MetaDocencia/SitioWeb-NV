@@ -178,7 +178,7 @@ sections:
             title="Apoya a la ciencia latinoamericana"
             text=""
             button_text="Aquí te contamos cómo"
-            button_url="https://www.metadocencia.org/contacto/"
+            button_url="/cta/"
             bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
             maxw="1600px"
