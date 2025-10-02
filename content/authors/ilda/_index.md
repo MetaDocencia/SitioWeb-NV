@@ -1,5 +1,5 @@
 ---
-title: "Iniciativa Latinoamericana por los Datos abiertos ILDA"
+title: "ILDA"
 bio: ""
 email: ""
 name: Iniciativa Latinoamericana por los Datos abiertos ILDA
