@@ -38,7 +38,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (cta-image-paragraph con fondo blanco e imagen al 40%) ----------
+ # ---------- Slack (cta-image-paragraph con más margen lateral e imagen centrada) ----------
   - block: cta-image-paragraph
     id: slack
     content:
@@ -47,23 +47,33 @@ sections:
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Imagen al 40% en desktop/tablet y 100% en móvil */
+              /* Contenedor más angosto en desktop/tablet para generar mayor margen lateral */
+              section#slack .container {
+                max-width: 1000px !important;          /* ajusta si quieres más/menos margen */
+                padding-left: clamp(1rem, 4vw, 2rem) !important;
+                padding-right: clamp(1rem, 4vw, 2rem) !important;
+              }
+  
+              /* Imagen al 40% en desktop/tablet y 100% en móvil, centrada en su columna */
               section#slack img {
                 width: 40% !important;
                 max-width: 40% !important;
                 height: auto !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important; /* centra horizontalmente */
               }
               @media (max-width: 768px) {
                 section#slack img {
-                  width: 40% !important;
-                  max-width: 40% !important;
+                  width: 100% !important;
+                  max-width: 100% !important;
                 }
               }
             </style>
-
+  
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
             y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
-
+  
             <p class="mt-3">
               <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
             </p>
@@ -73,6 +83,7 @@ sections:
             url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
+
 
 
   # ---------- Comunidades amigas (sin logos) ----------
