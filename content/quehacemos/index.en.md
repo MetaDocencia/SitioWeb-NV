@@ -9,7 +9,7 @@ sections:
   # ---------- HERO ----------
   - block: hero
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We strengthen the Latin American scientific ecosystem through infrastructure, training, and community</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We cultivate the Latin American scientific ecosystem through infrastructure, training, and community.</span>'
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
@@ -32,7 +32,7 @@ sections:
         - name: "Enhancing infrastructure"
           description: |
             <div style="height:4px;background:#00506F;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            We promote scientific and technological infrastructure that supports the production, management, and reuse of knowledge.
+            We promote scientific and technological infrastructure that enables the production, management, and reuse of knowledge.
             <br>
             <a href="#infra"
                class="mt-3 inline-block no-underline font-semibold"
@@ -42,7 +42,7 @@ sections:
         - name: "Training for researchers"
           description: |
             <div style="height:4px;background:#C83737;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            We create evidence-based learning programs that turn knowledge into action and equip the scientific community with skills for local impact.
+            We create evidence-based learning programs that turn knowledge into action and new skills into local impact.
             <br>
             <a href="#formacion"
                class="mt-3 inline-block no-underline font-semibold"
@@ -52,7 +52,7 @@ sections:
         - name: "Fostering community"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            We foster support and collaboration networks that transcend disciplines, institutions, and countries to grow and elevate science from Latin America to the world.
+            We nurture collaboration networks that break down barriers across disciplines, institutions, and countries, elevating Latin American science worldwide.
             <br>
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
@@ -69,27 +69,27 @@ sections:
     content:
       title: "Featured Projects"
       items:
-        - name: "Funding for Scientific Initiatives"
+        - name: "Unlocking Funding for Scientific Initiatives"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We offer strategic training for researchers, strengthening initiatives, capabilities, and networks to improve access to international funding.
+            We offer strategic training for researchers, strengthening skills and networks that open doors to international funding opportunities.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Learn more →</a>
-        - name: "Open Science Training"
+               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Discover more →</a>
+        - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            With support from NASA, we design Spanish-language cohorts tailored to Latin America to promote open-science principles and tools.
+            We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Learn more →</a>
-        - name: "Governance"
+               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Discover more →</a>
+        - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and advisory services in governance so that people and organizations can achieve greater impact and efficiency.
+            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Learn more →</a>
+               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Discover more →</a>
     design:
       columns: 3
 
@@ -102,36 +102,36 @@ sections:
       text: |
         {{< cta_fullwidth
             id="infra"
-            title="We Advance Infrastructure"
+            title="Enhancing infrastructure"
             bg="#00506F"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        We promote scientific and technological infrastructure that supports the production, management, and reuse of knowledge.
+        We promote scientific and technological infrastructure that enables the production, management, and reuse of knowledge.
         {{</ cta_fullwidth >}}
 
   - block: features
     id: infra-proyectos
     content:
       items:
-        - name: "Catalyst"
+        - name: "Catalyst Project"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We make cloud-computing infrastructure more accessible and useful for global life-sciences communities.
+            We make cloud-computing infrastructure more accessible and useful for  life sciences communities in the Global South.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/catalyst/">Learn more →</a>
         - name: "Contextualization"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We develop high-quality resources in Spanish based on material originally published in other languages.
+            We develop high-quality Spanish resources for Latin America based on material originally published in other languages.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/contextualizacion/">Learn more →</a>
         - name: "Equitable Open Peer Review"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We empower Latin American networks to promote open and equitable peer review of academic preprints and research datasets.
+            We empower Latin American networks to promote open and equitable peer review of preprints and academic datasets.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/revision-abierta/">Learn more →</a><br>
@@ -140,7 +140,7 @@ sections:
         - name: "Open Data Processing"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We aim to guarantee access to high-performance computing (HPC) for national and regional research networks across Latin America.
+            We aim to secure access to high-performance computing (HPC) for national and regional research networks across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/datosabiertos-latam/">Learn more →</a><br>
@@ -152,9 +152,9 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+200"
+        - statistic: "200+"
           description: "documents on Zenodo"
-        - statistic: "+85,000"
+        - statistic: "85,000+"
           description: "contextualized words"
         - statistic: "10"
           description: "Latin American communities supported through Catalyst"
@@ -165,10 +165,10 @@ sections:
     content:
       items:
         - name: "Nicolás Wolovick"
-          role: "Director, UNC Supercomputing"
-          text: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
+          role: "Director, UNC Súpercomputo (Latin American community in Catalyst, MetaDocencia partner)"
+          text: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
         - name: "Andrés Olivera"
-          role: "Network Manager, LABI"
+          role: "Network Manager, LABI (Latin American community that MetaDocencia invited into Catalyst)"
           text: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
     design:
       spacing:
@@ -183,12 +183,12 @@ sections:
       text: |
         {{< cta_fullwidth
             id="formacion"
-            title="We Build Capacity"
+            title="Training for researchers"
             bg="#C83737"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        We create evidence-based learning programs that turn knowledge into action and equip the scientific community with skills for local impact.
+        We create evidence-based learning programs that turn knowledge into action and new skills into local impact.
         {{</ cta_fullwidth >}}
 
   - block: features
@@ -197,10 +197,10 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Open Science Training"
+        - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            With support from NASA, we design Spanish-language cohorts tailored to Latin America to promote open-science principles and tools.
+            We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Learn more →</a>
@@ -208,23 +208,23 @@ sections:
         - name: "Train the Trainers"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We created a Spanish-language program to teach and certify pedagogical and practical skills, multiplying learning and boosting collective impact.
+            We facilitate a hands-on Spanish-language program that equips participants with pedagogical skills, amplifying learning and collective impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/formacion-para-ensenar/">Learn more →</a>
 
-        - name: "Custom Courses"
+        - name: "Skills training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We design bespoke courses and trainings, tailored to the needs of each institution or community, to strengthen capacities in open science, data analysis, and digital tools.
+            We design customized courses that empower individuals, institutions and communities to build practical skills in teaching, Open Science, data analysis, and digital tools.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Learn more →</a>
 
-        - name: "Funding Access for Latin American Initiatives"
+        - name: "Unlocking Funding for Scientific Initiatives"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We offer strategic training for researchers, strengthening initiatives, capabilities, and networks to improve access to international funding.
+            We offer strategic training for researchers, strengthening skills and networks that open doors to international funding opportunities.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Learn more →</a>
@@ -238,7 +238,7 @@ sections:
       items:
         - statistic: "94"
           description: "editions (388 hours)"
-        - statistic: "+1,500"
+        - statistic: "1,500+"
           description: "people from 33 countries trained"
         - statistic: "89%"
           description: "Net Promoter Score"
@@ -250,13 +250,13 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: "PhD in Economics, professor and researcher"
-          text: "Don’t miss this. They’re hyper-professional; the work they do is excellent."
+          text: "Don’t miss this- They’re hyper-professional, and the work they do is excellent."
         - name: "Emmanuel Iarussi"
-          role: "Scientist at CONICET and professor at UTDT"
-          text: "The course was excellent. You gave me back the drive to teach. Teaching online can be much more human than I could have imagined."
+          role: "Scientist at CONICET and professor at UTDT, former Advisory Committee member"
+          text: "The course was excellent. You gave me back the drive to teach —online education can be far more human than I ever imagined."
         - name: "Marina Compagnucci"
-          role: "Biologist and MetaDocencia collaborator; contributed to designing and contextualizing NASA Open Science educational content"
-          text: "Working with MetaDocencia means proudly feeling part of a team that is attentive, warm, diverse, responsible, and committed to its mission and to the people who make MetaDocencia. It’s no surprise the proposals are creative when dialogue in that space feels naturally comfortable and reassuring."
+          role: "Biologist and MetaDocencia contributor, with a key role in the design and adaptation of NASA Open Science content for Latin America."
+          text: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It’s no surprise that creative proposals emerge when dialogue feels natural and reassuring."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
@@ -270,12 +270,12 @@ sections:
       text: |
         {{< cta_fullwidth
             id="comunidad"
-            title="We Build Community"
+            title="Fostering community"
             bg="#F77B20"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        We foster support and collaboration networks that transcend disciplines, institutions, and countries to grow and elevate science from Latin America to the world.
+        We nurture collaboration networks that break down barriers across disciplines, institutions, and countries, elevating Latin American science worldwide.
         {{</ cta_fullwidth >}}
 
   - block: features
@@ -284,27 +284,27 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Governance"
+        - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and advisory services in governance so that people and organizations can achieve greater impact and efficiency.
+            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Learn more →</a>
-        - name: "Conversations"
+        - name: "Open Conversations"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We organize dialogue spaces that promote learning, exchange of experiences, and participation, consolidating collaboration networks and shared knowledge.
+            We create spaces for dialogue that foster learning, the exchange of experiences, and active participation, strengthening collaboration and shared knowledge.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://julianbuede.github.io/blog/second-brain/">Learn more →</a>
         - name: "Mapping Open Science in Latin America"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            A collaborative repository of information on Open Science in Spanish.
+            A collaborative repository of information in Spanish, documenting Open Science initiatives across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Learn more →</a><br>
+               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Learn more and fund this project →</a><br>
             <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
                   style="background:#E5E7EB;color:#374151;">Project in incubation</span>
     design:
@@ -315,11 +315,11 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+40"
+        - statistic: "40+"
           description: "partner communities & alliances"
-        - statistic: "+60"
+        - statistic: "60+"
           description: "collaborators"
-        - statistic: "+1,070"
+        - statistic: "1,070+"
           description: "members in our Slack community"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
@@ -331,7 +331,7 @@ sections:
           role: "Researcher, Advanced Bioimaging Unit, Institut Pasteur Montevideo — following a consultancy for Latin American Bioimaging"
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
         - name: "Verónica Xhardez"
-          role: "ARPHAI"
+          role: "Researcher at UNTREF and CIECTI, Technical Coordinator at ARPHAI (partner community) and MetaDocencia contributor"
           text: "So much collective learning along the way! 🍎 Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
     design:
       spacing:
