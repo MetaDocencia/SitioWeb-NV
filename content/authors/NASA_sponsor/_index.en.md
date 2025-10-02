@@ -1,8 +1,8 @@
 ---
-title: "NASA-TOPS"
+title: "NASA Open Science"
 bio: ""
 email: ""
-name: NASA-TOPS
+name: NASA Open Science
 weight: 1
 role: 
 social:
@@ -14,3 +14,4 @@ user_groups:
 - Current
 
 ---
+
