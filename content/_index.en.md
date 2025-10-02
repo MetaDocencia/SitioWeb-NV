@@ -3,9 +3,7 @@ title: "Home"
 date: 2023-10-24
 type: landing
 translationKey: "home"
-
 design:
-  # Default spacing between sections
   spacing: "6rem"
 
 sections:
@@ -99,13 +97,132 @@ sections:
       spacing:
         padding: ["6rem", 0, 0, 0]
 
-    # ===== Estilos LOCALES solo para esta página =====
+
+
+  # --- Equipo y CA ---
+  - block: markdown
+    id: equipo-y-consejo-asesor
+    content:
+      title: "Team and Advisory Committee"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboran con MetaDocencia ---
+  - block: markdown
+    id: colaboradores
+    content:
+      title: "Contributors"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Auspiciantes ---
+  - block: markdown
+    id: auspiciantes
+    content:
+      title: "Sponsors"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Current" columns=5 gapx="12rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Fellow Communities"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # --- Colaboraron con MetaDocencia ---
+  - block: markdown
+    id: colaboraron-con-metadocencia
+    content:
+      title: "Former Contributors"
+      text: |
+        <details class="mdnv-collapsible">
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
+  # ===== CTA final =====
+  - block: markdown
+    id: apoya
+    content:
+      title: ""
+      text: |
+        {{< cta_fullwidth
+            id="apoya"
+            title="Support Latin American science"
+            text=""
+            button_text="Join us"
+            button_url="/en/cta/"
+            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+        <p>Our social media channels:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
+        </div>
+        {{< /cta_fullwidth >}}
+    
+  # ===== Estilos LOCALES solo para esta página (bloque invisible) =====
   - block: markdown
     id: estilos-collapsibles
     content:
       title: ""
       text: |
         <style>
+          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
+          section#estilos-collapsibles {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+
           /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] {
             display: grid;
@@ -182,116 +299,50 @@ sections:
             }
           }
         </style>
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
 
-
-
-  # --- Equipo y CA ---
+  # ===== Estilos del HERO (bloque invisible) =====
   - block: markdown
-    id: equipo-y-consejo-asesor
-    content:
-      title: "Team and Advisory Committee"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
-  # --- Colaboran con MetaDocencia ---
-  - block: markdown
-    id: colaboradores
-    content:
-      title: "Contributors"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
-  # --- Auspiciantes ---
-  - block: markdown
-    id: auspiciantes
-    content:
-      title: "Sponsors"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Current" columns=4 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
-  # --- Comunidades Amigas ---
-  - block: markdown
-    id: comunidades-amigas
-    content:
-      title: "Fellow Communities"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
-  # --- Colaboraron con MetaDocencia ---
-  - block: markdown
-    id: colaboraron-con-metadocencia
-    content:
-      title: "Former Contributors"
-      text: |
-        <details class="mdnv-collapsible">
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Former Contributors" columns=7 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
-  # ===== CTA final =====
-  - block: markdown
-    id: apoya
+    id: estilos-hero-home
     content:
       title: ""
       text: |
-        {{< cta_fullwidth
-            id="apoya"
-            title="Support Latin American science"
-            text=""
-            button_text="Join us"
-            button_url="/en/cta/"
-            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-        <p>Our social media channels:</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
-        </div>
-        {{< /cta_fullwidth >}}
----
+        <style>
+          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
+          section#estilos-hero-home {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+
+          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
+          section#hero-home.hero-max-bounded,
+          section#hero-home.hero-max-bounded .hero-bg {
+            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
+            min-height: 70vh;   /* evita que quede demasiado “chato” */
+          }
+
+          /* Móvil: achicar un poco más y recortar padding interno */
+          @media (max-width: 768px) {
+            section#hero-home.hero-max-bounded,
+            section#hero-home.hero-max-bounded .hero-bg {
+              max-height: 90vh;
+              min-height: 44vh;
+            }
+            section#hero-home .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
 
 ---
