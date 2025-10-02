@@ -2,7 +2,7 @@
 <article class="container mx-auto px-4 py-6">
 
   {{/* ---------- Encabezado ---------- */}}
-  <header class="mb-6 flex items-center gap-4">
+  <header class="mb-6 flex items-center gap-5">
     {{/* Intentar obtener avatar como Page Resource (si es bundle) */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
@@ -16,11 +16,13 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Si no hay resource, linkear a una ruta estática de respaldo */}}
+    {{/* Avatar: 2x más grande */}}
     {{ if $avatar }}
-      <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}" class="w-24 h-24 rounded-full object-cover" loading="lazy">
+      <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
+           class="w-40 h-40 rounded-full object-cover" loading="lazy">
     {{ else }}
-      <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}" class="w-24 h-24 rounded-full object-cover" loading="lazy">
+      <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
+           class="w-40 h-40 rounded-full object-cover" loading="lazy">
     {{ end }}
 
     <div>
@@ -32,12 +34,55 @@
         {{ end }}
       {{ end }}
 
-      {{/* Datos de metadatos mínimos si existen */}}
+      {{/* Email */}}
       {{ with .Params.email }}
-        <p class="text-sm mt-1"><a href="mailto:{{ . }}" class="underline">{{ . }}</a></p>
+        <p class="text-sm mt-2">
+          <a href="mailto:{{ . }}" class="underline">{{ . }}</a>
+        </p>
       {{ end }}
+
+      {{/* Redes sociales: ícono + texto, separados por ·  */}}
+      {{ $socials := .Params.social }}
+      {{ if $socials }}
+        {{/* Map simple para mostrar nombres bonitos */}}
+        {{ $labels := dict
+          "twitter" "Twitter"
+          "x-twitter" "Twitter"
+          "github" "GitHub"
+          "bluesky" "Bluesky"
+          "linkedin" "LinkedIn"
+          "mastodon" "Mastodon"
+          "orcid" "ORCID"
+          "globe" "Website"
+          "home" "Website"
+          "envelope" "Email"
+        }}
+        <p class="text-sm mt-1 flex flex-wrap gap-x-3 gap-y-1">
+          {{ $items := slice }}
+          {{ range $socials }}
+            {{ $icon := ( .icon | lower ) }}
+            {{ $pack := ( .icon_pack | lower ) }}
+            {{ $url  := .link }}
+            {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
+
+            {{/* Construimos el HTML del ítem: ícono FA + label.
+                 Si por cualquier motivo no carga FA, al menos queda el texto. */}}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline">
+              <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
+            </a>` $url (cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab")) $icon $label }}
+            {{ $items = $items | append $one }}
+          {{ end }}
+          {{/* Separador · entre ítems */}}
+          {{ $safe := delimit $items " · " | safeHTML }}
+          {{ $safe }}
+        </p>
+      {{ end }}
+
+      {{/* Intereses con prefijo "Intereses:" */}}
       {{ with .Params.interests }}
-        <p class="text-xs opacity-80 mt-1">{{ delimit . " · " }}</p>
+        <p class="text-sm opacity-90 mt-1">
+          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
+        </p>
       {{ end }}
     </div>
   </header>
@@ -66,7 +111,6 @@
     {{ end }}
   {{ end }}
 
-  {{/* Ordenar por fecha de página de forma segura */}}
   {{ $pages := sort $col "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
