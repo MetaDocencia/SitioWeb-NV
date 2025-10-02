@@ -1,7 +1,7 @@
 ---
 title: "Press"
 type: landing
-slug: "prensa"
+slug: "prensas"
 design:
   spacing: "2rem"
 
