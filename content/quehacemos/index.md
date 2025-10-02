@@ -328,7 +328,7 @@ sections:
             Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://julianbuede.github.io/blog/second-brain/">Ver más →</a>
+               href="https://mdnv.netlify.app/proyecto/conversatorios/">Ver más →</a>
         - name: "Mapeo de Ciencia Abierta en Latinoamérica"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -382,7 +382,7 @@ sections:
           </p>
           <a href="https://mdnv.netlify.app/prensas"
              class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-             Ver menciones →
+             See mentions
           </a>
         </div>
     design:
