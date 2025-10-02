@@ -1,14 +1,14 @@
 {{ define "main" }}
-<article class="container mx-auto px-4 py-6">
+<article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6">
 
-  {{/* ---------- Encabezado ---------- */}}
+  {{/* ================= Encabezado ================= */}}
   <header class="mb-6 flex items-center gap-6">
-    {{/* Intentar obtener avatar como Page Resource (si es bundle) */}}
+    {{/* Avatar como Page Resource si es bundle, si no cae a /authors/<slug>/avatar.png */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-    {{/* Clave/slug de autor robusta:
-         - si hay archivo, usar dir del bundle
-         - si no, derivar del permalink (/authors/<slug>/)  */}}
+    {{/* Clave/slug del autor:
+         - si hay bundle, usar el dir del archivo
+         - si no, derivar del permalink (/authors/<slug>/) */}}
     {{ $authorKey := "" }}
     {{ if .File }}
       {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -16,7 +16,7 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: 1.5x (240x240) */}}
+    {{/* Avatar 1.5x (240x240) con máscara circular */}}
     {{ if $avatar }}
       <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
            class="w-60 h-60 rounded-full object-cover" loading="lazy">
@@ -37,7 +37,7 @@
       {{/* Email */}}
       {{ with .Params.email }}
         <p class="text-sm mt-2">
-          <a href="mailto:{{ . }}" class="underline">{{ . }}</a>
+          <a href="mailto:{{ . }}" class="underline break-all">{{ . }}</a>
         </p>
       {{ end }}
 
@@ -103,43 +103,42 @@
     </div>
   </header>
 
-  {{/* ---------- Contenido libre del autor ---------- */}}
+  {{/* ================= Contenido libre del autor ================= */}}
   <div class="prose max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ---------- Listado minimalista de posts del autor ---------- */}}
-  {{/* Construimos claves posibles del autor para matchear en .Params.authors */}}
+  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
+  {{/* Claves para matchear autor en .Params.authors */}}
   {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
 
-  {{/* Secciones consideradas como "notas/blog" (ajustar si hace falta) */}}
-  {{ $allowed := slice "post" "blog" "news" }}
-
+  {{/* Recolectar páginas type=post donde este autor figure */}}
   {{ $col := slice }}
-  {{ range .Site.RegularPages }}
-    {{/* Filtrar por secciones típicas de artículos */}}
-    {{ if in $allowed .Section }}
-      {{ $auth := .Params.authors }}
-      {{ if $auth }}
-        {{ $matched := false }}
-        {{ $t := printf "%T" $auth }}
-        {{ if eq $t "[]interface {}" }}
-          {{/* Lista de autores */}}
-          {{ range $auth }}
-            {{ $a := lower (printf "%v" .) }}
-            {{ if or (in $keys $a) (in $a (delimit $keys " ")) }}{{/* fallback defensivo */}}{{ end }}
-            {{ if in $keys $a }}
-              {{ $matched = true }}
-            {{ end }}
+  {{ range where .Site.RegularPages "Type" "post" }}
+    {{ $auth := .Params.authors }}
+    {{ if $auth }}
+      {{ $matched := false }}
+      {{ $t := printf "%T" $auth }}
+      {{ if eq $t "[]interface {}" }}
+        {{/* Lista de autores (strings o maps) */}}
+        {{ range $auth }}
+          {{ $a := "" }}
+          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
+            {{/* Si el item es un map (por ej., {name: "X"}), tomar name o title si existe */}}
+            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
+            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
+          {{ else }}
+            {{ $a = lower (printf "%v" .) }}
           {{ end }}
-        {{ else if eq $t "string" }}
-          {{ if in $keys (lower $auth) }}
-            {{ $matched = true }}
-          {{ end }}
+          {{ if in $keys $a }}{{ $matched = true }}{{ end }}
         {{ end }}
-        {{ if $matched }}
-          {{ $col = $col | append . }}
+      {{ else if eq $t "string" }}
+        {{ if in $keys (lower $auth) }}
+          {{ $matched = true }}
         {{ end }}
+      {{ end }}
+      {{ if $matched }}
+        {{ $col = $col | append . }}
       {{ end }}
     {{ end }}
   {{ end }}
