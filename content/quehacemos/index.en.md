@@ -340,29 +340,29 @@ sections:
 # ======================
 #  FINAL SECTION: MetaDocencia en los medios (full-width estilo CTA)
 # ======================
-- block: markdown
-  id: prensa
-  content:
-    text: |
-      {{< cta_fullwidth
-          id="prensa"
-          title="MetaDocencia en los medios"
-          text="Conocé qué dicen de MetaDocencia en prensa y blogs."
-          bg="#F3F4F6" color="#111827"
-          variant="background"
-          maxw="1600px"
-          content_maxw="900px"
-          align="center"
-          py="2.5rem" px="clamp(1rem,4vw,3rem)"
-          inner="raw"
-      >}}
-
-      <a href="https://www.metadocencia.org/prensas/"
-         class="inline-block font-semibold px-4 py-2 rounded-md"
-         style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-        Ver menciones →
-      </a>
-
-      {{< /cta_fullwidth >}}
+  - block: markdown
+    id: prensa
+    content:
+      text: |
+        {{< cta_fullwidth
+            id="prensa"
+            title="MetaDocencia en los medios"
+            text="Conocé qué dicen de MetaDocencia en prensa y blogs."
+            bg="#F3F4F6" color="#111827"
+            variant="background"
+            maxw="1600px"
+            content_maxw="900px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+  
+        <a href="https://www.metadocencia.org/prensas/"
+           class="inline-block font-semibold px-4 py-2 rounded-md"
+           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+          Ver menciones →
+        </a>
+  
+        {{< /cta_fullwidth >}}
 
 ---
