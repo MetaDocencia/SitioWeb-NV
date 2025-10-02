@@ -1,0 +1,97 @@
+{{ define "main" }}
+<section class="section pt-6 pb-8">
+  <div class="container max-w-4xl mx-auto">
+
+    <!-- Encabezado: avatar + nombre + rol/org + email + redes -->
+    <div class="mdnv-author-head">
+      <div class="mdnv-author-avatar">
+        {{/* Avatar: busca avatar.* dentro del bundle del autor */}}
+        {{ $avatar := .Resources.GetMatch "avatar*" }}
+        {{ with $avatar }}
+          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
+        {{ else }}
+          {{/* Fallback: inicial si no hay imagen */}}
+          <div class="mdnv-author-fallback">{{ substr .Title 0 1 }}</div>
+        {{ end }}
+      </div>
+
+      <div class="mdnv-author-meta">
+        <h1 class="mdnv-author-name">{{ .Title }}</h1>
+
+        {{ $role := .Params.role }}
+        {{ $orgs := .Params.organizations }}
+        {{ if or $role $orgs }}
+          <p class="mdnv-author-role">
+            {{ with $role }}{{ . }}{{ end }}
+            {{ if and $role $orgs }} · {{ end }}
+            {{ with $orgs }}
+              {{- $names := slice -}}
+              {{- range . -}}
+                {{- if .name -}}{{- $names = $names | append .name -}}{{- end -}}
+              {{- end -}}
+              {{- if gt (len $names) 0 -}}{{ delimit $names ", " }}{{- end -}}
+            {{ end }}
+          </p>
+        {{ end }}
+
+        {{ with .Params.email }}
+          <p class="mdnv-author-email">
+            <a href="mailto:{{ . }}">{{ . }}</a>
+          </p>
+        {{ end }}
+
+        {{ with .Params.social }}
+        <div class="mdnv-author-social">
+          {{ range . }}
+            {{ $href := .link | default "#" }}
+            {{ $pack := .icon_pack | default "fas" }}
+            {{ $icon := .icon | default "link" }}
+            <a href="{{ $href }}" target="_blank" rel="noopener">
+              {{- if eq $pack "ai" -}}
+                <i class="ai ai-{{ $icon }}"></i>
+              {{- else -}}
+                <i class="{{ $pack }} fa-{{ $icon }}"></i>
+              {{- end -}}
+            </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    {{ with .Params.interests }}
+      <div class="mdnv-author-card">
+        <h2 class="mdnv-card-title">Interests</h2>
+        <ul class="mdnv-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+    {{ end }}
+
+    {{ with .Params.education.courses }}
+      <div class="mdnv-author-card">
+        <h2 class="mdnv-card-title">Education</h2>
+        <ul class="mdnv-list">
+          {{ range . }}
+            <li>
+              <span class="mdnv-edu-course">{{ .course }}</span>
+              {{ with .institution }} — <span class="mdnv-edu-inst">{{ . }}</span>{{ end }}
+              {{ with .year }} ({{ . }}){{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+
+    {{ if .Content }}
+      <div class="mdnv-author-card">
+        <h2 class="mdnv-card-title">About</h2>
+        <div class="mdnv-content">
+          {{ .Content }}
+        </div>
+      </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
