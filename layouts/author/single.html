@@ -1,35 +1,76 @@
 {{ define "main" }}
 <article class="container mx-auto px-4 py-6">
 
-  <!-- Encabezado del autor -->
-  <header class="mb-4">
-    <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
+  {{/* ============ Encabezado ============ */}}
+  <header class="mb-6 flex items-center gap-4">
+    {{/* Avatar desde el bundle: content/authors/<slug>/avatar.* */}}
+    {{ $avatar := .Resources.GetMatch "avatar*" }}
+    {{ if $avatar }}
+      <img
+        src="{{ $avatar.RelPermalink }}"
+        alt="{{ .Title }}"
+        class="w-24 h-24 rounded-full object-cover"
+        loading="lazy">
+    {{ end }}
+
+    <div>
+      <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
+      {{ with .Params.role }}
+        <p class="text-sm opacity-80 mt-0.5">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.organizations }}
+        {{ range first 1 . }}
+          {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
   </header>
 
-  <!-- Contenido escrito en el _index.md del autor -->
+  {{/* ============ Contenido plano del autor ============ */}}
   <div class="prose max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* === Listado minimalista de posts del autor ===
-       Detectamos el key del autor por el nombre de carpeta (content/authors/<key>/).
-       Filtramos páginas que incluyan ese key en Params.authors y ordenamos por fecha desc. */}}
+  {{/* ============ Listado minimalista de posts del autor ============ */}}
+  {{/* Clave del autor (carpeta), p.ej. "jmillan" */}}
   {{ $authorKey := ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
-  {{ $pages := where .Site.RegularPages "Params.authors" "intersect" (slice $authorKey) | sort "Date" "desc" }}
+
+  {{/* Construimos una slice de Pages asegurando:
+        - Si authors es slice -> usamos in
+        - Si authors es string -> usamos eq
+  */}}
+  {{ $col := slice }}
+  {{ range .Site.RegularPages }}
+    {{ $auth := .Params.authors }}
+    {{ if $auth }}
+      {{ $t := printf "%T" $auth }}
+      {{ if eq $t "[]interface {}" }}
+        {{ if in $auth $authorKey }}
+          {{ $col = $col | append . }}
+        {{ end }}
+      {{ else }}
+        {{ if eq $auth $authorKey }}
+          {{ $col = $col | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $pages := sort $col "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
-  <section class="mt-8">
-    <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
-    <ul class="list-disc list-inside space-y-1">
-      {{ range $pages }}
-        <li>
-          <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
-            {{ .Title }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
-  </section>
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+      <ul class="list-disc list-inside space-y-1">
+        {{ range $pages }}
+          <li>
+            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
   {{ end }}
 
 </article>
