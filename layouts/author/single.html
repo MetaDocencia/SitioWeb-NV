@@ -1,34 +1,33 @@
 {{ define "main" }}
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6">
 
-  {{/* ========= Encabezado responsive ========= */}}
-  {{/* Clave/slug del autor */}}
-  {{ $authorKey := "" }}
-  {{ if .File }}
-    {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
-  {{ else }}
-    {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
-  {{ end }}
+  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
+  <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
 
-  {{/* Avatar Page Resource o fallback a /authors/<slug>/avatar.png */}}
-  {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
-  {{ $avatarSrc := "" }}
-  {{ if $avatar }}
-    {{ $avatarSrc = $avatar.RelPermalink }}
-  {{ else }}
-    {{ $avatarSrc = printf "/authors/%s/avatar.png" $authorKey }}
-  {{ end }}
+    {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
+    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-  <header class="mb-6 grid grid-cols-1 md:grid-cols-[auto,1fr] md:items-center gap-5 md:gap-6">
-    {{/* Foto ARRIBA en mobile; a la izquierda en desktop */}}
-    <div class="flex justify-center md:justify-start">
-      <img src="{{ $avatarSrc }}" alt="{{ .Title }}"
-           class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-sm"
-           loading="lazy">
+    {{/* Clave/slug del autor */}}
+    {{ $authorKey := "" }}
+    {{ if .File }}
+      {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+    {{ else }}
+      {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
+    {{ end }}
+
+    {{/* Avatar 1.5x en desktop; más chico en mobile. Máscara circular */}}
+    <div class="w-full md:w-auto flex md:block justify-center">
+      {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ else }}
+        <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ end }}
     </div>
 
     {{/* Columna derecha: metadata */}}
-    <div>
+    <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
       {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
       {{ with .Params.organizations }}
@@ -39,13 +38,11 @@
 
       {{ with .Params.email }}
         <p class="text-sm mt-2">
-          <a href="mailto:{{
-            . | replaceRE `^mailto:` `` 
-          }}" class="underline break-all">{{ . | replaceRE `^mailto:` `` }}</a>
+          <a href="mailto:{{ . }}" class="underline break-all">{{ . }}</a>
         </p>
       {{ end }}
 
-      {{/* Redes: Contacto: + íconos + texto */}}
+      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
         {{ $labels := dict
@@ -84,6 +81,7 @@
         </p>
       {{ end }}
 
+      {{/* Educación */}}
       {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
@@ -105,15 +103,16 @@
     </div>
   </header>
 
-  {{/* ========= Contenido libre ========= */}}
+  {{/* ================= Contenido libre del autor ================= */}}
   <div class="prose max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ========= Blogpost minimalista (solo type: post) ========= */}}
-  {{/* Claves para matchear el autor en front matter */}}
+  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
+  {{/* Claves para matchear autor en .Params.authors */}}
   {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
 
+  {{/* Recolectar páginas type=post donde este autor figure */}}
   {{ $col := slice }}
   {{ range where .Site.RegularPages "Type" "post" }}
     {{ $auth := .Params.authors }}
@@ -137,8 +136,8 @@
       {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
   {{ end }}
-
   {{ $pages := sort $col "Date" "desc" }}
+
   {{ if gt (len $pages) 0 }}
     <section class="mt-8">
       <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
