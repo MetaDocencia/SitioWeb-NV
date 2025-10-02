@@ -1,10 +1,8 @@
 {{/* 
   Shortcode: cta_fullwidth (full-bleed opcional)
 
-  Parche rápido: fuerza la fuente del sitio SIN tocar SCSS
-  - Usa var(--md-font-body, inherit) en el <section>
-  - Evita resets tipográficos con `not-prose`
-  - No fija font-family en ningún otro lugar
+  Cambios:
+  - Extra de padding vertical en rem: +0.625rem (≈ 10px si 1rem=16px)
 */}}
 
 {{- $id            := .Get "id"            | default "" -}}
@@ -30,10 +28,9 @@
 
 <section
   {{- if $id }} id="{{ $id }}"{{ end -}}
-  class="mdnv-cta-fullwidth not-prose"
+  class="mdnv-cta-fullwidth"
   data-variant="{{ $variant }}"
   style="
-    font-family: var(--md-font-body, inherit);
     position:relative; left:50%; right:50%;
     margin-left:-50vw; margin-right:-50vw; width:100vw;
     {{- if eq $variant "background" -}}
@@ -63,7 +60,7 @@
       "
     >
       {{- if $title -}}
-        <h2 class="font-extrabold tracking-tight text-2xl md:text-4xl drop-shadow-sm" style="{{ if eq $variant "background" }}color: {{ $fgResolved }};{{ end }} margin-top:0;">
+        <h2 style="{{ if eq $variant "background" }}color: {{ $fgResolved }};{{ end }} margin-top:0;">
           {{ $title | safeHTML }}
         </h2>
       {{- end -}}
@@ -73,11 +70,16 @@
       {{- end -}}
 
       {{- if and $btn_text $btn_url -}}
-        <a class="mdnv-cta-btn inline-block font-extrabold px-6 py-3 rounded-2xl shadow-lg no-underline focus:outline-none focus:ring-2"
+        <a class="mdnv-cta-btn"
            href="{{ $btn_url }}"
            style="
-             background: {{ $btn_bg }}; 
-             color: {{ $btn_fg }};
+             display:inline-block;
+             background: {{ $btn_bg }}; color: {{ $btn_fg }};
+             border-radius: 1rem;
+             padding: .9rem 1.4rem;
+             font-weight: 800;
+             text-decoration: none;
+             box-shadow: 0 1px 2px rgba(0,0,0,.08);
            ">
           {{ $btn_text }}
         </a>
@@ -93,13 +95,7 @@
 </section>
 
 <style>
-/* Interacciones y detalles menores (sin tocar font-family) */
 .mdnv-cta-btn:hover { opacity: .92; }
 .mdnv-cta-fullwidth a { text-decoration: none; }
-
-/* Si es variante "card", el wrapper ya está estilizado inline. */
-.mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card {}
-
-/* Refuerzo de herencia tipográfica dentro del CTA (no afecta SVG/íconos) */
-.mdnv-cta-fullwidth :where(:not(svg, svg *, [class*="icon"])) { font-family: inherit; }
+.mdnv-cta-fullwidth[data-variant="card"] .mdnv-cta-card { /* ya estilizada inline */ }
 </style>
