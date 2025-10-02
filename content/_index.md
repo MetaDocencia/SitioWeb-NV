@@ -96,7 +96,7 @@ sections:
         - name: "Verónica Xhardez"
           role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
           text: |
-            "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo".
+            ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
@@ -114,7 +114,7 @@ sections:
           </div>
         </details>
 
-  # --- Colaboran con MetaDocencia ---
+  # --- Colaboran con MetaDocencia (gris claro) ---
   - block: markdown
     id: colaboradores
     content:
@@ -126,6 +126,8 @@ sections:
             {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-800"
 
   # --- Auspiciantes ---
   - block: markdown
@@ -140,7 +142,7 @@ sections:
           </div>
         </details>
 
-  # --- Comunidades Amigas ---
+  # --- Comunidades Amigas (gris claro) ---
   - block: markdown
     id: comunidades-amigas
     content:
@@ -152,6 +154,8 @@ sections:
             {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-800"
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
@@ -216,89 +220,40 @@ sections:
       title: ""
       text: |
         <style>
-          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
-          section#estilos-collapsibles {
-            display: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            height: 0 !important;
-            overflow: hidden !important;
-          }
+          section#estilos-collapsibles { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; overflow:hidden !important; }
 
-          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
-          [data-2col] {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            align-items: stretch;
-          }
-          @media (max-width: 900px) {
-            [data-2col] { grid-template-columns: 1fr; }
-          }
-          .mdnv-vcenter {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mdnv-text-pad {
-            padding-left: clamp(.5rem, 3vw, 2rem);
-            padding-right: clamp(.5rem, 3vw, 2rem);
-          }
+          [data-2col] { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:stretch; }
+          @media (max-width: 900px) { [data-2col] { grid-template-columns: 1fr; } }
+          .mdnv-vcenter { display:flex; flex-direction:column; justify-content:center; }
+          .mdnv-text-pad { padding-left:clamp(.5rem,3vw,2rem); padding-right:clamp(.5rem,3vw,2rem); }
 
-          /* Wrapper 16:9 para el iframe */
-          [data-16x9] {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            border-radius: .5rem;
-            overflow: hidden;
-          }
-          [data-16x9] iframe {
-            position: absolute; inset: 0;
-            width: 100%; height: 100%;
-            border: 0; border-radius: .5rem;
-          }
+          [data-16x9]{ position:relative; width:100%; padding-top:56.25%; border-radius:.5rem; overflow:hidden; }
+          [data-16x9] iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:.5rem; }
 
-          /* ===== Colapsables ===== */
-          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-          .mdnv-collapsible > summary::after {
-            content: "▾";
-            margin-left: .5rem;
-            display: inline-block;
-            transition: transform .15s ease;
-          }
-          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
+          .mdnv-collapsible > summary::-webkit-details-marker { display:none; }
+          .mdnv-collapsible > summary::after { content:"▾"; margin-left:.5rem; display:inline-block; transition:transform .15s ease; }
+          .mdnv-collapsible[open] > summary::after { transform:rotate(180deg); }
 
-          /* Márgenes del propio colapsable (contenido) */
-          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+          .mdnv-collapsible { margin-top:.25rem; margin-bottom:.65rem; }
+          .mdnv-collapsible[open] { margin-bottom:1rem; }
 
-          /* Reducir espacio ANTES de cada título colapsable */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#auspiciantes,
           section#comunidades-amigas,
-          section#colaboraron-con-metadocencia {
-            margin-top: .25rem !important;
-            padding-top: .25rem !important;
-          }
+          section#colaboraron-con-metadocencia { margin-top:.25rem !important; padding-top:.25rem !important; }
 
-          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
-          section#colaboraron-con-metadocencia .mdnv-people-name {
-            font-size: 0.95rem !important;
-          }
+          section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.95rem !important; }
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
             section#auspiciantes .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
-            section#colaboraron-con-metadocencia .mdnv-people-name {
-              font-size: 0.9rem !important;
-            }
+            section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.9rem !important; }
           }
         </style>
     design:
@@ -313,33 +268,14 @@ sections:
       title: ""
       text: |
         <style>
-          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
-          section#estilos-hero-home {
-            display: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            height: 0 !important;
-            overflow: hidden !important;
-          }
+          section#estilos-hero-home { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; overflow:hidden !important; }
 
-          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
           section#hero-home.hero-max-bounded,
-          section#hero-home.hero-max-bounded .hero-bg {
-            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
-            min-height: 70vh;   /* evita que quede demasiado “chato” */
-          }
-
-          /* Móvil: achicar un poco más y recortar padding interno */
+          section#hero-home.hero-max-bounded .hero-bg { max-height: 90vh; min-height: 70vh; }
           @media (max-width: 768px) {
             section#hero-home.hero-max-bounded,
-            section#hero-home.hero-max-bounded .hero-bg {
-              max-height: 90vh;
-              min-height: 44vh;
-            }
-            section#hero-home .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
-            }
+            section#hero-home.hero-max-bounded .hero-bg { max-height: 90vh; min-height: 44vh; }
+            section#hero-home .container { padding-top:.75rem !important; padding-bottom:.75rem !important; }
           }
         </style>
     design:
