@@ -1,44 +1,54 @@
 {{ define "main" }}
 <article class="container mx-auto px-4 py-6">
 
-  {{/* ============ Encabezado ============ */}}
+  {{/* ---------- Encabezado ---------- */}}
   <header class="mb-6 flex items-center gap-4">
-    {{/* Avatar desde el bundle: content/authors/<slug>/avatar.* */}}
-    {{ $avatar := .Resources.GetMatch "avatar*" }}
+    {{/* Intentar obtener avatar como Page Resource (si es bundle) */}}
+    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
+
+    {{/* Clave/slug de autor robusta:
+         - si hay archivo, usar dir del bundle
+         - si no, derivar del permalink (/authors/<slug>/)  */}}
+    {{ $authorKey := "" }}
+    {{ if .File }}
+      {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+    {{ else }}
+      {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
+    {{ end }}
+
+    {{/* Si no hay resource, linkear a una ruta estática de respaldo */}}
     {{ if $avatar }}
-      <img
-        src="{{ $avatar.RelPermalink }}"
-        alt="{{ .Title }}"
-        class="w-24 h-24 rounded-full object-cover"
-        loading="lazy">
+      <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}" class="w-24 h-24 rounded-full object-cover" loading="lazy">
+    {{ else }}
+      <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}" class="w-24 h-24 rounded-full object-cover" loading="lazy">
     {{ end }}
 
     <div>
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
-      {{ with .Params.role }}
-        <p class="text-sm opacity-80 mt-0.5">{{ . }}</p>
-      {{ end }}
+      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
       {{ with .Params.organizations }}
         {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
         {{ end }}
       {{ end }}
+
+      {{/* Datos de metadatos mínimos si existen */}}
+      {{ with .Params.email }}
+        <p class="text-sm mt-1"><a href="mailto:{{ . }}" class="underline">{{ . }}</a></p>
+      {{ end }}
+      {{ with .Params.interests }}
+        <p class="text-xs opacity-80 mt-1">{{ delimit . " · " }}</p>
+      {{ end }}
     </div>
   </header>
 
-  {{/* ============ Contenido plano del autor ============ */}}
+  {{/* ---------- Contenido libre del autor ---------- */}}
   <div class="prose max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ============ Listado minimalista de posts del autor ============ */}}
-  {{/* Clave del autor (carpeta), p.ej. "jmillan" */}}
-  {{ $authorKey := ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
-
-  {{/* Construimos una slice de Pages asegurando:
-        - Si authors es slice -> usamos in
-        - Si authors es string -> usamos eq
-  */}}
+  {{/* ---------- Listado minimalista de posts del autor ---------- */}}
+  {{/* Colección robusta: soporta authors string o lista; filtra por $authorKey */}}
   {{ $col := slice }}
   {{ range .Site.RegularPages }}
     {{ $auth := .Params.authors }}
@@ -48,7 +58,7 @@
         {{ if in $auth $authorKey }}
           {{ $col = $col | append . }}
         {{ end }}
-      {{ else }}
+      {{ else if eq $t "string" }}
         {{ if eq $auth $authorKey }}
           {{ $col = $col | append . }}
         {{ end }}
@@ -56,6 +66,7 @@
     {{ end }}
   {{ end }}
 
+  {{/* Ordenar por fecha de página de forma segura */}}
   {{ $pages := sort $col "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
@@ -63,11 +74,7 @@
       <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
       <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
-          <li>
-            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
-              {{ .Title }}
-            </a>
-          </li>
+          <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </section>
