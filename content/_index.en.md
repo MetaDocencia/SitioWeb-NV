@@ -52,7 +52,7 @@ sections:
             - "Enhancing infrastructure"
             - "Training for researchers"
             - "Fostering  community"
-          image: "circuloEN.jpg"
+          image: "circuloEN.png"
           button:
             text: "Learn more about our projects"
             url: "/en/que-hacemos/"
