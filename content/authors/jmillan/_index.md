@@ -27,7 +27,7 @@ user_groups:
   <img
     src="avatar.png"
     alt="Foto de Julieta Millán"
-    width="140" height="140"
+    width="200" height="200"
     style="width:140px;height:140px;border-radius:9999px;object-fit:cover;display:block;box-shadow:0 1px 6px rgba(0,0,0,.12);"
   >
 </div>
