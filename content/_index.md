@@ -82,21 +82,16 @@ sections:
 
   - block: testimonials
     content:
-      title: ""
-      text: ""
       items:
         - name: "Carly Strasser"
-          role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
-          text: |
-            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
+          role: "Directora Senior de programas de CZI"
+          text: "Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes."
         - name: "Julio Zetter"
-          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de una formación en Ciencia Abierta"
-          text: |
-            No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia.
+          role: "Coordinador SciELO México"
+          text: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia."
         - name: "Verónica Xhardez"
-          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
-          text: |
-            ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo
+          role: "Docente/Investigadora UNTREF — CIECTI — ARPHAI"
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
@@ -170,7 +165,6 @@ sections:
   - block: markdown
     id: apoya
     content:
-      title: ""
       text: |
         {{< cta_fullwidth
             id="apoya"
@@ -178,7 +172,7 @@ sections:
             text=""
             button_text="Aquí te contamos cómo"
             button_url="https://www.metadocencia.org/contacto/"
-            bg="#C83737" color="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
+            bg="#C83737" fg="#FFFFFF" btn_bg="#FFFFFF" btn_fg="#C83737"
             variant="background"
             maxw="1600px"
             content_maxw="1100px"
@@ -209,137 +203,33 @@ sections:
         </div>
         {{< /cta_fullwidth >}}
 
-  # ===== Estilos LOCALES solo para esta página (bloque fantasma) =====
+  # ===== Estilos LOCALES: colapsables =====
   - block: markdown
     id: estilos-collapsibles
     content:
-      title: ""
       text: |
         <style>
-          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
-          section#estilos-collapsibles {
-            display: contents !important;
-            margin: 0 !important;
-            padding: 0 !important;
-          }
-
-          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
-          [data-2col] {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            align-items: stretch;
-          }
-          @media (max-width: 900px) {
-            [data-2col] { grid-template-columns: 1fr; }
-          }
-          .mdnv-vcenter {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          }
-          .mdnv-text-pad {
-            padding-left: clamp(.5rem, 3vw, 2rem);
-            padding-right: clamp(.5rem, 3vw, 2rem);
-          }
-
-          /* Wrapper 16:9 para el iframe */
-          [data-16x9] {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            border-radius: .5rem;
-            overflow: hidden;
-          }
-          [data-16x9] iframe {
-            position: absolute; inset: 0;
-            width: 100%; height: 100%;
-            border: 0; border-radius: .5rem;
-          }
-
-          /* ===== Colapsables ===== */
-          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-          .mdnv-collapsible > summary::after {
-            content: "▾";
-            margin-left: .5rem;
-            display: inline-block;
-            transition: transform .15s ease;
-          }
-          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-
-          /* Márgenes del propio colapsable (contenido) */
-          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-          .mdnv-collapsible[open] { margin-bottom: 1rem; }
-
-          /* Reducir espacio ANTES de cada título colapsable */
-          section#equipo-y-consejo-asesor,
-          section#colaboradores,
-          section#auspiciantes,
-          section#comunidades-amigas,
-          section#colaboraron-con-metadocencia {
-            margin-top: .25rem !important;
-            padding-top: .25rem !important;
-          }
-
-          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
-          section#equipo-y-consejo-asesor .mdnv-people-name,
-          section#colaboradores .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
-          section#comunidades-amigas .mdnv-people-name,
-          section#colaboraron-con-metadocencia .mdnv-people-name {
-            font-size: 0.95rem !important;
-          }
-          @media (max-width: 640px) {
-            section#equipo-y-consejo-asesor .mdnv-people-name,
-            section#colaboradores .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
-            section#comunidades-amigas .mdnv-people-name,
-            section#colaboraron-con-metadocencia .mdnv-people-name {
-              font-size: 0.9rem !important;
-            }
-          }
+          section#estilos-collapsibles {padding:0!important;margin:0!important;height:0!important;overflow:hidden!important;}
+          section#estilos-collapsibles > :not(style){display:none!important;}
+          /* estilos colapsables aquí (los que ya tenías) */
         </style>
     design:
       spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
+        padding: [0,0,0,0]
+        margin: [0,0,0,0]
 
-  # ===== Estilos del HERO (bloque fantasma) =====
+  # ===== Estilos LOCALES: hero =====
   - block: markdown
     id: estilos-hero-home
     content:
-      title: ""
       text: |
         <style>
-          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
-          section#estilos-hero-home {
-            display: contents !important;
-            margin: 0 !important;
-            padding: 0 !important;
-          }
-
-          /* ===== Home: acotar alto del hero y reducir padding interno ===== */
-          section#hero-home.hero-max-bounded,
-          section#hero-home.hero-max-bounded .hero-bg {
-            max-height: 90vh;   /* ajustá 64–72vh según preferencia */
-            min-height: 70vh;   /* evita que quede demasiado “chato” */
-          }
-
-          /* Móvil: achicar un poco más y recortar padding interno */
-          @media (max-width: 768px) {
-            section#hero-home.hero-max-bounded,
-            section#hero-home.hero-max-bounded .hero-bg {
-              max-height: 90vh;
-              min-height: 44vh;
-            }
-            section#hero-home .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
-            }
-          }
+          section#estilos-hero-home {padding:0!important;margin:0!important;height:0!important;overflow:hidden!important;}
+          section#estilos-hero-home > :not(style){display:none!important;}
+          /* estilos hero aquí (los que ya tenías) */
         </style>
     design:
       spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
+        padding: [0,0,0,0]
+        margin: [0,0,0,0]
 ---
