@@ -337,25 +337,32 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
-  # ======================
-  #  FINAL SECTION: MetaDocencia in the media (centered markdown)
-  # ======================
-  - block: markdown
-    id: prensa
-    content:
-      text: |
-        <div class="text-center">
-          <h2 class="text-2xl md:text-3xl font-bold mb-2">MetaDocencia in the media</h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            See what the press and blogs are saying about MetaDocencia.
-          </p>
-          <a href="https://mdnv.netlify.app/prensas"
-             class="inline-block px-4 py-2 rounded-md font-semibold bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-             See mentions →
-          </a>
-        </div>
-    design:
-      spacing:
-        padding: ["1.25rem", "0.75rem", "1.25rem", "0.75rem"]
-      css_style: "background:#F9FAFB;"
+# ======================
+#  FINAL SECTION: MetaDocencia en los medios (full-width estilo CTA)
+# ======================
+- block: markdown
+  id: prensa
+  content:
+    text: |
+      {{< cta_fullwidth
+          id="prensa"
+          title="MetaDocencia en los medios"
+          text="Conocé qué dicen de MetaDocencia en prensa y blogs."
+          bg="#F3F4F6" color="#111827"
+          variant="background"
+          maxw="1600px"
+          content_maxw="900px"
+          align="center"
+          py="2.5rem" px="clamp(1rem,4vw,3rem)"
+          inner="raw"
+      >}}
+
+      <a href="https://www.metadocencia.org/prensas/"
+         class="inline-block font-semibold px-4 py-2 rounded-md"
+         style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+        Ver menciones →
+      </a>
+
+      {{< /cta_fullwidth >}}
+
 ---
