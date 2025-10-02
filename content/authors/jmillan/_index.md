@@ -33,7 +33,6 @@ user_groups:
 </div>
 
 ## Contacto
-- **Correo:** _(no disponible)_
 - **LinkedIn:** <https://www.linkedin.com/in/julieta-millan/>
 
 ## Intereses
