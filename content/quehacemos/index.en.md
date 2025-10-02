@@ -356,7 +356,7 @@ sections:
             inner="raw"
         >}}
   
-        <a href="https://www.metadocencia.org/prensas/"
+        <a href="https://mdnv.netlify.app/en/prensas/"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
           See mentions
