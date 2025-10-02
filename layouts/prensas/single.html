@@ -1,11 +1,16 @@
 {{ define "main" }}
+{{ $isEN := eq .Site.Language.Lang "en" }}
+{{ $subtitle := cond $isEN "Articles and interviews about MetaDocencia in the media." "Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia." }}
+{{ $btn := cond $isEN "View article" "Ver nota" }}
+{{ $empty := cond $isEN "No publications loaded yet." "No hay publicaciones cargadas aún." }}
+
 <section class="mx-auto px-6 py-10 max-w-4xl">
 
-  <!-- Título -->
+  <!-- Title -->
   <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
-  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia.</p>
+  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ $subtitle }}</p>
 
-  <!-- Lista tipo blog -->
+  <!-- List -->
   <div class="mt-6 divide-y divide-gray-200 dark:divide-gray-800">
     {{ $items := .Params.items }}
     {{ if $items }}
@@ -13,13 +18,13 @@
         <article class="py-6">
           <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
 
-            <!-- Fecha + medio a la izquierda -->
+            <!-- Left column: date + outlet -->
             <div class="sm:w-48 shrink-0 text-sm sm:mt-1">
               <div class="text-gray-500 dark:text-gray-400">{{ .date }}</div>
               <div class="text-gray-700 dark:text-gray-300">{{ .outlet }}</div>
             </div>
 
-            <!-- Contenido -->
+            <!-- Right column: content -->
             <div class="min-w-0">
               <h2 class="text-xl font-semibold leading-snug">{{ .title }}</h2>
               {{ with .summary }}
@@ -29,7 +34,7 @@
                 <a href="{{ . }}" target="_blank" rel="noopener"
                    class="inline-flex items-center mt-3 rounded-md px-3 py-1 text-sm font-semibold
                           bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-                  Ver nota
+                  {{ $btn }}
                 </a>
               {{ end }}
             </div>
@@ -38,13 +43,13 @@
         </article>
       {{ end }}
     {{ else }}
-      <p class="text-sm text-gray-500 dark:text-gray-400">No hay publicaciones cargadas aún.</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{{ $empty }}</p>
     {{ end }}
   </div>
 
 </section>
 
-<!-- Estilos mínimos para coherencia con /post -->
+<!-- Minimal styles for consistency with /post -->
 <style>
   .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
   .prose img { height: auto; }
