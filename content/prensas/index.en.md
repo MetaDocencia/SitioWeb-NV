@@ -1,5 +1,5 @@
 ---
-title: "Press"
+title: "MetaDocencia in the Media"
 type: landing
 slug: "prensas"
 design:
