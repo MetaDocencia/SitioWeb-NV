@@ -21,7 +21,7 @@ sections:
         image:
           filename: "quienessomos.jpg"
           filters:
-            brightness: 0.45
+            brightness: 0.4
           size: cover
           position: center
           parallax: true
