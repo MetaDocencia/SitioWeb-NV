@@ -42,7 +42,7 @@ sections:
         image:
           filename: "que-hacemos.jpg"
           filters:
-            brightness: 0.5
+            brightness: 0.65
           size: cover
           position: center
           parallax: true
