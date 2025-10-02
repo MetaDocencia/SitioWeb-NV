@@ -58,7 +58,7 @@ sections:
             text: "Lee más sobre nuestros proyectos"
             url: "/que-hacemos"
     design:
-      css_class: ""   # ← sin fondo gris
+      css_class: ""
 
   - block: stats
     content:
@@ -100,8 +100,6 @@ sections:
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
-    
-
 
   # --- Equipo y CA ---
   - block: markdown
@@ -210,13 +208,21 @@ sections:
              style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
         </div>
         {{< /cta_fullwidth >}}
-  # ===== Estilos LOCALES solo para esta página =====
+
+  # ===== Estilos LOCALES solo para esta página (bloque fantasma) =====
   - block: markdown
     id: estilos-collapsibles
     content:
       title: ""
       text: |
         <style>
+          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
+          section#estilos-collapsibles {
+            display: contents !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
           /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] {
             display: grid;
@@ -293,13 +299,25 @@ sections:
             }
           }
         </style>
- 
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
+
+  # ===== Estilos del HERO (bloque fantasma) =====
   - block: markdown
     id: estilos-hero-home
     content:
       title: ""
       text: |
         <style>
+          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
+          section#estilos-hero-home {
+            display: contents !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
           /* ===== Home: acotar alto del hero y reducir padding interno ===== */
           section#hero-home.hero-max-bounded,
           section#hero-home.hero-max-bounded .hero-bg {
@@ -320,5 +338,8 @@ sections:
             }
           }
         </style>
-    
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
 ---
