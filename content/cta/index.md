@@ -38,7 +38,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-# ---------- Slack (cta-image-paragraph con margen lateral amplio e imagen 40%) ----------
+# ---------- Slack (cta-image-paragraph con margen lateral amplio, imagen 40% y a la derecha) ----------
   - block: cta-image-paragraph
     id: slack
     content:
@@ -64,6 +64,14 @@ sections:
                 align-items: center !important;
               }
   
+              /* --- Fallback universal para pasar la imagen a la DERECHA ---
+                 Asumimos que el HTML renderiza primero el texto y luego la imagen.
+                 Invertimos el orden con CSS en desktop y tablet. */
+              @media (min-width: 769px) {
+                section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
+                section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
+              }
+  
               /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
               section#slack img {
                 width: 40% !important;
@@ -74,12 +82,15 @@ sections:
                 margin-right: auto !important;
               }
   
-              /* En móviles mantenemos 40% y apilamos si fuera necesario */
+              /* En móviles mantenemos 40% y apilamos */
               @media (max-width: 768px) {
                 section#slack [data-2col],
                 section#slack .grid {
                   grid-template-columns: 1fr !important;
                 }
+                /* En mobile dejamos el orden natural: texto arriba, imagen abajo */
+                section#slack [data-2col] > *:first-child { order: 1 !important; }
+                section#slack [data-2col] > *:last-child  { order: 2 !important; }
               }
             </style>
   
@@ -90,12 +101,12 @@ sections:
               <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
             </p>
           image: "slack.png"
+          image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-
 
 
   # ---------- Comunidades amigas (sin logos) ----------
