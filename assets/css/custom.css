@@ -613,3 +613,11 @@ footer .mdnv-footer-right { padding-top: 0.02rem; }
   }
   .mdnv-footer-right a { text-align: left; }
 }
+
+/* CTA: heredar la fuente global del sitio, sin tocar SVG/íconos */
+.mdnv-cta-fullwidth {
+  font-family: inherit; /* hereda del <body> o contenedor */
+}
+.mdnv-cta-fullwidth :where(:not(svg, svg *, [class*="icon"])) {
+  font-family: inherit;
+}
