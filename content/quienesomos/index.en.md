@@ -18,13 +18,13 @@ sections:
 
         <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="/institucional"
+          <a href="/en/institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Institutional</a>
-          <a href="/institucional#vision"
+          <a href="/en/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Mission and Vission</a>
-          <a href="/institucional#valores"
+          <a href="/en/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Our Values</a>
         </div>
