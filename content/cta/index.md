@@ -49,7 +49,7 @@ sections:
             <style>
               /* Contenedor más angosto para generar gran margen lateral en desktop */
               section#slack .container {
-                max-width: 820px !important;               /* ⇦ ajusta si quieres aún más margen (p.ej. 760px) */
+                max-width: 620px
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
