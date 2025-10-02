@@ -1,5 +1,5 @@
 main:
-  - name: Home
+  - name: Inicio
     url: /
     weight: 10
 
