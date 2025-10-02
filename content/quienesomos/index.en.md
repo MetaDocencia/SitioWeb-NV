@@ -77,8 +77,8 @@ sections:
               <!-- Columna derecha: video 16:9 -->
               <div data-16x9>
                 <iframe
-                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-                  title="MetaDocencia - 5 años"
+                  src="https://www.youtube.com/embed/bj59_0v2a1U"
+                  title="MetaDocencia - 5 years"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen>
@@ -99,18 +99,18 @@ sections:
     content:
       title: "MetaDocencia by the Numbers"
       items:
-        - statistic: "+40"
+        - statistic: "40+"
           description: "strategic partners and sponsors"
-        - statistic: "+60"
+        - statistic: "60+"
           description: "collaborators"
-        - statistic: "+1,070"
+        - statistic: "1,070+"
           description: "members on Slack"
-        - statistic: "+6,000"
+        - statistic: "6,000+"
           description: "followers on social media"
-        - statistic: "+2,600"
+        - statistic: "2,600+"
           description: "active newsletter subscribers"
-        - statistic: "+10%"
-          description: "%10+ engagement rate (LinkedIn 2025)"
+        - statistic: "10%+"
+          description: "engagement rate (LinkedIn 2025)"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
