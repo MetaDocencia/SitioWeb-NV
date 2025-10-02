@@ -360,10 +360,10 @@ sections:
       items:
         - name: "Andrés Kamaid"
           role: "Investigador, Advanced Bioimaging Unit, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging (LABI)"
-          text: "Les quiero agradecer a tod@s por el trabajo realizado. Además de vuestros aportes conceptuales y prácticos que nos han permitido avanzar mucho, vuestra calidez y amabilidad han hecho este proceso muy pero muy disfrutable. Voy a extrañar estas reuniones."
+          text: "Les quiero agradecer a tod@s por el trabajo realizado. Además de vuestros aportes conceptuales y prácticos que nos han permitido avanzar mucho, vuestra calidez y amabilidad han hecho este proceso muy pero muy disfrutable. Voy a extrañar estas reuniones".
         - name: "Verónica Xhardez"
           role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo"
+          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo".
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
