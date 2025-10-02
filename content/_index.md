@@ -126,8 +126,7 @@ sections:
             {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      css_class: "bg-gray-100 dark:bg-gray-800"
+
 
   # --- Auspiciantes ---
   - block: markdown
@@ -154,8 +153,6 @@ sections:
             {{< people_list group="Comunidades amigas" columns=7 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-    design:
-      css_class: "bg-gray-100 dark:bg-gray-800"
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
