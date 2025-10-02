@@ -38,7 +38,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
- # ---------- Slack (cta-image-paragraph con más margen lateral e imagen centrada) ----------
+# ---------- Slack (cta-image-paragraph con margen lateral amplio e imagen 40%) ----------
   - block: cta-image-paragraph
     id: slack
     content:
@@ -47,27 +47,21 @@ sections:
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Contenedor más angosto en desktop/tablet para generar mayor margen lateral */
+              /* Contenedor más angosto para generar gran margen lateral en desktop */
               section#slack .container {
-                max-width: 1000px !important;          /* ajusta si quieres más/menos margen */
+                max-width: 820px !important;               /* ⇦ ajusta si quieres aún más margen (p.ej. 760px) */
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
-              /* Imagen al 40% en desktop/tablet y 100% en móvil, centrada en su columna */
+              /* Imagen SIEMPRE al 40% y centrada (también en móviles) */
               section#slack img {
                 width: 40% !important;
                 max-width: 40% !important;
                 height: auto !important;
                 display: block !important;
                 margin-left: auto !important;
-                margin-right: auto !important; /* centra horizontalmente */
-              }
-              @media (max-width: 768px) {
-                section#slack img {
-                  width: 100% !important;
-                  max-width: 100% !important;
-                }
+                margin-right: auto !important;
               }
             </style>
   
@@ -83,7 +77,6 @@ sections:
             url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-
 
 
   # ---------- Comunidades amigas (sin logos) ----------
