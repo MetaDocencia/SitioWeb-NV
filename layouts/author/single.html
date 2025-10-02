@@ -1,97 +1,36 @@
 {{ define "main" }}
-  <section class="section pt-6 pb-8">
-    <div class="container max-w-4xl mx-auto">
+<article class="container mx-auto px-4 py-6">
 
-      <!-- Encabezado: avatar + nombre + rol/org + email + redes -->
-      <div class="mdnv-author-head">
-        <div class="mdnv-author-avatar">
-          {{ $avatar := .Resources.GetMatch "avatar*" }}
-          {{ with $avatar }}
-            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
-          {{ end }}
-        </div>
+  <!-- Encabezado del autor -->
+  <header class="mb-4">
+    <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
+  </header>
 
-        <div class="mdnv-author-meta">
-          <h1 class="mdnv-author-name">{{ .Title }}</h1>
+  <!-- Contenido escrito en el _index.md del autor -->
+  <div class="prose max-w-none">
+    {{ .Content }}
+  </div>
 
-          {{ $role := .Params.role }}
-          {{ $orgs := .Params.organizations }}
-          {{ if or $role $orgs }}
-            <p class="mdnv-author-role">
-              {{ with $role }}{{ . }}{{ end }}
-              {{ if and $role $orgs }} · {{ end }}
-              {{ with $orgs }}
-                {{- $names := slice -}}
-                {{- range . -}}
-                  {{- if .name -}}{{- $names = $names | append .name -}}{{- end -}}
-                {{- end -}}
-                {{- if gt (len $names) 0 -}}{{ delimit $names ", " }}{{- end -}}
-              {{ end }}
-            </p>
-          {{ end }}
+  {{/* === Listado minimalista de posts del autor ===
+       Detectamos el key del autor por el nombre de carpeta (content/authors/<key>/).
+       Filtramos páginas que incluyan ese key en Params.authors y ordenamos por fecha desc. */}}
+  {{ $authorKey := ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+  {{ $pages := where .Site.RegularPages "Params.authors" "intersect" (slice $authorKey) | sort "Date" "desc" }}
 
-          {{ with .Params.email }}
-            <p class="mdnv-author-email">
-              <a href="mailto:{{ . }}">{{ . }}</a>
-            </p>
-          {{ end }}
-
-          <!-- Redes sociales (iconos FA / Academicons si están disponibles en el tema) -->
-          {{ with .Params.social }}
-          <div class="mdnv-author-social">
-            {{ range . }}
-              {{ $pack := .icon_pack | default "fas" }}
-              {{ $icon := .icon | default "link" }}
-              {{ $href := .link | default "#" }}
-              <a href="{{ $href }}" target="_blank" rel="noopener">
-                {{- if eq $pack "ai" -}}
-                  <i class="ai ai-{{ $icon }}"></i>
-                {{- else -}}
-                  <i class="{{ $pack }} fa-{{ $icon }}"></i>
-                {{- end -}}
-              </a>
-            {{ end }}
-          </div>
-          {{ end }}
-        </div>
-      </div>
-
-      <!-- Intereses -->
-      {{ with .Params.interests }}
-        <div class="mdnv-author-card">
-          <h2 class="mdnv-card-title">Interests</h2>
-          <ul class="mdnv-list">
-            {{ range . }}<li>{{ . }}</li>{{ end }}
-          </ul>
-        </div>
+  {{ if gt (len $pages) 0 }}
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+    <ul class="list-disc list-inside space-y-1">
+      {{ range $pages }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
+            {{ .Title }}
+          </a>
+        </li>
       {{ end }}
-
-      <!-- Educación -->
-      {{ with .Params.education.courses }}
-        <div class="mdnv-author-card">
-          <h2 class="mdnv-card-title">Education</h2>
-          <ul class="mdnv-list">
-            {{ range . }}
-              <li>
-                <span class="mdnv-edu-course">{{ .course }}</span>
-                {{ with .institution }} — <span class="mdnv-edu-inst">{{ . }}</span>{{ end }}
-                {{ with .year }} ({{ . }}){{ end }}
-              </li>
-            {{ end }}
-          </ul>
-        </div>
-      {{ end }}
-
-      <!-- Bio / cuerpo del autor (contenido en Markdown) -->
-      {{ if .Content }}
-        <div class="mdnv-author-card">
-          <h2 class="mdnv-card-title">About</h2>
-          <div class="mdnv-content">
-            {{ .Content }}
-          </div>
-        </div>
-      {{ end }}
-
-    </div>
+    </ul>
   </section>
+  {{ end }}
+
+</article>
 {{ end }}
