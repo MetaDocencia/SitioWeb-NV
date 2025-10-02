@@ -87,20 +87,26 @@ sections:
     content:
       title: "Apoya a MetaDocencia"
       text: |
+        <!-- Fuerza links blancos en TODO el bloque -->
+        <style>
+          section#auspiciantes a { color:#FFFFFF !important; font-weight:600; text-decoration: underline; }
+        </style>
+
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
-        <a href="https://mdnv.netlify.app/quienes-somos/#auspiciantes" class="underline font-semibold" style="color:#FFFFFF">Conoce a nuestros auspiciantes</a>
+        <a href="https://mdnv.netlify.app/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
 
         Si tu organización comparte nuestra misión, escribinos a
-        <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+        <a href="mailto:direccion@metadocencia.org">direccion@metadocencia.org</a>
         para explorar cómo colaborar.
 
         Podés hacer tu aporte a través de nuestro
-        <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+        <a href="https://www.metadocencia.org/donar/">formulario de donación</a>
         y ayudarnos a sostener y ampliar nuestras actividades.
     design:
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
+
 
   # ---------- Redes (botones clicables en grid) ----------
   - block: cta-card
