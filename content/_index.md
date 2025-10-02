@@ -229,8 +229,8 @@ sections:
           section#auspiciantes,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
-            margin-top: .6rem !important;   /* ↑ un poquito más */
-            margin-bottom: .35rem !important; /* ↓ un poco menos */
+            margin-top: .15rem !important;  
+            margin-bottom: .5rem !important;
             padding-top: .25rem !important; /* pequeño respiro interno arriba */
           }
 
