@@ -45,7 +45,7 @@ sections:
             brightness: 0.5
           size: cover
           position: center
-          parallax: true   # fondo con parallax en desktop
+          parallax: true
         text_color_light: true
         overlay_opacity: 0.65
         overlay_color: "#000"
@@ -65,10 +65,9 @@ sections:
           @media (max-width: 768px) {
             section#hero-qs.hero-max-bounded,
             section#hero-qs.hero-max-bounded .hero-bg {
-              max-height: 64vh;   /* ajustá 64–70vh a gusto */
+              max-height: 64vh;
               min-height: 44vh;
             }
-            /* Menos padding interno para que no “empuje” el texto */
             section#hero-qs .container {
               padding-top: .75rem !important;
               padding-bottom: .75rem !important;
@@ -80,19 +79,23 @@ sections:
   - block: markdown
     id: solutions
     content:
-      title: "Vamos por 5 años más"
-      text: |
+      title: ""
+      text: |-
         <!-- Breakout full-bleed que ignora el wrapper central del tema -->
         <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
           <!-- Contenido centrado y con respiro lateral -->
           <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
             <div data-2col>
-              <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
+              <!-- Columna izquierda: TÍTULO + texto -->
               <div class="mdnv-vcenter mdnv-text-pad">
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
+                  Vamos por 5 años más
+                </h2>
                 <p>
                   Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
               </div>
+              <!-- Columna derecha: video 16:9 -->
               <div data-16x9>
                 <iframe
                   src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
@@ -140,7 +143,6 @@ sections:
       title: ""
       text: |
         <style>
-          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -159,8 +161,6 @@ sections:
             padding-left: clamp(.5rem, 3vw, 2rem);
             padding-right: clamp(.5rem, 3vw, 2rem);
           }
-
-          /* Wrapper 16:9 para el iframe */
           [data-16x9] {
             position: relative;
             width: 100%;
@@ -173,8 +173,6 @@ sections:
             width: 100%; height: 100%;
             border: 0; border-radius: .5rem;
           }
-
-          /* ===== Colapsables (no toca tipografías globales) ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -183,12 +181,8 @@ sections:
             transition: transform .15s ease;
           }
           .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-
-          /* Márgenes del propio colapsable (contenido) */
           .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
-
-          /* Reducir espacio ANTES de cada título colapsable */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#auspiciantes,
@@ -197,8 +191,6 @@ sections:
             margin-top: .25rem !important;
             padding-top: .25rem !important;
           }
-
-          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
@@ -282,7 +274,7 @@ sections:
           </div>
         </details>
 
-  # ===== CTA final (full-bleed, misma lógica que "Qué hacemos") =====
+  # ===== CTA final =====
   - block: markdown
     id: apoya
     content:
