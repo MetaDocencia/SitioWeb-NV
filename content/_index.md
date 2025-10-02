@@ -209,18 +209,20 @@ sections:
         </div>
         {{< /cta_fullwidth >}}
 
-  # ===== Estilos LOCALES solo para esta página (bloque fantasma) =====
+  # ===== Estilos LOCALES solo para esta página (bloque invisible) =====
   - block: markdown
     id: estilos-collapsibles
     content:
       title: ""
       text: |
         <style>
-          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
+          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
           section#estilos-collapsibles {
-            display: contents !important;
+            display: none !important;
             margin: 0 !important;
             padding: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
           }
 
           /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
@@ -304,18 +306,20 @@ sections:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
 
-  # ===== Estilos del HERO (bloque fantasma) =====
+  # ===== Estilos del HERO (bloque invisible) =====
   - block: markdown
     id: estilos-hero-home
     content:
       title: ""
       text: |
         <style>
-          /* Ocultar el bloque en sí mismo (sin ocupar espacio) */
+          /* Ocultar COMPLETAMENTE el section para que no agregue espacio */
           section#estilos-hero-home {
-            display: contents !important;
+            display: none !important;
             margin: 0 !important;
             padding: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
           }
 
           /* ===== Home: acotar alto del hero y reducir padding interno ===== */
