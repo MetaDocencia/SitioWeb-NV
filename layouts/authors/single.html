@@ -6,25 +6,26 @@
     <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
   </header>
 
-  <!-- Contenido escrito en el _index.md del autor (incluye avatar/img si lo pusiste en el body) -->
+  <!-- Contenido escrito en el _index.md del autor -->
   <div class="prose max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ===== Listado de notas de este autor =====
-       Tomamos el "key" del autor desde el nombre de la carpeta del bundle (p.ej. content/authors/jmillan/).
-       Buscamos en todas las páginas regulares que incluyan ese key en Params.authors. */}}
-  {{ $dir := .File.Dir }}
-  {{ $authorKey := $dir | strings.TrimSuffix "/" | path.Base }}
+  {{/* === Listado minimalista de posts del autor ===
+       Detectamos el key del autor por el nombre de carpeta (content/authors/<key>/).
+       Filtramos páginas que incluyan ese key en Params.authors y ordenamos por fecha desc. */}}
+  {{ $authorKey := ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
   {{ $pages := where .Site.RegularPages "Params.authors" "intersect" (slice $authorKey) | sort "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
-  <section class="mt-10">
-    <h2 class="text-xl font-semibold mb-3">Notas de {{ .Title }}</h2>
-    <ul class="list-disc pl-6 space-y-1">
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+    <ul class="list-disc list-inside space-y-1">
       {{ range $pages }}
         <li>
-          <a class="underline font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
+            {{ .Title }}
+          </a>
         </li>
       {{ end }}
     </ul>
