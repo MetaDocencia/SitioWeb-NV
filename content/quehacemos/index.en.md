@@ -135,8 +135,7 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/en/proyecto/revision-abierta/">Learn more →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Project in incubation</span>
+    
         - name: "Open Data Processing"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
