@@ -191,7 +191,7 @@ sections:
     content:
       title: "Team and Advisory Committee"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
@@ -204,7 +204,7 @@ sections:
     content:
       title: "Contributors"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
@@ -217,7 +217,7 @@ sections:
     content:
       title: "Sponsors"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Current" columns=4 gapx="8rem" gapy="3rem" >}}
@@ -230,7 +230,7 @@ sections:
     content:
       title: "Fellow Communities"
       text: |
-        <details class="mdnv-collapsible">
+        <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
             {{< people_list group="Fellow Communities" columns=7 gapx="8rem" gapy="3rem" >}}
