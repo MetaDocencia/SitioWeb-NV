@@ -23,7 +23,7 @@ sections:
             {{< mc_form >}}
           </div>
 
-          <!-- Link centrado, blanco, sin botón -->
+          <!-- Link centrado, blanco, en bold -->
           <p class="text-center mt-4">
             <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
@@ -52,7 +52,7 @@ sections:
           </p>
           <p class="mt-2">
             <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
-               style="color:#FFFFFF; text-decoration:underline;">
+               class="underline font-semibold" style="color:#FFFFFF;">
                Qué es y cómo sumarme
             </a>
           </p>
@@ -72,7 +72,7 @@ sections:
       title: "Comunidades amigas"
       text: |
         Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.  
-        [Conoce la red de comunidades](https://mdnv.netlify.app/quienes-somos/#comunidades-amigas)
+        <a href="https://mdnv.netlify.app/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Conoce la red de comunidades</a>
       button:
         text: "Suma tu comunidad"
         url: "mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
@@ -88,11 +88,15 @@ sections:
       title: "Apoya a MetaDocencia"
       text: |
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
-        [Conoce a nuestros auspiciantes](https://mdnv.netlify.app/quienes-somos/#auspiciantes)
+        <a href="https://mdnv.netlify.app/quienes-somos/#auspiciantes" class="underline font-semibold" style="color:#FFFFFF">Conoce a nuestros auspiciantes</a>
 
-        Si tu organización comparte nuestra misión, escribinos a **direccion@metadocencia.org** para explorar cómo colaborar.
+        Si tu organización comparte nuestra misión, escribinos a
+        <a href="mailto:direccion@metadocencia.org" class="underline font-semibold" style="color:#FFFFFF">direccion@metadocencia.org</a>
+        para explorar cómo colaborar.
 
-        Podés hacer tu aporte a través de nuestro [formulario de donación](https://www.metadocencia.org/donar/) y ayudarnos a sostener y ampliar nuestras actividades.
+        Podés hacer tu aporte a través de nuestro
+        <a href="https://www.metadocencia.org/donar/" class="underline font-semibold" style="color:#FFFFFF">formulario de donación</a>
+        y ayudarnos a sostener y ampliar nuestras actividades.
     design:
       card:
         css_class: "shadow-sm"
