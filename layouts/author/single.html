@@ -1,172 +1,97 @@
 {{ define "main" }}
-<section class="mx-auto px-6 py-10 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-10">
+  <section class="section pt-6 pb-8">
+    <div class="container max-w-4xl mx-auto">
 
-  {{/* ============= SIDEBAR (izquierda) ============= */}}
-  <aside class="md:col-span-4 lg:col-span-3">
-
-    {{/* Avatar opcional: front matter -> avatar.* recurso -> primera imagen */}}
-    {{ $avatar := "" }}
-    {{ with .Params.avatar }}{{ $avatar = . }}{{ end }}
-    {{ if not $avatar }}
-      {{ with .Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
-    {{ end }}
-    {{ if not $avatar }}
-      {{ with .Resources.ByType "image" }}{{ with index . 0 }}{{ $avatar = .RelPermalink }}{{ end }}{{ end }}
-    {{ end }}
-    {{ if $avatar }}
-      <img src="{{ $avatar }}" alt="{{ .Title }}"
-           class="w-40 h-40 rounded-full object-cover mb-4 mx-auto md:mx-0 shadow" />
-    {{ end }}
-
-    <!-- Nombre -->
-    <h1 class="text-2xl font-bold mb-1">{{ .Title }}</h1>
-
-    <!-- Rol (si existe) -->
-    {{ with .Params.role }}
-      {{ if . }}
-        <p class="text-gray-600 dark:text-gray-400 mb-1">{{ . }}</p>
-      {{ end }}
-    {{ end }}
-
-    <!-- Organización (si hay) -->
-    {{ with .Params.organizations }}
-      {{ range . }}
-        {{ if .name }}
-          {{ if .url }}
-            <p class="text-sm"><a href="{{ .url }}" class="text-gray-500 dark:text-gray-400 hover:underline">{{ .name }}</a></p>
-          {{ else }}
-            <p class="text-sm text-gray-500 dark:text-gray-400">{{ .name }}</p>
+      <!-- Encabezado: avatar + nombre + rol/org + email + redes -->
+      <div class="mdnv-author-head">
+        <div class="mdnv-author-avatar">
+          {{ $avatar := .Resources.GetMatch "avatar*" }}
+          {{ with $avatar }}
+            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
           {{ end }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
+        </div>
 
-    <!-- Email SIEMPRE que exista en front matter -->
-    {{ with .Params.email }}
-      <div class="mt-4">
-        <a href="mailto:{{ . }}"
-           class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
-          <!-- ícono simple ASCII para no depender de FA -->
-          <span>✉️</span><span>{{ . }}</span>
-        </a>
-      </div>
-    {{ end }}
+        <div class="mdnv-author-meta">
+          <h1 class="mdnv-author-name">{{ .Title }}</h1>
 
-    <!-- Redes sociales (texto visible, sin depender de icon fonts) -->
-    {{ with .Params.social }}
-      <div class="flex flex-col gap-2 mt-4">
-        {{ range . }}
-          {{/* Normalizar mailto si es envelope sin prefijo */}}
-          {{ $label := "" }}
-          {{ $href := .link }}
-          {{ if and (eq .icon "envelope") (not (hasPrefix $href "mailto:")) }}
-            {{ $href = printf "mailto:%s" $href }}
+          {{ $role := .Params.role }}
+          {{ $orgs := .Params.organizations }}
+          {{ if or $role $orgs }}
+            <p class="mdnv-author-role">
+              {{ with $role }}{{ . }}{{ end }}
+              {{ if and $role $orgs }} · {{ end }}
+              {{ with $orgs }}
+                {{- $names := slice -}}
+                {{- range . -}}
+                  {{- if .name -}}{{- $names = $names | append .name -}}{{- end -}}
+                {{- end -}}
+                {{- if gt (len $names) 0 -}}{{ delimit $names ", " }}{{- end -}}
+              {{ end }}
+            </p>
           {{ end }}
-          {{/* Etiquetas legibles por tipo */}}
-          {{ if eq .icon "twitter" }}{{ $label = "Twitter" }}{{ end }}
-          {{ if eq .icon "github" }}{{ $label = "GitHub" }}{{ end }}
-          {{ if eq .icon "linkedin" }}{{ $label = "LinkedIn" }}{{ end }}
-          {{ if eq .icon "orcid" }}{{ $label = "ORCID" }}{{ end }}
-          {{ if eq .icon "mastodon" }}{{ $label = "Mastodon" }}{{ end }}
-          {{ if eq .icon "envelope" }}{{ $label = "Email" }}{{ end }}
-          {{ if not $label }}{{ $label = "Sitio" }}{{ end }}
 
-          <a href="{{ $href }}" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 w-max">
-            <span>{{ $label }}</span>
-            <span class="truncate max-w-[260px] text-gray-500">{{ $href }}</span>
-          </a>
-        {{ end }}
+          {{ with .Params.email }}
+            <p class="mdnv-author-email">
+              <a href="mailto:{{ . }}">{{ . }}</a>
+            </p>
+          {{ end }}
+
+          <!-- Redes sociales (iconos FA / Academicons si están disponibles en el tema) -->
+          {{ with .Params.social }}
+          <div class="mdnv-author-social">
+            {{ range . }}
+              {{ $pack := .icon_pack | default "fas" }}
+              {{ $icon := .icon | default "link" }}
+              {{ $href := .link | default "#" }}
+              <a href="{{ $href }}" target="_blank" rel="noopener">
+                {{- if eq $pack "ai" -}}
+                  <i class="ai ai-{{ $icon }}"></i>
+                {{- else -}}
+                  <i class="{{ $pack }} fa-{{ $icon }}"></i>
+                {{- end -}}
+              </a>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
       </div>
-    {{ end }}
 
-  </aside>
-
-  {{/* ============= COLUMNA PRINCIPAL (derecha) ============= */}}
-  <div class="md:col-span-8 lg:col-span-9 space-y-10">
-
-    <!-- Experiencia y trayectoria (contenido del author) -->
-    {{ with .Content }}
-      <div class="prose dark:prose-invert max-w-none">
-        {{ . }}
-      </div>
-    {{ end }}
-
-    <!-- Intereses -->
-    {{ with .Params.interests }}
-      {{ if gt (len .) 0 }}
-        <section>
-          <h2 class="text-xl font-semibold mb-3">Intereses</h2>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+      <!-- Intereses -->
+      {{ with .Params.interests }}
+        <div class="mdnv-author-card">
+          <h2 class="mdnv-card-title">Interests</h2>
+          <ul class="mdnv-list">
             {{ range . }}<li>{{ . }}</li>{{ end }}
           </ul>
-        </section>
+        </div>
       {{ end }}
-    {{ end }}
 
-    <!-- Educación (education.courses) -->
-    {{ with .Params.education.courses }}
-      {{ if gt (len .) 0 }}
-        <section>
-          <h2 class="text-xl font-semibold mb-3">Educación</h2>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+      <!-- Educación -->
+      {{ with .Params.education.courses }}
+        <div class="mdnv-author-card">
+          <h2 class="mdnv-card-title">Education</h2>
+          <ul class="mdnv-list">
             {{ range . }}
               <li>
-                {{ .course }}
-                {{ with .institution }} — {{ . }}{{ end }}
+                <span class="mdnv-edu-course">{{ .course }}</span>
+                {{ with .institution }} — <span class="mdnv-edu-inst">{{ . }}</span>{{ end }}
                 {{ with .year }} ({{ . }}){{ end }}
               </li>
             {{ end }}
           </ul>
-        </section>
-      {{ end }}
-    {{ end }}
-
-    <!-- Publicaciones minimalistas (siempre seguro) -->
-    <section>
-      <h2 class="text-xl font-semibold mb-3">Publicaciones</h2>
-
-      {{/* Obtener el slug del autor (carpeta que contiene _index.md) */}}
-      {{ $slug := path.Base (path.Dir .File.Path) }}
-      {{ $all := where site.RegularPages "Params.authors" "intersect" (slice $slug) }}
-      {{ $all = sort $all "Date" "desc" }}
-      {{ $n := len $all }}
-
-      {{ if eq $n 0 }}
-        <p class="text-sm text-gray-500">Aún no hay publicaciones listadas para este autor/a.</p>
-      {{ else }}
-        {{ $limit := 8 }}
-        <div class="space-y-4">
-          {{ range $i, $p := $all }}
-            {{ if lt $i $limit }}
-              <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
-                <a href="{{ $p.RelPermalink }}" class="text-base font-medium hover:underline">{{ $p.Title }}</a>
-                <p class="text-xs text-gray-500">{{ $p.Date.Format "2006-01-02" }}</p>
-              </article>
-            {{ end }}
-          {{ end }}
         </div>
-
-        {{ if gt $n $limit }}
-          <details class="mt-4">
-            <summary class="cursor-pointer text-sm text-gray-700 dark:text-gray-300 hover:underline">
-              Mostrar {{ sub $n $limit }} más
-            </summary>
-            <div class="mt-3 space-y-4">
-              {{ range $i, $p := $all }}
-                {{ if ge $i $limit }}
-                  <article class="border-l-2 border-gray-300 dark:border-gray-700 pl-3">
-                    <a href="{{ $p.RelPermalink }}" class="text-base font-medium hover:underline">{{ $p.Title }}</a>
-                    <p class="text-xs text-gray-500">{{ $p.Date.Format "2006-01-02" }}</p>
-                  </article>
-                {{ end }}
-              {{ end }}
-            </div>
-          </details>
-        {{ end }}
       {{ end }}
-    </section>
 
-  </div>
-</section>
+      <!-- Bio / cuerpo del autor (contenido en Markdown) -->
+      {{ if .Content }}
+        <div class="mdnv-author-card">
+          <h2 class="mdnv-card-title">About</h2>
+          <div class="mdnv-content">
+            {{ .Content }}
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </section>
 {{ end }}
