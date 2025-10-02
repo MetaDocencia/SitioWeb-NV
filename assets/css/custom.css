@@ -1,5 +1,9 @@
-/* === Global font: Open Sans (Regular 400, Medium 500, Bold 700) ========= */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+/* === Global font: Open Sans (400, 500, 700, 800) ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap');
+
+:root{
+  --md-font-body: "Open Sans", Arial, sans-serif;
+}
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -7,18 +11,18 @@ html {
 }
 
 html, body {
-  font-family: "Open Sans", Arial, sans-serif !important;
+  font-family: var(--md-font-body) !important;
   font-weight: 400; /* Regular por defecto */
 }
 
-/* Aplicar Open Sans a todo el texto común y a la tipografía de .prose */
+/* Aplicar Open Sans a texto común y tipografía de .prose */
 h1, h2, h3, h4, h5, h6,
 p, a, span, li, dt, dd, blockquote, small, strong, em,
 label, input, textarea, button, select,
 table, th, td, figcaption,
 nav, header, footer, section, article, aside,
 .prose, .prose :where(p, li, blockquote, h1, h2, h3, h4, h5, h6) {
-  font-family: "Open Sans", Arial, sans-serif !important;
+  font-family: var(--md-font-body) !important;
 }
 
 /* Pesos sugeridos */
@@ -207,10 +211,8 @@ section.people-naked .leading-relaxed {
 }
 
 /* === PEOPLE: avatar RESPONSIVO, nunca se superpone con el texto === */
-/* Asegura grid estable y sin recortes de ancho */
 section.people-7col .grid > * { min-width: 0 !important; }
 
-/* El item no usa posiciones absolutas ni efectos que puedan solapar */
 section.people-naked a.group,
 section.people-naked .group {
   position: static !important;
@@ -220,37 +222,28 @@ section.people-naked .group {
   text-align: center !important;
 }
 
-/* Avatar:
-   - width: porcentaje de la celda (escala con el marco)
-   - clamp: topes para que no quede gigante/mini
-   - aspect-ratio: 1/1 y border-radius para círculo perfecto
-   - sin hover-zoom para evitar solapes
-*/
 section.people-naked img {
-  width: clamp(72px, 62%, 150px) !important; /* ← % controla qué tanto ocupa de la celda */
+  width: clamp(72px, 62%, 150px) !important;
   aspect-ratio: 1 / 1 !important;
-  height: auto !important;                   /* alto sigue al ancho */
-  max-width: 100% !important;                /* nunca desbordar la celda */
-  border-radius: 9999px !important;          /* círculo */
-  object-fit: cover !important;              /* llena el círculo sin deformarse */
+  height: auto !important;
+  max-width: 100% !important;
+  border-radius: 9999px !important;
+  object-fit: cover !important;
   display: block !important;
-  margin: 0 auto 0.5rem auto !important;     /* separa del nombre, evita solape */
+  margin: 0 auto 0.5rem auto !important;
   background: transparent !important;
   box-shadow: none !important;
   transform: none !important;
 }
 
-/* En desktop, podés ajustar un poco el % para afinar el tamaño relativo */
 @media (min-width: 1024px) {
   section.people-7col.people-naked img {
     width: clamp(80px, 58%, 160px) !important;
   }
 }
 
-/* Desactivar cualquier zoom/hover heredado que agrande la imagen */
 section.people-naked a.group:hover img { transform: none !important; }
 
-/* Nombre pegado debajo de la foto, sin subrayados */
 section.people-naked .font-semibold {
   margin: 0 !important;
   line-height: 1.2 !important;
@@ -262,7 +255,6 @@ section.people-naked .font-semibold a {
   text-decoration: none !important;
 }
 
-/* Ocultar metadatos/rol para que sólo quede el nombre */
 section.people-naked .text-sm,
 section.people-naked .opacity-70,
 section.people-naked .prose,
@@ -291,7 +283,7 @@ section.people-7col .grid {
 
 /* ===== PEOPLE: más aire bajo el summary cuando se abre el desplegable ===== */
 section.people-naked details > summary {
-  margin-bottom: 0.8rem !important;  /* más espacio antes de la primera fila */
+  margin-bottom: 0.8rem !important;
 }
 
 .hero-compact { min-height: auto !important; }
@@ -304,7 +296,6 @@ section.people-naked details > summary {
 }
 
 /* ====== Footer: subrayar links SOLO en el pie ====== */
-/* Ajustá ".site-footer" por la clase real de tu pie si difiere */
 footer.site-footer a,
 footer#site-footer a,
 footer .footer-links a,
@@ -321,66 +312,43 @@ footer.site-footer [role="button"] {
   text-decoration: none !important;
 }
 
-/* Asegurar negritas dentro de enlaces del pie (por si algún reset las aplana) */
 footer.site-footer a b,
 footer.site-footer a strong {
   font-weight: 700 !important;
 }
 
 /* ===== Blog (.prose): mantener el bold dentro de links ===== */
-
-/* 1) Que el link no imponga un peso distinto */
 .prose a {
-  font-weight: inherit !important;   /* respeta el peso del texto circundante */
-  text-decoration: underline;        /* (si quisieras quitarlo, modificalo aquí) */
+  font-weight: inherit !important;
+  text-decoration: underline;
 }
-
-/* 2) Casos: <a><strong>…</strong></a> y <strong><a>…</a></strong> */
 .prose a strong,
 .prose a b,
 .prose strong a,
 .prose b a {
-  font-weight: 700 !important;       /* mantiene/negrita dentro del link */
+  font-weight: 700 !important;
 }
-
-/* 3) (Opcional) si querés que en headings también se respete el bold cuando hay link */
 .prose :is(h1,h2,h3,h4,h5,h6) a strong,
 .prose :is(h1,h2,h3,h4,h5,h6) a b,
 .prose :is(h1,h2,h3,h4,h5,h6) strong a,
 .prose :is(h1,h2,h3,h4,h5,h6) b a {
-  font-weight: 800 !important;       /* títulos suelen ser más pesados */
+  font-weight: 800 !important;
 }
 
 /* ===== Quienes somos → sección "MetaDocencia en números" ===== */
-section#numeros {
-  padding-top: 0 !important; /* por si el tema agrega extra */
-}
-
-/* Menos espacio arriba del título y menos espacio entre título y datos */
+section#numeros { padding-top: 0 !important; }
 section#numeros h2,
 section#numeros .section-heading {
   margin-top: 0 !important;
-  margin-bottom: 0.35rem !important; /* acercamos título a la grilla */
+  margin-bottom: 0.35rem !important;
 }
-
-/* Si el contenedor de la grilla tiene margen superior (mt-*), lo reducimos */
-section#numeros h2 + div {
-  margin-top: 0.35rem !important;
-}
-
-/* Más distancia entre filas de métricas (sin tocar columnas) */
-section#numeros .grid {
-  row-gap: 1.25rem !important; /* móvil/tablet */
-}
+section#numeros h2 + div { margin-top: 0.35rem !important; }
+section#numeros .grid { row-gap: 1.25rem !important; }
 @media (min-width: 1024px) {
-  section#numeros .grid {
-    row-gap: 1.75rem !important; /* desktop: separa más la 1ª y 2ª fila */
-  }
+  section#numeros .grid { row-gap: 1.75rem !important; }
 }
 
 /* === No subrayar enlaces que funcionan como BOTONES === */
-/* Cubre: .btn del tema, anchors con utilidades Tailwind tipo px-/py-, 
-   bordes redondeados, fondos, o marcados explícitamente con .no-underline */
 a.btn,
 .btn,
 a.button,
@@ -413,8 +381,6 @@ a[style*="background"]:hover,
 a.no-underline:hover {
   text-decoration: none !important;
 }
-
-/* Seguridad: mantener la negrita si el botón contiene <strong> */
 a.btn strong,
 .btn strong,
 a.button strong,
@@ -425,23 +391,19 @@ a.inline-block[class*="px-"][class*="py-"] strong {
 
 /* ===== Testimonials compact ===== */
 section.testimonials-compact {
-  --t-pad: .85rem;         /* padding interno de cada tarjeta */
-  --t-gap: .9rem;          /* separación entre tarjetas */
-  --t-fs: .95rem;          /* tamaño del texto del testimonio */
-  --t-line: 1.45;          /* interlineado del testimonio */
-  --t-author-fs: .95rem;   /* tamaño del autor */
-  --t-role-fs: .8rem;      /* tamaño del rol */
-  --t-avatar: 52px;        /* tamaño del avatar */
+  --t-pad: .85rem;
+  --t-gap: .9rem;
+  --t-fs: .95rem;
+  --t-line: 1.45;
+  --t-author-fs: .95rem;
+  --t-role-fs: .8rem;
+  --t-avatar: 52px;
 }
-
-/* Gaps del grid */
 section.testimonials-compact .grid,
 section.testimonials-compact [class*="grid"] {
   row-gap: var(--t-gap) !important;
   column-gap: var(--t-gap) !important;
 }
-
-/* Tarjeta más chica (cubre la mayoría de variantes del tema) */
 section.testimonials-compact .p-6,
 section.testimonials-compact .p-5,
 section.testimonials-compact .p-4,
@@ -451,8 +413,6 @@ section.testimonials-compact .px-5.py-5,
 section.testimonials-compact .px-4.py-4 {
   padding: var(--t-pad) !important;
 }
-
-/* Texto del testimonio más chico */
 section.testimonials-compact .prose,
 section.testimonials-compact .prose p,
 section.testimonials-compact blockquote,
@@ -461,8 +421,6 @@ section.testimonials-compact p {
   font-size: var(--t-fs) !important;
   line-height: var(--t-line) !important;
 }
-
-/* Autor y rol más chicos */
 section.testimonials-compact .name,
 section.testimonials-compact .author,
 section.testimonials-compact h3 {
@@ -477,8 +435,6 @@ section.testimonials-compact .opacity-70 {
   line-height: 1.2 !important;
   opacity: .8 !important;
 }
-
-/* Avatar compacto */
 section.testimonials-compact img,
 section.testimonials-compact .avatar img,
 section.testimonials-compact .rounded-full {
@@ -488,72 +444,54 @@ section.testimonials-compact .rounded-full {
   min-height: var(--t-avatar) !important;
   object-fit: cover !important;
 }
-
-/* Menos aire vertical dentro de cada testimonio */
 section.testimonials-compact .space-y-2 > * + *,
 section.testimonials-compact .space-y-3 > * + * {
   margin-top: .4rem !important;
 }
 
-
 /* ==========================================================================
    HERO (hero-max-bounded): centrado vertical + altura máxima
    -------------------------------------------------------------------------- */
-/* Contenedor del hero: no exceder y centrar verticalmente
-   (activa cuando el bloque tenga css_class: "hero-max-bounded") */
 .hero-max-bounded,
 .hero-max-bounded .hero-bg {
   display: flex;
-  align-items: center;          /* centra en eje Y */
-  justify-content: center;      /* centra el wrapper interno en eje X */
-  /* Limites de altura: no más que ~3/4 de pantalla en desktop */
-  min-height: 60vh;             /* piso para que se note el hero */
-  max-height: 92vh;             /* tope en desktop */
-  overflow: hidden;             /* evita que el cover empuje el layout */
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  max-height: 92vh;
+  overflow: hidden;
 }
-
-/* El contenedor interno no debe sumar padding vertical */
 .hero-max-bounded .container {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-
-/* Ajuste de márgenes para que nada empuje hacia abajo */
 .hero-max-bounded h1 { margin-top: 0 !important; }
 .hero-max-bounded p  { margin-bottom: 0.5rem !important; }
-
-/* Móvil: un poco más bajo para no tapar todo el viewport */
 @media (max-width: 768px) {
   .hero-max-bounded,
   .hero-max-bounded .hero-bg {
     min-height: 44vh;
     max-height: 70vh;
   }
-  /* Fallback móvil: parallax fijo suele dar jitter */
   .hero-max-bounded .hero-bg { background-attachment: scroll !important; }
 }
-
-/* Laptops con poca altura: compactar padding interno */
 @media (max-height: 700px) {
   .hero-max-bounded .container {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }
 }
-
-/* (Opcional) Si usás el hero extendido con clase .hero-bounded del template,
-   forzamos flex para centrar verticalmente sin depender de inline styles. */
 .hero-bounded .hero-bg {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===== Footer en 2 columnas (se mantiene igual) ===== */
+/* ===== Footer en 2 columnas ===== */
 .mdnv-footer-grid {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: start;          /* alinea arriba ambos lados */
+  align-items: start;
   gap: 0.3rem 2rem;
   margin: 0;
   padding: 0;
@@ -568,11 +506,9 @@ section.testimonials-compact .space-y-3 > * + * {
 /* ===== Compactación extrema del bloque footer ===== */
 footer, .footer, .site-footer {
   margin-top: 0 !important;
-  padding-top: 0.2rem !important;    /* ← ajusta entre 0–0.4rem si quieres menos/más */
+  padding-top: 0.2rem !important;
   padding-bottom: 0.25rem !important;
 }
-
-/* Quitar rellenos y márgenes del contenedor del tema dentro del footer */
 footer .container,
 .site-footer .container,
 .footer .container {
@@ -581,8 +517,6 @@ footer .container,
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-
-/* El wrapper interior que a veces agrega separación extra */
 footer .prose,
 footer .content,
 .site-footer .prose,
@@ -592,8 +526,6 @@ footer .content,
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-
-/* Asegurar que no aparezca un “espacio fantasma” por márgenes de primer/último hijo */
 footer .mdnv-footer-grid,
 footer .mdnv-footer-grid > * {
   margin-top: 0 !important;
@@ -601,11 +533,7 @@ footer .mdnv-footer-grid > * {
 }
 footer .mdnv-footer-left p:first-child { margin-top: 0 !important; }
 footer .mdnv-footer-left p:last-child { margin-bottom: 0 !important; }
-
-/* Ajuste fino para que ambas columnas arranquen a la misma altura visual */
 footer .mdnv-footer-right { padding-top: 0.02rem; }
-
-/* Responsivo: una columna en móvil */
 @media (max-width: 768px) {
   .mdnv-footer-grid {
     grid-template-columns: 1fr;
@@ -614,10 +542,19 @@ footer .mdnv-footer-right { padding-top: 0.02rem; }
   .mdnv-footer-right a { text-align: left; }
 }
 
-/* CTA: heredar la fuente global del sitio, sin tocar SVG/íconos */
-.mdnv-cta-fullwidth {
-  font-family: inherit; /* hereda del <body> o contenedor */
-}
+/* === CTA full-bleed: heredar SIEMPRE la fuente del sitio ================== */
+/* Herencia por defecto (suave, no toca spacing) */
+.mdnv-cta-fullwidth,
 .mdnv-cta-fullwidth :where(:not(svg, svg *, [class*="icon"])) {
-  font-family: inherit;
+  font-family: var(--md-font-body);
+}
+
+/* Si el tema fija una familia distinta con alta especificidad,
+   desbloqueamos solo los elementos típicos del CTA */
+.mdnv-cta-fullwidth h1,
+.mdnv-cta-fullwidth h2,
+.mdnv-cta-fullwidth h3,
+.mdnv-cta-fullwidth p,
+.mdnv-cta-fullwidth a {
+  font-family: var(--md-font-body) !important;
 }
