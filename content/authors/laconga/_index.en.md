@@ -14,7 +14,7 @@ social:
   link: https://twitter.com/lacongaphysics
 superuser: false
 user_groups:
--  Fellow Communities
+-  Also build and were part of this hive
 ---
 
 ### Learn more in this video
@@ -29,5 +29,6 @@ user_groups:
 
 
 ***
+
 
 
