@@ -2,7 +2,7 @@
 <article class="container mx-auto px-4 py-6">
 
   {{/* ---------- Encabezado ---------- */}}
-  <header class="mb-6 flex items-center gap-5">
+  <header class="mb-6 flex items-center gap-6">
     {{/* Intentar obtener avatar como Page Resource (si es bundle) */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
@@ -16,13 +16,13 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: 2x más grande */}}
+    {{/* Avatar: 1.5x (240x240) */}}
     {{ if $avatar }}
       <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
-           class="w-40 h-40 rounded-full object-cover" loading="lazy">
+           class="w-60 h-60 rounded-full object-cover" loading="lazy">
     {{ else }}
       <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
-           class="w-40 h-40 rounded-full object-cover" loading="lazy">
+           class="w-60 h-60 rounded-full object-cover" loading="lazy">
     {{ end }}
 
     <div>
@@ -41,10 +41,9 @@
         </p>
       {{ end }}
 
-      {{/* Redes sociales: ícono + texto, separados por ·  */}}
+      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
-        {{/* Map simple para mostrar nombres bonitos */}}
         {{ $labels := dict
           "twitter" "Twitter"
           "x-twitter" "Twitter"
@@ -57,24 +56,21 @@
           "home" "Website"
           "envelope" "Email"
         }}
-        <p class="text-sm mt-1 flex flex-wrap gap-x-3 gap-y-1">
+        <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="font-medium mr-1">Contacto:</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
             {{ $pack := ( .icon_pack | lower ) }}
             {{ $url  := .link }}
             {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
-
-            {{/* Construimos el HTML del ítem: ícono FA + label.
-                 Si por cualquier motivo no carga FA, al menos queda el texto. */}}
+            {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
             {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline">
               <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
-            </a>` $url (cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab")) $icon $label }}
+            </a>` $url $faPack $icon $label }}
             {{ $items = $items | append $one }}
           {{ end }}
-          {{/* Separador · entre ítems */}}
-          {{ $safe := delimit $items " · " | safeHTML }}
-          {{ $safe }}
+          {{ delimit $items " · " | safeHTML }}
         </p>
       {{ end }}
 
@@ -83,6 +79,26 @@
         <p class="text-sm opacity-90 mt-1">
           <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
         </p>
+      {{ end }}
+
+      {{/* Educación: courses (course – institution (year)) */}}
+      {{ with .Params.education }}
+        {{ with .courses }}
+          <div class="text-sm mt-2">
+            <p class="font-medium mb-1">Educación:</p>
+            <ul class="list-disc list-inside space-y-0.5">
+              {{ range . }}
+                <li>
+                  {{- with .course -}}{{ . }}{{ end -}}
+                  {{- if or .institution .year -}}
+                    {{- if .institution }} – {{ .institution }}{{ end -}}
+                    {{- if .year }} ({{ .year }}){{ end -}}
+                  {{- end -}}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
       {{ end }}
     </div>
   </header>
@@ -93,18 +109,35 @@
   </div>
 
   {{/* ---------- Listado minimalista de posts del autor ---------- */}}
-  {{/* Colección robusta: soporta authors string o lista; filtra por $authorKey */}}
+  {{/* Construimos claves posibles del autor para matchear en .Params.authors */}}
+  {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
+
+  {{/* Secciones consideradas como "notas/blog" (ajustar si hace falta) */}}
+  {{ $allowed := slice "post" "blog" "news" }}
+
   {{ $col := slice }}
   {{ range .Site.RegularPages }}
-    {{ $auth := .Params.authors }}
-    {{ if $auth }}
-      {{ $t := printf "%T" $auth }}
-      {{ if eq $t "[]interface {}" }}
-        {{ if in $auth $authorKey }}
-          {{ $col = $col | append . }}
+    {{/* Filtrar por secciones típicas de artículos */}}
+    {{ if in $allowed .Section }}
+      {{ $auth := .Params.authors }}
+      {{ if $auth }}
+        {{ $matched := false }}
+        {{ $t := printf "%T" $auth }}
+        {{ if eq $t "[]interface {}" }}
+          {{/* Lista de autores */}}
+          {{ range $auth }}
+            {{ $a := lower (printf "%v" .) }}
+            {{ if or (in $keys $a) (in $a (delimit $keys " ")) }}{{/* fallback defensivo */}}{{ end }}
+            {{ if in $keys $a }}
+              {{ $matched = true }}
+            {{ end }}
+          {{ end }}
+        {{ else if eq $t "string" }}
+          {{ if in $keys (lower $auth) }}
+            {{ $matched = true }}
+          {{ end }}
         {{ end }}
-      {{ else if eq $t "string" }}
-        {{ if eq $auth $authorKey }}
+        {{ if $matched }}
           {{ $col = $col | append . }}
         {{ end }}
       {{ end }}
