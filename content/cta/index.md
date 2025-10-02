@@ -43,8 +43,8 @@ sections:
     id: slack
     content:
       items:
-        - title:
-          text: 
+        - title: ""
+          text: ""
         - title: "Súmate a nuestra comunidad en Slack"
           text: |
             <!-- Estilos locales SOLO para este section -->
