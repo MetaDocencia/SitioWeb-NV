@@ -80,24 +80,19 @@ sections:
   - block: markdown
     id: solutions
     content:
-      title: ""   # ← ocultamos el título del bloque
+      title: "Vamos por 5 años más"
       text: |
         <!-- Breakout full-bleed que ignora el wrapper central del tema -->
         <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
           <!-- Contenido centrado y con respiro lateral -->
           <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
             <div data-2col>
-              <!-- Columna izquierda: TÍTULO + texto -->
+              <!-- Solo el texto centrado verticalmente y con padding lateral propio -->
               <div class="mdnv-vcenter mdnv-text-pad">
-                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
-                  Vamos por 5 años más
-                </h2>
                 <p>
                   Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
               </div>
-
-              <!-- Columna derecha: video 16:9 -->
               <div data-16x9>
                 <iframe
                   src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
