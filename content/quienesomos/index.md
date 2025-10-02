@@ -54,27 +54,6 @@ sections:
         padding: ["0rem", 0, "0rem", 0]
       css_style: ""
 
-  # ===== Estilos locales SOLO para este hero (ajuste de alto en móvil) =====
-  - block: markdown
-    id: estilos-hero-qs
-    content:
-      title: ""
-      text: |
-        <style>
-          /* Solo Quienes somos: #hero-qs */
-          @media (max-width: 768px) {
-            section#hero-qs.hero-max-bounded,
-            section#hero-qs.hero-max-bounded .hero-bg {
-              max-height: 64vh;
-              min-height: 44vh;
-            }
-            section#hero-qs .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
-            }
-          }
-        </style>
-
   # ===== Vamos por 5 años más (texto + video) =====
   - block: markdown
     id: solutions
@@ -109,7 +88,8 @@ sections:
           </div>
         </div>
     design:
-      css_style: "background-color:#FFFFFF;color:#111827;"
+      # Light mode: fondo claro / texto oscuro
+      css_style: "background:#FFFFFF;color:#111827;"
       spacing:
         padding: ["2rem", 0, "1.25rem", 0]
 
@@ -143,6 +123,7 @@ sections:
       title: ""
       text: |
         <style>
+          /* ===== Grilla 2→1 para el bloque de video/texto ===== */
           [data-2col] {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -173,6 +154,16 @@ sections:
             width: 100%; height: 100%;
             border: 0; border-radius: .5rem;
           }
+
+          /* ===== Dark mode para el bloque "Vamos por 5 años más" =====
+             Fondo oscuro y texto blanco, como el bloque de auspiciantes */
+          :root.dark section#solutions {
+            background: #00506F !important;
+            color: #FFFFFF !important;
+          }
+          :root.dark section#solutions a { color:#FFFFFF !important; }
+
+          /* ===== Colapsables y márgenes (sin tocar tipografías globales) ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -319,4 +310,38 @@ sections:
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
+
+  # ===== Estilos locales SOLO para este hero (bloque invisible) =====
+  - block: markdown
+    id: estilos-hero-qs
+    content:
+      title: ""
+      text: |
+        <style>
+          /* Ocultar COMPLETAMENTE este section para no ocupar espacio */
+          section#estilos-hero-qs {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+
+          /* Solo Quienes somos: #hero-qs (ajustes de alto en móvil) */
+          @media (max-width: 768px) {
+            section#hero-qs.hero-max-bounded,
+            section#hero-qs.hero-max-bounded .hero-bg {
+              max-height: 64vh;
+              min-height: 44vh;
+            }
+            section#hero-qs .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
+    design:
+      spacing:
+        padding: [0, 0, 0, 0]
+        margin: [0, 0, 0, 0]
 ---
