@@ -38,32 +38,26 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack ----------
-  - block: cta-card
+  # ---------- Slack (reemplazado por cta-image-paragraph) ----------
+  - block: cta-image-paragraph
     id: slack
     content:
-      title: "Súmate a nuestra comunidad en Slack"
-      text: |
-        <div style="color:#FFFFFF">
-          <p>
-            Conecta con más de <strong style="color:#FFFFFF">+1070 personas</strong> que comparten interés por la
-            <strong style="color:#FFFFFF">educación</strong>, la <strong style="color:#FFFFFF">ciencia abierta</strong>
-            y la <strong style="color:#FFFFFF">colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
-          </p>
-          <p class="mt-2">
-            <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
-               class="underline font-semibold" style="color:#FFFFFF;">
-               Qué es y cómo sumarme
-            </a>
-          </p>
-        </div>
-      button:
-        text: "Unirme al espacio de MetaDocencia"
-        url: "https://w3id.org/metadocencia/slack"
+      items:
+        - title: "Súmate a nuestra comunidad en Slack"
+          text: |
+            Conecta con más de **+1070 personas** que comparten interés por la **educación**, la **ciencia abierta**
+            y la **colaboración**. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+
+            <p class="mt-3">
+              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/"
+                 class="underline font-semibold" style="color:#FFFFFF;">Qué es y cómo sumarme</a>
+            </p>
+          image: "slack.png"
+          button:
+            text: "Unirme al espacio de MetaDocencia"
+            url: "https://w3id.org/metadocencia/slack"
     design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#E01E5A;color:#FFFFFF;"
+      css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
@@ -106,7 +100,6 @@ sections:
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
-
 
   # ---------- Redes (botones clicables en grid) ----------
   - block: cta-card
