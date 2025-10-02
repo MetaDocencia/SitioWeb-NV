@@ -38,79 +38,73 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack ----------
-
-  # ---------- Slack (cta-image-paragraph con margen lateral amplio, imagen 40% y a la derecha) ----------
-- block: cta-image-paragraph
-  id: slack
-  content:
-    items:
-      - title: "Join our Slack community"
-        text: |
-          <!-- Estilos locales SOLO para este section -->
-          <style>
-            /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
-            section#slack .container {
-              max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
-              padding-left: clamp(1rem, 4vw, 2rem) !important;
-              padding-right: clamp(1rem, 4vw, 2rem) !important;
-            }
-
-            /* Dos columnas iguales y separación coherente */
-            section#slack [data-2col],
-            section#slack .flex, /* fallback si el bloque usa flex */
-            section#slack .grid { 
-              display: grid !important;
-              grid-template-columns: 1fr 1fr !important;
-              gap: clamp(1rem, 3vw, 2rem) !important;
-              align-items: center !important;
-            }
-
-            /* --- Fallback universal para pasar la imagen a la DERECHA ---
-               Asumimos que el HTML renderiza primero el texto y luego la imagen.
-               Invertimos el orden con CSS en desktop y tablet. */
-            @media (min-width: 769px) {
-              section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
-              section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
-            }
-
-            /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
-            section#slack img {
-              width: 40% !important;
-              max-width: 40% !important;
-              height: auto !important;
-              display: block !important;
-              margin-left: auto !important;
-              margin-right: auto !important;
-            }
-
-            /* En móviles mantenemos 40% y apilamos */
-            @media (max-width: 768px) {
-              section#slack [data-2col],
-              section#slack .grid {
-                grid-template-columns: 1fr !important;
+  # ---------- Slack (cta-image-paragraph with wide margins, image 40% on the right) ----------
+  - block: cta-image-paragraph
+    id: slack
+    content:
+      items:
+        - title: "Join our Slack community"
+          text: |
+            <!-- Local styles ONLY for this section -->
+            <style>
+              /* Match width to cta-card (same as other CTAs) */
+              section#slack .container {
+                max-width: 1100px !important; /* same “card” width */
+                padding-left: clamp(1rem, 4vw, 2rem) !important;
+                padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
-              /* En mobile dejamos el orden natural: texto arriba, imagen abajo */
-              section#slack [data-2col] > *:first-child { order: 1 !important; }
-              section#slack [data-2col] > *:last-child  { order: 2 !important; }
-            }
-          </style>
 
-          Connect with <strong style="color:#FFFFFF">1,070+ people</strong> interested in
-            <strong style="color:#FFFFFF">education</strong>, <strong style="color:#FFFFFF">open science</strong>,
-            and <strong style="color:#FFFFFF">collaboration</strong>. Share experiences, learn from others, and join conversations that spark new ideas.
+              /* Two equal columns and consistent spacing */
+              section#slack [data-2col],
+              section#slack .flex, /* fallback if block uses flex */
+              section#slack .grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: clamp(1rem, 3vw, 2rem) !important;
+                align-items: center !important;
+              }
 
-          <p class="mt-3">
-            <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">What it is and how to join</a>
-          </p>
-        image: "slack.png"
-        image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
-        button:
-          text: "Join MetaDocencia’s space"
-          url: "https://w3id.org/metadocencia/slack"
-  design:
-    css_style: "background-color:#FFFFFF;color:#111827;"
+              /* --- Fallback to place the image on the RIGHT in desktop/tablet --- */
+              @media (min-width: 769px) {
+                section#slack [data-2col] > *:first-child { order: 2 !important; } /* text */
+                section#slack [data-2col] > *:last-child  { order: 1 !important; } /* image */
+              }
 
+              /* Image ALWAYS at 40% and centered (desktop & mobile) */
+              section#slack img {
+                width: 40% !important;
+                max-width: 40% !important;
+                height: auto !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+              }
+
+              /* Mobile: stack columns, keep order text above image */
+              @media (max-width: 768px) {
+                section#slack [data-2col],
+                section#slack .grid {
+                  grid-template-columns: 1fr !important;
+                }
+                section#slack [data-2col] > *:first-child { order: 1 !important; }
+                section#slack [data-2col] > *:last-child  { order: 2 !important; }
+              }
+            </style>
+
+            Connect with <strong style="color:#111827">1,070+ people</strong> interested in
+            <strong style="color:#111827">education</strong>, <strong style="color:#111827">open science</strong>,
+            and <strong style="color:#111827">collaboration</strong>. Share experiences, learn from others, and join conversations that spark new ideas.
+
+            <p class="mt-3">
+              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">What it is and how to join</a>
+            </p>
+          image: "slack.png"
+          image_position: right
+          button:
+            text: "Join MetaDocencia’s space"
+            url: "https://w3id.org/metadocencia/slack"
+    design:
+      css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Partner Communities (no logos) ----------
   - block: cta-card
