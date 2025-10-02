@@ -570,15 +570,18 @@ footer .mdnv-footer-right { padding-top: 0.02rem; }
 .mdnv-author-avatar img {
   width: 96px; height: 96px; border-radius: 9999px; object-fit: cover;
 }
-.mdnv-author-name {
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
-  line-height: 1.15; margin: 0;
+.mdnv-author-fallback {
+  width: 96px; height: 96px; border-radius: 9999px;
+  display: grid; place-items: center;
+  background: #e5e7eb; color: #111827; font-weight: 700; font-size: 1.5rem;
 }
+.mdnv-author-name { font-size: clamp(1.5rem, 2.8vw, 2rem); line-height: 1.15; margin: 0; }
 .mdnv-author-role { margin: .25rem 0 0 0; opacity: .85; }
 .mdnv-author-email { margin: .25rem 0 0 0; }
 .mdnv-author-email a { text-decoration: none; }
 .mdnv-author-social { margin-top: .4rem; display: flex; gap: .5rem; }
 .mdnv-author-social a { font-size: 1.15rem; line-height: 1; opacity: .9; }
+
 .mdnv-author-card {
   border: 1px solid rgba(0,0,0,.08);
   padding: .9rem 1rem; border-radius: .5rem;
@@ -589,9 +592,7 @@ html.dark .mdnv-author-card {
   background: rgba(255,255,255,.03);
   border-color: rgba(255,255,255,.08);
 }
-.mdnv-card-title {
-  font-size: 1.05rem; margin: 0 0 .5rem 0;
-}
+.mdnv-card-title { font-size: 1.05rem; margin: 0 0 .5rem 0; }
 .mdnv-list { margin: 0; padding-left: 1.1rem; }
 .mdnv-list li { margin: .15rem 0; }
 .mdnv-edu-course { font-weight: 600; }
@@ -600,5 +601,5 @@ html.dark .mdnv-author-card {
 /* Responsive */
 @media (max-width: 520px) {
   .mdnv-author-head { grid-template-columns: 72px 1fr; }
-  .mdnv-author-avatar img { width: 72px; height: 72px; }
+  .mdnv-author-avatar img, .mdnv-author-fallback { width: 72px; height: 72px; }
 }
