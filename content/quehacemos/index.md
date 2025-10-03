@@ -384,7 +384,7 @@ sections:
             maxw="1600px"
             content_maxw="900px"
             align="center"
-            py="2,5rem" px="1rem,3rem,3rem,3rem"
+            py="2,5rem" px="clamp(3rem,3rem,3rem,3rem)"
             inner="raw"
         >}}
   
