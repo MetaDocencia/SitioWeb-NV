@@ -389,7 +389,7 @@ sections:
         >}}
   
         <a href="https://mdnv.netlify.app/prensas/"
-           class="inline-block font-semibold px-4 py-2 rounded-md"
+           class="inline-block font-semibold px-4 py-6 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
           Ver menciones
         </a>
