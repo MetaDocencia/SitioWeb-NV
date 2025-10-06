@@ -41,7 +41,7 @@ sections:
     content:
       items:
         - title: "Quiénes somos"
-          text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades científicas locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
+          text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
           image: "quienessomos.jpg"
           button:
             text: "Conócenos"
@@ -86,9 +86,9 @@ sections:
       text: ""
       items:
         - name: "Carly Strasser"
-          role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI en Latinoamérica"
+          role: "Directora Senior de programas de CZI, tras co-organizar el [primer evento de CZI Open Science en Latinoamérica](https://chanzuckerberg.com/blog/open-science-latin-america-argentina/)"
           text: |
-            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con todos ustedes.
+            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con ustedes.
         - name: "Julio Zetter"
           role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de una formación en Ciencia Abierta"
           text: |
