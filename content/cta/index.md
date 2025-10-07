@@ -98,7 +98,7 @@ sections:
             y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
   
             <p class="mt-3">
-              <a href="https://mdnv.netlify.app/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
+              <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
             </p>
           image: "slack.png"
           image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
@@ -116,7 +116,7 @@ sections:
       title: "Comunidades amigas"
       text: |
         Amplificamos el trabajo de organizaciones que hacen de la ciencia abierta un esfuerzo global, colectivo y comunitario.  
-        <a href="https://mdnv.netlify.app/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Conoce la red de comunidades</a>
+        <a href="/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Conoce la red de comunidades</a>
       button:
         text: "Suma tu comunidad"
         url: "mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
@@ -137,7 +137,7 @@ sections:
         </style>
 
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
-        <a href="https://mdnv.netlify.app/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
+        <a href="/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
 
         Si tu organización comparte nuestra misión, escribinos a
         <a href="mailto:direccion@metadocencia.org">direccion@metadocencia.org</a>
