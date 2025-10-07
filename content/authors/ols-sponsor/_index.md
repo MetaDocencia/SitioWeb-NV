@@ -11,5 +11,5 @@ social:
   link: https://openlifesci.org/
 superuser: false
 user_groups:
-- Actuales
+- Auspiciantes
 ---
