@@ -65,7 +65,7 @@ sections:
       items:
         - statistic: "+200"
           description: |
-            Documentos  
+            documentos  
             en Zenodo
         - statistic: "+1500"
           description: |
