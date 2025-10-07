@@ -108,7 +108,7 @@ sections:
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Accessibility Policy</h4>
             <p>
               Review MetaDocencia’s
-              <a href="https://www.metadocencia.org/en/politica_accesibilidad/" target="_blank" rel="noopener" class="underline font-semibold">Accessibility Policy</a>
+              <a href="[https://www.metadocencia.org/en/politica_accesibilidad/](https://zenodo.org/records/10514982)" target="_blank" rel="noopener" class="underline font-semibold">Accessibility Policy</a>
               and related recommendations defined by the MetaDocencia team as criteria and best practices that shape accessibility in our framework.
             </p>
           </div>
