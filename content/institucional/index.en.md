@@ -69,43 +69,49 @@ sections:
     design:
       columns: 3
 
-  # ===== Governance links =====
+  # ===== Institucional =====
   - block: markdown
-    id: governance-links
+    id: institucional
     content:
-      title: "Governance"
+      title: ""
       text: |
-        <div class="max-w-3xl mx-auto text-center">
-          <p class="mb-4">
-            If you are interested in our governance, we suggest these links:
-          </p>
-          <div class="flex flex-wrap md:flex-nowrap justify-center gap-3">
-            <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
-               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#00506F;">
-               MetaDocencia’s Governance (2022)
-            </a>
-            <a href="https://zenodo.org/records/12522913"
-               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#C83737;">
-               Governance 2.0 (2024)
-            </a>
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Red line on top -->
+          <div style="height:4px;background:#C83737;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
+          <h3 class="text-2xl font-semibold mb-3">Institutional</h3>
+        </div>
+  
+        <!-- Wider column -->
+        <div class="max-w-4xl mx-auto space-y-5 text-lg">
+          <div>
+            <h4 class="text-xl md:text-2xl font-semibold mb-1">Governance</h4>
+            <p>
+              Browse MetaDocencia’s governance documents, co-created with our community and reviewed annually.
+              They also include our Conflict of Interest Policy and Authorship Guidelines.
+              <!-- Keep the existing link to your governance bundle -->
+              See the collection
+              <a href="https://zenodo.org/records/12522913" target="_blank" rel="noopener" class="underline font-semibold">here</a>.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xl md:text-2xl font-semibold mb-1">Code of Conduct</h4>
+            <p>
+              Our
+              <a href="https://zenodo.org/records/13236269" target="_blank" rel="noopener" class="underline font-semibold">Code of Conduct (CoC)</a>
+              guides every activity and collaboration at MetaDocencia. It was built collectively and reflects our vision,
+              mission, and values. Everyone participating in our initiatives commits to respecting and promoting it.
+            </p>
+          </div>
+  
+          <div>
+            <h4 class="text-xl md:text-2xl font-semibold mb-1">Accessibility Policy</h4>
+            <p>
+              Review MetaDocencia’s
+              <a href="https://www.metadocencia.org/en/politica_accesibilidad/" target="_blank" rel="noopener" class="underline font-semibold">Accessibility Policy</a>
+              and related recommendations defined by the MetaDocencia team as criteria and best practices that shape accessibility in our framework.
+            </p>
           </div>
         </div>
-    design:
-      css_class: "bg-gray-50 dark:bg-gray-800"
 
-  # ===== How we are organized (orange CTA card) =====
-  - block: cta-card
-    id: organization
-    content:
-      title: "How we are organized"
-      text: "At MetaDocencia, we have defined an efficient and versatile organizational structure to tackle the challenges ahead."
-      button:
-        text: "See the complete organizational chart in Zenodo"
-        url: "https://doi.org/10.5281/zenodo.11456152"
-    design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#F77B20;color:#FFFFFF;"
 ---
