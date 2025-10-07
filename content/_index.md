@@ -58,7 +58,7 @@ sections:
             text: "Lee más sobre nuestros proyectos"
             url: "/que-hacemos"
     design:
-      css_class: ""
+      css_class: "features-unify"
 
   - block: stats
     content:
