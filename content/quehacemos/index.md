@@ -166,8 +166,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/revision-abierta/">Ver más →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
         - name: "Procesamiento de datos abiertos"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -175,8 +173,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/datosabiertos-latam/">Ver más →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
       columns: 4
 
@@ -336,8 +332,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Ver más →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Proyecto a incubar</span>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
