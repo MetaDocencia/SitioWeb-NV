@@ -1,5 +1,5 @@
-{{ with .role }}
+{{- with .role }}
   <div class="testimonial-role text-sm text-gray-600 dark:text-gray-300">
-    {{ . | markdownify }}
+    {{ . | markdownify | safeHTML }}
   </div>
-{{ end }}
+{{- end }}
