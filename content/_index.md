@@ -73,7 +73,7 @@ sections:
             formadas
         - statistic: "+1070"
           description: |
-            personas conectadas
+            personas conectadas  
             por Slack
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
