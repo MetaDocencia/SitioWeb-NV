@@ -1,7 +1,7 @@
 ---
-title: "Catalyst"
+title: "Proyecto Catalyst"
 translationKey: "catalyst"
-summary: "Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales."
+summary: "Facilitamos la accesibilidad y la utilidad de la infraestructura  de cómputo en la nube para comunidades globales de biociencias."
 date: 2025-09-23
 tags:
   - Infraestructura
