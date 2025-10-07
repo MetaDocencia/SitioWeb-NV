@@ -49,14 +49,14 @@ sections:
             <style>
               /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
               section#slack .container {
-                max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
+                max-width: 1100px !important;
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
               /* Dos columnas iguales y separación coherente */
               section#slack [data-2col],
-              section#slack .flex, /* fallback si el bloque usa flex */
+              section#slack .flex,
               section#slack .grid { 
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
@@ -64,15 +64,13 @@ sections:
                 align-items: center !important;
               }
   
-              /* --- Fallback universal para pasar la imagen a la DERECHA ---
-                 Asumimos que el HTML renderiza primero el texto y luego la imagen.
-                 Invertimos el orden con CSS en desktop y tablet. */
+              /* --- Invertir orden para que la imagen quede a la derecha en desktop --- */
               @media (min-width: 769px) {
                 section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
                 section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
               }
   
-              /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
+              /* Imagen al 40% y centrada */
               section#slack img {
                 width: 40% !important;
                 max-width: 40% !important;
@@ -82,32 +80,53 @@ sections:
                 margin-right: auto !important;
               }
   
-              /* En móviles mantenemos 40% y apilamos */
+              /* En móviles apilar */
               @media (max-width: 768px) {
                 section#slack [data-2col],
                 section#slack .grid {
                   grid-template-columns: 1fr !important;
                 }
-                /* En mobile dejamos el orden natural: texto arriba, imagen abajo */
                 section#slack [data-2col] > *:first-child { order: 1 !important; }
                 section#slack [data-2col] > *:last-child  { order: 2 !important; }
+              }
+  
+              /* NEW: Forzamos a que la columna de TEXTO sea un contenedor flex vertical
+                 para poder reordenar el botón (.btn) y el link “after-button”. */
+              section#slack [data-2col] > *:first-child,
+              section#slack .grid > *:first-child,
+              section#slack .flex > *:first-child {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+              }
+  
+              /* NEW: En muchos temas Hugo Blox/Wowchemy los botones usan clase .btn */
+              section#slack a.btn { order: 1 !important; }
+  
+              /* NEW: Hacemos que el link “Qué es…” se ubique DESPUÉS del botón */
+              section#slack .after-button { order: 2 !important; }
+  
+              /* Opcional: estilo de texto-enlace para que no compita visualmente con el botón */
+              section#slack .after-button a {
+                text-decoration: underline;
+                font-weight: 600;
               }
             </style>
   
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
             y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
   
-            <p class="mt-3">
-              <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
-            </p>
+            <!-- NEW: envolvemos el enlace en un contenedor para poder ordenarlo bajo el botón -->
+            <div class="after-button">
+              <a href="/post/20231219-mdenslack/">Qué es Slack y cómo puedo sumarme a la conversación</a>
+            </div>
           image: "slack.png"
-          image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
+          image_position: right
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
