@@ -33,9 +33,6 @@ sections:
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://mdnv.netlify.app/post/origenmd/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
           </p>
-          <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
-          </p>
         </div>
     design:
       background:
