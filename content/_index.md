@@ -90,11 +90,11 @@ sections:
           text: |
             Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con ustedes.
         - name: "Julio Zetter"
-          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de una formación en Ciencia Abierta"
+          role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de nuestra formación en Ciencia Abierta"
           text: |
             No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia.
         - name: "Verónica Xhardez"
-          role: "Docente/Investigadora UNTREF — Investigadora CIECTI — Coordinadora Técnica, ARPHAI"
+          role: "Docente e investigadora en UNTREF, investigadora en CIECTI y coordinadora técnica de ARPHAI, en ocasión del 4° aniversario de MetaDocencia"
           text: |
             ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo.
     design:
