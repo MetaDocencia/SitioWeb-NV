@@ -68,7 +68,7 @@ sections:
             <a href="#infra"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#00506F;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Ver más
+               Proyectos
             </a>
         - name: "Formamos capacidades"
           description: |
@@ -78,7 +78,7 @@ sections:
             <a href="#formacion"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#C83737;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Ver más
+               Proyectos
             </a>
         - name: "Construimos comunidad"
           description: |
@@ -88,7 +88,7 @@ sections:
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#F77B20;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Ver más
+               Proyectos
             </a>
     design:
       columns: 3
@@ -281,13 +281,13 @@ sections:
       items:
         - name: "Marina Compagnucci"
           role: "Bióloga y colaboradora de MetaDocencia, participó en el diseño y contextualización de contenidos educativos en Ciencia Abierta de la NASA"
-          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio"
+          text: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio."
         - name: "Walter Sosa Escudero"
           role: "PhD in Economics, profesor e investigador"
-          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen"
+          text: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
         - name: "Emmanuel Iarussi"
           role: "Científico en CONICET y profesor UTDT"
-          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado"
+          text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
