@@ -139,11 +139,11 @@ sections:
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
         <a href="/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
 
-        Si tu organización comparte nuestra misión, escribinos a
+        Si tu organización comparte nuestra misión, escríbenos a
         <a href="mailto:direccion@metadocencia.org">direccion@metadocencia.org</a>
         para explorar cómo colaborar.
 
-        Podés hacer tu aporte a través de nuestro
+        Puedes hacer tu aporte a través de nuestro
         <a href="/donar/">formulario de donación</a>
         y ayudarnos a sostener y ampliar nuestras actividades.
     design:
@@ -158,7 +158,7 @@ sections:
       title: "Sigue el intercambio"
       text: |
         <div style="color:#FFFFFF">
-          <p>Acompañanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
+          <p>Acompáñanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
