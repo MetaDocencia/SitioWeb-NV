@@ -90,7 +90,8 @@ sections:
           <div>
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Gobernanza</h4>
             <p>
-              Consulta los documentos relacionados al proceso de construcción colectiva de la [Gobernanza comunitaria de MetaDocencia](https://zenodo.org/records/12522913).
+              Consulta los documentos relacionados al proceso de construcción colectiva de la
+              (<a href="https://zenodo.org/records/12522913" target="_blank" rel="noopener" class="underline font-semibold">Gobernanza comunitaria de MetaDocencia</a>).
             </p>
           </div>
 
@@ -98,14 +99,17 @@ sections:
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Organigrama</h4>
             <p>
               En MetaDocencia definimos una estructura organizacional eficiente y versátil para afrontar los desafíos que tenemos por delante.
-              Conocé el [organigrama completo en Zenodo](https://doi.org/10.5281/zenodo.11456152).
+              Conocé el
+              <a href="https://doi.org/10.5281/zenodo.11456152" target="_blank" rel="noopener" class="underline font-semibold">organigrama completo en Zenodo</a>.
             </p>
           </div>
 
           <div>
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Pautas de convivencia</h4>
             <p>
-              Nuestras [Pautas de Convivencia (PdC)](https://zenodo.org/records/12534196) son la base que guía cada actividad y colaboración en MetaDocencia. Fueron construidas colectivamente y reflejan nuestra visión, misión y valores.
+              Nuestras 
+              (<a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener" class="underline font-semibold">Pautas de Convivencia (PdC)</a>)
+              son la base que guía cada actividad y colaboración en MetaDocencia. Fueron construidas colectivamente y reflejan nuestra visión, misión y valores.
               Todas las personas que participan en nuestras iniciativas se comprometen a respetarlas y promoverlas.
             </p>
           </div>
@@ -113,7 +117,9 @@ sections:
           <div>
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Política de accesibilidad</h4>
             <p>
-              Consulta la [política de accesibilidad](https://zenodo.org/records/10514982) que sigue MetaDocencia para acceder a los criterios y buenas prácticas que configuran nuestro marco de trabajo.
+              Consulta la 
+              (<a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener" class="underline font-semibold">política de accesibilidad</a>)
+              que sigue MetaDocencia para acceder a los criterios y buenas prácticas que configuran nuestro marco de trabajo.
             </p>
           </div>
         </div>
