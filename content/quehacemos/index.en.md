@@ -19,7 +19,7 @@ sections:
         image:
           filename: "quienessomos.jpg"
           filters:
-            brightness: 0.4
+            brightness: 0.5
           size: cover
           position: center
         text_color_light: true
