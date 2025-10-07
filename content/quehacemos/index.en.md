@@ -143,8 +143,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/en/proyecto/datosabiertos-latam/">Learn more →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Project in incubation</span>
     design:
       columns: 4
 
@@ -304,8 +302,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/en/proyecto/mapeo-comunidades/">Learn more and fund this project →</a><br>
-            <span class="mt-2 inline-block text-xs font-semibold px-3 py-1 rounded-full"
-                  style="background:#E5E7EB;color:#374151;">Project in incubation</span>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
