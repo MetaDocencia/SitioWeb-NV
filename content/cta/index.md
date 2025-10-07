@@ -45,16 +45,16 @@ sections:
       items:
         - title: "Súmate a nuestra comunidad en Slack"
           text: |
-            <!-- Estilos locales SOLO para este section -->
+            <!-- Estilos locales SOLO para esta sección -->
             <style>
-              /* Ancho alineado con otras CTAs tipo “card” */
+              /* Contenedor alineado con otras CTAs tipo “card” */
               section#slack .container {
                 max-width: 1100px !important;
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
-              /* Dos columnas con la imagen a la derecha en desktop */
+              /* Dos columnas, imagen a la derecha en desktop */
               section#slack [data-2col],
               section#slack .flex,
               section#slack .grid {
@@ -69,47 +69,74 @@ sections:
               }
               @media (max-width: 768px) {
                 section#slack [data-2col], section#slack .grid { grid-template-columns: 1fr !important; }
-                section#slack [data-2col] > *:first-child { order: 1 !important; } /* texto arriba */
-                section#slack [data-2col] > *:last-child  { order: 2 !important; } /* imagen abajo */
+                section#slack [data-2col] > *:first-child { order: 1 !important; }
+                section#slack [data-2col] > *:last-child  { order: 2 !important; }
               }
   
-              /* Imagen al 40% y centrada en su columna */
+              /* Imagen al 40% y centrada */
               section#slack img {
                 width: 40% !important; max-width: 40% !important; height: auto !important;
                 display: block !important; margin-left: auto !important; margin-right: auto !important;
               }
   
-              /* Espaciado vertical interno del contenido de texto */
-              section#slack .slack-stack { display: flex; flex-direction: column; gap: 0.75rem; }
+              /* Pila vertical y espaciado del contenido de texto */
+              section#slack .slack-stack { display: flex; flex-direction: column; gap: 0.9rem; }
   
-              /* Opcional: si tu tema tiene .btn/.btn-primary/.btn-link, heredará estilos */
-              section#slack .btn { display: inline-block; }
-              section#slack .btn-secondary-link { text-decoration: underline; font-weight: 600; }
+              /* === Botón principal con protagonismo (estilo CTA del tema) === */
+              section#slack .btn-cta {
+                display: inline-flex; align-items: center; justify-content: center;
+                padding: clamp(0.9rem, 1.6vw, 1.1rem) clamp(1.25rem, 2.8vw, 1.9rem);
+                font-weight: 800;
+                font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+                line-height: 1.1;
+                border-radius: 9999px;               /* pill */
+                border: none;
+                color: #fff !important;
+                background: var(--color-primary, #C83737); /* usa primario del tema; fallback rojo MD */
+                box-shadow: 0 10px 22px rgba(200, 55, 55, 0.28);
+                text-decoration: none !important;
+                transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+              }
+              section#slack .btn-cta:hover {
+                transform: translateY(-1px);
+                filter: brightness(1.05);
+                box-shadow: 0 12px 26px rgba(200, 55, 55, 0.36);
+              }
+              section#slack .btn-cta:focus-visible {
+                outline: 3px solid #111827; outline-offset: 3px;
+              }
+  
+              /* Enlace secundario: discreto, tipo “link” bajo el botón */
+              section#slack .btn-secondary-link {
+                text-decoration: underline;
+                font-weight: 600;
+              }
             </style>
   
             <div class="slack-stack">
               <p>Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
               y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.</p>
   
-              <!-- Botón principal -->
+              <!-- Botón principal (protagónico) -->
               <p>
-                <a class="btn btn-primary" href="https://w3id.org/metadocencia/slack">
+                <a class="btn-cta" href="https://w3id.org/metadocencia/slack">
                   Unirme al espacio de MetaDocencia
                 </a>
               </p>
   
-              <!-- Botón/enlace secundario, debajo del principal -->
+              <!-- Enlace secundario debajo -->
               <p class="mt-1">
-                <a class="btn btn-link btn-secondary-link" href="/post/20231219-mdenslack/">
+                <a class="btn-secondary-link" href="/post/20231219-mdenslack/">
                   Qué es Slack y cómo puedo sumarme a la conversación
                 </a>
               </p>
             </div>
           image: "slack.png"
           image_position: right
-          # Importante: NO usar "button:" para no duplicar y así controlar el orden.
+          # Importante: no usar la clave "button:" para mantener el orden deseado.
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
+  
 
 
   # ---------- Comunidades amigas (sin logos) ----------
