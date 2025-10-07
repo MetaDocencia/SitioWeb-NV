@@ -73,44 +73,45 @@ sections:
     design:
       columns: 3
 
-  # ===== Botones de Gobernanza (fondo gris, botones en fila) =====
+  # ===== Institucional (bloque unificado, mismo peso visual) =====
   - block: markdown
-    id: gobernanza-enlaces
+    id: institucional
     content:
-      title: "Gobernanza MD"
+      title: ""
       text: |
-        <div class="max-w-3xl mx-auto text-center">
-          <p class="mb-4">
-            Si quieres conocer más sobre nuestra gobernanza, consulta estas publicaciones:
-          </p>
-          <div class="flex flex-wrap md:flex-nowrap justify-center gap-3">
-            <a href="https://zenodo.org/records/12522913"
-               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#C83737;">
-               Gobernanza MD 2.0 (2024)
-            </a>
-            <a href="https://zenodo.org/records/7398893#.Y7gW1HaZNPY"
-               class="inline-block px-5 py-2 rounded-md font-semibold text-white no-underline"
-               style="background:#00506F;">
-               Gobernanza MD (2022)
-            </a>
-          </div>
+        <div class="text-center max-w-3xl mx-auto">
+          <!-- Línea VIOLETA arriba para mantener la identidad cromática y el patrón -->
+          <div style="height:4px;background:#6B46C1;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
+          <h3 class="text-2xl font-semibold mb-3">Institucional</h3>
         </div>
-    design:
-      css_class: "bg-gray-50 dark:bg-gray-800"
 
-  # ===== Nos organizamos (CTA card con botón a Zenodo) =====
-  - block: cta-card
-    id: organizacion
-    content:
-      title: "Nos organizamos"
-      text: "En MetaDocencia definimos una estructura organizacional eficiente y versátil para afrontar los desafíos que tenemos por delante."
-      button:
-        text: "Conoce el organigrama completo en Zenodo"
-        url: "https://doi.org/10.5281/zenodo.11456152"
-    design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#F77B20;color:#FFFFFF;"
+        <div class="max-w-3xl mx-auto space-y-4 text-lg">
+          <p>
+            <strong>Gobernanza.</strong>
+            Consulta los documentos relacionados al proceso de construcción colectiva de la Gobernanza comunitaria de MetaDocencia
+            (<a href="https://zenodo.org/records/12522913" target="_blank" rel="noopener" class="underline font-semibold">Zenodo</a>).
+          </p>
 
+          <p>
+            <strong>Organigrama.</strong>
+            En MetaDocencia definimos una estructura organizacional eficiente y versátil para afrontar los desafíos que tenemos por delante.
+            Conocé el organigrama completo en
+            <a href="https://doi.org/10.5281/zenodo.11456152" target="_blank" rel="noopener" class="underline font-semibold">Zenodo</a>.
+          </p>
+
+          <p>
+            <strong>Pautas de convivencia.</strong>
+            Nuestras Pautas de Convivencia (PdC)
+            (<a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener" class="underline font-semibold">Zenodo</a>)
+            son la base que guía cada actividad y colaboración en MetaDocencia. Fueron construidas colectivamente y reflejan nuestra visión, misión y valores.
+            Todas las personas que participan en nuestras iniciativas se comprometen a respetarlas y promoverlas.
+          </p>
+
+          <p>
+            <strong>Política de accesibilidad.</strong>
+            Consulta la política de accesibilidad
+            (<a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener" class="underline font-semibold">Zenodo</a>)
+            que sigue MetaDocencia para acceder a los criterios y buenas prácticas que configuran nuestro marco de trabajo.
+          </p>
+        </div>
 ---
