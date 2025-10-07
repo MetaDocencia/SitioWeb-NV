@@ -68,7 +68,7 @@ sections:
                   Vamos por 5 años más
                 </h2>
                 <p>
-                  Durante nuestros primeros 5 años tejimos lazos entre más de 2.000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
+                  Durante nuestros primeros 5 años tejimos lazos entre más de 2000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
                 </p>
               </div>
               <!-- Columna derecha: video 16:9 -->
