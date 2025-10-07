@@ -18,7 +18,7 @@ sections:
 
         <!-- Botones centrados (3) -->
         <div class="mt-4 flex flex-wrap justify-center gap-3">
-          <a href="/institucional"
+          <a href="/institucional#institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Institucional</a>
           <a href="/institucional#vision"
