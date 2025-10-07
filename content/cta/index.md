@@ -47,86 +47,70 @@ sections:
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
+              /* Ancho alineado con otras CTAs tipo “card” */
               section#slack .container {
                 max-width: 1100px !important;
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
-              /* Dos columnas iguales y separación coherente */
+              /* Dos columnas con la imagen a la derecha en desktop */
               section#slack [data-2col],
               section#slack .flex,
-              section#slack .grid { 
+              section#slack .grid {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
                 gap: clamp(1rem, 3vw, 2rem) !important;
                 align-items: center !important;
               }
-  
-              /* --- Invertir orden para que la imagen quede a la derecha en desktop --- */
               @media (min-width: 769px) {
                 section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
                 section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
               }
-  
-              /* Imagen al 40% y centrada */
-              section#slack img {
-                width: 40% !important;
-                max-width: 40% !important;
-                height: auto !important;
-                display: block !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-              }
-  
-              /* En móviles apilar */
               @media (max-width: 768px) {
-                section#slack [data-2col],
-                section#slack .grid {
-                  grid-template-columns: 1fr !important;
-                }
-                section#slack [data-2col] > *:first-child { order: 1 !important; }
-                section#slack [data-2col] > *:last-child  { order: 2 !important; }
+                section#slack [data-2col], section#slack .grid { grid-template-columns: 1fr !important; }
+                section#slack [data-2col] > *:first-child { order: 1 !important; } /* texto arriba */
+                section#slack [data-2col] > *:last-child  { order: 2 !important; } /* imagen abajo */
               }
   
-              /* NEW: Forzamos a que la columna de TEXTO sea un contenedor flex vertical
-                 para poder reordenar el botón (.btn) y el link “after-button”. */
-              section#slack [data-2col] > *:first-child,
-              section#slack .grid > *:first-child,
-              section#slack .flex > *:first-child {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 0.75rem !important;
+              /* Imagen al 40% y centrada en su columna */
+              section#slack img {
+                width: 40% !important; max-width: 40% !important; height: auto !important;
+                display: block !important; margin-left: auto !important; margin-right: auto !important;
               }
   
-              /* NEW: En muchos temas Hugo Blox/Wowchemy los botones usan clase .btn */
-              section#slack a.btn { order: 1 !important; }
+              /* Espaciado vertical interno del contenido de texto */
+              section#slack .slack-stack { display: flex; flex-direction: column; gap: 0.75rem; }
   
-              /* NEW: Hacemos que el link “Qué es…” se ubique DESPUÉS del botón */
-              section#slack .after-button { order: 2 !important; }
-  
-              /* Opcional: estilo de texto-enlace para que no compita visualmente con el botón */
-              section#slack .after-button a {
-                text-decoration: underline;
-                font-weight: 600;
-              }
+              /* Opcional: si tu tema tiene .btn/.btn-primary/.btn-link, heredará estilos */
+              section#slack .btn { display: inline-block; }
+              section#slack .btn-secondary-link { text-decoration: underline; font-weight: 600; }
             </style>
   
-            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
-            y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+            <div class="slack-stack">
+              <p>Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
+              y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.</p>
   
-            <!-- NEW: envolvemos el enlace en un contenedor para poder ordenarlo bajo el botón -->
-            <div class="after-button">
-              <a href="/post/20231219-mdenslack/">Qué es Slack y cómo puedo sumarme a la conversación</a>
+              <!-- Botón principal -->
+              <p>
+                <a class="btn btn-primary" href="https://w3id.org/metadocencia/slack">
+                  Unirme al espacio de MetaDocencia
+                </a>
+              </p>
+  
+              <!-- Botón/enlace secundario, debajo del principal -->
+              <p class="mt-1">
+                <a class="btn btn-link btn-secondary-link" href="/post/20231219-mdenslack/">
+                  Qué es Slack y cómo puedo sumarme a la conversación
+                </a>
+              </p>
             </div>
           image: "slack.png"
           image_position: right
-          button:
-            text: "Unirme al espacio de MetaDocencia"
-            url: "https://w3id.org/metadocencia/slack"
+          # Importante: NO usar "button:" para no duplicar y así controlar el orden.
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
+
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
