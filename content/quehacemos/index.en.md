@@ -75,21 +75,21 @@ sections:
             We offer strategic training for researchers, strengthening skills and networks that open doors to international funding opportunities.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/acceso-financiacion/">Discover more →</a>
+               href="/en/proyecto/acceso-financiacion/">Discover more →</a>
         - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/nasa-spanish/">Discover more →</a>
+               href="/en/proyecto/nasa-spanish/">Discover more →</a>
         - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/gobernanza-2022/">Discover more →</a>
+               href="/en/proyecto/gobernanza-2022/">Discover more →</a>
     design:
       columns: 3
 
@@ -120,21 +120,21 @@ sections:
             We make cloud-computing infrastructure more accessible and useful for  life sciences communities in the Global South.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/catalyst/">Learn more →</a>
+               href="/en/proyecto/catalyst/">Learn more →</a>
         - name: "Contextualization"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We develop high-quality Spanish resources for Latin America based on material originally published in other languages.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/contextualizacion/">Learn more →</a>
+               href="/en/proyecto/contextualizacion/">Learn more →</a>
         - name: "Equitable Open Peer Review"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We empower Latin American networks to promote open and equitable peer review of preprints and academic datasets.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/revision-abierta/">Learn more →</a><br>
+               href="/en/proyecto/revision-abierta/">Learn more →</a><br>
     
         - name: "Open Data Processing"
           description: |
@@ -142,7 +142,7 @@ sections:
             We aim to secure access to high-performance computing (HPC) for national and regional research networks across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/datosabiertos-latam/">Learn more →</a><br>
+               href="/en/proyecto/datosabiertos-latam/">Learn more →</a><br>
     design:
       columns: 4
 
@@ -200,7 +200,7 @@ sections:
             We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/nasa-spanish/">Learn more →</a>
+               href="/en/proyecto/nasa-spanish/">Learn more →</a>
 
         - name: "Train the Trainers"
           description: |
@@ -208,7 +208,7 @@ sections:
             We facilitate a hands-on Spanish-language program that equips participants with pedagogical skills, amplifying learning and collective impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/formacion-para-ensenar/">Learn more →</a>
+               href="/en/proyecto/formacion-para-ensenar/">Learn more →</a>
 
         - name: "Skills training"
           description: |
@@ -216,7 +216,7 @@ sections:
             We design customized courses that empower individuals, institutions and communities to build practical skills in teaching, Open Science, data analysis, and digital tools.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/cursos-a-medida/">Learn more →</a>
+               href="/en/proyecto/cursos-a-medida/">Learn more →</a>
 
         - name: "Unlocking Funding for Scientific Initiatives"
           description: |
@@ -224,7 +224,7 @@ sections:
             We offer strategic training for researchers, strengthening skills and networks that open doors to international funding opportunities.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/acceso-financiacion/">Learn more →</a>
+               href="/en/proyecto/acceso-financiacion/">Learn more →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -287,21 +287,21 @@ sections:
             We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/gobernanza-2022/">Learn more →</a>
+               href="/en/proyecto/gobernanza-2022/">Learn more →</a>
         - name: "Open Conversations"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We create spaces for dialogue that foster learning, the exchange of experiences, and active participation, strengthening collaboration and shared knowledge.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/conversatorios/">Learn more →</a>
+               href="/en/proyecto/conversatorios/">Learn more →</a>
         - name: "Mapping Open Science in Latin America"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             A collaborative repository of information in Spanish, documenting Open Science initiatives across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/en/proyecto/mapeo-comunidades/">Learn more and fund this project →</a><br>
+               href="/en/proyecto/mapeo-comunidades/">Learn more and fund this project →</a><br>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -352,7 +352,7 @@ sections:
             inner="raw"
         >}}
   
-        <a href="https://mdnv.netlify.app/en/prensas/"
+        <a href="/en/prensas/"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
           See mentions
