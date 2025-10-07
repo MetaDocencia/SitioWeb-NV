@@ -106,21 +106,21 @@ sections:
             Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
+               href="/proyecto/acceso-financiacion/">Ver más →</a>
         - name: "Formación en Ciencia Abierta"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
+               href="/proyecto/nasa-spanish/">Ver más →</a>
         - name: "Gobernanza"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a>
+               href="/proyecto/gobernanza-2022/">Ver más →</a>
     design:
       columns: 3
 
@@ -151,28 +151,28 @@ sections:
             Facilitamos la accesibilidad y la utilidad de la infraestructura  de cómputo en la nube para comunidades globales de biociencias.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/catalyst/">Ver más →</a>
+               href="/proyecto/catalyst/">Ver más →</a>
         - name: "Contextualización"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/contextualizacion/">Ver más →</a>
+               href="/proyecto/contextualizacion/">Ver más →</a>
         - name: "Revisión abierta y equitativa"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints  y conjuntos de datos académicos.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/revision-abierta/">Ver más →</a><br>
+               href="/proyecto/revision-abierta/">Ver más →</a><br>
         - name: "Procesamiento de datos abiertos"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Buscamos garantizar el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/datosabiertos-latam/">Ver más →</a><br>
+               href="/proyecto/datosabiertos-latam/">Ver más →</a><br>
     design:
       columns: 4
 
@@ -230,7 +230,7 @@ sections:
             Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/nasa-spanish/">Ver más →</a>
+               href="/proyecto/nasa-spanish/">Ver más →</a>
 
         - name: "Formación para enseñar"
           description: |
@@ -238,7 +238,7 @@ sections:
             Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/formacion-para-ensenar/">Ver más →</a>
+               href="/proyecto/formacion-para-ensenar/">Ver más →</a>
 
         - name: "Cursos a medida"
           description: |
@@ -246,7 +246,7 @@ sections:
             Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
+               href="/proyecto/cursos-a-medida/">Ver más →</a>
 
         - name: "Cómo obtener financiamiento para iniciativas científicas"
           description: |
@@ -254,7 +254,7 @@ sections:
             Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
+               href="/proyecto/acceso-financiacion/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -317,21 +317,21 @@ sections:
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/gobernanza-2022/">Ver más →</a>
+               href="/proyecto/gobernanza-2022/">Ver más →</a>
         - name: "Conversatorios"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/conversatorios/">Ver más →</a>
+               href="/proyecto/conversatorios/">Ver más →</a>
         - name: "Mapeo de Ciencia Abierta en Latinoamérica"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Repositorio colaborativo de información sobre Ciencia Abierta en español.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="https://mdnv.netlify.app/proyecto/mapeo-comunidades/">Ver más →</a><br>
+               href="/proyecto/mapeo-comunidades/">Ver más →</a><br>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -382,7 +382,7 @@ sections:
             inner="raw"
         >}}
   
-        <a href="https://mdnv.netlify.app/prensas/"
+        <a href="/prensas/"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;margin-top:1rem;">
         Ver menciones
