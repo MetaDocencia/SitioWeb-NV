@@ -1,6 +1,6 @@
 ---
-title: "Acceso a financiamiento para iniciativas científicas latinoamericanas"
-summary: "Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional."
+title: "Cómo obtener financiamiento para iniciativas científicas"
+summary: "Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional."
 date: 2025-09-14
 tags:
   - Formación
