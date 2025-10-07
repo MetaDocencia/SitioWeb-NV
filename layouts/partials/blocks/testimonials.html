@@ -1,5 +1,11 @@
-{{- with .role }}
-  <div class="testimonial-role text-sm text-gray-600 dark:text-gray-300">
-    {{ . | markdownify | safeHTML }}
+{{ range .content.items }}
+  <div class="testimonial">
+    {{ with .name }}<div class="testimonial-name">{{ . }}</div>{{ end }}
+    {{ with .role }}
+      <div class="testimonial-role text-sm text-gray-600 dark:text-gray-300">
+        {{ . | markdownify | safeHTML }}
+      </div>
+    {{ end }}
+    {{ with .text }}<div class="testimonial-text">{{ . | markdownify }}</div>{{ end }}
   </div>
-{{- end }}
+{{ end }}
