@@ -100,10 +100,10 @@ sections:
     content:
       title: "Proyectos destacados"
       items:
-        - name: "Financiamiento a iniciativas científicas"
+        - name: "Cómo obtener financiamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
+            Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
@@ -133,7 +133,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="infra"
-            title="Impulsamos Infraestructura"
+            title="Impulsamos infraestructura"
             bg="#00506F"
             color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
@@ -145,10 +145,10 @@ sections:
     id: infra-proyectos
     content:
       items:
-        - name: "Catalyst"
+        - name: "Proyecto Catalyst"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Facilitamos la accesibilidad y la utilidad de la infraestructura en la nube para comunidades globales.
+            Facilitamos la accesibilidad y la utilidad de la infraestructura  de cómputo en la nube para comunidades globales de biociencias.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/catalyst/">Ver más →</a>
@@ -162,7 +162,7 @@ sections:
         - name: "Revisión abierta y equitativa"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Empoderamos redes latinoamericanas para promover la revisión abierta y equitativa de preimpresiones académicas y conjuntos de datos.
+            Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints  y conjuntos de datos académicos.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/revision-abierta/">Ver más →</a><br>
@@ -252,10 +252,10 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/cursos-a-medida/">Ver más →</a>
 
-        - name: "Financiamiento a iniciativas científicas"
+        - name: "Cómo obtener financiamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, fortaleciendo iniciativas, capacidades y redes para mejorar el acceso a financiación internacional.
+            Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://mdnv.netlify.app/proyecto/acceso-financiacion/">Ver más →</a>
