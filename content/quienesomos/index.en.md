@@ -33,9 +33,6 @@ sections:
           <p class="text-white/95 text-base md:text-lg">
             <a href="https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> in the words of our Co-Director, Laura Ación.
           </p>
-          <p class="text-white/95 text-base md:text-lg">
-            MetaDocencia is fiscally sponsored by <a href="https://www.codeforsociety.org/" class="underline font-semibold text-white">Code for Science &amp; Society</a>.
-          </p>
         </div>
     design:
       background:
