@@ -45,89 +45,66 @@ sections:
       items:
         - title: "Súmate a nuestra comunidad en Slack"
           text: |
-            <!-- Estilos locales SOLO para esta sección -->
+            <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Contenedor alineado con otras CTAs tipo “card” */
+              /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
               section#slack .container {
-                max-width: 1100px !important;
+                max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
                 padding-left: clamp(1rem, 4vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
-              /* Dos columnas, imagen a la derecha en desktop */
+              /* Dos columnas iguales y separación coherente */
               section#slack [data-2col],
-              section#slack .flex,
-              section#slack .grid {
+              section#slack .flex, /* fallback si el bloque usa flex */
+              section#slack .grid { 
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
                 gap: clamp(1rem, 3vw, 2rem) !important;
                 align-items: center !important;
               }
+  
+              /* --- Fallback universal para pasar la imagen a la DERECHA ---
+                 Asumimos que el HTML renderiza primero el texto y luego la imagen.
+                 Invertimos el orden con CSS en desktop y tablet. */
               @media (min-width: 769px) {
                 section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
                 section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
               }
+  
+              /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
+              section#slack img {
+                width: 40% !important;
+                max-width: 40% !important;
+                height: auto !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+              }
+  
+              /* En móviles mantenemos 40% y apilamos */
               @media (max-width: 768px) {
-                section#slack [data-2col], section#slack .grid { grid-template-columns: 1fr !important; }
+                section#slack [data-2col],
+                section#slack .grid {
+                  grid-template-columns: 1fr !important;
+                }
+                /* En mobile dejamos el orden natural: texto arriba, imagen abajo */
                 section#slack [data-2col] > *:first-child { order: 1 !important; }
                 section#slack [data-2col] > *:last-child  { order: 2 !important; }
               }
-  
-              /* Imagen al 40% y centrada */
-              section#slack img {
-                width: 40% !important; max-width: 40% !important; height: auto !important;
-                display: block !important; margin-left: auto !important; margin-right: auto !important;
-              }
-  
-              /* Pila vertical y espaciado del contenido de texto */
-              section#slack .slack-stack { display: flex; flex-direction: column; gap: 0.9rem; }
-  
-              /* ======= Unificar botón con el resto (usar look nativo del tema) ======= */
-              /* Opción A (si tu tema usa variable): forzamos el primario solo en #slack */
-              section#slack { --color-primary: #C83737; } /* si el tema la respeta, listo */
-  
-              /* Opción B (fallback universal): solo color, sin sombra extra ni bold custom */
-              section#slack a.btn.btn-primary {
-                background-color: #C83737 !important;
-                border-color: #C83737 !important;
-                box-shadow: none !important;   /* sin sombra */
-                /* No tocamos font-weight ni border-radius: heredan del tema */
-              }
-              section#slack a.btn.btn-primary:hover,
-              section#slack a.btn.btn-primary:focus {
-                background-color: #A92F2F !important;  /* tono hover */
-                border-color: #A92F2F !important;
-                box-shadow: none !important;
-              }
-  
-              /* Enlace secundario: discreto, tipo link bajo el botón */
-              section#slack .btn-secondary-link {
-                text-decoration: underline;
-                font-weight: 600;
-              }
             </style>
   
-            <div class="slack-stack">
-              <p>Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
-              y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.</p>
+            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
+            y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
   
-              <!-- Botón principal UNIFICADO con el tema -->
-              <p>
-                <a class="btn btn-primary" href="https://w3id.org/metadocencia/slack">
-                  Unirme al espacio de MetaDocencia
-                </a>
-              </p>
-  
-              <!-- Enlace secundario debajo -->
-              <p class="mt-1">
-                <a class="btn-secondary-link" href="/post/20231219-mdenslack/">
-                  Qué es Slack y cómo puedo sumarme a la conversación
-                </a>
-              </p>
-            </div>
+            <p class="mt-3">
+              <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
+            </p>
           image: "slack.png"
-          image_position: right
-          # Importante: no usar la clave "button:" para mantener el orden deseado.
+          image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
+          button:
+            text: "Unirme al espacio de MetaDocencia"
+            url: "https://w3id.org/metadocencia/slack"
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
 
