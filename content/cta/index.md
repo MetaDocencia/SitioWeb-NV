@@ -82,31 +82,25 @@ sections:
               /* Pila vertical y espaciado del contenido de texto */
               section#slack .slack-stack { display: flex; flex-direction: column; gap: 0.9rem; }
   
-              /* === Botón principal con protagonismo (estilo CTA del tema) === */
-              section#slack .btn-cta {
-                display: inline-flex; align-items: center; justify-content: center;
-                padding: clamp(0.9rem, 1.6vw, 1.1rem) clamp(1.25rem, 2.8vw, 1.9rem);
-                font-weight: 800;
-                font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-                line-height: 1.1;
-                border-radius: 9999px;               /* pill */
-                border: none;
-                color: #fff !important;
-                background: var(--color-primary, #C83737); /* usa primario del tema; fallback rojo MD */
-                box-shadow: 0 10px 22px rgba(200, 55, 55, 0.28);
-                text-decoration: none !important;
-                transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+              /* ======= Unificar botón con el resto (usar look nativo del tema) ======= */
+              /* Opción A (si tu tema usa variable): forzamos el primario solo en #slack */
+              section#slack { --color-primary: #C83737; } /* si el tema la respeta, listo */
+  
+              /* Opción B (fallback universal): solo color, sin sombra extra ni bold custom */
+              section#slack a.btn.btn-primary {
+                background-color: #C83737 !important;
+                border-color: #C83737 !important;
+                box-shadow: none !important;   /* sin sombra */
+                /* No tocamos font-weight ni border-radius: heredan del tema */
               }
-              section#slack .btn-cta:hover {
-                transform: translateY(-1px);
-                filter: brightness(1.05);
-                box-shadow: 0 12px 26px rgba(200, 55, 55, 0.36);
-              }
-              section#slack .btn-cta:focus-visible {
-                outline: 3px solid #111827; outline-offset: 3px;
+              section#slack a.btn.btn-primary:hover,
+              section#slack a.btn.btn-primary:focus {
+                background-color: #A92F2F !important;  /* tono hover */
+                border-color: #A92F2F !important;
+                box-shadow: none !important;
               }
   
-              /* Enlace secundario: discreto, tipo “link” bajo el botón */
+              /* Enlace secundario: discreto, tipo link bajo el botón */
               section#slack .btn-secondary-link {
                 text-decoration: underline;
                 font-weight: 600;
@@ -117,9 +111,9 @@ sections:
               <p>Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
               y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.</p>
   
-              <!-- Botón principal (protagónico) -->
+              <!-- Botón principal UNIFICADO con el tema -->
               <p>
-                <a class="btn-cta" href="https://w3id.org/metadocencia/slack">
+                <a class="btn btn-primary" href="https://w3id.org/metadocencia/slack">
                   Unirme al espacio de MetaDocencia
                 </a>
               </p>
@@ -136,7 +130,6 @@ sections:
           # Importante: no usar la clave "button:" para mantener el orden deseado.
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-  
 
 
   # ---------- Comunidades amigas (sin logos) ----------
