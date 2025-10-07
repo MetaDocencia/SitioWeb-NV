@@ -3,7 +3,7 @@ title: "Magdalena Rocco"
 bio: ""
 education:
   courses:
-  - course: 
+  - course: Diseñadora de interiores
     institution:  
     year: 
 email: "rocco.mag@gmail.com"
