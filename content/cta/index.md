@@ -25,7 +25,7 @@ sections:
 
           <!-- Link centrado, blanco, en bold -->
           <p class="text-center mt-4">
-            <a href="https://mdnv.netlify.app/boletines/" class="underline font-semibold" style="color:#FFFFFF">
+            <a href="/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               Ver ediciones anteriores
             </a>
           </p>
@@ -144,7 +144,7 @@ sections:
         para explorar cómo colaborar.
 
         Podés hacer tu aporte a través de nuestro
-        <a href="https://mdnv.netlify.app/donar/">formulario de donación</a>
+        <a href="/donar/">formulario de donación</a>
         y ayudarnos a sostener y ampliar nuestras actividades.
     design:
       card:
