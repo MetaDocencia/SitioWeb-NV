@@ -91,7 +91,7 @@ sections:
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Gobernanza</h4>
             <p>
               Consulta los documentos relacionados al proceso de construcción colectiva de la
-              (<a href="https://zenodo.org/records/12522913" target="_blank" rel="noopener" class="underline font-semibold">Gobernanza comunitaria de MetaDocencia</a>).
+              <a href="https://zenodo.org/records/12522913" target="_blank" rel="noopener" class="underline font-semibold">Gobernanza comunitaria de MetaDocencia</a>.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ sections:
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Pautas de convivencia</h4>
             <p>
               Nuestras 
-              (<a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener" class="underline font-semibold">Pautas de Convivencia (PdC)</a>)
+              <a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener" class="underline font-semibold">Pautas de Convivencia (PdC)</a>
               son la base que guía cada actividad y colaboración en MetaDocencia. Fueron construidas colectivamente y reflejan nuestra visión, misión y valores.
               Todas las personas que participan en nuestras iniciativas se comprometen a respetarlas y promoverlas.
             </p>
@@ -118,7 +118,7 @@ sections:
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Política de accesibilidad</h4>
             <p>
               Consulta la 
-              (<a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener" class="underline font-semibold">política de accesibilidad</a>)
+              <a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener" class="underline font-semibold">política de accesibilidad</a>
               que sigue MetaDocencia para acceder a los criterios y buenas prácticas que configuran nuestro marco de trabajo.
             </p>
           </div>
