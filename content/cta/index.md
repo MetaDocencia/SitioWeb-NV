@@ -38,51 +38,51 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-# ---------- Slack (cta-image-paragraph, imagen a la derecha, texto con padding reducido) ----------
-- block: cta-image-paragraph
-  id: slack
-  content:
-    items:
-      - title: "Súmate a nuestra comunidad en Slack"
-        text: |
-          <!-- Estilos locales SOLO para este section -->
-          <style>
-            /* Ancho del contenedor y respiro lateral coherente con el resto del sitio */
-            section#slack .container {
-              max-width: 1100px !important;
-              padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;  /* ↓ un poco el padding */
-              padding-right: clamp(0.75rem, 3vw, 1.5rem) !important; /* ↓ un poco el padding */
-            }
-            /* Reducir padding SOLO del contenido de texto (sin tocar la columna de imagen) */
-            section#slack .mdnv-text-wrap {
-              padding-left: clamp(0.25rem, 2vw, 0.75rem);
-              padding-right: clamp(0.25rem, 2vw, 0.75rem);
-            }
-            /* Imagen responsive (no forzamos grid/flex para evitar conflictos) */
-            section#slack img {
-              max-width: 100% !important;
-              height: auto !important;
-              display: block !important;
-              margin-left: auto;
-              margin-right: auto;
-            }
-          </style>
+  # ---------- Slack (cta-image-paragraph, imagen a la derecha, texto con padding reducido) ----------
+  - block: cta-image-paragraph
+    id: slack
+    content:
+      items:
+        - title: "Súmate a nuestra comunidad en Slack"
+          text: |
+            <!-- Estilos locales SOLO para este section -->
+            <style>
+              /* Ancho del contenedor y respiro lateral coherente con el resto del sitio */
+              section#slack .container {
+                max-width: 1100px !important;
+                padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;  /* ↓ un poco el padding */
+                padding-right: clamp(0.75rem, 3vw, 1.5rem) !important; /* ↓ un poco el padding */
+              }
+              /* Reducir padding SOLO del contenido de texto (sin tocar la columna de imagen) */
+              section#slack .mdnv-text-wrap {
+                padding-left: clamp(0.25rem, 2vw, 0.75rem);
+                padding-right: clamp(0.25rem, 2vw, 0.75rem);
+              }
+              /* Imagen responsive (no forzamos grid/flex para evitar conflictos) */
+              section#slack img {
+                max-width: 100% !important;
+                height: auto !important;
+                display: block !important;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            </style>
 
-          <div class="mdnv-text-wrap">
-            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
-            y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+            <div class="mdnv-text-wrap">
+              Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
+              y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
 
-            <p class="mt-3">
-              <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
-            </p>
-          </div>
-        image: "slack.png"
-        image_position: right
-        button:
-          text: "Unirme al espacio de MetaDocencia"
-          url: "https://w3id.org/metadocencia/slack"
-  design:
-    css_style: "background-color:#FFFFFF;color:#111827;"
+              <p class="mt-3">
+                <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
+              </p>
+            </div>
+          image: "slack.png"
+          image_position: right
+          button:
+            text: "Unirme al espacio de MetaDocencia"
+            url: "https://w3id.org/metadocencia/slack"
+    design:
+      css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
