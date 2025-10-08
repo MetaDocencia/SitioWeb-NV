@@ -51,45 +51,6 @@ sections:
         padding: ["0rem", 0, "0rem", 0]
       css_style: ""
 
-  # ===== Vamos por 5 años más (texto + video) =====
-  - block: markdown
-    id: solutions
-    content:
-      title: ""
-      text: |-
-        <!-- Breakout full-bleed que ignora el wrapper central del tema -->
-        <div style="position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;">
-          <!-- Contenido centrado y con respiro lateral -->
-          <div style="max-width:1600px; margin:0 auto; padding-left:clamp(1rem, 4vw, 3rem); padding-right:clamp(1rem, 4vw, 3rem);">
-            <div data-2col>
-              <!-- Columna izquierda: TÍTULO + texto -->
-              <div class="mdnv-vcenter mdnv-text-pad">
-                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
-                  Vamos por 5 años más
-                </h2>
-                <p>
-                  Durante nuestros primeros 5 años tejimos lazos entre más de 2000 profesionales de ciencia y técnica. Lo hicimos trabajando en equipo, de manera colectiva y en alianza con más de 40 comunidades. Gracias por estos primeros 5 años de aprendizaje, colaboración y crecimiento.
-                </p>
-              </div>
-              <!-- Columna derecha: video 16:9 -->
-              <div data-16x9>
-                <iframe
-                  src="https://www.youtube.com/embed/Mcq0-4cyGKQ"
-                  title="MetaDocencia - 5 años"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-    design:
-      # Light mode: fondo claro / texto oscuro
-      css_style: "background:#FFFFFF;color:#111827;"
-      spacing:
-        padding: ["2rem", 0, "1.25rem", 0]
-
   # ===== MetaDocencia en números =====
   - block: stats
     id: numeros
@@ -100,11 +61,11 @@ sections:
           description: "alianzas y patrocinadores"
         - statistic: "+60"
           description: "personas colaboran con MetaDocencia"
-        - statistic: "+1,070"
+        - statistic: "+1070"
           description: "integrantes en Slack"
-        - statistic: "+6,000"
+        - statistic: "+6000"
           description: "personas conectadas en redes sociales"
-        - statistic: "+2,600"
+        - statistic: "+2600"
           description: "suscripciones activas a nuestro boletín"
         - statistic: "+10%"
           description: "porcentaje de interacción (LinkedIn 2025)"
@@ -223,6 +184,19 @@ sections:
           </div>
         </details>
 
+  # --- Comunidades Amigas ---
+  - block: markdown
+    id: comunidades-amigas
+    content:
+      title: "Comunidades Amigas"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+
   # --- Auspiciantes ---
   - block: markdown
     id: auspiciantes
@@ -235,17 +209,16 @@ sections:
             {{< people_list group="Auspiciantes" columns=5 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
-
-  # --- Comunidades Amigas ---
+  # --- También nos acompañaron ---
   - block: markdown
-    id: comunidades-amigas
+    id: anteriores
     content:
-      title: "Comunidades Amigas"
+      title: "También nos acompañaron"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Anteriores" columns=8 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
