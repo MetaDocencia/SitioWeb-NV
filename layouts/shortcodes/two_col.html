@@ -1,26 +1,23 @@
 {{/* Shortcode: two_col
-Uso:
-{{< two_col image="/media/slack.png" side="left" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
-  <!-- Texto (markdown/HTML) -->
-{{< /two_col >}}
-
-Params:
-- image : ruta de imagen (Page Resource, assets o static).
-- side  : "left" (img izq) | "right" (img der, default).
-- maxw  : ancho máximo del bloque (default 1200px).
-- px    : padding horizontal (default clamp(0.75rem,3vw,1.5rem)).
-- gap   : separación entre columnas (default clamp(1rem,3vw,2rem)).
-- imgw  : ancho máximo de la imagen (default 360px).
-- alt   : texto alternativo.
+   Coloca una imagen y un bloque de texto en dos columnas.
+   Orden estable: side = "img-left" o "img-right" (también acepta "left"/"right").
+   Modo de ancho: mode = "full" (full-bleed) o "container" (ancho acotado).
+   Ejemplo:
+   {{< two_col image="/media/slack.png" side="img-left" mode="full" maxw="1600px" px="clamp(1rem,4vw,3rem)" gap="clamp(1rem,3vw,2rem)" imgw="420px" alt="Slack de MetaDocencia" >}}
+     ...contenido de texto...
+   {{< /two_col >}}
 */}}
 
 {{- $image := .Get "image" -}}
-{{- $side  := lower (.Get "side" | default "right") -}}
-{{- $maxw  := .Get "maxw" | default "1200px" -}}
-{{- $px    := .Get "px"   | default "clamp(0.75rem,3vw,1.5rem)" -}}
-{{- $gap   := .Get "gap"  | default "clamp(1rem,3vw,2rem)" -}}
-{{- $imgw  := .Get "imgw" | default "360px" -}}
-{{- $alt   := .Get "alt"  | default "" -}}
+{{- $sideRaw := lower (.Get "side" | default "img-right") -}}
+{{- $side := cond (or (eq $sideRaw "left") (eq $sideRaw "img-left")) "img-left" "img-right" -}}
+
+{{- $mode := lower (.Get "mode" | default "container") -}}  {{/* "full" o "container" */}}
+{{- $maxw := .Get "maxw" | default "1200px" -}}
+{{- $px   := .Get "px"   | default "clamp(0.75rem,3vw,1.5rem)" -}}
+{{- $gap  := .Get "gap"  | default "clamp(1rem,3vw,2rem)" -}}
+{{- $imgw := .Get "imgw" | default "360px" -}}
+{{- $alt  := .Get "alt"  | default "" -}}
 
 {{/* Resolver URL de imagen: Page Resource -> assets -> static */}}
 {{- $imgURL := "" -}}
@@ -34,27 +31,33 @@ Params:
   {{- end -}}
 {{- end -}}
 
-<div class="md-two-col" data-side="{{ $side }}" style="--maxw:{{ $maxw }}; --px:{{ $px }}; --gap:{{ $gap }}; --imgw:{{ $imgw }};">
+<div class="md-two-col-outer" data-mode="{{ $mode }}">
   <style>
-    .md-two-col{max-width:var(--maxw);margin:0 auto;padding-left:var(--px);padding-right:var(--px);}
-    .md-two-col .md-grid{display:grid !important;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:center;}
-    .md-two-col .md-text{text-align:left;}
-    /* Orden según side */
-    .md-two-col[data-side="left"]  .md-media{order:1}.md-two-col[data-side="left"]  .md-text{order:2}
-    .md-two-col[data-side="right"] .md-text{order:1}.md-two-col[data-side="right"] .md-media{order:2}
-    @media (max-width: 900px){
-      .md-two-col .md-grid{grid-template-columns:1fr}
-      .md-two-col .md-text{order:1}.md-two-col .md-media{order:2}
+    /* Full-bleed: rompe el wrapper y ocupa 100vw */
+    .md-two-col-outer[data-mode="full"]{
+      position:relative; left:50%; right:50%;
+      margin-left:-50vw; margin-right:-50vw; width:100vw;
     }
-    .md-two-col .md-media img{width:min(var(--imgw),100%);height:auto;display:block;margin:0 auto}
+    .md-two-col{max-width:var(--maxw); margin:0 auto; padding-left:var(--px); padding-right:var(--px);}
+    .md-two-col .md-grid{
+      display:grid !important; gap:var(--gap); align-items:center;
+      grid-template-columns:1fr 1fr; grid-template-areas:"media text";  /* default */
+    }
+    /* Orden según side (100% determinístico) */
+    .md-two-col[data-side="img-left"]  .md-grid{grid-template-areas:"media text";}
+    .md-two-col[data-side="img-right"] .md-grid{grid-template-areas:"text media";}
+    .md-two-col .md-media{grid-area:media}
+    .md-two-col .md-text{grid-area:text; text-align:left}
+    @media (max-width:900px){
+      .md-two-col .md-grid{grid-template-columns:1fr; grid-template-areas:"text" "media";}
+    }
+    .md-two-col .md-media img{width:min(var(--imgw),100%); height:auto; display:block; margin:0 auto}
   </style>
 
-  <div class="md-grid">
-    <div class="md-media">
-      <img src="{{ $imgURL }}" alt="{{ $alt }}" loading="lazy">
-    </div>
-    <div class="md-text">
-      {{ .Inner | .Page.RenderString }}
+  <div class="md-two-col" data-side="{{ $side }}" style="--maxw:{{ $maxw }}; --px:{{ $px }}; --gap:{{ $gap }}; --imgw:{{ $imgw }};">
+    <div class="md-grid">
+      <div class="md-media"><img src="{{ $imgURL }}" alt="{{ $alt }}" loading="lazy"></div>
+      <div class="md-text">{{ .Inner | .Page.RenderString }}</div>
     </div>
   </div>
 </div>
