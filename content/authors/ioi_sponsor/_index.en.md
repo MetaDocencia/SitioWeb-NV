@@ -1,8 +1,8 @@
 ---
-title: "IOI - Invest in Open Infrastructure"
+title: "IOI"
 bio: ""
 email: "info@investinopen.org"
-name: IOI - Invest in Open Infrastructure
+name: IOI
 weight: 3
 role: 
 social:
@@ -13,5 +13,6 @@ superuser: false
 user_groups:
 - Previous
 ---
+
 
 
