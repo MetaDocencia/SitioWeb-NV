@@ -73,8 +73,8 @@ sections:
             formadas
         - statistic: "+1070"
           description: |
-            personas conectadas  
-            por Slack
+            integrantes  
+            en Slack
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
@@ -93,10 +93,6 @@ sections:
           role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de nuestra formación en Ciencia Abierta"
           text: |
             No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia.
-        - name: "Verónica Xhardez"
-          role: "Docente e investigadora en UNTREF, investigadora en CIECTI y coordinadora técnica de ARPHAI, en ocasión del 4° aniversario de MetaDocencia"
-          text: |
-            ¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo.
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
