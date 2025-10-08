@@ -43,7 +43,9 @@ sections:
     id: slack
     content:
       items:
-        - title: "Súmate a nuestra comunidad en Slack"
+        - image: "slack.png"
+          image_position: right   # ⇦ pedimos explícitamente imagen a la IZQUIERDA
+          title: "Súmate a nuestra comunidad en Slack"
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
@@ -77,8 +79,6 @@ sections:
                 <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
               </p>
             </div>
-          image: "slack.png"
-          image_position: right   # ⇦ pedimos explícitamente imagen a la IZQUIERDA
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
