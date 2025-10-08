@@ -38,76 +38,51 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-# ---------- Slack (cta-image-paragraph con margen lateral amplio, imagen 40% y a la derecha) ----------
-  - block: cta-image-paragraph
-    id: slack
-    content:
-      items:
-        - title: "Súmate a nuestra comunidad en Slack"
-          text: |
-            <!-- Estilos locales SOLO para este section -->
-            <style>
-              /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
-              section#slack .container {
-                max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
-                padding-left: clamp(1rem, 15vw, 2rem) !important;
-                padding-right: clamp(1rem, 4vw, 2rem) !important;
-              }
-  
-              /* Dos columnas iguales y separación coherente */
-              section#slack [data-2col],
-              section#slack .flex, /* fallback si el bloque usa flex */
-              section#slack .grid { 
-                display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                gap: clamp(1rem, 3vw, 2rem) !important;
-                align-items: center !important;
-              }
-  
-              /* --- Fallback universal para pasar la imagen a la DERECHA ---
-                 Asumimos que el HTML renderiza primero el texto y luego la imagen.
-                 Invertimos el orden con CSS en desktop y tablet. */
-              @media (min-width: 769px) {
-                section#slack [data-2col] > *:first-child { order: 2 !important; } /* texto */
-                section#slack [data-2col] > *:last-child  { order: 1 !important; } /* imagen */
-              }
-  
-              /* Imagen SIEMPRE al 40% y centrada en su columna (desktop y móvil) */
-              section#slack img {
-                width: 40% !important;
-                max-width: 40% !important;
-                height: auto !important;
-                display: block !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-              }
-  
-              /* En móviles mantenemos 40% y apilamos */
-              @media (max-width: 768px) {
-                section#slack [data-2col],
-                section#slack .grid {
-                  grid-template-columns: 1fr !important;
-                }
-                /* En mobile dejamos el orden natural: texto arriba, imagen abajo */
-                section#slack [data-2col] > *:first-child { order: 1 !important; }
-                section#slack [data-2col] > *:last-child  { order: 2 !important; }
-              }
-            </style>
-  
+# ---------- Slack (cta-image-paragraph, imagen a la derecha, texto con padding reducido) ----------
+- block: cta-image-paragraph
+  id: slack
+  content:
+    items:
+      - title: "Súmate a nuestra comunidad en Slack"
+        text: |
+          <!-- Estilos locales SOLO para este section -->
+          <style>
+            /* Ancho del contenedor y respiro lateral coherente con el resto del sitio */
+            section#slack .container {
+              max-width: 1100px !important;
+              padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;  /* ↓ un poco el padding */
+              padding-right: clamp(0.75rem, 3vw, 1.5rem) !important; /* ↓ un poco el padding */
+            }
+            /* Reducir padding SOLO del contenido de texto (sin tocar la columna de imagen) */
+            section#slack .mdnv-text-wrap {
+              padding-left: clamp(0.25rem, 2vw, 0.75rem);
+              padding-right: clamp(0.25rem, 2vw, 0.75rem);
+            }
+            /* Imagen responsive (no forzamos grid/flex para evitar conflictos) */
+            section#slack img {
+              max-width: 100% !important;
+              height: auto !important;
+              display: block !important;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          </style>
+
+          <div class="mdnv-text-wrap">
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>, la <strong>ciencia abierta</strong>
             y la <strong>colaboración</strong>. Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
-  
+
             <p class="mt-3">
               <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
             </p>
-          image: "slack.png"
-          image_position: right   # ⇦ si tu tema lo soporta, esto coloca la imagen a la derecha
-          button:
-            text: "Unirme al espacio de MetaDocencia"
-            url: "https://w3id.org/metadocencia/slack"
-    design:
-      css_style: "background-color:#FFFFFF;color:#111827;"
-
+          </div>
+        image: "slack.png"
+        image_position: right
+        button:
+          text: "Unirme al espacio de MetaDocencia"
+          url: "https://w3id.org/metadocencia/slack"
+  design:
+    css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Comunidades amigas (sin logos) ----------
   - block: cta-card
