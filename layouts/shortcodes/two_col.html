@@ -1,9 +1,13 @@
 {{/* Shortcode: two_col
-   Coloca una imagen y un bloque de texto en dos columnas.
-   Orden estable: side = "img-left" o "img-right" (también acepta "left"/"right").
-   Modo de ancho: mode = "full" (full-bleed) o "container" (ancho acotado).
-   Ejemplo:
-   {{< two_col image="/media/slack.png" side="img-left" mode="full" maxw="1600px" px="clamp(1rem,4vw,3rem)" gap="clamp(1rem,3vw,2rem)" imgw="420px" alt="Slack de MetaDocencia" >}}
+   Dos columnas con imagen y texto.
+   - side: "img-left" | "img-right"
+   - mode: "container" | "full"
+   - maxw: ancho máx. del contenido (cuando mode="container")
+   - px:   padding horizontal
+   - gap:  separación entre columnas
+   - imgw: ancho máx. de la imagen
+   Uso (contenedor del ancho de cta-card):
+   {{< two_col image="/media/slack.png" side="img-left" mode="container" maxw="1100px" px="clamp(.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
      ...contenido de texto...
    {{< /two_col >}}
 */}}
@@ -33,7 +37,6 @@
 
 <div class="md-two-col-outer" data-mode="{{ $mode }}">
   <style>
-    /* Full-bleed: rompe el wrapper y ocupa 100vw */
     .md-two-col-outer[data-mode="full"]{
       position:relative; left:50%; right:50%;
       margin-left:-50vw; margin-right:-50vw; width:100vw;
@@ -41,9 +44,8 @@
     .md-two-col{max-width:var(--maxw); margin:0 auto; padding-left:var(--px); padding-right:var(--px);}
     .md-two-col .md-grid{
       display:grid !important; gap:var(--gap); align-items:center;
-      grid-template-columns:1fr 1fr; grid-template-areas:"media text";  /* default */
+      grid-template-columns:1fr 1fr; grid-template-areas:"media text";
     }
-    /* Orden según side (100% determinístico) */
     .md-two-col[data-side="img-left"]  .md-grid{grid-template-areas:"media text";}
     .md-two-col[data-side="img-right"] .md-grid{grid-template-areas:"text media";}
     .md-two-col .md-media{grid-area:media}
