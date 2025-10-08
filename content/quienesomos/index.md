@@ -31,7 +31,7 @@ sections:
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="https://mdnv.netlify.app/post/origenmd/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> en palabras de nuestra Co-Directora, Laura Ación.
+            <a href="https://mdnv.netlify.app/post/origenmd/" class="underline font-semibold text-white">Lee cómo nació MetaDocencia</a> por nuestra Co-Directora, Laura Ación.
           </p>
         </div>
     design:
@@ -135,6 +135,7 @@ sections:
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#auspiciantes,
+          section#anteriores,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
             margin-top: .25rem !important;
@@ -142,6 +143,7 @@ sections:
           }
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
+          section#anteriores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
@@ -151,6 +153,7 @@ sections:
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
             section#auspiciantes .mdnv-people-name,
+            section#anteriores .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
               font-size: 0.9rem !important;
