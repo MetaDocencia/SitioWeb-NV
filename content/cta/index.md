@@ -6,7 +6,6 @@ design:
   spacing: "3rem"
 
 sections:
-
   # ---------- Boletín (1 columna: título, texto, form y link debajo) ----------
   - block: cta-card
     id: boletin-embed
@@ -38,76 +37,67 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (markdown, imagen IZQUIERDA + texto DERECHA, CSS base) ----------
+  # ---------- Slack (markdown: imagen derecha, texto izquierda, padding reducido) ----------
   - block: markdown
     id: slack
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
         <style>
-          /* Contenedor coherente con el resto del sitio */
-          section#slack .container {
-            max-width: 1100px !important;
-            margin-left: auto; margin-right: auto;
-            padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;
-            padding-right: clamp(0.75rem, 3vw, 1.5rem) !important;
+          /* Contenedor alineado con el resto del sitio */
+          section#slack .mdnv-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: clamp(0.75rem, 3vw, 1.5rem);
+            padding-right: clamp(0.75rem, 3vw, 1.5rem);
           }
-          /* Grid 2 columnas en desktop, 1 en mobile */
-          section#slack [data-2col] {
+          /* Grid 2 columnas (texto izquierda, imagen derecha) */
+          section#slack .mdnv-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: clamp(1rem, 3vw, 2rem);
             align-items: center;
           }
-          @media (max-width: 768px) {
-            section#slack [data-2col] { grid-template-columns: 1fr; }
+          /* En móviles, apilado */
+          @media (max-width: 900px) {
+            section#slack .mdnv-grid { grid-template-columns: 1fr; }
           }
-          /* Imagen controlada (más chica) a la IZQUIERDA */
-          section#slack .img-wrap {
-            text-align: left;
-          }
-          section#slack .img-wrap img {
-            width: clamp(220px, 34vw, 360px);
+          /* Texto con padding lateral más chico */
+          section#slack .mdnv-text { padding: 0 clamp(.25rem, 2vw, .75rem); }
+          /* Imagen más chica y responsive */
+          section#slack .mdnv-img { text-align: center; }
+          section#slack .mdnv-img img {
+            width: min(360px, 100%);
             height: auto;
-            display: inline-block;
-          }
-          /* Texto con padding lateral suave */
-          section#slack .text-wrap {
-            padding-left: clamp(0.25rem, 2vw, 0.75rem);
-            padding-right: clamp(0.25rem, 2vw, 0.75rem);
-          }
-          /* Botón de acción simple (no subrayado) */
-          section#slack .cta-btn {
-            display: inline-block;
-            text-decoration: none;
-            font-weight: 600;
-            padding: .6rem 1rem;
-            border-radius: .5rem;
-            background: #111827;
-            color: #FFFFFF;
           }
         </style>
 
-        <div class="container">
-          <div data-2col>
-            <!-- Columna IZQUIERDA: Imagen -->
-            <div class="img-wrap">
-              <img src="/media/slack.png" alt="Slack de MetaDocencia">
-            </div>
-
-            <!-- Columna DERECHA: Texto + enlaces -->
-            <div class="text-wrap">
-              Conecta con más de <strong>+1070 personas</strong> que comparten interés por la <strong>educación</strong>,
-              la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>. Comparte experiencias, aprende de
-              otros y participa de conversaciones que inspiran nuevas ideas.
+        <div class="mdnv-wrap">
+          <div class="mdnv-grid">
+            <!-- Columna de TEXTO (izquierda) -->
+            <div class="mdnv-text">
+              <p>
+                Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
+                <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
+                Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+              </p>
 
               <p class="mt-3">
                 <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
               </p>
 
-              <p class="mt-3">
-                <a href="https://w3id.org/metadocencia/slack" class="cta-btn">Unirme al espacio de MetaDocencia</a>
+              <p class="mt-4">
+                <a href="https://w3id.org/metadocencia/slack"
+                   class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
+                   style="background:#111827;color:#FFFFFF;">
+                   Unirme al espacio de MetaDocencia
+                </a>
               </p>
+            </div>
+
+            <!-- Columna de IMAGEN (derecha) -->
+            <div class="mdnv-img">
+              <img src="/media/slack.png" alt="Slack de MetaDocencia">
             </div>
           </div>
         </div>
@@ -136,15 +126,14 @@ sections:
     content:
       title: "Apoya a MetaDocencia"
       text: |
-        <style>
-          /* Fuerza links blancos en TODO el bloque */
-          section#auspiciantes a { color:#FFFFFF !important; font-weight:600; text-decoration: underline; }
-        </style>
+        <style>section#auspiciantes a { color:#FFFFFF !important; font-weight:600; text-decoration: underline; }</style>
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
         <a href="/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
+
         Si tu organización comparte nuestra misión, escríbenos a
         <a href="mailto:direccion@metadocencia.org">direccion@metadocencia.org</a>
         para explorar cómo colaborar.
+
         Puedes hacer tu aporte a través de nuestro
         <a href="/donar/">formulario de donación</a>
         y ayudarnos a sostener y ampliar nuestras actividades.
@@ -164,22 +153,34 @@ sections:
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Twitter
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               LinkedIn
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               YouTube
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Instagram
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Mastodon
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Bluesky
+            </a>
           </div>
         </div>
     design:
