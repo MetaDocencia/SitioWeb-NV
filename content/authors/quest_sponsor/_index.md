@@ -1,8 +1,8 @@
 ---
-title: "QUEST"
+title: "BIH QUEST"
 bio: ""
 email: "	quest@bih-charite.de"
-name: QUEST
+name: BIH QUEST
 weight: 3
 role: 
 social:
