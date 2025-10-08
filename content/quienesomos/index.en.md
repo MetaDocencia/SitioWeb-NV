@@ -134,6 +134,7 @@ sections:
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
           section#equipo-y-consejo-asesor,
           section#colaboradores,
+          section#anteriores,
           section#auspiciantes,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
@@ -143,6 +144,7 @@ sections:
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
+          section#anteriores .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
             font-size: 0.95rem !important;
@@ -151,6 +153,7 @@ sections:
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
             section#auspiciantes .mdnv-people-name,
+            section#anteriores .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
               font-size: 0.9rem !important;
