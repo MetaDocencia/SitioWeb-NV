@@ -327,7 +327,7 @@ sections:
           text: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
         - name: "Verónica Xhardez"
           role: "Researcher at UNTREF and CIECTI, Technical Coordinator at ARPHAI (partner community) and MetaDocencia contributor"
-          text: "So much collective learning along the way! 🍎 Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
+          text: "So much collective learning along the way! Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
