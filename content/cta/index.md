@@ -39,7 +39,7 @@ sections:
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
-        {{< two_col image="/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" >}}
+        {{< two_col image="/assets/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" >}}
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
