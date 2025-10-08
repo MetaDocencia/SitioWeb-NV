@@ -1,8 +1,8 @@
 ---
-title: "INTA (Estación Experimental Agropecuaria Anguil)"
+title: "INTA"
 bio: ""
 email: ""
-name: INTA (Estación Experimental Agropecuaria Anguil)
+name: INTA
 weight: 3
 role: 
 social:
