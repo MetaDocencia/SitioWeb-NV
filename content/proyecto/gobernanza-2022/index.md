@@ -1,5 +1,5 @@
 ---
-title: "Gobernanza"
+title: "Gobernanza comunitaria"
 summary: "Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia."
 date: 2025-09-23
 tags:
