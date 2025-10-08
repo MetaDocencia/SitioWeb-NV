@@ -1,28 +1,28 @@
 {{/* Shortcode: two_col
 Uso:
-{{< two_col image="/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" alt="Slack de MetaDocencia" >}}
-  <!-- Aquí va el texto (markdown/HTML) -->
+{{< two_col image="/media/slack.png" side="left" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
+  <!-- Texto (markdown/HTML) -->
 {{< /two_col >}}
 
 Params:
-- image   : ruta/archivo de imagen. Puede ser Page Resource, assets o static.
-- side    : "right" (default) | "left"  -> posición de la imagen.
-- maxw    : ancho máx del bloque (default 1100px)
-- px      : padding horizontal (default clamp(0.75rem,3vw,1.5rem))
-- gap     : separación columnas (default clamp(1rem,3vw,2rem))
-- imgw    : ancho máx de imagen (default 360px)
-- alt     : texto alternativo
+- image : ruta de imagen (Page Resource, assets o static).
+- side  : "left" (img izq) | "right" (img der, default).
+- maxw  : ancho máximo del bloque (default 1200px).
+- px    : padding horizontal (default clamp(0.75rem,3vw,1.5rem)).
+- gap   : separación entre columnas (default clamp(1rem,3vw,2rem)).
+- imgw  : ancho máximo de la imagen (default 360px).
+- alt   : texto alternativo.
 */}}
 
 {{- $image := .Get "image" -}}
 {{- $side  := lower (.Get "side" | default "right") -}}
-{{- $maxw  := .Get "maxw" | default "1100px" -}}
+{{- $maxw  := .Get "maxw" | default "1200px" -}}
 {{- $px    := .Get "px"   | default "clamp(0.75rem,3vw,1.5rem)" -}}
 {{- $gap   := .Get "gap"  | default "clamp(1rem,3vw,2rem)" -}}
 {{- $imgw  := .Get "imgw" | default "360px" -}}
 {{- $alt   := .Get "alt"  | default "" -}}
 
-{{/* Resolver URL de imagen: Page Resource -> assets -> static/relURL */}}
+{{/* Resolver URL de imagen: Page Resource -> assets -> static */}}
 {{- $imgURL := "" -}}
 {{- with .Page.Resources.GetMatch $image -}}
   {{- $imgURL = .RelPermalink -}}
@@ -37,10 +37,11 @@ Params:
 <div class="md-two-col" data-side="{{ $side }}" style="--maxw:{{ $maxw }}; --px:{{ $px }}; --gap:{{ $gap }}; --imgw:{{ $imgw }};">
   <style>
     .md-two-col{max-width:var(--maxw);margin:0 auto;padding-left:var(--px);padding-right:var(--px);}
-    .md-two-col .md-grid{display:grid !important;grid-template-columns:1.1fr 0.9fr;gap:var(--gap);align-items:center;}
+    .md-two-col .md-grid{display:grid !important;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:center;}
     .md-two-col .md-text{text-align:left;}
+    /* Orden según side */
+    .md-two-col[data-side="left"]  .md-media{order:1}.md-two-col[data-side="left"]  .md-text{order:2}
     .md-two-col[data-side="right"] .md-text{order:1}.md-two-col[data-side="right"] .md-media{order:2}
-    .md-two-col[data-side="left"]  .md-text{order:2}.md-two-col[data-side="left"]  .md-media{order:1}
     @media (max-width: 900px){
       .md-two-col .md-grid{grid-template-columns:1fr}
       .md-two-col .md-text{order:1}.md-two-col .md-media{order:2}
@@ -49,11 +50,11 @@ Params:
   </style>
 
   <div class="md-grid">
-    <div class="md-text">
-      {{ .Inner | .Page.RenderString }}
-    </div>
     <div class="md-media">
       <img src="{{ $imgURL }}" alt="{{ $alt }}" loading="lazy">
+    </div>
+    <div class="md-text">
+      {{ .Inner | .Page.RenderString }}
     </div>
   </div>
 </div>
