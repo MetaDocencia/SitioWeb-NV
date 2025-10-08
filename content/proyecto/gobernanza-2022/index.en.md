@@ -1,5 +1,5 @@
 ---
-title: "Gobernance"
+title: "Shaping Governance for Impact"
 summary: "We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact."
 date: 2025-09-23
 tags:
