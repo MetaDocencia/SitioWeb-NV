@@ -78,7 +78,7 @@ sections:
               </p>
             </div>
           image: "slack.png"
-          image_position: left   # ⇦ pedimos explícitamente imagen a la IZQUIERDA
+          image_position: right   # ⇦ pedimos explícitamente imagen a la IZQUIERDA
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
