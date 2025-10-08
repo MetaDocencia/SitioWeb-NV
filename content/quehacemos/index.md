@@ -114,7 +114,7 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/nasa-spanish/">Ver más →</a>
-        - name: "Gobernanza"
+        - name: "Gobernanza comunitaria"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
@@ -181,7 +181,7 @@ sections:
       items:
         - statistic: "+200"
           description: "documentos en Zenodo"
-        - statistic: "+85.000"
+        - statistic: "+85000"
           description: "palabras contextualizadas"
         - statistic: "10"
           description: "comunidades latinoamericanas acompañadas desde Catalyst"
@@ -311,14 +311,14 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Gobernanza"
+        - name: "Gobernanza comunitaria"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/gobernanza-2022/">Ver más →</a>
-        - name: "Conversatorios"
+        - name: "Conversatorios abiertos"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido.
@@ -357,7 +357,7 @@ sections:
           text: "Les quiero agradecer a tod@s por el trabajo realizado. Además de vuestros aportes conceptuales y prácticos que nos han permitido avanzar mucho, vuestra calidez y amabilidad han hecho este proceso muy pero muy disfrutable. Voy a extrañar estas reuniones."
         - name: "Verónica Xhardez"
           role: "Docente e investigadora en UNTREF, investigadora en CIECTI y coordinadora técnica de ARPHAI, en ocasión del 4° aniversario de MetaDocencia"
-          text: "¡Cuánto aprendizaje colectivo por el camino! 🍎 Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
+          text: "¡Cuánto aprendizaje colectivo por el camino! Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
