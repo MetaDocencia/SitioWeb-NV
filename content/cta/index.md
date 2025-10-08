@@ -50,7 +50,7 @@ sections:
               /* Igualar ancho al de cta-card (mismo que usamos en otros CTAs) */
               section#slack .container {
                 max-width: 1100px !important;              /* ⇦ mismo ancho “card” */
-                padding-left: clamp(1rem, 4vw, 2rem) !important;
+                padding-left: clamp(1rem, 15vw, 2rem) !important;
                 padding-right: clamp(1rem, 4vw, 2rem) !important;
               }
   
