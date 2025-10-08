@@ -37,9 +37,9 @@ Params:
   {{- $authors = $filtered -}}
 {{- end -}}
 
-{{/* Orden: weight, luego Title */}}
-{{- $authors = sort $authors "Params.weight" -}}
+{{/* Orden: Title como fallback estable, luego weight (prevalece) */}}
 {{- $authors = sort $authors "Title" -}}
+{{- $authors = sort $authors "Params.weight" -}}
 
 <div class="w-full mx-auto">
   <!-- contenedor centrado y con ancho máximo razonable -->
