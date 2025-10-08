@@ -6,7 +6,7 @@ design:
   spacing: "3rem"
 
 sections:
-  # ---------- Boletín (1 columna: título, texto, form y link debajo) ----------
+  # ---------- Boletín ----------
   - block: cta-card
     id: boletin-embed
     content:
@@ -33,13 +33,13 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (shortcode two_col: imagen derecha, texto izquierda) ----------
+  # ---------- Slack (shortcode two_col: texto izq, imagen der) ----------
   - block: markdown
     id: slack
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
-        {{< two_col image="/assets/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" >}}
+        {{< two_col image="/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" alt="Slack de MetaDocencia" >}}
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
@@ -61,7 +61,7 @@ sections:
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
 
-  # ---------- Comunidades amigas (sin logos) ----------
+  # ---------- Comunidades amigas ----------
   - block: cta-card
     id: comunidades
     content:
@@ -77,7 +77,7 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#F77B20;color:#FFFFFF;"
 
-  # ---------- Apoya a MetaDocencia (sin logos) ----------
+  # ---------- Apoya a MetaDocencia ----------
   - block: cta-card
     id: auspiciantes
     content:
@@ -99,7 +99,7 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
 
-  # ---------- Redes (botones clicables en grid) ----------
+  # ---------- Redes ----------
   - block: cta-card
     id: redes
     content:
