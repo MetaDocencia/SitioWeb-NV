@@ -33,22 +33,24 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (two_col: imagen IZQ, texto DER, FULL-BLEED) ----------
+  # ---------- Slack (imagen IZQ, texto DER, ancho igual a cta-card) ----------
   - block: markdown
     id: slack
     content:
-      title: "Súmate a nuestra comunidad en Slack"
+      title: ""   # dejamos el título vacío para NO duplicarlo fuera de las columnas
       text: |
         {{< two_col
              image="/media/slack.png"
              side="img-left"
-             mode="full"
-             maxw="1600px"
-             px="clamp(1rem,4vw,3rem)"
+             mode="container"          # mismo ancho que los cta-card
+             maxw="1100px"
+             px="clamp(0.75rem,3vw,1.5rem)"
              gap="clamp(1rem,3vw,2rem)"
-             imgw="420px"
+             imgw="380px"
              alt="Slack de MetaDocencia"
         >}}
+          <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
+
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
