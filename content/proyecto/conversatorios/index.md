@@ -1,5 +1,5 @@
 ---
-title: "Conversatorios"
+title: "Conversatorios abiertos"
 summary: "Organizamos espacios de diálogo que promueven el aprendizaje, el intercambio de experiencias y la participación, consolidando redes de colaboración y el conocimiento compartido."
 date: 2025-09-23
 tags:
