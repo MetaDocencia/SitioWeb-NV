@@ -90,9 +90,6 @@ sections:
         - name: "Julio Zetter"
           role: "Data Leader, SciELO Mexico, after participating in an Open Science training"
           text: "All that’s left is to thank the instructors who made this course possible, which is undoubtedly the seed of great outcomes. Thank you so much, MetaDocencia."
-        - name: "Verónica Xhardez"
-          role: "Researcher at UNTREF and CIECTI, Technical Coordinator at ARPHAI"
-          text: "So much collective learning along the way! 🍎 Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
     design:
       spacing:
         padding: ["6rem", 0, 0, 0]
