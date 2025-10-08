@@ -18,7 +18,7 @@ interests:
 - Ciencia Abierta
 - Psicología cognitiva y experimental
 name: Jesica Formoso
-weight: 6
+weight: 4
 role: Medición de Impacto
 social:
 - icon: envelope
