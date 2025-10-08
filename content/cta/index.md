@@ -33,13 +33,22 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (2 columnas: imagen IZQ, texto DER; ancho igual a cta-card) ----------
+  # ---------- Slack (two_col: imagen IZQ, texto DER, FULL-BLEED) ----------
   - block: markdown
     id: slack
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
-        {{< two_col image="/media/slack.png" side="left" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
+        {{< two_col
+             image="/media/slack.png"
+             side="img-left"
+             mode="full"
+             maxw="1600px"
+             px="clamp(1rem,4vw,3rem)"
+             gap="clamp(1rem,3vw,2rem)"
+             imgw="420px"
+             alt="Slack de MetaDocencia"
+        >}}
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
