@@ -33,13 +33,13 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (shortcode two_col: texto izq, imagen der) ----------
+  # ---------- Slack (2 columnas: imagen IZQ, texto DER; ancho igual a cta-card) ----------
   - block: markdown
     id: slack
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
-        {{< two_col image="/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" alt="Slack de MetaDocencia" >}}
+        {{< two_col image="/media/slack.png" side="left" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
@@ -110,22 +110,34 @@ sections:
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Twitter</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Twitter
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">LinkedIn</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               LinkedIn
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">YouTube</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               YouTube
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Instagram</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Instagram
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Mastodon</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Mastodon
+            </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">Bluesky</a>
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Bluesky
+            </a>
           </div>
         </div>
     design:
