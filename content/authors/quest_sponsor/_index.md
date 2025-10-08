@@ -1,8 +1,8 @@
 ---
-title: "QUEST Center for Responsible Research, Berlin Institute of Health @Charité"
+title: "QUEST"
 bio: ""
 email: "	quest@bih-charite.de"
-name: QUEST Center for Responsible Research, Berlin Institute of Health @Charité
+name: QUEST
 weight: 3
 role: 
 social:
