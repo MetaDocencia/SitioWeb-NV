@@ -38,7 +38,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (cta-image-paragraph, imagen a la derecha, texto con padding reducido) ----------
+  # ---------- Slack (cta-image-paragraph, imagen a la IZQUIERDA y más chica) ----------
   - block: cta-image-paragraph
     id: slack
     content:
@@ -47,24 +47,25 @@ sections:
           text: |
             <!-- Estilos locales SOLO para este section -->
             <style>
-              /* Ancho del contenedor y respiro lateral coherente con el resto del sitio */
+              /* Contenedor coherente con el resto del sitio */
               section#slack .container {
                 max-width: 1100px !important;
-                padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;  /* ↓ un poco el padding */
-                padding-right: clamp(0.75rem, 3vw, 1.5rem) !important; /* ↓ un poco el padding */
+                padding-left: clamp(0.75rem, 3vw, 1.5rem) !important;
+                padding-right: clamp(0.75rem, 3vw, 1.5rem) !important;
               }
-              /* Reducir padding SOLO del contenido de texto (sin tocar la columna de imagen) */
+              /* Suavizar padding del texto */
               section#slack .mdnv-text-wrap {
                 padding-left: clamp(0.25rem, 2vw, 0.75rem);
                 padding-right: clamp(0.25rem, 2vw, 0.75rem);
               }
-              /* Imagen responsive (no forzamos grid/flex para evitar conflictos) */
+              /* Imagen controlada: más chica y nunca estira */
               section#slack img {
-                max-width: 100% !important;
+                width: auto !important;
+                max-width: clamp(220px, 34vw, 360px) !important;
                 height: auto !important;
                 display: block !important;
-                margin-left: auto;
-                margin-right: auto;
+                margin-left: 0;     /* queda a la izquierda */
+                margin-right: auto; /* empuja hacia la izq. */
               }
             </style>
 
@@ -77,7 +78,7 @@ sections:
               </p>
             </div>
           image: "slack.png"
-          image_position: right
+          image_position: left   # ⇦ pedimos explícitamente imagen a la IZQUIERDA
           button:
             text: "Unirme al espacio de MetaDocencia"
             url: "https://w3id.org/metadocencia/slack"
