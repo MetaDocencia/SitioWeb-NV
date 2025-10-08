@@ -1,0 +1,41 @@
+{{/* Shortcode: two_col
+Uso:
+{{< two_col image="/media/slack.png" side="right" maxw="1100px" px="clamp(0.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="360px" >}}
+  <!-- Contenido de texto (markdown/HTML) -->
+{{< /two_col >}}
+
+Parámetros:
+- image:   ruta de la imagen (obligatorio)
+- side:    "right" (default) | "left"  -> posición de la imagen
+- maxw:    ancho máximo del contenedor (default: 1100px)
+- px:      padding horizontal del contenedor (default: clamp(0.75rem,3vw,1.5rem))
+- gap:     separación entre columnas (default: clamp(1rem,3vw,2rem))
+- imgw:    ancho máximo de la imagen (default: 360px)
+*/}}
+
+{{- $image := .Get "image" -}}
+{{- $side  := lower (.Get "side" | default "right") -}}
+{{- $maxw  := .Get "maxw" | default "1100px" -}}
+{{- $px    := .Get "px"   | default "clamp(0.75rem,3vw,1.5rem)" -}}
+{{- $gap   := .Get "gap"  | default "clamp(1rem,3vw,2rem)" -}}
+{{- $imgw  := .Get "imgw" | default "360px" -}}
+
+<div class="md-two-col" data-side="{{ $side }}" style="--maxw:{{ $maxw }}; --px:{{ $px }}; --gap:{{ $gap }}; --imgw:{{ $imgw }};">
+  <style>
+    .md-two-col{max-width:var(--maxw);margin:0 auto;padding-left:var(--px);padding-right:var(--px);}
+    .md-two-col .md-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:var(--gap);align-items:center;}
+    .md-two-col[data-side="right"] .md-text{order:1}.md-two-col[data-side="right"] .md-media{order:2}
+    .md-two-col[data-side="left"]  .md-text{order:2}.md-two-col[data-side="left"]  .md-media{order:1}
+    @media (max-width: 900px){.md-two-col .md-grid{grid-template-columns:1fr}.md-two-col .md-text{order:1}.md-two-col .md-media{order:2}}
+    .md-two-col .md-media img{width:min(var(--imgw),100%);height:auto;display:block;margin:0 auto}
+  </style>
+
+  <div class="md-grid">
+    <div class="md-text">
+      {{ .Inner | .Page.RenderString }}
+    </div>
+    <div class="md-media">
+      <img src="{{ $image | relURL }}" alt="" loading="lazy">
+    </div>
+  </div>
+</div>
