@@ -43,7 +43,7 @@ sections:
              mode="full"
              maxw="1100px"
              px="clamp(3rem,8vw,8rem)"
-             gap="clamp(1rem,3vw,2rem)"
+             gap="clamp(1rem,3vw,1rem)"
              imgw="380px"
              alt="Slack de MetaDocencia"
         >}}
