@@ -112,7 +112,7 @@ sections:
           </div>
         </details>
 
-  # --- Auspiciantes ---
+  # --- Colaboran con MetaDocencia (gris claro) ---
   - block: markdown
     id: colaboradores
     content:
@@ -121,9 +121,10 @@ sections:
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="colaboradores" columns=5 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+
 
   # --- Comunidades Amigas (gris claro) ---
   - block: markdown
