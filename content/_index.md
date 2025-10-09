@@ -7,13 +7,12 @@ design:
   spacing: "6rem"
 
 sections:
-  # === HERO (con alto acotado) ===
   - block: hero
     id: hero-home
     content:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
       text: |
-        <p class="text-xl md:text-2xl">Más colaboración. Menos barreras para saberes que transforman.</p>
+        <p class="text-white text-xl md:text-2xl">Más colaboración. Menos barreras para saberes que transforman.</p>
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
@@ -35,6 +34,7 @@ sections:
           position: center
           parallax: true
         text_color_light: true
+
 
   # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
   - block: cta-image-paragraph
