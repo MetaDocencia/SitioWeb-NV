@@ -12,13 +12,16 @@ sections:
     content:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
       text: |
-        <p class="text-white text-xl md:text-2xl">Más colaboración. Menos barreras para saberes que transforman.</p>
-        <a href="/cta"
-           class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
-                  bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
-                  text-white">
-          Súmate
-        </a>
+      <p class="text-white text-xl md:text-2xl">
+        <span class="block">Más colaboración.</span>
+        <span class="block">Menos barreras para saberes que transforman.</span>
+      </p>
+      <a href="/cta"
+         class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
+                bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
+                text-white">
+        Súmate
+      </a>
     design:
       spacing:
         padding: [0, 0, 0, 0]
