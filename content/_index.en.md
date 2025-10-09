@@ -8,32 +8,35 @@ design:
 
 sections:
   - block: hero
+    id: hero-home
     content:
-      # Title in HTML to control size/contrast
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the global research map</span>'
-      # Larger, high-contrast custom button
-      text: More collaboration. Fewer barriers to knowledge that drives change.
-        <a href="/en/cta/"
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the global research map</span>'
+      text: |
+        <p class="text-white text-xl md:text-2xl">
+          <span class="block">More collaboration. Fewer barriers to knowledge that drives change.</span>
+          <span class="block">Menos barreras para saberes que transforman.</span>
+        </p>
+        <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
-          Join us
+          Súmate
         </a>
     design:
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
-      css_class: "dark"
+      css_class: "dark hero-max-bounded"
       background:
         color: "navy"
         image:
           filename: "quienes-somos.jpg"
           filters:
-            brightness: 0.4
+            brightness: 0.5
           size: cover
           position: center
-          parallax: false
-        text_color_light: true   # ensure clear text over the background
+          parallax: true
+        text_color_light: true
 
   - block: cta-image-paragraph
     id: solutions
