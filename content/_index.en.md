@@ -13,7 +13,8 @@ sections:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the global research map</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
-          <span class="block">More collaboration. Fewer barriers to knowledge that drives change.</span>
+          <span class="block">More collaboration.</span>
+          <span class="block">Fewer barriers to knowledge that drives change.</span>
         </p>
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
