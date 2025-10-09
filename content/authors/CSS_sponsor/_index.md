@@ -11,5 +11,5 @@ social:
   link: https://www.codeforsociety.org/
 superuser: false
 user_groups:
--  Auspiciantes
+-  Confían en MetaDocencia
 ---
