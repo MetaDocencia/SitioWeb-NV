@@ -3,7 +3,7 @@ title: "OLS"
 bio: ""
 email: "team@openlifesci.org"
 name: OLS
-weight: 1
+weight: 7
 role: 
 social:
 - icon: globe
@@ -11,7 +11,7 @@ social:
   link: https://openlifesci.org/
 superuser: false
 user_groups:
--  También construyen y formaron parte de este Panal
+-  Confían en MetaDocencia
 ---
 
 ### Conócela en este video
