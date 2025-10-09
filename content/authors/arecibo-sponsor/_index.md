@@ -11,6 +11,6 @@ social:
   link: https://www.areciboc3.org/
 superuser: false
 user_groups:
--  Auspiciantes
+-  Confían en MetaDocencia
 ---
 
