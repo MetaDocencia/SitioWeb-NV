@@ -2,7 +2,7 @@
 {{- $block := . -}}
 {{- $id := $block.id | default (printf "testimonials-%d" now.Unix) -}}
 
-<section id="{{ $id }}" class="section-testimonials {{ with $block.design.css_class }}{{ . }}{{ end }}" {{ with $block.design.css_style }}style="{{ . }}"{{ end }}>
+<section id="{{ $id }}" class="section-testimonials {{ with $block.design.css_class }}{{ . }}{{ end }}" {{ with $block.design.css_style }}style="{{ . }}"{{ end }} aria-label="Testimonios">
   <div class="container mx-auto px-6 md:px-8 lg:px-10">
 
     {{ with $block.content.title }}
@@ -22,21 +22,21 @@
       <div class="space-y-8">
         {{ range $items }}
           <article class="p-0">
-            {{/* Nombre */}}
+            {{/* Nombre (texto plano) */}}
             {{ with .name }}
               <div class="text-lg font-semibold leading-snug text-gray-900 dark:text-white">
                 {{ . }}
               </div>
             {{ end }}
 
-            {{/* Rol — acepta Markdown y no se escapa para que funcionen los links */}}
+            {{/* Rol (con soporte Markdown para links) */}}
             {{ with .role }}
               <div class="text-sm text-gray-600 dark:text-gray-300 mt-0.5">
                 {{ . | markdownify | safeHTML }}
               </div>
             {{ end }}
 
-            {{/* Testimonio */}}
+            {{/* Testimonio (Markdown permitido) */}}
             {{ with .text }}
               <div class="mt-3 text-gray-800 dark:text-gray-100">
                 {{ . | markdownify }}
@@ -52,8 +52,8 @@
   </div>
 </section>
 
-{{/* Estilos mínimos opcionales para iframes/imágenes dentro de testimonios */}}
+{{/* Estilos mínimos opcionales para medios dentro de la sección */}}
 <style>
-  #{{ $id }} .prose iframe { width:100% !important; aspect-ratio:16/9; height:auto; }
-  #{{ $id }} .prose img { height:auto; }
+  #{{ $id }} .prose iframe { width: 100% !important; aspect-ratio: 16 / 9; height: auto; }
+  #{{ $id }} .prose img { height: auto; }
 </style>
