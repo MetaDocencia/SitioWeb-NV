@@ -112,29 +112,16 @@ sections:
           </div>
         </details>
 
-  # --- Confían en MetaDocencia ---
-  - block: markdown
-    id: confian
-    content:
-      title: "Confían en MetaDocencia"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
-
   # --- Auspiciantes ---
   - block: markdown
-    id: auspiciantes
+    id: colaboradores
     content:
-      title: "Auspiciantes"
+      title: "Colaboran con MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Auspiciantes" columns=5 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="colaboradores" columns=5 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
@@ -150,7 +137,20 @@ sections:
             {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-
+        
+  # --- Confían en MetaDocencia ---
+  - block: markdown
+    id: confian
+    content:
+      title: "Confían en MetaDocencia"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
+          </div>
+        </details>
+        
   # ===== CTA final =====
   - block: markdown
     id: apoya
