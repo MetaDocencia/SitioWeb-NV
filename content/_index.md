@@ -208,7 +208,7 @@ sections:
           /* ===== Ajuste de márgenes de secciones de logos ===== */
           section#equipo-y-consejo-asesor,
           section#confian,
-          section#auspiciantes,
+          section#colaboradores,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
             margin-top: .15rem !important;  
@@ -238,13 +238,13 @@ sections:
           /* Tipos en nombres */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#confian .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
+          section#colaboradores .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.95rem !important; }
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#confian .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
+            section#colaboradores .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.9rem !important; }
           }
