@@ -14,7 +14,6 @@ sections:
       text: |
         <p class="text-white text-xl md:text-2xl">
           <span class="block">More collaboration. Fewer barriers to knowledge that drives change.</span>
-          <span class="block">Menos barreras para saberes que transforman.</span>
         </p>
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
