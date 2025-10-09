@@ -86,7 +86,7 @@ sections:
       text: ""
       items:
         - name: "Carly Strasser"
-          role: "Directora Senior de programas de CZI, tras co-organizar el [primer evento de CZI Open Science en Latinoamérica](https://chanzuckerberg.com/blog/open-science-latin-america-argentina/)"
+          role: "Directora Senior de programas de CZI, <span>Tras co-organizar el <a href="https://chanzuckerberg.com/blog/open-science-latin-america-argentina/">primer evento de CZI Open Science en Latinoamérica</a>.</span>"
           text: |
             Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con ustedes.
         - name: "Julio Zetter"
