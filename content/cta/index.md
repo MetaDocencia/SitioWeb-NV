@@ -6,7 +6,6 @@ design:
   spacing: "3rem"
 
 sections:
-  # ---------- Boletín ----------
   - block: cta-card
     id: boletin-embed
     content:
@@ -33,16 +32,15 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (imagen IZQ, texto DER, ancho igual a cta-card) ----------
   - block: markdown
     id: slack
     content:
-      title: ""   # dejamos el título vacío para NO duplicarlo fuera de las columnas
+      title: ""   # el título se muestra dentro de la columna de texto
       text: |
         {{< two_col
              image="/media/slack.png"
              side="img-left"
-             mode="container"          # mismo ancho que los cta-card
+             mode="container"
              maxw="1100px"
              px="clamp(0.75rem,3vw,1.5rem)"
              gap="clamp(1rem,3vw,2rem)"
@@ -72,7 +70,6 @@ sections:
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
 
-  # ---------- Comunidades amigas ----------
   - block: cta-card
     id: comunidades
     content:
@@ -88,7 +85,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#F77B20;color:#FFFFFF;"
 
-  # ---------- Apoya a MetaDocencia ----------
   - block: cta-card
     id: auspiciantes
     content:
@@ -110,7 +106,6 @@ sections:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
 
-  # ---------- Redes ----------
   - block: cta-card
     id: redes
     content:
