@@ -11,8 +11,9 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
-      text: Más colaboración. Menos barreras para saberes que transforman.
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
+      text: |
+        <p class="text-xl md:text-2xl">Más colaboración. Menos barreras para saberes que transforman.</p>
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
@@ -110,19 +111,18 @@ sections:
           </div>
         </details>
 
-  # --- Colaboran con MetaDocencia (gris claro) ---
+  # --- Confían en MetaDocencia ---
   - block: markdown
-    id: colaboradores
+    id: confian
     content:
-      title: "Colaboran con MetaDocencia"
+      title: "Confían en MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-
 
   # --- Auspiciantes ---
   - block: markdown
@@ -149,7 +149,6 @@ sections:
             {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-
 
   # ===== CTA final =====
   - block: markdown
@@ -206,7 +205,7 @@ sections:
 
           /* ===== Ajuste de márgenes de secciones de logos ===== */
           section#equipo-y-consejo-asesor,
-          section#colaboradores,
+          section#confian,
           section#auspiciantes,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
@@ -234,15 +233,15 @@ sections:
           .mdnv-collapsible > summary::after { content:"▾"; margin-left:.5rem; display:inline-block; transition:transform .15s ease; }
           .mdnv-collapsible[open] > summary::after { transform:rotate(180deg); }
 
-          /* Tipos en nombres (por si querés conservarlos) */
+          /* Tipos en nombres */
           section#equipo-y-consejo-asesor .mdnv-people-name,
-          section#colaboradores .mdnv-people-name,
+          section#confian .mdnv-people-name,
           section#auspiciantes .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.95rem !important; }
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
-            section#colaboradores .mdnv-people-name,
+            section#confian .mdnv-people-name,
             section#auspiciantes .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name { font-size:0.9rem !important; }
