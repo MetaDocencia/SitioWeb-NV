@@ -3,7 +3,7 @@ title: "Gordon and Betty Moore Foundation"
 bio: ""
 email: ""
 name: Gordon and Betty Moore Foundation
-weight: 4
+weight: 8
 role: 
 social:
 - icon: globe
@@ -11,6 +11,6 @@ social:
   link: https://www.moore.org/
 superuser: false
 user_groups:
--  Anteriores
+-  Confían en MetaDocencia
 ---
 
