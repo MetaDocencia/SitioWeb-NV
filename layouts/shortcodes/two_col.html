@@ -1,14 +1,19 @@
 {{/* Shortcode: two_col
    Dos columnas con imagen y texto.
-   - side: "img-left" | "img-right"
-   - mode: "container" | "full"
+
+   Parámetros:
+   - image: ruta a la imagen (Page Resource, assets o /static)
+   - side: "img-left" | "img-right"  (posición de la imagen en desktop)
+   - mode: "container" | "full"      (ancho contenido: centrado o a todo ancho)
    - maxw: ancho máx. del contenido (cuando mode="container")
-   - px:   padding horizontal
+   - px:   padding horizontal interno
    - gap:  separación entre columnas
    - imgw: ancho máx. de la imagen
-   Uso (contenedor del ancho de cta-card):
+   - alt:  texto alternativo
+
+   Ejemplo:
    {{< two_col image="/media/slack.png" side="img-left" mode="container" maxw="1100px" px="clamp(.75rem,3vw,1.5rem)" gap="clamp(1rem,3vw,2rem)" imgw="380px" alt="Slack de MetaDocencia" >}}
-     ...contenido de texto...
+     ...contenido HTML/Markdown de la columna de texto...
    {{< /two_col >}}
 */}}
 
@@ -16,7 +21,7 @@
 {{- $sideRaw := lower (.Get "side" | default "img-right") -}}
 {{- $side := cond (or (eq $sideRaw "left") (eq $sideRaw "img-left")) "img-left" "img-right" -}}
 
-{{- $mode := lower (.Get "mode" | default "container") -}}  {{/* "full" o "container" */}}
+{{- $mode := lower (.Get "mode" | default "container") -}}
 {{- $maxw := .Get "maxw" | default "1200px" -}}
 {{- $px   := .Get "px"   | default "clamp(0.75rem,3vw,1.5rem)" -}}
 {{- $gap  := .Get "gap"  | default "clamp(1rem,3vw,2rem)" -}}
