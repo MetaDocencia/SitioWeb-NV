@@ -40,9 +40,9 @@ sections:
         {{< two_col
              image="/media/slack.png"
              side="img-left"
-             mode="container"
+             mode="full"
              maxw="1100px"
-             px="clamp(0.75rem,3vw,1.5rem)"
+             px="clamp(3rem,8vw,8rem)"
              gap="clamp(1rem,3vw,2rem)"
              imgw="380px"
              alt="Slack de MetaDocencia"
