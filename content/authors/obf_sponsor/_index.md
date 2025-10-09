@@ -3,7 +3,7 @@ title: "OBF - Open Bioinformatics Foundation"
 bio: "Beca a Laura Ación"
 email: ""
 name: OBF - Open Bioinformatics Foundation
-weight: 1
+weight: 9
 role: 
 social:
 - icon: globe
@@ -11,6 +11,6 @@ social:
   link: https://www.open-bio.org/
 superuser: false
 user_groups:
--  Anteriores
+-  Confían en MetaDocencia
 ---
 
