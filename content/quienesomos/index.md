@@ -114,7 +114,7 @@ sections:
           }
 
           /* ===== Dark mode para el bloque "Vamos por 5 años más" =====
-             Fondo oscuro y texto blanco, como el bloque de auspiciantes */
+             Fondo oscuro y texto blanco, como el bloque de confian */
           :root.dark section#solutions {
             background: #00506F !important;
             color: #FFFFFF !important;
@@ -134,7 +134,7 @@ sections:
           .mdnv-collapsible[open] { margin-bottom: 1rem; }
           section#equipo-y-consejo-asesor,
           section#colaboradores,
-          section#auspiciantes,
+          section#confian,
           section#anteriores,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
@@ -144,7 +144,7 @@ sections:
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#anteriores .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
+          section#confian .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
             font-size: 0.95rem !important;
@@ -152,7 +152,7 @@ sections:
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
+            section#confian .mdnv-people-name,
             section#anteriores .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
@@ -196,32 +196,20 @@ sections:
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Comunidades amigas" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
-  # --- Auspiciantes ---
+  # --- confian ---
   - block: markdown
-    id: auspiciantes
+    id: confian
     content:
-      title: "Auspiciantes"
+      title: "Confían en MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Auspiciantes" columns=5 gapx="12rem" gapy="3rem" >}}
-          </div>
-        </details>
-  # --- También nos acompañaron ---
-  - block: markdown
-    id: anteriores
-    content:
-      title: "También nos acompañaron"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Anteriores" columns=8 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="confian" columns=10 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
