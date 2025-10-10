@@ -11,6 +11,7 @@ social:
   link: https://www.codeforsociety.org/
 superuser: false
 user_groups:
-- Current
+- trust
 ---
+
 
