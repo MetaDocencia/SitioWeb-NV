@@ -3,7 +3,7 @@ title: "LABI"
 bio: ""
 email: ""
 name: LABI
-weight: 1
+weight: 3
 role: 
 social:
 - icon: globe
@@ -11,6 +11,7 @@ social:
   link: https://labi.lat/
 superuser: false
 user_groups:
-- Previous
+- trust
 ---
+
 
