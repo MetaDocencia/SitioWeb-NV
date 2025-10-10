@@ -22,6 +22,6 @@ The community-driven agreements guided the adaptation of NASA’s Open Science c
 MetaDocencia also undertakes other projects where accessibility of content in Spanish is key. For example, as part of its consultancy services, MetaDocencia has contextualized several calls and related support materials originally published in English by Invest in Open Infrastructure (IOI).
 
 ## More information
-* Blogpost (in Spanish): [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
-* Nota de nuestro Blogpost (in Spanish): [¿De qué hablamos cuando hablamos de Contextualización?](https://mdnv.netlify.app/post/2024/20240725-contextualizacion/)
-* Nota de nuestro Blogpost (in Spanish): [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
+* Blogpost (in Spanish): [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](/en/post/2024/20240704-recorridoaltaca/)
+* Nota de nuestro Blogpost (in Spanish): [¿De qué hablamos cuando hablamos de Contextualización?](/en/post/2024/20240725-contextualizacion/)
+* Nota de nuestro Blogpost (in Spanish): [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](/en/post/2024/20240704-recorridoaltaca/)
