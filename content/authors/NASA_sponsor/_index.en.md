@@ -3,7 +3,7 @@ title: "NASA Open Science"
 bio: ""
 email: ""
 name: NASA Open Science
-weight: 1
+weight: 2
 role: 
 social:
 - icon: globe
@@ -11,7 +11,8 @@ social:
   link: https://www.nasa.gov/
 superuser: false
 user_groups:
-- Current
+- trust
 
 ---
+
 
