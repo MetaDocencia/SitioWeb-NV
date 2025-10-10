@@ -44,7 +44,7 @@ sections:
       items:
         - title: "Quiénes somos"
           text: "MetaDocencia es una organización fundada en 2020. Nuestra comunidad está formada por personas y organizaciones que trabajan construyendo capacidades locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo."
-          image: "11-22 Plenario 3-01.jpg"
+          image: "quienessomos3.png"
           button:
             text: "Conócenos"
             url: "/quienes-somos"
