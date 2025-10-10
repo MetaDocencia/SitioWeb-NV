@@ -3,7 +3,7 @@ title: "AreciboC3"
 bio: ""
 email: ""
 name: AreciboC3
-weight: 2
+weight: 5
 role: 
 social:
 - icon: globe
@@ -11,6 +11,7 @@ social:
   link: https://www.areciboc3.org/
 superuser: false
 user_groups:
-- Current
+- trust
 ---
+
 
