@@ -58,7 +58,7 @@ sections:
       title: "MetaDocencia by the Numbers"
       items:
         - statistic: "40+"
-          description: "strategic partners and sponsors"
+          description: "strategic partners and trust"
         - statistic: "60+"
           description: "collaborators"
         - statistic: "1,070+"
@@ -114,7 +114,7 @@ sections:
           }
 
           /* ===== Dark mode para el bloque "Vamos por 5 años más" =====
-             Fondo oscuro y texto blanco, como el bloque de auspiciantes */
+             Fondo oscuro y texto blanco, como el bloque de trust */
           :root.dark section#solutions {
             background: #00506F !important;
             color: #FFFFFF !important;
@@ -135,7 +135,7 @@ sections:
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#anteriores,
-          section#auspiciantes,
+          section#trust,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
             margin-top: .25rem !important;
@@ -143,7 +143,7 @@ sections:
           }
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
+          section#trust .mdnv-people-name,
           section#anteriores .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
@@ -152,7 +152,7 @@ sections:
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
+            section#trust .mdnv-people-name,
             section#anteriores .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
@@ -195,35 +195,23 @@ sections:
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
-            {{< people_list group="Fellow Communities" columns=10 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Fellow Communities" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
         
-  # --- Auspiciantes ---
+  # --- trust ---
   - block: markdown
-    id: auspiciantes
+    id: trust
     content:
-      title: "Sponsors"
+      title: "They trust MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
-            {{< people_list group="Current" columns=5 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="trust" columns=10 gapx="12rem" gapy="3rem" >}}
           </div>
         </details>
 
-  # --- Auspiciantes ---
-  - block: markdown
-    id: anteriores
-    content:
-      title: "Previous Sponsors"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="Previous" columns=8 gapx="12rem" gapy="3rem" >}}
-          </div>
-        </details>
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
