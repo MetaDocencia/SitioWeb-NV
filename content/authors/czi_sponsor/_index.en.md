@@ -3,7 +3,7 @@ title: "Open Science CZI"
 bio: ""
 email: ""
 name: CZI - Chan Zuckerberg Initiative
-weight: 2
+weight: 1
 role: 
 social:
 - icon: globe
@@ -11,6 +11,7 @@ social:
   link: https://chanzuckerberg.com/science/programs-resources/open-science/
 superuser: false
 user_groups:
-- Current
+- trust
 ---
+
 
