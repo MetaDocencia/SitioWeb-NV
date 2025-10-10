@@ -125,18 +125,6 @@ sections:
           </div>
         </details>
 
-  # --- Auspiciantes ---
-  - block: markdown
-    id: auspiciantes
-    content:
-      title: "Sponsors"
-      text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Current" columns=5 gapx="12rem" gapy="3rem" >}}
-          </div>
-        </details>
 
   # --- Comunidades Amigas ---
   - block: markdown
@@ -151,6 +139,18 @@ sections:
           </div>
         </details>
 
+  # --- Confían en MetaDocencia ---
+  - block: markdown
+    id: trust
+    content:
+      title: "They trust MetaDocencia"
+      text: |
+        <details class="mdnv-collapsible" open>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <div class="mt-2">
+            {{< people_list group="trust" columns=5 gapx="12rem" gapy="3rem" >}}
+          </div>
+        </details>
 
   # ===== CTA final =====
   - block: markdown
@@ -262,7 +262,7 @@ sections:
           /* Reducir espacio ANTES de cada título colapsable */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
-          section#auspiciantes,
+          section#trust,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
             margin-top: .25rem !important;
@@ -272,7 +272,7 @@ sections:
           /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
-          section#auspiciantes .mdnv-people-name,
+          section#trust .mdnv-people-name,
           section#comunidades-amigas .mdnv-people-name,
           section#colaboraron-con-metadocencia .mdnv-people-name {
             font-size: 0.95rem !important;
@@ -280,7 +280,7 @@ sections:
           @media (max-width: 640px) {
             section#equipo-y-consejo-asesor .mdnv-people-name,
             section#colaboradores .mdnv-people-name,
-            section#auspiciantes .mdnv-people-name,
+            section#trust .mdnv-people-name,
             section#comunidades-amigas .mdnv-people-name,
             section#colaboraron-con-metadocencia .mdnv-people-name {
               font-size: 0.9rem !important;
