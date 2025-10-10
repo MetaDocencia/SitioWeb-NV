@@ -3,7 +3,7 @@ title: "OLS"
 bio: ""
 email: ""
 name: OLS
-weight: 1
+weight: 7
 role: 
 social:
 - icon: globe
@@ -11,6 +11,7 @@ social:
   link: https://openlifesci.org/
 superuser: false
 user_groups:
-- Current
+- trust
 ---
+
 
