@@ -49,7 +49,7 @@ sections:
           }
           section#slack .btn-slack:hover { filter: brightness(1.05); }
         </style>
-  
+
         {{< two_col
              image="/media/slack.png"
              side="img-left"
@@ -57,24 +57,24 @@ sections:
              maxw="1100px"
              px="clamp(3rem,8vw,8rem)"
              gap="clamp(1rem,3vw,1rem)"
-             imgw="266px"          # 30% más chico (antes 380px)
+             imgw="266px"
              alt="Slack de MetaDocencia"
         >}}
           <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
-  
+
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
             Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
           </p>
-  
+
           <!-- Botón rojo arriba -->
           <p class="mt-4">
             <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
               Unirme al espacio de MetaDocencia
             </a>
           </p>
-  
+
           <!-- Enlace informativo debajo -->
           <p class="mt-3">
             <a href="/post/20231219-mdenslack/" class="underline font-semibold">
@@ -84,7 +84,6 @@ sections:
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-
 
   - block: cta-card
     id: comunidades
