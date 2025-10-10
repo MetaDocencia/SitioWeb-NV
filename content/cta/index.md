@@ -35,14 +35,14 @@ sections:
   - block: markdown
     id: slack
     content:
-      title: ""
+      title: ""   # el título se muestra dentro de la columna de texto
       text: |
         <style>
-          /* Texto un poco más chico dentro de este bloque */
-          section#slack p { font-size: 0.95rem; line-height: 1.6; }
-          /* Mantener el tamaño normal en el título h2 */
+          /* Texto un poco más grande (término medio) dentro de este bloque */
+          section#slack p { font-size: 1.05rem; line-height: 1.65; }
+          /* Mantener el tamaño del título h2 controlado */
           section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
-          /* Botón rojo (consistente solo en esta sección) */
+          /* Botón rojo (solo en esta sección) */
           section#slack .btn-slack {
             display:inline-block; text-decoration:none; color:#FFFFFF !important;
             background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem;
@@ -57,7 +57,7 @@ sections:
              maxw="1100px"
              px="clamp(3rem,8vw,8rem)"
              gap="clamp(1rem,3vw,1rem)"
-             imgw="266px"
+             imgw="266px"          # 30% más chico (antes 380px)
              alt="Slack de MetaDocencia"
         >}}
           <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
