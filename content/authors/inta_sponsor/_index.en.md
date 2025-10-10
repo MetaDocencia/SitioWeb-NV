@@ -3,7 +3,7 @@ title: "INTA"
 bio: ""
 email: ""
 name: INTA
-weight: 3
+weight: 10
 role: 
 social:
 - icon: globe
@@ -11,8 +11,9 @@ social:
   link: https://www.argentina.gob.ar/inta
 superuser: false
 user_groups:
--   Previous
+-   trust
 ---
+
 
 
 
