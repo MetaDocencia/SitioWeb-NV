@@ -32,44 +32,22 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack ----------
   - block: markdown
     id: slack
     content:
-      title: ""
+      title: ""   # el título se muestra dentro de la columna de texto
       text: |
         <style>
           /* Texto un poco más grande (término medio) dentro de este bloque */
           section#slack p { font-size: 1.05rem; line-height: 1.65; }
-          /* Tamaño del título controlado */
+          /* Mantener el tamaño del título h2 controlado */
           section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
-
           /* Botón rojo (solo en esta sección) */
           section#slack .btn-slack {
-            display: inline-block;
-            text-decoration: none;
-            color: #FFFFFF !important;
-            background: #C83737;
-            padding: .6rem 1.1rem;
-            border-radius: .375rem;
+            display:inline-block; text-decoration:none; color:#FFFFFF !important;
+            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem;
           }
           section#slack .btn-slack:hover { filter: brightness(1.05); }
-
-          /* Asegurar que el logo de Slack se vea también en móvil y ajustar tamaño */
-          @media (max-width: 640px) {
-            section#slack img {
-              display: block !important;
-              width: 70% !important;
-              max-width: 220px !important;
-              height: auto !important;
-              margin: 0 auto 12px !important; /* centrado + respiro inferior */
-            }
-            /* Márgenes laterales suaves para título, párrafos y CTAs en móvil */
-            section#slack .slack-pad > * {
-              padding-left: 12px !important;
-              padding-right: 12px !important;
-            }
-          }
         </style>
 
         {{< two_col
@@ -82,29 +60,27 @@ sections:
              imgw="266px"
              alt="Slack de MetaDocencia"
         >}}
-          <div class="slack-pad">
-            <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
+          <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
 
-            <p>
-              Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
-              <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
-              Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
-            </p>
+          <p>
+            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
+            <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
+            Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+          </p>
 
-            <!-- Botón rojo arriba -->
-            <p class="mt-4">
-              <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
-                Unirme al espacio de MetaDocencia
-              </a>
-            </p>
+          <!-- Botón rojo arriba -->
+          <p class="mt-4">
+            <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
+              Unirme al espacio de MetaDocencia
+            </a>
+          </p>
 
-            <!-- Enlace informativo debajo -->
-            <p class="mt-3">
-              <a href="/post/20231219-mdenslack/" class="underline font-semibold">
-                Qué es y cómo sumarme
-              </a>
-            </p>
-          </div>
+          <!-- Enlace informativo debajo -->
+          <p class="mt-3">
+            <a href="/post/20231219-mdenslack/" class="underline font-semibold">
+              Qué es y cómo sumarme
+            </a>
+          </p>
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
