@@ -22,6 +22,6 @@ Los consensos alcanzados por el trabajo en comunidad guiaron la adecuación de l
 MetaDocencia cuenta con otros proyectos en los que la accesibilidad de contenidos al español es clave. Por ejemplo, como parte de los servicios que brinda, MetaDocencia realizó la contextualización de diversas convocatorias y material de apoyo relacionado publicadas originalmente en inglés por Invest in Open Infrastructure (IOI).
 
 ## Para seguir leyendo
-* Nota de nuestro Blogpost: [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
-* Nota de nuestro Blogpost: [¿De qué hablamos cuando hablamos de Contextualización?](https://mdnv.netlify.app/post/2024/20240725-contextualizacion/)
-* Nota de nuestro Blogpost: [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](https://mdnv.netlify.app/post/2024/20240704-recorridoaltaca/)
+* Nota de nuestro Blogpost: [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](/post/2024/20240704-recorridoaltaca/)
+* Nota de nuestro Blogpost: [¿De qué hablamos cuando hablamos de Contextualización?](/post/2024/20240725-contextualizacion/)
+* Nota de nuestro Blogpost: [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](/post/2024/20240704-recorridoaltaca/)
