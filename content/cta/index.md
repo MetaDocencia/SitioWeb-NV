@@ -35,8 +35,21 @@ sections:
   - block: markdown
     id: slack
     content:
-      title: ""   # el título se muestra dentro de la columna de texto
+      title: ""
       text: |
+        <style>
+          /* Texto un poco más chico dentro de este bloque */
+          section#slack p { font-size: 0.95rem; line-height: 1.6; }
+          /* Mantener el tamaño normal en el título h2 */
+          section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+          /* Botón rojo (consistente solo en esta sección) */
+          section#slack .btn-slack {
+            display:inline-block; text-decoration:none; color:#FFFFFF !important;
+            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem;
+          }
+          section#slack .btn-slack:hover { filter: brightness(1.05); }
+        </style>
+  
         {{< two_col
              image="/media/slack.png"
              side="img-left"
@@ -44,31 +57,34 @@ sections:
              maxw="1100px"
              px="clamp(3rem,8vw,8rem)"
              gap="clamp(1rem,3vw,1rem)"
-             imgw="380px"
+             imgw="266px"
              alt="Slack de MetaDocencia"
         >}}
           <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
-
+  
           <p>
             Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
             <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
             Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
           </p>
-
-          <p class="mt-3">
-            <a href="/post/20231219-mdenslack/" class="underline font-semibold">Qué es y cómo sumarme</a>
-          </p>
-
+  
+          <!-- Botón rojo arriba -->
           <p class="mt-4">
-            <a href="https://w3id.org/metadocencia/slack"
-               class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
-               style="background:#111827;color:#FFFFFF;">
-               Unirme al espacio de MetaDocencia
+            <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
+              Unirme al espacio de MetaDocencia
+            </a>
+          </p>
+  
+          <!-- Enlace informativo debajo -->
+          <p class="mt-3">
+            <a href="/post/20231219-mdenslack/" class="underline font-semibold">
+              Qué es y cómo sumarme
             </a>
           </p>
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
+
 
   - block: cta-card
     id: comunidades
