@@ -139,18 +139,41 @@ sections:
           </div>
         </details>
         
-  # --- Confían en MetaDocencia ---
+# 6) Organizaciones que confían — grid responsiva (sin scroll)
   - block: markdown
-    id: confian
+    id: aliados
     content:
-      title: "Confían en MetaDocencia"
+      title: "Organizaciones que confían en Cúmulo"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
+        <div class="w-full" style="max-width:100%;">
+          <!-- Grid responsiva: columnas auto-fit, logos “anchos” y sin overflow -->
+          <div style="
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px 32px;
+            align-items:center;">
+            
+            <!-- Usá rutas locales si podés: /media/logos/... -->
+            <div class="flex items-center justify-center">
+              <img src="https://somoscumulo.github.io/img/logo1.jpg" alt="Logo 1" style="max-width: 220px; width: 100%; height:auto;" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="https://somoscumulo.github.io/img/logo2.jpg" alt="Logo 2" style="max-width: 220px; width: 100%; height:auto;" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="https://somoscumulo.github.io/img/logo3.jpg" alt="Logo 3" style="max-width: 220px; width: 100%; height:auto;" />
+            </div>
+            <div class="flex items-center justify-center">
+              <img src="https://somoscumulo.github.io/img/logo4.png" alt="Logo 4" style="max-width: 220px; width: 100%; height:auto;" />
+            </div>
+  
+            <!-- Agregá más logos repitiendo el bloque <div>...</div> -->
           </div>
-        </details>
+        </div>
+    design:
+      spacing:
+        padding: ["6px","0","8px","0"]
+
         
   # ===== CTA final =====
   - block: markdown
