@@ -44,7 +44,7 @@ sections:
       items:
         - title: "About us"
           text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
-          image: "qquienessomos4.jpg"
+          image: "quienessomos4.jpg"
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
