@@ -208,7 +208,7 @@ sections:
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
-            {{< people_list group="trust" columns=10 gapx="12rem" gapy="3rem" >}}
+            {{< people_list group="trust" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
