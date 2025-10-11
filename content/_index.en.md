@@ -10,11 +10,11 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Let’s put Latin America on the global research map</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We advance Latin America on the global research map</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
           <span class="block">More collaboration.</span>
-          <span class="block">Fewer barriers to knowledge that drives change.</span>
+          <span class="block">Fewer barriers to transformative knowledge.</span>
         </p>
         <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
@@ -44,7 +44,7 @@ sections:
       items:
         - title: "About us"
           text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
-          image: "quienessomos.jpg"
+          image: "qquienessomos4.jpg"
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
@@ -73,7 +73,7 @@ sections:
           description: |
             people  
             trained
-        - statistic: "+1,000"
+        - statistic: "+1,070"
           description: |
             people in our  
             Slack community
