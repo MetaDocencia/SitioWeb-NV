@@ -1,0 +1,124 @@
+{{ define "main" }}
+<article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
+
+  {{/* =============== Encabezado / metadata del autor (si existe content/authors/<term>/_index.md) =============== */}}
+  {{/* En taxonomía, .Title es el término (slug humanizado). Intentamos cargar params desde el content file si existe. */}}
+
+  {{/* Deducir slug del término actual desde la URL */}}
+  {{ $authorSlug := ( .RelPermalink | strings.TrimSuffix "/" | path.Base | lower ) }}
+
+  {{/* Si existe contenido en content/authors/<term>/_index.md, .Content y .Params estarán disponibles aquí. */}}
+  <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+    {{/* Avatar: /authors/<slug>/avatar.png o recurso "avatar*" si es bundle */}}
+    <div class="w-full md:w-auto flex md:block justify-center">
+      {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
+      {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ else }}
+        <img src="{{ printf "/authors/%s/avatar.png" $authorSlug }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ end }}
+    </div>
+
+    <div class="w-full">
+      <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
+
+      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+      {{ with .Params.organizations }}
+        {{ range first 1 . }}
+          {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
+        {{ end }}
+      {{ end }}
+      {{ with .Params.email }}
+        <p class="text-sm mt-2"><a href="mailto:{{ . }}" class="underline break-all hover:no-underline">{{ . }}</a></p>
+      {{ end }}
+
+      {{/* Redes sociales (si existen en el _index.md del autor) */}}
+      {{ $socials := .Params.social }}
+      {{ if $socials }}
+        {{ $labels := dict
+          "twitter" "Twitter" "x-twitter" "Twitter" "github" "GitHub" "bluesky" "Bluesky"
+          "linkedin" "LinkedIn" "mastodon" "Mastodon" "orcid" "ORCID"
+          "globe" "Website" "home" "Website" "envelope" "Email"
+        }}
+        <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="font-medium mr-1">Contacto:</span>
+          {{ $items := slice }}
+          {{ range $socials }}
+            {{ $icon := ( .icon | lower ) }}
+            {{ $pack := ( .icon_pack | lower ) }}
+            {{ $url  := .link }}
+            {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
+            {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline"><i class="%s fa-%s" aria-hidden="true"></i><span>%s</span></a>` $url $faPack $icon $label }}
+            {{ $items = $items | append $one }}
+          {{ end }}
+          {{ delimit $items " · " | safeHTML }}
+        </p>
+      {{ end }}
+
+      {{ with .Params.interests }}
+        <p class="text-sm opacity-90 mt-1"><span class="font-medium">Intereses:</span> {{ delimit . " · " }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  {{/* Contenido libre del autor (si lo hay en el _index.md del término) */}}
+  <div class="prose dark:prose-invert max-w-none">
+    {{ .Content }}
+  </div>
+
+  {{/* =============== Listado de posts en los que este término (autor) participa =============== */}}
+  {{/* En páginas de taxonomía, Hugo ya relaciona los contenidos con el término en .Pages/.RegularPages. */}}
+  {{/* Filtramos a la sección 'post' y ordenamos por fecha. No importa el 'type' del post. */}}
+  {{ $posts := where .RegularPages ".Section" "post" | sort "Date" "desc" }}
+
+  {{ if gt (len $posts) 0 }}
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
+      <ul class="space-y-2">
+        {{ range $posts }}
+          <li class="leading-snug">
+            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
+            {{ with .Date }}<span class="text-xs opacity-70"> — {{ . | time.Format "02 Jan 2006" }}</span>{{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ else }}
+    {{/* Fallback: si .RegularPages no trae nada (config/taxonomía rara), hacemos match manual por front matter. */}}
+    {{ $allPosts := where .Site.RegularPages ".Section" "post" }}
+    {{ $hits := slice }}
+    {{ range $p := $allPosts }}
+      {{ $auth := $p.Params.authors }}
+      {{ if $auth }}
+        {{ $slug := $authorSlug }}
+        {{ $t := printf "%T" $auth }}
+        {{ if eq $t "[]interface {}" }}
+          {{ range $auth }}
+            {{ if eq (lower (printf "%v" .)) $slug }}{{ $hits = $hits | append $p }}{{ end }}
+          {{ end }}
+        {{ else if eq $t "string" }}
+          {{ if eq (lower (printf "%v" $auth)) $slug }}{{ $hits = $hits | append $p }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $hits = sort $hits "Date" "desc" }}
+    {{ if gt (len $hits) 0 }}
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
+        <ul class="space-y-2">
+          {{ range $hits }}
+            <li class="leading-snug">
+              <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
+              {{ with .Date }}<span class="text-xs opacity-70"> — {{ . | time.Format "02 Jan 2006" }}</span>{{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+
+</article>
+{{ end }}
