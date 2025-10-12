@@ -7,7 +7,7 @@
     {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-    {{/* Clave/slug del autor */}}
+    {{/* Clave/slug del autor (carpeta o permalink) */}}
     {{ $authorKey := "" }}
     {{ if .File }}
       {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -15,8 +15,7 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto.
-          Mobile: 10rem; Desktop: 15rem (1.5x). */}}
+    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto. */}}
     <div class="w-full md:w-auto flex md:block justify-center">
       {{ if $avatar }}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
@@ -109,11 +108,18 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
-  {{/* Claves para matchear autor en .Params.authors */}}
-  {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
+  {{/* ================= Listado de notas de blog (type: post) de esta persona ================= */}}
+  {{/* Normalizaciones para emparejar autores por slug/título/variantes */}}
+  {{ $keys := slice
+      (lower $authorKey)
+      (lower (urlize $authorKey))
+      (lower .Title)
+      (lower (urlize .Title))
+      (lower (default "" .Params.name))
+      (lower (urlize (default "" .Params.name)))
+  }}
 
-  {{/* Recolectar páginas type=post donde este autor figure */}}
+  {{/* Recolectar posts donde el autor aparece en .Params.authors (string | []string | []map) */}}
   {{ $col := slice }}
   {{ range where .Site.RegularPages "Type" "post" }}
     {{ $auth := .Params.authors }}
@@ -122,29 +128,39 @@
       {{ $t := printf "%T" $auth }}
       {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
-          {{ $a := "" }}
-          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
-            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
-            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
-          {{ else }}
-            {{ $a = lower (printf "%v" .) }}
+          {{ $val := "" }}
+          {{ $vt := printf "%T" . }}
+          {{ if eq $vt "string" }}
+            {{ $val = lower (urlize (printf "%v" .)) }}
+          {{ else if eq $vt "map[string]interface {}" }}
+            {{/* Intentar por slug/name/title en orden */}}
+            {{ if and (eq $val "") (isset . "slug") }}{{ $val = lower (urlize (printf "%v" (index . "slug"))) }}{{ end }}
+            {{ if and (eq $val "") (isset . "name") }}{{ $val = lower (urlize (printf "%v" (index . "name"))) }}{{ end }}
+            {{ if and (eq $val "") (isset . "title") }}{{ $val = lower (urlize (printf "%v" (index . "title"))) }}{{ end }}
           {{ end }}
-          {{ if in $keys $a }}{{ $matched = true }}{{ end }}
+          {{ if or (in $keys $val) (in $keys (lower (printf "%v" .))) }}
+            {{ $matched = true }}
+          {{ end }}
         {{ end }}
       {{ else if eq $t "string" }}
-        {{ if in $keys (lower $auth) }}{{ $matched = true }}{{ end }}
+        {{ if in $keys (lower (urlize (printf "%v" $auth))) }}
+          {{ $matched = true }}
+        {{ end }}
       {{ end }}
       {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
   {{ end }}
-  {{ $pages := sort $col "Date" "desc" }}
 
+  {{ $pages := sort $col "Date" "desc" }}
   {{ if gt (len $pages) 0 }}
-    <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
-      <ul class="list-disc list-inside space-y-1">
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
+      <ul class="space-y-2">
         {{ range $pages }}
-          <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
+          <li class="leading-snug">
+            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
+            <span class="text-xs opacity-70">— {{ .Date | time.Format "02 Jan 2006" }}</span>
+          </li>
         {{ end }}
       </ul>
     </section>
