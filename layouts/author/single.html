@@ -108,50 +108,49 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Listado de notas de blog (type: post) de esta persona ================= */}}
-  {{/* Normalizaciones para emparejar autores por slug/título/variantes */}}
-  {{ $keys := slice
-      (lower $authorKey)
-      (lower (urlize $authorKey))
-      (lower .Title)
-      (lower (urlize .Title))
-      (lower (default "" .Params.name))
-      (lower (urlize (default "" .Params.name)))
-  }}
+  {{/* ================= Listado de notas de blog (Section = post) ================= */}}
+  {{/* Variantes de identificación del autor actual */}}
+  {{ $idByDir   := lower (urlize $authorKey) }}
+  {{ $idByTitle := lower (urlize .Title) }}
+  {{ $idByName  := lower (urlize (default "" .Params.name)) }}
+  {{ $authorIDs := slice $idByDir $idByTitle $idByName }}
 
-  {{/* Recolectar posts donde el autor aparece en .Params.authors (string | []string | []map) */}}
-  {{ $col := slice }}
-  {{ range where .Site.RegularPages "Type" "post" }}
-    {{ $auth := .Params.authors }}
+  {{/* Recolectar posts SOLO por sección (más robusto que Type) */}}
+  {{ $posts := where .Site.RegularPages ".Section" "post" }}
+
+  {{ $matches := slice }}
+  {{ range $p := $posts }}
+    {{ $auth := $p.Params.authors }}
     {{ if $auth }}
-      {{ $matched := false }}
+      {{ $hit := false }}
       {{ $t := printf "%T" $auth }}
+
+      {{/* Caso: lista (strings y/o maps) */}}
       {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
-          {{ $val := "" }}
+          {{ $a := "" }}
           {{ $vt := printf "%T" . }}
           {{ if eq $vt "string" }}
-            {{ $val = lower (urlize (printf "%v" .)) }}
+            {{ $a = lower (urlize (printf "%v" .)) }}
           {{ else if eq $vt "map[string]interface {}" }}
-            {{/* Intentar por slug/name/title en orden */}}
-            {{ if and (eq $val "") (isset . "slug") }}{{ $val = lower (urlize (printf "%v" (index . "slug"))) }}{{ end }}
-            {{ if and (eq $val "") (isset . "name") }}{{ $val = lower (urlize (printf "%v" (index . "name"))) }}{{ end }}
-            {{ if and (eq $val "") (isset . "title") }}{{ $val = lower (urlize (printf "%v" (index . "title"))) }}{{ end }}
+            {{ if and (eq $a "") (isset . "slug") }}{{ $a = lower (urlize (printf "%v" (index . "slug"))) }}{{ end }}
+            {{ if and (eq $a "") (isset . "name") }}{{ $a = lower (urlize (printf "%v" (index . "name"))) }}{{ end }}
+            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (urlize (printf "%v" (index . "title"))) }}{{ end }}
           {{ end }}
-          {{ if or (in $keys $val) (in $keys (lower (printf "%v" .))) }}
-            {{ $matched = true }}
-          {{ end }}
+          {{ if in $authorIDs $a }}{{ $hit = true }}{{ end }}
         {{ end }}
+
+      {{/* Caso: string único */}}
       {{ else if eq $t "string" }}
-        {{ if in $keys (lower (urlize (printf "%v" $auth))) }}
-          {{ $matched = true }}
-        {{ end }}
+        {{ $val := lower (urlize (printf "%v" $auth)) }}
+        {{ if in $authorIDs $val }}{{ $hit = true }}{{ end }}
       {{ end }}
-      {{ if $matched }}{{ $col = $col | append . }}{{ end }}
+
+      {{ if $hit }}{{ $matches = $matches | append $p }}{{ end }}
     {{ end }}
   {{ end }}
 
-  {{ $pages := sort $col "Date" "desc" }}
+  {{ $pages := sort $matches "Date" "desc" }}
   {{ if gt (len $pages) 0 }}
     <section class="mt-10">
       <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
@@ -159,7 +158,7 @@
         {{ range $pages }}
           <li class="leading-snug">
             <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
-            <span class="text-xs opacity-70">— {{ .Date | time.Format "02 Jan 2006" }}</span>
+            {{ with .Date }}<span class="text-xs opacity-70"> — {{ . | time.Format "02 Jan 2006" }}</span>{{ end }}
           </li>
         {{ end }}
       </ul>
