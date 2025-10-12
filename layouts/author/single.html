@@ -1,13 +1,21 @@
 {{ define "main" }}
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
+  {{/* =============== i18n simple =============== */}}
+  {{ $lang := or .Lang (site.Language.Lang) }}
+  {{ $isEN := eq $lang "en" }}
+  {{ $LABEL_Contact   := cond $isEN "Contact" "Contacto" }}
+  {{ $LABEL_Interests := cond $isEN "Interests" "Intereses" }}
+  {{ $LABEL_Edu       := cond $isEN "Education" "Educación" }}
+  {{ $LABEL_Posts     := cond $isEN "Blog posts" "Notas del blog" }}
+
+  {{/* =============== Encabezado =============== */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
 
     {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-    {{/* Clave/slug del autor (carpeta o permalink) */}}
+    {{/* Clave/slug del autor (carpeta o permalink, respeta idioma actual) */}}
     {{ $authorKey := "" }}
     {{ if .File }}
       {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -51,7 +59,7 @@
           "globe" "Website" "home" "Website" "envelope" "Email"
         }}
         <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span class="font-medium mr-1">Contacto:</span>
+          <span class="font-medium mr-1">{{ $LABEL_Contact }}:</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
@@ -68,14 +76,14 @@
 
       {{ with .Params.interests }}
         <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
+          <span class="font-medium">{{ $LABEL_Interests }}:</span> {{ delimit . " · " }}
         </p>
       {{ end }}
 
       {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
-            <p class="font-medium mb-1">Educación:</p>
+            <p class="font-medium mb-1">{{ $LABEL_Edu }}:</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -98,15 +106,16 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Listado de notas de blog (sección = post) ================= */}}
+  {{/* ================= Listado de notas de blog (sección = post, mismo idioma) ================= */}}
   {{/* IDs del autor actual normalizados para matchear */}}
   {{ $idByDir   := lower (urlize $authorKey) }}
   {{ $idByTitle := lower (urlize .Title) }}
   {{ $idByName  := lower (urlize (default "" .Params.name)) }}
   {{ $authorIDs := slice $idByDir $idByTitle $idByName }}
 
-  {{/* Traer SOLO páginas de la sección post */}}
-  {{ $posts := where .Site.RegularPages ".Section" "post" }}
+  {{/* Traer SOLO páginas de la sección post y del mismo idioma */}}
+  {{ $postsAll := where .Site.RegularPages "Section" "post" }}
+  {{ $posts    := where $postsAll "Lang" $lang }}
 
   {{/* Buscar coincidencias en front matter authors: [string|string[], map[]] */}}
   {{ $matches := slice }}
@@ -138,10 +147,10 @@
     {{ end }}
   {{ end }}
 
-  {{ $pages := sort $matches "Date" "desc" }}
+  {{ $pages := $matches.ByDate.Reverse }}
   {{ if gt (len $pages) 0 }}
     <section class="mt-10">
-      <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
+      <h2 class="text-xl font-semibold mb-3">{{ $LABEL_Posts }}</h2>
       <ul class="space-y-2">
         {{ range $pages }}
           <li class="leading-snug">
