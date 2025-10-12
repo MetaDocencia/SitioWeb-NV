@@ -1,5 +1,5 @@
 ---
-title: "2i2c"
+title: "2i2c-consultoria"
 bio: ""
 email: ""
 name: 2i2c
