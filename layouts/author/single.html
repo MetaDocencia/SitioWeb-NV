@@ -15,7 +15,7 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto. */}}
+    {{/* Avatar: círculo y tamaños fijos */}}
     <div class="w-full md:w-auto flex md:block justify-center">
       {{ if $avatar }}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
@@ -42,20 +42,13 @@
         </p>
       {{ end }}
 
-      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
+      {{/* Redes sociales */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
         {{ $labels := dict
-          "twitter" "Twitter"
-          "x-twitter" "Twitter"
-          "github" "GitHub"
-          "bluesky" "Bluesky"
-          "linkedin" "LinkedIn"
-          "mastodon" "Mastodon"
-          "orcid" "ORCID"
-          "globe" "Website"
-          "home" "Website"
-          "envelope" "Email"
+          "twitter" "Twitter" "x-twitter" "Twitter" "github" "GitHub" "bluesky" "Bluesky"
+          "linkedin" "LinkedIn" "mastodon" "Mastodon" "orcid" "ORCID"
+          "globe" "Website" "home" "Website" "envelope" "Email"
         }}
         <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
           <span class="font-medium mr-1">Contacto:</span>
@@ -66,9 +59,7 @@
             {{ $url  := .link }}
             {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
             {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
-            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline">
-              <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
-            </a>` $url $faPack $icon $label }}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline"><i class="%s fa-%s" aria-hidden="true"></i><span>%s</span></a>` $url $faPack $icon $label }}
             {{ $items = $items | append $one }}
           {{ end }}
           {{ delimit $items " · " | safeHTML }}
@@ -81,7 +72,6 @@
         </p>
       {{ end }}
 
-      {{/* Educación */}}
       {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
@@ -108,16 +98,20 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Listado de notas de blog (Section = post) ================= */}}
-  {{/* Variantes de identificación del autor actual */}}
+  {{/* ================= Listado de notas de blog (multi-sección) ================= */}}
+  {{/* 1) Definí acá las secciones donde guardás posts */}}
+  {{ $sections := slice "post" "blog" "noticias" "news" }}
+
+  {{/* 2) Normalizá IDs del autor actual para el match */}}
   {{ $idByDir   := lower (urlize $authorKey) }}
   {{ $idByTitle := lower (urlize .Title) }}
   {{ $idByName  := lower (urlize (default "" .Params.name)) }}
   {{ $authorIDs := slice $idByDir $idByTitle $idByName }}
 
-  {{/* Recolectar posts SOLO por sección (más robusto que Type) */}}
-  {{ $posts := where .Site.RegularPages ".Section" "post" }}
+  {{/* 3) Traé páginas de esas secciones */}}
+  {{ $posts := where .Site.RegularPages ".Section" "in" $sections }}
 
+  {{/* 4) Matcheá autores en front matter: authors: [string | map] */}}
   {{ $matches := slice }}
   {{ range $p := $posts }}
     {{ $auth := $p.Params.authors }}
@@ -125,7 +119,6 @@
       {{ $hit := false }}
       {{ $t := printf "%T" $auth }}
 
-      {{/* Caso: lista (strings y/o maps) */}}
       {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
           {{ $a := "" }}
@@ -139,8 +132,6 @@
           {{ end }}
           {{ if in $authorIDs $a }}{{ $hit = true }}{{ end }}
         {{ end }}
-
-      {{/* Caso: string único */}}
       {{ else if eq $t "string" }}
         {{ $val := lower (urlize (printf "%v" $auth)) }}
         {{ if in $authorIDs $val }}{{ $hit = true }}{{ end }}
