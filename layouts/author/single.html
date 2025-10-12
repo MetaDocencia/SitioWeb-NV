@@ -1,36 +1,60 @@
 {{ define "main" }}
+{{/* ===================== i18n mínimos inline (fallback) ===================== */}}
+{{- $lang := .Site.Language.Lang | default "es" -}}
+{{- $t := dict
+  "contact_es" "Contacto"
+  "contact_en" "Contact"
+  "interests_es" "Intereses"
+  "interests_en" "Interests"
+  "education_es" "Educación"
+  "education_en" "Education"
+  "posts_es" "Publicaciones"
+  "posts_en" "Posts"
+  "blogpost_es" "Blogpost"
+  "blogpost_en" "Blog posts"
+  "org_es" "Organización"
+  "org_en" "Organization"
+-}}
+{{- $LBL_contact    := cond (eq $lang "en") (index $t "contact_en") (index $t "contact_es") -}}
+{{- $LBL_interests  := cond (eq $lang "en") (index $t "interests_en") (index $t "interests_es") -}}
+{{- $LBL_education  := cond (eq $lang "en") (index $t "education_en") (index $t "education_es") -}}
+{{- $LBL_posts      := cond (eq $lang "en") (index $t "blogpost_en") (index $t "blogpost_es") -}}
+
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
-  <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+  {{/* ================= Encabezado: responsive (columna en mobile / fila en desktop) ================ */}}
+  <header class="mb-8 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
 
     {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
-    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
+    {{- $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil -}}
 
-    {{/* Clave/slug del autor */}}
-    {{ $authorKey := "" }}
-    {{ if .File }}
-      {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
-    {{ else }}
-      {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
-    {{ end }}
+    {{/* Clave/slug del autor (para fallback de avatar y matching de posts) */}}
+    {{- $authorKey := "" -}}
+    {{- if .File -}}
+      {{- $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) -}}
+    {{- else -}}
+      {{- $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) -}}
+    {{- end -}}
 
-    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto.
-          Mobile: 10rem; Desktop: 15rem (1.5x). */}}
-    <div class="w-full md:w-auto flex md:block justify-center">
-      {{ if $avatar }}
+    {{/* Avatar: círculo, tamaños armónicos (mobile 10rem / desktop 15rem) */}}
+    <div class="w-full md:w-auto flex md:block justify-center shrink-0">
+      {{- if $avatar -}}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
              class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ else }}
+      {{- else -}}
         <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
              class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ end }}
+      {{- end -}}
     </div>
 
-    {{/* Columna derecha: metadata */}}
+    {{/* Columna derecha: nombre + metadatos */}}
     <div class="w-full">
-      <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
-      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">{{ .Title }}</h1>
+
+      {{ with .Params.role }}
+        <p class="text-sm opacity-80 mt-1">{{ . }}</p>
+      {{ end }}
+
       {{ with .Params.organizations }}
         {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
@@ -43,9 +67,10 @@
         </p>
       {{ end }}
 
-      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
+      {{/* Redes sociales (íconos con Font Awesome si está disponible) */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
+        {{/* etiquetas legibles por icono */}}
         {{ $labels := dict
           "twitter" "Twitter"
           "x-twitter" "Twitter"
@@ -58,18 +83,20 @@
           "home" "Website"
           "envelope" "Email"
         }}
-        <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span class="font-medium mr-1">Contacto:</span>
+        <p class="text-sm mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="font-medium mr-1">{{ $LBL_contact }}:</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
             {{ $pack := ( .icon_pack | lower ) }}
             {{ $url  := .link }}
             {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
+            {{/* fallback de pack */}}
             {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
-            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline">
+            {{/* accesible: aria-label en el <a> */}}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" aria-label="%s" class="inline-flex items-center gap-1 underline hover:no-underline">
               <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
-            </a>` $url $faPack $icon $label }}
+            </a>` $url (printf "%s – %s" $label $.Title) $faPack $icon $label }}
             {{ $items = $items | append $one }}
           {{ end }}
           {{ delimit $items " · " | safeHTML }}
@@ -77,16 +104,16 @@
       {{ end }}
 
       {{ with .Params.interests }}
-        <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
+        <p class="text-sm opacity-90 mt-2">
+          <span class="font-medium">{{ $LBL_interests }}:</span> {{ delimit . " · " }}
         </p>
       {{ end }}
 
-      {{/* Educación */}}
+      {{/* Educación (lista corta, simple) */}}
       {{ with .Params.education }}
         {{ with .courses }}
-          <div class="text-sm mt-2">
-            <p class="font-medium mb-1">Educación:</p>
+          <div class="text-sm mt-3">
+            <p class="font-medium mb-1">{{ $LBL_education }}:</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -104,13 +131,15 @@
     </div>
   </header>
 
-  {{/* ================= Contenido libre del autor ================= */}}
-  <div class="prose dark:prose-invert max-w-none">
-    {{ .Content }}
-  </div>
+  {{/* ================= Contenido libre del autor (bio extendida en markdown) ================= */}}
+  {{ if .Content }}
+    <section class="prose dark:prose-invert max-w-none">
+      {{ .Content }}
+    </section>
+  {{ end }}
 
-  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
-  {{/* Claves para matchear autor en .Params.authors */}}
+  {{/* ================= Listado de posts (type: post) donde figure como autor ================= */}}
+  {{/* Claves para matchear autor en .Params.authors: slug, Title, name param */}}
   {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
 
   {{/* Recolectar páginas type=post donde este autor figure */}}
@@ -140,11 +169,14 @@
   {{ $pages := sort $col "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
-    <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+    <section class="mt-10">
+      <h2 class="text-lg font-semibold mb-3">{{ $LBL_posts }}</h2>
       <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
-          <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
+          <li>
+            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
+            {{ with .Date }}<span class="opacity-70 text-sm"> — {{ .Format "2006-01-02" }}</span>{{ end }}
+          </li>
         {{ end }}
       </ul>
     </section>
