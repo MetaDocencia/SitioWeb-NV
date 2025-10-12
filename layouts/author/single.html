@@ -1,21 +1,13 @@
 {{ define "main" }}
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =============== i18n simple =============== */}}
-  {{ $lang := or .Lang (site.Language.Lang) }}
-  {{ $isEN := eq $lang "en" }}
-  {{ $LABEL_Contact   := cond $isEN "Contact" "Contacto" }}
-  {{ $LABEL_Interests := cond $isEN "Interests" "Intereses" }}
-  {{ $LABEL_Edu       := cond $isEN "Education" "Educación" }}
-  {{ $LABEL_Posts     := cond $isEN "Blog posts" "Notas del blog" }}
-
-  {{/* =============== Encabezado =============== */}}
+  {{/* ===== Encabezado ===== */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
 
-    {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
+    {{/* Avatar como Page Resource si es bundle; si no, fallback en /authors/<slug>/avatar.png */}}
     {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-    {{/* Clave/slug del autor (carpeta o permalink, respeta idioma actual) */}}
+    {{/* Clave/slug del autor */}}
     {{ $authorKey := "" }}
     {{ if .File }}
       {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -23,7 +15,6 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: SIEMPRE círculo con tamaños fijos */}}
     <div class="w-full md:w-auto flex md:block justify-center">
       {{ if $avatar }}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
@@ -37,7 +28,11 @@
     {{/* Columna derecha: metadata */}}
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
-      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+
+      {{ with .Params.role }}
+        <p class="text-sm opacity-80 mt-0.5">{{ . }}</p>
+      {{ end }}
+
       {{ with .Params.organizations }}
         {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
@@ -53,13 +48,21 @@
       {{/* Redes sociales */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
+        {{/* etiquetas localizadas */}}
         {{ $labels := dict
-          "twitter" "Twitter" "x-twitter" "Twitter" "github" "GitHub" "bluesky" "Bluesky"
-          "linkedin" "LinkedIn" "mastodon" "Mastodon" "orcid" "ORCID"
-          "globe" "Website" "home" "Website" "envelope" "Email"
+          "twitter" "Twitter"
+          "x-twitter" "Twitter"
+          "github" "GitHub"
+          "bluesky" "Bluesky"
+          "linkedin" "LinkedIn"
+          "mastodon" "Mastodon"
+          "orcid" "ORCID"
+          "globe" (i18n "website")
+          "home"  (i18n "website")
+          "envelope" (i18n "email")
         }}
         <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span class="font-medium mr-1">{{ $LABEL_Contact }}:</span>
+          <span class="font-medium mr-1">{{ i18n "contact" }}:</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
@@ -76,14 +79,15 @@
 
       {{ with .Params.interests }}
         <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">{{ $LABEL_Interests }}:</span> {{ delimit . " · " }}
+          <span class="font-medium">{{ i18n "interests" }}:</span> {{ delimit . " · " }}
         </p>
       {{ end }}
 
+      {{/* Educación */}}
       {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
-            <p class="font-medium mb-1">{{ $LABEL_Edu }}:</p>
+            <p class="font-medium mb-1">{{ i18n "education" }}:</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -101,62 +105,44 @@
     </div>
   </header>
 
-  {{/* ================= Contenido libre del autor ================= */}}
+  {{/* ===== Contenido libre ===== */}}
   <div class="prose dark:prose-invert max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ================= Listado de notas de blog (sección = post, mismo idioma) ================= */}}
-  {{/* IDs del autor actual normalizados para matchear */}}
-  {{ $idByDir   := lower (urlize $authorKey) }}
-  {{ $idByTitle := lower (urlize .Title) }}
-  {{ $idByName  := lower (urlize (default "" .Params.name)) }}
-  {{ $authorIDs := slice $idByDir $idByTitle $idByName }}
-
-  {{/* Traer SOLO páginas de la sección post y del mismo idioma */}}
-  {{ $postsAll := where .Site.RegularPages "Section" "post" }}
-  {{ $posts    := where $postsAll "Lang" $lang }}
-
-  {{/* Buscar coincidencias en front matter authors: [string|string[], map[]] */}}
-  {{ $matches := slice }}
-  {{ range $p := $posts }}
-    {{ $auth := $p.Params.authors }}
+  {{/* ===== Listado de posts del MISMO idioma ===== */}}
+  {{ $authorKeys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
+  {{ $col := slice }}
+  {{ range where (where .Site.RegularPages "Type" "post") "Lang" .Lang }}
+    {{ $auth := .Params.authors }}
     {{ if $auth }}
-      {{ $hit := false }}
+      {{ $matched := false }}
       {{ $t := printf "%T" $auth }}
-
       {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
           {{ $a := "" }}
-          {{ $vt := printf "%T" . }}
-          {{ if eq $vt "string" }}
-            {{ $a = lower (urlize (printf "%v" .)) }}
-          {{ else if eq $vt "map[string]interface {}" }}
-            {{ if and (eq $a "") (isset . "slug") }}{{ $a = lower (urlize (printf "%v" (index . "slug"))) }}{{ end }}
-            {{ if and (eq $a "") (isset . "name") }}{{ $a = lower (urlize (printf "%v" (index . "name"))) }}{{ end }}
-            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (urlize (printf "%v" (index . "title"))) }}{{ end }}
+          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
+            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
+            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
+          {{ else }}
+            {{ $a = lower (printf "%v" .) }}
           {{ end }}
-          {{ if in $authorIDs $a }}{{ $hit = true }}{{ end }}
+          {{ if in $authorKeys $a }}{{ $matched = true }}{{ end }}
         {{ end }}
       {{ else if eq $t "string" }}
-        {{ $val := lower (urlize (printf "%v" $auth)) }}
-        {{ if in $authorIDs $val }}{{ $hit = true }}{{ end }}
+        {{ if in $authorKeys (lower $auth) }}{{ $matched = true }}{{ end }}
       {{ end }}
-
-      {{ if $hit }}{{ $matches = $matches | append $p }}{{ end }}
+      {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
   {{ end }}
+  {{ $pages := sort $col "Date" "desc" }}
 
-  {{ $pages := $matches.ByDate.Reverse }}
   {{ if gt (len $pages) 0 }}
-    <section class="mt-10">
-      <h2 class="text-xl font-semibold mb-3">{{ $LABEL_Posts }}</h2>
-      <ul class="space-y-2">
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold mb-2">{{ i18n "blogposts" }}</h2>
+      <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
-          <li class="leading-snug">
-            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
-            {{ with .Date }}<span class="text-xs opacity-70"> — {{ . | time.Format "02 Jan 2006" }}</span>{{ end }}
-          </li>
+          <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </section>
