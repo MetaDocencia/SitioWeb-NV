@@ -17,8 +17,13 @@
 }}
 {{ $L := index $t (cond (eq $lang "en") "en" "es") }}
 
-{{/* ---------- Página “par” en el otro idioma para fallback ---------- */}}
-{{ $peer := first 1 (where .Translations "Lang" (cond (eq .Lang "en") "es" "en")) | first }}
+{{/* ---------- Página “par” en el otro idioma para fallback (sin usar first mal) ---------- */}}
+{{ $peer := nil }}
+{{ $want := cond (eq .Lang "en") "es" "en" }}
+{{ $trans := where .Translations "Lang" $want }}
+{{ if gt (len $trans) 0 }}
+  {{ $peer = index $trans 0 }}
+{{ end }}
 
 {{/* ---------- Helpers de fallback por campo ---------- */}}
 {{ $p := .Params }}
@@ -32,7 +37,7 @@
 {{ $education := or $p.education (and $pp $pp.education) }}
 {{ $social := or $p.social (and $pp $pp.social) }}
 
-{{/* ---------- Avatar con fallback (recurso -> peer recurso -> ruta /authors/<slug>/avatar.*) ---------- */}}
+{{/* ---------- Slug/clave autor para buscar avatar y posts ---------- */}}
 {{ $authorKey := "" }}
 {{ if .File }}
   {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -40,19 +45,18 @@
   {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
 {{ end }}
 
-{{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
-{{ if not $avatar }}
-  {{ if and $peer $peer.File }}
-    {{ $avatar = ($peer.Resources.GetMatch "avatar*") }}
-  {{ end }}
+{{/* ---------- Avatar con fallback (recurso -> peer recurso -> ruta convencional) ---------- */}}
+{{ $avatar := nil }}
+{{ if .File }}{{ $avatar = .Resources.GetMatch "avatar*" }}{{ end }}
+{{ if and (not $avatar) (and $peer $peer.File) }}
+  {{ $avatar = $peer.Resources.GetMatch "avatar*" }}
 {{ end }}
 
-{{/* Ruta final del avatar (si no hay recurso, probamos ruta por convención) */}}
 {{ $avatarURL := "" }}
 {{ if $avatar }}
   {{ $avatarURL = $avatar.RelPermalink }}
 {{ else }}
-  {{/* Probamos png/jpg/webp en /authors/<slug>/ */}}
+  {{/* Probamos png/jpg/jpeg/webp en /authors/<slug>/ */}}
   {{ $candidates := slice
     (printf "/authors/%s/avatar.png" $authorKey)
     (printf "/authors/%s/avatar.jpg" $authorKey)
@@ -87,18 +91,14 @@
         </p>
       {{ end }}
 
-      {{/* Redes (texto plano minimalista con bullets medianos) */}}
       {{ if $social }}
         <p class="text-sm mt-1">
           <span class="font-medium">{{ index $L "contact" }}</span>
-          {{/* armamos lista con separador " · " */}}
           {{ $items := slice }}
           {{ range $social }}
-            {{ $label := "" }}
             {{ $icon := lower (or .icon "") }}
-            {{/* Nombre visible según icon conocido, por simplicidad usamos Title(icon) */}}
-            {{ $label = cond (ne $icon "") (title $icon) "Link" }}
-            {{ $text := cond (eq (lower $label) "envelope") (cond $email "Email" "Email") $label }}
+            {{ $label := cond (ne $icon "") (title $icon) "Link" }}
+            {{ $text := cond (eq (lower $label) "envelope") "Email" $label }}
             {{ $items = $items | append (printf `<a href="%s" target="_blank" rel="noopener" class="underline hover:no-underline">%s</a>` .link $text) }}
           {{ end }}
           {{ delimit $items " · " | safeHTML }}
@@ -142,7 +142,6 @@
   {{ $pagesSameLang := where .Site.RegularPages "Lang" .Lang }}
   {{ $posts := where $pagesSameLang "Type" "post" }}
 
-  {{/* Filtramos los que incluyan al autor en .Params.authors (soportando strings y objetos) */}}
   {{ $authored := slice }}
   {{ range $posts }}
     {{ $auth := .Params.authors }}
@@ -167,8 +166,8 @@
     {{ end }}
   {{ end }}
 
-  {{ $authored = sort $authored "Date" "desc" }}
   {{ if gt (len $authored) 0 }}
+    {{ $authored = sort $authored "Date" "desc" }}
     <section class="mt-8">
       <h2 class="text-lg font-semibold mb-2">{{ index $L "posts" }}</h2>
       <ul class="list-disc list-inside space-y-1">
