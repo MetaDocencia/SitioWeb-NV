@@ -1,77 +1,86 @@
 {{ define "main" }}
-{{/* ---------- Idioma + textos ---------- */}}
-{{ $lang := .Lang | default "es" }}
-{{ $t := dict
-  "es" (dict
-    "contact" "Contacto:"
-    "interests" "Intereses:"
-    "education" "Educación:"
-    "posts" "Blog posts"
-  )
-  "en" (dict
-    "contact" "Contact:"
+
+{{/* =======================
+     Localización simple
+   ======================= */}}
+{{ $S := newScratch }}
+{{ if eq .Lang "en" }}
+  {{ $S.Set "L" (dict
+    "contact"   "Contact:"
     "interests" "Interests:"
     "education" "Education:"
-    "posts" "Blog posts"
-  )
-}}
-{{ $L := index $t (cond (eq $lang "en") "en" "es") }}
-
-{{/* ---------- Página “par” en el otro idioma para fallback (sin usar first mal) ---------- */}}
-{{ $peer := nil }}
-{{ $want := cond (eq .Lang "en") "es" "en" }}
-{{ $trans := where .Translations "Lang" $want }}
-{{ if gt (len $trans) 0 }}
-  {{ $peer = index $trans 0 }}
-{{ end }}
-
-{{/* ---------- Helpers de fallback por campo ---------- */}}
-{{ $p := .Params }}
-{{ $pp := cond $peer $peer.Params dict }}
-
-{{ $name := or $p.name .Title (and $peer $peer.Title) }}
-{{ $role := or $p.role (and $pp $pp.role) }}
-{{ $orgs := or $p.organizations (and $pp $pp.organizations) }}
-{{ $email := or $p.email (and $pp $pp.email) }}
-{{ $interests := or $p.interests (and $pp $pp.interests) }}
-{{ $education := or $p.education (and $pp $pp.education) }}
-{{ $social := or $p.social (and $pp $pp.social) }}
-
-{{/* ---------- Slug/clave autor para buscar avatar y posts ---------- */}}
-{{ $authorKey := "" }}
-{{ if .File }}
-  {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+    "posts"     "Blog posts"
+  ) }}
 {{ else }}
+  {{ $S.Set "L" (dict
+    "contact"   "Contacto:"
+    "interests" "Intereses:"
+    "education" "Educación:"
+    "posts"     "Blog posts"
+  ) }}
+{{ end }}
+{{ $L := $S.Get "L" }}
+
+{{/* =======================
+     Fallback de traducción
+   ======================= */}}
+{{ $peer := (index (where .Translations "Lang" (cond (eq .Lang "en") "es" "en")) 0) }}
+{{/* NOTA: el index sobre slice vacío devolverá <no value>, no se usa directamente como comando */}}
+
+{{/* Params con fallback seguro: */}}
+{{ $p  := .Params }}
+{{ $pp := (and $peer $peer.Params) }}
+
+{{ $name       := or $p.name .Title (and $peer $peer.Title) }}
+{{ $role       := or $p.role       (and $pp $pp.role) }}
+{{ $orgs       := or $p.organizations (and $pp $pp.organizations) }}
+{{ $email      := or $p.email      (and $pp $pp.email) }}
+{{ $interests  := or $p.interests  (and $pp $pp.interests) }}
+{{ $education  := or $p.education  (and $pp $pp.education) }}
+{{ $social     := or $p.social     (and $pp $pp.social) }}
+
+{{/* =======================
+     Clave del autor (slug)
+   ======================= */}}
+{{ $authorKey := "" }}
+{{ with .File }}
+  {{ $authorKey = ( .Dir | strings.TrimSuffix "/" | path.Base ) }}
+{{ else }}
+  {{/* Fallback por URL si .File no existe */}}
   {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
 {{ end }}
 
-{{/* ---------- Avatar con fallback (recurso -> peer recurso -> ruta convencional) ---------- */}}
-{{ $avatar := nil }}
-{{ if .File }}{{ $avatar = .Resources.GetMatch "avatar*" }}{{ end }}
-{{ if and (not $avatar) (and $peer $peer.File) }}
-  {{ $avatar = $peer.Resources.GetMatch "avatar*" }}
+{{/* =======================
+     Avatar (bundle -> peer -> ruta convenc.)
+   ======================= */}}
+{{ $avatar := "" }}
+{{ with .File }}
+  {{ with .Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
 {{ end }}
-
-{{ $avatarURL := "" }}
-{{ if $avatar }}
-  {{ $avatarURL = $avatar.RelPermalink }}
-{{ else }}
-  {{/* Probamos png/jpg/jpeg/webp en /authors/<slug>/ */}}
-  {{ $candidates := slice
-    (printf "/authors/%s/avatar.png" $authorKey)
-    (printf "/authors/%s/avatar.jpg" $authorKey)
-    (printf "/authors/%s/avatar.jpeg" $authorKey)
-    (printf "/authors/%s/avatar.webp" $authorKey)
+{{ if and (eq $avatar "") $peer }}
+  {{ with $peer.File }}
+    {{ with $peer.Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if eq $avatar "" }}
+  {{/* Rutas convencionales por si no es bundle */}}
+  {{ $cands := slice
+      (printf "/authors/%s/avatar.png" $authorKey)
+      (printf "/authors/%s/avatar.jpg" $authorKey)
+      (printf "/authors/%s/avatar.jpeg" $authorKey)
+      (printf "/authors/%s/avatar.webp" $authorKey)
   }}
-  {{ $avatarURL = index $candidates 0 }}
+  {{ $avatar = index $cands 0 }}
 {{ end }}
 
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* ---------- Cabecera: avatar + metadata (misma estructura ES/EN) ---------- */}}
+  {{/* =======================
+       Cabecera (avatar + meta)
+     ======================= */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
     <div class="w-full md:w-auto flex md:block justify-center">
-      <img src="{{ $avatarURL }}" alt="{{ $name }}"
+      <img src="{{ $avatar }}" alt="{{ $name }}"
            class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
     </div>
 
@@ -80,7 +89,8 @@
       {{ with $role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
 
       {{ with $orgs }}
-        {{ range first 1 . }}
+        {{ $firstOrg := index . 0 }}
+        {{ with $firstOrg }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
         {{ end }}
       {{ end }}
@@ -91,18 +101,24 @@
         </p>
       {{ end }}
 
-      {{ if $social }}
-        <p class="text-sm mt-1">
-          <span class="font-medium">{{ index $L "contact" }}</span>
-          {{ $items := slice }}
-          {{ range $social }}
-            {{ $icon := lower (or .icon "") }}
-            {{ $label := cond (ne $icon "") (title $icon) "Link" }}
-            {{ $text := cond (eq (lower $label) "envelope") "Email" $label }}
-            {{ $items = $items | append (printf `<a href="%s" target="_blank" rel="noopener" class="underline hover:no-underline">%s</a>` .link $text) }}
+      {{ with $social }}
+        {{/* Construimos etiquetas de redes sin asumir estructura */}}
+        {{ $links := slice }}
+        {{ range . }}
+          {{ $label := "" }}
+          {{ with .icon }}{{ $label = (title (lower .)) }}{{ end }}
+          {{ if eq (lower $label) "envelope" }}{{ $label = "Email" }}{{ end }}
+          {{ if eq $label "" }}{{ $label = "Link" }}{{ end }}
+          {{ if .link }}
+            {{ $links = $links | append (printf `<a href="%s" target="_blank" rel="noopener" class="underline hover:no-underline">%s</a>` .link $label) }}
           {{ end }}
-          {{ delimit $items " · " | safeHTML }}
-        </p>
+        {{ end }}
+        {{ if gt (len $links) 0 }}
+          <p class="text-sm mt-1">
+            <span class="font-medium">{{ index $L "contact" }}</span>
+            {{ delimit $links " · " | safeHTML }}
+          </p>
+        {{ end }}
       {{ end }}
 
       {{ with $interests }}
@@ -132,13 +148,19 @@
     </div>
   </header>
 
-  {{/* ---------- Contenido libre del autor (markdown) ---------- */}}
+  {{/* =======================
+       Contenido libre
+     ======================= */}}
   <div class="prose dark:prose-invert max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* ---------- Blog posts del mismo idioma, type: post, donde figure este autor ---------- */}}
-  {{ $keys := slice (lower $authorKey) (lower $name) }}
+  {{/* =======================
+       Posts (type: post) del
+       mismo idioma que incluyen
+       a este autor
+     ======================= */}}
+  {{ $keys := slice (lower $authorKey) (lower (printf "%v" $name)) }}
   {{ $pagesSameLang := where .Site.RegularPages "Lang" .Lang }}
   {{ $posts := where $pagesSameLang "Type" "post" }}
 
@@ -146,23 +168,28 @@
   {{ range $posts }}
     {{ $auth := .Params.authors }}
     {{ if $auth }}
-      {{ $hit := false }}
-      {{ $t := printf "%T" $auth }}
-      {{ if eq $t "[]interface {}" }}
+      {{ $match := false }}
+      {{ $kind := printf "%T" $auth }}
+
+      {{ if eq $kind "[]interface {}" }}
         {{ range $auth }}
-          {{ $a := "" }}
-          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
-            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
-            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
+          {{ $candidate := "" }}
+          {{ $t := printf "%T" . }}
+          {{ if eq $t "map[string]interface {}" }}
+            {{ if isset . "name" }}{{ $candidate = lower (printf "%v" (index . "name")) }}{{ end }}
+            {{ if and (eq $candidate "") (isset . "title") }}{{ $candidate = lower (printf "%v" (index . "title")) }}{{ end }}
           {{ else }}
-            {{ $a = lower (printf "%v" .) }}
+            {{ $candidate = lower (printf "%v" .) }}
           {{ end }}
-          {{ if in $keys $a }}{{ $hit = true }}{{ end }}
+          {{ if in $keys $candidate }}{{ $match = true }}{{ end }}
         {{ end }}
-      {{ else if eq $t "string" }}
-        {{ if in $keys (lower $auth) }}{{ $hit = true }}{{ end }}
+      {{ else if eq $kind "string" }}
+        {{ if in $keys (lower (printf "%v" $auth)) }}{{ $match = true }}{{ end }}
       {{ end }}
-      {{ if $hit }}{{ $authored = $authored | append . }}{{ end }}
+
+      {{ if $match }}
+        {{ $authored = $authored | append . }}
+      {{ end }}
     {{ end }}
   {{ end }}
 
@@ -179,4 +206,5 @@
   {{ end }}
 
 </article>
+
 {{ end }}
