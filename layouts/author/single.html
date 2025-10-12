@@ -1,136 +1,92 @@
 {{ define "main" }}
-
-{{/* =======================
-     Localización simple
-   ======================= */}}
-{{ $S := newScratch }}
-{{ if eq .Lang "en" }}
-  {{ $S.Set "L" (dict
-    "contact"   "Contact:"
-    "interests" "Interests:"
-    "education" "Education:"
-    "posts"     "Blog posts"
-  ) }}
-{{ else }}
-  {{ $S.Set "L" (dict
-    "contact"   "Contacto:"
-    "interests" "Intereses:"
-    "education" "Educación:"
-    "posts"     "Blog posts"
-  ) }}
-{{ end }}
-{{ $L := $S.Get "L" }}
-
-{{/* =======================
-     Fallback de traducción
-   ======================= */}}
-{{ $peer := (index (where .Translations "Lang" (cond (eq .Lang "en") "es" "en")) 0) }}
-{{/* NOTA: el index sobre slice vacío devolverá <no value>, no se usa directamente como comando */}}
-
-{{/* Params con fallback seguro: */}}
-{{ $p  := .Params }}
-{{ $pp := (and $peer $peer.Params) }}
-
-{{ $name       := or $p.name .Title (and $peer $peer.Title) }}
-{{ $role       := or $p.role       (and $pp $pp.role) }}
-{{ $orgs       := or $p.organizations (and $pp $pp.organizations) }}
-{{ $email      := or $p.email      (and $pp $pp.email) }}
-{{ $interests  := or $p.interests  (and $pp $pp.interests) }}
-{{ $education  := or $p.education  (and $pp $pp.education) }}
-{{ $social     := or $p.social     (and $pp $pp.social) }}
-
-{{/* =======================
-     Clave del autor (slug)
-   ======================= */}}
-{{ $authorKey := "" }}
-{{ with .File }}
-  {{ $authorKey = ( .Dir | strings.TrimSuffix "/" | path.Base ) }}
-{{ else }}
-  {{/* Fallback por URL si .File no existe */}}
-  {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
-{{ end }}
-
-{{/* =======================
-     Avatar (bundle -> peer -> ruta convenc.)
-   ======================= */}}
-{{ $avatar := "" }}
-{{ with .File }}
-  {{ with .Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
-{{ end }}
-{{ if and (eq $avatar "") $peer }}
-  {{ with $peer.File }}
-    {{ with $peer.Resources.GetMatch "avatar*" }}{{ $avatar = .RelPermalink }}{{ end }}
-  {{ end }}
-{{ end }}
-{{ if eq $avatar "" }}
-  {{/* Rutas convencionales por si no es bundle */}}
-  {{ $cands := slice
-      (printf "/authors/%s/avatar.png" $authorKey)
-      (printf "/authors/%s/avatar.jpg" $authorKey)
-      (printf "/authors/%s/avatar.jpeg" $authorKey)
-      (printf "/authors/%s/avatar.webp" $authorKey)
-  }}
-  {{ $avatar = index $cands 0 }}
-{{ end }}
-
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =======================
-       Cabecera (avatar + meta)
-     ======================= */}}
+  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+
+    {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
+    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
+
+    {{/* Clave/slug del autor */}}
+    {{ $authorKey := "" }}
+    {{ if .File }}
+      {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+    {{ else }}
+      {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
+    {{ end }}
+
+    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto.
+          Mobile: 10rem; Desktop: 15rem (1.5x). */}}
     <div class="w-full md:w-auto flex md:block justify-center">
-      <img src="{{ $avatar }}" alt="{{ $name }}"
-           class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ if $avatar }}
+        <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ else }}
+        <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      {{ end }}
     </div>
 
+    {{/* Columna derecha: metadata */}}
     <div class="w-full">
-      <h1 class="text-3xl font-extrabold tracking-tight">{{ $name }}</h1>
-      {{ with $role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
-
-      {{ with $orgs }}
-        {{ $firstOrg := index . 0 }}
-        {{ with $firstOrg }}
+      <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
+      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+      {{ with .Params.organizations }}
+        {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
         {{ end }}
       {{ end }}
 
-      {{ with $email }}
+      {{ with .Params.email }}
         <p class="text-sm mt-2">
           <a href="mailto:{{ . }}" class="underline break-all hover:no-underline">{{ . }}</a>
         </p>
       {{ end }}
 
-      {{ with $social }}
-        {{/* Construimos etiquetas de redes sin asumir estructura */}}
-        {{ $links := slice }}
-        {{ range . }}
-          {{ $label := "" }}
-          {{ with .icon }}{{ $label = (title (lower .)) }}{{ end }}
-          {{ if eq (lower $label) "envelope" }}{{ $label = "Email" }}{{ end }}
-          {{ if eq $label "" }}{{ $label = "Link" }}{{ end }}
-          {{ if .link }}
-            {{ $links = $links | append (printf `<a href="%s" target="_blank" rel="noopener" class="underline hover:no-underline">%s</a>` .link $label) }}
+      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
+      {{ $socials := .Params.social }}
+      {{ if $socials }}
+        {{ $labels := dict
+          "twitter" "Twitter"
+          "x-twitter" "Twitter"
+          "github" "GitHub"
+          "bluesky" "Bluesky"
+          "linkedin" "LinkedIn"
+          "mastodon" "Mastodon"
+          "orcid" "ORCID"
+          "globe" "Website"
+          "home" "Website"
+          "envelope" "Email"
+        }}
+        <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="font-medium mr-1">Contacto:</span>
+          {{ $items := slice }}
+          {{ range $socials }}
+            {{ $icon := ( .icon | lower ) }}
+            {{ $pack := ( .icon_pack | lower ) }}
+            {{ $url  := .link }}
+            {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
+            {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline">
+              <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
+            </a>` $url $faPack $icon $label }}
+            {{ $items = $items | append $one }}
           {{ end }}
-        {{ end }}
-        {{ if gt (len $links) 0 }}
-          <p class="text-sm mt-1">
-            <span class="font-medium">{{ index $L "contact" }}</span>
-            {{ delimit $links " · " | safeHTML }}
-          </p>
-        {{ end }}
-      {{ end }}
-
-      {{ with $interests }}
-        <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">{{ index $L "interests" }}</span> {{ delimit . " · " }}
+          {{ delimit $items " · " | safeHTML }}
         </p>
       {{ end }}
 
-      {{ with $education }}
+      {{ with .Params.interests }}
+        <p class="text-sm opacity-90 mt-1">
+          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
+        </p>
+      {{ end }}
+
+      {{/* Educación */}}
+      {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
-            <p class="font-medium mb-1">{{ index $L "education" }}</p>
+            <p class="font-medium mb-1">Educación:</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -148,57 +104,46 @@
     </div>
   </header>
 
-  {{/* =======================
-       Contenido libre
-     ======================= */}}
+  {{/* ================= Contenido libre del autor ================= */}}
   <div class="prose dark:prose-invert max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* =======================
-       Posts (type: post) del
-       mismo idioma que incluyen
-       a este autor
-     ======================= */}}
-  {{ $keys := slice (lower $authorKey) (lower (printf "%v" $name)) }}
-  {{ $pagesSameLang := where .Site.RegularPages "Lang" .Lang }}
-  {{ $posts := where $pagesSameLang "Type" "post" }}
+  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
+  {{/* Claves para matchear autor en .Params.authors */}}
+  {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
 
-  {{ $authored := slice }}
-  {{ range $posts }}
+  {{/* Recolectar páginas type=post donde este autor figure */}}
+  {{ $col := slice }}
+  {{ range where .Site.RegularPages "Type" "post" }}
     {{ $auth := .Params.authors }}
     {{ if $auth }}
-      {{ $match := false }}
-      {{ $kind := printf "%T" $auth }}
-
-      {{ if eq $kind "[]interface {}" }}
+      {{ $matched := false }}
+      {{ $t := printf "%T" $auth }}
+      {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
-          {{ $candidate := "" }}
-          {{ $t := printf "%T" . }}
-          {{ if eq $t "map[string]interface {}" }}
-            {{ if isset . "name" }}{{ $candidate = lower (printf "%v" (index . "name")) }}{{ end }}
-            {{ if and (eq $candidate "") (isset . "title") }}{{ $candidate = lower (printf "%v" (index . "title")) }}{{ end }}
+          {{ $a := "" }}
+          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
+            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
+            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
           {{ else }}
-            {{ $candidate = lower (printf "%v" .) }}
+            {{ $a = lower (printf "%v" .) }}
           {{ end }}
-          {{ if in $keys $candidate }}{{ $match = true }}{{ end }}
+          {{ if in $keys $a }}{{ $matched = true }}{{ end }}
         {{ end }}
-      {{ else if eq $kind "string" }}
-        {{ if in $keys (lower (printf "%v" $auth)) }}{{ $match = true }}{{ end }}
+      {{ else if eq $t "string" }}
+        {{ if in $keys (lower $auth) }}{{ $matched = true }}{{ end }}
       {{ end }}
-
-      {{ if $match }}
-        {{ $authored = $authored | append . }}
-      {{ end }}
+      {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
   {{ end }}
+  {{ $pages := sort $col "Date" "desc" }}
 
-  {{ if gt (len $authored) 0 }}
-    {{ $authored = sort $authored "Date" "desc" }}
+  {{ if gt (len $pages) 0 }}
     <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">{{ index $L "posts" }}</h2>
+      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
       <ul class="list-disc list-inside space-y-1">
-        {{ range $authored }}
+        {{ range $pages }}
           <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
         {{ end }}
       </ul>
@@ -206,5 +151,4 @@
   {{ end }}
 
 </article>
-
 {{ end }}
