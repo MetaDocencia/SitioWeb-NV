@@ -1,29 +1,22 @@
 {{ define "main" }}
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =============== Encabezado / metadata del autor (si existe content/authors/<term>/_index.md) =============== */}}
-  {{/* En taxonomía, .Title es el término (slug humanizado). Intentamos cargar params desde el content file si existe. */}}
+  {{/* =================== Encabezado del autor (taxonomía) =================== */}}
+  {{/* En taxonomías, el término actual está en .Data.Term */}}
+  {{ $term := .Data.Term }}
+  {{ $slug := lower (urlize $term) }}
 
-  {{/* Deducir slug del término actual desde la URL */}}
-  {{ $authorSlug := ( .RelPermalink | strings.TrimSuffix "/" | path.Base | lower ) }}
-
-  {{/* Si existe contenido en content/authors/<term>/_index.md, .Content y .Params estarán disponibles aquí. */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
-    {{/* Avatar: /authors/<slug>/avatar.png o recurso "avatar*" si es bundle */}}
     <div class="w-full md:w-auto flex md:block justify-center">
-      {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
-      {{ if $avatar }}
-        <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ else }}
-        <img src="{{ printf "/authors/%s/avatar.png" $authorSlug }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ end }}
+      {{/* Avatar estático por convención: /authors/<slug>/avatar.png  */}}
+      <img src="{{ printf "/authors/%s/avatar.png" $slug }}" alt="{{ .Title }}"
+           class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
     </div>
 
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
 
+      {{/* Metadatos opcionales si existen en content/author/<slug>/_index.md */}}
       {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
       {{ with .Params.organizations }}
         {{ range first 1 . }}
@@ -31,10 +24,12 @@
         {{ end }}
       {{ end }}
       {{ with .Params.email }}
-        <p class="text-sm mt-2"><a href="mailto:{{ . }}" class="underline break-all hover:no-underline">{{ . }}</a></p>
+        <p class="text-sm mt-2">
+          <a href="mailto:{{ . }}" class="underline break-all hover:no-underline">{{ . }}</a>
+        </p>
       {{ end }}
 
-      {{/* Redes sociales (si existen en el _index.md del autor) */}}
+      {{/* Redes sociales opcionales */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
         {{ $labels := dict
@@ -57,22 +52,18 @@
           {{ delimit $items " · " | safeHTML }}
         </p>
       {{ end }}
-
-      {{ with .Params.interests }}
-        <p class="text-sm opacity-90 mt-1"><span class="font-medium">Intereses:</span> {{ delimit . " · " }}</p>
-      {{ end }}
     </div>
   </header>
 
-  {{/* Contenido libre del autor (si lo hay en el _index.md del término) */}}
+  {{/* =================== Contenido del término (si existe) =================== */}}
   <div class="prose dark:prose-invert max-w-none">
     {{ .Content }}
   </div>
 
-  {{/* =============== Listado de posts en los que este término (autor) participa =============== */}}
-  {{/* En páginas de taxonomía, Hugo ya relaciona los contenidos con el término en .Pages/.RegularPages. */}}
-  {{/* Filtramos a la sección 'post' y ordenamos por fecha. No importa el 'type' del post. */}}
-  {{ $posts := where .RegularPages ".Section" "post" | sort "Date" "desc" }}
+  {{/* =================== Listado de notas del blog =================== */}}
+  {{/* En páginas de taxonomía, .Pages ya contiene TODOS los contenidos asociados al término.
+       Filtramos por la sección 'post' (tus artículos viven en content/post/). */}}
+  {{ $posts := where .Pages ".Section" "post" | sort "Date" "desc" }}
 
   {{ if gt (len $posts) 0 }}
     <section class="mt-10">
@@ -87,13 +78,13 @@
       </ul>
     </section>
   {{ else }}
-    {{/* Fallback: si .RegularPages no trae nada (config/taxonomía rara), hacemos match manual por front matter. */}}
-    {{ $allPosts := where .Site.RegularPages ".Section" "post" }}
+    {{/* Fallback defensivo: si por configuración .Pages no trae nada,
+         buscamos manualmente por front matter authors (slugs). */}}
+    {{ $all := where .Site.RegularPages ".Section" "post" }}
     {{ $hits := slice }}
-    {{ range $p := $allPosts }}
+    {{ range $p := $all }}
       {{ $auth := $p.Params.authors }}
       {{ if $auth }}
-        {{ $slug := $authorSlug }}
         {{ $t := printf "%T" $auth }}
         {{ if eq $t "[]interface {}" }}
           {{ range $auth }}
