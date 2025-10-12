@@ -2,13 +2,12 @@
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
   {{/* =================== Encabezado del autor (taxonomía) =================== */}}
-  {{/* En taxonomías, el término actual está en .Data.Term */}}
   {{ $term := .Data.Term }}
   {{ $slug := lower (urlize $term) }}
 
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
     <div class="w-full md:w-auto flex md:block justify-center">
-      {{/* Avatar estático por convención: /authors/<slug>/avatar.png  */}}
+      <!-- Avatar estático por convención -->
       <img src="{{ printf "/authors/%s/avatar.png" $slug }}" alt="{{ .Title }}"
            class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
     </div>
@@ -16,7 +15,6 @@
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
 
-      {{/* Metadatos opcionales si existen en content/author/<slug>/_index.md */}}
       {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
       {{ with .Params.organizations }}
         {{ range first 1 . }}
@@ -29,7 +27,6 @@
         </p>
       {{ end }}
 
-      {{/* Redes sociales opcionales */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
         {{ $labels := dict
@@ -61,15 +58,16 @@
   </div>
 
   {{/* =================== Listado de notas del blog =================== */}}
-  {{/* En páginas de taxonomía, .Pages ya contiene TODOS los contenidos asociados al término.
-       Filtramos por la sección 'post' (tus artículos viven en content/post/). */}}
-  {{ $posts := where .Pages ".Section" "post" | sort "Date" "desc" }}
+  {{/* En taxonomías, .Pages trae los contenidos asociados al término.
+       Filtramos por sección 'post' y ordenamos con ByDate.Reverse (robusto). */}}
+  {{ $postPages := where .Pages "Section" "post" }}
+  {{ $ordered   := $postPages.ByDate.Reverse }}
 
-  {{ if gt (len $posts) 0 }}
+  {{ if gt (len $ordered) 0 }}
     <section class="mt-10">
       <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
       <ul class="space-y-2">
-        {{ range $posts }}
+        {{ range $ordered }}
           <li class="leading-snug">
             <a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a>
             {{ with .Date }}<span class="text-xs opacity-70"> — {{ . | time.Format "02 Jan 2006" }}</span>{{ end }}
@@ -78,9 +76,8 @@
       </ul>
     </section>
   {{ else }}
-    {{/* Fallback defensivo: si por configuración .Pages no trae nada,
-         buscamos manualmente por front matter authors (slugs). */}}
-    {{ $all := where .Site.RegularPages ".Section" "post" }}
+    {{/* Fallback defensivo: match manual por front matter 'authors' (slugs) */}}
+    {{ $all := where .Site.RegularPages "Section" "post" }}
     {{ $hits := slice }}
     {{ range $p := $all }}
       {{ $auth := $p.Params.authors }}
@@ -95,7 +92,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    {{ $hits = sort $hits "Date" "desc" }}
+    {{ $hits = $hits.ByDate.Reverse }}
     {{ if gt (len $hits) 0 }}
       <section class="mt-10">
         <h2 class="text-xl font-semibold mb-3">Notas del blog</h2>
