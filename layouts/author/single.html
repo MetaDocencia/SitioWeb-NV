@@ -15,7 +15,7 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Avatar: círculo y tamaños fijos */}}
+    {{/* Avatar: SIEMPRE círculo con tamaños fijos */}}
     <div class="w-full md:w-auto flex md:block justify-center">
       {{ if $avatar }}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
@@ -98,20 +98,17 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Listado de notas de blog (multi-sección) ================= */}}
-  {{/* 1) Definí acá las secciones donde guardás posts */}}
-  {{ $sections := slice "post" "blog" "noticias" "news" }}
-
-  {{/* 2) Normalizá IDs del autor actual para el match */}}
+  {{/* ================= Listado de notas de blog (sección = post) ================= */}}
+  {{/* IDs del autor actual normalizados para matchear */}}
   {{ $idByDir   := lower (urlize $authorKey) }}
   {{ $idByTitle := lower (urlize .Title) }}
   {{ $idByName  := lower (urlize (default "" .Params.name)) }}
   {{ $authorIDs := slice $idByDir $idByTitle $idByName }}
 
-  {{/* 3) Traé páginas de esas secciones */}}
-  {{ $posts := where .Site.RegularPages ".Section" "in" $sections }}
+  {{/* Traer SOLO páginas de la sección post */}}
+  {{ $posts := where .Site.RegularPages ".Section" "post" }}
 
-  {{/* 4) Matcheá autores en front matter: authors: [string | map] */}}
+  {{/* Buscar coincidencias en front matter authors: [string|string[], map[]] */}}
   {{ $matches := slice }}
   {{ range $p := $posts }}
     {{ $auth := $p.Params.authors }}
