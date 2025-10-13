@@ -48,19 +48,57 @@ sections:
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
+
         - title: "What we do"
-          text: "We cultivate the Latin American scientific ecosystem through infrastructure, training, and community."
-          feature_icon: check
+          text: |
+            <!-- Estilos locales SOLO para esta sección -->
+            <style>
+              /* 1) Unificar color gris del texto en toda la sección */
+              section#solutions { color: var(--md-text, #4B5563); } /* gray-600 fallback */
+              section#solutions p,
+              section#solutions li { color: inherit !important; }
+  
+              /* 2) Espacio entre párrafo y features (apenas mayor) */
+              section#solutions ul { 
+                list-style: none; 
+                margin: .6rem 0 0 0;   /* ← antes ~0, ahora un poquito mayor */
+                padding: 0; 
+              }
+  
+              /* 3) Lista con guion minimalista (en dash) y tipografía limpia */
+              section#solutions .feature_icon,
+              section#solutions i[class*="fa-"],
+              section#solutions svg { display: none !important; }
+  
+              section#solutions ul li {
+                position: relative;
+                padding-left: 0.95em;  /* menos sangría porque el guion es corto */
+                line-height: 1.65;
+              }
+              section#solutions ul li + li { margin-top: .12rem; } /* micro-separación entre ítems */
+              section#solutions ul li::before {
+                content: "–";          /* en dash (más corto y minimalista que el em dash) */
+                position: absolute;
+                left: 0;
+                top: 0.1em;            /* ajuste sutil de alineación vertical */
+                font-size: 0.9em;      /* un toque más pequeño que el texto */
+                color: inherit;        /* mismo gris que el texto */
+                font-weight: normal;
+              }
+            </style>
+  
+            We cultivate the Latin American scientific ecosystem through infrastructure, training, and community.
+          feature_icon: check   # no afecta; lo ocultamos por CSS
           features:
             - "Enhancing infrastructure"
             - "Training for researchers"
             - "Fostering  community"
-          image: "circuloEN.png"
+          image: "circuloES.png"
           button:
             text: "Learn more about our projects"
-            url: "/en/que-hacemos/"
+            url: "/en/que-hacemos"
     design:
-      css_class: ""
+      css_class: "features-unify"
 
   - block: stats
     content:
