@@ -22,7 +22,7 @@
 {{ $avatar := cond (ne $meta.File nil) ($meta.Resources.GetMatch "avatar*") nil }}
 {{ $avatarURL := cond $avatar $avatar.RelPermalink (printf "/authors/%s/avatar.png" $slug) }}
 
-<article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
+<article class="container mx-auto max-w-4xl px-6 md:px-6 xl:px-6 py-6 text-gray-900 dark:text-white">
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
     <div class="w-full md:w-auto flex md:block justify-center">
       <img src="{{ $avatarURL }}" alt="{{ .Title }}" class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
