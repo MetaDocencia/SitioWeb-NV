@@ -129,7 +129,7 @@ sections:
         - name: "Carly Strasser"
           role: "Directora Senior de programas de CZI, tras co-organizar el primer evento de CZI Open Science en Latinoamérica"
           text: |
-            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder [trabajar](https://chanzuckerberg.com/blog/open-science-latin-america-argentina/) con ustedes.
+            Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder <a href="https://chanzuckerberg.com/blog/open-science-latin-america-argentina/" style="text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1.5px;">trabajar</a> con ustedes.
         - name: "Julio Zetter"
           role: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México, luego de participar de nuestra formación en Ciencia Abierta"
           text: |
