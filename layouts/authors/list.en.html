@@ -48,6 +48,12 @@
     }
   </style>
 
+  <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+    <div class="w-full md:w-auto flex md:block justify-center">
+      <div class="author-avatar">
+        <img src="{{ $avatarURL }}" alt="{{ .Title }}" loading="lazy">
+      </div>
+    </div>
 
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
@@ -77,14 +83,14 @@
         </p>
       {{ end }}
 
-      {{/* ==== interests (ya ajustado): EN primero, luego ES ==== */}}
+      {{/* ==== interests: EN primero, luego ES ==== */}}
       {{ $interests := .Params.interests }}
       {{ if not $interests }}{{ $interests = $meta.Params.interests }}{{ end }}
       {{ with $interests }}
         <p class="text-sm opacity-90 mt-1"><span class="font-medium">{{ i18n "interests" | default "Interests:" }}</span> {{ delimit . " · " }}</p>
       {{ end }}
 
-      {{/* ==== AJUSTE: education prioriza EN y cae a ES ==== */}}
+      {{/* ==== education: EN primero, luego ES ==== */}}
       {{ $edu := .Params.education }}
       {{ if not $edu }}{{ $edu = $meta.Params.education }}{{ end }}
       {{ with $edu }}
