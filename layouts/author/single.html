@@ -1,13 +1,13 @@
 {{ define "main" }}
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =================== Encabezado =================== */}}
+  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
 
-    {{/* Avatar como Page Resource (prefiere avatar.*) */}}
-    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar.*") nil }}
+    {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
+    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
 
-    {{/* Slug del autor (carpeta o permalink) */}}
+    {{/* Clave/slug del autor */}}
     {{ $authorKey := "" }}
     {{ if .File }}
       {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -15,24 +15,15 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
-    {{/* Fallback de avatar en /authors/<slug>/ (acepta .png .jpg .webp) */}}
-    {{ $fallbacks := slice
-      (printf "/authors/%s/avatar.png" $authorKey)
-      (printf "/authors/%s/avatar.jpg" $authorKey)
-      (printf "/authors/%s/avatar.webp" $authorKey)
-    }}
-    {{ $fallback := index $fallbacks 0 }}
-    {{ range $fallbacks }}
-      {{ if (resources.Get .) }}{{ $fallback = . }}{{ end }}
-    {{ end }}
-
+    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto.
+          Mobile: 10rem; Desktop: 15rem (1.5x). */}}
     <div class="w-full md:w-auto flex md:block justify-center">
       {{ if $avatar }}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover object-center" loading="lazy">
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
       {{ else }}
-        <img src="{{ $fallback }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover object-center" loading="lazy">
+        <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
+             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
       {{ end }}
     </div>
 
@@ -40,7 +31,6 @@
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
       {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
-
       {{ with .Params.organizations }}
         {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
@@ -53,24 +43,23 @@
         </p>
       {{ end }}
 
-      {{/* Redes sociales / Contacto */}}
+      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
       {{ $socials := .Params.social }}
       {{ if $socials }}
-        {{/* Labels localizados para iconos comunes */}}
         {{ $labels := dict
-          "twitter" ( i18n "social_twitter"  | default "Twitter"  )
-          "x-twitter" ( i18n "social_twitter" | default "Twitter" )
-          "github"  ( i18n "social_github"   | default "GitHub"   )
-          "bluesky" ( i18n "social_bluesky"  | default "Bluesky"  )
-          "linkedin"( i18n "social_linkedin" | default "LinkedIn" )
-          "mastodon"( i18n "social_mastodon" | default "Mastodon" )
-          "orcid"   ( i18n "social_orcid"    | default "ORCID"    )
-          "globe"   ( i18n "social_website"  | default "Website"  )
-          "home"    ( i18n "social_website"  | default "Website"  )
-          "envelope"( i18n "social_email"    | default "Email"    )
+          "twitter" "Twitter"
+          "x-twitter" "Twitter"
+          "github" "GitHub"
+          "bluesky" "Bluesky"
+          "linkedin" "LinkedIn"
+          "mastodon" "Mastodon"
+          "orcid" "ORCID"
+          "globe" "Website"
+          "home" "Website"
+          "envelope" "Email"
         }}
         <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span class="font-medium mr-1">{{ i18n "contact" | default "Contacto:" }}</span>
+          <span class="font-medium mr-1">Contacto:</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
@@ -89,14 +78,15 @@
 
       {{ with .Params.interests }}
         <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">{{ i18n "interests" | default "Intereses:" }}</span> {{ delimit . " · " }}
+          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
         </p>
       {{ end }}
 
+      {{/* Educación */}}
       {{ with .Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
-            <p class="font-medium mb-1">{{ i18n "education" | default "Educación:" }}</p>
+            <p class="font-medium mb-1">Educación:</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -119,7 +109,7 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Posts del autor (type: post) ================= */}}
+  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
   {{/* Claves para matchear autor en .Params.authors */}}
   {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
 
@@ -151,7 +141,7 @@
 
   {{ if gt (len $pages) 0 }}
     <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">{{ i18n "author_posts_title" | default "Publicaciones" }}</h2>
+      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
       <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
           <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
