@@ -1,65 +1,65 @@
 {{ define "main" }}
+{{/* ===== Helper: localizar el sitio ES para poder leer la versión española del autor ===== */}}
+{{ $siteES := .Site }}
+{{ range .Sites }}
+  {{ if eq .Language.Lang "es" }}{{ $siteES = . }}{{ end }}
+{{ end }}
+
+{{/* Slug base del autor (carpeta del bundle) */}}
+{{ $slug := "" }}
+{{ if .File }}
+  {{ $slug = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
+{{ else }}
+  {{ $slug = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
+{{ end }}
+
+{{/* Si estoy en EN, busco la página ES del autor para usar sus Params/Resources como fuente única. */}}
+{{ $esAuthor := cond (eq .Site.Language.Lang "en") ($siteES.GetPage (printf "authors/%s" $slug)) nil }}
+{{ $meta := cond (and $esAuthor (eq .Site.Language.Lang "en")) $esAuthor . }}
+
+{{/* Avatar (Page Resource si existe; si no, fallback a /authors/<slug>/avatar.png) */}}
+{{ $avatar := cond (ne $meta.File nil) ($meta.Resources.GetMatch "avatar*") nil }}
+{{ $avatarURL := "" }}
+{{ if $avatar }}
+  {{ $avatarURL = $avatar.RelPermalink }}
+{{ else }}
+  {{ $avatarURL = printf "/authors/%s/avatar.png" $slug }}
+{{ end }}
+
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
-  {{/* =============== Encabezado: responsive (columna en mobile, fila en desktop) =============== */}}
+  <!-- Encabezado responsive -->
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
-
-    {{/* Avatar como Page Resource si es bundle; si no, cae a /authors/<slug>/avatar.png */}}
-    {{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
-
-    {{/* Clave/slug del autor */}}
-    {{ $authorKey := "" }}
-    {{ if .File }}
-      {{ $authorKey = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
-    {{ else }}
-      {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
-    {{ end }}
-
-    {{/* Avatar: SIEMPRE círculo (rounded-full) y mismo ancho/alto.
-          Mobile: 10rem; Desktop: 15rem (1.5x). */}}
     <div class="w-full md:w-auto flex md:block justify-center">
-      {{ if $avatar }}
-        <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ else }}
-        <img src="{{ printf "/authors/%s/avatar.png" $authorKey }}" alt="{{ .Title }}"
-             class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
-      {{ end }}
+      <img src="{{ $avatarURL }}" alt="{{ .Title }}"
+           class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
     </div>
 
-    {{/* Columna derecha: metadata */}}
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
-      {{ with .Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
-      {{ with .Params.organizations }}
+      {{ with $meta.Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+      {{ with $meta.Params.organizations }}
         {{ range first 1 . }}
           {{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}
         {{ end }}
       {{ end }}
 
-      {{ with .Params.email }}
+      {{ with $meta.Params.email }}
         <p class="text-sm mt-2">
           <a href="mailto:{{ . }}" class="underline break-all hover:no-underline">{{ . }}</a>
         </p>
       {{ end }}
 
-      {{/* Redes sociales: "Contacto:" + íconos + texto */}}
-      {{ $socials := .Params.social }}
+      {{/* Redes sociales */}}
+      {{ $socials := $meta.Params.social }}
       {{ if $socials }}
         {{ $labels := dict
-          "twitter" "Twitter"
-          "x-twitter" "Twitter"
-          "github" "GitHub"
-          "bluesky" "Bluesky"
-          "linkedin" "LinkedIn"
-          "mastodon" "Mastodon"
-          "orcid" "ORCID"
-          "globe" "Website"
-          "home" "Website"
-          "envelope" "Email"
+          "twitter" "Twitter" "x-twitter" "Twitter" "github" "GitHub" "bluesky" "Bluesky"
+          "linkedin" "LinkedIn" "mastodon" "Mastodon" "orcid" "ORCID" "globe" "Website"
+          "home" "Website" "envelope" "Email"
         }}
         <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span class="font-medium mr-1">Contacto:</span>
+          <span class="font-medium mr-1">{{ i18n "contact" | default "Contacto:" }}</span>
           {{ $items := slice }}
           {{ range $socials }}
             {{ $icon := ( .icon | lower ) }}
@@ -67,26 +67,23 @@
             {{ $url  := .link }}
             {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
             {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
-            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline">
-              <i class="%s fa-%s" aria-hidden="true"></i><span>%s</span>
-            </a>` $url $faPack $icon $label }}
+            {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline"><i class="%s fa-%s" aria-hidden="true"></i><span>%s</span></a>` $url $faPack $icon $label }}
             {{ $items = $items | append $one }}
           {{ end }}
           {{ delimit $items " · " | safeHTML }}
         </p>
       {{ end }}
 
-      {{ with .Params.interests }}
+      {{ with $meta.Params.interests }}
         <p class="text-sm opacity-90 mt-1">
-          <span class="font-medium">Intereses:</span> {{ delimit . " · " }}
+          <span class="font-medium">{{ i18n "interests" | default "Intereses:" }}</span> {{ delimit . " · " }}
         </p>
       {{ end }}
 
-      {{/* Educación */}}
-      {{ with .Params.education }}
+      {{ with $meta.Params.education }}
         {{ with .courses }}
           <div class="text-sm mt-2">
-            <p class="font-medium mb-1">Educación:</p>
+            <p class="font-medium mb-1">{{ i18n "education" | default "Educación:" }}</p>
             <ul class="list-disc list-inside space-y-0.5">
               {{ range . }}
                 <li>
@@ -104,44 +101,46 @@
     </div>
   </header>
 
-  {{/* ================= Contenido libre del autor ================= */}}
+  <!-- Contenido libre: usa EN si existe, si no, cae al ES -->
   <div class="prose dark:prose-invert max-w-none">
-    {{ .Content }}
+    {{ if and (eq .Site.Language.Lang "en") (eq (trim .Content) "") (ne $esAuthor nil) }}
+      {{ $esAuthor.Content }}
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
   </div>
 
-  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
-  {{/* Claves para matchear autor en .Params.authors */}}
-  {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
-
-  {{/* Recolectar páginas type=post donde este autor figure */}}
+  <!-- Blogpost minimalista (solo type: post, idioma actual) -->
+  {{ $key := lower $slug }}
+  {{ $keys := slice $key (lower .Title) (lower (default "" $meta.Params.name)) }}
   {{ $col := slice }}
   {{ range where .Site.RegularPages "Type" "post" }}
     {{ $auth := .Params.authors }}
+    {{ $hit := false }}
     {{ if $auth }}
-      {{ $matched := false }}
       {{ $t := printf "%T" $auth }}
       {{ if eq $t "[]interface {}" }}
         {{ range $auth }}
-          {{ $a := "" }}
+          {{ $val := "" }}
           {{ if (eq (printf "%T" .) "map[string]interface {}") }}
-            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
-            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
+            {{ if isset . "slug" }}{{ $val = lower (printf "%v" (index . "slug")) }}{{ end }}
+            {{ if and (eq $val "") (isset . "name") }}{{ $val = lower (printf "%v" (index . "name")) }}{{ end }}
           {{ else }}
-            {{ $a = lower (printf "%v" .) }}
+            {{ $val = lower (printf "%v" .) }}
           {{ end }}
-          {{ if in $keys $a }}{{ $matched = true }}{{ end }}
+          {{ if in $keys $val }}{{ $hit = true }}{{ end }}
         {{ end }}
       {{ else if eq $t "string" }}
-        {{ if in $keys (lower $auth) }}{{ $matched = true }}{{ end }}
+        {{ if in $keys (lower $auth) }}{{ $hit = true }}{{ end }}
       {{ end }}
-      {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
+    {{ if $hit }}{{ $col = $col | append . }}{{ end }}
   {{ end }}
   {{ $pages := sort $col "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
     <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+      <h2 class="text-lg font-semibold mb-2">{{ i18n "blogposts" | default "Blogpost" }}</h2>
       <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
           <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
