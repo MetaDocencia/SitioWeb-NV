@@ -14,7 +14,7 @@
 {{/* Página ES (contraparte canónica) */}}
 {{ $pageES := $siteES.GetPage (printf "authors/%s" $slug) }}
 
-{{/* Metadatos: en EN tomamos Params/Resources desde ES si existe */}}
+{{/* Metadatos: en EN tomamos Params/Resources desde ES si existe (salvo interests, que prioriza EN) */}}
 {{ $meta := . }}
 {{ if $pageES }}{{ $meta = $pageES }}{{ end }}
 
@@ -51,7 +51,10 @@
         </p>
       {{ end }}
 
-      {{ with $meta.Params.interests }}
+      {{/* === AJUSTE: interests prioriza EN y cae a ES === */}}
+      {{ $interests := .Params.interests }}
+      {{ if not $interests }}{{ $interests = $meta.Params.interests }}{{ end }}
+      {{ with $interests }}
         <p class="text-sm opacity-90 mt-1"><span class="font-medium">{{ i18n "interests" | default "Interests:" }}</span> {{ delimit . " · " }}</p>
       {{ end }}
 
