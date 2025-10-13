@@ -67,12 +67,25 @@
     </div>
   </header>
 
-  {{/* Contenido: preferimos ES; si está vacío, caemos a EN */}}
+  {{/* ===== Contenido ES robusto =====
+       1) Intentamos .Content (renderizado de Hugo).
+       2) Si viene vacío, tomamos .RawContent y lo renderizamos con RenderString (evita bugs de branch/list).
+       3) Si aun así no hay, caemos al contenido EN. */}}
   {{ $content := .Content }}
-  {{ if eq (strings.TrimSpace $content) "" }}{{ if $pageEN }}{{ $content = $pageEN.Content }}{{ end }}{{ end }}
-  <div class="prose dark:prose-invert max-w-none">{{ $content }}</div>
+  {{ if eq (strings.TrimSpace $content) "" }}
+    {{ $raw := .RawContent }}
+    {{ if ne (strings.TrimSpace $raw) "" }}
+      {{ $content = $.Page.RenderString $raw }}
+    {{ else if $pageEN }}
+      {{ $content = $pageEN.Content }}
+      {{ if eq (strings.TrimSpace $content) "" }}
+        {{ $content = $.Page.RenderString $pageEN.RawContent }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <div class="prose dark:prose-invert max-w-none">{{ $content | safeHTML }}</div>
 
-  {{/* Blogposts (igual al EN) */}}
+  {{/* ===== Blogposts (igual a EN) ===== */}}
   {{ $key := lower $slug }}
   {{ $keys := slice $key (lower .Title) (lower (default "" $meta.Params.name)) }}
   {{ $col := slice }}
