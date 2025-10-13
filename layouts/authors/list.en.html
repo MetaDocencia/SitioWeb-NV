@@ -1,9 +1,6 @@
 {{ define "main" }}
 
-{{/* ================= Utilidades / idioma ================= */}}
-{{ $lang := .Site.Language.Lang | default "en" }}
-
-{{/* Slug base del autor */}}
+{{/* ========= Slug del autor ========= */}}
 {{ $slug := "" }}
 {{ if .File }}
   {{ $slug = ( .File.Dir | strings.TrimSuffix "/" | path.Base ) }}
@@ -11,40 +8,90 @@
   {{ $slug = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
 {{ end }}
 
-{{/* Contraparte ES por .Translations (más seguro que .Sites.GetPage) */}}
+{{/* ========= Contraparte ES por .Translations ========= */}}
 {{ $pageES := nil }}
 {{ range .Translations }}
-  {{ if eq .Lang "es" }}{{ $pageES = . }}{{ end }}
+  {{ if eq .Lang "es" }}
+    {{ $pageES = . }}
+  {{ end }}
 {{ end }}
 
-{{/* ================= Fallback helpers ================= */}}
+{{/* ========= Fallback helpers (EN primero, luego ES) ========= */}}
 {{/* role */}}
 {{ $role := .Params.role }}
-{{ if not $role }}{{ with $pageES }}{{ with .Params.role }}{{ $role = . }}{{ end }}{{ end }}{{ end }}
+{{ if not $role }}
+  {{ with $pageES }}
+    {{ with .Params.role }}
+      {{ $role = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
-{{/* organizations (solo 1er nombre) */}}
+{{/* organization (primer nombre) */}}
 {{ $orgName := "" }}
-{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ end }}
-{{ if eq $orgName "" }}{{ with $pageES }}{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{ with .Params.organizations }}
+  {{ range first 1 . }}
+    {{ with .name }}
+      {{ $orgName = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if eq $orgName "" }}
+  {{ with $pageES }}
+    {{ with .Params.organizations }}
+      {{ range first 1 . }}
+        {{ with .name }}
+          {{ $orgName = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{/* email */}}
 {{ $email := .Params.email }}
-{{ if not $email }}{{ with $pageES }}{{ with .Params.email }}{{ $email = . }}{{ end }}{{ end }}{{ end }}
+{{ if not $email }}
+  {{ with $pageES }}
+    {{ with .Params.email }}
+      {{ $email = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{/* social */}}
 {{ $socials := .Params.social }}
-{{ if not $socials }}{{ with $pageES }}{{ $socials = .Params.social }}{{ end }}{{ end }}
+{{ if not $socials }}
+  {{ with $pageES }}
+    {{ $socials = .Params.social }}
+  {{ end }}
+{{ end }}
 
 {{/* interests */}}
 {{ $interests := .Params.interests }}
-{{ if not $interests }}{{ with $pageES }}{{ $interests = .Params.interests }}{{ end }}{{ end }}
+{{ if not $interests }}
+  {{ with $pageES }}
+    {{ $interests = .Params.interests }}
+  {{ end }}
+{{ end }}
 
 {{/* education.courses */}}
 {{ $courses := slice }}
-{{ with .Params.education }}{{ with .courses }}{{ $courses = . }}{{ end }}{{ end }}
-{{ if eq (len $courses) 0 }}{{ with $pageES }}{{ with .Params.education }}{{ with .courses }}{{ $courses = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{ with .Params.education }}
+  {{ with .courses }}
+    {{ $courses = . }}
+  {{ end }}
+{{ end }}
+{{ if eq (len $courses) 0 }}
+  {{ with $pageES }}
+    {{ with .Params.education }}
+      {{ with .courses }}
+        {{ $courses = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
-{{/* Avatar: mismo para ES/EN → ruta pública fija */}}
+{{/* ========= Avatar único (mismo para ES/EN) ========= */}}
 {{ $avatarURL := printf "/authors/%s/avatar.png" $slug }}
 
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
@@ -56,8 +103,13 @@
     <div class="w-full">
       <h1 class="text-3xl font-extrabold tracking-tight">{{ .Title }}</h1>
 
-      {{ if $role }}<p class="text-sm opacity-80 mt-0.5">{{ $role }}</p>{{ end }}
-      {{ if $orgName }}<p class="text-sm opacity-80">{{ $orgName }}</p>{{ end }}
+      {{ if $role }}
+        <p class="text-sm opacity-80 mt-0.5">{{ $role }}</p>
+      {{ end }}
+
+      {{ if $orgName }}
+        <p class="text-sm opacity-80">{{ $orgName }}</p>
+      {{ end }}
 
       {{ if $email }}
         <p class="text-sm mt-2">
@@ -71,7 +123,9 @@
           <span class="font-medium mr-1">{{ i18n "contact" | default "Contact:" }}</span>
           {{ $items := slice }}
           {{ range $socials }}
-            {{ $icon := ( .icon | lower ) }}{{ $pack := ( .icon_pack | lower ) }}{{ $url := .link }}
+            {{ $icon := ( .icon | lower ) }}
+            {{ $pack := ( .icon_pack | lower ) }}
+            {{ $url  := .link }}
             {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
             {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
             {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline"><i class="%s fa-%s" aria-hidden="true"></i><span>%s</span></a>` $url $faPack $icon $label }}
@@ -94,11 +148,11 @@
           <ul class="list-disc list-inside space-y-0.5">
             {{ range $courses }}
               <li>
-                {{- with .course -}}{{ . }}{{ end -}}
-                {{- if or .institution .year -}}
-                  {{- if .institution }} – {{ .institution }}{{ end -}}
-                  {{- if .year }} ({{ .year }}){{ end -}}
-                {{- end -}}
+                {{ with .course }}{{ . }}{{ end }}
+                {{ if or .institution .year }}
+                  {{ if .institution }} – {{ .institution }}{{ end }}
+                  {{ if .year }} ({{ .year }}){{ end }}
+                {{ end }}
               </li>
             {{ end }}
           </ul>
@@ -107,22 +161,36 @@
     </div>
   </header>
 
-  {{/* Contenido: preferimos EN; si está vacío, caemos a ES */}}
+  {{/* ========= Contenido: preferir EN; fallback a ES ========= */}}
   {{ $content := .Content }}
-  {{ if eq (strings.TrimSpace $content) "" }}{{ if $pageES }}{{ $content = $pageES.Content }}{{ end }}{{ end }}
-  <div class="prose dark:prose-invert max-w-none">{{ $content }}</div>
+  {{ if eq (strings.TrimSpace $content) "" }}
+    {{ with $pageES }}
+      {{ $content = .Content }}
+    {{ end }}
+  {{ end }}
+  <div class="prose dark:prose-invert max-w-none">
+    {{ $content }}
+  </div>
 
-  {{/* ================= Blogposts (matching flexible) ================= */}}
-  {{/* name para matching: priorizar EN; fallback ES */}}
+  {{/* ========= Blogposts del autor (matching flexible) ========= */}}
   {{ $name := "" }}
-  {{ with .Params.name }}{{ $name = (lower .) }}{{ else }}{{ with $pageES }}{{ with .Params.name }}{{ $name = (lower .) }}{{ end }}{{ end }}{{ end }}
+  {{ with .Params.name }}
+    {{ $name = (lower .) }}
+  {{ else }}
+    {{ with $pageES }}
+      {{ with .Params.name }}
+        {{ $name = (lower .) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
 
   {{ $key := lower $slug }}
   {{ $keys := slice $key (lower .Title) $name }}
 
   {{ $col := slice }}
   {{ range where .Site.RegularPages "Type" "post" }}
-    {{ $auth := .Params.authors }}{{ $hit := false }}
+    {{ $auth := .Params.authors }}
+    {{ $hit := false }}
     {{ if $auth }}
       {{ $t := printf "%T" $auth }}
       {{ if eq $t "[]interface {}" }}
@@ -135,13 +203,19 @@
           {{ else }}
             {{ $val = lower (printf "%v" .) }}
           {{ end }}
-          {{ if in $keys $val }}{{ $hit = true }}{{ end }}
+          {{ if in $keys $val }}
+            {{ $hit = true }}
+          {{ end }}
         {{ end }}
       {{ else if eq $t "string" }}
-        {{ if in $keys (lower $auth) }}{{ $hit = true }}{{ end }}
+        {{ if in $keys (lower $auth) }}
+          {{ $hit = true }}
+        {{ end }}
       {{ end }}
     {{ end }}
-    {{ if $hit }}{{ $col = $col | append . }}{{ end }}
+    {{ if $hit }}
+      {{ $col = $col | append . }}
+    {{ end }}
   {{ end }}
 
   {{ $pages := sort $col "Date" "desc" }}
@@ -156,4 +230,5 @@
     </section>
   {{ end }}
 </article>
+
 {{ end }}
