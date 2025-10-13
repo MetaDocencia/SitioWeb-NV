@@ -179,10 +179,10 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+200"
-          description: "documentos en Zenodo"
         - statistic: "+85000"
           description: "palabras contextualizadas"
+        - statistic: "+200"
+          description: "documentos en Zenodo"
         - statistic: "10"
           description: "comunidades latinoamericanas acompañadas desde Catalyst"
     design:
