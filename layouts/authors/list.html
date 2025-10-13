@@ -103,7 +103,7 @@
 
   <!-- Contenido libre: usa EN si existe, si no, cae al ES -->
   <div class="prose dark:prose-invert max-w-none">
-    {{ if and (eq .Site.Language.Lang "en") (eq (trim .Content) "") (ne $esAuthor nil) }}
+    {{ if and (eq .Site.Language.Lang "en") (eq (strings.TrimSpace .Content) "") (ne $esAuthor nil) }}
       {{ $esAuthor.Content }}
     {{ else }}
       {{ .Content }}
