@@ -113,15 +113,14 @@ sections:
             border: 0; border-radius: .5rem;
           }
 
-          /* ===== Dark mode para el bloque "Vamos por 5 años más" =====
-             Fondo oscuro y texto blanco, como el bloque de trust */
+          /* ===== Dark mode para el bloque "Vamos por 5 años más" ===== */
           :root.dark section#solutions {
             background: #00506F !important;
             color: #FFFFFF !important;
           }
           :root.dark section#solutions a { color:#FFFFFF !important; }
 
-          /* ===== Colapsables y márgenes (sin tocar tipografías globales) ===== */
+          /* ===== Colapsables y márgenes ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -186,6 +185,7 @@ sections:
             {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
+
   # --- Comunidades Amigas ---
   - block: markdown
     id: comunidades-amigas
@@ -211,7 +211,6 @@ sections:
             {{< people_list group="trust" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
@@ -279,7 +278,7 @@ sections:
       title: ""
       text: |
         <style>
-          /* Ocultar COMPLETAMENTE este section para no ocupar espacio */
+          /* Hide this section completely so it doesn't take up space */
           section#estilos-hero-qs {
             display: none !important;
             margin: 0 !important;
@@ -288,16 +287,16 @@ sections:
             overflow: hidden !important;
           }
 
-          /* Solo Quienes somos: #hero-qs (ajustes de alto en móvil) */
+          /* About us hero: taller and uncropped on mobile */
           @media (max-width: 768px) {
             section#hero-qs.hero-max-bounded,
             section#hero-qs.hero-max-bounded .hero-bg {
-              max-height: 64vh;
-              min-height: 44vh;
+              max-height: none !important;   /* don't crop */
+              min-height: 72vh !important;   /* more vertical room */
             }
             section#hero-qs .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
+              padding-top: 1.1rem !important;   /* extra breathing room */
+              padding-bottom: 1.1rem !important;
             }
           }
         </style>
