@@ -35,7 +35,8 @@
             {{ end }}
 
             {{ with .text }}
-              <div class="mt-3 text-gray-800 dark:text-gray-100">
+              <!-- Clase específica para estilizar enlaces SOLO en el campo text -->
+              <div class="mt-3 text-gray-800 dark:text-gray-100 testimonial-text">
                 {{ . | $.Page.RenderString }}
               </div>
             {{ end }}
@@ -52,4 +53,18 @@
 <style>
   #{{ $id }} .prose iframe { width: 100% !important; aspect-ratio: 16 / 9; height: auto; }
   #{{ $id }} .prose img { height: auto; }
+
+  /* Subrayado accesible SOLO para enlaces dentro del campo `text` */
+  #{{ $id }} .testimonial-text a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1.5px;
+  }
+  #{{ $id }} .testimonial-text a:hover {
+    text-decoration-thickness: 2px;
+  }
+  #{{ $id }} .testimonial-text a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
 </style>
