@@ -113,15 +113,14 @@ sections:
             border: 0; border-radius: .5rem;
           }
 
-          /* ===== Dark mode para el bloque "Vamos por 5 años más" =====
-             Fondo oscuro y texto blanco, como el bloque de confian */
+          /* ===== Dark mode para el bloque "Vamos por 5 años más" ===== */
           :root.dark section#solutions {
             background: #00506F !important;
             color: #FFFFFF !important;
           }
           :root.dark section#solutions a { color:#FFFFFF !important; }
 
-          /* ===== Colapsables y márgenes (sin tocar tipografías globales) ===== */
+          /* ===== Colapsables y márgenes ===== */
           .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
           .mdnv-collapsible > summary::after {
             content: "▾";
@@ -166,6 +165,7 @@ sections:
     id: equipo-y-consejo-asesor
     content:
       title: "Equipo y Consejo Asesor"
+    content:
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
@@ -279,25 +279,19 @@ sections:
       title: ""
       text: |
         <style>
-          /* Ocultar COMPLETAMENTE este section para no ocupar espacio */
-          section#estilos-hero-qs {
-            display: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            height: 0 !important;
-            overflow: hidden !important;
-          }
+          /* Ocultar este section (no ocupa espacio) */
+          section#estilos-hero-qs { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; overflow:hidden !important; }
 
-          /* Solo Quienes somos: #hero-qs (ajustes de alto en móvil) */
+          /* Quienes somos → hero más alto y sin recortes en móvil */
           @media (max-width: 768px) {
             section#hero-qs.hero-max-bounded,
             section#hero-qs.hero-max-bounded .hero-bg {
-              max-height: 64vh;
-              min-height: 44vh;
+              max-height: none !important;   /* ← no recortar */
+              min-height: 72vh !important;   /* ← más alto que antes */
             }
             section#hero-qs .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
+              padding-top: 1.1rem !important;   /* más respiro */
+              padding-bottom: 1.1rem !important;
             }
           }
         </style>
