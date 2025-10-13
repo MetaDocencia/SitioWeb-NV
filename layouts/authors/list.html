@@ -1,8 +1,11 @@
 {{ define "main" }}
-{{/* ===== Helper: localizar el sitio ES para poder leer la versión española del autor ===== */}}
+{{/* ===== Localizar sites por idioma ===== */}}
+{{ $site := .Site }}
 {{ $siteES := .Site }}
+{{ $siteEN := .Site }}
 {{ range .Sites }}
   {{ if eq .Language.Lang "es" }}{{ $siteES = . }}{{ end }}
+  {{ if eq .Language.Lang "en" }}{{ $siteEN = . }}{{ end }}
 {{ end }}
 
 {{/* Slug base del autor (carpeta del bundle) */}}
@@ -13,18 +16,20 @@
   {{ $slug = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
 {{ end }}
 
-{{/* Si estoy en EN, busco la página ES del autor para usar sus Params/Resources como fuente única. */}}
-{{ $esAuthor := cond (eq .Site.Language.Lang "en") ($siteES.GetPage (printf "authors/%s" $slug)) nil }}
-{{ $meta := cond (and $esAuthor (eq .Site.Language.Lang "en")) $esAuthor . }}
+{{/* Página contraparte en el otro idioma */}}
+{{ $pageES := $siteES.GetPage (printf "authors/%s" $slug) }}
+{{ $pageEN := $siteEN.GetPage (printf "authors/%s" $slug) }}
+
+{{/* Metadatos: en EN tomamos los Params/Resources desde ES; en ES usamos la propia */}}
+{{ $meta := . }}
+{{ if eq .Site.Language.Lang "en" }}
+  {{ if $pageES }}{{ $meta = $pageES }}{{ end }}
+{{ end }}
 
 {{/* Avatar (Page Resource si existe; si no, fallback a /authors/<slug>/avatar.png) */}}
 {{ $avatar := cond (ne $meta.File nil) ($meta.Resources.GetMatch "avatar*") nil }}
 {{ $avatarURL := "" }}
-{{ if $avatar }}
-  {{ $avatarURL = $avatar.RelPermalink }}
-{{ else }}
-  {{ $avatarURL = printf "/authors/%s/avatar.png" $slug }}
-{{ end }}
+{{ if $avatar }}{{ $avatarURL = $avatar.RelPermalink }}{{ else }}{{ $avatarURL = printf "/authors/%s/avatar.png" $slug }}{{ end }}
 
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
 
@@ -101,13 +106,18 @@
     </div>
   </header>
 
-  <!-- Contenido libre: usa EN si existe, si no, cae al ES -->
-  <div class="prose dark:prose-invert max-w-none">
-    {{ if and (eq .Site.Language.Lang "en") (eq (strings.TrimSpace .Content) "") (ne $esAuthor nil) }}
-      {{ $esAuthor.Content }}
+  <!-- Contenido libre con fallback bidireccional -->
+  {{/* Preferimos el contenido del idioma actual; si está vacío, caemos al otro. */}}
+  {{ $content := .Content }}
+  {{ if eq (strings.TrimSpace $content) "" }}
+    {{ if eq .Site.Language.Lang "en" }}
+      {{ if $pageES }}{{ $content = $pageES.Content }}{{ end }}
     {{ else }}
-      {{ .Content }}
+      {{ if $pageEN }}{{ $content = $pageEN.Content }}{{ end }}
     {{ end }}
+  {{ end }}
+  <div class="prose dark:prose-invert max-w-none">
+    {{ $content }}
   </div>
 
   <!-- Blogpost minimalista (solo type: post, idioma actual) -->
