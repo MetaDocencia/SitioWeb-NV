@@ -38,7 +38,7 @@ sections:
           parallax: true
         text_color_light: true
   # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
-# === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
+
   - block: cta-image-paragraph
     id: solutions
     content:
@@ -55,34 +55,41 @@ sections:
             <!-- Estilos locales SOLO para esta sección -->
             <style>
               /* 1) Unificar color gris del texto en toda la sección */
-              section#solutions { color: var(--md-text, #4B5563); } /* fallback a gray-600 */
+              section#solutions { color: var(--md-text, #4B5563); } /* gray-600 fallback */
               section#solutions p,
               section#solutions li { color: inherit !important; }
   
-              /* 2) Reemplazar check por guion — y asegurar consistencia visual */
-              /* Ocultar posibles íconos internos del tema (fa, svg, etc.) */
+              /* 2) Espacio entre párrafo y features (apenas mayor) */
+              section#solutions ul { 
+                list-style: none; 
+                margin: .6rem 0 0 0;   /* ← antes ~0, ahora un poquito mayor */
+                padding: 0; 
+              }
+  
+              /* 3) Lista con guion minimalista (en dash) y tipografía limpia */
               section#solutions .feature_icon,
               section#solutions i[class*="fa-"],
               section#solutions svg { display: none !important; }
   
-              /* Normalizar la lista: sin viñetas nativas, padding para pseudo-bullet */
-              section#solutions ul { list-style: none; margin: .25rem 0 0 0; padding: 0; }
               section#solutions ul li {
                 position: relative;
-                padding-left: 1.15em;
-                line-height: 1.6;
+                padding-left: 0.95em;  /* menos sangría porque el guion es corto */
+                line-height: 1.65;
               }
+              section#solutions ul li + li { margin-top: .12rem; } /* micro-separación entre ítems */
               section#solutions ul li::before {
-                content: "—";
+                content: "–";          /* en dash (más corto y minimalista que el em dash) */
                 position: absolute;
                 left: 0;
-                top: 0;
-                color: inherit; /* mismo gris que el texto */
+                top: 0.1em;            /* ajuste sutil de alineación vertical */
+                font-size: 0.9em;      /* un toque más pequeño que el texto */
+                color: inherit;        /* mismo gris que el texto */
+                font-weight: normal;
               }
             </style>
   
             Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos.
-          feature_icon: check   # ← no importa, lo ocultamos por CSS arriba
+          feature_icon: check   # no afecta; lo ocultamos por CSS
           features:
             - "Impulsamos infraestructura"
             - "Formamos capacidades"
@@ -93,7 +100,6 @@ sections:
             url: "/que-hacemos"
     design:
       css_class: "features-unify"
-
 
   - block: stats
     content:
