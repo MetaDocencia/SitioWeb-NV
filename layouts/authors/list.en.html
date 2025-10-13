@@ -1,8 +1,7 @@
 {{ define "main" }}
 
-{{/* ================= Idiomas / páginas relacionadas ================= */}}
-{{ $siteES := .Site }}
-{{ range .Sites }}{{ if eq .Language.Lang "es" }}{{ $siteES = . }}{{ end }}{{ end }}
+{{/* ================= Utilidades / idioma ================= */}}
+{{ $lang := .Site.Language.Lang | default "en" }}
 
 {{/* Slug base del autor */}}
 {{ $slug := "" }}
@@ -12,23 +11,25 @@
   {{ $slug = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
 {{ end }}
 
-{{/* Página ES (para fallbacks puntuales) */}}
-{{ $pageES := $siteES.GetPage (printf "authors/%s" $slug) }}
-
-{{/* ================= Helpers de fallback ================= */}}
-{{/* role */}}
-{{ $role := "" }}
-{{ with .Params.role }}{{ $role = . }}{{ else }}{{ with $pageES }}{{ with .Params.role }}{{ $role = . }}{{ end }}{{ end }}{{ end }}
-
-{{/* organizations (tomamos solo el primero) */}}
-{{ $orgName := "" }}
-{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ else }}
-  {{ with $pageES }}{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+{{/* Contraparte ES por .Translations (más seguro que .Sites.GetPage) */}}
+{{ $pageES := nil }}
+{{ range .Translations }}
+  {{ if eq .Lang "es" }}{{ $pageES = . }}{{ end }}
 {{ end }}
 
+{{/* ================= Fallback helpers ================= */}}
+{{/* role */}}
+{{ $role := .Params.role }}
+{{ if not $role }}{{ with $pageES }}{{ with .Params.role }}{{ $role = . }}{{ end }}{{ end }}{{ end }}
+
+{{/* organizations (solo 1er nombre) */}}
+{{ $orgName := "" }}
+{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ end }}
+{{ if eq $orgName "" }}{{ with $pageES }}{{ with .Params.organizations }}{{ range first 1 . }}{{ with .name }}{{ $orgName = . }}{{ end }}{{ end }}{{ end }}{{ end }}
+
 {{/* email */}}
-{{ $email := "" }}
-{{ with .Params.email }}{{ $email = . }}{{ else }}{{ with $pageES }}{{ with .Params.email }}{{ $email = . }}{{ end }}{{ end }}{{ end }}
+{{ $email := .Params.email }}
+{{ if not $email }}{{ with $pageES }}{{ with .Params.email }}{{ $email = . }}{{ end }}{{ end }}{{ end }}
 
 {{/* social */}}
 {{ $socials := .Params.social }}
@@ -43,16 +44,8 @@
 {{ with .Params.education }}{{ with .courses }}{{ $courses = . }}{{ end }}{{ end }}
 {{ if eq (len $courses) 0 }}{{ with $pageES }}{{ with .Params.education }}{{ with .courses }}{{ $courses = . }}{{ end }}{{ end }}{{ end }}{{ end }}
 
-{{/* Avatar: preferir EN (recursos del bundle actual), luego ES, luego fallback público */}}
-{{ $avatar := cond (ne .File nil) (.Resources.GetMatch "avatar*") nil }}
-{{ if not $avatar }}
-  {{ with $pageES }}
-    {{ if ne .File nil }}
-      {{ $avatar = (.Resources.GetMatch "avatar*") }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-{{ $avatarURL := cond $avatar $avatar.RelPermalink (printf "/authors/%s/avatar.png" $slug) }}
+{{/* Avatar: mismo para ES/EN → ruta pública fija */}}
+{{ $avatarURL := printf "/authors/%s/avatar.png" $slug }}
 
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
@@ -119,7 +112,7 @@
   {{ if eq (strings.TrimSpace $content) "" }}{{ if $pageES }}{{ $content = $pageES.Content }}{{ end }}{{ end }}
   <div class="prose dark:prose-invert max-w-none">{{ $content }}</div>
 
-  {{/* ================= Blogposts: matching flexible ================= */}}
+  {{/* ================= Blogposts (matching flexible) ================= */}}
   {{/* name para matching: priorizar EN; fallback ES */}}
   {{ $name := "" }}
   {{ with .Params.name }}{{ $name = (lower .) }}{{ else }}{{ with $pageES }}{{ with .Params.name }}{{ $name = (lower .) }}{{ end }}{{ end }}{{ end }}
