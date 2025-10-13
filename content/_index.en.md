@@ -127,7 +127,7 @@ sections:
       items:
         - name: "Carly Strasser"
           role: "Senior Program Officer, CZI, after the first-ever CZI event in Latin America"
-          text: "I'm in awe of the professionalism, thoughtfulness, and kindness of everyone from MetaDocencia. It was a special treat to be able to  [work](https://chanzuckerberg.com/blog/open-science-latin-america-argentina/) with you all."
+          text: "I'm in awe of the professionalism, thoughtfulness, and kindness of everyone from MetaDocencia. It was a special treat to be able to  <a href="https://chanzuckerberg.com/blog/open-science-latin-america-argentina/" style="text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1.5px;">work</a> with you all."
         - name: "Julio Zetter"
           role: "Data Leader, SciELO Mexico, after participating in an Open Science training"
           text: "All that’s left is to thank the instructors who made this course possible, which is undoubtedly the seed of great outcomes. Thank you so much, MetaDocencia."
