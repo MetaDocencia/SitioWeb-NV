@@ -617,3 +617,16 @@ section#solutions.features-unify .item * {
   line-height: inherit !important;
 }
 
+/* Enlaces subrayados dentro de testimoniales */
+.testimonial-quote a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;   /* mejora legibilidad */
+  text-decoration-thickness: 1.5px; /* un poco más visible */
+}
+
+/* Opcional: estados accesibles */
+.testimonial-quote a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
