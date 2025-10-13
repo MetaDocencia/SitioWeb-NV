@@ -23,36 +23,9 @@
 {{ $avatarURL := cond $avatar $avatar.RelPermalink (printf "/authors/%s/avatar.png" $slug) }}
 
 <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
-
-  <!-- Estilo local para forzar círculo perfecto del avatar -->
-  <style>
-    .author-avatar {
-      position: relative;
-      width: 10rem;   /* 160px ~ w-40 */
-      height: 10rem;  /* cuadrado → círculo perfecto al redondear */
-      border-radius: 9999px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    @media (min-width: 768px) {
-      .author-avatar { width: 15rem; height: 15rem; } /* 240px ~ md:w-60 md:h-60 */
-    }
-    .author-avatar > img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;   /* llena sin deformar */
-      object-position: center;
-      display: block;
-    }
-  </style>
-
   <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
     <div class="w-full md:w-auto flex md:block justify-center">
-      <div class="author-avatar">
-        <img src="{{ $avatarURL }}" alt="{{ .Title }}" loading="lazy">
-      </div>
+      <img src="{{ $avatarURL }}" alt="{{ .Title }}" class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
     </div>
 
     <div class="w-full">
@@ -83,12 +56,72 @@
         </p>
       {{ end }}
 
-      {{/* ==== interests: EN primero, luego ES ==== */}}
+      {{/* ==== interests (ya ajustado): EN primero, luego ES ==== */}}
       {{ $interests := .Params.interests }}
       {{ if not $interests }}{{ $interests = $meta.Params.interests }}{{ end }}
       {{ with $interests }}
         <p class="text-sm opacity-90 mt-1"><span class="font-medium">{{ i18n "interests" | default "Interests:" }}</span> {{ delimit . " · " }}</p>
       {{ end }}
 
-      {{/* ==== education: EN primero, luego ES ==== */}}
-      {{ $edu := .Params.education
+      {{/* ==== AJUSTE: education prioriza EN y cae a ES ==== */}}
+      {{ $edu := .Params.education }}
+      {{ if not $edu }}{{ $edu = $meta.Params.education }}{{ end }}
+      {{ with $edu }}
+        {{ with .courses }}
+          <div class="text-sm mt-2">
+            <p class="font-medium mb-1">{{ i18n "education" | default "Education:" }}</p>
+            <ul class="list-disc list-inside space-y-0.5">
+              {{ range . }}
+                <li>
+                  {{ with .course }}{{ . }}{{ end }}
+                  {{ if or .institution .year }}
+                    {{ if .institution }} – {{ .institution }}{{ end }}
+                    {{ if .year }} ({{ .year }}){{ end }}
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </header>
+
+  {{/* Contenido: preferimos EN; si está vacío, caemos a ES */}}
+  {{ $content := .Content }}
+  {{ if eq (strings.TrimSpace $content) "" }}{{ if $pageES }}{{ $content = $pageES.Content }}{{ end }}{{ end }}
+  <div class="prose dark:prose-invert max-w-none">{{ $content }}</div>
+
+  {{/* Blogposts: mismo código que ya usabas */}}
+  {{ $key := lower $slug }}
+  {{ $keys := slice $key (lower .Title) (lower (default "" $meta.Params.name)) }}
+  {{ $col := slice }}
+  {{ range where .Site.RegularPages "Type" "post" }}
+    {{ $auth := .Params.authors }}{{ $hit := false }}
+    {{ if $auth }}
+      {{ $t := printf "%T" $auth }}
+      {{ if eq $t "[]interface {}" }}
+        {{ range $auth }}
+          {{ $val := "" }}
+          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
+            {{ if isset . "slug" }}{{ $val = lower (printf "%v" (index . "slug")) }}{{ end }}
+            {{ if and (eq $val "") (isset . "name") }}{{ $val = lower (printf "%v" (index . "name")) }}{{ end }}
+          {{ else }}{{ $val = lower (printf "%v" .) }}{{ end }}
+          {{ if in $keys $val }}{{ $hit = true }}{{ end }}
+        {{ end }}
+      {{ else if eq $t "string" }}{{ if in $keys (lower $auth) }}{{ $hit = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if $hit }}{{ $col = $col | append . }}{{ end }}
+  {{ end }}
+  {{ $pages := sort $col "Date" "desc" }}
+  {{ if gt (len $pages) 0 }}
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold mb-2">{{ i18n "blogposts" | default "Blogposts" }}</h2>
+      <ul class="list-disc list-inside space-y-1">
+        {{ range $pages }}<li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>{{ end }}
+      </ul>
+    </section>
+  {{ end }}
+</article>
+{{ end }}
