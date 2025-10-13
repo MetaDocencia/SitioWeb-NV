@@ -1,0 +1,144 @@
+{{ define "main" }}
+{{/* ==================== Resolver EL PERFIL desde el término ==================== */}}
+{{ $term := .Data.Term | default .Title }}       {{/* p.ej., "Laura Ación" */}}
+{{ $lang := .Lang }}                              {{/* "es" */}}
+
+{{/* Colección de páginas de autores (branch o leaf), en cualquier idioma */}}
+{{ $authors := where site.Pages "Section" "authors" }}
+
+{{/* Heurística de match: por slug de carpeta, por .Title, por .Params.name */}}
+{{ $candidate := first 1 (where $authors "Title" $term) | first }}
+{{ if not $candidate }}
+  {{ $candidate = first 1 (where $authors ".Params.name" $term) | first }}
+{{ end }}
+
+{{/* Si no hay match exacto, intentamos por slug urlize del término (ej.: "laura-acion" -> carpeta) */}}
+{{ if not $candidate }}
+  {{ $slugGuess := $term | urlize }}
+  {{ range $authors }}
+    {{ $folder := (cond (ne .File nil) (.File.Dir | strings.TrimSuffix "/" | path.Base) "") }}
+    {{ if eq $folder $slugGuess }}{{ $candidate = . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Si seguimos sin candidato, mostramos un fallback mínimo de taxonomía */}}
+{{ if not $candidate }}
+  <article class="container mx-auto max-w-3xl px-6 md:px-10 xl:px-12 py-12">
+    <h1 class="text-3xl font-extrabold tracking-tight">{{ $term }}</h1>
+    <p class="mt-3 text-gray-700 dark:text-gray-200">No encontramos el perfil de autor en <code>content/authors/</code>. Verificá que exista una carpeta para este autor.</p>
+  </article>
+{{ else }}
+  {{/* Elegimos la versión en el idioma actual si existe; si no, la otra traducción */}}
+  {{ $page := $candidate }}
+  {{ if ne $candidate.Lang $lang }}
+    {{ $tr := first 1 (where $candidate.Translations "Lang" $lang) | first }}
+    {{ if $tr }}{{ $page = $tr }}{{ end }}
+  {{ end }}
+
+  {{/* Para metadatos compartidos (avatar, redes) preferimos ES si existe; sino, la propia */}}
+  {{ $meta := $page }}
+  {{ $esTr := first 1 (where $candidate.Translations "Lang" "es") | first }}
+  {{ if $esTr }}{{ $meta = $esTr }}{{ end }}
+
+  {{/* Avatar: Page Resource o fallback por ruta */}}
+  {{ $slugFolder := (cond (ne $page.File nil) ($page.File.Dir | strings.TrimSuffix "/" | path.Base) ( $page.RelPermalink | strings.TrimSuffix "/" | path.Base )) }}
+  {{ $avatar := cond (ne $meta.File nil) ($meta.Resources.GetMatch "avatar*") nil }}
+  {{ $avatarURL := cond $avatar $avatar.RelPermalink (printf "/authors/%s/avatar.png" $slugFolder) }}
+
+  <article class="container mx-auto max-w-4xl px-6 md:px-10 xl:px-12 py-6 text-gray-900 dark:text-white">
+
+    <!-- Encabezado -->
+    <header class="mb-6 flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-6">
+      <div class="w-full md:w-auto flex md:block justify-center">
+        <img src="{{ $avatarURL }}" alt="{{ $page.Title }}" class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover" loading="lazy">
+      </div>
+
+      <div class="w-full">
+        <h1 class="text-3xl font-extrabold tracking-tight">{{ $page.Title }}</h1>
+        {{ with $meta.Params.role }}<p class="text-sm opacity-80 mt-0.5">{{ . }}</p>{{ end }}
+        {{ with $meta.Params.organizations }}{{ range first 1 . }}{{ with .name }}<p class="text-sm opacity-80">{{ . }}</p>{{ end }}{{ end }}{{ end }}
+        {{ with $meta.Params.email }}<p class="text-sm mt-2"><a class="underline break-all hover:no-underline" href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+
+        {{ $socials := $meta.Params.social }}
+        {{ if $socials }}
+          {{ $labels := dict "twitter" "Twitter" "x-twitter" "Twitter" "github" "GitHub" "bluesky" "Bluesky" "linkedin" "LinkedIn" "mastodon" "Mastodon" "orcid" "ORCID" "globe" "Website" "home" "Website" "envelope" "Email" }}
+          <p class="text-sm mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span class="font-medium mr-1">{{ i18n "contact" | default "Contacto:" }}</span>
+            {{ $items := slice }}
+            {{ range $socials }}
+              {{ $icon := ( .icon | lower ) }}{{ $pack := ( .icon_pack | lower ) }}{{ $url := .link }}
+              {{ $label := cond (isset $labels $icon) (index $labels $icon) (title $icon) }}
+              {{ $faPack := cond (eq $pack "fab") "fab" (cond (eq $pack "fas") "fas" "fab") }}
+              {{ $one := printf `<a href="%s" target="_blank" rel="noopener" class="inline-flex items-center gap-1 underline hover:no-underline"><i class="%s fa-%s" aria-hidden="true"></i><span>%s</span></a>` $url $faPack $icon $label }}
+              {{ $items = $items | append $one }}
+            {{ end }}
+            {{ delimit $items " · " | safeHTML }}
+          </p>
+        {{ end }}
+
+        {{ with $meta.Params.interests }}
+          <p class="text-sm opacity-90 mt-1"><span class="font-medium">{{ i18n "interests" | default "Intereses:" }}</span> {{ delimit . " · " }}</p>
+        {{ end }}
+
+        {{ with $meta.Params.education }}{{ with .courses }}
+          <div class="text-sm mt-2">
+            <p class="font-medium mb-1">{{ i18n "education" | default "Educación:" }}</p>
+            <ul class="list-disc list-inside space-y-0.5">
+              {{ range . }}
+                <li>{{ with .course }}{{ . }}{{ end }}{{ if or .institution .year }}{{ if .institution }} – {{ .institution }}{{ end }}{{ if .year }} ({{ .year }}){{ end }}{{ end }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}{{ end }}
+      </div>
+    </header>
+
+    <!-- Contenido: priorizamos ES del $page; si está vacío, caemos a EN -->
+    {{ $content := $page.Content }}
+    {{ if eq (len (strings.TrimSpace $content)) 0 }}
+      {{ $content = $page.RenderString $page.RawContent }}
+      {{ if and (eq (len (strings.TrimSpace $content)) 0) (ne $page.Lang "en") }}
+        {{ $en := first 1 (where $candidate.Translations "Lang" "en") | first }}
+        {{ if $en }}
+          {{ $content = $en.Content }}
+          {{ if eq (len (strings.TrimSpace $content)) 0 }}{{ $content = $en.RenderString $en.RawContent }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <div class="prose dark:prose-invert max-w-none">{{ $content | safeHTML }}</div>
+
+    <!-- Blogposts del autor (igual a tus versiones previas) -->
+    {{ $key := lower $slugFolder }}
+    {{ $keys := slice $key (lower $page.Title) (lower (default "" $meta.Params.name)) }}
+    {{ $col := slice }}
+    {{ range where .Site.RegularPages "Type" "post" }}
+      {{ $auth := .Params.authors }}{{ $hit := false }}
+      {{ if $auth }}
+        {{ $t := printf "%T" $auth }}
+        {{ if eq $t "[]interface {}" }}
+          {{ range $auth }}
+            {{ $val := "" }}
+            {{ if (eq (printf "%T" .) "map[string]interface {}") }}
+              {{ if isset . "slug" }}{{ $val = lower (printf "%v" (index . "slug")) }}{{ end }}
+              {{ if and (eq $val "") (isset . "name") }}{{ $val = lower (printf "%v" (index . "name")) }}{{ end }}
+            {{ else }}{{ $val = lower (printf "%v" .) }}{{ end }}
+            {{ if in $keys $val }}{{ $hit = true }}{{ end }}
+          {{ end }}
+        {{ else if eq $t "string" }}{{ if in $keys (lower $auth) }}{{ $hit = true }}{{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if $hit }}{{ $col = $col | append . }}{{ end }}
+    {{ end }}
+    {{ $pages := sort $col "Date" "desc" }}
+    {{ if gt (len $pages) 0 }}
+      <section class="mt-8">
+        <h2 class="text-lg font-semibold mb-2">{{ i18n "blogposts" | default "Blogpost" }}</h2>
+        <ul class="list-disc list-inside space-y-1">
+          {{ range $pages }}<li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+  </article>
+{{ end }}
+{{ end }}
