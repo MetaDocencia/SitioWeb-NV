@@ -25,7 +25,7 @@ El uso de bases de datos proporcionadas por las diferentes agencias ayuda a pers
 El Hackathon reúne a personas de todas las edades, personas que se dedican a la ciencia, a la programación, artistas, estudiantes, personas con discapacidad, personas de comunidades remotas, indígenas o en situación vulnerable, que deseen proponer una solución innovadora. 
 Semanas antes del evento se realizan visitas a diversos sitios de interés con el fin de tomar en cuenta a la mayor cantidad de personas posibles a tomar el reto. 
 
-![Sonriendo y posando para la foto, desde la parte inferior, jueces de la segunda edición del NASA International Space Apps Challenge Mexicali, comité organizador y participantes de todas las edades.](/static/img/nasa-challenge.png) 
+![Sonriendo y posando para la foto, desde la parte inferior, jueces de la segunda edición del NASA International Space Apps Challenge Mexicali, comité organizador y participantes de todas las edades.](/img/nasa-challenge.png) 
 *NASA International Space Apps Challenge Mexicali*
 
 *Esta es una Historia de Ciencia Abierta en Acción escrita por sus representantes para  compartir la iniciativa en canales de MetaDocencia y más allá. Si quieres enviar tu historia, [completa el formulario](https://docs.google.com/forms/d/e/1FAIpQLSfC9eZfIn_rOf4Ist21AHOySWsZ-v4lCn1oN-xW3mJL6kWIeg/viewform).*
