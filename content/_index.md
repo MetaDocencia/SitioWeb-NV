@@ -37,8 +37,8 @@ sections:
           position: center
           parallax: true
         text_color_light: true
-  # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
 
+  # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
   - block: cta-image-paragraph
     id: solutions
     content:
@@ -49,45 +49,45 @@ sections:
           button:
             text: "Conócenos"
             url: "/quienes-somos"
-  
+
         - title: "Qué hacemos"
           text: |
             <!-- Estilos locales SOLO para esta sección -->
             <style>
               /* 1) Unificar color gris del texto en toda la sección */
-              section#solutions { color: var(--md-text, #4B5563); } /* gray-600 fallback */
+              section#solutions { color: var(--md-text, #4B5563); }
               section#solutions p,
               section#solutions li { color: inherit !important; }
-  
+
               /* 2) Espacio entre párrafo y features (apenas mayor) */
-              section#solutions ul { 
-                list-style: none; 
-                margin: .6rem 0 0 0;   /* ← antes ~0, ahora un poquito mayor */
-                padding: 0; 
+              section#solutions ul {
+                list-style: none;
+                margin: .6rem 0 0 0;
+                padding: 0;
               }
-  
-              /* 3) Lista con guion minimalista (en dash) y tipografía limpia */
+
+              /* 3) Lista con guion minimalista (ocultamos íconos del tema) */
               section#solutions .feature_icon,
               section#solutions i[class*="fa-"],
               section#solutions svg { display: none !important; }
-  
+
               section#solutions ul li {
                 position: relative;
-                padding-left: 0.95em;  /* menos sangría porque el guion es corto */
+                padding-left: 0.95em;
                 line-height: 1.65;
               }
-              section#solutions ul li + li { margin-top: .12rem; } /* micro-separación entre ítems */
+              section#solutions ul li + li { margin-top: .12rem; }
               section#solutions ul li::before {
-                content: "–";          /* en dash (más corto y minimalista que el em dash) */
+                content: "–";          /* en dash minimalista */
                 position: absolute;
                 left: 0;
-                top: 0.1em;            /* ajuste sutil de alineación vertical */
-                font-size: 0.9em;      /* un toque más pequeño que el texto */
-                color: inherit;        /* mismo gris que el texto */
+                top: 0.1em;
+                font-size: 0.9em;
+                color: inherit;
                 font-weight: normal;
               }
             </style>
-  
+
             Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos.
           feature_icon: check   # no afecta; lo ocultamos por CSS
           features:
@@ -164,7 +164,6 @@ sections:
           </div>
         </details>
 
-
   # --- Comunidades Amigas (gris claro) ---
   - block: markdown
     id: comunidades-amigas
@@ -177,7 +176,7 @@ sections:
             {{< people_list group="Comunidades amigas" columns=8 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-        
+
   # --- Confían en MetaDocencia ---
   - block: markdown
     id: confian
@@ -190,7 +189,7 @@ sections:
             {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
-        
+
   # ===== CTA final =====
   - block: markdown
     id: apoya
@@ -241,40 +240,33 @@ sections:
       title: ""
       text: |
         <style>
-          /* Ocultar el propio bloque de estilos para que no agregue espacio */
           section#estilos-collapsibles { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; overflow:hidden !important; }
 
-          /* ===== Ajuste de márgenes de secciones de logos ===== */
           section#equipo-y-consejo-asesor,
           section#confian,
           section#colaboradores,
           section#comunidades-amigas,
           section#colaboraron-con-metadocencia {
-            margin-top: .15rem !important;  
+            margin-top: .15rem !important;
             margin-bottom: .5rem !important;
-            padding-top: .25rem !important; /* pequeño respiro interno arriba */
+            padding-top: .25rem !important;
           }
 
-          /* Compactar espacio propio de los colapsables */
           .mdnv-collapsible { margin-top: .35rem; margin-bottom: .4rem; }
           .mdnv-collapsible[open] { margin-bottom: .6rem; }
 
-          /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:stretch; }
           @media (max-width: 900px) { [data-2col] { grid-template-columns: 1fr; } }
           .mdnv-vcenter { display:flex; flex-direction:column; justify-content:center; }
           .mdnv-text-pad { padding-left:clamp(.5rem, 3vw, 2rem); padding-right:clamp(.5rem, 3vw, 2rem); }
 
-          /* Wrapper 16:9 para iframes */
           [data-16x9]{ position:relative; width:100%; padding-top:56.25%; border-radius:.5rem; overflow:hidden; }
           [data-16x9] iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:.5rem; }
 
-          /* Estética de los toggles */
           .mdnv-collapsible > summary::-webkit-details-marker { display:none; }
           .mdnv-collapsible > summary::after { content:"▾"; margin-left:.5rem; display:inline-block; transition:transform .15s ease; }
           .mdnv-collapsible[open] > summary::after { transform:rotate(180deg); }
 
-          /* Tipos en nombres */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#confian .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
@@ -302,12 +294,42 @@ sections:
         <style>
           section#estilos-hero-home { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; overflow:hidden !important; }
 
+          /* Dimensiones del hero en desktop (igual que antes) */
           section#hero-home.hero-max-bounded,
           section#hero-home.hero-max-bounded .hero-bg { max-height: 90vh; min-height: 70vh; }
+
+          /* ====== Ajustes SOLO para móviles ====== */
           @media (max-width: 768px) {
+            /* Dar un poco más de alto para que “entre” mejor la imagen */
             section#hero-home.hero-max-bounded,
-            section#hero-home.hero-max-bounded .hero-bg { max-height: 90vh; min-height: 44vh; }
-            section#hero-home .container { padding-top:.75rem !important; padding-bottom:.75rem !important; }
+            section#hero-home.hero-max-bounded .hero-bg {
+              max-height: 90vh;
+              min-height: 52vh; /* antes 44vh */
+            }
+
+            /* Reencuadre y nitidez en móviles */
+            section#hero-home .hero-bg {
+              background-attachment: scroll !important;  /* desactiva parallax en mobile */
+              background-size: cover !important;         /* mantiene cobertura sin distorsión */
+              background-position: center 30% !important;/* sube el foco, se ve el contenido útil */
+              image-rendering: auto;                     /* evita pixelado en algunos navegadores */
+            }
+
+            /* === OPCIONAL: versión móvil de la imagen (más nítida y recortada para vertical) ===
+               1) Subí /media/quienes-somos-mobile.jpg
+               2) Descomenta la regla siguiente
+            */
+            /*
+            section#hero-home .hero-bg {
+              background-image: url('/media/quienes-somos-mobile.jpg') !important;
+            }
+            */
+
+            /* Un poquito menos de padding vertical del contenedor en mobile */
+            section#hero-home .container {
+              padding-top: .9rem !important;
+              padding-bottom: .9rem !important;
+            }
           }
         </style>
     design:
