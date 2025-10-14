@@ -30,7 +30,7 @@ sections:
       background:
         color: "navy"
         image:
-          filename: "/media/quienes-somos.jpg"
+          filename: "quienes-somos.jpg"
           filters:
             brightness: 0.5
           size: cover
