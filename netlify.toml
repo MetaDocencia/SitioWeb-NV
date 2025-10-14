@@ -1,5 +1,8 @@
+# netlify.toml — MetaDocencia
+
 [build]
-  command = "pnpm install && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
+  # Usamos HUGO_BASEURL (definido por contexto) para que Hugo resuelva los assets al dominio correcto.
+  command = "pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
   publish = "public"
 
 [build.environment]
@@ -7,15 +10,37 @@
   NODE_VERSION = "20.0.0"
   HUGO_ENABLEGITINFO = "true"
 
+############################################
+# Producción (cuando este site sea www.metadocencia.org)
+############################################
 [context.production.environment]
   HUGO_ENV = "production"
+  # IMPORTANTE: barra final.
+  HUGO_BASEURL = "https://www.metadocencia.org/"
 
+############################################
+# Deploy previews (PRs)
+############################################
 [context.deploy-preview]
-  command = "pnpm install && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
+  command = "pnpm install && hugo --gc --minify --buildFuture -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
 
+[context.deploy-preview.environment]
+  # URL temporal del preview (Netlify la provee). IMPORTANTE: barra final.
+  HUGO_BASEURL = "$DEPLOY_PRIME_URL/"
+
+############################################
+# Branch deploys (main, staging, etc.)
+############################################
 [context.branch-deploy]
-  command = "pnpm install && hugo --gc --minify -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
+  command = "pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
 
+[context.branch-deploy.environment]
+  # URL del branch deploy (Netlify la provee). IMPORTANTE: barra final.
+  HUGO_BASEURL = "$URL/"
+
+############################################
+# Plugins
+############################################
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
