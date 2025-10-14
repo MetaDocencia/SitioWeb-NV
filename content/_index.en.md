@@ -16,7 +16,7 @@ sections:
           <span class="block">More collaboration.</span>
           <span class="block">Fewer barriers to transformative knowledge.</span>
         </p>
-        <a href="/cta"
+        <a href="/en/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
