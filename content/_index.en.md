@@ -20,7 +20,7 @@ sections:
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
-          Súmate
+          Join us
         </a>
     design:
       spacing:
