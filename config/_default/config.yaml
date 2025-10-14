@@ -2,3 +2,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+permalinks:
+  authors: "/author/:slug/"
