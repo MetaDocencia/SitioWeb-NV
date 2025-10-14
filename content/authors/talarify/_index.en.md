@@ -1,5 +1,5 @@
 ---
-title: "talarify"
+title: "Talarify"
 bio: ""
 email: "info@talarify.co.za"
 name: Talarify
@@ -30,6 +30,7 @@ Its projects focus on improving or retraining the skills of students, researcher
 
 
 ***
+
 
 
 
