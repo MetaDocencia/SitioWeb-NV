@@ -165,7 +165,6 @@ sections:
     id: equipo-y-consejo-asesor
     content:
       title: "Equipo y Consejo Asesor"
-    content:
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
