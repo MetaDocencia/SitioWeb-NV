@@ -14,7 +14,7 @@
 {{ $c := (index $b "content") | default dict }}
 {{ $d := (index $b "design")  | default dict }}
 
-{{ $feed := (index $c "feed_url") | default "https://www.metadocencia.org/post/index.xml" }}
+{{ $feed := (index $c "feed_url") | default "/post/index.xml" }}
 {{ $limit := (index $c "limit") | default 12 }}
 {{ $showExcerpt := (index $c "show_excerpt") | default true }}
 {{ $showDate := (index $c "show_date") | default true }}
