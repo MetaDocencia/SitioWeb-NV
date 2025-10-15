@@ -31,7 +31,7 @@ sections:
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> for our Co-Director, Laura Ación.
+            <a href="https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> by our Co-Director, Laura Ación.
           </p>
         </div>
     design:
