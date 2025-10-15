@@ -1,8 +1,7 @@
-# netlify.toml — MetaDocencia
+# netlify.toml — MD (seguro para PR/branches)
 
 [build]
-  # Siempre pasamos el baseURL explícito desde HUGO_BASEURL
-  command = "pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
+  command = "echo HUGO_BASEURL=$HUGO_BASEURL && pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
   publish = "public"
 
 [build.environment]
@@ -11,30 +10,43 @@
   HUGO_ENABLEGITINFO = "true"
 
 ############################################
-# Producción (www.metadocencia.org)
+# Producción (www)
 ############################################
 [context.production.environment]
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://www.metadocencia.org/"
 
+# (Opcional) Redirecciones SOLO en producción
+[context.production]
+  # Ejemplo: apex -> www si lo tenías en redirects (si ya lo manejás en "Domain management", podés omitir)
+  [[context.production.redirects]]
+    from = "https://metadocencia.org/*"
+    to = "https://www.metadocencia.org/:splat"
+    status = 301
+    force = true
+
+  # Otros 301 que necesites, también aquí dentro, uno por uno:
+  # [[context.production.redirects]]
+  #   from = "/blog/*"
+  #   to = "/post/:splat"
+  #   status = 301
+
 ############################################
 # Deploy previews (PRs)
 ############################################
 [context.deploy-preview]
-  command = "pnpm install && hugo --gc --minify --buildFuture -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
+  command = "echo HUGO_BASEURL=$HUGO_BASEURL && pnpm install && hugo --gc --minify --buildFuture -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
 
 [context.deploy-preview.environment]
-  # URL estable del preview (sin el hash de DEPLOY_URL). IMPORTANTE: barra final.
   HUGO_BASEURL = "$DEPLOY_PRIME_URL/"
 
 ############################################
-# Branch deploys (main, staging, otras ramas)
+# Branch deploys (main, staging, etc.)
 ############################################
 [context.branch-deploy]
-  command = "pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
+  command = "echo HUGO_BASEURL=$HUGO_BASEURL && pnpm install && hugo --gc --minify -b \"$HUGO_BASEURL\" && npx pagefind --source 'public'"
 
 [context.branch-deploy.environment]
-  # ¡Clave! NO usar $URL aquí. Usar el subdominio del branch.
   HUGO_BASEURL = "$DEPLOY_PRIME_URL/"
 
 ############################################
