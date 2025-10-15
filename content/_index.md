@@ -54,16 +54,21 @@ sections:
           text: |
             <!-- Estilos locales SOLO para esta sección -->
             <style>
-              /* 1) Unificar color gris del texto en toda la sección */
+              /* 1) Unificar color gris del texto en toda la sección (modo claro) */
               section#solutions { color: var(--md-text, #4B5563); } /* gray-600 fallback */
               section#solutions p,
               section#solutions li { color: inherit !important; }
   
+              /* === MODO OSCURO: forzar texto blanco sin cambiar tipografías ni tamaños === */
+              .dark section#solutions { color: #FFFFFF !important; }
+              .dark section#solutions p,
+              .dark section#solutions li { color: #FFFFFF !important; }
+  
               /* 2) Espacio entre párrafo y features (apenas mayor) */
-              section#solutions ul { 
-                list-style: none; 
+              section#solutions ul {
+                list-style: none;
                 margin: .6rem 0 0 0;   /* ← antes ~0, ahora un poquito mayor */
-                padding: 0; 
+                padding: 0;
               }
   
               /* 3) Lista con guion minimalista (en dash) y tipografía limpia */
@@ -83,7 +88,7 @@ sections:
                 left: 0;
                 top: 0.1em;            /* ajuste sutil de alineación vertical */
                 font-size: 0.9em;      /* un toque más pequeño que el texto */
-                color: inherit;        /* mismo gris que el texto */
+                color: inherit;        /* hereda: será gris en claro y blanco en oscuro */
                 font-weight: normal;
               }
             </style>
@@ -100,6 +105,7 @@ sections:
             url: "/que-hacemos"
     design:
       css_class: "features-unify"
+
 
   - block: stats
     content:
