@@ -688,3 +688,18 @@ section#solutions.features-unify .item * {
     min-height: 44svh; /* consistente con tu 44vh, pero robusto en iOS */
   }
 }
+/* iOS-safe para el hero de Home */
+#hero-home {
+  /* asegurar pintado del fondo en móviles */
+  background-size: cover;
+  background-position: center;
+  min-height: 60svh; /* robusto en iOS */
+}
+
+@media (max-width: 768px) {
+  #hero-home { min-height: 44svh; }
+}
+
+/* iOS: evitar attachment fijo aunque venga del tema */
+@supports (-webkit-touch-callout: none) {
+  #hero-home { background-attachment: scroll !important; }
