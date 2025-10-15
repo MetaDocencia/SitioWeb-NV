@@ -25,7 +25,7 @@ sections:
 
           <!-- Centered link, white, bold -->
           <p class="text-center mt-4">
-            <a href="/boletines/" class="underline font-semibold" style="color:#FFFFFF">
+            <a href="/en/newsletters/" class="underline font-semibold" style="color:#FFFFFF">
               See past editions
             </a>
           </p>
