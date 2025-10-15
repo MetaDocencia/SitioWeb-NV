@@ -48,47 +48,52 @@ sections:
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
-
+  
         - title: "What we do"
           text: |
-            <!-- Estilos locales SOLO para esta sección -->
+            <!-- Local styles ONLY for this section -->
             <style>
-              /* 1) Unificar color gris del texto en toda la sección */
+              /* 1) Unified gray text in light mode */
               section#solutions { color: var(--md-text, #4B5563); } /* gray-600 fallback */
               section#solutions p,
               section#solutions li { color: inherit !important; }
   
-              /* 2) Espacio entre párrafo y features (apenas mayor) */
-              section#solutions ul { 
-                list-style: none; 
-                margin: .6rem 0 0 0;   /* ← antes ~0, ahora un poquito mayor */
-                padding: 0; 
+              /* === DARK MODE: force white text, keep fonts & sizes === */
+              .dark section#solutions { color: #FFFFFF !important; }
+              .dark section#solutions p,
+              .dark section#solutions li { color: #FFFFFF !important; }
+  
+              /* 2) Slightly larger space between paragraph and features */
+              section#solutions ul {
+                list-style: none;
+                margin: .6rem 0 0 0;
+                padding: 0;
               }
   
-              /* 3) Lista con guion minimalista (en dash) y tipografía limpia */
+              /* 3) Minimal en-dash bullets (hide theme icons) */
               section#solutions .feature_icon,
               section#solutions i[class*="fa-"],
               section#solutions svg { display: none !important; }
   
               section#solutions ul li {
                 position: relative;
-                padding-left: 0.95em;  /* menos sangría porque el guion es corto */
+                padding-left: 0.95em;
                 line-height: 1.65;
               }
-              section#solutions ul li + li { margin-top: .12rem; } /* micro-separación entre ítems */
+              section#solutions ul li + li { margin-top: .12rem; }
               section#solutions ul li::before {
-                content: "–";          /* en dash (más corto y minimalista que el em dash) */
+                content: "–";           /* short, minimal en dash */
                 position: absolute;
                 left: 0;
-                top: 0.1em;            /* ajuste sutil de alineación vertical */
-                font-size: 0.9em;      /* un toque más pequeño que el texto */
-                color: inherit;        /* mismo gris que el texto */
+                top: 0.1em;
+                font-size: 0.9em;
+                color: inherit;         /* gray in light, white in dark */
                 font-weight: normal;
               }
             </style>
   
             We cultivate the Latin American scientific ecosystem through infrastructure, training, and community.
-          feature_icon: check   # no afecta; lo ocultamos por CSS
+          feature_icon: check   # not used; hidden via CSS
           features:
             - "Enhancing infrastructure"
             - "Training for researchers"
