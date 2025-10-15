@@ -315,8 +315,8 @@ sections:
           description: "partner communities & alliances"
         - statistic: "60+"
           description: "collaborators"
-        - statistic: "1,070+"
-          description: "members in our Slack community"
+        - statistic: "6,000+"
+          description: "connected people"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
