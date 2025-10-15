@@ -104,18 +104,18 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+200"
-          description: |
-            documentos  
-            en Zenodo
         - statistic: "+1500"
           description: |
             personas  
             formadas
-        - statistic: "+1070"
+        - statistic: "+6000"
           description: |
-            integrantes  
-            en Slack
+            personas  
+            conectadas
+        - statistic: "+200"
+          description: |
+            documentos  
+            en Zenodo
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
