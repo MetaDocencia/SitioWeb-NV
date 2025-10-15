@@ -103,18 +103,18 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+200"
-          description: |
-            documents  
-            on Zenodo
         - statistic: "+1,500"
           description: |
             people  
             trained
-        - statistic: "+1,070"
+        - statistic: "+6,000"
           description: |
-            people in our  
-            Slack community
+            connected
+            people
+        - statistic: "+200"
+          description: |
+            documents  
+            on Zenodo
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
