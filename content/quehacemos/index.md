@@ -316,8 +316,8 @@ sections:
           description: "comunidades amigas y alianzas"
         - statistic: "+60"
           description: "personas que colaboran con MetaDocencia"
-        - statistic: "+1070"
-          description: "integrantes en la comunidad de Slack"
+        - statistic: "+6000"
+          description: "personas conectadas"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
