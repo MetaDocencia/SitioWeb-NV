@@ -42,7 +42,7 @@ sections:
             brightness: 0.4
           size: cover
           position: center
-          parallax: true
+          parallax: false
         text_color_light: true
         overlay_opacity: 0.65
         overlay_color: "#000"
