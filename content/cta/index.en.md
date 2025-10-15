@@ -25,7 +25,7 @@ sections:
 
           <!-- Centered link, white, bold -->
           <p class="text-center mt-4">
-            <a href="/boletines/" class="underline font-semibold" style="color:#FFFFFF">
+            <a href="/en/boletines/" class="underline font-semibold" style="color:#FFFFFF">
               See past editions
             </a>
           </p>
@@ -119,7 +119,7 @@ sections:
       title: "Partner Communities"
       text: |
         We amplify the work of organizations that make open science a global, collective, community-driven effort.  
-        <a href="/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Meet the community network</a>
+        <a href="/en/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Meet the community network</a>
       button:
         text: "Add your community"
         url: "mailto:comunidades@metadocencia.org?subject=Sumar%20mi%20comunidad"
@@ -140,7 +140,7 @@ sections:
         </style>
 
         Our work is possible thanks to institutions and organizations that share our mission.  
-        <a href="/quienes-somos/#confian">Meet our sponsors</a>
+        <a href="/en/quienes-somos/#trust">Meet our sponsors</a>
 
         If your organization shares our mission, email us at
         <a href="mailto:direccion@metadocencia.org">direccion@metadocencia.org</a>
