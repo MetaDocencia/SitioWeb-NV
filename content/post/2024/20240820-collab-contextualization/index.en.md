@@ -10,7 +10,7 @@ tags:
 categories:
 - Topics
 - Institutional
-authors:
+author:
 - acalero
 - irenevazano
 - lacion
@@ -23,11 +23,11 @@ authors:
 - vxhardez
 ---
 
-As we shared in [this publication](https://www.metadocencia.org/en/post/nasatops/), MetaDocencia has co-created **three projects aimed at individuals in education, science, and technology within our Spanish-speaking community**. These projects are framed by the Transform to Open Science (TOPS) initiative, a 5-year program to train 20,000 science and technology professionals in these areas.
+As we shared in [this publication](/en/post/nasatops/), MetaDocencia has co-created **three projects aimed at individuals in education, science, and technology within our Spanish-speaking community**. These projects are framed by the Transform to Open Science (TOPS) initiative, a 5-year program to train 20,000 science and technology professionals in these areas.
 
-In addition to teaching Open Science in the [ALTa CA cohorts](https://www.metadocencia.org/en/formacion/), **MetaDocencia is developing the contextualization of the NASA-TOPS Open Science 101 material for Spanish-speaking Latin America**. This effort involves crafting a translation sensitive to local and regional cultural diversity for the course modules, tailored to the Latin American context. It includes assessing the existing material and rethinking experiences, challenges, practical limitations, and the scope and implications of Open Science in Latin America.
+In addition to teaching Open Science in the [ALTa CA cohorts](/en/formacion/), **MetaDocencia is developing the contextualization of the NASA-TOPS Open Science 101 material for Spanish-speaking Latin America**. This effort involves crafting a translation sensitive to local and regional cultural diversity for the course modules, tailored to the Latin American context. It includes assessing the existing material and rethinking experiences, challenges, practical limitations, and the scope and implications of Open Science in Latin America.
 
-Thus, we began 2024 by [defining the concept that would best represent the work to be done](https://www.metadocencia.org/en/post/2024/20240725-contextualization/). We defined it as "Contextualization," viewing it as one of the pillars of MetaDocencia to guide our efforts in developing high-quality resources in Spanish from original material in other languages.
+Thus, we began 2024 by [defining the concept that would best represent the work to be done](/en/post/2024/20240725-contextualization/). We defined it as "Contextualization," viewing it as one of the pillars of MetaDocencia to guide our efforts in developing high-quality resources in Spanish from original material in other languages.
 
 This publication describes how we implemented a community-driven, systematic, and high-quality process that went beyond mere automatic translation or minimal human intervention.
 
@@ -42,7 +42,7 @@ Before starting the collaborative work, we conducted pilot tests and verified th
 
 
 ## Collaborative Contextualization
-At MetaDocencia, we set out to **experience the collaborative contextualization of the content**. To this end, we launched a specific [call through the Polen Project (in Spanish)](https://doi.org/10.5281/zenodo.12762151) for individuals who had joined MetaDocencia during [2022 (in Spanish)](https://www.metadocencia.org/post/ofertas_laborales/) and [2023 (in Spanish)](https://www.metadocencia.org/post/oferta_laboral_coordi2023/) calls. We also promoted the call during the Open Science Conversations to **extend the opportunity to Spanish-speaking individuals interested in participating in this process**.
+At MetaDocencia, we set out to **experience the collaborative contextualization of the content**. To this end, we launched a specific [call through the Polen Project (in Spanish)](https://doi.org/10.5281/zenodo.12762151) for individuals who had joined MetaDocencia during [2022 (in Spanish)](/post/ofertas_laborales/) and [2023 (in Spanish)](/post/oferta_laboral_coordi2023/) calls. We also promoted the call during the Open Science Conversations to **extend the opportunity to Spanish-speaking individuals interested in participating in this process**.
 
 **The Contextualization team consisted of 22 participants** who took on translation and review roles. They dedicated three weeks to contextualizing the material and more than three weeks to reviewing the translations. These details were shared during an initial training session, which reviewed the purpose and working mode, along with the community learning that accumulated over the weeks of “learning by doing.”
 
@@ -58,7 +58,7 @@ Questions that arose during the process were channeled [through Slack](https://w
 
 
 <p align="center">
-<img src="https://www.metadocencia.org/context-colab1.jpg" alt="Example of a Slack Message During the Contextualization Process at MetaDocencia" width="600px"/>
+<img src="/context-colab1.jpg" alt="Example of a Slack Message During the Contextualization Process at MetaDocencia" width="600px"/>
 <i><font size="-0.6">Example of a Slack Message During the Contextualization Process at MetaDocencia.</font></i>
 </p>
 
@@ -69,7 +69,7 @@ Among the agreements we reached were formats for translating proper names, maint
 The review work involved approving translations made by other team members or making necessary corrections and approving them on the Crowdin platform. It also included verifying links to websites in the text, correcting them if errors were detected, or suggesting more suitable alternatives for the Spanish-speaking context.
 
 <p align="center">
-<img src="https://www.metadocencia.org/context-colab2.jpg" alt="Another Example of Using Slack to Build Translation Agreements on Gender-Neutral Spanish." width="600px"/>
+<img src="/context-colab2.jpg" alt="Another Example of Using Slack to Build Translation Agreements on Gender-Neutral Spanish." width="600px"/>
 <i><font size="-0.6">Another Example of Using Slack to Build Translation Agreements on Gender-Neutral Spanish.</font></i>
 </p>
 
@@ -84,28 +84,28 @@ We are currently conducting a final edit of the content, adjusting the last deta
 
 We would like to **especially recognize and thank our Contextualization team**, made up of internal and external collaborators who combined their efforts and learnings to enrich the teaching and learning of Open Science in Spanish in this first iteration (in alphabetical order by first name):
 
-- [Alejandra Daniela Calero](https://www.metadocencia.org/en/authors/acalero/)
-- [Ariel Silvio Norberto Ramos](https://www.metadocencia.org/en/authors/aramos/)
-- [Gastón Klocker](https://www.metadocencia.org/en/authors/gklocker/)
-- [Jeremías Fabiano](https://www.metadocencia.org/en/authors/jfabiano/)
-- [Juan Pablo Barreyro](https://www.metadocencia.org/en/authors/jbarreyro/)
-- [Julián Buede](https://www.metadocencia.org/en/authors/jbuede/)
-- [Julieta Millán](https://www.metadocencia.org/en/authors/jmillan/)
-- [Julio Zetter Patiño](https://www.metadocencia.org/en/authors/jzetter/)
-- [Karina Formoso](https://www.metadocencia.org/en/authors/kformoso/)
-- [María Belén Allasia](https://www.metadocencia.org/en/authors/mallasia/)
-- [María Cristina Nanton](https://www.metadocencia.org/en/authors/mcnanton/)
-- [María Jimena Vera](https://www.metadocencia.org/en/authors/mvera/)
-- [Nicolás Palopoli](https://www.metadocencia.org/en/authors/npalopoli/)
-- [Laura Ación](https://www.metadocencia.org/en/authors/lacion/)
-- [Pablo Vázquez](https://www.metadocencia.org/en/authors/pvazquez/)
-- [Vanesa Ruiz](https://www.metadocencia.org/en/authors/vruiz/)
-- [Vanina Varni](https://www.metadocencia.org/en/authors/vvarni/)
-- [Jose Luis Villca Villegas](https://www.metadocencia.org/en/authors/jlvillca/)
-- [Paola Andrea Lefer](https://www.metadocencia.org/en/authors/plefer/)
-- [Romina Pendino](https://www.metadocencia.org/en/authors/rominapendino/)
-- [Sabrina López](https://www.metadocencia.org/en/authors/slopez/)
-- [Verónica Xhardez](https://www.metadocencia.org/en/authors/vxhardez/)
+- [Alejandra Daniela Calero](/en/author/alejandra-daniela-calero/)
+- [Ariel Silvio Norberto Ramos](/en/author/ariel-silvio-norberto-ramos/)
+- [Gastón Klocker](/en/author/gaston-klocker/)
+- [Jeremías Fabiano](/en/author/jeremias-fabiano/)
+- [Juan Pablo Barreyro](/en/author/juan-pablo-barreyro/)
+- [Julián Buede](/en/author/julian-buede/)
+- [Julieta Millán](/en/author/julieta-millan/)
+- [Julio Zetter Patiño](/en/author/julio-zetter-patino/)
+- [Karina Formoso](/en/author/karina-formoso/)
+- [María Belén Allasia](/en/author/maria-belen-allasia/)
+- [María Cristina Nanton](/en/author/maria-cristina-nanton/)
+- [María Jimena Vera](/en/author/maria-jimena-vera/)
+- [Nicolás Palopoli](/en/author/nicolas-palopoli/)
+- [Laura Ación](/en/author/laura-acion/)
+- [Pablo Vázquez](/en/author/pablo-vazquez/)
+- [Vanesa Ruiz](/en/author/vanesa-ruiz/)
+- [Vanina Varni](/en/author/vanina-varni/)
+- [Jose Luis Villca Villegas](/en/author/jose-luis-villca-villegas/)
+- [Paola Andrea Lefer](/en/author/paola-andrea-lefer/)
+- [Romina Pendino](/en/author/romina-pendino/)
+- [Sabrina López](/en/author/sabrna-lopez/)
+- [Verónica Xhardez](/en/author/veronica-xhardez/)
 
 ## Acknowledgments
 This publication was made possible by a grant from the Chan Zuckerberg Initiative (DOI: 10.5281/zenodo.7386372), NASA grants 80NSSC23K0854 (DOI: 10.5281/zenodo.8215455), 80NSSC23K0857 (DOI: 10.5281/zenodo.8250978), and 80NSSC23K0861 (DOI: 10.5281/zenodo.8212072), as well as grant DAF2021-239366 and grant DOI https://doi.org/10.37921/522107izqogv from the Chan Zuckerberg Initiative DAF, a donor-advised fund of Silicon Valley Community Foundation (Funder DOI 10.13039/100014989), and the grant “Open Cloud Collaborative Project for Latin America and Africa (the Catalyst Project)” from the same funder (DOI: https://doi.org/10.5281/zenodo.8431422).
