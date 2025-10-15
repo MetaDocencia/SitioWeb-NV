@@ -13,7 +13,7 @@ sections:
       title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">About us</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
-          MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world.
+          We are a community of persons and organizations working globally from Latin America since 2020.
         </p>
 
         <!-- Botones centrados (3) -->
