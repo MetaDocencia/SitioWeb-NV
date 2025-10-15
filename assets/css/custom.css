@@ -630,3 +630,61 @@ section#solutions.features-unify .item * {
   outline-offset: 2px;
 }
 
+/* === FIN del CSS existente ================================================= */
+
+
+
+/* ==========================================================================
+   FIX iOS Safari para imágenes de fondo en héroes
+   - No rompe desktop
+   - Intervención mínima, al final del archivo
+   -------------------------------------------------------------------------- */
+
+/* 1) Altura real en iOS con unidades "svh" (fallback: ya tenés vh arriba) */
+.hero-max-bounded,
+.hero-max-bounded .hero-bg {
+  /* no tocamos el layout existente; añadimos una altura más robusta */
+  min-height: 60svh;
+  max-height: 92svh;
+}
+
+/* 2) Base segura: aseguremos pintado correcto del fondo (mobile/ táctil) */
+.hero,
+.hero .hero-bg,
+.hero-max-bounded .hero-bg,
+.hero-bounded .hero-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+/* 3) iOS Safari: evitar background-attachment: fixed y normalizar overlays */
+@supports (-webkit-touch-callout: none) {
+  /* forzar scroll para evitar bug de pintura del background */
+  .hero,
+  .hero .hero-bg,
+  .hero-max-bounded .hero-bg,
+  .hero-bounded .hero-bg {
+    background-attachment: scroll !important;
+  }
+
+  /* overlays: evitar que "tapen" el fondo en iOS */
+  .hero::before,
+  .hero .hero-overlay,
+  .hero-max-bounded::before,
+  .hero-max-bounded .hero-overlay,
+  .hero-bounded::before,
+  .hero-bounded .hero-overlay {
+    mix-blend-mode: normal !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
+/* 4) Pequeño refuerzo para móviles en general (sin afectar desktop) */
+@media (max-width: 768px) {
+  .hero,
+  .hero-max-bounded,
+  .hero-bounded {
+    min-height: 44svh; /* consistente con tu 44vh, pero robusto en iOS */
+  }
+}
