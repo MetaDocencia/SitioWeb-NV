@@ -35,7 +35,7 @@ sections:
             brightness: 0.5
           size: cover
           position: center
-          parallax: true
+          parallax: false
         text_color_light: true
   # === QUIÉNES SOMOS / QUÉ HACEMOS (sin fondo gris) ===
 
