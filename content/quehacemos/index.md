@@ -27,34 +27,6 @@ sections:
           parallax: false
         text_color_light: true
 
-  # === ESTILOS LOCALES para limitar el alto del HERO ===
-  - block: markdown
-    id: estilos-hero-que-hacemos
-    content:
-      title: ""
-      text: |
-        <style>
-          /* ===== Qué hacemos: acotar alto del hero y reducir padding interno ===== */
-          section#hero-que-hacemos.hero-max-bounded,
-          section#hero-que-hacemos.hero-max-bounded .hero-bg {
-            max-height: 90vh;   /* replicado de Home */
-            min-height: 70vh;   /* replicado de Home */
-          }
-
-          /* Móvil: achicar un poco más y recortar padding interno */
-          @media (max-width: 768px) {
-            section#hero-que-hacemos.hero-max-bounded,
-            section#hero-que-hacemos.hero-max-bounded .hero-bg {
-              max-height: 90vh;
-              min-height: 44vh;
-            }
-            section#hero-que-hacemos .container {
-              padding-top: .75rem !important;
-              padding-bottom: .75rem !important;
-            }
-          }
-        </style>
-
   # ---------- PILARES ----------
   - block: features
     id: pilares
@@ -389,5 +361,33 @@ sections:
         </a>
   
         {{< /cta_fullwidth >}}
+    
+  # === ESTILOS LOCALES para limitar el alto del HERO ===
+  - block: markdown
+    id: estilos-hero-que-hacemos
+    content:
+      title: ""
+      text: |
+        <style>
+          /* ===== Qué hacemos: acotar alto del hero y reducir padding interno ===== */
+          section#hero-que-hacemos.hero-max-bounded,
+          section#hero-que-hacemos.hero-max-bounded .hero-bg {
+            max-height: 90vh;   /* replicado de Home */
+            min-height: 70vh;   /* replicado de Home */
+          }
+
+          /* Móvil: achicar un poco más y recortar padding interno */
+          @media (max-width: 768px) {
+            section#hero-que-hacemos.hero-max-bounded,
+            section#hero-que-hacemos.hero-max-bounded .hero-bg {
+              max-height: 90vh;
+              min-height: 44vh;
+            }
+            section#hero-que-hacemos .container {
+              padding-top: .75rem !important;
+              padding-bottom: .75rem !important;
+            }
+          }
+        </style>
 
 ---
