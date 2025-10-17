@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
 {{ $subtitle := cond $isEN "We conduct and openly share research that informs and supports open science and education in Latin America. " "Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia." }}
-{{ $btn := cond $isEN "DOI" "DOI" }}
+{{ $btn := cond $isEN "View publication" "Ver publicación" }}
 {{ $empty := cond $isEN "No publications loaded yet." "No hay publicaciones cargadas aún." }}
 
 <section class="mx-auto px-6 py-10 max-w-4xl">
