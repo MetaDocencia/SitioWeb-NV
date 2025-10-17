@@ -22,8 +22,8 @@ items:
     outlet: "Jesica Formoso, Nicolás Palópoli, Laura Acion, Debora Burín"
     title: "Design and Validation of the Online Teaching Self-Efficacy Questionnaire [Diseño y validación del Cuestionario de Autoeficacia Docente Online]"
     summary: "Teaching self-efficacy refers to teachers’ confidence in their ability to teach effectively and manage student learning. This study developed and validated a 9-item self-report questionnaire to assess online teaching self-efficacy among secondary, tertiary, and university educators, showing solid construct validity and reliability."
-    url: "https://doi.org /10.29393/PA72-4DVFB40004"
-    btn: "https://doi.org /10.29393/PA72-4DVFB40004" 
+    url: "https://revistas.udec.cl/index.php/paideia/article/view/18404"
+    btn: "https://doi.org/10.29393/PA72-4DVFB40004" 
 
   - date: "2023"
     outlet: "Laura Ación, Mariela Rajngewerc, Gregory Randall, Lorena Etcheverry"
