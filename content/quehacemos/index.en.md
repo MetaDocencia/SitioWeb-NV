@@ -332,23 +332,17 @@ sections:
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
-  
-  # --- Academic publications (gris un poco más oscuro) ---
+
+    
+    # --- Academic publications (gris un poco más oscuro) ---
   - block: markdown
     id: research-pubs
     content:
       text: |
         <style>
-          /* Eliminar separación y igualar fondo con el CTA */
-          section#research-pubs { 
-            margin: 0 !important; padding: 0 !important; border: 0 !important;
-            background: #E5E7EB !important;
-          }
-          /* Pegar contra la sección siguiente */
-          section#research-pubs + section#prensa { margin-top: 0 !important; }
-          /* Por si el shortcode agrega márgenes propios */
-          section#research-pubs *:first-child { margin-top: 0 !important; }
-          section#research-pubs *:last-child  { margin-bottom: 0 !important; }
+          /* Eliminar separación vertical entre ambos sections (sin tocar el layout) */
+          section#research-pubs { margin-bottom: 0 !important; }
+          section#prensa { margin-top: -1px !important; } /* solapa 1px para ocultar cualquier “hairline” */
         </style>
   
         {{< cta_fullwidth
@@ -371,10 +365,6 @@ sections:
         </a>
   
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        margin: [0, 0, 0, 0]
-        padding: [0, 0, 0, 0]
   
   # ======================
   #  FINAL SECTION: MetaDocencia in the Media
@@ -383,16 +373,6 @@ sections:
     id: prensa
     content:
       text: |
-        <style>
-          /* Eliminar separación y igualar fondo con el CTA */
-          section#prensa { 
-            margin: 0 !important; padding: 0 !important; border: 0 !important;
-            background: #F3F4F6 !important;
-          }
-          section#prensa *:first-child { margin-top: 0 !important; }
-          section#prensa *:last-child  { margin-bottom: 0 !important; }
-        </style>
-  
         {{< cta_fullwidth
             id="prensa"
             title="MetaDocencia in the Media"
@@ -413,9 +393,5 @@ sections:
         </a>
   
         {{< /cta_fullwidth >}}
-    design:
-      spacing:
-        margin: [0, 0, 0, 0]
-        padding: [0, 0, 0, 0]
 
 ---
