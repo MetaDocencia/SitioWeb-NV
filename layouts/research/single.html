@@ -30,11 +30,23 @@
               {{ with .summary }}
                 <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . }}</p>
               {{ end }}
+
+              {{/* ===== Botón con texto personalizado por item ===== */}}
+              {{/* Prioridad: .btn > .btn_en/.btn_es (según idioma) > $btn por defecto */}}
+              {{ $itemBtn := $btn }}
+              {{ with .btn }}{{ $itemBtn = . }}{{ end }}
+              {{ if and (eq $itemBtn $btn) $isEN }}
+                {{ with .btn_en }}{{ $itemBtn = . }}{{ end }}
+              {{ end }}
+              {{ if and (eq $itemBtn $btn) (not $isEN) }}
+                {{ with .btn_es }}{{ $itemBtn = . }}{{ end }}
+              {{ end }}
+
               {{ with .url }}
                 <a href="{{ . }}" target="_blank" rel="noopener"
                    class="inline-flex items-center mt-3 rounded-md px-3 py-1 text-sm font-semibold
                           bg-gray-900 text-white dark:bg-white dark:text-gray-900">
-                  {{ $btn }}
+                  {{ $itemBtn }}
                 </a>
               {{ end }}
             </div>
