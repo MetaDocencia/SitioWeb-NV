@@ -332,18 +332,25 @@ sections:
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
-
+  
   # --- Academic publications (gris un poco más oscuro) ---
   - block: markdown
     id: research-pubs
     content:
       text: |
         <style>
-          /* Quitar espacio entre research y prensa */
-          section#research-pubs { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-          section#prensa        { margin-top: 0 !important;  padding-top: 0 !important;  }
+          /* Eliminar separación y igualar fondo con el CTA */
+          section#research-pubs { 
+            margin: 0 !important; padding: 0 !important; border: 0 !important;
+            background: #E5E7EB !important;
+          }
+          /* Pegar contra la sección siguiente */
+          section#research-pubs + section#prensa { margin-top: 0 !important; }
+          /* Por si el shortcode agrega márgenes propios */
+          section#research-pubs *:first-child { margin-top: 0 !important; }
+          section#research-pubs *:last-child  { margin-bottom: 0 !important; }
         </style>
-
+  
         {{< cta_fullwidth
             id="research-pubs"
             title="Academic publications"
@@ -356,15 +363,19 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-
+  
         <a href="/en/research"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
           Explore our academic publications here
         </a>
-
+  
         {{< /cta_fullwidth >}}
-
+    design:
+      spacing:
+        margin: [0, 0, 0, 0]
+        padding: [0, 0, 0, 0]
+  
   # ======================
   #  FINAL SECTION: MetaDocencia in the Media
   # ======================
@@ -372,6 +383,16 @@ sections:
     id: prensa
     content:
       text: |
+        <style>
+          /* Eliminar separación y igualar fondo con el CTA */
+          section#prensa { 
+            margin: 0 !important; padding: 0 !important; border: 0 !important;
+            background: #F3F4F6 !important;
+          }
+          section#prensa *:first-child { margin-top: 0 !important; }
+          section#prensa *:last-child  { margin-bottom: 0 !important; }
+        </style>
+  
         {{< cta_fullwidth
             id="prensa"
             title="MetaDocencia in the Media"
@@ -384,13 +405,17 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-
+  
         <a href="/en/prensas/"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
           See mentions
         </a>
-
+  
         {{< /cta_fullwidth >}}
+    design:
+      spacing:
+        margin: [0, 0, 0, 0]
+        padding: [0, 0, 0, 0]
 
 ---
