@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $isEN := eq .Site.Language.Lang "en" }}
+{{ $subtitle := cond $isEN "We conduct and openly share research that informs and supports open science and education in Latin America. " "Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia." }}
+{{ $btn := cond $isEN "DOI" "DOI" }}
+{{ $empty := cond $isEN "No publications loaded yet." "No hay publicaciones cargadas aún." }}
+
+<section class="mx-auto px-6 py-10 max-w-4xl">
+
+  <!-- Title -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ $subtitle }}</p>
+
+  <!-- List -->
+  <div class="mt-6 divide-y divide-gray-200 dark:divide-gray-800">
+    {{ $items := .Params.items }}
+    {{ if $items }}
+      {{ range $items }}
+        <article class="py-6">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+
+            <!-- Left column: date + outlet -->
+            <div class="sm:w-48 shrink-0 text-sm sm:mt-1">
+              <div class="text-gray-500 dark:text-gray-400">{{ .date }}</div>
+              <div class="text-gray-700 dark:text-gray-300">{{ .outlet }}</div>
+            </div>
+
+            <!-- Right column: content -->
+            <div class="min-w-0">
+              <h2 class="text-xl font-semibold leading-snug">{{ .title }}</h2>
+              {{ with .summary }}
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . }}</p>
+              {{ end }}
+              {{ with .url }}
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center mt-3 rounded-md px-3 py-1 text-sm font-semibold
+                          bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+                  {{ $btn }}
+                </a>
+              {{ end }}
+            </div>
+
+          </div>
+        </article>
+      {{ end }}
+    {{ else }}
+      <p class="text-sm text-gray-500 dark:text-gray-400">{{ $empty }}</p>
+    {{ end }}
+  </div>
+
+</section>
+
+<!-- Minimal styles for consistency with /post -->
+<style>
+  .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
+  .prose img { height: auto; }
+</style>
+{{ end }}
