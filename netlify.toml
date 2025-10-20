@@ -60,7 +60,7 @@
 # Redirecciones de autores (de /authors/ → /author/)
 [[redirects]]
   from = "/authors/npalopoli/"
-  to = "/author/npalopoli/"
+  to = "/author/nicolas-palopoli/"
   status = 301
   force = true
 
