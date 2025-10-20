@@ -56,3 +56,16 @@
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
     debug = true
+
+# Redirecciones de autores (de /authors/ → /author/)
+[[redirects]]
+  from = "/authors/npalopoli/"
+  to = "/author/npalopoli/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/authors/SEGUNDO-AUTOR/"
+  to = "/author/SEGUNDO-AUTOR/"
+  status = 301
+  force = true
