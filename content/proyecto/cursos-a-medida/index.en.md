@@ -6,25 +6,22 @@ tags:
   - Formación
   - Proyectos
 authors:
-  - abellini
-  - andreasancheztapia
-  - beatrizmilz
-  - claudianoneto
-  - elianagonzalez
-  - eliocampitelli
+  - alebellini
+  - andrea
+  - beatriz
+  - claudiano
+  - eliocamp
   - ernestomirt
   - irenevazano
-  - ivanpoggio
+  - ivan
   - jformoso
   - jbuede
   - lacion
   - laurel
-  - mgayol
   - mcnanton
   - pazmiguez
-  - okus
-  - maxwelloliveira
-  - monicaalonso
+  - mrajngewerc
+  - monialonso
   - npalopoli
   - paocorrales
   - patriloto
