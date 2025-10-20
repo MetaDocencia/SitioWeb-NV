@@ -65,7 +65,7 @@
   force = true
 
 [[redirects]]
-  from = "/authors/SEGUNDO-AUTOR/"
-  to = "/author/SEGUNDO-AUTOR/"
+  from = "/authors/laura-acion/"
+  to = "/author/laura-acion/"
   status = 301
   force = true
