@@ -1,6 +1,6 @@
 ---
-title: "Formación en Ciencia Abierta"
-summary: "Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta."
+title: "Contextualized Open Science Training"
+summary: "We design and deliver training cohorts in Spanish to advance the principles and tools of Open Science, with support from NASA, and for Latin America."
 date: 2025-09-23
 tags:
   - Formación
@@ -20,11 +20,10 @@ Open Science serves our mission to build scientific and technical capacities wit
 We have over five years of experience training the Latin American community in both soft skills and technical knowledge aligned with Open Science.
 A key milestone was the  Spanish contextualization of NASA Open Science content, followed by its adaptation into free, synchronous, six-week online cohorts with active lessons, peer-to-peer discussions, presentations of local initiatives, and dual certification (NASA + MetaDocencia).
 
-## Más información
-* Grants NASA en [Zenodo](https://zenodo.org/records/8215455) y [OGrants](https://www.ogrants.org/grants/team_ols_2023) 
-* Blogpost [2024 Report](https://mdnv.netlify.app/en/post/2025/20250313-reporte2024/)
-* [Post “10 puntos” (NASA TOPS) — marco, aliados y alcance](https://mdnv.netlify.app/post/nasatops10puntos/) 
-* [Justicia epistémica y ciencia abierta en América Latina y el Caribe: El caso de MetaDocencia. Capítulo del libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio “Dominique Babini”](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
-* Paper More than a NASA Badge
-* [Reporte datos en Zenodo](https://zenodo.org/records/15882571) 
+## More Information
+* NASA grants on [Zenodo](https://zenodo.org/records/8215455) and [OGrants](https://www.ogrants.org/grants/team_ols_2023) 
+* Blog post [2024 Report](/en/post/2025/20250313-reporte2024/)
+* Blog post ["We started to transform toward Open Science together with NASA: 10 points!"](/en/post/nasatops/) 
+* [Epistemic Justice and Open Science in Latin America and the Caribbean: The Case of MetaDocencia (“Dominique Babini” Award)](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
+* [Data report in Zenodo](https://zenodo.org/records/15882571) 
 
