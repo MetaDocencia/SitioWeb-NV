@@ -20,7 +20,7 @@ items:
 
   - date: "2025"
     outlet: "Jesica Formoso, María Paz Míguez, Nicolás Palopoli, María Ángela Petrizzo, Laura Ación"
-    title: "Epistemic Justice and Open Science in Latin America and the Caribbean: The Case of MetaDocencia [Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia]"
+    title: "Epistemic Justice and Open Science in Latin America and the Caribbean: The Case of MetaDocencia (“Dominique Babini” Award) [Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia (Premio “Dominique Babini”)]"
     summary: "Open science can advance epistemic justice in Latin America and the Caribbean only when it is context-aware, community-driven, and supported by fair governance and funding. The MetaDocencia case shows how collaborative contextualization, equitable workflows, and regional networks can redistribute epistemic power and make science more inclusive and impactful."
     url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
     btn: "ISBN: 978-631-308-049-6"
