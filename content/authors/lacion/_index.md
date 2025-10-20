@@ -1,7 +1,6 @@
 ---
 title: "Laura Acion"
 name: "Laura Ación"
-slug: "laura-acion"
 email: "laura.acion@metadocencia.org"
 
 role: "Co-Directora Ejecutiva"
