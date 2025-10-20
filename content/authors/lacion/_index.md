@@ -3,45 +3,45 @@ title: "Laura Ación"
 bio: ""
 education:
   courses:
-  - course: "Doctorado en Bioestadística"
-    institution: "University of Iowa"
+  - course: Doctorado en Bioestadística
+    institution: University of Iowa
     year: 2012
-  - course: "Master en Salud Pública"
-    institution: "University of Iowa"
+  - course: Master en Salud Pública
+    institution: University of Iowa
     year: 2009
-  - course: "Master en Bioestadística"
-    institution: "University of Iowa"
+  - course: Master en Bioestadística
+    institution: University of Iowa
     year: 2004
-  - course: "Licenciatura en Biología"
-    institution: "Universidad de Buenos Aires"
+  - course: Licenciatura en Biología
+    institution: Universidad de Buenos Aires
     year: 2002
 email: "laura.acion@metadocencia.org"
 interests:
-- "Ciencias de datos de salud"
-- "Inteligencia artificial responsable"
-- "Ciencia abierta"
+- Ciencias de datos de salud
+- Inteligencia artificial responsable
+- Ciencia abierta
 name: Laura Ación
 weight: 1
 organizations:
-- name: "Instituto del Cálculo - CONICET"
-  url: "http://www.ic.fcen.uba.ar/en/"
-role: "Co-Directora Ejecutiva"
+- name: Instituto del Cálculo - CONICET
+  url: http://www.ic.fcen.uba.ar/en/
+role: Co-Directora Ejecutiva
 social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:laura.acion@metadocencia.org"
 - icon: twitter
   icon_pack: fab
-  link: "https://twitter.com/_lacion_"
+  link: https://twitter.com/_lacion_
 - icon: globe
   icon_pack: fas
-  link: "http://lacion.rbind.io/"
+  link: http://lacion.rbind.io/
 - icon: orcid
   icon_pack: fab
-  link: "https://orcid.org/0000-0001-5213-6012"
+  link: https://orcid.org/0000-0001-5213-6012
 - icon: github
   icon_pack: fab
-  link: "https://github.com/lauracion"
+  link: https://github.com/lauracion
 
 superuser: false
 user_groups:
