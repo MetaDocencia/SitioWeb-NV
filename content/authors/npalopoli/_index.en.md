@@ -1,5 +1,7 @@
 ---
 title: "Nicolás Palopoli"
+aliases:
+  - /en/authors/npalopoli/
 bio: ""
 education:
   courses:
@@ -55,4 +57,5 @@ Since 2008 he has been teaching undergraduate, postgraduate and extension course
 Nicolás joined MetaDocencia since its first week in March 2020. He currently participates in the general coordination and is chair of the advisory committee. 
 
 Inside the team, Nico has won the Zen Award because with his calm wisdom he can cope even with complexity, maintaining the axis, good mood and cordiality in any situation and circumstance.
+
 
