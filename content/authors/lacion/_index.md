@@ -56,7 +56,7 @@ user_groups:
 
 Laura es investigadora adjunta del CONICET en la Universidad de Buenos Aires donde dirige el Co-Laboratorio de Uso Responsable de Datos. Tiene más de 50 publicaciones académicas revisadas por pares y ha recibido financiación de prestigiosas agencias internacionales tales como la NASA, el NIH y la CZI. 
 
-Tiene más de dos décadas de experiencia ofreciendo servicios de consultoria y también experiencia trabajando en forma remota desde Buenos Aires para el exterior desde 2006. Tomó clases universitarias virtuales desde entonces y su primera docencia universitaria de grado y postgrado también fue en forma virtual, en 2013, para estudiantes que estaban en EEUU.  
+Tiene más de dos décadas de experiencia ofreciendo servicios de consultoría y también experiencia trabajando en forma remota desde Buenos Aires para el exterior desde 2006. Tomó clases universitarias virtuales desde entonces y su primera docencia universitaria de grado y postgrado también fue en forma virtual, en 2013, para estudiantes que estaban en EEUU.  
 
 Desde 2017 ha ocupado lugares de liderazgo o co-creado proyectos colectivos relacionados a la Ciencia Abierta locales, regionales e internacionales (por ejemplo, R-Ladies Global, LatinR, useR!, OLS, Code for Science & Society). Laura también se certificó como instructora y entrenadora de instructores en The Carpentries y tiene experiencia desarrollando cursos masivos de enseñanza online para una plataforma estadounidense (cuya marca no nombramos por problemas éticos de la compañía). En marzo 2020, Laura co-fundó MetaDocencia.
 
