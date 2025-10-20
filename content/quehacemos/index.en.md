@@ -234,7 +234,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "94"
+        - statistic: "34"
           description: "editions (388 hours)"
         - statistic: "1,500+"
           description: "people from 33 countries trained"
