@@ -209,7 +209,7 @@ sections:
             We facilitate a hands-on Spanish-language program that equips participants with pedagogical skills, amplifying learning and collective impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/en/proyecto/formacion-para-ensenar/">Learn more →</a>
+               href="/en/proyecto/formacion-para-formar/">Learn more →</a>
 
         - name: "Skills training"
           description: |
