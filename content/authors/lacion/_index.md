@@ -1,51 +1,58 @@
 ---
-title: "Laura Ación"
-bio: ""
+title: "Laura Acion"
+name: "Laura Ación"
+slug: "laura-acion"
+email: "laura.acion@metadocencia.org"
+
+role: "Co-Directora Ejecutiva"
+
+organizations:
+  - name: "Instituto del Cálculo - CONICET"
+    url: "http://www.ic.fcen.uba.ar/en/"
+
+interests:
+  - "Ciencias de datos de salud"
+  - "Inteligencia artificial responsable"
+  - "Ciencia abierta"
+
 education:
   courses:
-  - course: Doctorado en Bioestadística
-    institution: University of Iowa
-    year: 2012
-  - course: Master en Salud Pública
-    institution: University of Iowa
-    year: 2009
-  - course: Master en Bioestadística
-    institution: University of Iowa
-    year: 2004
-  - course: Licenciatura en Biología
-    institution: Universidad de Buenos Aires
-    year: 2002
-email: "laura.acion@metadocencia.org"
-interests:
-- Ciencias de datos de salud
-- Inteligencia artificial responsable
-- Ciencia abierta
-name: Laura Ación
-weight: 1
-organizations:
-- name: Instituto del Cálculo - CONICET
-  url: http://www.ic.fcen.uba.ar/en/
-role: Co-Directora Ejecutiva
+    - course: "Doctorado en Bioestadística"
+      institution: "University of Iowa"
+      year: 2012
+    - course: "Master en Salud Pública"
+      institution: "University of Iowa"
+      year: 2009
+    - course: "Master en Bioestadística"
+      institution: "University of Iowa"
+      year: 2004
+    - course: "Licenciatura en Biología"
+      institution: "Universidad de Buenos Aires"
+      year: 2002
+
 social:
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:laura.acion@metadocencia.org"
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/_lacion_
-- icon: globe
-  icon_pack: fas
-  link: http://lacion.rbind.io/
-- icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0001-5213-6012
-- icon: github
-  icon_pack: fab
-  link: https://github.com/lauracion
-superuser: false
+  - icon: envelope
+    icon_pack: fas
+    link: "mailto:laura.acion@metadocencia.org"
+  - icon: twitter
+    icon_pack: fab
+    link: "https://twitter.com/_lacion_"
+  - icon: globe
+    icon_pack: fas
+    link: "http://lacion.rbind.io/"
+  - icon: orcid
+    icon_pack: fab
+    link: "https://orcid.org/0000-0001-5213-6012"
+  - icon: github
+    icon_pack: fab
+    link: "https://github.com/lauracion"
+
 user_groups:
--  Equipo y Consejo Asesor
+  - "Equipo y Consejo Asesor"
+
+weight: 1
 ---
+
 
 **Experiencia y trayectoria**
 
