@@ -235,7 +235,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "94"
+        - statistic: "34"
           description: "ediciones (388 horas)"
         - statistic: "+1500"
           description: "personas de 33 países formadas"
