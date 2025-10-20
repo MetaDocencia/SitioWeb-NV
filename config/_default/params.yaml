@@ -13,9 +13,9 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo landing page theme powered by Hugo Blox website builder.'
-    twitter: 'GetResearchDev'
+    org_name: 'MetaDocencia'
+    description: 'MetaDocencia está formada por personas y organizaciones que trabajan construyendo capacidades locales para transformar la ciencia global. Hacemos crecer el conocimiento en red, desde América Latina hacia el mundo.'
+    twitter: 'metadocencia'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
