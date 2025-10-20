@@ -18,6 +18,13 @@ items:
     url: "https://doi.org/10.31222/osf.io/9pru8_v1"
     btn: "https://doi.org/10.31222/osf.io/9pru8_v1"
 
+  - date: "2025"
+    outlet: "Jesica Formoso, María Paz Míguez, Nicolás Palopoli, María Ángela Petrizzo, Laura Ación"
+    title: "Epistemic Justice and Open Science in Latin America and the Caribbean: The Case of MetaDocencia [Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia]"
+    summary: "Open science can advance epistemic justice in Latin America and the Caribbean only when it is context-aware, community-driven, and supported by fair governance and funding. The MetaDocencia case shows how collaborative contextualization, equitable workflows, and regional networks can redistribute epistemic power and make science more inclusive and impactful."
+    url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
+    btn: "ISBN: 978-631-308-049-6"
+    
   - date: "2024"
     outlet: "Jesica Formoso, Nicolás Palópoli, Laura Acion, Debora Burín"
     title: "Design and Validation of the Online Teaching Self-Efficacy Questionnaire [Diseño y validación del Cuestionario de Autoeficacia Docente Online]"
@@ -39,11 +46,5 @@ items:
     url: "https://discovery.ucl.ac.uk/id/eprint/10162721/"
     btn: "https://doi.org/10.52041/iase.icots11.t9a3"
 
-  - date: "2025"
-    outlet: "Jesica Formoso, María Paz Míguez, Nicolás Palopoli, María Ángela Petrizzo, Laura Ación"
-    title: "Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia"
-    summary: "Open science can advance epistemic justice in Latin America and the Caribbean only when it is context-aware, community-driven, and supported by fair governance and funding. The MetaDocencia case shows how collaborative contextualization, equitable workflows, and regional networks can redistribute epistemic power and make science more inclusive and impactful."
-    url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
-    btn: "ISBN: 978-631-308-049-6"
 
 ---
