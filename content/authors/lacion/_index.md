@@ -1,19 +1,6 @@
 ---
-title: "Laura Acion"
-name: "Laura Ación"
-email: "laura.acion@metadocencia.org"
-
-role: "Co-Directora Ejecutiva"
-
-organizations:
-  - name: "Instituto del Cálculo - CONICET"
-    url: "http://www.ic.fcen.uba.ar/en/"
-
-interests:
-  - "Ciencias de datos de salud"
-  - "Inteligencia artificial responsable"
-  - "Ciencia abierta"
-
+title: "Laura Ación"
+bio: ""
 education:
   courses:
     - course: "Doctorado en Bioestadística"
@@ -28,7 +15,17 @@ education:
     - course: "Licenciatura en Biología"
       institution: "Universidad de Buenos Aires"
       year: 2002
-
+email: "laura.acion@metadocencia.org"
+interests:
+  - "Ciencias de datos de salud"
+  - "Inteligencia artificial responsable"
+  - "Ciencia abierta"
+name: Laura Ación
+weight: 1
+organizations:
+  - name: "Instituto del Cálculo - CONICET"
+    url: "http://www.ic.fcen.uba.ar/en/"
+role: "Co-Directora Ejecutiva"
 social:
   - icon: envelope
     icon_pack: fas
@@ -46,10 +43,10 @@ social:
     icon_pack: fab
     link: "https://github.com/lauracion"
 
+superuser: false
 user_groups:
-  - "Equipo y Consejo Asesor"
+- Equipo y Consejo Asesor
 
-weight: 1
 ---
 
 
