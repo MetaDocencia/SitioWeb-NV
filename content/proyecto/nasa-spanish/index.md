@@ -22,9 +22,8 @@ En esta trayectoria destaca  la contextualización e implementación en español
 
 ## Más información
 * Grants NASA en [Zenodo](https://zenodo.org/records/8215455) y [OGrants](https://www.ogrants.org/grants/team_metadocencia_2023) 
-* Blogpost [Reporte 2024](https://mdnv.netlify.app/post/2025/20250313-reporte2024/)
-* [Post “10 puntos” (NASA TOPS) — marco, aliados y alcance](https://mdnv.netlify.app/post/nasatops10puntos/) 
+* Blogpost [Reporte 2024](/post/2025/20250313-reporte2024/)
+* Blogpost [“Arrancamos a transformarnos hacia la Ciencia Abierta junto con la NASA: ¡10 puntos!"](/post/nasatops10puntos/) 
 * [Justicia epistémica y ciencia abierta en América Latina y el Caribe: El caso de MetaDocencia. Capítulo del libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio “Dominique Babini”](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
-* Paper More than a NASA Badge
 * [Reporte datos en Zenodo](https://zenodo.org/records/15882571) 
 
