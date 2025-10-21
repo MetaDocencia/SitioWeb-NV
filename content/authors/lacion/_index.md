@@ -1,6 +1,6 @@
 ---
 title: "Laura Ación"
-alias:
+aliases:
   - /authors/lacion/
 bio: ""
 education:
