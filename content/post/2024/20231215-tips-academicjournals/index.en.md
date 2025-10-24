@@ -42,11 +42,11 @@ Recently, MetaDocencia had the enormous luck to go through an excellent experien
 
 It all started when Charlotte Payne, Editor for Nature Human Behaviour, who honors MetaDocencia by co-authoring this post (yes, we are very excited to have her!), was preparing “[Navigating the AI frontier](https://www.nature.com/nathumbehav/volumes/7/issues/11)”, Nature Human Behaviour issue that focused on artificial intelligence. Charlotte was looking to have authors from all over the world in the issue and found the following tweet:
 
-<img src="https://www.metadocencia.org/img/tweet-revistas.jpg" alt="Laura Acion's Tweet on AI that captured Nature's editor's eye" width="600px"/>
+<img src="/img/tweet-revistas.jpg" alt="Laura Acion's Tweet on AI that captured Nature's editor's eye" width="600px"/>
 
 Charlotte was one of the 15 views of this tweet that ended up in a paper in Nature Human Behaviour about artificial intelligence and open science 🤯 Source:[https://twitter.com/_lacion_/status/1679214269496279040](https://twitter.com/_lacion_/status/1679214269496279040)
 
-Charlotte read the whole thread, and found it compelling - she wanted to know more and felt that the readership of the journal would be interested in Laura’s views, too. She looked at Laura’s personal website and Google Scholar page to find out a bit more about her interests and expertise. She then emailed Laura for a short call to find out if she was interested in having an article commissioned at the intersection of artificial intelligence, open science, and ethics. Laura was highly interested, and you can read the rest of that story in this post: [https://www.metadocencia.org/en/post/ai-nature/](https://www.metadocencia.org/en/post/ai-nature/).
+Charlotte read the whole thread, and found it compelling - she wanted to know more and felt that the readership of the journal would be interested in Laura’s views, too. She looked at Laura’s personal website and Google Scholar page to find out a bit more about her interests and expertise. She then emailed Laura for a short call to find out if she was interested in having an article commissioned at the intersection of artificial intelligence, open science, and ethics. Laura was highly interested, and you can read the rest of that story in this post: [/en/post/ai-nature/](/en/post/ai-nature/).
 
 One key to this happy ending was that we could deliver the piece by the timeline that Charlotte needed. During our exchanges with Charlotte, we agreed on having access to a link to share our production openly, as the journal did not warrant free open access, and paying to publish it openly was not affordable to us. 
 
