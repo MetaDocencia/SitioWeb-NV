@@ -32,7 +32,7 @@ authors:
 
 At MetaDocencia, we understand inclusion implies listening to, respecting, and valuing all persons as peers, with power over decisions and budgets. We know this is not a universal definition of inclusion. However, when this does not happen, those of us minoritized tend to become exhausted and feel undervalued, potentially leading to disengagement. In this post, we share our experiences over decades of being part of different minorities in diverse international projects. Sadly, many of these projects lost the value of what we could contribute because the number of pyrrhic battles in a lifetime is finite.
 
-***This is the first of a 2-part blog post series that we hope will make individuals representing minorities in your group or project feel valued.** Read [part 2 in this link](https://www.metadocencia.org/en/post/2024/20241122-empowerment-inclusion-2/) or access the complete article on our Zenodo page here: [https://doi.org/10.5281/zenodo.14509713](https://doi.org/10.5281/zenodo.14509713)* 
+***This is the first of a 2-part blog post series that we hope will make individuals representing minorities in your group or project feel valued.** Read [part 2 in this link](/en/post/2024/20241122-empowerment-inclusion-2/) or access the complete article on our Zenodo page here: [https://doi.org/10.5281/zenodo.14509713](https://doi.org/10.5281/zenodo.14509713)* 
 
 ## Who will Find this Publication Most Useful?
 This could be of interest if you:
@@ -62,9 +62,9 @@ But if including someone seems impossible and they do not participate much or al
 
 **Through accumulated experience, we have finely tuned our detector to recognize if we are considered colleagues and peers versus being regarded as minoritized voices to be listened to for the relevant political correctness of the moment.** We repeatedly stopped participating in specific spaces, only to receive messages later saying: “We miss your voice.” It is sad to receive such messages after we have decided to dedicate our time to other projects where we are effectively recognized as peers.
 
-**Below, we share some actionable approaches to active care that you can take to help marginalized persons build trust, value their individuality, protect their identity, and promote their participation as key actions to foster empowerment through inclusion. Follow the link [to part 2](https://www.metadocencia.org/en/post/2024/20241122-empowerment-inclusion-2/) in this series for actionables to win at this inclusion bingo:** 
+**Below, we share some actionable approaches to active care that you can take to help marginalized persons build trust, value their individuality, protect their identity, and promote their participation as key actions to foster empowerment through inclusion. Follow the link [to part 2](/en/post/2024/20241122-empowerment-inclusion-2/) in this series for actionables to win at this inclusion bingo:** 
 
-![Screenshot of a bingo card including the options: "listen as a peer", "avoid silence as response", "support those who speak up", "trust the lived experience", "avoid being condescending", "make up for lost opportunities", "take responsibility and apologize", "budget adequately for minorities", "be transparent in recruitment and promotions", "have a trained code of conduct committee", "acknowledge all contributions", including MetaDocencia's logo.](https://www.metadocencia.org/img/bingo-inclusion.jpg) 
+![Screenshot of a bingo card including the options: "listen as a peer", "avoid silence as response", "support those who speak up", "trust the lived experience", "avoid being condescending", "make up for lost opportunities", "take responsibility and apologize", "budget adequately for minorities", "be transparent in recruitment and promotions", "have a trained code of conduct committee", "acknowledge all contributions", including MetaDocencia's logo.](/img/bingo-inclusion.jpg) 
 
 *A bingo card of some suggested actionable approaches to active care for empowerment through inclusion. How many of them do you practice?* 
 
