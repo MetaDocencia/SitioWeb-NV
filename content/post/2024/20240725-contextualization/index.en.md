@@ -19,7 +19,7 @@ linktitle: "OS Contextualization"
 translationKey: "20240725-contextualizacion"
 ---
 
-As we shared in the publication [Conversations on Open Science: Collective Reflections in Community](https://www.metadocencia.org/en/post/2024/20240506-osreflections/), we began 2024 by reflecting on various aspects, challenges, and injustices faced by researchers in Latin America. We also aimed to recognize the advantages and potentialities of the debate about their scope and possibilities. In this process, we explored how many of these challenges arise from the application of Open Science principles in the Global South, consequently widening the gap in the distribution of recognition and knowledge in global science.
+As we shared in the publication [Conversations on Open Science: Collective Reflections in Community](/en/post/2024/20240506-osreflections/), we began 2024 by reflecting on various aspects, challenges, and injustices faced by researchers in Latin America. We also aimed to recognize the advantages and potentialities of the debate about their scope and possibilities. In this process, we explored how many of these challenges arise from the application of Open Science principles in the Global South, consequently widening the gap in the distribution of recognition and knowledge in global science.
 
 The series of discussions concluded with an invitation to reflect on Open Science as a field of [epistemic justice](https://www.zotero.org/groups/5442154/ciencia_abierta_en_comunidad/items/B6QEUVSP/library). It invited us to think about the overvaluation of the other's word regarding our knowledge and capacity to "speak" (testimonial epistemic justice) and the fair distribution of it, i.e., the ability to be a subject of knowledge (hermeneutical epistemic justice).
 
@@ -29,7 +29,7 @@ With the goal of creating the Spanish version of the NASA TOPS course in mind, a
 
 In this sense, we proposed a written exchange on Slack about the **differences and similarities between the terms Internationalization, Contextualization, Localization, and Translation**. From this exchange, we derived the initial considerations on the words that allowed us to think about the work we were about to undertake:
 
-![Example of one of the exchange messages on MetaDocencia's Slack: "I really like Chan's idea (the language of science is colonial), and also the perspective of the 'situated.' For choosing the term, maybe we should consider the conceptual framework behind each one (what gives it meaning, its semantic matrix), in line with what Romi suggests. If the challenge ahead is more about 'appropriating/giving our own meaning' to the existing course, in this case, I would go for the most political of the terms. If it’s more about 'adaptation,' it could be more of an exercise in 'situated' translation. I hope I've added to the confusion. Hahahaha"](https://www.metadocencia.org/img/discusion-context-slack.png)  
+![Example of one of the exchange messages on MetaDocencia's Slack: "I really like Chan's idea (the language of science is colonial), and also the perspective of the 'situated.' For choosing the term, maybe we should consider the conceptual framework behind each one (what gives it meaning, its semantic matrix), in line with what Romi suggests. If the challenge ahead is more about 'appropriating/giving our own meaning' to the existing course, in this case, I would go for the most political of the terms. If it’s more about 'adaptation,' it could be more of an exercise in 'situated' translation. I hope I've added to the confusion. Hahahaha"](/img/discusion-context-slack.png)  
 *Example message from the MetaDocencia Slack exchange.*
 
 This exchange took place in writing until the day of the third Conversation meeting, where the debate was brought to the participants. An introduction was made, systematizing the written exchange and understanding the task of opening knowledge generated in English to a Spanish-speaking audience, a task that undoubtedly goes beyond merely translating materials.
@@ -41,17 +41,17 @@ During the meeting, we presented part of the written debate and discussed the ne
 - adds transdisciplinarity;
 - and frames its political and communicational use (i.e., what it implies and what the words generate in those who receive them).
 
-![Slide from the presentation highlighting ideas about Translation, Situated Translation, Contextualization, Localization, and Internationalization.](https://www.metadocencia.org/img/discusion-context-propuestas.png)  
+![Slide from the presentation highlighting ideas about Translation, Situated Translation, Contextualization, Localization, and Internationalization.](/img/discusion-context-propuestas.png)  
 *Main ideas from the written debate presented during the meeting.*
 
 Lastly, a form was presented for voting on the term that best represented MetaDocencia's work in developing the Spanish version of the NASA-TOPS OS 101 Open Science course.
 
 **"Contextualization"** was defined as the **ideal term** by the community, **with 54% of the votes**.
 
-![Donut chart showing the voting options: 54% Contextualization, 23% Located translation, 15% Transcultural Adaptation, 8% Localization.](https://www.metadocencia.org/img/vot-context-dona-en.png)  
+![Donut chart showing the voting options: 54% Contextualization, 23% Located translation, 15% Transcultural Adaptation, 8% Localization.](/img/vot-context-dona-en.png)  
 *Voting results to select the term defining the work to be done.*
 
-Although this journey was undertaken with the concrete task of adapting NASA's material, MetaDocencia currently has other projects where the accessibility of knowledge in Spanish is key. Therefore, **Contextualization transcended the NASA project and has definitively become a [pillar of our organization](https://www.metadocencia.org/en/institucional/)**.
+Although this journey was undertaken with the concrete task of adapting NASA's material, MetaDocencia currently has other projects where the accessibility of knowledge in Spanish is key. Therefore, **Contextualization transcended the NASA project and has definitively become a [pillar of our organization](/en/institucional/)**.
 
 In its latest version (always in progress), we define it as a pillar "based on our values of diversity, autonomy, and versatility, this pillar promotes the development of a Latin American perspective in all the projects where we co-create networks, learning spaces, and resources for Spanish-speaking communities". This is why we assign strategic and everyday importance to the name and task.
 
