@@ -37,7 +37,7 @@ Para la dimensión comunitaria se sondeó el crecimiento y proyección de la com
 
 A partir de este análisis exploratorio desarollamos un informe ejecutivo que presentamos a LABI con anterioridad a su reunión anual, para poder diseñar una experiencia de participación abierta que transmitiera “el panorama” del presente y su “horizonte” de construcción comunitaria, con el objetivo de transparentar el proceso de trabajo y robustecer consensos.
 
-**¡Fue una experiencia muy grata participar del [LABI meeting 2024](https://www.labimeeting.com/)!** [Paz Míguez](/author/pazmiguez/) y [Jesica Formoso](/author/jformoso/) estuvieron presentes para compartir los resultados del informe de avance y recuperar contribuciones de la comunidad de LABI. Nos encontramos en un entorno generoso de personas con valores y principios sólidos y compartidos, abiertas al intercambio y a prepararse para el crecimiento de la red.
+**¡Fue una experiencia muy grata participar del [LABI meeting 2024](https://www.labimeeting.com/)!** [Paz Míguez](/author/paz-miguez/) y [Jesica Formoso](/author/jesica-formoso/) estuvieron presentes para compartir los resultados del informe de avance y recuperar contribuciones de la comunidad de LABI. Nos encontramos en un entorno generoso de personas con valores y principios sólidos y compartidos, abiertas al intercambio y a prepararse para el crecimiento de la red.
 
 Con posterioridad al encuentro avanzamos en la revisión y enriquecimiento de los documentos de gobernanza, incorporando los aportes y perspectivas de toda la comunidad, proyectando iteraciones y mejoras que acompañen de la mejor manera la representatividad, participación y operaciones cotidianas de LABI. 
 
