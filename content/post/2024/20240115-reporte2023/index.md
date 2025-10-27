@@ -61,7 +61,7 @@ Te contamos algunos hitos de nuestra comunidad mes a mes de 2023:
 
 ## Enero-febrero
 Estos meses estamos en #ModoVerano en América del Sur y, aunque nuestros canales permanecen activos, es el tiempo en el que muchas personas tomamos nuestras vacaciones y trabajamos en organizar el trabajo para el resto del año. 
-En enero y febrero de 2023 seguimos construyendo localmente, siempre con mirada global, y nos encontramos con comunidades amigas del norte: [Paz Míguez](/authors/paz-miguez/), [Nicolás Palopoli](/authors/npalopoli/) y [Laura Ación](/authors/lacion/) se reunieron en Londres con [Malvika Sharan](/authors/malvika-sharan/) y [Yo Yehudi](https://twitter.com/yoyehudi), dos de las directoras de nuestra comunidad amiga OLS. Planificaron el trabajo colaborativo durante el año, visitaron The Alan Turing Institute y aprovecharon para estrechar nuestra red colaborativa.
+En enero y febrero de 2023 seguimos construyendo localmente, siempre con mirada global, y nos encontramos con comunidades amigas del norte: [Paz Míguez](/author/paz-miguez/), [Nicolás Palopoli](/author/npalopoli/) y [Laura Ación](/author/lacion/) se reunieron en Londres con [Malvika Sharan](/author/malvika-sharan/) y [Yo Yehudi](https://twitter.com/yoyehudi), dos de las directoras de nuestra comunidad amiga OLS. Planificaron el trabajo colaborativo durante el año, visitaron The Alan Turing Institute y aprovecharon para estrechar nuestra red colaborativa.
 <p align="center">
 <img src="/img/reporte-2023/londres2023.png" alt="Imágenes de las personas del equipo que se reunieron en Londres en enero de 2023 con Malvika y Yo" width="600px"/>
 <i><font size="-0.6">Imágenes compartidas por sus protagonistas.</font></i>
@@ -94,16 +94,16 @@ Es fundamental vincularnos con la comunidad científica y de investigación para
 ### Csv,conf,v7
 También estuvimos presentes en la csv,conf,v7 que se llevó a cabo los días 19 y 20 de abril en Buenos Aires.
 
-- [Jesica Formoso](/authors/jesica-formoso/), [José Luis Villca Villegas](/authors/jose-luis-villca-villegas/), Kate Hertweck, Malvika Sharan, [Sabrina López](/authors/sabrina-lopez/), Tania Hernández y Laura Ación estuvieron a cargo de una de las charlas magistrales, llamada “Creación colectiva de Ciencia Abierta”. 
+- [Jesica Formoso](/author/jesica-formoso/), [José Luis Villca Villegas](/author/jose-luis-villca-villegas/), Kate Hertweck, Malvika Sharan, [Sabrina López](/author/sabrina-lopez/), Tania Hernández y Laura Ación estuvieron a cargo de una de las charlas magistrales, llamada “Creación colectiva de Ciencia Abierta”. 
 
 🔗 Presentación bilingüe con notas de oradora: [tiny.cc/csvconf2023](https://docs.google.com/presentation/d/1UWmJnNWZhDxASFCGARluvWXSfF5zxMHxdqMdUI9L6Ks/edit?usp=sharing)
 
 {{< youtube sV_0nAypuZQ >}}
 *Charla completa con subtítulos en español.*
 
-- Jesica Formoso, [Laurel Ascenzi](/authors/laura-ascenzi/), [Patricia Loto](/authors/patricia-loto/) y [Mariela Rajngewerc](/authors/mariela-rajngewerc/) presentaron una primera aproximación al análisis de las “Comunidades de práctica en Latinoamérica y su influencia en la difusión de la ciencia abierta”. /post/comunidades-practica-ciencia-abierta-latam/
+- Jesica Formoso, [Laurel Ascenzi](/author/laura-ascenzi/), [Patricia Loto](/author/patricia-loto/) y [Mariela Rajngewerc](/author/mariela-rajngewerc/) presentaron una primera aproximación al análisis de las “Comunidades de práctica en Latinoamérica y su influencia en la difusión de la ciencia abierta”. /post/comunidades-practica-ciencia-abierta-latam/
 
-- [Melissa Black](/authors/melissa-black/) junto a Malvika Sharan y Esther Plomp presentaron, por su parte, la ponencia “Co-creando The Turing Way con la comunidad global”.
+- [Melissa Black](/author/melissa-black/) junto a Malvika Sharan y Esther Plomp presentaron, por su parte, la ponencia “Co-creando The Turing Way con la comunidad global”.
 
 ### Panal de Comunidades Amigas 
 En la csv,conf,7 presentamos el [Panal de Comunidades Amigas](/quienes-somos/#comunidades-amigas), un desarrollo colaborativo que vincula esfuerzos para confirmar, una vez más, que la ciencia es un trabajo colectivo. 
@@ -162,7 +162,7 @@ Irene Ramos (CONABIO, México), Laurel Ascenzi (MetaDocencia) y Enrique Gonzále
 ## Julio
 
 ### OLS-7
-Patricia Loto, Jesica Formoso, [Irene Vazano](/authors/irene-vazano/) y Mariela Rajnewerc se graduaron como embajadoras de #CienciaAbierta del programa [Open Seeds Cohort 7](https://openlifesci.org/ols-7) con proyectos comunitarios en Ciencia Abierta y en inteligencia artificial.
+Patricia Loto, Jesica Formoso, [Irene Vazano](/author/irene-vazano/) y Mariela Rajnewerc se graduaron como embajadoras de #CienciaAbierta del programa [Open Seeds Cohort 7](https://openlifesci.org/ols-7) con proyectos comunitarios en Ciencia Abierta y en inteligencia artificial.
 <p align="center">
 <img src="/img/reporte-2023/OLS7-graduadas.jpg" alt="Graduadas de OLS-7" width="600px"/>
 <i><font size="-0.6">Captura de pantalla de la graduación de OLS-7.</font></i>
@@ -201,7 +201,7 @@ Irene Vazano, Jesica Formoso y Patricia Loto estuvieron a cargo de presentar el 
 ## Octubre
 
 ### Jornadas de Informática en Salud
-El equipo MetaDocente también estuvo presente en las [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](/authors/mcnanton/) y Sabrina L. López participaron en el Panel “Desafíos y estrategias en la creación de dataset en salud para herramientas de IA”.
+El equipo MetaDocente también estuvo presente en las [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](/author/mcnanton/) y Sabrina L. López participaron en el Panel “Desafíos y estrategias en la creación de dataset en salud para herramientas de IA”.
 <p align="center">
 <img src="/img/reporte-2023/jishiba-2023.jpg" alt="Jornadas de Informática en Salud. Sabrina López y María Nanton sumaron sus voces como panelistas." width="600px"/>
 <i><font size="-0.6">Jornadas de Informática en Salud. Sabrina López y María Nanton sumaron sus voces como panelistas.</font></i>
@@ -227,7 +227,7 @@ Maria presentó un trabajo sobre traducción de R base. Jesi y Patri presentaron
 ## Noviembre
 
 ### Presentes en la KEM
-Nicolás Palopoli estuvo a cargo de la charla "MetaDocencia y el enfoque comunitario hacia la ciencia y la educación abiertas" en la Knowledge Exchange Meeting (KEM) 2023, organizada por [CABANAnet](/authors/cabananet/) en Costa Rica.
+Nicolás Palopoli estuvo a cargo de la charla "MetaDocencia y el enfoque comunitario hacia la ciencia y la educación abiertas" en la Knowledge Exchange Meeting (KEM) 2023, organizada por [CABANAnet](/author/cabananet/) en Costa Rica.
 
 🔗 Link a la presentación: [https://zenodo.org/records/10256496](https://zenodo.org/records/10256496)
 <p align="center">
@@ -238,7 +238,7 @@ Nicolás Palopoli estuvo a cargo de la charla "MetaDocencia y el enfoque comunit
 ### Book Dash de The Turing Way, ¡toma 2!
 Jesica Formoso y Patricia Loto colaboraron en el desarrollo de contenido sobre accesibilidad, compartiendo debates y aprendizajes junto a otras comunidades. María Nanton colaboró generando pautas para los contenidos vinculados a traducción y localización.
 
-Gracias también a [Iván Poggio](/authors/ivan-poggio/), Mariela Rajngewerc y Laurel Ascenzi por sus contribuciones a través de nuestro equipo de Accesibilidad. 
+Gracias también a [Iván Poggio](/author/ivan-poggio/), Mariela Rajngewerc y Laurel Ascenzi por sus contribuciones a través de nuestro equipo de Accesibilidad. 
 <p align="center">
 <img src="/img/reporte-2023/bookdash-noviembre2023.png" alt="María, Jesica y Patricia de MetaDocencia estuvieron sumando sus contribuciones al BookDash de noviembre de The Turing Way" width="600px"/>
 <i><font size="-0.6">Book Dash de noviembre de The Turing Way. María, Jesica y Patricia de MetaDocencia estuvieron sumando sus contribuciones.</font></i>
@@ -263,7 +263,7 @@ Brindamos por el camino recorrido y todo lo que vendrá.
 <i><font size="-0.6">Captura de pantalla de la primera “Gala de los premios Manzanita”.</font></i>
 </p>
 
-Lamentamos que un evento de fuerza mayor no permitió que [Moni Alonso](/authors/monica-alonso/) recibiera su premio en vivo, pero la gala se extendió por unos días más y a las redes sociales. Mira el hilo en Twitter:
+Lamentamos que un evento de fuerza mayor no permitió que [Moni Alonso](/author/monica-alonso/) recibiera su premio en vivo, pero la gala se extendió por unos días más y a las redes sociales. Mira el hilo en Twitter:
 
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">🏆 ¡Compartimos la gala de los Premios Manzanita 2023!<br>🍎 Después de un gran año de trabajo, desafíos y alegrías compartidas con este grupo hermoso, decidimos premiar en una ceremonia lúdica el enorme valor de las contribuciones de cada integrante. <a href="https://t.co/rmdjluCoKG">pic.twitter.com/rmdjluCoKG</a></p>&mdash; MetaDocencia (@MetaDocencia@floss.social) (@metadocencia) <a href="https://twitter.com/metadocencia/status/1738237948397576451?ref_src=twsrc%5Etfw">December 22, 2023</a></blockquote>
 
@@ -488,9 +488,9 @@ MetaDocencia está comprometida con la formación y desarrollo continuos de su e
 - Integrantes del equipo de Coordinación recibieron mentoreo personalizado gracias a CZI a través de [BetterUp](https://www.betterup.com/).
 - Participamos como aprendices, mentores, facilitadores y organizadores en el programa [Open Seeds de OLS](https://openlifesci.org/openseeds/ols-8/) en distintos proyectos. Cerramos el año desarrollando: 
 
-  - **Gobernanza 2.0**, escritura colaborativa de Pautas de Convivencia (PdC) y protocolo de intervención; Política de Conflicto de Interés (COI); Pautas de Autoría y cronograma de actualización periódica de nuestra gobernanza. Equipo conformado por [Romina Pendino](/authors/romina-pendino/), Iván Poggio, [Pao Lefer](/authors/paola-lefer/) y Laurel Ascenzi, con Vero Xhardez como mentora. 
+  - **Gobernanza 2.0**, escritura colaborativa de Pautas de Convivencia (PdC) y protocolo de intervención; Política de Conflicto de Interés (COI); Pautas de Autoría y cronograma de actualización periódica de nuestra gobernanza. Equipo conformado por [Romina Pendino](/author/romina-pendino/), Iván Poggio, [Pao Lefer](/author/paola-lefer/) y Laurel Ascenzi, con Vero Xhardez como mentora. 
 
-  - **Estructura e infraestructura para la formación por cohortes virtuales**, conformado por Mónica Alonso, [Julián Buede](/authors/julian-buede/), Paz Míguez, Melissa Black, María Nanton y Nicolás Palopoli, con la guía de Gemma Turon.
+  - **Estructura e infraestructura para la formación por cohortes virtuales**, conformado por Mónica Alonso, [Julián Buede](/author/julian-buede/), Paz Míguez, Melissa Black, María Nanton y Nicolás Palopoli, con la guía de Gemma Turon.
   
 Todos los esfuerzos de formación, en parte financiados por el 10% que protegemos por contrato, aspiran a que el equipo continue desarrollándose y creciendo como referente de Ciencia Abierta en América Latina hispanohablante. 
 
