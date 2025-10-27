@@ -18,7 +18,7 @@ authors:
 - vxhardez
 ---
 
-Como compartimos en la publicación [Conversatorios sobre Ciencia Abierta: reflexiones colectivas en comunidad](https://www.metadocencia.org/post/2024/20240506-reflexiones-conversatorio/), **comenzamos 2024 reflexionando acerca de distintos aspectos, desafíos e injusticias que atraviesan quienes hacen investigación en América Latina, y también  buscamos reconocer ventajas y potencialidades a partir del debate sobre su alcance y posibilidades**. En ese proceso, exploramos cómo muchos de estos desafíos surgen de la aplicación de los principios de la Ciencia Abierta en el Sur Global, dejando como consecuencia un aumento en la brecha sobre la distribución del reconocimiento y conocimiento en la ciencia mundial.
+Como compartimos en la publicación [Conversatorios sobre Ciencia Abierta: reflexiones colectivas en comunidad](/post/2024/20240506-reflexiones-conversatorio/), **comenzamos 2024 reflexionando acerca de distintos aspectos, desafíos e injusticias que atraviesan quienes hacen investigación en América Latina, y también  buscamos reconocer ventajas y potencialidades a partir del debate sobre su alcance y posibilidades**. En ese proceso, exploramos cómo muchos de estos desafíos surgen de la aplicación de los principios de la Ciencia Abierta en el Sur Global, dejando como consecuencia un aumento en la brecha sobre la distribución del reconocimiento y conocimiento en la ciencia mundial.
 
 El ciclo de conversatorios cerró con la invitación a reflexionar acerca de la Ciencia Abierta como ámbito de disputa de la [justicia epistémica](https://www.zotero.org/groups/5442154/ciencia_abierta_en_comunidad/items/B6QEUVSP/library), con el cual invitamos a pensar acerca de la sobrevaloración de la palabra del otro respecto del conocimiento que tenemos y de la capacidad de “decir” (justicia epistémica testimonial), y sobre la distribución justa del mismo, es decir, la capacidad de ser sujeto del conocimiento (justicia epistémica hermenéutica).
 
@@ -29,7 +29,7 @@ En vistas a comenzar con la tarea de generar la versión en español del curso d
 En este sentido, planteamos vía slack el intercambio por escrito sobre las **diferencias y similitudes que hay entre los términos Internacionalización, Contextualización, Localización y Traducción**. De este intercambio se obtuvieron las consideraciones iniciales sobre las palabras que nos permitían pensar en el trabajo que nos tocaba realizar:
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/discusion-context-slack.png" alt="Ejemplo de uno de los mensajes de intercambio en Slack de MetaDocencia." width="600px"/>
+<img src="/img/discusion-context-slack.png" alt="Ejemplo de uno de los mensajes de intercambio en Slack de MetaDocencia." width="600px"/>
 <i><font size="-0.6">Ejemplo de uno de los mensajes de intercambio en Slack de MetaDocencia</font></i>
 </p>
 
@@ -43,7 +43,7 @@ Durante el encuentro, acercamos parte del debate escrito y conversamos acerca de
 - y enmarque su uso político y comunicacional (es decir, qué implica y qué generan las palabras en quienes las reciben).
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/discusion-context-propuestas.png" alt="Diapositiva de la presentación realizada durante el encuentro que menciona las ideas principales del debate que sucedió de forma escrita." width="600px"/>
+<img src="/img/discusion-context-propuestas.png" alt="Diapositiva de la presentación realizada durante el encuentro que menciona las ideas principales del debate que sucedió de forma escrita." width="600px"/>
 <i><font size="-0.6">Diapositiva de la presentación realizada durante el encuentro que menciona las ideas principales del debate que sucedió de forma escrita.</font></i>
 </p>
 
@@ -52,7 +52,7 @@ Por último, se realizó la presentación de un formulario para la votación del
 Comunitariamente, se definió ***Contextualización* como el término ideal con el 54% de los votos**.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/vot-context-dona.jpg" alt="Gráfico de dona que muestra las opciones votadas para elegir el término que definía el trabajo a realizar: 54% Contextualización, 23% Traducción situada, 15% Adaptación transcultural y 8% Localización" width="600px"/>
+<img src="/img/vot-context-dona.jpg" alt="Gráfico de dona que muestra las opciones votadas para elegir el término que definía el trabajo a realizar: 54% Contextualización, 23% Traducción situada, 15% Adaptación transcultural y 8% Localización" width="600px"/>
 <i><font size="-0.6">Gráfico de dona que muestra las opciones votadas para elegir el término que definía el trabajo a realizar.</font></i>
 </p>
 
