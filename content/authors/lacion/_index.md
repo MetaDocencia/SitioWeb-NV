@@ -1,6 +1,7 @@
 ---
 title: "Laura Ación"
-aliases: /authors/lacion/
+aliases: 
+  - /authors/lacion/
 bio: ""
 education:
   courses:
@@ -43,11 +44,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/lauracion
-
 superuser: false
 user_groups:
 - Equipo y Consejo Asesor
-
 ---
 
 
