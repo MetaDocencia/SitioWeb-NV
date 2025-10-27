@@ -104,7 +104,7 @@ We would like to **especially recognize and thank our Contextualization team**, 
 - [Jose Luis Villca Villegas](/en/author/jose-luis-villca-villegas/)
 - [Paola Andrea Lefer](/en/author/paola-andrea-lefer/)
 - [Romina Pendino](/en/author/romina-pendino/)
-- [Sabrina López](/en/author/sabrna-lopez/)
+- [Sabrina López](/en/author/sabrina-lopez/)
 - [Verónica Xhardez](/en/author/veronica-xhardez/)
 
 ## Acknowledgments
