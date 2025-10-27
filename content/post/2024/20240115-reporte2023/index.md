@@ -61,7 +61,7 @@ Te contamos algunos hitos de nuestra comunidad mes a mes de 2023:
 
 ## Enero-febrero
 Estos meses estamos en #ModoVerano en América del Sur y, aunque nuestros canales permanecen activos, es el tiempo en el que muchas personas tomamos nuestras vacaciones y trabajamos en organizar el trabajo para el resto del año. 
-En enero y febrero de 2023 seguimos construyendo localmente, siempre con mirada global, y nos encontramos con comunidades amigas del norte: [Paz Míguez](/author/paz-miguez/), [Nicolás Palopoli](/author/npalopoli/) y [Laura Ación](/author/lacion/) se reunieron en Londres con [Malvika Sharan](/author/malvika-sharan/) y [Yo Yehudi](https://twitter.com/yoyehudi), dos de las directoras de nuestra comunidad amiga OLS. Planificaron el trabajo colaborativo durante el año, visitaron The Alan Turing Institute y aprovecharon para estrechar nuestra red colaborativa.
+En enero y febrero de 2023 seguimos construyendo localmente, siempre con mirada global, y nos encontramos con comunidades amigas del norte: [Paz Míguez](/author/paz-miguez/), [Nicolás Palopoli](/author/nicolas-palopoli/) y [Laura Ación](/author/laura-acion/) se reunieron en Londres con [Malvika Sharan](/author/malvika-sharan/) y [Yo Yehudi](https://twitter.com/yoyehudi), dos de las directoras de nuestra comunidad amiga OLS. Planificaron el trabajo colaborativo durante el año, visitaron The Alan Turing Institute y aprovecharon para estrechar nuestra red colaborativa.
 <p align="center">
 <img src="/img/reporte-2023/londres2023.png" alt="Imágenes de las personas del equipo que se reunieron en Londres en enero de 2023 con Malvika y Yo" width="600px"/>
 <i><font size="-0.6">Imágenes compartidas por sus protagonistas.</font></i>
