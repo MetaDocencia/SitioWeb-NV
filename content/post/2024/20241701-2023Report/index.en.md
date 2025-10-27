@@ -26,9 +26,9 @@ We especially thank [Dario Taraborelli](https://twitter.com/ReaderMeter), [Kate 
 
 Also to [Chelle Gentemann](https://twitter.com/ChelleGentemann) and Team; and to the [OLS](https://openlifesci.org/) and [The Turing Way](https://the-turing-way.start.page/) communities for continuing to grow hand in hand.
 
-To all the communities in our [Hive](https://www.metadocencia.org/en/panal/), for the collaborative work, reciprocity, and collective construction.
+To all the communities in our [Hive](/en/panal/), for the collaborative work, reciprocity, and collective construction.
 
-To our team of [outside collaborators](https://www.metadocencia.org/en/equipo/), who write, participate in, and support our work.
+To our team of [outside collaborators](/en/equipo/), who write, participate in, and support our work.
 
 To those who joined workshops, open events, and the [Pollen Project](https://zenodo.org/records/10285864).
 
@@ -51,10 +51,10 @@ Here are a few milestones of our community in 2023, month by month:
 
 ## January - February
 These are the #SummerMode months in South America and, although our channels remain active, it is the time in which many people take vacations and organize the work for the rest of the year.
-In January and February of 2023 we continued to build community locally, yet always with a global outlook, and met with fellow communities from the North. [Paz Míguez](https://www.metadocencia.org/en/authors/pazmiguez/), [Nicolás Palopoli](https://www.metadocencia.org/en/authors/npalopoli/), and [Laura Ación](https://www.metadocencia.org/en/authors/lacion/) met in London with [Malvika Sharan](https://www.metadocencia.org/en/authors/malvikasharan/) and [Yo Yehudi](https://twitter.com/yoyehudi), two of the directors of our fellow community [OLS](https://openlifesci.org/). They planned collaborative work during the year, visited [The Alan Turing Institute](https://www.turing.ac.uk/), and took the opportunity to strengthen our collaborative network.
+In January and February of 2023 we continued to build community locally, yet always with a global outlook, and met with fellow communities from the North. [Paz Míguez](/en/author/paz-miguez/), [Nicolás Palopoli](/en/author/nicolas-palopoli/), and [Laura Ación](/en/author/laura-acion/) met in London with [Malvika Sharan](/en/author/malvika-sharan/) and [Yo Yehudi](https://twitter.com/yoyehudi), two of the directors of our fellow community [OLS](https://openlifesci.org/). They planned collaborative work during the year, visited [The Alan Turing Institute](https://www.turing.ac.uk/), and took the opportunity to strengthen our collaborative network.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/londres2023.png" alt="Images of the team members who joined with Malvika and Yo in London in January 2023" width="600px"/>
+<img src="/img/reporte-2023/londres2023.png" alt="Images of the team members who joined with Malvika and Yo in London in January 2023" width="600px"/>
 <i><font size="-0.6">Images shared by its main characters.</font></i>
 </p>
 
@@ -63,7 +63,7 @@ In January and February of 2023 we continued to build community locally, yet alw
 
 ### #Khipu2023
 - Laura Ación was a speaker in the session “Ethics and Social Impacts in AI”, with Paola Ricaurte, Sasha Luccioni, and Andrés Morales, facilitated by Laura Alonso Alemany. Recording available (in English) on [YouTube](https://youtu.be/yiY7WJrJxI8?si=JGliEz6iDjeR7Hj3&t=6913).
-- With the Vía Libre Foundation, we supported the organization of a [workshop on the “Social Impacts of Artificial Intelligence](https://www.metadocencia.org/en/curso/etica_en_ia/), led by Laura Ación, Laura Alonso Alemany, and Luciana Benotti.
+- With the Vía Libre Foundation, we supported the organization of a [workshop on the “Social Impacts of Artificial Intelligence](/en/curso/etica_en_ia/), led by Laura Ación, Laura Alonso Alemany, and Luciana Benotti.
 
 ### We Turned 3 Years Old
 In 2023, MetaDocencia celebrated 3 years of responsibly building scientific and technical capacity with a local perspective.
@@ -77,29 +77,29 @@ With this video we wish #HappyBirthdayMD to our entire community! (in Spanish)
 On April 17 and 18 we participated in the workshop "Accelerating Open Science in Latin America" #CZILatAmMtg, organized by the #OpenScience area of CZI. After two intense days of work focused on the needs and capacity building in Latin America, we ended this stage of the conversations with great satisfaction and community strengthening.
 Connecting with the scientific and research community is essential to learn and think about the interests of our region, from our region.
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/CZI-workshop.png" alt="Family photo of Accelerating Open Science in Latin America workshop in Buenos Aires" width="600px"/>
+<img src="/img/reporte-2023/CZI-workshop.png" alt="Family photo of Accelerating Open Science in Latin America workshop in Buenos Aires" width="600px"/>
 <i><font size="-0.6">Accelerating Open Science in Latin America. Records of part of what was shared during the two days of this important event held for the first time in Buenos Aires.</font></i>
 </p>
 
 ### Csv,conf,v7
 We were also present at the csv,conf,v7 that happened between April 19 and 20 in Buenos Aires.
 
-[Jesica Formoso](https://www.metadocencia.org/en/authors/jformoso/), [José Luis Villca Villegas](https://www.metadocencia.org/en/authors/jlvillca/), Kate Hertweck, Malvika Sharan, [Sabrina López](https://www.metadocencia.org/en/authors/slopez/), Tania Hernández, and Laura Ación were in charge of one of the keynote talks, “Collective creation of Open Science”.
+[Jesica Formoso](/en/author/jesica-formoso/), [José Luis Villca Villegas](/en/author/jose-luis-villca-villegas/), Kate Hertweck, Malvika Sharan, [Sabrina López](/en/author/sabrina-lopez/), Tania Hernández, and Laura Ación were in charge of one of the keynote talks, “Collective creation of Open Science”.
 🔗 Bilingual presentation with speaker notes: [tiny.cc/csvconf2023](https://docs.google.com/presentation/d/1UWmJnNWZhDxASFCGARluvWXSfF5zxMHxdqMdUI9L6Ks/edit?usp=sharing)
 
 {{< youtube sV_0nAypuZQ >}}
 *Full talk with subtitles.*
 
-- Jesica Formoso, [Laurel Ascenzi](https://www.metadocencia.org/en/authors/laurel/), [Patricia Loto](https://www.metadocencia.org/en/authors/patriloto/) y [Mariela Rajngewerc](https://www.metadocencia.org/en/authors/mrajngewerc/) presented a first approach to the analysis of “Communities of practice in Latin America and their influence on the dissemination of open science.”
-  🔗 [https://www.metadocencia.org/en/post/communities-of-practice-la/](https://www.metadocencia.org/en/post/communities-of-practice-la/)
+- Jesica Formoso, [Laurel Ascenzi](/en/author/laura-ascenzi/), [Patricia Loto](/en/author/patricia-loto/) y [Mariela Rajngewerc](/en/author/mariela-rajngewerc/) presented a first approach to the analysis of “Communities of practice in Latin America and their influence on the dissemination of open science.”
+  🔗 [/en/post/communities-of-practice-la/](/en/post/communities-of-practice-la/)
 
-- [Melissa Black](https://www.metadocencia.org/en/authors/melissa/), Malvika Sharan, and Esther Plomp presented the talk “Co-creating The Turing Way with the global community.”
+- [Melissa Black](/en/author/melissa-black/), Malvika Sharan, and Esther Plomp presented the talk “Co-creating The Turing Way with the global community.”
 
 ### Hive of Fellow Communities
-In the csv,conf,v7 we presented the [Hive of Fellow Communities](https://www.metadocencia.org/en/panal/), a collaborative project that connects efforts to confirm, once again, that science is a collective work.
-We invite you to explore the Hive at [https://www.metadocencia.org/en/panal/](https://www.metadocencia.org/en/panal/), follow, and share the achievements of our entire extended community.
+In the csv,conf,v7 we presented the [Hive of Fellow Communities](/en/panal/), a collaborative project that connects efforts to confirm, once again, that science is a collective work.
+We invite you to explore the Hive at [/en/panal/](/en/panal/), follow, and share the achievements of our entire extended community.
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/panal.jpg" alt="Imagen alusiva al panal de comunidades amigas de MetaDocencia" width="600px"/>
+<img src="/img/reporte-2023/panal.jpg" alt="Imagen alusiva al panal de comunidades amigas de MetaDocencia" width="600px"/>
 <i><font size="-0.6">Hive of Fellow Communities. Some of the organizations that joined our Hive in 2023.</font></i>
 </p>
 
@@ -110,7 +110,7 @@ We would be glad to see the hive grow bigger. For further information on how to 
 ### First Hybrid MetaDocencia Retreat
 In a relaxed and familiar atmosphere, most of this beautiful group finally met in person:
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/juntada-2023-2.png" alt="2023 retreat. Some of the MetaDocencia team members who were present at our first face-to-face meeting in Buenos Aires." width="600px"/>
+<img src="/img/reporte-2023/juntada-2023-2.png" alt="2023 retreat. Some of the MetaDocencia team members who were present at our first face-to-face meeting in Buenos Aires." width="600px"/>
 <i><font size="-0.6">2023 retreat. Some of the MetaDocencia team members who were present at our first face-to-face meeting in Buenos Aires.</font></i>
 </p>
 
@@ -124,9 +124,9 @@ We were so happy that preparations are already underway for the next retreat, in
 ### CW23
 During the Software Sustainability Institute [Collaboration Workshops 2023](https://software.ac.uk/cw23) (CW23) of the Software Sustainability Institute, on May 2nd Nicolás Palopoli co-facilitated the workshop "Communities of practice and the pursuit for Open Science on a global scale", with [Reina Camacho Toro](https://camachoreina.github.io/) ([CNRS](https://www.cnrs.fr/fr)/[CERN](https://home.cern/), [LA-CoNGA physics](https://laconga.redclara.net/)) and [Camila Rangel Smith](https://www.turing.ac.uk/people/researchers/camila-rangel-smith) ([The Alan Turing Institute](https://www.turing.ac.uk/)).  It was a hybrid workshop with discussions around the universality of current #OpenScience concepts and practices.
 
-🔗 Read more in our blog (post in Spanish): [https://www.metadocencia.org/post/cw23/](https://www.metadocencia.org/post/cw23/)
+🔗 Read more in our blog (post in Spanish): [https://www.metadocencia.org/post/cw23/](/post/cw23/)
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/NP-CW23.png" alt="CW23. Nicolás Palopoli during the workshop presentation" width="600px"/>
+<img src="/img/reporte-2023/NP-CW23.png" alt="CW23. Nicolás Palopoli during the workshop presentation" width="600px"/>
 <i><font size="-0.6">CW23. Nicolás Palopoli during the workshop presentation.</font></i>
 </p>
 
@@ -134,7 +134,7 @@ During the Software Sustainability Institute [Collaboration Workshops 2023](http
 Laurel Ascenzi participated for the first time in [Book Dash de The Turing Way](https://the-turing-way.netlify.app/community-handbook/bookdash.html) (TTW). Our team will continue working together with TTW on accessibility, in Spanish.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/bookdash-mayo2023.png" alt="Laurel Ascenzi participated of The Turing Way Book Dash in May 2023." width="600px"/>
+<img src="/img/reporte-2023/bookdash-mayo2023.png" alt="Laurel Ascenzi participated of The Turing Way Book Dash in May 2023." width="600px"/>
 <i><font size="-0.6">The Turing Way Book Dash. MetaDocencia said “present!” through Laurel Ascenzi.</font></i>
 </p>
 
@@ -150,10 +150,10 @@ Irene Ramos (CONABIO, Mexico), Laurel Ascenzi (MetaDocencia), and Enrique Gonzá
 ## July
 
 ### OLS-7
-Patricia Loto, Jesica Formoso, [Irene Vazano](https://www.metadocencia.org/en/authors/irenevazano/), and Mariela Rajngewerc graduated as #OpenScience ambassadors from the [Open Seeds Cohort 7 program](https://openlifesci.org/ols-7), with communitary projects on open science and artificial intelligence.
+Patricia Loto, Jesica Formoso, [Irene Vazano](/en/author/irene-vazano/), and Mariela Rajngewerc graduated as #OpenScience ambassadors from the [Open Seeds Cohort 7 program](https://openlifesci.org/ols-7), with communitary projects on open science and artificial intelligence.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/OLS7-graduadas.jpg" alt="Screenshot of the OLS-7 graduation." width="600px"/>
+<img src="/img/reporte-2023/OLS7-graduadas.jpg" alt="Screenshot of the OLS-7 graduation." width="600px"/>
 <i><font size="-0.6">Screenshot of the OLS-7 graduation.</font></i>
 </p>
 
@@ -163,7 +163,7 @@ Patricia Loto, Jesica Formoso, [Irene Vazano](https://www.metadocencia.org/en/au
 ### Uniting Communities to Expand Participation in Open Science
 This month we continued to make progress in learning how to expand participation in open science. Together with the [Bioinformatics Hub of Kenya](https://bhki.org/) (BHKi), [SADiLaR](https://sadilar.org/index.php/en/) through the [ESCALATOR program](https://escalator.sadilar.org/), and [VU Amsterdam](https://vu.nl/en), we joined forces with OLS to develop the new Open Seeds cohort, OLS-8. Our goal is to connect members of regional communities in the international open science network, as well as reinforce their role as representatives of open science through local activities:
 
-🔗 [Uniting Communities to Expand Participation in Open Science](https://www.metadocencia.org/post/ols8/)
+🔗 [Uniting Communities to Expand Participation in Open Science](/post/ols8/)
 
 
 ## September
@@ -171,9 +171,9 @@ This month we continued to make progress in learning how to expand participation
 ### Meeting in Amsterdam
 We met with colleagues from the Hive during the DISC Unconference, which was held in Amsterdam. We worked on building projects that seek to promote diversity and inclusion in computer sciences.
 
-In the photo, smiling and hugging, from left to right: Jesi Formoso and Laura Ación ([MetaDocencia](https://www.metadocencia.org/)); Lena Karvovskaya ([Free University of Amsterdam](https://vu.nl/nl)); Yo Yehudi ([OLS](https://openlifesci.org/)); Elisa Rodenburg ([Free University of Amsterdam](https://vu.nl/nl)); Esther Plomp ([TU Delft](https://www.tudelft.nl/)); and Emmy Tsang ([IOI](https://investinopen.org/)).
+In the photo, smiling and hugging, from left to right: Jesi Formoso and Laura Ación ([MetaDocencia](/)); Lena Karvovskaya ([Free University of Amsterdam](https://vu.nl/nl)); Yo Yehudi ([OLS](https://openlifesci.org/)); Elisa Rodenburg ([Free University of Amsterdam](https://vu.nl/nl)); Esther Plomp ([TU Delft](https://www.tudelft.nl/)); and Emmy Tsang ([IOI](https://investinopen.org/)).
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Amsterdam2023.jpg" alt="Meeting in Ámsterdam." width="600px"/>
+<img src="/img/reporte-2023/Amsterdam2023.jpg" alt="Meeting in Ámsterdam." width="600px"/>
 <i><font size="-0.6">DISC Unconference. We had the opportunity to join colleagues from fellow communities in Amsterdam. Image: courtesy of the participants.
 </font></i>
 </p>
@@ -189,9 +189,9 @@ Irene Vazano, Jesica Formoso, and Patricia Loto presented the project "Mapping o
 ## October
 
 ### Jornadas de Informática en Salud
-The MetaDocencia team was also present at the [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](https://www.metadocencia.org/en/authors/mcnanton/) and Sabrina L. López joined the panel “Challenges and strategies in the creation of health datasets for AI tools.”
+The MetaDocencia team was also present at the [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](/en/author/maria-cristina-nanton/) and Sabrina L. López joined the panel “Challenges and strategies in the creation of health datasets for AI tools.”
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/jishiba-2023.jpg" alt="Jornadas de Informática en Salud. Sabrina López and María Nanton added their voices as panelists." width="600px"/>
+<img src="/img/reporte-2023/jishiba-2023.jpg" alt="Jornadas de Informática en Salud. Sabrina López and María Nanton added their voices as panelists." width="600px"/>
 <i><font size="-0.6">Jornadas de Informática en Salud. Sabrina López and María Nanton added their voices as panelists.</font></i>
 </p>
 
@@ -209,7 +209,7 @@ Maria presented a paper on the translation of R base. Jesi and Patri presented a
  [http://tiny.cc/mapeodecomunidades](http://tiny.cc/mapeodecomunidades)
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/LatinR.jpeg" alt="Jesica Formoso, Patricia Loto and María Cristina Nanton also were part of LatinR 2023." width="600px"/>
+<img src="/img/reporte-2023/LatinR.jpeg" alt="Jesica Formoso, Patricia Loto and María Cristina Nanton also were part of LatinR 2023." width="600px"/>
 <i><font size="-0.6">LatinR. LatinR. MetaDocencia was also present at the Latin American conference.</font></i>
 </p>
 
@@ -218,20 +218,20 @@ Maria presented a paper on the translation of R base. Jesi and Patri presented a
 ## November
 
 ### Present at the KEM
-Nicolás Palopoli delivered the talk "MetaDocencia and the community approach towards open science and education" at the Knowledge Exchange Meeting (KEM) 2023, organized by [CABANAnet](https://www.metadocencia.org/authors/cabananet/) in Costa Rica.
+Nicolás Palopoli delivered the talk "MetaDocencia and the community approach towards open science and education" at the Knowledge Exchange Meeting (KEM) 2023, organized by [CABANAnet](/author/cabananet/) in Costa Rica.
 
 🔗 Link to the presentation: [https://zenodo.org/records/10256496](https://zenodo.org/records/10256496)
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/NP-KEM2023.jpg" alt="Nico Paloponi at the KEM" width="600px"/>
+<img src="/img/reporte-2023/NP-KEM2023.jpg" alt="Nico Paloponi at the KEM" width="600px"/>
 <i><font size="-0.6">KEM. Nicolás Palopoli during his visit to Costa Rica to speak on open science and education.</font></i>
 </p>
 
 ### The Turing Way Book Dash, Take 2!
 Jesica Formoso and Patricia Loto collaborated in content development on accessibility, while sharing discussions and learning with other communities. María Nanton contributed by generating guidelines for content linked to translation and localization.
-Thanks also to [Iván Poggio](https://www.metadocencia.org/en/authors/ivan/), Mariela Rajngewerc, and Laurel Ascenzi for their contributions through our Accessibility team.
+Thanks also to [Iván Poggio](/en/author/ivan-poggio/), Mariela Rajngewerc, and Laurel Ascenzi for their contributions through our Accessibility team.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/bookdash-noviembre2023.png" alt="The Turing Way Book Dash. María, Jesica, and Patricia from MetaDocencia added their contributions." width="600px"/>
+<img src="/img/reporte-2023/bookdash-noviembre2023.png" alt="The Turing Way Book Dash. María, Jesica, and Patricia from MetaDocencia added their contributions." width="600px"/>
 <i><font size="-0.6">The Turing Way Book Dash. María, Jesica, and Patricia from MetaDocencia added their contributions.</font></i>
 </p>
 
@@ -251,11 +251,11 @@ After a great year of work, challenges, and joys shared among this beautiful tea
 We toast to the path we have traveled and to everything that is yet to come.
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/premiosManzanita.jpg" alt="Screenshot of the first “Manzanita Awards Gala”." width="600px"/>
+<img src="/img/reporte-2023/premiosManzanita.jpg" alt="Screenshot of the first “Manzanita Awards Gala”." width="600px"/>
 <i><font size="-0.6">Screenshot of the first “Manzanita Awards Gala”.</font></i>
 </p>
 
-We are sorry that due to a force majeure event [Moni Alonso](https://www.metadocencia.org/en/authors/monialonso/) could not receive her award live, but the gala was extended for a few more days and all the way to social media. Check out the Twitter thread (in Spanish):
+We are sorry that due to a force majeure event [Moni Alonso](/en/author/monica-alonso/) could not receive her award live, but the gala was extended for a few more days and all the way to social media. Check out the Twitter thread (in Spanish):
 
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">🏆 ¡Compartimos la gala de los Premios Manzanita 2023!<br>🍎 Después de un gran año de trabajo, desafíos y alegrías compartidas con este grupo hermoso, decidimos premiar en una ceremonia lúdica el enorme valor de las contribuciones de cada integrante. <a href="https://t.co/rmdjluCoKG">pic.twitter.com/rmdjluCoKG</a></p>&mdash; MetaDocencia (@MetaDocencia@floss.social) (@metadocencia) <a href="https://twitter.com/metadocencia/status/1738237948397576451?ref_src=twsrc%5Etfw">December 22, 2023</a></blockquote>
 
@@ -275,46 +275,46 @@ On Twitter, 440 new accounts followed us–a 17% increase.
 On Facebook, 111 more people now follow us and on Instagram, 162. That is 36% more!
 Most of our daily communication is done through Slack. Our workspace has been growing since 2020 and currently has 738 members.
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/NASApost.jpg" alt="The news about NASA's award was shared 48 times by our community on Twitter." width="600px"/>
+<img src="/img/reporte-2023/NASApost.jpg" alt="The news about NASA's award was shared 48 times by our community on Twitter." width="600px"/>
 <i><font size="-0.6">The news about NASA's award was shared 48 times by our community on Twitter.</font></i>
 </p>
 
-- The 7 published editions of our [bilingual newsletter](https://www.metadocencia.org/en/boletines/) were very well received by 2,065 Spanish-speaking folks in our community (25.7% more than the previous year), with an **opening rate of 41%**.
+- The 7 published editions of our [bilingual newsletter](/en/boletines/) were very well received by 2,065 Spanish-speaking folks in our community (25.7% more than the previous year), with an **opening rate of 41%**.
 
 
 
 # Teaching 👩‍💻
 In 2023, we organized 10 workshops with 141 attendees, an average of 14 people per event:
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Asistentes2023_por_curso_ingles.png" alt="Number of attendees per course edition in 2023." width="600px"/>
+<img src="/img/reporte-2023/Asistentes2023_por_curso_ingles.png" alt="Number of attendees per course edition in 2023." width="600px"/>
 <i><font size="-0.6">Number of attendees per course edition in 2023.</font></i>
 </p>
 
 When analyzing the percentage of attendees to our workshops by country, we see that they are mostly from Spanish-speaking ones, since we address our community in Spanish. **People from 14 different countries joined! 11 of them correspond to Latin America**:
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Asistentes2023_mapa_porcentajes_Ingles.png" alt="Percentage of attendees per country to courses 2023." width="600px"/>
+<img src="/img/reporte-2023/Asistentes2023_mapa_porcentajes_Ingles.png" alt="Percentage of attendees per country to courses 2023." width="600px"/>
 </p>
 
 By analyzing how attendees heard about MetaDocencia, we see the importance of the diversity of channels, how email has grown as a means of communication, and how important other people’s referral are to generate our community network: 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Asistentes2023_como_conocieron_ingles.png" alt="Graph showing how people found out about our 2023 courses." width="600px"/>
+<img src="/img/reporte-2023/Asistentes2023_como_conocieron_ingles.png" alt="Graph showing how people found out about our 2023 courses." width="600px"/>
 </p>
 
 The average net promoter score (NPS), which measures whether people would recommend a workshop, was 96.3, very close to the maximum score of 100.
 In October 2023, we held our first hybrid workshop as part of the Argentine Biostatistics Group annual meeting. There were 44 attendees in total.
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/captura-cursos.jpg" alt="Workshops page on our website and recordings uploaded to our YouTube channel." width="600px"/>
+<img src="/img/reporte-2023/captura-cursos.jpg" alt="Workshops page on our website and recordings uploaded to our YouTube channel." width="600px"/>
 <i><font size="-0.6">Workshops page on our website and recordings uploaded to our YouTube channel.</font></i>
 </p>
 
 Additionally, we improved and redesigned our workshop and event registration and certification process. Find the materials for each course through the following list:
 
-1. The [Accessible Zoom with a Screen Reader](https://www.metadocencia.org/en/curso/zoom/) workshop was published and taught 3 times between December 2022 and October 2023. There were also 3 editions of [How to Teach Programming Online](https://www.metadocencia.org/en/curso/programar/) and of [Present! Resources for Active Meetings](https://www.metadocencia.org/en/curso/intro-abc-online/). These were our most taught stable courses in 2023.
+1. The [Accessible Zoom with a Screen Reader](/en/curso/zoom/) workshop was published and taught 3 times between December 2022 and October 2023. There were also 3 editions of [How to Teach Programming Online](/en/curso/programar/) and of [Present! Resources for Active Meetings](/en/curso/intro-abc-online/). These were our most taught stable courses in 2023.
 2. The "MetaEvaluations: Evaluate While Teaching" workshop was improved and piloted twice in November and December 2022.
-3. The workshop [Social Impacts of Artificial Intelligence](https://www.metadocencia.org/en/curso/etica_en_ia/) was published and taught in person in March 2023, during the Latin American Meeting on Artificial Intelligence (Khipu 2023), in Montevideo (Uruguay).
-4. The in-person [Train the Trainer](https://www.metadocencia.org/curso/entrenamiento-instructores/) workshop was adapted to the local audience and delivered with CABANAnet in Buenos Aires (Argentina), in April 2023.
+3. The workshop [Social Impacts of Artificial Intelligence](/en/curso/etica_en_ia/) was published and taught in person in March 2023, during the Latin American Meeting on Artificial Intelligence (Khipu 2023), in Montevideo (Uruguay).
+4. The in-person [Train the Trainer](/curso/entrenamiento-instructores/) workshop was adapted to the local audience and delivered with CABANAnet in Buenos Aires (Argentina), in April 2023.
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/TtT-CABANA-2023.png" alt="CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees." width="600px"/>
+<img src="/img/reporte-2023/TtT-CABANA-2023.png" alt="CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees." width="600px"/>
 <i><font size="-0.6">CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees.</font></i>
 </p>
 
@@ -330,13 +330,13 @@ The methods developed for this research, in collaboration with psychology schola
 # Publications 📚
 
 ## Academic
-[Generative AI poses ethical challenges to open science, a commentary for Nature Human Behavior](https://www.metadocencia.org/en/post/ai-nature/), access to the article from the blog in Spanish and English.
+[Generative AI poses ethical challenges to open science, a commentary for Nature Human Behavior](/en/post/ai-nature/), access to the article from the blog in Spanish and English.
 
 
 ## Zenodo
 Based on our value “Science and Research”, we promote knowledge generation based on theory, reasoning, experience, and evidence.
 We have published 96 open access articles in our [Zenodo community](https://zenodo.org/communities/metadocencia?q=&l=list&p=1&s=10&sort=newest), between presentations, media appearances, blog posts, and support material for our workshops.<p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Zenodo2023_inglés.png" alt="Number of views and downloads made by different users of the materials published in Zenodo by MetaDocencia during 2023." width="600px"/>
+<img src="/img/reporte-2023/Zenodo2023_inglés.png" alt="Number of views and downloads made by different users of the materials published in Zenodo by MetaDocencia during 2023." width="600px"/>
 <i><font size="-0.6">Number of views and downloads made by different users of the materials published in Zenodo by MetaDocencia during 2023.</font></i>
 </p>
 
@@ -352,16 +352,16 @@ We discuss different topics trying to provide the expert perspective of our team
 List of 2023 publications on the website blog (in English) by category:
 
 ### Topics
-- [Artificial Intelligence and Education: More Questions Than Answers [Updated]](https://www.metadocencia.org/en/post/ai-questions/)
-- [Thinking Critically about Artificial Intelligence and Education [Updated]](https://www.metadocencia.org/en/post/ai-reflections/)
+- [Artificial Intelligence and Education: More Questions Than Answers [Updated]](/en/post/ai-questions/)
+- [Thinking Critically about Artificial Intelligence and Education [Updated]](/en/post/ai-reflections/)
 - [Communities of Practice and Their Influence on the Dissemination of Open Science in Latin America
-](https://www.metadocencia.org/en/post/communities-of-practice-la/)
+](/en/post/communities-of-practice-la/)
 
 ### Institucional
-- [We started to transform toward Open Science together with NASA: 10 points!](https://www.metadocencia.org/en/post/nasatops/)
+- [We started to transform toward Open Science together with NASA: 10 points!](/en/post/nasatops/)
 
 ### Resources
-[How in-class assessments can improve learning](https://www.metadocencia.org/en/post/assessments/)
+[How in-class assessments can improve learning](/en/post/assessments/)
 
 
 
@@ -377,21 +377,21 @@ MetaDocencia is consolidated as a fully-financed organization with 17 stable tea
 - **How We Use Social Media**, our guidelines and suggestions for the use of MetaDocencia’s social media profiles (in Spanish):[https://zenodo.org/records/10277716](https://zenodo.org/records/10277716)
 - **Repositorio de Accesibilidad 2022-2023**, a document that compiles digital accessibility-related content shared by MetaDocencia between 2022 and 2023 (in Spanish): [https://zenodo.org/records/10514982](https://zenodo.org/records/10514982)
   
-In addition, in September 2023, we carried out a new round of hiring for project coordination. After receiving 134 applications, 3 people were hired. Meet the new team members in this post: [https://www.metadocencia.org/en/post/team2023/](https://www.metadocencia.org/en/post/team2023/).
+In addition, in September 2023, we carried out a new round of hiring for project coordination. After receiving 134 applications, 3 people were hired. Meet the new team members in this post: [/en/post/team2023/](/en/post/team2023/).
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Postulaciones2023_mapa_porcentajes_ingles.png" alt="Cantidad de postulaciones por país" width="600px"/>
+<img src="/img/reporte-2023/Postulaciones2023_mapa_porcentajes_ingles.png" alt="Cantidad de postulaciones por país" width="600px"/>
 </p>
 
 Although the majority of applicants were from Argentina, the scope of the job searches was Latin American.
 
 There is diversity among the academic backgrounds of applicants, which enriches the contribution of all the profiles that join the team:
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Postulantes2023_area_ingles.png" alt="Academic background of applicants" width="600px"/>
+<img src="/img/reporte-2023/Postulantes2023_area_ingles.png" alt="Academic background of applicants" width="600px"/>
 </p>
 
 Applicants’ most recurrent educational level was a completed graduate degree:
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/Postulantes2023_nivel_educativo_ingles.png" alt="Educational level of applicants" width="600px"/>
+<img src="/img/reporte-2023/Postulantes2023_nivel_educativo_ingles.png" alt="Educational level of applicants" width="600px"/>
 </p>
 
 In 2023, we also implemented **parental leave**, in line with our well-being value. It is a specific policy that supports and follows the life projects of MetaDocencia’s team members and we hope it will be a reference for other communities and organizations.
@@ -403,7 +403,7 @@ We have been working with partners CCAD, OLS, Invest in Open Infrastructure, 2i2
 
 As representatives of Latin America, we are proud to collaborate with other local communities in the biomedical sciences that will be supported by this cloud computing infrastructure.
 
-🔗 Spanish post: [https://www.metadocencia.org/post/20231215-comunidadescatalyst/](https://www.metadocencia.org/post/20231215-comunidadescatalyst/) 
+🔗 Spanish post: [https://www.metadocencia.org/post/20231215-comunidadescatalyst/](/post/20231215-comunidadescatalyst/) 
 
 
 ### Funding Sources
@@ -412,13 +412,13 @@ We prepared several collaborative funding proposals with some of MetaDocencia's 
 
 #### NASA
 - We won two NASA-TOPS grants along with OLS to teach open science in Spanish and English. Activities open to the community will begin in early 2024.
-  🔗 [https://www.metadocencia.org/en/post/nasatops/](https://www.metadocencia.org/en/post/nasatops/) 
+  🔗 [https://www.metadocencia.org/en/post/nasatops/](/en/post/nasatops/) 
 
 - Additionally, we won a NASA-TOPST grant with 2i2c to teach open science using open flood, drought, and forest fire risk data.
 🔗 [https://zenodo.org/records/8212073](https://zenodo.org/records/8212073) (grant proposal)
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/LauraAcion-csvconf.jpeg" alt="Photo of the year. Laura Ación at csv,conf,v7, sharing the support we have received from fellow communities and organizations that allow us to continue working on our mission. Photo: Melissa Black." width="600px"/>
+<img src="/img/reporte-2023/LauraAcion-csvconf.jpeg" alt="Photo of the year. Laura Ación at csv,conf,v7, sharing the support we have received from fellow communities and organizations that allow us to continue working on our mission. Photo: Melissa Black." width="600px"/>
 <i><font size="-0.6">Photo of the year. Laura Ación at csv,conf,v7, sharing the support we have received from fellow communities and organizations that allow us to continue working on our mission. Photo: Melissa Black.</font></i>
 </p>
 
@@ -426,10 +426,10 @@ We prepared several collaborative funding proposals with some of MetaDocencia's 
 #### [National Science Foundation (NSF)](https://www.nsf.gov/) 
 Another project that was funded is about the C3 Center in Arecibo, aimed at modeling and advancing equity and inclusion in education and research. We are happy to be part, with [Ciencia Puerto Rico](https://www.cienciapr.org/) and the consulting firm [SPEAR](https://spear-education.com/), of this collaboration with the  [Universidad del Sagrado Corazón (USC)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2321762) and the [Universidad de Puerto Rico-Río Piedras (UPR-RP)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2321760) in Puerto Rico, and the [Universidad de Maryland, Baltimore County (UMBC)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2321761) and [Cold Spring Harbor Laboratory (CSHL)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2321759)  in the United States.
 
-🔗 Spanish post: [https://www.metadocencia.org/post/areciboc3/](https://www.metadocencia.org/post/areciboc3/) 
+🔗 Spanish post: [https://www.metadocencia.org/post/areciboc3/](/post/areciboc3/) 
 
 
-#### [Consulting services](https://www.metadocencia.org/en/consultoria/)
+#### [Consulting services](/en/consultoria/)
 We have partnered with influential organizations in open science and diversified our consulting services.
 - A significant milestone was our collaboration with CZI in organizing the “Accelerating Open Science in Latin America” workshop in Buenos Aires in April 2023. We supported the planning and execution of event activities by contributing to and coordinating a team of local experts.
 Other consulting services included:
@@ -444,15 +444,15 @@ MetaDocencia is committed to the continuous training and development of its team
 - In 2023, we took advantage of many of the opportunities that CZI makes available through its open [Capacity Building](https://chanzuckerberg.com/capacity-building/training-sessions/#:~:text=Capacity%20Building%20Opportunities,impact%20over%20the%20long%2Dterm.) program, some with simultaneous interpretation to Spanish!
 - Members of the Communication, Accessibility, and Impact Measurement teams completed the Scientific Community Engagement Fundamentals (CEF) course, taught by the [Center for Scientific Collaboration and Community Engagement](https://www.linkedin.com/company/cscce?trk=public_post-text).
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/CSCCE.jpg" alt="Shared CEF course certification." width="600px"/>
+<img src="/img/reporte-2023/CSCCE.jpg" alt="Shared CEF course certification." width="600px"/>
 <i><font size="-0.6">Shared CEF course certification.</font></i>
 </p>
 
 - Part of the team took English speaking lessons, which will continue during 2024.
 - Members of the Coordination team received personalized mentoring through [BetterUp](https://www.betterup.com/), also thanks to CZI.
 - We participated as trainees, mentors, facilitators, and organizers in the [OLS Open Seeds program](https://openlifesci.org/openseeds/ols-8/), with different projects. We finished the year building:
-- **Governance 2.0**, collaborative writing of Community Guidelines and an intervention protocol; Conflict of Interest (COI) Policy; Authorship Guidelines, and a periodic update schedule for our governance. Team members are [Romina Pendino](https://www.metadocencia.org/en/authors/rominapendino/), Iván Poggio, [Pao Lefer](https://www.metadocencia.org/en/authors/plefer/), and Laurel Ascenzi, with Vero Xhardez as mentor.
-- **Structure and infrastructure for virtual cohort training**, with team members Mónica Alonso, [Julián Buede](https://www.metadocencia.org/en/authors/jbuede/), Paz Míguez, Melissa Black, María Nanton, and Nicolás Palopoli, with mentorship by Gemma Turon.
+- **Governance 2.0**, collaborative writing of Community Guidelines and an intervention protocol; Conflict of Interest (COI) Policy; Authorship Guidelines, and a periodic update schedule for our governance. Team members are [Romina Pendino](/en/author/romina-pendino/), Iván Poggio, [Pao Lefer](/en/author/paola-lefer/), and Laurel Ascenzi, with Vero Xhardez as mentor.
+- **Structure and infrastructure for virtual cohort training**, with team members Mónica Alonso, [Julián Buede](/en/author/julian-buede/), Paz Míguez, Melissa Black, María Nanton, and Nicolás Palopoli, with mentorship by Gemma Turon.
   
 All training efforts, partly financed by the 10% that we protect by contract for it, aim for the team’s continued development and growth as a reference for open science in Spanish-speaking Latin America.
 
@@ -471,7 +471,7 @@ Thank you so much for your guidance and support during this time, Malvika and La
 
 ## Press 📰
 External media channels enhance MetaDocencia’s reach, recognition, and potential community audience.
-We documented all 2023 media participations in a [special page on our website](https://www.metadocencia.org/en/prensas/) (in Spanish).
+We documented all 2023 media participations in a [special page on our website](/en/prensas/) (in Spanish).
 
 ---
 
@@ -490,7 +490,7 @@ This year, we also welcomed 3 MetaDocencia babies on the team. We share their li
 We kick off 2024 working with more strength and conviction than ever for those who will come, for their growth, development, and a future of open doors for all people. This is our wish for this year that has just begun ✨
 
 <p align="center">
-<img src="https://www.metadocencia.org/img/reporte-2023/bebes-metadocentes-2023.png" alt="We welcomed 3 babies on the team" width="600px"/>
+<img src="/img/reporte-2023/bebes-metadocentes-2023.png" alt="We welcomed 3 babies on the team" width="600px"/>
 <i><font size="-0.6">MetaDocencia grows with giant steps.</font></i>
 </p>
 
