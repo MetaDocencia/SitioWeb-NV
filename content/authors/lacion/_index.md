@@ -1,26 +1,27 @@
 ---
 title: "Laura Ación"
-aliases: /authors/lacion/
+aliases: 
+  - /authors/lacion/
 bio: ""
 education:
   courses:
   - course: Doctorado en Bioestadística
-    institution: University of Iowa
     year: 2012
+    institution: University of Iowa
   - course: Master en Salud Pública
-    institution: University of Iowa
     year: 2009
-  - course: Master en Bioestadística
     institution: University of Iowa
+  - course: Master en Bioestadística
     year: 2004
+    institution: University of Iowa
   - course: Licenciatura en Biología
-    institution: Universidad de Buenos Aires
     year: 2002
+    institution: Universidad de Buenos Aires
 email: "laura.acion@metadocencia.org"
 interests:
 - Ciencias de datos de salud
 - Inteligencia artificial responsable
-- Ciencia abierta
+- Ciencia Abierta
 name: Laura Ación
 weight: 1
 organizations:
@@ -47,8 +48,6 @@ superuser: false
 user_groups:
 - Equipo y Consejo Asesor
 ---
-
-
 **Experiencia y trayectoria**
 
 Laura es investigadora adjunta del CONICET en la Universidad de Buenos Aires donde dirige el Co-Laboratorio de Uso Responsable de Datos. Tiene más de 50 publicaciones académicas revisadas por pares y ha recibido financiación de prestigiosas agencias internacionales tales como la NASA, el NIH y la CZI. 
