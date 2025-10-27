@@ -32,7 +32,7 @@ authors:
 
 En MetaDocencia entendemos que la inclusión implica escuchar, respetar y valorar a todas las personas como iguales, con poder sobre las decisiones y los presupuestos. Sabemos que esta no es una definición universal de inclusión. Sin embargo, cuando esto no ocurre, quienes estamos en minoría tendemos a agotarnos y a sentir subestimación, lo que puede llevar a la desvinculación. En esta publicación compartimos nuestras experiencias a lo largo de décadas de formar parte de diferentes minorías en diversos proyectos internacionales. Lamentablemente, muchos de estos proyectos se perdieron el valor de lo que podíamos aportar porque el número de batallas pírricas en una vida es finito.
 
-**Esta es la primera de una serie de 2 entradas de blog que esperamos que hagan que las personas que representan a minorías en su grupo o proyecto se sientan valoradas.** Lee [la segunda parte en este enlace](https://www.metadocencia.org/post/2024/20241218-empoderamiento-inclusion-2/) o accede al artículo completo en nuestra página de Zenodo aquí: 
+**Esta es la primera de una serie de 2 entradas de blog que esperamos que hagan que las personas que representan a minorías en su grupo o proyecto se sientan valoradas.** Lee [la segunda parte en este enlace](/post/2024/20241218-empoderamiento-inclusion-2/) o accede al artículo completo en nuestra página de Zenodo aquí: 
 [https://doi.org/10.5281/zenodo.14510588](https://doi.org/10.5281/zenodo.14510588)
 
 ##  ¿A quién le resultará útil esta publicación?
@@ -66,9 +66,9 @@ Pero si incluir a alguien parece imposible y no participa mucho o sigue siempre 
 
 **A continuación, compartimos algunos estrategias prácticas que puedes adoptar para ayudar a las personas marginadas a ganar confianza, valorar su individualidad, proteger su identidad y promover su participación como acciones clave para fomentar el empoderamiento a través de la inclusión.** 
 
-**Sigue el enlace que aparece a continuación para ver la [segunda parte](https://www.metadocencia.org/post/2024/20241218-empoderamiento-inclusion-2/) de esta serie de acciones para ganar en este bingo de la inclusión:** 
+**Sigue el enlace que aparece a continuación para ver la [segunda parte](/post/2024/20241218-empoderamiento-inclusion-2/) de esta serie de acciones para ganar en este bingo de la inclusión:** 
 
-![Captura de pantalla de una tarjeta de bingo que incluye las opciones: "Escuchar como pares", "Evitar el silencio como respuesta", "Apoyar a quienes hablan", "Confiar en la experiencia vivida", "Evitar ser condescendiente", "Recuperar las oportunidades perdidas", "Asumir la responsabilidad y disculparse", "Presupuestar adecuadamente a las minorías", "Ser transparente en la contratación y los ascensos", "Disponer de un Comité de Código de Conducta", "Reconocer todas las contribuciones", junto al logo de MetaDocencia.](https://www.metadocencia.org/img/bingo-inclusion-ES.jpg) 
+![Captura de pantalla de una tarjeta de bingo que incluye las opciones: "Escuchar como pares", "Evitar el silencio como respuesta", "Apoyar a quienes hablan", "Confiar en la experiencia vivida", "Evitar ser condescendiente", "Recuperar las oportunidades perdidas", "Asumir la responsabilidad y disculparse", "Presupuestar adecuadamente a las minorías", "Ser transparente en la contratación y los ascensos", "Disponer de un Comité de Código de Conducta", "Reconocer todas las contribuciones", junto al logo de MetaDocencia.](/img/bingo-inclusion-ES.jpg) 
 
 *Un bingo con algunas sugerencias de estrategias prácticas de atención activa para la capacitación a través de la inclusión. ¿Cuántos de ellas practicas?* 
 
