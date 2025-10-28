@@ -195,7 +195,7 @@ sections:
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
           <div class="mt-2">
-            {{< people_list group="Comunidades amigas" columns=8 gapx="8rem" gapy="3rem" >}}
+            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
         </details>
 
