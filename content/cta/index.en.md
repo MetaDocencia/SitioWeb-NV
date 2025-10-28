@@ -147,7 +147,7 @@ sections:
         to explore ways to collaborate.
 
         You can also make a contribution through our
-        <a href="/donar/">donation form</a>
+        <a href="/en/donar/">donation form</a>
         to help sustain and expand our activities.
     design:
       card:
