@@ -69,7 +69,7 @@ Pensar estrategias que nos permitan valorizar nuestra voz (y obtener reconocimie
 ## Si te interesa el tema y quieres conocer más, sugerimos estos links:
 - Biblioteca de Zotero [Ciencia Abierta en Comunidad](https://www.zotero.org/groups/5442154/ciencia_abierta_en_comunidad/library).
 - Frederickx, I., translated by Katrien Bollen and Shana Michiels, cartoons by Joris Snaet. 2018. Open Access: Tearing down the paywall is hard work. UK Leuven. [https://nieuws.kuleuven.be/en/content/2018/open-access-tearing-down-the-paywall-is-hard-work](https://nieuws.kuleuven.be/en/content/2018/open-access-tearing-down-the-paywall-is-hard-work)
-- Monti, C. y Unzurrunzaga, C. (2020) Acceso a la literatura científica desde Sci-Hub: Análisis y reflexión de las descargas en Argentina. Revista Hipertextos, 8 (14), pp. 111-136. DOI: [https://doi.org/10.24215/23143924e022 ](https://doi.org/10.24215/23143924e022)
+- Monti, C. y Unzurrunzaga, C. (2020) Acceso a la literatura científica desde Sci-Hub: Análisis y reflexión de las descargas en Argentina. Revista Hipertextos, 8 (14), pp. 111-136. DOI: [https://doi.org/10.24215/23143924e022](https://doi.org/10.24215/23143924e022)
 - [https://opensciencestudies.eu/](https://opensciencestudies.eu/)
 
 ## Agradecimientos
