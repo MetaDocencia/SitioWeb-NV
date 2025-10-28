@@ -1,28 +1,29 @@
 ---
-date: "2023-07-25"
-draft: false
-type: page
-title: "CW23: las comunidades de práctica y la aspiración a una Ciencia Abierta a escala global"
-linktitle: CW23
-summary: "En el marco del CW23 se realizó una encuesta para entender las barreras actuales, las prácticas exitosas y las posibles mejoras necesarias para la implementación de la Ciencia Abierta en América Latina."
+
+title: 'CW23: las comunidades de práctica y la aspiración a una Ciencia Abierta a
+  escala global'
+summary: En el marco del CW23 se realizó una encuesta para entender las barreras actuales,
+  las prácticas exitosas y las posibles mejoras necesarias para la implementación
+  de la Ciencia Abierta en América Latina.
+date: '2023-07-25'
+tags:
+- MetaDocencia
+categories:
+- Temas
+- Proyectos
 authors:
 - Reina Camacho Toro
 - Nicolas Palopoli
 - Camila Rangel Smith
-type: post
-weight: 1
-tags: 
-  - MetaDocencia 
-categories:
-  - Temas
-  - Proyectos
+translationKey: CW23
+ 
 ---
 
 *Nota: Una versión similar de este artículo está disponible en el sitio web de LA-CoNGA physics, [publicado en español](https://laconga.redclara.net/la-conga-en-el-collaboration-workshop-2023-del-software-sustainability-institute/) y [publicado en inglés](https://laconga.redclara.net/en/la-conga-at-the-software-sustainability-institutes-collaboration-workshop-2023/).*
 
 El [Software Sustainability Institute (SSI)](https://www.software.ac.uk) organizó su primer [Collaboration Workshop (CW23)](https://www.software.ac.uk/cw23) en modalidad híbrida, en persona en Manchester (Inglaterra) y en conexión remota, entre el 2 y el 4 de mayo de 2023. El CW23 reunió a personas vinculadas a la academia, el desarrollo de software, la provisión de financiamiento, el desarrollo de políticas científicas y la enseñanza para tratar el tema del desarrollo técnico, personal y profesional sostenible en la comunidad del software de investigación. Fueron tres días de presentaciones y paneles de discusión impulsados por una comunidad solidaria con un fuerte enfoque en el respeto, la comunicación y la inclusión. 
 
-Como parte del CW23, [LA-CoNGA physics](https://laconga.redclara.net/) y [MetaDocencia](https://www.metadocencia.org/) con el apoyo de [The Turing Way](https://www.turing.ac.uk/research/research-projects/turing-way), organizaron un taller híbrido en torno a la universalidad de los conceptos y prácticas actuales de Ciencia Abierta. Se hizo una encuesta piloto con el objetivo de entender las barreras actuales, las prácticas exitosas y las posibles mejoras necesarias para la implementación de la Ciencia Abierta en América Latina. 
+Como parte del CW23, [LA-CoNGA physics](https://laconga.redclara.net/) y [MetaDocencia](/) con el apoyo de [The Turing Way](https://www.turing.ac.uk/research/research-projects/turing-way), organizaron un taller híbrido en torno a la universalidad de los conceptos y prácticas actuales de Ciencia Abierta. Se hizo una encuesta piloto con el objetivo de entender las barreras actuales, las prácticas exitosas y las posibles mejoras necesarias para la implementación de la Ciencia Abierta en América Latina. 
 
 Entre las dificultades que los 18 participantes del taller plantearon en la encuesta, podemos citar las limitaciones para acceder a la financiación y la falta de apoyo y reconocimiento institucional. Destacaron que estas barreras se agravan a veces en el Sur Global debido a las asimetrías en el potencial acceso a solicitar y recibir fondos, la disponibilidad de recursos computacionales e internet confiable de alta velocidad. Los participantes también compartieron y debatieron durante la sesión algunas buenas prácticas para hacer más sencilla la colaboración interregional y/o interinstitucional, como facilitar el acceso a la formación técnica, practicar la toma de conciencia sobre distintas culturas, posibilitar la traducción y contextualización de materiales del inglés, implementar la comunicación clara de planes y objetivos, y el uso de metodologías de trabajo adaptadas al trabajo a distancia, por ejemplo, teleconferencias que varían según la zona horaria, compartir videos de las actividades, etc. Algunas de estas recomendaciones pueden implementarse a nivel local/interno en las distintas organizaciones e iniciativas. Sin embargo, algunos de los cambios, como ofrecer alternativas de financiación, requerirán políticas por parte de las principales organizaciones e instituciones gubernamentales para que los esfuerzos sean sostenibles. 
 
@@ -32,7 +33,7 @@ Un gran saludo al comité organizador por el esfuerzo de reunir a la comunidad e
 
 *Este artículo fue realizado por Reina Camacho Toro (CNRS/LPNHE y LA-CoNGA physics), Nicolas Palopoli (UNQ-CONICET y MetaDocencia) y Camila Rangel Smith (The Alan Turing Institute).*
 
-![Participantes en persona y de forma remota en el primer Collaborations Workshop híbrido ofrecido por SSI](https://www.metadocencia.org/img/CW23.jpg)
+![Participantes en persona y de forma remota en el primer Collaborations Workshop híbrido ofrecido por SSI](/img/CW23.jpg)
 *Participantes en persona y de forma remota en el primer Collaborations Workshop híbrido ofrecido por SSI. Imagen – eventos SSI*
 
 ## Recursos
