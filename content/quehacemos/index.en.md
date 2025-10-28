@@ -34,7 +34,7 @@ sections:
     id: pilares
     content:
       items:
-        - name: "Enhancing infrastructure"
+        - name: "Enhancing Infrastructure"
           description: |
             <div style="height:4px;background:#00506F;border-radius:6px;margin:0 0 0.75rem 0;"></div>
             We promote scientific and technological infrastructure that enables the production, management, and reuse of knowledge.
@@ -44,7 +44,7 @@ sections:
                style="background:#00506F;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
                Learn more
             </a>
-        - name: "Training for researchers"
+        - name: "Training for Researchers"
           description: |
             <div style="height:4px;background:#C83737;border-radius:6px;margin:0 0 0.75rem 0;"></div>
             We create evidence-based learning programs that turn knowledge into action and new skills into local impact.
@@ -54,7 +54,7 @@ sections:
                style="background:#C83737;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
                Learn more
             </a>
-        - name: "Fostering community"
+        - name: "Fostering Community"
           description: |
             <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 0 0.75rem 0;"></div>
             We nurture collaboration networks that break down barriers across disciplines, institutions, and countries, elevating Latin American science worldwide.
@@ -215,7 +215,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/formacion-para-formar/">Learn more →</a>
 
-        - name: "Skills training"
+        - name: "Skills Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We design customized courses that empower individuals, institutions and communities to build practical skills in teaching, Open Science, data analysis, and digital tools.
