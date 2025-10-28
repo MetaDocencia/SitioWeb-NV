@@ -10,11 +10,11 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We advance Latin America on the global research map</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We Advance Latin America on the Global Research Map</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
-          <span class="block">More collaboration.</span>
-          <span class="block">Fewer barriers to transformative knowledge.</span>
+          <span class="block">More Collaboration.</span>
+          <span class="block">Fewer Barriers to Transformative Knowledge.</span>
         </p>
         <a href="/en/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
@@ -42,14 +42,14 @@ sections:
     id: solutions
     content:
       items:
-        - title: "About us"
+        - title: "About Us"
           text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
           image: "quienessomos4.png"
           button:
             text: "Meet us"
             url: "/en/quienes-somos/"
   
-        - title: "What we do"
+        - title: "What We Do"
           text: |
             <!-- Local styles ONLY for this section -->
             <style>
@@ -97,7 +97,7 @@ sections:
           features:
             - "Enhancing infrastructure"
             - "Training for researchers"
-            - "Fostering  community"
+            - "Fostering community"
           image: "circuloEN.png"
           button:
             text: "Learn more about our projects"
@@ -187,7 +187,7 @@ sections:
   - block: markdown
     id: trust
     content:
-      title: "They trust MetaDocencia"
+      title: "They Trust MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
@@ -204,7 +204,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="apoya"
-            title="Support Latin American science"
+            title="Support Latin American Science"
             text=""
             button_text="Join us"
             button_url="/en/cta/"
