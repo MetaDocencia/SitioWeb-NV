@@ -16,7 +16,7 @@ sections:
         <div class="text-center max-w-3xl mx-auto">
           <!-- RED line above Vision -->
           <div style="height:4px;background:#C83737;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
-          <h3 class="text-2xl font-semibold mb-3">Our vision</h3>
+          <h3 class="text-2xl font-semibold mb-3">Our Vision</h3>
           <p class="text-lg">
             We work to make the production, communication, and application of scientific and technical knowledge equitable globally.
           </p>
@@ -31,7 +31,7 @@ sections:
         <div class="text-center max-w-3xl mx-auto">
           <!-- BLUE line above Mission -->
           <div style="height:4px;background:#00506F;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
-          <h3 class="text-2xl font-semibold mb-3">Our mission</h3>
+          <h3 class="text-2xl font-semibold mb-3">Our Mission</h3>
           <p class="text-lg">
             To advance innovation with a local perspective that responsibly builds scientific and technical capacities through the co-creation of networks, learning spaces, and accessible resources for Spanish-speaking communities.
           </p>
@@ -45,7 +45,7 @@ sections:
       text: |
         <div class="text-center">
           <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
-          <h3 class="text-2xl font-semibold mb-3">Our values</h3>
+          <h3 class="text-2xl font-semibold mb-3">Our Values</h3>
         </div>
       items:
         - name: "Community"
