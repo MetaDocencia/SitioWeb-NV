@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">About us</span>'
+      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">About Us</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           We are a community of persons and organizations working globally from Latin America since 2020.
@@ -23,10 +23,10 @@ sections:
              style="background:#C83737;color:#FFFFFF;">Institutional</a>
           <a href="/en/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Mission and Vision</a>
+             style="background:#C83737;color:#FFFFFF;">Mission and vision</a>
           <a href="/en/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Our Values</a>
+             style="background:#C83737;color:#FFFFFF;">Our values</a>
         </div>
 
         <div class="mt-4 space-y-2 text-center">
@@ -203,7 +203,7 @@ sections:
   - block: markdown
     id: trust
     content:
-      title: "They trust MetaDocencia"
+      title: "They Trust MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
           <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
@@ -233,7 +233,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="apoya"
-            title="Support Latin American science"
+            title="Support Latin American Science"
             text=""
             button_text="Join us"
             button_url="/en/cta/"
