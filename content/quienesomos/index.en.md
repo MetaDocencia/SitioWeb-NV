@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">About Us</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">About Us</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           We are a community of persons and organizations working globally from Latin America since 2020.
