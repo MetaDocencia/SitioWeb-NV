@@ -32,7 +32,7 @@ Building a friendly job search process involves a multitude of details that requ
 
 - **Leave no one out**. Including the approximate salary for the position in the call also helps people consider whether it is convenient for them to apply and avoids negotiations with information asymmetries. Transparency in evaluation criteria also benefits those with less experience in job searches.
 
-It is important to highlight that in our calls, although we defined specific profiles for the interview round, we invited all applicants to join our community. Several months later, we launched the [Polen Project](https://www.metadocencia.org/en/proyecto/proyecto-polen/), a pilot initiative aimed at further expanding community inclusion for those interested in joining our team or engaging with our proposals.
+It is important to highlight that in our calls, although we defined specific profiles for the interview round, we invited all applicants to join our community. Several months later, we launched the [Polen Project](https://doi.org/10.5281/zenodo.17469649), a pilot initiative aimed at further expanding community inclusion for those interested in joining our team or engaging with our proposals.
 
 - **Provide feedback to applicants**. People who respond to a job search invest their time in your organization, so the least you can do is keep them informed about the process's progress. At MetaDocencia, we respond to all applications, whether they meet the job requirements or not.
 
