@@ -9,7 +9,7 @@ sections:
   # ---------- HERO ----------
   - block: hero
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">What We Do</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">What We Do</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           We cultivate the Latin American scientific ecosystem through <b>infrastructure</b>, <b>training</b>, and <b>community</b>.
