@@ -32,7 +32,7 @@ Construir un proceso de búsqueda laboral amigable implica una suma de detalles 
 
 - **No dejes a nadie afuera**. Incluir en la convocatoria el monto de salario aproximado disponible para el puesto también ayuda a que las personas consideren si les conviene o no presentarse y a evitar negociaciones con asimetrías de información. La transparencia en los criterios de evaluación también favorece a quienes tienen menos experiencia en búsquedas laborales.
 
-Es importante destacar que, en nuestros llamados, si bien se definieron algunos perfiles para la ronda de entrevistas, invitamos a formar parte de nuestra comunidad a todas las personas que aplicaron. Y unos meses después, generamos el [Proyecto Polen](https://zenodo.org/records/10285864), una iniciativa piloto para ampliar aún más la inclusión comunitaria de quienes querían participar del equipo o nuestras propuestas.
+Es importante destacar que, en nuestros llamados, si bien se definieron algunos perfiles para la ronda de entrevistas, invitamos a formar parte de nuestra comunidad a todas las personas que aplicaron. Y unos meses después, generamos el [Proyecto Polen](https://doi.org/10.5281/zenodo.17469481), una iniciativa piloto para ampliar aún más la inclusión comunitaria de quienes querían participar del equipo o nuestras propuestas.
 
 - **Haz devoluciones a quienes hayan aplicado**. Las personas que contestan una búsqueda laboral invierten su tiempo en tu organización, así que lo mínimo que puedes hacer es mantenerlas informadas sobre la evolución del proceso. En MetaDocencia respondemos todas las postulaciones más allá de que hayan cumplido o no con los requisitos de cada puesto.
   
