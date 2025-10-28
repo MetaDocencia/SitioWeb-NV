@@ -110,11 +110,11 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+1500"
+        - statistic: "+1.500"
           description: |
             personas  
             formadas
-        - statistic: "+6000"
+        - statistic: "+6.000"
           description: |
             personas  
             conectadas
