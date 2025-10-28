@@ -22,7 +22,7 @@ categories:
 ---
 La Ciencia Abierta es un movimiento que promueve hacer más accesible la producción científica, así como fortalecer prácticas más transparentes, inclusivas y colaborativas. En este sentido, para MetaDocencia es central interactuar en contextos comunitarios, abiertos, participativos y horizontales. Para nuestra comunidad, Slack es uno de los principales espacios para hacerlo.
 
-![Captura de la plataforma de Slack donde se ve cómo aparecen los intercambios en los distintos canales](https://www.metadocencia.org/img/Slackcaptura-web.jpg) 
+![Captura de la plataforma de Slack donde se ve cómo aparecen los intercambios en los distintos canales](/img/Slackcaptura-web.jpg) 
 
 *Imagen del Slack de MetaDocencia.*
 
@@ -41,7 +41,7 @@ Para que todas las personas se sientan cómodas y sepan cómo contribuir al inte
 Con la intención de mejorar la experiencia de toda la comunidad, en 2023 reestructuramos nuestro espacio de Slack incorporando nuevos canales temáticos pensados para facilitar un intercambio más específico y dinámico de recursos, experiencias y discusiones sobre temas que nos interesan.
 Listado de canales con sus descripciones:
 
-👋 #Bienvenida: Te damos la bienvenida a la comunidad MetaDocente 🍎 Puedes presentarte y contar cómo nos conociste. Estas son nuestras [Pautas de Convivencia](https://www.metadocencia.org/pdc/): tu participación implica que las aceptas y las respetaremos en este espacio.
+👋 #Bienvenida: Te damos la bienvenida a la comunidad MetaDocente 🍎 Puedes presentarte y contar cómo nos conociste. Estas son nuestras [Pautas de Convivencia](https://zenodo.org/records/12534196): tu participación implica que las aceptas y las respetaremos en este espacio.
 
 🍎 #Qué hacemos: Anuncios generales y actividades de MetaDocencia.
 
