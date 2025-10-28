@@ -17,11 +17,11 @@ tags:
 categories:
   - Proyectos
 ---
-En 2022 cerramos el año con una excelente noticia: ¡el proyecto [Infraestructura en la nube y entrenamiento en ciencia abierta para comunidades de América Latina y África](https://www.metadocencia.org/post/infraestructura-nube/) resultó aprobado para financiación por la [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)! Este proyecto hoy se llama “Catalyst” y les compartimos algunas novedades.
+En 2022 cerramos el año con una excelente noticia: ¡el proyecto [Infraestructura en la nube y entrenamiento en ciencia abierta para comunidades de América Latina y África](/post/infraestructura-nube/) resultó aprobado para financiación por la [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)! Este proyecto hoy se llama “Catalyst” y les compartimos algunas novedades.
 
 El objetivo principal que nos propusimos junto al resto de las organizaciones del proyecto es crear un servicio comunitario de infraestructura en la nube y ofrecer flujos de trabajo en ciencias biomédicas y de la salud en el Sur Global. Para ello, pusimos a disposición de las comunidades participantes acceso a un JupyterHub, una máquina virtual en la nube con gran capacidad de almacenamiento y cómputo.
 
-Desde MetaDocencia tenemos el rol clave de identificar y contactar comunidades latinoamericanas que puedan beneficiarse de participar de esta prueba piloto. En los últimos meses estuvimos trabajando en contactar más participantes para el proyecto y tuvimos la posibilidad de conocer un poco más sobre su trabajo y tender puentes. Esto es clave para otro proyecto MetaDocente, el [mapeo de comunidades](https://www.metadocencia.org/post/comunidades-practica-ciencia-abierta-latam/).
+Desde MetaDocencia tenemos el rol clave de identificar y contactar comunidades latinoamericanas que puedan beneficiarse de participar de esta prueba piloto. En los últimos meses estuvimos trabajando en contactar más participantes para el proyecto y tuvimos la posibilidad de conocer un poco más sobre su trabajo y tender puentes. Esto es clave para otro proyecto MetaDocente, el [mapeo de comunidades](/post/comunidades-practica-ciencia-abierta-latam/).
 
 Les presentamos a UNITEFA, CICADA y GITA porque estamos muy felices de trabajar junto a ellas en esta etapa:
 
@@ -49,7 +49,7 @@ Para esto participaremos de capacitaciones sobre la creación de lecciones, junt
 
 ### Más Información:
 - Sobre el proyecto Catalyst:
-[Narrativa abierta de financiamiento: Modelo de servicio computacional interactivo y colaborativo para comunidades globales](https://www.metadocencia.org/post/narrativafinanciamiento/)
+[Narrativa abierta de financiamiento: Modelo de servicio computacional interactivo y colaborativo para comunidades globales](/post/narrativafinanciamiento/)
 
 - Sobre la Jornada de datos de UNITEFA
   - Noticia en el portal de UNITEFA: [https://unitefa.conicet.unc.edu.ar/jornada-de-ciencia-de-datos/](https://unitefa.conicet.unc.edu.ar/jornada-de-ciencia-de-datos/)
