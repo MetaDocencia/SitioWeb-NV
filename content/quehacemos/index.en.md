@@ -107,7 +107,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="infra"
-            title="Enhancing infrastructure"
+            title="Enhancing Infrastructure"
             bg="#00506F"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
@@ -185,7 +185,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="formacion"
-            title="Training for researchers"
+            title="Training for Researchers"
             bg="#C83737"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
@@ -272,7 +272,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="comunidad"
-            title="Fostering community"
+            title="Fostering Community"
             bg="#F77B20"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
@@ -320,7 +320,7 @@ sections:
         - statistic: "60+"
           description: "collaborators"
         - statistic: "6,000+"
-          description: "connected people"
+          description: "people connected"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
@@ -350,7 +350,7 @@ sections:
 
         {{< cta_fullwidth
             id="research-pubs"
-            title="Academic publications"
+            title="Academic Publications"
             text="We conduct and openly share research that informs and supports open science and education in Latin America."
             bg="#E5E7EB" color="#111827"
             variant="background"
