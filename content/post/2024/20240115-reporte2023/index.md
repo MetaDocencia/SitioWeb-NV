@@ -72,7 +72,7 @@ En enero y febrero de 2023 seguimos construyendo localmente, siempre con mirada 
 
 ### #Khipu2023
 - Laura Ación participó como disertante en la sesión “Ethics and Social Impacts in AI”, junto a Paola Ricaurte, Sasha Luccioni y Andrés Morales, con la moderación de Laura Alonso Alemany. Registro del evento (en inglés) en [YouTube](https://youtu.be/yiY7WJrJxI8?si=JGliEz6iDjeR7Hj3&t=6913).
-- Apoyamos, junto a la Fundación Vía Libre, la organización del [taller sobre “Social Impacts of Artificial Intelligence”](/en/curso/etica_en_ia/), que estuvo a cargo de Laura Ación, Laura Alonso Alemany y Luciana Benotti.
+- Apoyamos, junto a la Fundación Vía Libre, la organización del [taller sobre “Social Impacts of Artificial Intelligence”](https://doi.org/10.5281/zenodo.17470211), que estuvo a cargo de Laura Ación, Laura Alonso Alemany y Luciana Benotti.
 
 ### Cumplimos 3 años
 En 2023 MetaDocencia cumplió 3 años de trabajo construyendo capacidades científicas y técnicas en forma responsable y con mirada local.
@@ -201,7 +201,7 @@ Irene Vazano, Jesica Formoso y Patricia Loto estuvieron a cargo de presentar el 
 ## Octubre
 
 ### Jornadas de Informática en Salud
-El equipo MetaDocente también estuvo presente en las [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](/author/mcnanton/) y Sabrina L. López participaron en el Panel “Desafíos y estrategias en la creación de dataset en salud para herramientas de IA”.
+El equipo MetaDocente también estuvo presente en las [Jornadas de Informática en Salud #JISHIBA](https://www.hospitalitaliano.org.ar/#!/home/jornadasdis/inicio). [María Cristina Nanton](/author/maria-cristina-nanton/) y Sabrina L. López participaron en el Panel “Desafíos y estrategias en la creación de dataset en salud para herramientas de IA”.
 <p align="center">
 <img src="/img/reporte-2023/jishiba-2023.jpg" alt="Jornadas de Informática en Salud. Sabrina López y María Nanton sumaron sus voces como panelistas." width="600px"/>
 <i><font size="-0.6">Jornadas de Informática en Salud. Sabrina López y María Nanton sumaron sus voces como panelistas.</font></i>
@@ -216,7 +216,7 @@ Melissa Black estuvo presente en [Co-Afina 2023](https://laconga.redclara.net/ha
 Jesica Formoso, Patricia Loto y María Cristina Nanton también participaron de LatinR, la Conferencia Latinoamericana sobre el uso de R en Investigación + Desarrollo, que se realizó presencialmente en Montevideo, Uruguay.
 Maria presentó un trabajo sobre traducción de R base. Jesi y Patri presentaron una shiny app para el “Mapeo de comunidades, organizaciones y eventos de Ciencia Abierta en Latinoamérica”.
 
-🔗 Link a la presentacion del mapeo: [http://tiny.cc/mapeodecomunidades](http://tiny.cc/mapeodecomunidades)
+🔗 Conoce más sobre el [Mapeo de Ciencia Abierta en Latinoamérica](https://www.metadocencia.org/proyecto/mapeo-comunidades/)
 <p align="center">
 <img src="/img/reporte-2023/LatinR.jpeg" alt="Jesica Formoso, Patricia Loto y María Cristina Nanton también participaron de LatinR" width="600px"/>
 <i><font size="-0.6">LatinR. MetaDocencia también se hizo presente en la Conferencia Latinoamericana.</font></i>
@@ -249,11 +249,11 @@ Gracias también a [Iván Poggio](/author/ivan-poggio/), Mariela Rajngewerc y La
 ## Diciembre
 
 ### Arrancó el Proyecto Polen
-¡El [Proyecto Polen](https://docs.google.com/document/d/1uQOUgxVGnBT86USTWBzzI-Y3kTwGIl53SL7yvDCehSQ/edit?usp=sharing) ya cuenta con su primer grupo de participantes! 
+¡El [Proyecto Polen](https://doi.org/10.5281/zenodo.17469481) ya cuenta con su primer grupo de participantes! 
 Esta iniciativa busca incorporar más personas que representen a MetaDocencia en comunidades, redes y eventos externos, reconociendo su contribución a nuestra misión y visión mientras profundizan sus trayectorias comunitarias.
 En función de lo que aprendamos en esta etapa piloto, ¡esperamos mejorarlo y poder ampliarlo en futuras ediciones!
 
-🔗 Presentación disponible con notas de oradoras: [https://zenodo.org/records/10285864](https://zenodo.org/records/10285864).
+🔗 Presentación disponible: [https://zenodo.org/records/10285864](https://zenodo.org/records/10285864).
 
 ### Entregamos los Premios Manzanita
 Después de un gran año de trabajo, desafíos y alegrías compartidas con este equipo hermoso, decidimos premiar en una ceremonia lúdica el enorme valor de las contribuciones de cada integrante con un galardón virtual y simbólico que llamamos “Premios Manzanita”.
@@ -319,12 +319,15 @@ En octubre de 2023 realizamos nuestro primer taller híbrido como parte de la re
 <i><font size="-0.6">Sección de cursos en nuestro sitio web y registros cargados a nuestro canal de YouTube.</font></i>
 </p>
 
-Además, mejoramos y rediseñamos nuestro proceso de registro y certificación de talleres y eventos en sus distintas ediciones. Desde el siguiente listado se puede acceder a los materiales de cada curso: 
+Además, mejoramos y rediseñamos nuestro proceso de registro y certificación de talleres y eventos en sus distintas ediciones:
 
-- El taller [Zoom Accesible con Lector de Pantalla](/curso/zoom/) fue publicado e impartido 3 veces entre diciembre de 2022 y octubre de 2023. También hubo 3 ediciones de [Enseñar a Programar Online](/curso/programar/) y de nuestro [¡Presente! Recursos para encuentros activos](/curso/intro-abc-online/). Estos fueron nuestros cursos estables más dictados en 2023.
+- El taller Zoom Accesible con Lector de Pantalla fue publicado e impartido 3 veces entre diciembre de 2022 y octubre de 2023. También hubo 3 ediciones de Enseñar a Programar Online y de nuestro ¡Presente! Recursos para encuentros activos. Estos fueron nuestros cursos estables más dictados en 2023.
 - El taller “MetaEvaluaciones: enseñar evaluando” se mejoró y se puso a prueba dos veces en noviembre y diciembre de 2022.
-- El taller [Impactos Sociales de la Inteligencia Artificial (en inglés)](/en/curso/etica_en_ia/) fue publicado e impartido de manera presencial en marzo de 2023 durante el Encuentro Latinoamericano En Inteligencia Artificial (Khipu 2023) en Montevideo (Uruguay).
-- El taller presencial [Entrenamiento de Instructores](/curso/entrenamiento-instructores/) fue adaptado a la audiencia local e impartido con CABANAnet en Buenos Aires (Argentina) en abril de 2023.
+- El taller [Impactos Sociales de la Inteligencia Artificial (en inglés)](https://doi.org/10.5281/zenodo.17470211) fue publicado e impartido de manera presencial en marzo de 2023 durante el Encuentro Latinoamericano En Inteligencia Artificial (Khipu 2023) en Montevideo (Uruguay).
+- El taller presencial Entrenamiento de Instructores fue adaptado a la audiencia local e impartido con CABANAnet en Buenos Aires (Argentina) en abril de 2023.
+
+Aquí puedes acceder a los [materiales de cada curso](/proyecto/cursos-a-medida/). 
+
 <p align="center">
 <img src="/img/reporte-2023/TtT-CABANA-2023.png" alt="Imágenes de la edición presencial en Buenos Aires del curso para entrenamiento de instructores" width="600px"/>
 <i><font size="-0.6">CABANAnet junto a MetaDocencia durante los talleres. Imágenes: gentileza de quienes participaron.</font></i>
@@ -376,8 +379,7 @@ Discutimos distintos temas tratando de aportar la mirada experta de las personas
 
 ### Institucional
 - [MetaDocencia en Slack](/post/20231219-mdenslack/)
-- [¡Se agranda el equipo!](/post/equipo2023/)
-- [Búsqueda laboral: Coordinación de Proyectos [Actualizado]](/post/oferta_laboral_coordi2023/)
+- [Búsqueda laboral: Coordinación de Proyectos [Actualizado]](https://doi.org/10.5281/zenodo.17470092)
 - [Arrancamos a transformarnos hacia la Ciencia Abierta junto con la NASA: ¡10 puntos!](/post/nasatops10puntos/)
 - [¡Feliz cumple MetaDocencia! ](/post/cumple3/)
 - [¿Cómo nació MetaDocencia?](/post/origenmd/)
@@ -405,9 +407,8 @@ MetaDocencia está consolidada como una organización totalmente financiada con 
 - **Cómo usamos las redes sociales**, nuestra guía de pautas y sugerencias para el uso de los perfiles de redes sociales de MetaDocencia: https://zenodo.org/records/10277716
 - **Repositorio de Accesibilidad 2022-2023**, un documento que incluye contenidos relativos a accesibilidad digital compartidos por MetaDocencia entre 2022 y 2023: https://zenodo.org/records/10514982
 
-Además, en septiembre de 2023 realizamos una nueva ronda de contratación para coordinación de proyectos. Después de recibir 134 solicitudes, 3 personas fueron contratadas. Presentamos al equipo ampliado en esta publicación: 
+Además, en septiembre de 2023 realizamos una nueva ronda de contratación para coordinación de proyectos. Después de recibir 134 solicitudes, 3 personas fueron contratadas.
 
-🔗 [/post/equipo2023/](/post/equipo2023/)
 <p align="center">
 <img src="/img/reporte-2023/Postulaciones2023_mapa_porcentajes.png" alt="Cantidad de postulaciones por país" width="600px"/>
 </p>
@@ -435,7 +436,7 @@ Estamos trabajando con el CCAD, OLS, Invest in Open Infrastructure, 2i2c, CSCCE 
 
 Como representantes de América Latina nos enorgullece colaborar con otras comunidades latinoamericanas en las ciencias biomédicas que serán apoyadas por esta infraestructura de computación en la nube.
 
-🔗 /post/20231215-comunidadescatalyst/ 
+🔗 [www.metadocencia.org/post/20231215-comunidadescatalyst/](/post/20231215-comunidadescatalyst/) 
 
 
 ### Fuentes de financiamiento
@@ -445,11 +446,11 @@ Elaboramos colaborativamente distintas propuestas de financiamiento junto con al
 #### NASA
 - Junto a OLS ganamos dos subsidios NASA-TOPS para enseñar Ciencia Abierta en español e inglés. Las actividades abiertas a la comunidad comenzarán temprano en 2024.
 
-  🔗 /post/nasatops10puntos/
+  🔗 [www.metadocencia.org/post/nasatops10puntos/](/post/nasatops10puntos/)
 
 - Además, junto a con 2i2c ganamos un subsidio NASA-TOPS para enseñar Ciencia Abierta utilizando datos abiertos de riesgo de inundaciones, sequías e incendios forestales.
 
-  🔗 https://zenodo.org/records/8212073 (propuesta en inglés)
+  🔗 [https://zenodo.org/records/8212073](https://zenodo.org/records/8212073) (propuesta en inglés)
 <p align="center">
 <img src="/img/reporte-2023/LauraAcion-csvconf.jpeg" alt="Laura Ación en la csv,conf,v7, compartiendo el apoyo que hemos recibido de comunidades amigas y organizaciones que nos permiten seguir trabajando en nuestra misión." width="600px"/>
 <i><font size="-0.6">La foto del año. Laura Ación en la csv,conf,v7, compartiendo el apoyo que hemos recibido de comunidades amigas y organizaciones que nos permiten seguir trabajando en nuestra misión. Foto: Melissa Black.</font></i>
