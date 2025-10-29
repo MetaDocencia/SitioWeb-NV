@@ -123,9 +123,9 @@ En 2023, publicaremos y pondremos a disposición las bases de funcionamiento de 
 ####  Comenzando con todo
 Comenzamos 2022 ofreciendo dos ediciones de **Introducción al ABC para Enseñar Online** y una edición del **Taller de Zoom**, algunos de nuestros primeros talleres sincrónicos en línea para presentar prácticas de enseñanza efectivas. 
 
-Durante el primer semestre enseñamos varios talleres online basados en el lenguaje de programación R: una edición de [Generando Tutoriales Interactivos con el Paquete {learnr}](/post/taller_learnr_2022/), destinado a crear tutoriales educativos interactivos (ofrecido en conjunto con [R-Ladies Johannesbourg)](https://rladies.org/south-africa-rladies/locality/Johannesburg/); dos ediciones de [Desde las Hojas de Cálculo a R](/curso/spreadsheet-to-r/), junto con el [Software Sustainability Institute](https://www.software.ac.uk/) (Reino Unido), para asistir en la transición a R para trabajar con datos; y tres versiones a la carta de estos dos talleres, co-organizados como *meetups* con grupos locales de [R-Ladies Argentina](https://rladies.org/argentina-rladies/). Estas actividades fueron lideradas por [Paola Corrales](/author/paocorrales/), [Elio Campitelli](/author/eliocamp/) y [Yanina Bellini Saibene](/author/yabellini/), que co-fundaron MetaDocencia, y colaboraron con MetaDocencia hasta fin de mayo de 2022. 
+Durante el primer semestre enseñamos varios talleres online basados en el lenguaje de programación R: una edición de [Generando Tutoriales Interactivos con el Paquete {learnr}](/proyecto/cursos-a-medida/), destinado a crear tutoriales educativos interactivos (ofrecido en conjunto con [R-Ladies Johannesbourg)](https://rladies.org/south-africa-rladies/locality/Johannesburg/); dos ediciones de [Desde las Hojas de Cálculo a R](/proyecto/cursos-a-medida/), junto con el [Software Sustainability Institute](https://www.software.ac.uk/) (Reino Unido), para asistir en la transición a R para trabajar con datos; y tres versiones a la carta de estos dos talleres, co-organizados como *meetups* con grupos locales de [R-Ladies Argentina](https://rladies.org/argentina-rladies/). Estas actividades fueron lideradas por [Paola Corrales](/author/paola-corrales/), [Elio Campitelli](/author/elio-campitelli/) y [Yanina Bellini Saibene](/author/yanina-bellini/), que co-fundaron MetaDocencia, y colaboraron con MetaDocencia hasta fin de mayo de 2022. 
 
-También llevaron adelante el [Club de Lectura de Enseñar Tecnología en Comunidad](/post/club_de_lectura/). Se trató de ocho encuentros con presentación y moderación de [distintas personas](/curso/clubdelecturat3/) que colaboraron con MetaDocencia. El objetivo fue compartir y profundizar sobre el libro [Enseñando Tecnología en Comunidad de Greg Wilson](https://teachtogether.tech/es/), quien participó en el último de estos encuentros, con interpretación simultánea español-inglés 📚. 
+También llevaron adelante el [Club de Lectura de Enseñar Tecnología en Comunidad](/proyecto/conversatorios/). Se trató de ocho encuentros con presentación y moderación de [distintas personas](/proyecto/conversatorios/) que colaboraron con MetaDocencia. El objetivo fue compartir y profundizar sobre el libro [Enseñando Tecnología en Comunidad de Greg Wilson](https://teachtogether.tech/es/), quien participó en el último de estos encuentros, con interpretación simultánea español-inglés 📚. 
 
 Aunque algunos de estos cursos y eventos no están activos, los materiales permanecen disponibles en la web para quienes deseen conocer más y replicar la experiencia.
 
@@ -136,9 +136,9 @@ En el último trimestre de 2022 realizamos ediciones piloto internas de nuevas p
 
 Comenzamos a actualizar nuestros cursos siguiendo nuestro [Manual de Estilo](https://github.com/MetaDocencia/Logos/tree/master/manual_identidad_visual), cuyo diseño fue mejorado por Julián. ¡Miren qué linda [plantilla de presentaciones nueva](https://docs.google.com/presentation/d/1bPga_IEQDrIV77d8CTVKyCywcCVtktRCRiQVt6togdE/edit?usp=sharing) que tenemos! 😍
 
-🧑‍🏫 El primer taller actualizado fue Introducción al ABC para enseñar online: lo renombramos [¡Presente! Recursos para encuentros activos](/curso/intro-abc-online/), le sacamos la pandemia de encima e introducimos nuevos recursos para manejo de espacios de intercambio de conocimiento sincrónico ya sea en entornos presenciales, híbridos o en línea.
+🧑‍🏫 El primer taller actualizado fue Introducción al ABC para enseñar online: lo renombramos [¡Presente! Recursos para encuentros activos](/proyecto/cursos-a-medida/), le sacamos la pandemia de encima e introducimos nuevos recursos para manejo de espacios de intercambio de conocimiento sincrónico ya sea en entornos presenciales, híbridos o en línea.
 
-🧑‍💻 También desarrollamos una propuesta para aprender el manejo de Zoom con el lector de pantalla NVDA orientado a personas con discapacidad visual y docentes de personas con discapacidad visual, que es nuestro nuevo [Zoom Accesible con Lector de Pantalla](/curso/zoom/) 🆕.
+🧑‍💻 También desarrollamos una propuesta para aprender el manejo de Zoom con el lector de pantalla NVDA orientado a personas con discapacidad visual y docentes de personas con discapacidad visual, que es nuestro nuevo [Zoom Accesible con Lector de Pantalla](/proyecto/cursos-a-medida/) 🆕.
 
 Se desarrollaron ediciones abiertas de los talleres ¡Presente! Recursos para encuentros activos, a cargo de Irene Vazano, Nicolás Palopoli y Laura Ación; y de Zoom Accesible con Lector de Pantalla, lideradas por Iván Poggio e Irene Vazano. 
 
@@ -228,14 +228,6 @@ En [este hilo]https://twitter.com/metadocencia/status/1572582681870995456) compa
 - Organizamos 17 eventos con un promedio de 15 asistentes por actividad. 
 - ¡A los eventos de gobernanza se inscribieron más de 100 personas de 16 países distintos! Y sus aportes fueron muy importantes para que el equipo de Gobernanza avanzara el proceso de desarrollo.
 
-<!-- Exporta el mapa interactivo a PNG como /img/reporte-2022/mapa_gobernanza.png -->
-![Origen de quienes asistieron a los eventos de gobernanza](/img/reporte-2022/mapa_gobernanza.png "Origen de quienes asistieron a los eventos de gobernanza")
-
-Se enteraron de la existencia de estos encuentros a través de:
-
-<!-- Exporta el gráfico de barras a PNG como /img/reporte-2022/como_se_entero.png -->
-![¿Cómo te enteraste de estos encuentros?](/img/reporte-2022/como_se_entero.png "¿Cómo te enteraste de estos encuentros?")
-
 Asistieron miembros de distintas comunidades:
 
 ![Algunas de las comunidades que estuvieron representadas en los encuentros de gobernanza](/img/reporte-2022/wordcloud.jpg "Comunidades representadas")
@@ -277,9 +269,9 @@ Laura Ación fue entrevistada por distintos medios periodísticos:
 ### Construimos comunidad 
 En 2022 trabajamos mucho para promover el acceso a la información de interés y la vinculación con toda nuestra comunidad.
 
-🍎✨ Relanzamos nuestra [imagen institucional](/post/comunicacion_2022/), incluyendo el primer rediseño de nuestro logo.
+🍎✨ Relanzamos nuestra imagen institucional, incluyendo el [primer rediseño de nuestro logo](https://github.com/MetaDocencia/Logos).
 
-🧑‍💻 Realizamos una actualización de nuestro [sitio web](/) para ofrecer una navegación amigable y accesible, sumando la sección [Consultoría](/consultoria/) para el desarrollo de nuevos proyectos con otras organizaciones; 
+🧑‍💻 Realizamos una actualización de nuestro [sitio web](/) para ofrecer una navegación amigable y accesible, sumando la sección [Consultoría](/proyecto/gobernanza-2022/) para el desarrollo de nuevos proyectos con otras organizaciones; 
 
 🥰 Gestionamos y conversamos a través de nuestras redes sociales ([Twitter](https://twitter.com/metadocencia), [Facebook](https://facebook.com/metadocencia), [Instagram](https://www.instagram.com/metadocencia/), [LinkedIn](https://www.linkedin.com/company/metadocencia/), [Slack](https://w3id.org/metadocencia/slack), ¡también [YouTube](https://youtube.com/metadocencia)!) y generamos contenidos de interés para nuestra comunidad; 
 
@@ -301,9 +293,9 @@ En 2022 trabajamos mucho para promover el acceso a la información de interés y
 
 ### Planificamos 2023
 
-Además de nuevas propuestas de cursos y eventos organizados por MetaDocencia, ya tenemos participación confirmada en la [csv,conf,7](https://csvconf.com/) y estamos planificando participar en otras conferencias y eventos. Nos proponemos que 2023 sea un año de intercambio y aprendizaje junto a comunidades que también buscan fortalecer la ciencia abierta para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos, en línea con nuestra [visión de futuro](/author/metadocencia/). 
+Además de nuevas propuestas de cursos y eventos organizados por MetaDocencia, ya tenemos participación confirmada en la [csv,conf,7](https://csvconf.com/) y estamos planificando participar en otras conferencias y eventos. Nos proponemos que 2023 sea un año de intercambio y aprendizaje junto a comunidades que también buscan fortalecer la ciencia abierta para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos, en línea con nuestra [visión de futuro](/institucional/). 
 
-También seguiremos promoviendo [esta discusión](/post/ciencia-abierta-americalatina/), con el propósito de enriquecer el debate y diseñar respuestas colectivas a las asimetrías e inequidades. De esta manera, seguimos trabajando por construir capacidades científicas y técnicas en forma responsable y con mirada local, en línea con [nuestra misión](/author/metadocencia/) 🙌.
+También seguiremos promoviendo [esta discusión](/post/ciencia-abierta-americalatina/), con el propósito de enriquecer el debate y diseñar respuestas colectivas a las asimetrías e inequidades. De esta manera, seguimos trabajando por construir capacidades científicas y técnicas en forma responsable y con mirada local, en línea con [nuestra misión](/institucional/) 🙌.
 
 Otro anhelo para 2023 es seguir encontrándonos en persona, para conocernos y compartir la alegría de creer en lo que hacemos.
 
