@@ -7,7 +7,7 @@ interests:
 - Open knowledge
 - Public policy
 - Science policy 
-name: María Angela Petrizzo Páez 
+name: María Ángela Petrizzo Páez 
 weight: 6
 organizations:
 - name: 
@@ -23,5 +23,6 @@ superuser: false
 user_groups:
 - Contributors
 ---
+
 
 
