@@ -177,7 +177,7 @@ sections:
                Instagram
             </a>
             <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://mastodon.social/@metadocencia" target="_blank" rel="me noopener"
+               href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                Mastodon
             </a>
