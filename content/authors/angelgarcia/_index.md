@@ -1,9 +1,9 @@
 ---
-title: "Angel García O’Diana"
+title: "Ángel García O’Diana"
 bio: ""
 email: ""
 interests:
-name: Angel García O’Diana
+name: Ángel García O’Diana
 role: Historias de Ciencia Abierta
 weight: 1
 organizations:
