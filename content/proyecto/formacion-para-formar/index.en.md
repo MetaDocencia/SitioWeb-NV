@@ -29,4 +29,4 @@ This Train the Trainer program is informed by and connected to similar open init
 * [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/index.html)
 * [ELIXIR-GOBLET Train the Trainer course](https://elixir-europe.org/platforms/training/train-the-trainer)
 * [EMBL-EBI Train the Trainer course](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills)
-* Book: [Teaching Tech Together](https://teachtogether.tech/es/)
+* Book: [Teaching Tech Together](https://teachtogether.tech/)
