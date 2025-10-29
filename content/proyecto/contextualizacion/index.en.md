@@ -23,5 +23,5 @@ MetaDocencia also undertakes other projects where accessibility of content in Sp
 
 ## More information
 * Blogpost (in Spanish): [La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA](/en/post/2024/20240704-recorridoaltaca/)
-* Nota de nuestro Blogpost (in Spanish): [¿De qué hablamos cuando hablamos de Contextualización?](/en/post/2024/20240725-contextualizacion/)
-* Nota de nuestro Blogpost (in Spanish): [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](/en/post/2024/20240704-recorridoaltaca/)
+* Blogpost (in Spanish): [¿De qué hablamos cuando hablamos de Contextualización?](/en/post/2024/20240725-contextualizacion/)
+* Blogpost (in Spanish): [Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en español](/en/post/2024/20240704-recorridoaltaca/)
