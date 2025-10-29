@@ -110,5 +110,5 @@ This technical skills training, with an inclusive and accessible approach, was o
 
 **Materials**
 - This course is part of the _Research Software Engineering with R series_.
-* [Sitio web of the course](https://yabellini.github.io/fromSpreadSheetToR)
+* [Website of the course](https://yabellini.github.io/fromSpreadSheetToR)
 
