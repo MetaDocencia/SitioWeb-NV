@@ -37,13 +37,13 @@ Following the meeting, we advanced in reviewing and enriching the governance doc
 
 The collaborative work took place from May to October 2024 and involved monthly meetings between MetaDocencia's consultancy team and LABI's coordinating team. These sessions created a trusted and constructive space, bringing our communities closer together and allowing us to envision a future of shared projects.
 
-The work will continue through the [Hive of Communities](/en/panal/) and new initiatives where we can meet, collaborate, and contribute. We were thrilled with LABI's team’s response; here is one piece of feedback we received:
+The work will continue through the [Hive of Communities](/en/quienes-somos/#comunidades-amigas) and new initiatives where we can meet, collaborate, and contribute. We were thrilled with LABI's team’s response; here is one piece of feedback we received:
 
 *"Beyond your conceptual and practical contributions, which have allowed us to make significant progress, your warmth and kindness made this process incredibly enjoyable (even though these topics are typically quite tedious for me). I’ll personally miss these meetings."*
 
 The feeling is mutual!
 
-If you would like to learn more about our consulting services, visit our [Consulting web page](/en/consultoria/).
+If you would like to learn more about our consulting services, visit our [Consulting web page](/en/proyecto/gobernanza-2022//).
 
 
 ## Acknowledgments
