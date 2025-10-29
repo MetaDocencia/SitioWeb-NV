@@ -150,7 +150,7 @@ sections:
       title: "Team and Advisory Committee"
       text: |
         <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
             {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
           </div>
@@ -163,7 +163,7 @@ sections:
       title: "Contributors"
       text: |
         <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
             {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
@@ -177,7 +177,7 @@ sections:
       title: "Fellow Communities"
       text: |
         <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
             {{< people_list group="Fellow Communities" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
@@ -190,7 +190,7 @@ sections:
       title: "They Trust MetaDocencia"
       text: |
         <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
+          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
           <div class="mt-2">
             {{< people_list group="trust" columns=10 gapx="8rem" gapy="3rem" >}}
           </div>
@@ -313,7 +313,7 @@ sections:
             padding-top: .25rem !important;
           }
 
-          /* Reducir tamaño SOLO de los nombres bajo avatar en ESTA página */
+          /* Reducir tamaño de los nombres bajo avatar en ESTA página */
           section#equipo-y-consejo-asesor .mdnv-people-name,
           section#colaboradores .mdnv-people-name,
           section#trust .mdnv-people-name,
@@ -359,7 +359,7 @@ sections:
             min-height: 70vh;   /* evita que quede demasiado “chato” */
           }
 
-          /* Móvil: achicar un poco más y recortar padding interno */
+          /* Móvil: achicar y recortar padding interno */
           @media (max-width: 768px) {
             section#hero-home.hero-max-bounded,
             section#hero-home.hero-max-bounded .hero-bg {
