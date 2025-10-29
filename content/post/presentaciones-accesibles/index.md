@@ -20,7 +20,7 @@ Al momento de dar una clase o una charla muchas veces solemos utilizar presentac
 
 Antes de comenzar recordemos una premisa que es importante destacar: desarrollar materiales accesibles es un proceso iterativo y con pequeños pasos podremos mejorar nuestras presentaciones para que sean accedidas cada vez por más personas.
 
-En un [posteo anterior](h/ost/accesibilidad_1/) habíamos repasado algunas estrategias para realizar reuniones que incluyan a todas las personas. En ese posteo mencionamos la importancia de conocer a tus participantes ya que, de ser necesario, te permitirá realizar modificaciones a tus presentaciones previamente a tu exposición. Por ejemplo, si alguna persona indica tener algún tipo de daltonismo, será importante que revises los colores de los gráficos de tu presentación para evitar confusiones.
+En un [posteo anterior](/post/accesibilidad_1/) habíamos repasado algunas estrategias para realizar reuniones que incluyan a todas las personas. En ese posteo mencionamos la importancia de conocer a tus participantes ya que, de ser necesario, te permitirá realizar modificaciones a tus presentaciones previamente a tu exposición. Por ejemplo, si alguna persona indica tener algún tipo de daltonismo, será importante que revises los colores de los gráficos de tu presentación para evitar confusiones.
 
 Otra sugerencia es compartir las diapositivas previamente al evento donde las vamos a utilizar ya que tenerlas por adelantado permite a los participantes realizar modificaciones que mejorarán su experiencia (por ejemplo, preparar tu ambiente con el material con un zoom al 135 %) [1].
 
