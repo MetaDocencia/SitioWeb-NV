@@ -90,8 +90,7 @@ sections:
           <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Join our Slack community</h2>
   
           <p>
-            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>. </p>
-          <p>  Share experiences, learn from others, and join conversations that spark new ideas.
+            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>. <br>  Share experiences, learn from others, and join conversations that spark new ideas.
           </p>
   
           <!-- Red primary button -->
