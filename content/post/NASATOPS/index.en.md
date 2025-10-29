@@ -17,7 +17,7 @@ categories:
 
 As we shared as soon as we got the news (Figure 1), with OLS, 2i2c, and the support of NASA, we joined the initiative to transform science and technology into open practices.
 
-![Excitement and joy! We got the support of NASA to teach #OpenScience in Spanish for 3 years.](https://www.metadocencia.org/img/NASAtweet.jpg)
+![Excitement and joy! We got the support of NASA to teach #OpenScience in Spanish for 3 years.](/img/NASAtweet.jpg)
 
 *Figure 1. Excitement and joy! We got the support of NASA to teach #OpenScience in Spanish for 3 years.*  
 *Source: Twitter, April 11th. 2023.*
@@ -33,11 +33,11 @@ The excitement and joy of the announcement increase as we begin to work on these
 5. For OLS and MetaDocencia, this support represents **sustainability**, a clear and defined route, and many goals to accomplish. We are delighted to have a three-year roadmap that will help us continue doing the work we love, deepening our commitment to the values of science and technology at the service of our societies.
 6. Together with 2i2c, we committed to **developing educational content** specific for TOPS ScienceCore. This proposal combines curricular modules associated with different disciplines to increase the knowledge and skills needed to take advantage of NASA's open tools and technologies for Earth and space research. Our training module will cover the **analysis of open satellite data** useful for understanding and predicting wildfires, drought, and floods.
 7. For MetaDocencia, this collaboration with 2i2c is a valuable opportunity to capitalize on our knowledge of instructional design and our experience in open science and education to **serve the community**. It represents an additional boost to our institutional sustainability over the next two years, further increasing our commitment to the chosen path with attention to current and central issues for our region.
-8. These **great news fill us with pride and responsibility**. On the one hand, working together with NASA and these communities feels like a dream come true, which motivates and drives us toward the next stage of MetaDocencia's work to fulfill our [mission and vision](https://www.metadocencia.org/en/authors/metadocencia/). We will continue to work along with the [Code for Science and Society](https://www.codeforsociety.org/) team, whose experience and structure support all our plans.
+8. These **great news fill us with pride and responsibility**. On the one hand, working together with NASA and these communities feels like a dream come true, which motivates and drives us toward the next stage of MetaDocencia's work to fulfill our [mission and vision](/en/institucional/). We will continue to work along with the [Code for Science and Society](https://www.codeforsociety.org/) team, whose experience and structure support all our plans.
 9. On the other hand, it implies a restructuring of MetaDocencia’s teams, resources, and goals. From mid-2023 we have been preparing to move from the virtual short courses that we’ve been delivering since we started, to working with mentored cohorts. We have been working with our stable team of 14 people remotely in a relaxed and inclusive environment, where every person is welcome and has space for their development and wellbeing.
 10. We look back full of relief for being able to sustain the growth of our project, having started as a 100% volunteer-based organization from Latin America less than four years ago. We are delighted to have a seat and a voice at the table where the international Open Science is happening.
 
-Follow us on social media to stay on top of new announcements! 🚀 If you want to know more about these projects or show us your interest in participating in this next stage, contact us through our social networks, or [subscribe to our newsletter (in Spanish)](https://netlify.us19.list-manage.com/subscribe/post?u=92fb89ce82f9689a3b083bb35&amp;id=d8187ceaf7) to get all our latest news.
+Follow us on social media to stay on top of new announcements! 🚀 If you want to know more about these projects or show us your interest in participating in this next stage, contact us through our social networks, or [subscribe to our newsletter (in Spanish)](/en/cta/) to get all our latest news.
 
 *Did you like this post? You can reuse it freely under CC BY 4.0 license. Just cite it!*
 
