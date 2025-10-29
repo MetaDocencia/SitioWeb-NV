@@ -6,7 +6,7 @@ interests:
 - Open Science
 - Project Management
 - Technology Transfer
-name: Andres Olivera
+name: Andrés Olivera
 role:
 weight: 14
 organizations:
@@ -33,3 +33,4 @@ user_groups:
 - Contributors
 
 ---
+
