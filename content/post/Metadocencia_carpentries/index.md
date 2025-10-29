@@ -15,7 +15,7 @@ authors:
   - npalopoli
 ---
 
-Durante 2020 y 2021 enseñamos dos entrenamientos para instructores de Carpentries organizados por [MetaDocencia](https://www.metadocencia.org/).  Estos workshops tuvieron una serie de características particulares:
+Durante 2020 y 2021 enseñamos dos entrenamientos para instructores de Carpentries organizados por [MetaDocencia](/).  Estos workshops tuvieron una serie de características particulares:
 
 1. Completamente en español: tanto trainers como participantes fueron personas de Latinoamérica, hablantes nativos de español.
 2. En linea.
