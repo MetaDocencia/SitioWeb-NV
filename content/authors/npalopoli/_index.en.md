@@ -47,15 +47,17 @@ user_groups:
 ---
 **Experience and Track Record**
 
-Nicolás is a tenured Adjunct Researcher at the National Research Council in Argentina (CONICET). He was secretary of the Argentine Association of Bioinformatics and Computational Biology (A2B2C) from 2017 to 2024.
-His research is focused on understanding the functional nature of proteins, with special attention to their evolutionary relationships and interactions in biological systems. He is co-author of numerous scientific articles and two book chapters oriented to science communication.
+Nicolás joined MetaDocencia in its first week in March 2020. He currently shares the general coordination and chairs the Advisory Committee.
 
-He is secretary of the Argentine Association of Bioinformatics and Computational Biology (A2B2C) since 2017 and co-founded the Regional Group of Bioinformatics Students in Argentina (RSG-Argentina) in 2010. In these roles he has promoted the organization of conferences, the creation of professional networks and the delivery of technical and pedagogical training courses. He currently serves different advisory roles at ReSA, OLS and Dryad committees.
+Nicolás is a tenured Adjunct Researcher at the National Research Council in Argentina (CONICET) and a member of the Structural Bioinformatics Group at the National University of Quilmes (UNQ, Buenos Aires, Argentina). His research focuses on understanding the structural nature of proteins, their evolutionary relationships, and their interactions in biological systems. He is a co-author of numerous scientific articles and book chapters oriented to science communication.
+
+He was secretary of the Argentine Association of Bioinformatics and Computational Biology (A2B2C) from 2017 to 2024. and co-founded the Regional Group of Bioinformatics Students in Argentina (RSG-Argentina) in 2010. In these roles, he promoted the organization of conferences, the creation of professional networks, and the delivery of technical and pedagogical training courses. He currently serves on the advisory committees for ReSA, OLS, and Dryad.
 
 Since 2008 he has been teaching undergraduate, postgraduate and extension courses, both in person and virtual, at different educational institutions and also for communities of practice. He is certified as instructor and trainer for The Carpentries. He is currently pursuing a Specialization in Virtual Education at UNQ.
 
-Nicolás joined MetaDocencia since its first week in March 2020. He currently participates in the general coordination and is chair of the advisory committee. 
+Our team granted Nico the Zen Award, because with his calm wisdom, he can cope even with complexity, maintaining the axis, good mood, and cordiality in any situation and circumstance.
 
 Inside the team, Nico has won the Zen Award because with his calm wisdom he can cope even with complexity, maintaining the axis, good mood and cordiality in any situation and circumstance.
+
 
 
