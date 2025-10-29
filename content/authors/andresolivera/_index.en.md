@@ -1,5 +1,5 @@
 ---
-title: "Andres Olivera"
+title: "Andrés Olivera"
 bio: ""
 email: "aolivera.labi@gmail.com"
 interests:
@@ -33,4 +33,5 @@ user_groups:
 - Contributors
 
 ---
+
 
