@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We Advance Latin America on the Global Research Map</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We Advance the Presence of Latin America on the Global Research Map</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
           <span class="block">More Collaboration.</span>
