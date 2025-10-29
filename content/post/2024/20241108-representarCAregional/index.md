@@ -31,7 +31,7 @@ En este sentido, el [trabajo colaborativo](/post/2024/20240820-context-colab/) d
 
 **- Recursos limitados:** la insuficiencia de fondos y la limitada infraestructura tecnológica, por ejemplo, para la organización, almacenamiento, y acceso a datos de investigación así también como para el procesamiento de los mismos, son centrales para entender el contexto local. Además, la falta de plataformas interoperables y de rutinas establecidas para la gestión de datos sigue siendo un problema en la región.
 
-**Nuestras [capacitaciones](/formacion/) abiertas, gratuitas y en español contribuyen a construir capacidades científicas y técnicas en forma responsable y accesible con mirada local.**
+**Nuestras [capacitaciones](/que-hacemos/#formacion) abiertas, gratuitas y en español contribuyen a construir capacidades científicas y técnicas en forma responsable y accesible con mirada local.**
 
 **- Costos de publicación:** el modelo preponderante excluye a muchas de las personas que investigan del Sur Global, limitando su capacidad para participar plenamente en la producción y difusión de sus investigaciones internacionalmente; o bien las obliga a destacar de manera excepcional para justificar exenciones de pago. 
 
@@ -41,20 +41,20 @@ Por otra parte, reflexiones de personas expertas sobre temas globales y su impac
 
 **- Falta de articulación:** existe una desconexión entre los niveles científicos técnicos y los tomadores de decisiones, lo que afecta la implementación efectiva de políticas de Ciencia Abierta y esto condiciona las redes de colaboración locales y regionales.
 
-El [Panal de Comunidades de MetaDocencia](/panal/), con el que buscamos presentar y vincular esfuerzos de hasta el momento, más de 20 comunidades amigas, demuestra que la ciencia es un trabajo colectivo y en red. Este es un espacio propicio para promover interacciones entre actores y personas con distintos recorridos y niveles de actuación y desarrollar proyectos que permean hacia lo institucional desde las comunidades de práctica.
+El [Panal de Comunidades de MetaDocencia](/quienes-somos/#comunidades-amigas), con el que buscamos presentar y vincular esfuerzos de hasta el momento, más de 20 comunidades amigas, demuestra que la ciencia es un trabajo colectivo y en red. Este es un espacio propicio para promover interacciones entre actores y personas con distintos recorridos y niveles de actuación y desarrollar proyectos que permean hacia lo institucional desde las comunidades de práctica.
 
-Por otra parte, los trabajos de [Consultoría](/consultoria/) como el apoyo a otras comunidades para el desarrollo de su propia gobernanza y la sostenibilidad de proyectos de Ciencia Abierta, **afianzan el trabajo intercomunidades.**
+Por otra parte, los trabajos de [Consultoría](/proyecto/gobernanza-2022/) como el apoyo a otras comunidades para el desarrollo de su propia gobernanza y la sostenibilidad de proyectos de Ciencia Abierta, **afianzan el trabajo intercomunidades.**
 
 **- Resistencia al cambio:** la transición a nuevas prácticas, como la gestión compartida de infraestructuras o la adopción de prácticas de gestión de datos, se ve obstaculizada por intereses en conflicto, asimetrías de información y la inercia de modelos tradicionales.
 
-En este sentido, los Plenarios de Ciencia Abierta regional (registros de [Plenario 1](https://youtu.be/Qn-g4CaJrZU) y [Plenario 2](https://youtu.be/wUpmM4hlZm8)) que cierran el cursado de cada edición de [América Latina se Transforma a la Ciencia Abierta (ALTa)](/formacion/), en el marco de nuestro pilar Formación, contribuyen a **socializar y promover nuevas iniciativas y posibilidades entre personas que se dedican a la ciencia y la técnica en diversas regiones y pueden tener intereses y dificultades comunes.**
+En este sentido, los Plenarios de Ciencia Abierta regional (registros de [Plenario 1](https://youtu.be/Qn-g4CaJrZU) y [Plenario 2](https://youtu.be/wUpmM4hlZm8)) que cierran el cursado de cada edición de [América Latina se Transforma a la Ciencia Abierta (ALTa)](/que-hacemos/#formacion), en el marco de nuestro pilar Formación, contribuyen a **socializar y promover nuevas iniciativas y posibilidades entre personas que se dedican a la ciencia y la técnica en diversas regiones y pueden tener intereses y dificultades comunes.**
 
 La participación en eventos con traducción simultánea como la [csv,conf 2023](https://www.youtube.com/watch?v=sV_0nAypuZQ) también contribuyen a divulgar nuevas ideas y poner en contacto espacios y protagonistas de iniciativas regionales de Ciencia Abierta. 
 
 ## Dar visibilidad a  la producción local
 A pesar de las dificultades mencionadas, **América Latina tiene una rica tradición de innovación en Ciencia Abierta**, a menudo promovida con dificultades en contextos de recursos limitados y alta inestabilidad institucional. Las infraestructuras compartidas, como las que se encuentran en Argentina con los [Sistemas Nacionales de Grandes Instrumentos](https://www.argentina.gob.ar/redes-de-vinculacion/grandes-instrumentos), son ejemplos de cómo se pueden aprovechar los recursos de manera eficiente.
 
-**El desarrollo de sistemas compartidos y la cooperación en áreas estratégicas ofrecen una vía concreta para avanzar en la ciencia abierta en la región.** La creación de redes y el uso compartido de equipamiento costoso son oportunidades para fortalecer la capacidad regional. En este sentido, diversas comunidades amigas de MetaDocencia trabajan para avanzar la investigación a partir de recursos compartidos, como el [Centro de Computación de Alto Desempeño (CCAD-UNC)](/authors/ccad/), [CabanaNET](/authors/cabananet/) o [Latin America Bioimaging](https://labi.lat/es/), por nombrar solo algunos. 
+**El desarrollo de sistemas compartidos y la cooperación en áreas estratégicas ofrecen una vía concreta para avanzar en la ciencia abierta en la región.** La creación de redes y el uso compartido de equipamiento costoso son oportunidades para fortalecer la capacidad regional. En este sentido, diversas comunidades amigas de MetaDocencia trabajan para avanzar la investigación a partir de recursos compartidos, como el [Centro de Computación de Alto Desempeño (CCAD-UNC)](/author/ccad/), [CabanaNET](/author/cabananet/) o [Latin America Bioimaging](https://labi.lat/es/), por nombrar solo algunos. 
 
 Sin embargo, estos logros rara vez reciben la atención que merecen en el contexto de la ciencia global. Los eventos internacionales nos brindan una excelente oportunidad no sólo para mostrar nuestro trabajo sino también para aprovechar cada oportunidad para sumar al escenario a otras iniciativas y proyectos de la región. 
 
@@ -65,7 +65,7 @@ La participación en eventos globales debe servir como una plataforma para const
 
 **Debemos trabajar para garantizar que la distribución del conocimiento sea justa y equitativa, promoviendo una colaboración que no sea paternalista ni extractivista. En lugar de limitar nuestras interacciones a una dinámica de donante-receptor, debemos fomentar redes de colaboración que valoren y reconozcan las aportaciones mutuas.**
 
-En MetaDocencia desarrollamos recursos educativos abiertos, reutilizables y accesibles que llegan a una comunidad global que habla español. Desarrollamos capacidad regional científica, técnica y de investigación. Nuestro enfoque prioriza las comunidades hispanohablantes y localiza prácticas científicas y técnicas abiertas de uso internacional. En este sentido, nuestros [pilares Formación, Contextualización y Comunidad](/institucional/) son apuestas por seguir fortaleciendo la Ciencia Abierta y transformando desde las comunidades de práctica las oportunidades desde la región.
+En MetaDocencia desarrollamos recursos educativos abiertos, reutilizables y accesibles que llegan a una comunidad global que habla español. Desarrollamos capacidad regional científica, técnica y de investigación. Nuestro enfoque prioriza las comunidades hispanohablantes y localiza prácticas científicas y técnicas abiertas de uso internacional. En este sentido, nuestros [pilares Formación, Contextualización y Comunidad](/que-hacemos/) son apuestas por seguir fortaleciendo la Ciencia Abierta y transformando desde las comunidades de práctica las oportunidades desde la región.
 
 
 ## Agradecimientos
