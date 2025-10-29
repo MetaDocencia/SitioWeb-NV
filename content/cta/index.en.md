@@ -101,12 +101,6 @@ sections:
             </a>
           </p>
   
-          <!-- Info link below -->
-          <p class="mt-3">
-            <a href="/post/20231219-mdenslack/">
-              What it is and how to join
-            </a>
-          </p>
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
