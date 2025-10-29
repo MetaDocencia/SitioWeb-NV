@@ -37,7 +37,7 @@ Promueven iniciativas como **BienEstar**, dedicada a la difusión de conocimient
 Estas actividades buscan acercar los hallazgos y metodologías a diferentes grupos, asegurando que todos tengan acceso a información y herramientas útiles para mejorar su bienestar y comprensión psicológica. A través de estos esfuerzos, PsiNet LAB busca promover la inclusión y fortalecer los lazos entre la ciencia y la comunidad.
 
 ![Captura de pantalla de parte de los miembros de PsiNet LAB desde las ciudades de Arequipa, Lima y Huánuco, durante una reunión de Google Meet. Los cuadros se dividen en una matriz 3x3. Desde la esquina superior izquierda hacia la esquina superior derecha se encuentran Milene (Arequipa), Dennis (Lima) y Jefri (Arequipa); desde el centro izquierda hacia el centro derecha se encuentran Carlos (Arequipa), Angel (Lima) y Gleni (Arequipa); desde la esquina inferior izquierda hacia la esquina inferior derecha se encuentran Alvaro (Lima), Valery (Huánuco) y Marcelo (Arequipa).
-](https://www.metadocencia.org/img/psinetlab.jpg) 
+](/img/psinetlab.jpg) 
 *Parte del equipo de PsiNet LAB 2024*
 
 *Esta es una Historia de Ciencia Abierta en Acción escrita por sus representantes para  compartir la iniciativa en canales de MetaDocencia y más allá. Si quieres enviar tu historia, [completa el formulario](https://docs.google.com/forms/d/e/1FAIpQLSfC9eZfIn_rOf4Ist21AHOySWsZ-v4lCn1oN-xW3mJL6kWIeg/viewform).*
