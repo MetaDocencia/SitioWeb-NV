@@ -17,7 +17,7 @@ One of the premises we hold at MetaDocencia is that no one is born knowing how t
 In general, we tend to describe what we do not like or what bothers us by giving negative feedback that is not specific about the next step to improve or, in Mafalda’s words: 
 
 ![Mafalda comic strip created by Argentinian cartoonist Quino. The character is standing in front of a soup plate and expresses out loud. Translation: 
-"Mom, can I tell you that this soup is a dreadful beverage? Uh? And that it is the filthiest thing I have ever tasted in my life? Or do you resent constructive criticism?"](https://www.metadocencia.org/img/mafalda-sopa.jpg) 
+"Mom, can I tell you that this soup is a dreadful beverage? Uh? And that it is the filthiest thing I have ever tasted in my life? Or do you resent constructive criticism?"](/img/mafalda-sopa.jpg) 
 
 *This Mafalda comic strip was created by Argentinian cartoonist Quino. Translation:* 
 *"-Mom, can I tell you that this soup is a dreadful beverage? Uh? And that it is the filthiest thing I have ever tasted in my life? Or do you resent constructive criticism?*
