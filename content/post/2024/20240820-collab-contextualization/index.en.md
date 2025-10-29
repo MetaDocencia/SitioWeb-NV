@@ -25,7 +25,7 @@ author:
 
 As we shared in [this publication](/en/post/nasatops/), MetaDocencia has co-created **three projects aimed at individuals in education, science, and technology within our Spanish-speaking community**. These projects are framed by the Transform to Open Science (TOPS) initiative, a 5-year program to train 20,000 science and technology professionals in these areas.
 
-In addition to teaching Open Science in the [ALTa CA cohorts](/en/formacion/), **MetaDocencia is developing the contextualization of the NASA-TOPS Open Science 101 material for Spanish-speaking Latin America**. This effort involves crafting a translation sensitive to local and regional cultural diversity for the course modules, tailored to the Latin American context. It includes assessing the existing material and rethinking experiences, challenges, practical limitations, and the scope and implications of Open Science in Latin America.
+In addition to teaching Open Science in the [ALTa CA cohorts](/en/proyecto/nasa-spanish/), **MetaDocencia is developing the contextualization of the NASA-TOPS Open Science 101 material for Spanish-speaking Latin America**. This effort involves crafting a translation sensitive to local and regional cultural diversity for the course modules, tailored to the Latin American context. It includes assessing the existing material and rethinking experiences, challenges, practical limitations, and the scope and implications of Open Science in Latin America.
 
 Thus, we began 2024 by [defining the concept that would best represent the work to be done](/en/post/2024/20240725-contextualization/). We defined it as "Contextualization," viewing it as one of the pillars of MetaDocencia to guide our efforts in developing high-quality resources in Spanish from original material in other languages.
 
@@ -42,7 +42,7 @@ Before starting the collaborative work, we conducted pilot tests and verified th
 
 
 ## Collaborative Contextualization
-At MetaDocencia, we set out to **experience the collaborative contextualization of the content**. To this end, we launched a specific [call through the Polen Project (in Spanish)](https://doi.org/10.5281/zenodo.12762151) for individuals who had joined MetaDocencia during [2022 (in Spanish)](/post/ofertas_laborales/) and [2023 (in Spanish)](/post/oferta_laboral_coordi2023/) calls. We also promoted the call during the Open Science Conversations to **extend the opportunity to Spanish-speaking individuals interested in participating in this process**.
+At MetaDocencia, we set out to **experience the collaborative contextualization of the content**. To this end, we launched a specific [call through the Pollen Project](https://doi.org/10.5281/zenodo.17469649) for individuals who had joined MetaDocencia during [2022 (in Spanish)](/post/2024/20240424-contratacion-inclusiva/) and [2023 (in Spanish)](https://doi.org/10.5281/zenodo.17470092) calls. We also promoted the call during the Open Science Conversations to **extend the opportunity to Spanish-speaking individuals interested in participating in this process**.
 
 **The Contextualization team consisted of 22 participants** who took on translation and review roles. They dedicated three weeks to contextualizing the material and more than three weeks to reviewing the translations. These details were shared during an initial training session, which reviewed the purpose and working mode, along with the community learning that accumulated over the weeks of “learning by doing.”
 
