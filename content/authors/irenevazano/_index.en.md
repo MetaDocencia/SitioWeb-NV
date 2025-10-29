@@ -3,7 +3,7 @@ title: "Irene Vazano"
 bio: ""
 education:
   courses:
-  - course: Technician in library science.
+  - course: Licenciate in library science.
     institution: UCSE-DABA 
     year: 
 email: "irene.vazano@metadocencia.org"
@@ -41,4 +41,5 @@ Irene has a degree in Library Science from UCSE-DABA. Since Irene joined MetaDoc
 Irene is a certified instructor for The Carpentries, which underscores her commitment to teaching and disseminating digital skills. She is also an active participant in MetaDocencia, contributing to the strengthening of the community.
 
 Inside the team, Ire has won the Transformation Award for her performance in charge of the infrastructure area with great ability to document and transform our tutorials into a valuable and beautiful digital library.
+
 
