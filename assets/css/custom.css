@@ -543,14 +543,11 @@ footer .mdnv-footer-right { padding-top: 0.02rem; }
 }
 
 /* === CTA full-bleed: heredar SIEMPRE la fuente del sitio ================== */
-/* Herencia por defecto (suave, no toca spacing) */
 .mdnv-cta-fullwidth,
 .mdnv-cta-fullwidth :where(:not(svg, svg *, [class*="icon"])) {
   font-family: var(--md-font-body);
 }
 
-/* Si el tema fija una familia distinta con alta especificidad,
-   desbloqueamos solo los elementos típicos del CTA */
 .mdnv-cta-fullwidth h1,
 .mdnv-cta-fullwidth h2,
 .mdnv-cta-fullwidth h3,
