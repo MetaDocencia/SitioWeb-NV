@@ -99,7 +99,7 @@ sections:
             <p>
               Our
               <a href="https://zenodo.org/records/13236269" target="_blank" rel="noopener" class="underline font-semibold">Community Guidelines</a>
-              guides every activity and collaboration at MetaDocencia. They were built collectively and reflects our vision,
+              guides every activity and collaboration at MetaDocencia. They were built collectively and reflect our vision,
               mission, and values. Everyone participating in our initiatives commits to respecting and promoting them.
             </p>
           </div>
