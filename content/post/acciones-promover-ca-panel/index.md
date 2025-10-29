@@ -63,7 +63,7 @@ En esta publicación nos centramos en las **acciones a corto, medio y largo plaz
   - http://reclone.org/ 
   - https://www.cabana.online/index 
 - **Mira el [video completo y subtitulado](https://fast.wistia.com/embed/channel/g4orlbms5g?wchannelid=g4orlbms5g&wmediaid=v0er0tmgdi)** para obtener más ideas y compártelo, para enriquecer el debate y seguir trabajando en pensar respuestas colectivas a las asimetrías y desigualdades.
-- **En un [blogpost anterior](https://www.metadocencia.org/post/ciencia-abierta-americalatina/)** Laura Ación, Gonzalo Peña-Castellanos y Fernando Pérez exploraron las barreras para participar en la ciencia de código abierto en América Latina. 
+- **En un [blogpost anterior](/post/ciencia-abierta-americalatina/)** Laura Ación, Gonzalo Peña-Castellanos y Fernando Pérez exploraron las barreras para participar en la ciencia de código abierto en América Latina. 
 
 ¡Gracias por leer hasta aquí! Ahora te invitamos a compartir y comentar para seguir expandiendo el poder de estas ideas y la necesidad de estos cambios urgentes en los que debemos trabajar cuanto antes.
 
