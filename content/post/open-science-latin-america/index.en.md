@@ -10,19 +10,19 @@ authors: null
 translationKey: ciencia-abierta-americalatina
 ---
 
-![Imagen abstracta de portada](https://www.metadocencia.org/img/czi-blogpost/Imagen1.jpg)
+![Imagen abstracta de portada](/img/czi-blogpost/Imagen1.jpg)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ### Authors: Laura Ación, Gonzalo Peña-Castellanos, Fernando Pérez
 
-*Translated to Spanish and Portuguese by [Laurel Ascenzi](https://www.metadocencia.org/authors/laurel/) y [Melissa Black](https://www.metadocencia.org/authors/melissa/). 
-Images: [Julián Buede](https://www.metadocencia.org/authors/jbuede/)*
+*Translated to Spanish and Portuguese by [Laurel Ascenzi](/author/laura-ascenzi/) y [Melissa Black](/author/melissa-black/). 
+Images: [Julián Buede](/author/julian-buede/)*
 
-This post is also available in [Spanish](https://www.metadocencia.org/post/ciencia-abierta-americalatina/) and [Portuguese](https://www.metadocencia.org/post/ciencia-aberta-americalatina/).
+This post is also available in [Spanish](/post/ciencia-abierta-americalatina/) and [Portuguese](/post/ciencia-aberta-americalatina/).
 
 [CZI Blog abridged English version](https://cziscience.medium.com/open-source-and-open-science-in-latin-america-e3a1f5cc6744)
 
-![Imagen abstracta de portada](https://www.metadocencia.org/img/czi-blogpost/Imagen2.png)
+![Imagen abstracta de portada](/img/czi-blogpost/Imagen2.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ## Community and cultural context
@@ -32,7 +32,7 @@ Our motivation for this panel, at the invitation of the CZI Open Science team, w
 
 This is a rich and complex topic, one that deserves both discussion and study. We are only three practitioners, so we present these ideas merely as a starting point for a conversation: our perspective is limited to the slices of our own countries we know well (Latin America is a large, rich and diverse continent with huge cultural diversity!), and we don't pretend to generalize. But we hope it serves to open the discussion around how we can better make the development of Open Source and Open Science a more global endeavor, where all cultures are truly welcome as equals.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen3.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen3.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ### Localization and the role of English as interchange language
@@ -42,7 +42,7 @@ This is a rich and complex topic, one that deserves both discussion and study. W
 
 **Gonzalo:** Well, scientists before becoming scientists are people, and are children, and the passion for research discovery and innovation is something that we can start very early. Even if our countries are lagging behind English literacy, there is no reason to lag behind in technology, programming, data literacy. The argument of a scientist must know English, then no need to translate anything is strong but is also exclusionary to anyone not a scientist, and we want to increase science literacy, advocacy. Take the Django Girls example, as a man working with that project, organizing and mentoring I often get asked why it needs to be only for girls, that is sexist, that is exclusionary. Well, the truth is that it is a temporary hack, in an ideal world we should not need to make the difference, but until we get there we will keep using and needing hacks.
 
-![Captura de pantalla de la conferencia EOSS](https://www.metadocencia.org/img/czi-blogpost/Imagen4.png)
+![Captura de pantalla de la conferencia EOSS](/img/czi-blogpost/Imagen4.png)
 *<center>The influence of the English language on the global production of open science, extracted from the presentation by Gonzalo Peña-Castellanos for the 2021 EOSS meeting.</center>*
 
 ### Barriers beyond language
@@ -50,7 +50,7 @@ This is a rich and complex topic, one that deserves both discussion and study. W
 
 **Laura:** The current power and privilege asymmetry between Latin America and high-income regions is the main barrier. In the end, it all boils down to money or time. While the status quo shifts to dismantle centuries of injustice, investing in educating the existing and new generations (starting where we are in each geography) is the way to put Latin America on the map of Open Source and Science. Planting initiatives from more favorable geographies in Latin America is challenging because they do not translate well; often, the jargon is difficult to explain or translate. The number of blind spots folks outside the territory have is often mind-blowing to local folks. When you live in Latin America, the problems are obvious, but they are difficult to grasp when you are not in the territory anymore. I guess it all comes down to how hard it is to step into another person's shoes. Thus, it is critical to have local persons with a history of advocating for the collective good at international decision-making tables. They will have a better understanding of what ideas click locally and which don't. The more there is a dialogue between all geographies; the faster all barriers will fall.
 
-![Captura de pantalla de la conferencia EOSS](https://www.metadocencia.org/img/czi-blogpost/Imagen5.png)
+![Captura de pantalla de la conferencia EOSS](/img/czi-blogpost/Imagen5.png)
 *<center>Map showing the size of countries according to the volume of scientific publications (Web of Science, 2016). Image taken from Laura Ación's presentation for the 2021 EOSS meeting, available at https://doi.org/10.5281/zenodo.5646442.</center>*
 
 **Gonzalo:** In basic infrastructure, lack of access to the internet, this means stable, reliable and with good speed 24/7 access. I think there are many efforts trying to work on issues but in the process the groups might specialize and not collaborate with other groups. It is not possible to have a unified body, but there should be some place (virtual/real) where all these initiatives can meet, work together. The crowdsourcing model has worked wonders for a lot of things, how could we apply this to increase cooperation among researchers. Another issue that might be more common on more senior academics is the hesitance to participate in general conferences (SciPy), because no memoirs, no index, no points for giving presentations there. 
@@ -63,13 +63,13 @@ This is a rich and complex topic, one that deserves both discussion and study. W
 
 **Gonzalo:** Things have been steadily improving, but the problem with all the volunteer work is that it takes a lot of strain on you. A recurrent problem I have seen is the lack of generational replacement, that is, getting new blood and new faces to contribute to leading the communities. We can have all the support we want from different companies abroad but that does not solve the issue of local people in charge. Having paid positions for these advocacy jobs could be an option and larger companies have more and more of these roles. Making events is now easier as there is trust in the communities so sponsors keep coming back. Mentoring is also a great way to try to get new blood but it does take time also. It is undeniable the impact that Python growth has had in the past years. I have differences with the way some of the events and conferences are made, and we need to find what works for our own countries, but that also has to do with the values and objectives.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen6.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen6.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ## Institutional spaces: from the local to the global
 In this section, we look at the spaces where this work develops, from policies to academic and industrial settings. Each of these contexts is quite different in our countries than in the US or Europe, and we will have a better chance of building healthy Open Source/Open Science communities if we engage the academic research and industrial development cultures in ways that meet their local needs.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen7.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen7.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ### Policies - implementation and roadblocks
@@ -77,13 +77,13 @@ In this section, we look at the spaces where this work develops, from policies t
 
 **Laura:** I don’t know much about public policy in these areas. I know there is a lack of incentives to go with Open Source and Science in academia in our countries. Thus, I suspect there are not many policies being enforced. A significant aspect is that even Latin American researchers for open data, code and science often voice their concerns about global asymmetry in Open Science. For example, it can take years to collect valuable data frugally, with vast amounts of hard work. The moment the dataset is open, a lab in a high-income region puts its ten highly skilled persons to analyze the data and write the papers from that dataset. Hence, as many of the discussions sparked by Open Life Science, the current paradigm of Open Science has systemic power and privilege asymmetry built-in, the elephant I show in this presentation. The primary barrier is the lack of candid conversations that end up in accountable actions to change the paradigm and dismantle the asymmetries. Of course, this is not a trivial or fast process because the problems are systemic to our societies. However, I see low-hanging fruit in democratizing the tools through accessible education. In Latin America this means, among others, free, in the local language, with local interest, addressing local accessibility needs. Another ripe fruit is the metrics. Until asymmetries are gone, we must change the system metrics. For example, by giving the same recognition in our systems to collect and maintain data, write and maintain code, publish a paper, or organize welcoming communities and events. These activities are crucial for Open Science and Source to thrive, yet only publishing the paper counts in academia. Also, I think we must give extra credit if persons do any of these despite systemic marginalization playing against them. In academic Latin America, we have decades of experience adapting international metrics to our region. For example, we index our regional journals to evaluate our scientists better using [Scielo](https://scielo.org/). We can teach other regions without experience adapting system metrics.
 
-![Image showing power asymmetries in the system.](https://www.metadocencia.org/img/czi-blogpost/Imagen8.png)
+![Image showing power asymmetries in the system.](/img/czi-blogpost/Imagen8.png)
 *<center>Source: https://doi.org/10.1371/journal.pmed.1003604
 Image taken from the presentation by Laura Ación for the 2021 EOSS Meeting, available at https://doi.org/10.5281/zenodo.5646442</center>*
 
 **Gonzalo:** Even before the pandemic the Colombian government has started making moves to improve data literacy and has offered many different programs to form different professionals with different backgrounds (Colombia 2.0, 3.0 and so on). This however seems to be aimed more at practicing professionals and not academics and scientists. Access to the internet in regions (recent scandal on providers of the wifi spots!). There are no laws enforcing or even promoting the use of open source technologies. Several projects started in the 2000s but were archived or the initial intent changed. Open data is becoming more of a thing.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen9.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen9.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ### Academia: from usage to participation and contribution
@@ -93,7 +93,7 @@ Image taken from the presentation by Laura Ación for the 2021 EOSS Meeting, ava
 
 **Gonzalo:** Pandemic has been both a curse and a blessing, and in this aspect it helped propel a lot of things into the future. In my personal experience, having more open source contributors has been very difficult. We have a very big consumer mindset in that we consume a lot of open source tools, but we still need to make the jump to contribute and then make the jump to create. We probably need more sprinting, more visible faces and more incentives for people to contribute. I have been in contact with different professors from my university and some of them have started working with open source tools and all of their students are now using it. To be able to really make progress we need academic incentives for students and also for professors. Cost of software and tools is often not an issue as many universities get academic licenses. I don't think we necessarily need more specialized groups for academics, we need more academics to participate in the already existing communities, but we hit the generalist/specialist problem.
 
-![Screenshot from the EOSS conference](https://www.metadocencia.org/img/czi-blogpost/Imagen10.png)
+![Screenshot from the EOSS conference](/img/czi-blogpost/Imagen10.png)
 *<center>Darío Taraborelli summarizes day 2 of the 2021 EOSS meeting that focused on acting to expand diversity, equity and inclusion in Open Science and Open Source. Day 2 included, among others, communities such as MetaDocencia, Black in IA, oSTEM, and Outreachy.</center>*
 
 ### Industrial engagement with open source in Latin America
@@ -117,7 +117,7 @@ Image taken from the presentation by Laura Ación for the 2021 EOSS Meeting, ava
 
 **Gonzalo:** Although I am not part of academia, I do have contact and follow different academics in different networks and during the course of the past year I have seen many cases of people that moved to industry, (Mercado Libre for example). When I stopped my PhD was because I was not happy with what I was doing but also in pursuing it I always wondered what would I do when I go back to Colombia as it was always something I wanted to do. Short answer, do academics have the opportunities and resources they need? The majority does not. I do not know if I would say the flock, which feels like an active attempt at moving, the reality is that PhDs have to look for different opportunities and being scientists, migrating to be a Data scientist is an option. Not that these PhDs do not enjoy their new life as data scientists, but many landed there because there was no other choice. I have also seen PhD graduate students migrating to software engineering.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen11.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen11.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ### Growing Open Source Science as a global endeavor
@@ -129,7 +129,7 @@ Image taken from the presentation by Laura Ación for the 2021 EOSS Meeting, ava
 A longer answer: 
 - Collaborations could include applying for grants or sponsorship together, contracting jobs to develop training materials, consulting services from experts in the territory, or evaluating if what you think is inclusive for Latin Americans is actually inclusive. The disabled people and people with disabilities mantra of “nothing with us without us” works perfectly for Latin Americans, too. Having consultants living in the territory is crucial because it is easy to forget how day-to-day life is in Latin America when one moves to more favorable geographies.
 - Fund more incubators such as [CS&S](https://codeforscience.org/) that give access to pots of money usually unavailable internationally and provide all the infrastructure to execute them.
-- Fund more talent-leveling organizations such as [Open Life Science](https://openlifesci.org/) or [MetaDocencia](https://www.metadocencia.org/). We need more on-ramps programs teaching open leadership, community building, and working openly in Open Science.
+- Fund more talent-leveling organizations such as [Open Life Science](https://openlifesci.org/) or [MetaDocencia](/). We need more on-ramps programs teaching open leadership, community building, and working openly in Open Science.
 - Pay for the time of local folks to learn the Open Science and Open Source state-of-the-art. Make those learning materials accessible by having them in local languages.
 - If you are overrepresented, make room by offering your seat at decision-making tables to historically marginalized folks. You can also condition your participation to marginalized folks joining and staying at the table. If you are overrepresented, ask to mentor marginalized folks to these positions by shadowing you.
 - Advocate, so the metrics used to onboard folks to decision-making spaces adjust well to marginalized realities. An excellent source for rethinking metrics is [Rowland Mosbergen’s work](https://www.rowlandm.com/) which proposes quantitative approaches to intersectional equity.
@@ -150,7 +150,7 @@ A longer answer:
 - Until we reach full English literacy we need to make science local, so the other way around, and in this space there is a lot of room for science advocates.
 - Before we can make things global, we need to make it local.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen12.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen12.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ## A closing thought: creating tools and knowledge for our needs
@@ -161,7 +161,7 @@ For us, the key promise of open source science is not access to tools or knowled
 
 We can create that knowledge if we have equal agency in shaping the tools of science itself. We hope these notes contribute to a conversation to make open source science a more global endeavor, open to all.
 
-![Imagen divisoria abstracta](https://www.metadocencia.org/img/czi-blogpost/Imagen13.png)
+![Imagen divisoria abstracta](/img/czi-blogpost/Imagen13.png)
 *<center>Theme vector created by freepik - www.freepik.es</center>*
 
 ## The authors
@@ -171,7 +171,7 @@ We can create that knowledge if we have equal agency in shaping the tools of sci
 
 Contact: [website](http://lacion.rbind.io), [twitter](https://twitter.com/_lacion_).
 
-Affiliation: [MetaDocencia](https://www.metadocencia.org/) e [Instituto de Cálculo - UBA - CONICET](https://www.ic.fcen.uba.ar/en/), Buenos Aires, Argentina.
+Affiliation: [MetaDocencia](/) e [Instituto de Cálculo - UBA - CONICET](https://www.ic.fcen.uba.ar/en/), Buenos Aires, Argentina.
 
 ### Gonzalo Peña-Castellanos 
 **Gonzalo Peña Castellanos** is a Colombian Civil Engineer with an MSc. in Hydroinformatics and an MSc. in Sanitary Engineering. Having initially worked with real time flood forecasting and downscaling of General/Global Circulation models for urban applications, he discovered a passion for Software Development and Data Science which led him to collaborate in different open source projects and to eventually join Anaconda, Inc and currently Quansight, Inc as a Senior Software Engineer. Today he is a JupyterLab Core developer, working on localization and internationalization, and a core contributor to the napari project, with experience in desktop, frontend and backend development. Gonzalo is an active member of the open source community contributing to different projects as a member of the grants working group in the Python Software Foundation and a leader in the Python Colombia Community helping shape and organize communities such as Django Girls Colombia, Python Bucaramanga, the national and Latin American Python Conferences, PyCon Colombia and SciPy Latam and more recently, the Python en Español community.
