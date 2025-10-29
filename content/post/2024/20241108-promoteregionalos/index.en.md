@@ -30,30 +30,30 @@ In this sense, [collaborative Contextualization work](/en/post/2024/20240725-con
 
 **- Limited Resources:** Insufficient funding and limited technological infrastructure for organizing, storing, and accessing research data, as well as processing it, are central to understanding the local context. Additionally, the lack of interoperable platforms and established data management practices remains a significant challenge in the region.
 
-**Our open, free, Spanish-language [training courses](/en/formacion/) help build scientific and technical capacities responsibly, accessibly, and with a local perspective.**
+**Our open, free, Spanish-language [training courses](/en/que-hacemos/#formacion) help build scientific and technical capacities responsibly, accessibly, and with a local perspective.**
 
 **- Publication Costs:** The predominant model excludes many researchers in the Global South, limiting their ability to participate fully in the international production and dissemination of their research; it often forces them to stand out exceptionally to justify fee waivers.
 
 Developing local [case studies like the Permanent Household Survey (EPH)](/en/post/2024/20240715-case-osa-eph/) allows us to continue building capacities within and for Latin America. Additionally, sharing Open Science in Action stories, such as the [PsiNet LAB case](/en/post/2024/20241028-psinetlab/), **contributes to recognizing efforts beyond traditional publication frameworks.**
 
-Moreover, expert reflections on global topics and their regional impact, like A[rtificial Intelligence and Education: More Questions than Answers](/en/post/ai-questions/) or [Thinking Critically about Artificial Intelligence and Education](/en/post/ai-reflections/), bring valuable insights to the discussion. Bilingual publications on topics of interest in other media, such as Artificial Intelligence and its impact on our work areas enhance the discourse and contribute to this conversation: [Generative AI poses ethical challenges to Open Science, a comment for Nature Human Behaviour](/en/post/ai-nature/).
+Moreover, expert reflections on global topics and their regional impact, like [Artificial Intelligence and Education: More Questions than Answers](/en/post/ai-questions/) or [Thinking Critically about Artificial Intelligence and Education](/en/post/ai-reflections/), bring valuable insights to the discussion. Bilingual publications on topics of interest in other media, such as Artificial Intelligence and its impact on our work areas enhance the discourse and contribute to this conversation: [Generative AI poses ethical challenges to Open Science, a comment for Nature Human Behaviour](/en/post/ai-nature/).
 
 **- Lack of Coordination:** A disconnect exists between scientific-technical levels and decision-makers, which affects the effective implementation of Open Science policies and influences local and regional collaboration networks.
 
-[MetaDocencia’s Community Hive](/en/panal/), which aims to showcase and link the efforts of more than 20 fellow communities, demonstrates that science is a collaborative, networked endeavor. This space fosters interactions among individuals from diverse backgrounds and varying levels of engagement, facilitating projects that bridge communities of practice with institutional environments.
+[MetaDocencia’s Community Hive](/en/quienes-somos/#comunidades-amigas), which aims to showcase and link the efforts of more than 20 fellow communities, demonstrates that science is a collaborative, networked endeavor. This space fosters interactions among individuals from diverse backgrounds and varying levels of engagement, facilitating projects that bridge communities of practice with institutional environments.
 
-Additionally, [Consulting](/en/consultoria/) work, such as supporting other communities in developing their governance and sustainability for Open Science projects, **strengthens inter-community collaboration.**
+Additionally, [Consulting](/en/proyecto/gobernanza-2022/) work, such as supporting other communities in developing their governance and sustainability for Open Science projects, **strengthens inter-community collaboration.**
 
 **- Resistance to Change:** The transition to new practices, such as shared infrastructure management or data management practices, is often hindered by conflicting interests, information asymmetry, and the inertia of traditional models.
 
-In this regard, the regional Open Science Plenaries ([Plenary 1](https://youtu.be/Qn-g4CaJrZU) and [Plenary 2](https://youtu.be/wUpmM4hlZm8) recordings) that close each edition of [Latin America Transforms to Open Science (ALTa)](/en/formacion/), as part of our Training pillar, help **socialize and promote new initiatives and opportunities among those involved in science and technology across different regions, who may share common interests and challenges.**
+In this regard, the regional Open Science Plenaries ([Plenary 1](https://youtu.be/Qn-g4CaJrZU) and [Plenary 2](https://youtu.be/wUpmM4hlZm8) recordings) that close each edition of [Latin America Transforms to Open Science (ALTa)](/en/proyecto/nasa-spanish/), as part of [our Training pillar](/en/que-hacemos/#formacion), help **socialize and promote new initiatives and opportunities among those involved in science and technology across different regions, who may share common interests and challenges.**
 Participation in events with simultaneous translation, such as [csv,conf 2023](https://www.youtube.com/watch?v=sV_0nAypuZQ), also contributes to spreading new ideas and connecting spaces and key players in regional Open Science initiatives.
 
 
 ## Highlighting Local Production
 Despite the challenges mentioned, **Latin America has a rich tradition of innovation in Open Science**, often promoted under difficult conditions with limited resources and high institutional instability. Shared infrastructures, such as those found in Argentina with the [National Systems of Large Instruments](https://www.argentina.gob.ar/redes-de-vinculacion/grandes-instrumentos), are examples of how resources can be used efficiently.
 
-**The development of shared systems and cooperation in strategic areas offers a concrete path forward for advancing open science in the region** Creating networks and sharing expensive equipment are opportunities to strengthen regional capacity. In this sense, various MetaDocencia fellow communities are working to advance research through shared resources, such as the [High-Performance Computing Center (CCAD-UNC)](/en/authors/ccad/), [CabanaNET](/en/authors/cabananet/), and [Latin America Bioimaging](https://labi.lat/), to name just a few.
+**The development of shared systems and cooperation in strategic areas offers a concrete path forward for advancing open science in the region** Creating networks and sharing expensive equipment are opportunities to strengthen regional capacity. In this sense, various MetaDocencia fellow communities are working to advance research through shared resources, such as the [High-Performance Computing Center (CCAD-UNC)](/en/author/ccad/), [CabanaNET](/en/author/cabananet/), and [Latin America Bioimaging](https://labi.lat/), to name just a few.
 
 However, these achievements rarely receive the attention they deserve in the global scientific context. International events provide us with an excellent opportunity not only to showcase our work but also to use every chance to bring other regional initiatives and projects into the spotlight.
  
@@ -64,7 +64,7 @@ Participation in global events should serve as a platform to build and strengthe
 
 **We must work to ensure that knowledge distribution is fair and equitable, promoting collaboration that is neither paternalistic nor extractivist. Instead of limiting our interactions to a donor-recipient dynamic, we should foster collaborative networks that value and recognize mutual contributions.**
 
-At MetaDocencia, we develop open, reusable, and accessible educational resources that reach a global Spanish-speaking community. We build regional scientific, technical, and research capacity. Our approach prioritizes Spanish-speaking communities and localizes open scientific and technical practices for international use. In this sense, our [pillars Training, Contextualization, and Community](/en/institucional/) are investments in further strengthening Open Science and transforming opportunities from the region through communities of practice.
+At MetaDocencia, we develop open, reusable, and accessible educational resources that reach a global Spanish-speaking community. We build regional scientific, technical, and research capacity. Our approach prioritizes Spanish-speaking communities and localizes open scientific and technical practices for international use. In this sense, our [pillars Training, Contextualization, and Community](/en/que-hacemos/) are investments in further strengthening Open Science and transforming opportunities from the region through communities of practice.
 
 
 ## Acknowledgments
