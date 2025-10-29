@@ -36,11 +36,6 @@ Un gran saludo al comité organizador por el esfuerzo de reunir a la comunidad e
 ![Participantes en persona y de forma remota en el primer Collaborations Workshop híbrido ofrecido por SSI](/img/CW23.jpg)
 *Participantes en persona y de forma remota en el primer Collaborations Workshop híbrido ofrecido por SSI. Imagen – eventos SSI*
 
-## Recursos
-
--  Presentación durante el mini-workshop: [http://tiny.cc/cw23_14b ](http://tiny.cc/cw23_14b )
--  Encuesta (disponible hasta 31 de julio de 2023): [https://forms.gle/grVV7frsrNj16bus6](https://forms.gle/grVV7frsrNj16bus6) 
-
 
 *¿Te gustó esta publicación? Puedes reutilizarla libremente bajo licencia CC by 4.0, solo tienes que citarla.* 
 
