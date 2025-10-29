@@ -11,7 +11,7 @@ authors: null
 translationKey: gobernanza-colaborativa
 ---
 
-En 2022 [cumplimos dos años](https://www.metadocencia.org/post/cumple_mes_dos_anios/), gracias al impulso de la comunidad docente de habla hispana que crece al ritmo de las innovaciones en educación y las ganas de seguir aprendiendo y colaborando en línea.
+En 2022 [cumplimos dos años](/post/cumple_mes_dos_anios/), gracias al impulso de la comunidad docente de habla hispana que crece al ritmo de las innovaciones en educación y las ganas de seguir aprendiendo y colaborando en línea.
 
 La consolidación de MetaDocencia se apoya en logros colectivos y nuestro rápido crecimiento nos presenta nuevos desafíos. Por eso, durante la segunda mitad de 2022 comenzamos a elaborar nuestra **gobernanza**. Aspiramos a tener un modelo transparente para la toma de decisiones estratégicas que nos permita fortalecer nuestra misión institucional sobre la base de la construcción en comunidad.
 
