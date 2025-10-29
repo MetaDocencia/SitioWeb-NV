@@ -39,7 +39,7 @@ The process included 32 activities in which 10 team members actively worked sync
 MetaDocencia comprises professionals with experience in diverse disciplines and fields. As part of its consulting services for individuals and organizations, in both Spanish and English, MetaDocencia supported the strengthening of community governance for Latin America Bioimaging (LABI).
 
 ## Read more
-* Blog post (in Spanish) about  [the experience of supporting the strengthening of LABI’s community governance](https://mdnv.netlify.app/post/2024/consultoria-labi/)
+* Blog post (in Spanish) about  [the experience of supporting the strengthening of LABI’s community governance](/post/2024/consultoria-labi/)
 * MetaDocencia Governance: [version 2.0](https://zenodo.org/records/12522913), [version 1.0](https://zenodo.org/records/7399002)
 * Video (in Spanish): [the collaborative design of MetaDocencia’s Governance](https://www.youtube.com/watch?v=02NLFbEwgmQ)
 * Playlist (in Spanish): [MetaDocencia Governance Conversations](https://www.youtube.com/playlist?list=PLNsHbWOM6tUc3hPxo-EvCtn03Lp_ZcXKy)
