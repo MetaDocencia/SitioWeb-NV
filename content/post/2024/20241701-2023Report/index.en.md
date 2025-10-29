@@ -26,11 +26,11 @@ We especially thank [Dario Taraborelli](https://twitter.com/ReaderMeter), [Kate 
 
 Also to [Chelle Gentemann](https://twitter.com/ChelleGentemann) and Team; and to the [OLS](https://openlifesci.org/) and [The Turing Way](https://the-turing-way.start.page/) communities for continuing to grow hand in hand.
 
-To all the communities in our [Hive](/en/panal/), for the collaborative work, reciprocity, and collective construction.
+To all the communities in our [Hive](/en/quienes-somos/#comunidades-amigas), for the collaborative work, reciprocity, and collective construction.
 
-To our team of [outside collaborators](/en/equipo/), who write, participate in, and support our work.
+To our team of [outside collaborators](/en/quienes-somos/#equipo-y-consejo-asesor), who write, participate in, and support our work.
 
-To those who joined workshops, open events, and the [Pollen Project](https://zenodo.org/records/10285864).
+To those who joined workshops, open events, and the [Pollen Project](https://doi.org/10.5281/zenodo.17469649).
 
 To the people who applied to our job searches, to those who are in our communication channels, share our news, and invite people they know to join.
 
@@ -63,7 +63,7 @@ In January and February of 2023 we continued to build community locally, yet alw
 
 ### #Khipu2023
 - Laura Ación was a speaker in the session “Ethics and Social Impacts in AI”, with Paola Ricaurte, Sasha Luccioni, and Andrés Morales, facilitated by Laura Alonso Alemany. Recording available (in English) on [YouTube](https://youtu.be/yiY7WJrJxI8?si=JGliEz6iDjeR7Hj3&t=6913).
-- With the Vía Libre Foundation, we supported the organization of a [workshop on the “Social Impacts of Artificial Intelligence](/en/curso/etica_en_ia/), led by Laura Ación, Laura Alonso Alemany, and Luciana Benotti.
+- With the Vía Libre Foundation, we supported the organization of a [workshop on the “Social Impacts of Artificial Intelligence](https://doi.org/10.5281/zenodo.17470211), led by Laura Ación, Laura Alonso Alemany, and Luciana Benotti.
 
 ### We Turned 3 Years Old
 In 2023, MetaDocencia celebrated 3 years of responsibly building scientific and technical capacity with a local perspective.
@@ -96,8 +96,8 @@ We were also present at the csv,conf,v7 that happened between April 19 and 20 in
 - [Melissa Black](/en/author/melissa-black/), Malvika Sharan, and Esther Plomp presented the talk “Co-creating The Turing Way with the global community.”
 
 ### Hive of Fellow Communities
-In the csv,conf,v7 we presented the [Hive of Fellow Communities](/en/panal/), a collaborative project that connects efforts to confirm, once again, that science is a collective work.
-We invite you to explore the Hive at [/en/panal/](/en/panal/), follow, and share the achievements of our entire extended community.
+In the csv,conf,v7 we presented the [Hive of Fellow Communities](/en/quienes-somos/#comunidades-amigas), a collaborative project that connects efforts to confirm, once again, that science is a collective work.
+We invite you to explore the [Hive](/en/quienes-somos/#comunidades-amigas), follow, and share the achievements of our entire extended community.
 <p align="center">
 <img src="/img/reporte-2023/panal.jpg" alt="Imagen alusiva al panal de comunidades amigas de MetaDocencia" width="600px"/>
 <i><font size="-0.6">Hive of Fellow Communities. Some of the organizations that joined our Hive in 2023.</font></i>
@@ -124,7 +124,7 @@ We were so happy that preparations are already underway for the next retreat, in
 ### CW23
 During the Software Sustainability Institute [Collaboration Workshops 2023](https://software.ac.uk/cw23) (CW23) of the Software Sustainability Institute, on May 2nd Nicolás Palopoli co-facilitated the workshop "Communities of practice and the pursuit for Open Science on a global scale", with [Reina Camacho Toro](https://camachoreina.github.io/) ([CNRS](https://www.cnrs.fr/fr)/[CERN](https://home.cern/), [LA-CoNGA physics](https://laconga.redclara.net/)) and [Camila Rangel Smith](https://www.turing.ac.uk/people/researchers/camila-rangel-smith) ([The Alan Turing Institute](https://www.turing.ac.uk/)).  It was a hybrid workshop with discussions around the universality of current #OpenScience concepts and practices.
 
-🔗 Read more in our blog (post in Spanish): [https://www.metadocencia.org/post/cw23/](/post/cw23/)
+🔗 Read more in our blog (post in Spanish): [/post/cw23/](/post/cw23/)
 <p align="center">
 <img src="/img/reporte-2023/NP-CW23.png" alt="CW23. Nicolás Palopoli during the workshop presentation" width="600px"/>
 <i><font size="-0.6">CW23. Nicolás Palopoli during the workshop presentation.</font></i>
@@ -205,8 +205,7 @@ Melissa Black joined [Co-Afina 2023](https://laconga.redclara.net/hackathon/2022
 Jesica Formoso, Patricia Loto, and María Cristina Nanton participated in LatinR, the Latin American Conference on the use of R in Research + Development, which was held in person in Montevideo, Uruguay.
 Maria presented a paper on the translation of R base. Jesi and Patri presented a Shiny app for “Mapping communities, organizations, and open science events in Latin America.”
 
-🔗 Link to the Mapping presentation (in Spanish): 
- [http://tiny.cc/mapeodecomunidades](http://tiny.cc/mapeodecomunidades)
+🔗 [More about Mapping Open Science in Latin America](/en/proyecto/mapeo-comunidades/)
 
 <p align="center">
 <img src="/img/reporte-2023/LatinR.jpeg" alt="Jesica Formoso, Patricia Loto and María Cristina Nanton also were part of LatinR 2023." width="600px"/>
@@ -240,11 +239,11 @@ Thanks also to [Iván Poggio](/en/author/ivan-poggio/), Mariela Rajngewerc, and 
 ## December
 
 ### The Pollen Project is Launched
-The [Pollen Project](https://docs.google.com/document/d/1uQOUgxVGnBT86USTWBzzI-Y3kTwGIl53SL7yvDCehSQ/edit?usp=sharing) now has its first group of participants!
+The [Pollen Project](https://doi.org/10.5281/zenodo.17469649/edit?usp=sharing) now has its first group of participants!
 This initiative seeks to incorporate more people to represent MetaDocencia in communities, networks, and external events, recognizing their contribution to our mission and vision while deepening their community journeys.
 Based on what we learn in this pilot stage, we hope to improve and expand it in future editions!
 
-🔗 Presentation available with speaker notes (in Spanish): [https://zenodo.org/records/10285864](https://zenodo.org/records/10285864).
+🔗 Presentation available (in Spanish): [https://zenodo.org/records/10285864](https://zenodo.org/records/10285864).
 
 ### We Gave the Manzanita Awards
 After a great year of work, challenges, and joys shared among this beautiful team, we decided to reward each one’s contributions in a playful ceremony with a virtual and symbolic award that we called the “Manzanita Awards”.
@@ -279,7 +278,7 @@ Most of our daily communication is done through Slack. Our workspace has been gr
 <i><font size="-0.6">The news about NASA's award was shared 48 times by our community on Twitter.</font></i>
 </p>
 
-- The 7 published editions of our [bilingual newsletter](/en/boletines/) were very well received by 2,065 Spanish-speaking folks in our community (25.7% more than the previous year), with an **opening rate of 41%**.
+- The 7 published editions of our [bilingual newsletter](/en/newsletters/) were very well received by 2,065 Spanish-speaking folks in our community (25.7% more than the previous year), with an **opening rate of 41%**.
 
 
 
@@ -307,12 +306,14 @@ In October 2023, we held our first hybrid workshop as part of the Argentine Bios
 <i><font size="-0.6">Workshops page on our website and recordings uploaded to our YouTube channel.</font></i>
 </p>
 
-Additionally, we improved and redesigned our workshop and event registration and certification process. Find the materials for each course through the following list:
+Additionally, we improved and redesigned our workshop and event registration and certification process.
 
-1. The [Accessible Zoom with a Screen Reader](/en/curso/zoom/) workshop was published and taught 3 times between December 2022 and October 2023. There were also 3 editions of [How to Teach Programming Online](/en/curso/programar/) and of [Present! Resources for Active Meetings](/en/curso/intro-abc-online/). These were our most taught stable courses in 2023.
+1. The Accessible Zoom with a Screen Reader workshop was published and taught 3 times between December 2022 and October 2023. There were also 3 editions of How to Teach Programming Online and of Present! Resources for Active Meetings. These were our most taught stable courses in 2023.
 2. The "MetaEvaluations: Evaluate While Teaching" workshop was improved and piloted twice in November and December 2022.
-3. The workshop [Social Impacts of Artificial Intelligence](/en/curso/etica_en_ia/) was published and taught in person in March 2023, during the Latin American Meeting on Artificial Intelligence (Khipu 2023), in Montevideo (Uruguay).
-4. The in-person [Train the Trainer](/curso/entrenamiento-instructores/) workshop was adapted to the local audience and delivered with CABANAnet in Buenos Aires (Argentina), in April 2023.
+3. The [workshop Social Impacts of Artificial Intelligence](https://doi.org/10.5281/zenodo.17470211) was published and taught in person in March 2023, during the Latin American Meeting on Artificial Intelligence (Khipu 2023), in Montevideo (Uruguay).
+4. The in-person Train the Trainer workshop was adapted to the local audience and delivered with CABANAnet in Buenos Aires (Argentina), in April 2023.
+
+Find the materials for each course [here](https://www.metadocencia.org/en/proyecto/cursos-a-medida/)
 <p align="center">
 <img src="/img/reporte-2023/TtT-CABANA-2023.png" alt="CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees." width="600px"/>
 <i><font size="-0.6">CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees.</font></i>
@@ -377,7 +378,7 @@ MetaDocencia is consolidated as a fully-financed organization with 17 stable tea
 - **How We Use Social Media**, our guidelines and suggestions for the use of MetaDocencia’s social media profiles (in Spanish):[https://zenodo.org/records/10277716](https://zenodo.org/records/10277716)
 - **Repositorio de Accesibilidad 2022-2023**, a document that compiles digital accessibility-related content shared by MetaDocencia between 2022 and 2023 (in Spanish): [https://zenodo.org/records/10514982](https://zenodo.org/records/10514982)
   
-In addition, in September 2023, we carried out a new round of hiring for project coordination. After receiving 134 applications, 3 people were hired. Meet the new team members in this post: [/en/post/team2023/](/en/post/team2023/).
+In addition, in September 2023, we carried out a new round of hiring for project coordination. After receiving 134 applications, 3 people were hired.
 <p align="center">
 <img src="/img/reporte-2023/Postulaciones2023_mapa_porcentajes_ingles.png" alt="Cantidad de postulaciones por país" width="600px"/>
 </p>
