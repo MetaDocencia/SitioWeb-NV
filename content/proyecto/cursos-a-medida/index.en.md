@@ -48,9 +48,9 @@ Training is one of the core efforts atMetaDocencia. Training has been linked all
 In this 3-hour workshop, essential pedagogical concepts are presented; concrete advice is implemented to enable active meetings (such as concept maps, formative assessments, and constructive feedback); and practical exercises are carried out in breakout rooms to foster peer learning.
 
 **Materials**
-* [Presentation used in the course](https://zenodo.org/records/7387859)
-* [Template of our document for shared notes](https://zenodo.org/records/7391035)
-* [Recording of an edition of the workshop](https://youtu.be/P0kK6SsAImA)
+* [Presentation used in the course (in Spanish)](https://zenodo.org/records/7387859)
+* [Template of our document for shared notes (in Spanish)](https://zenodo.org/records/7391035)
+* [Recording of an edition of the workshop (in Spanish)](https://youtu.be/P0kK6SsAImA)
 
 ## Accessible Zoom with a Screen Reader
 Zoom is a suitable platform for holding synchronous online meetings, but it presents challenges for persons who rely on a screen reader or teach people with visual disabilities.
