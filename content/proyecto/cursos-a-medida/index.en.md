@@ -60,8 +60,8 @@ This workshop trains participants in the efficient use of Zoom keyboard shortcut
 Through this 2-hour practical workshop, MetaDocencia teaches technical and communication skills, promoting accessibility and inclusion in education.
 
 **Materials**
-* [Presentation used in the course with step-by-step instructions for exercises](https://docs.google.com/presentation/d/1fbi8_JHPwFGuae8eY2yUVG8WA81g8uxoejEhnGmBShY/edit?usp=sharing) con instrucciones paso a paso de los ejercicios. 
-* [Video of the course](https://youtu.be/p8kjdVAtYsw)
+* [Presentation used in the course with step-by-step instructions for exercises (in Spanish)](https://docs.google.com/presentation/d/1fbi8_JHPwFGuae8eY2yUVG8WA81g8uxoejEhnGmBShY/edit?usp=sharing)
+* [Video of the course (in Spanish)](https://youtu.be/p8kjdVAtYsw)
 
 ## Introduction to the Use of NASA Earthdata Cloud for Monitoring Climate Risks
 The prediction and management of risks from wildfires, droughts, and floods have become increasingly challenging in parallel to climate change. These natural risks are intrinsically linked to variation in time and space of the distribution of surface water, precipitation, vegetation, and land use.
@@ -73,7 +73,7 @@ It began as a collaboration between MetaDocencia and 2i2c under the NASA Open Sc
 This project included the creation of open materials, in English and Spanish, presented as a collection of Jupyter notebooks, along with support material for teaching the course in the cloud, whether in person or remotely. Those who completed the course could adapt and reuse the contents for their own open science objectives related to environmental risks at a local level.
 
 **Materials**
-* [Presentation in Spanish](https://doi.org/10.5281/zenodo.16808922)
+* [Presentation (in Spanish)](https://doi.org/10.5281/zenodo.16808922)
 * [Video of a synchronous edition](https://youtu.be/r68BUz7dKsQ)
 
 ## How to Teach Programming Online
@@ -86,7 +86,7 @@ This practical training to teach programming is a proposal from MetaDocencia to 
 The 3-hour remote synchronous workshop plan includes, among other concepts, tips on peer programming, different types of assessment, and live programming practice, with examples in R and Python.
 
 **Materials**
-* [Presentation used in the course with expanded notes for those teaching](https://docs.google.com/presentation/d/1sj6tbtqjWY8AvcQLVih3FTFIa1pKERFRxk3KY8KK13w/edit?usp=sharing) con notas ampliando el contenido para quienes dan la clase.
+* [Presentation used in the course with expanded notes for those teaching](https://docs.google.com/presentation/d/1sj6tbtqjWY8AvcQLVih3FTFIa1pKERFRxk3KY8KK13w/edit?usp=sharing)
 * [Template of our shared notes document](https://drive.google.com/file/d/1PK0mbRYke33qQIKcgmrlusJe6dIGYx9y/view?usp=sharing)
 * [Video of the course](https://youtu.be/awRCNo0PEZU)
 
@@ -95,16 +95,16 @@ The {learnr} package in R is useful to prepare remote classes, whether synchrono
 
 This workshop aimed to train in using {learnr} to generate interactive tutorials that allow writing and executing code directly from the tutorial, without suffering installation issues, and offering immediate feedback when answering questions.
 
-This 2-hour workshop started presenting the benefits of interactive tutorials and covered how to develop and share them online. It was one of the technical training instances offered by MetaDocencia, focused on teaching programming and communication skills.
+This 2-hour workshop started by presenting the benefits of interactive tutorials and covered how to develop and share them online. It was one of the technical training instances offered by MetaDocencia, focused on teaching programming and communication skills.
 
 **Materials**
-* [Presentation used in the course with expanded notes for teachers](https://docs.google.com/presentation/d/1QLRUbERgEk85s8qK6mzmMJn7avQ_bEmTn_NzFYgqwkc/edit?usp=sharing) con notas ampliando el contenido para quienes dan la clase
+* [Presentation used in the course with expanded notes for teachers](https://docs.google.com/presentation/d/1QLRUbERgEk85s8qK6mzmMJn7avQ_bEmTn_NzFYgqwkc/edit?usp=sharing)
 * [Video of the course](https://youtu.be/d7eXzRzEdC8)
 
 ## From Spreadsheets to R _(Not active)_
 Many people working with data in spreadsheets could benefit from using the R programming language. However, they may need help incorporating the knowledge to use R efficiently and reproducibly.
 
-This workshop was aimed at people using spreadsheets (like Excel or Google Sheets) for data manipulation and analysis, but who wished to incorporate a workflow in R that would allow them to apply good programming practices, collaborate effectively, and present their analyses and results in a single document.
+This workshop was aimed at people using spreadsheets (such as Excel or Google Sheets) for data manipulation and analysis who wished to incorporate a workflow in R that would allow them to apply good programming practices, collaborate effectively, and present their analyses and results in a single document.
 
 This technical skills training, with an inclusive and accessible approach, was offered by MetaDocencia as part of its work to promote science and research.
 
