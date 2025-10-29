@@ -34,7 +34,7 @@ Measures of impact of this project would include:
 
 
 ## More information
-* [¡Support this project!](/en/cta/)
+* [Support this project!](/en/cta/)
 * [Pre-proposal submitted for IOI Fund for Network Adoption on Zenodo](https://doi.org/10.5281/zenodo.15880814 )
 * [Pre-proposal submitted for IOI Fund for Network Adoption on Open Grants](https://www.ogrants.org/grants/formoso_jesica_2025 )
 * [PREreview Champions Program](https://content.prereview.org/tag/prereview-champion) 
