@@ -18,7 +18,7 @@ categories:
 
 Como te contamos apenas recibimos la noticia (Figura 1), junto a OLS, 2i2c y con el apoyo de la NASA, nos sumamos a la iniciativa de transformar la ciencia y la técnica a prácticas abiertas.
 
-![Con emoción y alegría anunciamos el apoyo para nuestra nueva etapa.](https://www.metadocencia.org/img/NASAtweet.jpg)
+![Con emoción y alegría anunciamos el apoyo para nuestra nueva etapa.](/img/NASAtweet.jpg)
 
 *Figura 1. Con emoción y alegría anunciamos el apoyo para nuestra nueva etapa.*  
 *Fuente: [Twitter de MetaDocencia](https://twitter.com/metadocencia), 11 de abril de 2023.*
@@ -41,7 +41,7 @@ La emoción y la alegría del anuncio se incrementan según vamos comenzando a t
 
 7. Para MetaDocencia, esta colaboración con 2i2c es una oportunidad valiosa para poner en práctica nuestros conocimientos sobre diseño instruccional y nuestra experiencia en ciencia y educación abiertas al **servicio de la comunidad**. Representa un impulso adicional para nuestra sostenibilidad institucional durante los próximos dos años, comprometiéndonos todavía más en el camino elegido con atención a problemáticas vigentes y centrales para nuestra región.
 
-8. Se trata de un **conjunto de buenas noticias que nos llenan de orgullo y responsabilidad**. Por un lado, trabajar junto a la NASA y estas comunidades parece un sueño hecho realidad, que nos motiva y nos impulsa hacia la próxima etapa de MetaDocencia en el trabajo por nuestra [misión y visión](https://www.metadocencia.org/authors/metadocencia/). Seguiremos contando con el respaldo de [Code for Science and Society (CS&S)](https://www.codeforsociety.org/), que apoya nuestros planes y proyección futura con toda su experiencia y estructura.
+8. Se trata de un **conjunto de buenas noticias que nos llenan de orgullo y responsabilidad**. Por un lado, trabajar junto a la NASA y estas comunidades parece un sueño hecho realidad, que nos motiva y nos impulsa hacia la próxima etapa de MetaDocencia en el trabajo por nuestra [misión y visión](/institucional/). Seguiremos contando con el respaldo de [Code for Science and Society (CS&S)](https://www.codeforsociety.org/), que apoya nuestros planes y proyección futura con toda su experiencia y estructura.
 
 9. Por otra parte, implica una reestructuración de equipos, recursos y metas: desde mediados de 2023 nos preparamos para ir de los cursos cortos virtuales con los que nacimos al trabajo con cohortes mentoreadas, trabajando con un equipo estable de 14 personas completamente remoto en un ambiente distendido e inclusivo en el que todas las personas son bienvenidas y tienen espacio para su desarrollo y formación.
 
