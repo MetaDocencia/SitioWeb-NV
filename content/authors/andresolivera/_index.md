@@ -6,7 +6,7 @@ interests:
 - Ciencia abierta
 - Gestión de proyectos
 - Transferencia tecnológica
-name: Andres Olivera
+name: Andrés Olivera
 role: 
 weight: 14
 organizations:
