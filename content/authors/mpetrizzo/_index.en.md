@@ -1,5 +1,5 @@
 ---
-title: "Maria Angela Petrizzo Páez"
+title: "María Ángela Petrizzo Páez"
 bio: ""
 email: "petrizzo@gmail.com"
 interests:
@@ -23,6 +23,7 @@ superuser: false
 user_groups:
 - Contributors
 ---
+
 
 
 
