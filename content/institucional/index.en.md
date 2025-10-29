@@ -95,12 +95,12 @@ sections:
           </div>
 
           <div>
-            <h4 class="text-xl md:text-2xl font-semibold mb-1">Code of Conduct</h4>
+            <h4 class="text-xl md:text-2xl font-semibold mb-1">Community Guidelines</h4>
             <p>
               Our
-              <a href="https://zenodo.org/records/13236269" target="_blank" rel="noopener" class="underline font-semibold">Code of Conduct (CoC)</a>
-              guides every activity and collaboration at MetaDocencia. It was built collectively and reflects our vision,
-              mission, and values. Everyone participating in our initiatives commits to respecting and promoting it.
+              <a href="https://zenodo.org/records/13236269" target="_blank" rel="noopener" class="underline font-semibold">Community Guidelines</a>
+              guides every activity and collaboration at MetaDocencia. They were built collectively and reflects our vision,
+              mission, and values. Everyone participating in our initiatives commits to respecting and promoting them.
             </p>
           </div>
   
