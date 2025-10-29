@@ -210,7 +210,7 @@ sections:
             Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/formacion-para-ensenar/">Ver más →</a>
+               href="/proyecto/formacion-para-formar/">Ver más →</a>
 
         - name: "Cursos a medida"
           description: |
