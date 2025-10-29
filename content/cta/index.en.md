@@ -156,32 +156,32 @@ sections:
         <div style="color:#FFFFFF">
           <p>Join us on social media and follow <strong style="color:#FFFFFF">@metadocencia</strong> for updates, discussions, and resources.</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                Twitter
             </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                LinkedIn
             </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                YouTube
             </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                Instagram
             </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                Mastodon
             </a>
-            <a class="inline-block text-center no-underline font-semibold px-3 py-2 rounded-full"
+            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
                href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
                style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
                Bluesky
