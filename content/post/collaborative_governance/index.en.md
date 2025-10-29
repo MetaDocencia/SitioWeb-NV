@@ -11,7 +11,7 @@ authors: null
 translationKey: gobernanza-colaborativa
 ---
 
-MetaDocencia [celebrated its second anniversary](https://www.metadocencia.org/en/post/cumple_mes_dos_anios/) in 2022. This was made possible thanks to the support of the Spanish-speaking teaching community that grows along with innovations in education and the desire to continue learning and collaborating online.
+MetaDocencia [celebrated its second anniversary](/en/post/cumple_mes_dos_anios/) in 2022. This was made possible thanks to the support of the Spanish-speaking teaching community that grows along with innovations in education and the desire to continue learning and collaborating online.
 
 The evolution of MetaDocencia is based on collective achievements, and our rapid growth presents new challenges. That motivated us to develop our governance practices in the second half of 2022. We aspire to have a transparent model for making strategic decisions that allows us to strengthen our institutional mission based on community construction.
 
