@@ -43,7 +43,7 @@ sections:
     content:
       items:
         - title: "About Us"
-          text: "MetaDocencia is an organization founded in 2020. Our community is made up of individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
+          text: "MetaDocencia is an organization founded in 2020. Our community is made by individuals and organizations dedicated to building local scientific capacity to transform global science. We foster networked knowledge, growing from Latin America to the world."
           image: "quienessomos4.png"
           button:
             text: "Meet us"
