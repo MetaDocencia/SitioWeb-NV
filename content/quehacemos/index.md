@@ -10,7 +10,11 @@ sections:
   - block: hero
     id: hero-que-hacemos
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad</span>'
+      title: <span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">What We Do</span>
+      text: |
+        <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
+          Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad
+        </p>
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
@@ -134,7 +138,7 @@ sections:
         - name: "Revisión abierta y equitativa"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints  y conjuntos de datos académicos.
+            Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints y conjuntos de datos académicos.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/revision-abierta/">Ver más →</a><br>
@@ -166,7 +170,7 @@ sections:
         - name: "Nicolás Wolovick"
           role: "Director UNC Supercómputo"
           text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
-        - name: "Andres Olivera"
+        - name: "Andrés Olivera"
           role: "Network Manager, LABI"
           text: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
     design:
