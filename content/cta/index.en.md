@@ -39,11 +39,12 @@ sections:
         margin: [0, 0, 0, 0]
 
   # ---------- Slack (cta-image-paragraph; hide image on mobile; keep desktop unchanged) ----------
-  - block: html
+  - block: markdown
     id: slack
     content:
       title: ""
       text: |
+        {{< rawhtml >}}
         <style>
           /* === Fondo blanco y texto oscuro (incluye dark mode) === */
           section#slack { background-color:#FFFFFF !important; }
@@ -107,6 +108,7 @@ sections:
             </p>
           </div>
         {{< /two_col >}}
+        {{< /rawhtml >}} 
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
 
