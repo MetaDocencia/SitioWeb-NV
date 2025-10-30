@@ -118,7 +118,7 @@ sections:
         <a href="/en/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Meet the community network</a>
       button:
         text: "Add your community"
-        url: "mailto:comunidades@metadocencia.org?subject=Add%20my%20community"
+        url: "mailto:comunidades@metadocencia.org?subject=Add%20my%%20community"
     design:
       card:
         css_class: "shadow-sm"
