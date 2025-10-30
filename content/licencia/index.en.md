@@ -1,5 +1,5 @@
 ---
-title: "Licence"
+title: "License"
 date: "2018-06-28"
 draft: false
 share: false
