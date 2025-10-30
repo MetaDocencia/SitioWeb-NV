@@ -155,7 +155,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+85000"
+        - statistic: "+85.000"
           description: "palabras contextualizadas"
         - statistic: "+200"
           description: "documentos en Zenodo"
@@ -241,7 +241,7 @@ sections:
       items:
         - statistic: "34"
           description: "ediciones (388 horas)"
-        - statistic: "+1500"
+        - statistic: "+1.500"
           description: "personas de 33 países formadas"
         - statistic: "89%"
           description: "Net Promoter Score"
@@ -320,7 +320,7 @@ sections:
           description: "comunidades amigas y alianzas"
         - statistic: "+60"
           description: "personas que colaboran con MetaDocencia"
-        - statistic: "+6000"
+        - statistic: "+6.000"
           description: "personas conectadas"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
