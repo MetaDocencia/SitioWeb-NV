@@ -38,8 +38,7 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (cta-image-paragraph with wide margins, image 40% on the right) ----------
-
+  # ---------- Slack (cta-image-paragraph; hide image on mobile; keep desktop unchanged) ----------
   - block: markdown
     id: slack
     content:
@@ -97,7 +96,7 @@ sections:
             <h2 class="section-title">Join our Slack community</h2>
 
             <p>
-              Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and     <strong>collaboration</strong>.<br>
+              Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
               Share experiences, learn from others, and join conversations that spark new ideas.
             </p>
 
@@ -108,8 +107,8 @@ sections:
             </p>
           </div>
         {{< /two_col >}}
-      design:
-        css_style: "background-color:#FFFFFF;color:#111827;"
+    design:
+      css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Partner Communities (no logos) ----------
   - block: cta-card
@@ -121,7 +120,7 @@ sections:
         <a href="/en/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Meet the community network</a>
       button:
         text: "Add your community"
-        url: "mailto:comunidades@metadocencia.org?subject=Add%20my%community"
+        url: "mailto:comunidades@metadocencia.org?subject=Add%20my%20community"
     design:
       card:
         css_class: "shadow-sm"
