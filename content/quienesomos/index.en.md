@@ -23,7 +23,7 @@ sections:
              style="background:#C83737;color:#FFFFFF;">Institutional</a>
           <a href="/en/institucional#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
-             style="background:#C83737;color:#FFFFFF;">Mission and vision</a>
+             style="background:#C83737;color:#FFFFFF;">Vision and mission</a>
           <a href="/en/institucional#valores"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Our values</a>
