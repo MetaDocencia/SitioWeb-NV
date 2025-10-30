@@ -122,7 +122,7 @@ sections:
         - name: "Catalyst Project"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We make cloud-computing infrastructure more accessible and useful for  life sciences communities in the Global South.
+            We make cloud-computing infrastructure more accessible and useful for life sciences communities in the Global South.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/catalyst/">Learn more →</a>
