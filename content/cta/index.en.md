@@ -92,18 +92,20 @@ sections:
              imgw="266px"
              alt="MetaDocencia Slack"
         >}}
-<div class="slack-text">
-<h2 class="section-title">Join our Slack community</h2>
-<p>
-  Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
-  Share experiences, learn from others, and join conversations that spark new ideas.
-</p>
-<p class="mt-4">
-  <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
-    Join MetaDocencia’s space
-  </a>
-</p>
-</div>
+        <div class="slack-text">
+          <h2 class="section-title">Join our Slack community</h2>
+
+          <p>
+            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
+            Share experiences, learn from others, and join conversations that spark new ideas.
+          </p>
+
+          <p class="mt-4">
+            <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
+              Join MetaDocencia’s space
+            </a>
+          </p>
+        </div>
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
@@ -118,7 +120,7 @@ sections:
         <a href="/en/quienes-somos/#comunidades-amigas" class="underline font-semibold" style="color:#FFFFFF">Meet the community network</a>
       button:
         text: "Add your community"
-        url: "mailto:comunidades@metadocencia.org?subject=Add%20my%%20community"
+        url: 'mailto:comunidades@metadocencia.org?subject=Add%20my%20community'
     design:
       card:
         css_class: "shadow-sm"
