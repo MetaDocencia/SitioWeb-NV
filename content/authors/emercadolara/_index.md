@@ -9,7 +9,7 @@ education:
   - course: Licenciatura en Relaciones Internacionales
     institution: El Colegio de San Luis
     year: 2012
-email: "eunice@orfg.org"
+email: "eunice@orcaopen.org"
 interests:
 - Ciencia Abierta
 - Diversidad, equidad e inclusión en la ciencia
@@ -22,13 +22,10 @@ role: Consejo Asesor
 social:
 - icon: envelope
   icon_pack: fas
-  link: "mailto:eunice@orfg.org"
+  link: "mailto:eunice@orcaopen.org"
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/eunice-mercado-lara/
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/eunizeh
 superuser: false
 user_groups:
 - "Equipo y Consejo Asesor"
