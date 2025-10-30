@@ -109,7 +109,7 @@ sections:
             <p>
               Review MetaDocencia’s
               <a href="[https://zenodo.org/records/10514982](https://zenodo.org/records/10514982)" target="_blank" rel="noopener" class="underline font-semibold">Accessibility Policy</a>
-              and related recommendations defined by the MetaDocencia team as criteria and best practices that shape accessibility in our framework.
+              and related recommendations defined by the MetaDocencia team as criteria and best practices that shape the accessibility of our work.
             </p>
           </div>
         </div>
