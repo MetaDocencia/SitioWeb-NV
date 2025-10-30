@@ -1,6 +1,7 @@
 ---
 title: "Laura Ación"
-aliases: /authors/lacion/
+aliases: 
+  - /authors/lacion/
 bio: ""
 education:
   courses:
@@ -31,9 +32,6 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:laura.acion@metadocencia.org"
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/_lacion_
 - icon: globe
   icon_pack: fas
   link: http://lacion.rbind.io/
