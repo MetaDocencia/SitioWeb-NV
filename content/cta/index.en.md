@@ -82,31 +82,31 @@ sections:
           }
         </style>
 
-        {{< two_col
-             image="/media/slack.png"
-             side="img-left"
-             mode="full"
-             maxw="1100px"
-             px="clamp(2rem,8vw,6rem)"
-             gap="clamp(1rem,3vw,1rem)"
-             imgw="266px"
-             alt="MetaDocencia Slack"
-        >}}
-          <div class="slack-text">
-            <h2 class="section-title">Join our Slack community</h2>
+{{< two_col
+     image="/media/slack.png"
+     side="img-left"
+     mode="full"
+     maxw="1100px"
+     px="clamp(2rem,8vw,6rem)"
+     gap="clamp(1rem,3vw,1rem)"
+     imgw="266px"
+     alt="MetaDocencia Slack"
+>}}
+  <div class="slack-text">
+    <h2 class="section-title">Join our Slack community</h2>
 
-            <p>
-              Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
-              Share experiences, learn from others, and join conversations that spark new ideas.
-            </p>
+    <p>
+      Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
+      Share experiences, learn from others, and join conversations that spark new ideas.
+    </p>
 
-            <p class="mt-4">
-              <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
-                Join MetaDocencia’s space
-              </a>
-            </p>
-          </div>
-        {{< /two_col >}}
+    <p class="mt-4">
+      <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
+        Join MetaDocencia’s space
+      </a>
+    </p>
+  </div>
+{{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
 
