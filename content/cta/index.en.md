@@ -41,69 +41,75 @@ sections:
   # ---------- Slack (cta-image-paragraph with wide margins, image 40% on the right) ----------
 
   - block: markdown
-    id: slack
-    content:
-      title: ""   # title renders inside the text column
-      text: |
-        <style>
-          /* === Force white background & dark text even in dark mode === */
-          section#slack { background-color:#FFFFFF !important; }
-          .dark section#slack { background-color:#FFFFFF !important; }
-  
-          section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
-            color:#111827 !important;
-          }
-          .dark section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
-            color:#111827 !important;
-          }
-  
-          /* Links style (except main button) */
-          section#slack a:not(.btn-slack) {
-            color:#111827 !important;
-            text-decoration: underline;
-            font-weight: 600;
-          }
-  
-          /* Medium text size */
-          section#slack p { font-size: 1.05rem; line-height: 1.65; }
-          /* Controlled h2 size */
-          section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
-  
-          /* Red primary button */
-          section#slack .btn-slack {
-            display:inline-block; text-decoration:none; color:#FFFFFF !important;
-            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem;
-          }
-          section#slack .btn-slack:hover { filter: brightness(1.05); }
-        </style>
-  
-        {{< two_col
-             image="/media/slack.png"
-             side="img-left"
-             mode="full"
-             maxw="1100px"
-             px="clamp(3rem,8vw,8rem)"
-             gap="clamp(1rem,3vw,1rem)"
-             imgw="266px"
-             alt="MetaDocencia Slack"
-        >}}
-          <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Join our Slack community</h2>
-  
+  id: slack
+  content:
+    title: ""
+    text: |
+      <style>
+        /* === Fondo blanco y texto oscuro (incluye dark mode) === */
+        section#slack { background-color:#FFFFFF !important; }
+        .dark section#slack { background-color:#FFFFFF !important; }
+
+        section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
+          color:#111827 !important;
+        }
+        .dark section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
+          color:#111827 !important;
+        }
+
+        /* Enlaces (excepto botón principal) */
+        section#slack a:not(.btn-slack) {
+          color:#111827 !important;
+          text-decoration: underline;
+          font-weight: 600;
+        }
+
+        /* Tipografía base (alineación por defecto: no tocamos desktop/tablet) */
+        section#slack p { font-size: 1.05rem; line-height: 1.65; }
+        section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); margin-top:0; margin-bottom:.5rem; }
+
+        /* Botón principal rojo */
+        section#slack .btn-slack {
+          display:inline-block; text-decoration:none; color:#FFFFFF !important;
+          background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem; font-weight:600;
+        }
+        section#slack .btn-slack:hover { filter: brightness(1.05); }
+
+        /* === SOLO MÓVIL: ocultar imagen y centrar texto === */
+        @media (max-width: 768px) {
+          section#slack img { display: none !important; }
+          section#slack .slack-text { text-align: center !important; }
+          section#slack .slack-text p { margin-left:auto; margin-right:auto; }
+        }
+      </style>
+
+      {{< two_col
+           image="/media/slack.png"
+           side="img-left"
+           mode="full"
+           maxw="1100px"
+           px="clamp(2rem,8vw,6rem)"
+           gap="clamp(1rem,3vw,1rem)"
+           imgw="266px"
+           alt="MetaDocencia Slack"
+      >}}
+        <div class="slack-text">
+          <h2 class="section-title">Join our Slack community</h2>
+
           <p>
-            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>. <br>  Share experiences, learn from others, and join conversations that spark new ideas.
+            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
+            Share experiences, learn from others, and join conversations that spark new ideas.
           </p>
-  
-          <!-- Red primary button -->
+
           <p class="mt-4">
             <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
               Join MetaDocencia’s space
             </a>
           </p>
-  
-        {{< /two_col >}}
-    design:
-      css_style: "background-color:#FFFFFF;color:#111827;"
-
+        </div>
+      {{< /two_col >}}
+  design:
+    css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Partner Communities (no logos) ----------
   - block: cta-card
