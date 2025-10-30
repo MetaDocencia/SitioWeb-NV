@@ -108,8 +108,8 @@ sections:
           </p>
         </div>
       {{< /two_col >}}
-  design:
-    css_style: "background-color:#FFFFFF;color:#111827;"
+    design:
+      css_style: "background-color:#FFFFFF;color:#111827;"
 
   # ---------- Partner Communities (no logos) ----------
   - block: cta-card
