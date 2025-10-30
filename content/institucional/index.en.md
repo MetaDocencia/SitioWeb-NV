@@ -86,7 +86,7 @@ sections:
           <div>
             <h4 class="text-xl md:text-2xl font-semibold mb-1">Governance</h4>
             <p>
-              Browse MetaDocencia’s governance documents, co-created with our community and reviewed annually.
+              Browse MetaDocencia’s Governance documents, co-created with our community and reviewed annually.
               They also include our Conflict of Interest Policy and Authorship Guidelines.
               <!-- Keep the existing link to your governance bundle -->
               See the collection
