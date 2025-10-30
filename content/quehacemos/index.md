@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-que-hacemos
     content:
-      title: <span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">What We Do</span>
+      title: <span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Qué hacemos</span>
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad
