@@ -38,11 +38,11 @@ sections:
       title: ""   # el título se muestra dentro de la columna de texto
       text: |
         <style>
-          /* === Forzar fondo blanco y texto oscuro, también en modo oscuro === */
+          /* === Forzar fondo blanco y texto oscuro (incluye modo oscuro) === */
           section#slack { background-color:#FFFFFF !important; }
           .dark section#slack { background-color:#FFFFFF !important; }
 
-          /* Texto base oscuro (sin afectar el botón rojo) */
+          /* Colores de texto base */
           section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
             color:#111827 !important;
           }
@@ -50,23 +50,30 @@ sections:
             color:#111827 !important;
           }
 
-          /* Enlaces en estilo link oscuro */
+          /* Enlaces (excepto botón principal) */
           section#slack a:not(.btn-slack) {
             color:#111827 !important;
             text-decoration: underline;
             font-weight: 600;
           }
 
-          /* Tamaño de texto “medio” */
+          /* Tipografía */
           section#slack p { font-size: 1.05rem; line-height: 1.65; }
-          section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+          section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); margin-top:0; margin-bottom:.5rem; }
 
-          /* Botón rojo (conserva texto blanco) */
+          /* Botón rojo principal */
           section#slack .btn-slack {
             display:inline-block; text-decoration:none; color:#FFFFFF !important;
-            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem;
+            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem; font-weight:600;
           }
           section#slack .btn-slack:hover { filter: brightness(1.05); }
+
+          /* === SOLO MÓVIL: ocultar imagen y centrar texto === */
+          @media (max-width: 768px) {
+            section#slack img { display: none !important; }
+            section#slack .slack-text { text-align: center !important; }
+            section#slack .slack-text p { margin-left:auto; margin-right:auto; }
+          }
         </style>
 
         {{< two_col
@@ -79,32 +86,30 @@ sections:
              imgw="266px"
              alt="Slack de MetaDocencia"
         >}}
-          <h2 class="section-title" style="margin-top:0;margin-bottom:.5rem;">Súmate a nuestra comunidad en Slack</h2>
+        <div class="slack-text">
+          <h2 class="section-title">Súmate a nuestra comunidad en Slack</h2>
 
           <p>
-            Conecta con más de <strong>+1070 personas</strong> que comparten interés por la
-            <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.
-            Comparte experiencias, aprende de otros y participa de conversaciones que inspiran nuevas ideas.
+            Conecta con más de <strong>1.070 personas</strong> que comparten interés por la
+            <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.<br>
+            Comparte experiencias, aprende de otras personas y participa de conversaciones que inspiran nuevas ideas.
           </p>
 
-          <!-- Botón rojo arriba -->
           <p class="mt-4">
             <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
               Unirme al espacio de MetaDocencia
             </a>
           </p>
 
-          <!-- Enlace informativo debajo -->
           <p class="mt-3">
             <a href="/post/20231219-mdenslack/">
               Qué es y cómo sumarme
             </a>
           </p>
+        </div>
         {{< /two_col >}}
     design:
       css_style: "background-color:#FFFFFF;color:#111827;"
-  
-  
 
   - block: cta-card
     id: comunidades
@@ -126,7 +131,9 @@ sections:
     content:
       title: "Apoya a MetaDocencia"
       text: |
-        <style>section#auspiciantes a { color:#FFFFFF !important; font-weight:600; text-decoration: underline; }</style>
+        <style>
+          section#auspiciantes a { color:#FFFFFF !important; font-weight:600; text-decoration: underline; }
+        </style>
         Nuestro trabajo es posible gracias al apoyo de instituciones y organizaciones que comparten nuestra misión.  
         <a href="/quienes-somos/#auspiciantes">Conoce a nuestros auspiciantes</a>
 
@@ -148,39 +155,39 @@ sections:
       title: "Sigue el intercambio"
       text: |
         <div style="color:#FFFFFF">
-          <p>Acompáñanos en nuestras redes sociales y seguinos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
+          <p>Acompáñanos en nuestras redes sociales y síguenos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Twitter
+               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Twitter
             </a>
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             LinkedIn
+               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               LinkedIn
             </a>
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             YouTube
+               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               YouTube
             </a>
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Instagram
+               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Instagram
             </a>
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Mastodon
+               href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Mastodon
             </a>
             <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-             style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-             Bluesky
+               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
+               Bluesky
             </a>
-        </div>
+          </div>
         </div>
     design:
       card:
