@@ -58,7 +58,7 @@ sections:
       title: "MetaDocencia by the Numbers"
       items:
         - statistic: "40+"
-          description: "strategic partners and trust"
+          description: "strategic partners"
         - statistic: "60+"
           description: "collaborators"
         - statistic: "1,070+"
