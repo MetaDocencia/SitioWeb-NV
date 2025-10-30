@@ -39,7 +39,7 @@ sections:
         margin: [0, 0, 0, 0]
 
   # ---------- Slack (cta-image-paragraph; hide image on mobile; keep desktop unchanged) ----------
-  - block: markdown
+  - block: html
     id: slack
     content:
       title: ""
