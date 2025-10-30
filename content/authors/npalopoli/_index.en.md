@@ -34,7 +34,7 @@ social:
   link: https://twitter.com/NPalopoli
 - icon: globe
   icon_pack: fas
-  link: https://about.me/npalopoli
+  link: https://npalopoli.github.io/
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0001-7925-6436
@@ -55,9 +55,6 @@ He was secretary of the Argentine Association of Bioinformatics and Computationa
 
 Since 2008 he has been teaching undergraduate, postgraduate and extension courses, both in person and virtual, at different educational institutions and also for communities of practice. He is certified as instructor and trainer for The Carpentries. He is currently pursuing a Specialization in Virtual Education at UNQ.
 
-Our team granted Nico the Zen Award, because with his calm wisdom, he can cope even with complexity, maintaining the axis, good mood, and cordiality in any situation and circumstance.
-
-Inside the team, Nico has won the Zen Award because with his calm wisdom he can cope even with complexity, maintaining the axis, good mood and cordiality in any situation and circumstance.
 
 
 
