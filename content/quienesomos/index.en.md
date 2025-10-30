@@ -60,7 +60,7 @@ sections:
         - statistic: "40+"
           description: "strategic partners"
         - statistic: "60+"
-          description: "collaborators"
+          description: "current collaborators"
         - statistic: "1,070+"
           description: "members on Slack"
         - statistic: "6,000+"
