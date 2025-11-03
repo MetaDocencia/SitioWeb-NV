@@ -37,7 +37,7 @@ sections:
 
         <div class="newsletter-archive">
           <ul>
-            <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19405961?e=2b0de13655">Open Science that Connects: Satellites, Training, and Community 🌎 | Notes From MetaDocencia N° 25</a></li>
+            <li><a class="nl-btn" href="https://us19.campaign-archive.com/?u=92fb89ce82f9689a3b083bb35&id=a009a758c8">🌐 New website, new stories | Notes From MetaDocencia N° 26</a></li>
             <li><a class="nl-btn" href="https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=bc2af35f24">Thinking Big from the Global South: Science, Research, and Funding 🌎 | Notes From MetaDocencia N° 24</a></li>
             <li><a class="nl-btn" href="https://mailchi.mp/e2f0464df79a/construyendo-en-comunidad-newsletter-n-19399708">More Metas: Let's Go! 🎇 | Notes From MetaDocencia N° 22</a></li>
             <li><a class="nl-btn" href="https://mailchi.mp/4d8d2a69f842/construyendo-en-comunidad-newsletter-n-19398650">1, 2... 3! Closing the first year of ALTa certifications 🏅 | Notes From MetaDocencia N° 21</a></li>
