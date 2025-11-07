@@ -44,7 +44,7 @@ sections:
                style="background:#00506F;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
                Learn more
             </a>
-        - name: "Training for Researchers"
+        - name: "Training Researchers"
           description: |
             <div style="height:4px;background:#C83737;border-radius:6px;margin:0 0 0.75rem 0;"></div>
             We create evidence-based learning programs that turn knowledge into action and new skills into local impact.
@@ -84,7 +84,7 @@ sections:
         - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
+            We design and deliver Open Science training cohorts in Spanish for Latin America, with support from NASA.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/nasa-spanish/">Discover more →</a>
@@ -144,7 +144,7 @@ sections:
         - name: "Open Data Processing"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We aim to secure access to high-performance computing (HPC) for national and regional research networks across Latin America.
+            We work to secure access to high-performance computing (HPC) for national and regional research networks across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/datosabiertos-latam/">Learn more →</a><br>
@@ -207,7 +207,7 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/nasa-spanish/">Learn more →</a>
 
-        - name: "Train the Trainers"
+        - name: "Train the Trainers Program"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We facilitate a hands-on Spanish-language program that equips participants with pedagogical skills, amplifying learning and collective impact.
@@ -303,7 +303,7 @@ sections:
         - name: "Mapping Open Science in Latin America"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            A collaborative repository of information in Spanish, documenting Open Science initiatives across Latin America.
+            We maintain a collaborative repository in Spanish documenting Open Science initiatives across Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/mapeo-comunidades/">Learn more and fund this project →</a><br>
