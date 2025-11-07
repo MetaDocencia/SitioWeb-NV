@@ -122,8 +122,8 @@ sections:
             persons connected
         - statistic: "+200"
           description: |
-            documents  
-            on Zenodo
+            documents on Zenodo
+    
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
