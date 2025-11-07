@@ -185,7 +185,7 @@ sections:
       text: |
         {{< cta_fullwidth
             id="formacion"
-            title="Training for Researchers"
+            title="Training Researchers"
             bg="#C83737"
             fg="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
