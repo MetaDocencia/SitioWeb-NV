@@ -60,15 +60,15 @@ sections:
         - statistic: "40+"
           description: "strategic partners"
         - statistic: "60+"
-          description: "current collaborators"
+          description: "active collaborators"
         - statistic: "1,070+"
           description: "members on Slack"
         - statistic: "6,000+"
           description: "followers on social media"
         - statistic: "2,600+"
           description: "active newsletter subscribers"
-        - statistic: "10%+"
-          description: "engagement rate (LinkedIn 2025)"
+        - statistic: "1,343"
+          description: "LinkedIn followers"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
