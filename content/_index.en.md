@@ -116,13 +116,16 @@ sections:
       items:
         - statistic: "+1,500"
           description: |
-            trained professionals from multiple disciplines
+            trained professionals from
+    multiple disciplines
         - statistic: "+6,000"
           description: |
-            persons connected
+            persons
+    connected
         - statistic: "+200"
           description: |
-            documents on Zenodo
+            documents
+    on Zenodo
     
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
