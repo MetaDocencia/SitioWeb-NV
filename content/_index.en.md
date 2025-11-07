@@ -116,12 +116,10 @@ sections:
       items:
         - statistic: "+1,500"
           description: |
-            people  
-            trained
+            trained professionals from multiple disciplines
         - statistic: "+6,000"
           description: |
-            connected
-            people
+            persons connected
         - statistic: "+200"
           description: |
             documents  
