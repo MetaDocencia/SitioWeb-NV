@@ -13,7 +13,7 @@ sections:
       title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">About Us</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
-          We are a community of persons and organizations working globally from Latin America since 2020.
+          We are a community of people and organizations working globally from Latin America since 2020.
         </p>
 
         <!-- Botones centrados (3) -->
@@ -31,7 +31,7 @@ sections:
 
         <div class="mt-4 space-y-2 text-center">
           <p class="text-white/95 text-base md:text-lg">
-            <a href="https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/" class="underline font-semibold text-white">Read about how MetaDocencia was founded</a> by our Co-Director, Laura Ación.
+            <a href="https://www.open-bio.org/2021/01/13/metadocencia-2020-laura-acion/" class="underline font-semibold text-white">Read how our Co-Director Laura Ación founded MetaDocencia.</a>
           </p>
         </div>
     design:
