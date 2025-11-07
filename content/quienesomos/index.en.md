@@ -67,8 +67,8 @@ sections:
           description: "followers on social media"
         - statistic: "2,600+"
           description: "active newsletter subscribers"
-        - statistic: "1,343"
-          description: "LinkedIn followers"
+        - statistic: "5+"
+          description: "years together"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
