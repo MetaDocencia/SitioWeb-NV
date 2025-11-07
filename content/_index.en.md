@@ -10,7 +10,13 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">We Advance the Presence of Latin America on the Global Research Map</span>'
+      title: |
+        <span class="block text-xl md:text-2xl font-bold text-white mb-2 drop-shadow">
+          <strong>MetaDocencia</strong>
+        </span>
+        <span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">
+          Advancing Latin America on the Global Research Map
+        </span>
       text: |
         <p class="text-white text-xl md:text-2xl">
           <span class="block">More Collaboration.</span>
