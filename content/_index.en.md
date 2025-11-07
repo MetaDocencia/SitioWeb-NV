@@ -114,13 +114,13 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+1,500"
+        - statistic: "1,500+"
           description: |
             trained professionals from multiple disciplines
-        - statistic: "+6,000"
+        - statistic: "6,000+"
           description: |
             persons connected
-        - statistic: "+200"
+        - statistic: "200+"
           description: |
             documents on Zenodo
     
