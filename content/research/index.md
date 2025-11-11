@@ -1,7 +1,7 @@
 ---
 title: "Publicaciones académicas"
-slug: "investigación"
-type: "investigación"
+slug: "research"
+type: "research"
 
 items:
   - date: "2025"
