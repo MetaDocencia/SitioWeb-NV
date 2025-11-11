@@ -365,7 +365,7 @@ sections:
         <a href="/research"
            class="inline-block font-semibold px-4 py-2 rounded-md"
            style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-          Explore our academic publications here
+          Explora nuestras publicaciones académicas aquí
         </a>
 
         {{< /cta_fullwidth >}}
