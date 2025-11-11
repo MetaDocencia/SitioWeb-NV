@@ -338,6 +338,39 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
+      # --- Academic publications (gris un poco más oscuro) ---
+  - block: markdown
+    id: research-pubs
+    content:
+      text: |
+        <style>
+          /* Quitar espacio entre research y prensa */
+          section#research-pubs { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+          section#prensa        { margin-top: 0 !important;  padding-top: 0 !important;  }
+        </style>
+
+        {{< cta_fullwidth
+            id="research-pubs"
+            title="Publicaciones académicas"
+            text="Realizamos y compartimos abiertamente investigación que informa y respalda la Ciencia Abierta y la educación en América Latina."
+            bg="#E5E7EB" color="#111827"
+            variant="background"
+            maxw="1600px"
+            content_maxw="900px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+
+        <a href="/research"
+           class="inline-block font-semibold px-4 py-2 rounded-md"
+           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+          Explore our academic publications here
+        </a>
+
+        {{< /cta_fullwidth >}}
+
+
   # ======================
   #  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
   # ======================
