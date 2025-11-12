@@ -1,8 +1,8 @@
 ---
-title: "Bio-IT EMBL"
+title: "EMBL Bio-IT"
 bio: ""
 email: ""
-name: Bio-IT EMBL
+name: EMBL Bio-IT
 weight: 1
 role: 
 social:
@@ -18,9 +18,9 @@ user_groups:
 
 {{< youtube 1VkAIkBq2Dg >}} 
 
-### Sobre Bio-IT EMBL
+### Sobre EMBL Bio-IT
 
-**[Bio-IT EMBL](https://bio-it.embl.de/)** es una iniciativa comunitaria cuyo [objetivo](https://bio-it.embl.de/about-the-bio-it-project/) es construir, apoyar y promover la actividad de biología computacional en el Laboratorio Europeo de Biología Molecular (EMBL). Los miembros de la comunidad Bio-IT colaboran mutuamente para llevar a cabo sus investigaciones y comparten sus conocimientos, experiencia y herramientas con los demás. 
+**[EMBL Bio-IT](https://bio-it.embl.de/)** es una iniciativa comunitaria cuyo [objetivo](https://bio-it.embl.de/about-the-bio-it-project/) es construir, apoyar y promover la actividad de biología computacional en el Laboratorio Europeo de Biología Molecular (EMBL). Los miembros de la comunidad Bio-IT colaboran mutuamente para llevar a cabo sus investigaciones y comparten sus conocimientos, experiencia y herramientas con los demás. 
 
 
 
