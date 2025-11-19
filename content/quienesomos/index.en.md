@@ -6,7 +6,7 @@ design:
   spacing: "3rem"
 
 sections:
-  # ===== HERO con imagen de fondo + botones centrados =====
+  # ===== HERO =====
   - block: hero
     id: hero-qs
     content:
@@ -51,7 +51,7 @@ sections:
         padding: ["0rem", 0, "0rem", 0]
       css_style: ""
 
-  # ===== MetaDocencia en números =====
+  # ===== MetaDocencia by the Numbers =====
   - block: stats
     id: numeros
     content:
@@ -74,7 +74,7 @@ sections:
       spacing:
         padding: ["0rem", 0, "0.25rem", 0]
 
-  # ===== Estilos LOCALES solo para esta página =====
+  # ===== style =====
   - block: markdown
     id: estilos-collapsibles
     content:
@@ -160,7 +160,7 @@ sections:
           }
         </style>
 
-  # --- Equipo y CA ---
+  # --- Team and Advisory Committee ---
   - block: markdown
     id: equipo-y-consejo-asesor
     content:
@@ -173,7 +173,7 @@ sections:
           </div>
         </details>
 
-  # --- Colaboran con MetaDocencia ---
+  # --- Contributors ---
   - block: markdown
     id: colaboradores
     content:
@@ -186,7 +186,7 @@ sections:
           </div>
         </details>
 
-  # --- Comunidades Amigas ---
+  # --- Fellow Communities ---
   - block: markdown
     id: comunidades-amigas
     content:
@@ -212,7 +212,7 @@ sections:
           </div>
         </details>
 
-  # --- Colaboraron con MetaDocencia ---
+  # --- Former Contributors ---
   - block: markdown
     id: colaboraron-con-metadocencia
     content:
@@ -271,7 +271,7 @@ sections:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
 
-  # ===== Estilos locales SOLO para este hero (bloque invisible) =====
+  # ===== style =====
   - block: markdown
     id: estilos-hero-qs
     content:
