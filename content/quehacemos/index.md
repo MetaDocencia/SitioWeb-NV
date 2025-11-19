@@ -329,7 +329,7 @@ sections:
     content:
       items:
         - name: "Andrés Kamaid"
-          role: "Investigador, Advanced Bioimaging Unit, Institut Pasteur Montevideo — tras consultoría para Latin American Bioimaging (LABI)"
+          role: "Investigador, Advanced Bioimaging Unit, Institut Pasteur Montevideo, tras consultoría para Latin American Bioimaging (LABI)"
           text: "Les quiero agradecer por el trabajo realizado. Además de vuestros aportes conceptuales y prácticos que nos han permitido avanzar mucho, vuestra calidez y amabilidad han hecho este proceso muy pero muy disfrutable. Voy a extrañar estas reuniones."
         - name: "Verónica Xhardez"
           role: "Docente e investigadora en UNTREF, investigadora en CIECTI y coordinadora técnica de ARPHAI, en ocasión del 4° aniversario de MetaDocencia"
