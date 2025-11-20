@@ -1,7 +1,7 @@
 ---
 title: MetaDocencia construye colaborativamente su gobernanza
 summary: Entre julio y octubre de 2022 realizaremos 8 conversatorios que tienen como
-  objetivo contribuir a la elaboración colaborativa de nuestra gobernanza
+  objetivo contribuir a la elaboración colaborativa de nuestra gobernanza.
 date: '2022-07-11'
 tags:
 - MetaDocencia
