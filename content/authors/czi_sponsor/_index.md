@@ -1,5 +1,7 @@
 ---
-title: "CZI - Chan Zuckerberg Initiative"
+title: "CZI"
+aliases: 
+  - /authors/czi-chan-zuckerberg-initiative
 bio: ""
 email: ""
 name: CZI - Chan Zuckerberg Initiative
