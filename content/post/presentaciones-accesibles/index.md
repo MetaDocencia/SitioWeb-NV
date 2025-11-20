@@ -4,7 +4,7 @@ draft: false
 type: page
 title: "Buenas prácticas para crear presentaciones accesibles"
 translationKey: "presentaciones-accesibles"
-summary: "Sugerencias que permitirán que tus presentaciones puedan ser aprovechadas por una mayor cantidad de personas"
+summary: "Sugerencias que permitirán que tus presentaciones puedan ser aprovechadas por una mayor cantidad de personas."
 authors: 
   - mrajngewerc
   - patriloto
