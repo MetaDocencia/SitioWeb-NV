@@ -9,7 +9,7 @@ education:
   - course: Licenciatura en Comunicación Social
     institution: Facultad de Ciencias de la Comunicación Universidad Nacional de Córdoba
     year: 2010
-email: "laurel@metadocencia.org"
+email: "lauradascenzi@gmail.com"
 interests:
 - Educación
 - Comunicación digital
@@ -23,7 +23,7 @@ role:
 social:
 - icon: envelope
   icon_pack: fas
-  link: "mailto:laurel@metadocencia.org"
+  link: "mailto:lauradascenzi@gmail.com"
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/lauradascenzi/
