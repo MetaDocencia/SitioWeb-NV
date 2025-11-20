@@ -1,8 +1,6 @@
 ---
 title: 'Conversatorios sobre Ciencia Abierta: reflexiones colectivas en comunidad'
-summary: En respuesta al interés de nuestra comunidad de profundizar las discusiones,
-  en marzo de 2024 preparamos un ciclo de conversatorios en el que reflexionamos sobre
-  distintos temas vinculados a la Ciencia Abierta
+summary: En respuesta al interés de nuestra comunidad de profundizar las discusiones, en marzo de 2024 preparamos un ciclo de conversatorios en el que reflexionamos sobre distintos temas vinculados a la Ciencia Abierta.
 date: '2024-06-05'
 translationKey: 20240506-reflexiones-conversatorio
 authors:
