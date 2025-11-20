@@ -1,6 +1,6 @@
 ---
 title: Determinación de riesgo climático en SciPy 2024
-summary: Determinación de riesgos climáticos utilizando la nube Earthdata de la NASA
+summary: Determinación de riesgos climáticos utilizando la nube Earthdata de la NASA.
   en SciPy 2024
 date: '2024-10-02'
 translationKey: 20241002-climaterisk
