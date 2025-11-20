@@ -1,6 +1,6 @@
 ---
 title: "OBF"
-aliases: /author/obf-open-bioinformatics-foundation/
+aliases: /en/author/obf-open-bioinformatics-foundation/
 bio: ""
 email: ""
 name: OBF - Open Bioinformatics Foundation
@@ -14,6 +14,7 @@ superuser: false
 user_groups:
 -   trust
 ---
+
 
 
 
