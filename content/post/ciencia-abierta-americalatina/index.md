@@ -1,6 +1,6 @@
 ---
 title: Código Abierto y Ciencia Abierta en América Latina
-summary: Una conversación sobre el crecimiento de las comunidades globales con raíces
+summary: Una conversación sobre el crecimiento de las comunidades globales con raíces.
   locales
 date: '2022-09-15'
 tags:
