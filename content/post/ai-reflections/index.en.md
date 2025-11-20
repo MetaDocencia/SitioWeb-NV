@@ -3,7 +3,7 @@ date: "2023-09-14"
 draft: false
 type: page
 linktitle: Critical Reflections
-summary: "We share some critical thoughts and ideas about the potential uses of AI in Education"
+summary: "We share some critical thoughts and ideas about the potential uses of AI in Education."
 title: "Thinking Critically about Artificial Intelligence and Education [Updated]"
 authors:
   - lacion
