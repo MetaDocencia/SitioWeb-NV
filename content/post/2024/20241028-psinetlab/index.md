@@ -1,6 +1,6 @@
 ---
 title: "Historias de Ciencia Abierta en Acción: PsiNet LAB"
-summary: "Transformando la psicología con ciencia avanzada para una comprensión más profunda del comportamiento humano"
+summary: "Transformando la psicología con ciencia avanzada para una comprensión más profunda del comportamiento humano."
 date: 2024-10-04
 translationKey: "20241028-psinetlab"
 authors:
