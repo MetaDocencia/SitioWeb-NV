@@ -1,6 +1,6 @@
 ---
 title: Open Source and Open Science in Latin America
-summary: A conversation on growing global communities with local roots
+summary: A conversation on growing global communities with local roots.
 date: '2022-09-15'
 tags:
 - MetaDocencia
