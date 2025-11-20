@@ -1,5 +1,5 @@
 ---
-title: "Red Brasileña de Reproducibilidad"
+title: "BRRN"
 bio: ""
 email: ""
 name: Red Brasileña de Reproducibilidad
