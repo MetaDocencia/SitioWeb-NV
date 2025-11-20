@@ -1,8 +1,8 @@
 ---
-title: "IOI - Invest in Open Infrastructure"
+title: "IOI"
 bio: ""
 email: "info@investinopen.org"
-name: IOI - Invest in Open Infrastructure
+name: IOI
 weight: 1
 role: 
 social:
@@ -28,6 +28,7 @@ IOI was founded on two basic premises: open, and community-owned infrastructure 
 
 
 ***
+
 
 
 
