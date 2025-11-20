@@ -40,15 +40,24 @@ sections:
           </p>
         </div>
 
-  # ===== Valores (sin fondo, con línea NARANJA arriba) =====
-  - block: features
+   # ===== Título Valores =====
+  - block: markdown
     id: valores
     content:
       title: ""
       text: |
-        <div class="text-center">
-          <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
-          <!-- Igual tamaño que Visión/Misión -->
+        <div class="text-center max-w-3xl mx-auto">
+          <!-- Línea AZUL arriba de Misión -->
+          <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
+          <h3 class="text-2xl font-semibold mb-3">Valores</h3>
+        </div>
+        
+  # ===== Valores (sin fondo, con línea NARANJA arriba) =====
+  - block: features
+    id: valorescontent
+    content:
+      title: ""
+      text: |
           <h3 class="text-2xl font-semibold mb-3">Valores</h3>
         </div>
       items:
