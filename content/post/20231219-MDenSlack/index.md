@@ -5,7 +5,7 @@ draft: false
 type: page
 title: "MetaDocencia en Slack"
 linktitle: Slack 2023
-summary: "Con la intención de mejorar la experiencia de toda la comunidad, en 2023 reestructuramos nuestro espacio de Slack incorporando nuevos canales temáticos y creamos una Guía para la participación en el Slack de MetaDocencia"
+summary: "Con la intención de mejorar la experiencia de toda la comunidad, en 2023 reestructuramos nuestro espacio de Slack incorporando nuevos canales temáticos y creamos una Guía para la participación en el Slack de MetaDocencia."
 authors:
 - jbuede
 - laurel
