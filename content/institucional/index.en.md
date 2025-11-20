@@ -37,16 +37,23 @@ sections:
           </p>
         </div>
 
-  # ===== Values =====
-  - block: features
-    id: valores
+   # ===== Título Valores =====
+  - block: markdown
+    id: values
     content:
       title: ""
       text: |
-        <div class="text-center">
-          <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.25rem auto;width:120px;"></div>
+        <div class="text-center max-w-3xl mx-auto" style="margin-bottom:-8rem">
+          <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
           <h3 class="text-2xl font-semibold mb-3">Our Values</h3>
         </div>
+        
+  # ===== Valores =====
+  - block: features
+    id: valuescontent
+    content:
+      title: ""
+      text: |
       items:
         - name: "Community"
           description: "To work for and with other people, putting collective interests upfront any individual interest."
