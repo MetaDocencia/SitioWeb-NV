@@ -1,6 +1,6 @@
 ---
-title: "OBF - Open Bioinformatics Foundation"
-bio: "Beca a Laura Ación"
+title: "OBF"
+aliases: "/author/obf-open-bioinformatics-foundation/"
 email: ""
 name: OBF - Open Bioinformatics Foundation
 weight: 9
