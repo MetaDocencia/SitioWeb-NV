@@ -1,5 +1,7 @@
 ---
-title: "Open Science CZI"
+title: "CZI"
+aliases: 
+  - /en/author/open-science-czi/
 bio: ""
 email: ""
 name: CZI - Chan Zuckerberg Initiative
@@ -13,5 +15,6 @@ superuser: false
 user_groups:
 - trust
 ---
+
 
 
