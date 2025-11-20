@@ -1,6 +1,6 @@
 ---
 title: "Historias de Ciencia Abierta en Acción: NASA International Space Apps Challenge Norte de México"
-summary: "Aplicaciones espaciales es una iniciativa del departamento de Ciencias de la Tierra de la NASA que permite la colaboración con las nuevas generaciones para resolver problemáticas que nos aquejan como especie humana tanto en la Tierra como en el espacio"
+summary: "Aplicaciones espaciales es una iniciativa del departamento de Ciencias de la Tierra de la NASA que permite la colaboración con las nuevas generaciones para resolver problemáticas que nos aquejan como especie humana tanto en la Tierra como en el espacio."
 date: 2025-01-03
 translationKey: "20250103-spaceappschallenge"
 tags: []
