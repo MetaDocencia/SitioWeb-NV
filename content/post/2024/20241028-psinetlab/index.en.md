@@ -1,6 +1,6 @@
 ---
 title: "Open Science in Action Stories: PsiNet LAB"
-summary: "Transforming Psychology with Advanced Science for a Deeper Understanding of Human Behavior"
+summary: "Transforming Psychology with Advanced Science for a Deeper Understanding of Human Behavior."
 date: 2024-10-04
 translationKey: "20241028-psinetlab"
 tags:
