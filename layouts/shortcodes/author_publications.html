@@ -1,0 +1,18 @@
+{{/* 
+  Lista las publicaciones asociadas a una persona autora.
+  Busca coincidencias en .Params.authors.
+*/}}
+
+{{ $authorName := .Page.Params.title }}
+{{ $pages := where site.RegularPages "Params.authors" "intersect" (slice $authorName) }}
+
+{{ if gt (len $pages) 0 }}
+<h3>Publicaciones en MetaDocencia</h3>
+<ul>
+  {{ range $pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}
