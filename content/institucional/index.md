@@ -46,7 +46,7 @@ sections:
     content:
       title: ""
       text: |
-        <div class="text-center max-w-3xl mx-auto" style="margin-bottom:-1rem">
+        <div class="text-center max-w-3xl mx-auto" style="margin-bottom:-5rem">
           <div style="height:4px;background:#F77B20;border-radius:6px;margin:0 auto 1.5rem auto;width:120px;"></div>
           <h3 class="text-2xl font-semibold mb-3">Valores</h3>
         </div>
