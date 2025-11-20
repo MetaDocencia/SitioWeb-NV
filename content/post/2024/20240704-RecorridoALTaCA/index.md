@@ -1,9 +1,7 @@
 ---
 title: Nuestro recorrido para contextualizar saberes y enseñar Ciencia Abierta en
   español
-summary: Cómo trabajamos para diseñar, desarrollar, contextualizar e implementar cohortes
-  virtuales de formación para hispanohablantes abarcando los cinco módulos de Open
-  Science 101
+summary: Cómo trabajamos para diseñar, desarrollar, contextualizar e implementar cohortes virtuales de formación para hispanohablantes abarcando los cinco módulos de Open Science 101.
 date: '2024-07-24'
 translationKey: 20240704-RecorridoALTaCA
 authors:
