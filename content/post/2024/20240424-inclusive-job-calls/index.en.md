@@ -1,7 +1,6 @@
 ---
 title: Learnings and Recommendations for More Inclusive Job Calls
-summary: In this publication, we share some lessons learned and a series of recommendations
-  to promote fairer and more inclusive job search processes at different stages
+summary: In this publication, we share some lessons learned and a series of recommendations to promote fairer and more inclusive job search processes at different stages.
 date: '2024-04-24'
 translationKey: 20240424-contratacion-inclusiva
 authors:
