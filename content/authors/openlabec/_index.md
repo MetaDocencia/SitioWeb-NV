@@ -1,8 +1,8 @@
 ---
-title: "Openlab Ecuador"
+title: "OpenlabEc"
 bio: ""
 email: ""
-name: Openlab Ecuador
+name: OpenlabEc
 weight: 1
 role: 
 social:
