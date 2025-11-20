@@ -1,7 +1,7 @@
 ---
 title: MetaDocencia collaboratively builds its governance
 summary: Between July and October 2022 we host 8 events with the goal of contributing
-  to the collaborative design of our governance
+  to the collaborative design of our governance.
 date: '2022-07-11'
 tags:
 - MetaDocencia
