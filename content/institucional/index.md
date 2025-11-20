@@ -58,8 +58,6 @@ sections:
     content:
       title: ""
       text: |
-          <h3 class="text-2xl font-semibold mb-3">Valores</h3>
-        </div>
       items:
         - name: "Comunidad"
           description: "Trabajar para y con otras personas, anteponiendo los intereses colectivos por sobre los intereses individuales."
