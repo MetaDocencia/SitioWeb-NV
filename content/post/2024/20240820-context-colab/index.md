@@ -1,8 +1,6 @@
 ---
-title: La experiencia colaborativa de la primera contextualización al español del
-  curso introductorio a la Ciencia Abierta desarrollado por la NASA
-summary: Desde MetaDocencia nos propusimos recorrer la experiencia de contextualizar
-  los contenidos de forma colaborativa.
+title: La experiencia colaborativa de la primera contextualización al español del curso introductorio a la Ciencia Abierta desarrollado por la NASA
+summary: Desde MetaDocencia nos propusimos recorrer la experiencia de contextualizar los contenidos de forma colaborativa.
 date: '2024-08-20'
 translationKey: 20240820-context-colab
 tags:
