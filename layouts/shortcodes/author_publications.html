@@ -1,18 +1,19 @@
 {{/* 
   Lista las publicaciones asociadas a una persona autora.
-  Busca coincidencias en .Params.authors.
+  Se asume que .Params.authors en los posts contiene el slug del author,
+  por ejemplo: authors = ["irenevazano"].
 */}}
 
-{{ $authorName := .Page.Params.title }}
-{{ $pages := where site.RegularPages "Params.authors" "intersect" (slice $authorName) }}
+{{ $authorID := .Page.Slug }}  {{/* slug de la página del author, ej: "irenevazano" */}}
+{{ $pages := where site.RegularPages "Params.authors" "intersect" (slice $authorID) }}
 
 {{ if gt (len $pages) 0 }}
-<h3>Publicaciones en MetaDocencia</h3>
-<ul>
-  {{ range $pages }}
-    <li>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-  {{ end }}
-</ul>
+  <h3>Publicaciones</h3>
+  <ul>
+    {{ range $pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}
