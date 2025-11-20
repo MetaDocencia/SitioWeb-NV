@@ -1,6 +1,6 @@
 ---
 title: "Enseñando a enseñar entre comunidades en español"
-summary: "MetaDocencia organizó dos entrenamientos de instructores de forma on-line y en español para personas de América Latina"
+summary: "MetaDocencia organizó dos entrenamientos de instructores de forma on-line y en español para personas de América Latina."
 date: 2021-11-15
 translationKey: "Metadocencia_carpentries"
 tags:
