@@ -1,7 +1,7 @@
 ---
 title: Aprendizajes y recomendaciones para convocatorias laborales más inclusivas
 summary: En esta publicación compartimos algunas lecciones aprendidas y una serie
-  de recomendaciones para favorecer procesos de búsquedas laborales más justos e inclusivos
+  de recomendaciones para favorecer procesos de búsquedas laborales más justos e inclusivos.
 date: '2024-04-24'
 translationKey: 20240424-contratacion-inclusiva
 authors:
