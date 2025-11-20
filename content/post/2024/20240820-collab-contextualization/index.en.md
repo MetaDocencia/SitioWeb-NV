@@ -1,8 +1,7 @@
 ---
 title: The Collaborative Experience of the First Contextualization into Spanish of
   the Open Science 101 Course Developed by NASA
-summary: From MetaDocencia we proposed to go through the experience of contextualizing
-  the contents in a collaborative way.
+summary: From MetaDocencia we proposed to go through the experience of contextualizing the contents in a collaborative way.
 date: '2024-08-20'
 translationKey: 20240820-context-colab
 tags:
