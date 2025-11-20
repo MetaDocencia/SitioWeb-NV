@@ -42,4 +42,8 @@ Irene is a certified instructor for The Carpentries, which underscores her commi
 
 Inside the team, Ire has won the Transformation Award for her performance in charge of the infrastructure area with great ability to document and transform our tutorials into a valuable and beautiful digital library.
 
+## Publicaciones
+
+{{< author_publications >}}
+
 
