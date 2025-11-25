@@ -49,7 +49,7 @@ sections:
     design:
       card:
         css_class: "shadow-sm"
-        css_style: "background-color:#FFFFFF;color:#111827;"
+        css_style: "background-color:#2EB67D;color:#111827;"
 
   - block: cta-card
     id: comunidades
