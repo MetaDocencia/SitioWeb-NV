@@ -40,7 +40,7 @@ sections:
         Conecta con más de <strong>1.070 personas</strong> que comparten interés por la
         <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.<br>
         Comparte experiencias, aprende de otras personas y participa de conversaciones que inspiran nuevas ideas.<br><br>
-        <a href="/post/20231219-mdenslack/" class="underline font-semibold">
+        <a href="/post/20231219-mdenslack/" class="underline font-semibold" style="color:#FFFFFF">
           Qué es y cómo sumarme
         </a>
       button:
@@ -49,7 +49,7 @@ sections:
     design:
       card:
         css_class: "shadow-sm"
-        css_style: "background-color:#2EB67D;color:#111827;"
+        css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
   - block: cta-card
     id: comunidades
