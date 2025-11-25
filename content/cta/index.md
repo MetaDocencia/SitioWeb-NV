@@ -37,8 +37,8 @@ sections:
     content:
       title: "Súmate a nuestra comunidad en Slack"
       text: |
-        Conecta con más de <strong>1.070 personas</strong> que comparten interés por la
-        <strong>educación</strong>, la <strong>ciencia abierta</strong> y la <strong>colaboración</strong>.<br>
+        Conecta con más de <strong style="color:#FFFFFF;">1.070 personas</strong> que comparten interés por la
+        <strong style="color:#FFFFFF;">educación</strong>, la <strong style="color:#FFFFFF;">ciencia abierta</strong> y la <strong style="color:#FFFFFF;">colaboración</strong>.<br>
         Comparte experiencias, aprende de otras personas y participa de conversaciones que inspiran nuevas ideas.<br><br>
         <a href="/post/20231219-mdenslack/" class="underline font-semibold" style="color:#FFFFFF">
           Qué es y cómo sumarme
