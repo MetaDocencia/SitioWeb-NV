@@ -38,77 +38,23 @@ sections:
         padding: ["0.75rem", 0, "0.75rem", 0]
         margin: [0, 0, 0, 0]
 
-  # ---------- Slack (cta-image-paragraph; hide image on mobile; keep desktop unchanged) ----------
-  - block: markdown
+  # ---------- Slack ----------
+  - block: cta-card
     id: slack
     content:
-      title: ""
+      title: "Join our Slack community"
       text: |
-        <style>
-          /* === White background and dark text (even in dark mode) === */
-          section#slack { background-color:#FFFFFF !important; }
-          .dark section#slack { background-color:#FFFFFF !important; }
-
-          section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
-            color:#111827 !important;
-          }
-          .dark section#slack :where(h1,h2,h3,h4,h5,h6,p,li,span,a,strong,em) {
-            color:#111827 !important;
-          }
-
-          /* Links (except main button) */
-          section#slack a:not(.btn-slack) {
-            color:#111827 !important;
-            text-decoration: underline;
-            font-weight: 600;
-          }
-
-          /* Typography (default alignment desktop/tablet) */
-          section#slack p { font-size: 1.05rem; line-height: 1.65; }
-          section#slack h2 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); margin-top:0; margin-bottom:.5rem; }
-
-          /* Red button */
-          section#slack .btn-slack {
-            display:inline-block; text-decoration:none; color:#FFFFFF !important;
-            background:#C83737; padding:.6rem 1.1rem; border-radius:.375rem; font-weight:600;
-          }
-          section#slack .btn-slack:hover { filter: brightness(1.05); }
-
-          /* === MOBILE ONLY: hide image and center text === */
-          @media (max-width: 768px) {
-            section#slack img { display: none !important; }
-            section#slack .slack-text { text-align: center !important; }
-            section#slack .slack-text p { margin-left:auto; margin-right:auto; }
-          }
-        </style>
-
-        {{< two_col
-             image="/media/slack.png"
-             side="img-left"
-             mode="full"
-             maxw="1100px"
-             px="clamp(2rem,8vw,6rem)"
-             gap="clamp(1rem,3vw,1rem)"
-             imgw="266px"
-             alt="MetaDocencia Slack"
-        >}}
-        <div class="slack-text">
-          <h2 class="section-title">Join our Slack community</h2>
-
-          <p>
-            Connect with <strong>1,070+ people</strong> interested in <strong>education</strong>, <strong>open science</strong>, and <strong>collaboration</strong>.<br>
-            Share experiences, learn from others, and join conversations that spark new ideas.
-          </p>
-
-          <p class="mt-4">
-            <a href="https://w3id.org/metadocencia/slack" class="btn-slack">
-              Join MetaDocencia’s space
-            </a>
-          </p>
-        </div>
-        {{< /two_col >}}
+        Connect with <strong style="color:#FFFFFF;">1,070+ people</strong> interested in
+        <strong style="color:#FFFFFF;">education</strong>, <strong style="color:#FFFFFF;">open science</strong>, and
+        <strong style="color:#FFFFFF;">collaboration</strong>.<br>
+        Share experiences, learn from others, and join conversations that spark new ideas.
+      button:
+        text: "Join MetaDocencia’s space"
+        url: "https://w3id.org/metadocencia/slack"
     design:
-      css_style: "background-color:#FFFFFF;color:#111827;"
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#E01E5A;color:#FFFFFF;"
 
   # ---------- Partner Communities (no logos) ----------
   - block: cta-card
