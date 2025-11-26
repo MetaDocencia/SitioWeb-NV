@@ -2,6 +2,7 @@
 title: "Súmate y apoya a nuestra comunidad"
 type: landing
 slug: "cta"
+aliases: ["/contacto/"]
 design:
   spacing: "3rem"
 
