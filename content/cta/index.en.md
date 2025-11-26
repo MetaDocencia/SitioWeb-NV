@@ -2,6 +2,7 @@
 title: "Join and support our community"
 type: landing
 slug: "cta"
+aliases: ["/en/contacto/"]
 design:
   spacing: "3rem"
 
