@@ -2,6 +2,8 @@
 title: "Eventos"
 type: landing
 slug: "eventos"
+design:
+  spacing: "3rem"
 
 sections:
   - block: markdown
@@ -12,7 +14,6 @@ sections:
         <div class="max-w-6xl mx-auto">
 
           <p class="mb-8 text-lg">
-            <!-- Opcional: puedes editar o borrar este párrafo de introducción -->
             En esta página reunimos algunas de las participaciones de MetaDocencia en conferencias, talleres y otros eventos.
           </p>
 
@@ -87,10 +88,9 @@ sections:
               </div>
             </article>
 
-            <!-- Copia y pega estos <article> para agregar más eventos -->
+            <!-- Copia y pega estas tarjetas <article> para agregar más eventos -->
           </div>
         </div>
     design:
       columns: "1"
-
-    ---
+---
