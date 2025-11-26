@@ -2,7 +2,6 @@
 title: "Eventos"
 type: landing
 slug: "eventos"
----
 
 sections:
   - block: markdown
@@ -93,3 +92,5 @@ sections:
         </div>
     design:
       columns: "1"
+
+    ---
