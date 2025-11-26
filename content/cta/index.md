@@ -91,74 +91,73 @@ sections:
         css_style: "background-color:#00506F;color:#FFFFFF;"
 
   - block: cta-card
-      id: redes
-      content:
-        title: "Sigue el intercambio"
-        text: |
-          <div style="color:#FFFFFF">
-            <p>Acompáñanos en nuestras redes sociales y síguenos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
-  
-            <div class="flex flex-wrap gap-3 mt-4">
-              <!-- Contacto -->
-              <a href="mailto:direccion@metadocencia.org"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-                <span>Contacto</span>
-              </a>
-  
-              <!-- Twitter -->
-              <a href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-                <span>Twitter</span>
-              </a>
-  
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <span>LinkedIn</span>
-              </a>
-  
-              <!-- YouTube -->
-              <a href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-                <span>YouTube</span>
-              </a>
-  
-              <!-- Instagram -->
-              <a href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-                <span>Instagram</span>
-              </a>
-  
-              <!-- Mastodon -->
-              <a href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fab fa-mastodon" aria-hidden="true"></i>
-                <span>Mastodon</span>
-              </a>
-  
-              <!-- Bluesky -->
-              <a href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
-                 style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
-                <i class="fas fa-cloud" aria-hidden="true"></i>
-                <span>Bluesky</span>
-              </a>
-            </div>
-          </div>
-      design:
-        card:
-          css_class: "shadow-sm"
-          css_style: "background-color:#C83737;color:#FFFFFF;"
+    id: redes
+    content:
+      title: "Sigue el intercambio"
+      text: |
+        <div style="color:#FFFFFF">
+          <p>Acompáñanos en nuestras redes sociales y síguenos para no perderte novedades, debates y recursos: <strong style="color:#FFFFFF">@metadocencia</strong></p>
 
+          <div class="flex flex-wrap gap-3 mt-4">
+            <!-- Contacto -->
+            <a href="mailto:direccion@metadocencia.org"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>Contacto</span>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+              <span>Twitter</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <span>YouTube</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+            </a>
+
+            <!-- Mastodon -->
+            <a href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fab fa-mastodon" aria-hidden="true"></i>
+              <span>Mastodon</span>
+            </a>
+
+            <!-- Bluesky -->
+            <a href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-full no-underline font-semibold"
+               style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.55);color:#FFFFFF;">
+              <i class="fas fa-cloud" aria-hidden="true"></i>
+              <span>Bluesky</span>
+            </a>
+          </div>
+        </div>
+    design:
+      card:
+        css_class: "shadow-sm"
+        css_style: "background-color:#C83737;color:#FFFFFF;"
 ---
