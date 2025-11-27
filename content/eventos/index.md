@@ -9,7 +9,7 @@ items:
     place: "Ciudad, país"
     title: "Nombre del evento 1"
     summary: "Breve descripción del evento 1. Puedes contar en pocas líneas cuál fue la participación de MetaDocencia o qué rol tuvo la organización en esta actividad."
-    image: "/media/prueba-home.jpg"
+    image: "/media/eventos/ejemplo-1.jpg"
     image_alt: "Descripción de la imagen del evento 1."
     url: "https://ejemplo-evento-1.org"
 
@@ -17,7 +17,7 @@ items:
     place: "Ciudad, país"
     title: "Nombre del evento 2"
     summary: "Breve descripción del evento 2. Este texto se muestra en la tarjeta, debajo del título, a modo de bajada."
-    image: "/media/prueba-home2.jpg"
+    image: "/media/eventos/ejemplo-2.jpg"
     image_alt: "Descripción de la imagen del evento 2."
     url: "https://ejemplo-evento-2.org"
 
