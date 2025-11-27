@@ -25,8 +25,7 @@ Esta Formación para Formar se nutre y está relacionada con iniciativas abierta
 
 ## Más
 * Material del curso [Entrenamiento docente de MetaDocencia](https://metadocencia.github.io/entrenamiento-docente/index.html)
-* Material del curso [CABANAnet + MetaDocencia: Curso Train the Trainer](https://www.metadocencia.org/curso/entrenamiento-instructores/)
-* Blogpost: [Enseñando a enseñar entre comunidades en español](https://www.metadocencia.org/post/metadocencia_carpentries/)
+* Blogpost: [Enseñando a enseñar entre comunidades en español](/post/metadocencia_carpentries/)
 * Curso [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) 
 * Curso [Train the Trainer de ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer)
 * Curso [Train the Trainer de EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills)
