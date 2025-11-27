@@ -23,7 +23,7 @@ En respuesta al interés de nuestra comunidad de profundizar las discusiones com
 Durante la segunda mitad de 2022 comenzamos a trabajar en nuestra gobernanza. Nos propusimos diseñar colaborativamente un modelo transparente para la toma de decisiones estratégicas que nos permitiera fortalecer nuestra misión institucional sobre la base de la construcción en comunidad. Este propósito nos reunió en un proceso de aprendizaje colectivo, para el cual generamos un ciclo de 8 reuniones abiertas, virtuales y sincrónicas con la participación de especialistas que aceptaron la invitación a contarnos sus experiencias en distintos aspectos de la gobernanza de instituciones públicas y privadas. Además, mantuvimos un gran número de reuniones del equipo para imaginar, conocer y pensar nuevas formas de organización y modelos de gestión de espacios de educación y conocimiento abierto, mientras avanzamos en presentar, procesar y dar forma a las distintas etapas de los documentos institucionales que constituyen hoy la [Gobernanza de MetaDocencia](https://doi.org/10.5281/zenodo.7398892).
 
 * Mira todas las grabaciones en [esta lista de reproducción](https://www.youtube.com/playlist?list=PLNsHbWOM6tUc3hPxo-EvCtn03Lp_ZcXKy)
-* Blogpost: [Toma forma la nueva gobernanza de MetaDocencia](https://www.metadocencia.org/post/avances-gobernanza/)
+* Blogpost: [Toma forma la nueva gobernanza de MetaDocencia](/post/avances-gobernanza/)
 
 ## Club de Lectura sobre Enseñar Tecnología en Comunidad
 Aprendemos mejor cuando aprendemos en comunidad.
