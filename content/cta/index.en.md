@@ -98,66 +98,60 @@ sections:
       card:
         css_class: "shadow-sm"
         css_style: "background-color:#00506F;color:#FFFFFF;"
-  # ---------- Social (clickable buttons in grid) ----------
+
+    
+  # ===== CTA final =====
   - block: markdown
-    id: redes
+    id: apoya
     content:
-      title: "Keep the conversation going"
+      title: ""
       text: |
-        <style>
-          /* Fondo gris y texto oscuro en claro y oscuro */
-          section#redes {
-            background:#F3F4F6 !important;
-            color:#111827 !important;
-          }
-          .dark section#redes {
-            background:#F3F4F6 !important;
-            color:#111827 !important;
-          }
-
-          section#redes p,
-          section#redes a,
-          section#redes strong {
-            color:#111827 !important;
-          }
-        </style>
-
-        <p>
-          Join us on social media and follow <strong>@metadocencia</strong> for updates, discussions, and resources.
-        </p>
+        {{< cta_fullwidth
+            id="apoya"
+            title="Keep the conversation going"
+            text=""
+            bg="#F3F4F6" color="#111827" btn_bg="#C83737" btn_fg="#FFFFFF"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+        <p>Join us on social media and follow @metadocencia for updates, discussions, and resources</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              Twitter
           </a>
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              LinkedIn
           </a>
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              YouTube
           </a>
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              Instagram
           </a>
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              Mastodon
           </a>
-          <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
              style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
              Bluesky
           </a>
         </div>
-    design:
-      css_style: "background-color:#F3F4F6;color:#111827;"
+        {{< /cta_fullwidth >}}
+
 
 ---
