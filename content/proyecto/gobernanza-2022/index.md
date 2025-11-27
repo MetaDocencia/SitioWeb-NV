@@ -41,7 +41,7 @@ MetaDocencia está formada por profesionales con experiencia en disciplinas y á
 
 
 ## Lee más
-- **Blogpost**: [Trabajo intercomunidades: la experiencia de apoyo al fortalecimiento de la gobernanza comunitaria de LABI](https://mdnv.netlify.app/post/2024/consultoria-labi/)  
+- **Blogpost**: [Trabajo intercomunidades: la experiencia de apoyo al fortalecimiento de la gobernanza comunitaria de LABI](/post/2024/consultoria-labi/)  
 - **Gobernanza de MetaDocencia**: [versión 2.0](https://zenodo.org/records/12522913), [versión 1.0](https://zenodo.org/records/7398893#.Y7gW1HaZNPY), (también [en inglés](https://zenodo.org/records/7399003#.Y7gfDnaZNPZ))  
 - **Video**: [el diseño colaborativo de la Gobernanza de MetaDocencia](https://www.youtube.com/watch?v=02NLFbEwgmQ)
 - **Lista de reproducción**: [Ciclo de encuentros de Gobernanza MetaDocencia](https://www.youtube.com/playlist?list=PLNsHbWOM6tUc3hPxo-EvCtn03Lp_ZcXKy)  
