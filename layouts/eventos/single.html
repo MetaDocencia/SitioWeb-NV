@@ -1,0 +1,83 @@
+{{ define "main" }}
+{{ $isEN := eq .Site.Language.Lang "en" }}
+{{ $subtitle := cond $isEN "Selected events, talks, and workshops with MetaDocencia’s participation." "Eventos, charlas y talleres en los que participa MetaDocencia." }}
+{{ $btnDefault := cond $isEN "Learn more" "Ver más" }}
+{{ $empty := cond $isEN "No events loaded yet." "No hay eventos cargados aún." }}
+
+<section class="mx-auto px-6 py-10 max-w-6xl">
+
+  <!-- Title -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ $subtitle }}</p>
+
+  {{ $items := .Params.items }}
+  {{ if $items }}
+    <!-- Grid de tarjetas -->
+    <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {{ range $items }}
+        <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
+          
+          <!-- Imagen del evento -->
+          {{ with .image }}
+            <div class="aspect-[4/3] w-full overflow-hidden">
+              <img src="{{ . | safeURL }}"
+                   alt="{{ with $.image_alt }}{{ . }}{{ else }}{{ with $.image_alt }}{{ . }}{{ end }}{{ end }}"
+                   class="h-full w-full object-cover">
+            </div>
+          {{ end }}
+
+          <!-- Contenido de la tarjeta -->
+          <div class="p-5 flex flex-col flex-1">
+            <!-- Meta: fecha + lugar -->
+            <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+              {{ with .date }}<span>{{ . }}</span>{{ end }}
+              {{ if and .date .place }} · {{ end }}
+              {{ with .place }}<span>{{ . }}</span>{{ end }}
+            </div>
+
+            <!-- Título -->
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
+              {{ .title }}
+            </h2>
+
+            <!-- Bajada -->
+            {{ with .summary }}
+              <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
+                {{ . }}
+              </p>
+            {{ end }}
+
+            <!-- Botón / enlace -->
+            {{ with .url }}
+              {{/* Texto del botón: se puede sobreescribir por item con .btn / .btn_es / .btn_en */}}
+              {{ $btnText := $btnDefault }}
+              {{ with $.btn }}{{ $btnText = . }}{{ end }}
+              {{ if and (eq $btnText $btnDefault) $isEN }}
+                {{ with $.btn_en }}{{ $btnText = . }}{{ end }}
+              {{ end }}
+              {{ if and (eq $btnText $btnDefault) (not $isEN) }}
+                {{ with $.btn_es }}{{ $btnText = . }}{{ end }}
+              {{ end }}
+
+              <a href="{{ . }}" target="_blank" rel="noopener"
+                 class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
+                {{ $btnText }}
+                <span aria-hidden="true" class="ml-1">↗</span>
+              </a>
+            {{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">{{ $empty }}</p>
+  {{ end }}
+
+</section>
+
+<!-- Estilos mínimos locales -->
+<style>
+  .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
+  .prose img { height: auto; }
+</style>
+{{ end }}
