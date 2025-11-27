@@ -15,7 +15,7 @@
       {{ $authorKey = ( .RelPermalink | strings.TrimSuffix "/" | path.Base ) }}
     {{ end }}
 
- {{/* Avatar: círculo, tamaños armónicos (mobile 10rem / desktop 15rem) */}}
+    {{/* Avatar: círculo, tamaños armónicos (mobile 10rem / desktop 15rem) */}}
     <div class="w-full md:w-auto flex md:block justify-center shrink-0">
       {{- if $avatar -}}
         <img src="{{ $avatar.RelPermalink }}" alt="{{ .Title }}"
@@ -108,42 +108,51 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Blogpost minimalista (solo type: post) ================= */}}
-  {{/* Claves para matchear autor en .Params.authors */}}
-  {{ $keys := slice (lower $authorKey) (lower .Title) (lower (default "" .Params.name)) }}
+  {{/* ================= Blogposts de esta persona ================= */}}
 
-  {{/* Recolectar páginas type=post donde este autor figure */}}
-  {{ $col := slice }}
+  {{/* Clave de autor normalizada a partir del slug de la carpeta */}}
+  {{ $key := lower $authorKey }}
+
+  {{/* Colección de posts donde .Params.authors contiene ese slug */}}
+  {{ $posts := slice }}
+
   {{ range where .Site.RegularPages "Type" "post" }}
     {{ $auth := .Params.authors }}
+
     {{ if $auth }}
-      {{ $matched := false }}
-      {{ $t := printf "%T" $auth }}
-      {{ if eq $t "[]interface {}" }}
+      {{/* Caso lista (array) de autores */}}
+      {{ if (kindIs "slice" $auth) }}
+        {{ $found := false }}
         {{ range $auth }}
-          {{ $a := "" }}
-          {{ if (eq (printf "%T" .) "map[string]interface {}") }}
-            {{ if isset . "name" }}{{ $a = lower (printf "%v" (index . "name")) }}{{ end }}
-            {{ if and (eq $a "") (isset . "title") }}{{ $a = lower (printf "%v" (index . "title")) }}{{ end }}
-          {{ else }}
-            {{ $a = lower (printf "%v" .) }}
+          {{ if eq (lower (printf "%v" .)) $key }}
+            {{ $found = true }}
           {{ end }}
-          {{ if in $keys $a }}{{ $matched = true }}{{ end }}
         {{ end }}
-      {{ else if eq $t "string" }}
-        {{ if in $keys (lower $auth) }}{{ $matched = true }}{{ end }}
+        {{ if $found }}
+          {{ $posts = $posts | append . }}
+        {{ end }}
+
+      {{/* Caso string simple en authors */}}
+      {{ else }}
+        {{ if eq (lower (printf "%v" $auth)) $key }}
+          {{ $posts = $posts | append . }}
+        {{ end }}
       {{ end }}
-      {{ if $matched }}{{ $col = $col | append . }}{{ end }}
     {{ end }}
   {{ end }}
-  {{ $pages := sort $col "Date" "desc" }}
+
+  {{ $pages := sort $posts "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
     <section class="mt-8">
-      <h2 class="text-lg font-semibold mb-2">Blogpost</h2>
+      <h2 class="text-lg font-semibold mb-2">Publicaciones en el blog</h2>
       <ul class="list-disc list-inside space-y-1">
         {{ range $pages }}
-          <li><a href="{{ .RelPermalink }}" class="underline hover:no-underline">{{ .Title }}</a></li>
+          <li>
+            <a href="{{ .RelPermalink }}" class="underline hover:no-underline">
+              {{ .Title }}
+            </a>
+          </li>
         {{ end }}
       </ul>
     </section>
