@@ -7,7 +7,7 @@ type: "page"
 translationKey: "congreso_iberoamericano_2025"
 external_link: "https://cienciaabierta.info"
 image:
-  filename: "quienesosmos.jpg"
+  filename: "/quienesosmos.jpg"
   alt_text: "Descripción de la imagen en español."
 
 ---
