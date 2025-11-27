@@ -17,11 +17,19 @@ sections:
             background:#F9FAFB;
           }
 
-          /* Grilla responsive */
+          /* Forzar el contenedor a ocupar todo el ancho disponible */
+          section#eventos .container {
+            max-width: 100%;
+            width: 100%;
+            padding-left: clamp(1rem, 4vw, 3rem);
+            padding-right: clamp(1rem, 4vw, 3rem);
+          }
+
+          /* Grilla: 3 columnas en desktop */
           #eventos .md-eventos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.75rem;
             align-items: stretch;
           }
 
@@ -77,6 +85,14 @@ sections:
             margin-left:0.25rem;
           }
 
+          /* 2 columnas en pantallas medianas */
+          @media (max-width: 1024px) {
+            #eventos .md-eventos-grid {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+          }
+
+          /* 1 columna en móviles */
           @media (max-width: 640px) {
             #eventos .md-eventos-grid {
               grid-template-columns: 1fr;
@@ -124,3 +140,4 @@ sections:
 
         </div>
 ---
+::contentReference[oaicite:0]{index=0}
