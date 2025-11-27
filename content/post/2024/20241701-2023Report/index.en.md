@@ -313,7 +313,7 @@ Additionally, we improved and redesigned our workshop and event registration and
 3. The [workshop Social Impacts of Artificial Intelligence](https://doi.org/10.5281/zenodo.17470211) was published and taught in person in March 2023, during the Latin American Meeting on Artificial Intelligence (Khipu 2023), in Montevideo (Uruguay).
 4. The in-person Train the Trainer workshop was adapted to the local audience and delivered with CABANAnet in Buenos Aires (Argentina), in April 2023.
 
-Find the materials for each course [here](https://www.metadocencia.org/en/proyecto/cursos-a-medida/)
+Find the materials for each course [here](/en/proyecto/cursos-a-medida/)
 <p align="center">
 <img src="/img/reporte-2023/TtT-CABANA-2023.png" alt="CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees." width="600px"/>
 <i><font size="-0.6">CABANANet and MetaDocencia during the workshops. Images: courtesy of attendees.</font></i>
@@ -404,7 +404,7 @@ We have been working with partners CCAD, OLS, Invest in Open Infrastructure, 2i2
 
 As representatives of Latin America, we are proud to collaborate with other local communities in the biomedical sciences that will be supported by this cloud computing infrastructure.
 
-🔗 Spanish post: [https://www.metadocencia.org/post/20231215-comunidadescatalyst/](/post/20231215-comunidadescatalyst/) 
+🔗 [more information about Catalyst Project](en/proyecto/catalyst/) 
 
 
 ### Funding Sources
