@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
-{{ $subtitle := cond $isEN "Selected events, talks, and workshops with MetaDocencia’s participation." "Eventos, charlas y talleres en los que participa MetaDocencia." }}
+{{ $subtitle := cond $isEN "Selected events, talks, and workshops with MetaDocencia’s participation." "Participamos en eventos regionales e internacionales organizando, dictando y acompañando talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
+" }}
 {{ $btnDefault := cond $isEN "Learn more" "Ver más" }}
 {{ $empty := cond $isEN "No events loaded yet." "No hay eventos cargados aún." }}
 
