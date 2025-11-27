@@ -108,39 +108,18 @@
     {{ .Content }}
   </div>
 
-  {{/* ================= Blogposts de esta persona ================= */}}
+  {{/* ================= Publicaciones en el blog de esta persona ================= */}}
 
-  {{/* Clave de autor normalizada a partir del slug de la carpeta */}}
+  {{/* Slug del autor en minúsculas */}}
   {{ $key := lower $authorKey }}
 
-  {{/* Colección de posts donde .Params.authors contiene ese slug */}}
-  {{ $posts := slice }}
+  {{/* Todas las páginas de tipo post */}}
+  {{ $allPosts := where .Site.RegularPages "Type" "post" }}
 
-  {{ range where .Site.RegularPages "Type" "post" }}
-    {{ $auth := .Params.authors }}
+  {{/* Filtrar posts donde .Params.authors intersecta con [$key] */}}
+  {{ $posts := where $allPosts "Params.authors" "intersect" (slice $key) }}
 
-    {{ if $auth }}
-      {{/* Caso lista (array) de autores */}}
-      {{ if (kindIs "slice" $auth) }}
-        {{ $found := false }}
-        {{ range $auth }}
-          {{ if eq (lower (printf "%v" .)) $key }}
-            {{ $found = true }}
-          {{ end }}
-        {{ end }}
-        {{ if $found }}
-          {{ $posts = $posts | append . }}
-        {{ end }}
-
-      {{/* Caso string simple en authors */}}
-      {{ else }}
-        {{ if eq (lower (printf "%v" $auth)) $key }}
-          {{ $posts = $posts | append . }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
+  {{/* Ordenar por fecha descendente */}}
   {{ $pages := sort $posts "Date" "desc" }}
 
   {{ if gt (len $pages) 0 }}
