@@ -109,7 +109,7 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-        <p>Join us on social media and follow @metadocencia for updates, discussions, and resources</p>
+        <p>Acompáñanos en nuestras redes sociales y síguenos para no perderte novedades, debates y recursos: @metadocencia</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
           <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
              href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
@@ -145,48 +145,4 @@ sections:
         {{< /cta_fullwidth >}}
 
 
-  - block: cta-card
-    id: redes
-    content:
-      title: "Sigue el intercambio"
-      text: |
-        <div style="color:#FFFFFF">
-          <p>Acompáñanos en nuestras redes sociales y síguenos para no perderte novedades, debates y recursos: @metadocencia</p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-3">
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Twitter
-            </a>
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               LinkedIn
-            </a>
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               YouTube
-            </a>
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Instagram
-            </a>
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Mastodon
-            </a>
-            <a class="flex items-center justify-center text-center no-underline font-semibold px-3 py-2 rounded-full"
-               href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-               style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;">
-               Bluesky
-            </a>
-          </div>
-        </div>
-    design:
-      card:
-        css_class: "shadow-sm"
-        css_style: "background-color:#C83737;color:#FFFFFF;"
 ---
