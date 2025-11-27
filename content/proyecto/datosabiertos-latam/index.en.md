@@ -32,7 +32,7 @@ MetaDocencia has delivered 94 training editions to over 1,500 researchers from 3
 This project aims to enable more people engaged in science, especially those in organizations with limited access to open data services and cloud computing, to scale their work according to best HPC practices. This will lead to greater reproducibility of their research and the publication of FAIR data. Participants will also be able to adequately train others on these topics and related ones, such as the proper preparation of budgets for central computing services in their grant applications. Along the way, they will have an active and supportive community to accompany them.
 
 ## Más información
-* [Support this project!](https://mdnv.netlify.app/en/cta/)
+* [Support this project!](/en/cta/)
 * [Work proposal submitted to the IOI Fund for Network Adoption on Zenodo](https://zenodo.org/records/15880737 )
 * [Work proposal submitted to the IOI Fund for Network Adoption on Open Grants](https://www.ogrants.org/grants/acion_laura_2025) 
 * [How UNC Supercómputo supports research in Argentina](https://supercomputo.unc.edu.ar/)
