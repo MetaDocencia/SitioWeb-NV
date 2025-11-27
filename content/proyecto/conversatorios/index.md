@@ -17,7 +17,7 @@ En respuesta al interés de nuestra comunidad de profundizar las discusiones com
 
 * Mira todas las grabaciones en [esta lista de reproducción](https://www.youtube.com/playlist?list=PLNsHbWOM6tUfzes2v5mSk6kY90ZpcoIgc)
 * Blogpost: [Conversatorios sobre Ciencia Abierta: reflexiones colectivas en comunidad
-](https://www.metadocencia.org/post/2024/20240506-reflexiones-conversatorio/)
+](/post/2024/20240506-reflexiones-conversatorio/)
 
 ## Gobernanza
 Durante la segunda mitad de 2022 comenzamos a trabajar en nuestra gobernanza. Nos propusimos diseñar colaborativamente un modelo transparente para la toma de decisiones estratégicas que nos permitiera fortalecer nuestra misión institucional sobre la base de la construcción en comunidad. Este propósito nos reunió en un proceso de aprendizaje colectivo, para el cual generamos un ciclo de 8 reuniones abiertas, virtuales y sincrónicas con la participación de especialistas que aceptaron la invitación a contarnos sus experiencias en distintos aspectos de la gobernanza de instituciones públicas y privadas. Además, mantuvimos un gran número de reuniones del equipo para imaginar, conocer y pensar nuevas formas de organización y modelos de gestión de espacios de educación y conocimiento abierto, mientras avanzamos en presentar, procesar y dar forma a las distintas etapas de los documentos institucionales que constituyen hoy la [Gobernanza de MetaDocencia](https://doi.org/10.5281/zenodo.7398892).
