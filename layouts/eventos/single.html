@@ -1,7 +1,5 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
-{{ $subtitle := cond $isEN "Selected events, talks, and workshops with MetaDocencia’s participation." "Participamos en eventos regionales e internacionales organizando, dictando y acompañando talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
-" }}
 {{ $btnDefault := cond $isEN "Learn more" "Ver más" }}
 {{ $empty := cond $isEN "No events loaded yet." "No hay eventos cargados aún." }}
 
@@ -9,7 +7,15 @@
 
   <!-- Title -->
   <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
-  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ $subtitle }}</p>
+
+  <!-- Subtitle -->
+  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+    {{ if $isEN }}
+      Selected events, talks, and workshops with MetaDocencia’s participation.
+    {{ else }}
+      Participamos en eventos regionales e internacionales organizando, dictando y acompañando talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
+    {{ end }}
+  </p>
 
   {{ $items := .Params.items }}
   {{ if $items }}
