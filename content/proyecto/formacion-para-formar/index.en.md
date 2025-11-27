@@ -24,7 +24,7 @@ This Train the Trainer program is informed by and connected to similar open init
 
 ## More information
 * [MetaDocencia Teaching Training course materials](https://metadocencia.github.io/entrenamiento-docente/index.html)
-* Blog post: [Teaching to Teach across Spanish-speaking Communities](/post/metadocencia_carpentries/)
+* Blog post: [Teaching to Teach across Spanish-speaking Communities (Spanish)](/post/metadocencia_carpentries/)
 * [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/index.html)
 * [ELIXIR-GOBLET Train the Trainer course](https://elixir-europe.org/platforms/training/train-the-trainer)
 * [EMBL-EBI Train the Trainer course](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills)
