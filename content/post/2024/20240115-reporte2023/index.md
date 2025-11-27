@@ -216,7 +216,7 @@ Melissa Black estuvo presente en [Co-Afina 2023](https://laconga.redclara.net/ha
 Jesica Formoso, Patricia Loto y María Cristina Nanton también participaron de LatinR, la Conferencia Latinoamericana sobre el uso de R en Investigación + Desarrollo, que se realizó presencialmente en Montevideo, Uruguay.
 Maria presentó un trabajo sobre traducción de R base. Jesi y Patri presentaron una shiny app para el “Mapeo de comunidades, organizaciones y eventos de Ciencia Abierta en Latinoamérica”.
 
-🔗 Conoce más sobre el [Mapeo de Ciencia Abierta en Latinoamérica](https://www.metadocencia.org/proyecto/mapeo-comunidades/)
+🔗 Conoce más sobre el [Mapeo de Ciencia Abierta en Latinoamérica](/proyecto/mapeo-comunidades/)
 <p align="center">
 <img src="/img/reporte-2023/LatinR.jpeg" alt="Jesica Formoso, Patricia Loto y María Cristina Nanton también participaron de LatinR" width="600px"/>
 <i><font size="-0.6">LatinR. MetaDocencia también se hizo presente en la Conferencia Latinoamericana.</font></i>
