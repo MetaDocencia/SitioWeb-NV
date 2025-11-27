@@ -28,7 +28,7 @@ Social networks are communication platforms that have allowed scientific communi
 We used two methodologies to analyze the effect of communities on the dissemination of open practices. First, we conducted an exploratory analysis of the evolution of searches for the terms "open science," "ciência aberta" (Portuguese), and "ciencia abierta” (Spanish) from 2004 to the present (Figure 1).
 
 *Evolution of searches for the terms "open science," "ciência aberta" (Portuguese), and "ciencia abierta” (Spanish) from 2004 to the present*
-![Figure 1: Searches for the terms "open science," "ciência aberta" (Portuguese), and “ciencia abierta” (Spanish) from 2004 to the present.](https://www.metadocencia.org/img/cp-ca/grafico1.png)
+![Figure 1: Searches for the terms "open science," "ciência aberta" (Portuguese), and “ciencia abierta” (Spanish) from 2004 to the present.](/img/cp-ca/grafico1.png)
 
 *Source: Google Trends.*
 
