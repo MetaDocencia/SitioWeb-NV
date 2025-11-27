@@ -15,13 +15,15 @@
     <!-- Grid de tarjetas -->
     <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {{ range $items }}
+        {{ $item := . }}
+
         <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
           
           <!-- Imagen del evento -->
-          {{ with .image }}
+          {{ with $item.image }}
             <div class="aspect-[4/3] w-full overflow-hidden">
               <img src="{{ . | safeURL }}"
-                   alt="{{ with $.image_alt }}{{ . }}{{ else }}{{ with $.image_alt }}{{ . }}{{ end }}{{ end }}"
+                   alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
                    class="h-full w-full object-cover">
             </div>
           {{ end }}
@@ -30,33 +32,33 @@
           <div class="p-5 flex flex-col flex-1">
             <!-- Meta: fecha + lugar -->
             <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-              {{ with .date }}<span>{{ . }}</span>{{ end }}
-              {{ if and .date .place }} · {{ end }}
-              {{ with .place }}<span>{{ . }}</span>{{ end }}
+              {{ with $item.date }}<span>{{ . }}</span>{{ end }}
+              {{ if and $item.date $item.place }} · {{ end }}
+              {{ with $item.place }}<span>{{ . }}</span>{{ end }}
             </div>
 
             <!-- Título -->
             <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
-              {{ .title }}
+              {{ $item.title }}
             </h2>
 
             <!-- Bajada -->
-            {{ with .summary }}
+            {{ with $item.summary }}
               <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
                 {{ . }}
               </p>
             {{ end }}
 
             <!-- Botón / enlace -->
-            {{ with .url }}
-              {{/* Texto del botón: se puede sobreescribir por item con .btn / .btn_es / .btn_en */}}
+            {{ with $item.url }}
+              {{/* Texto del botón: se puede sobreescribir por item */}}
               {{ $btnText := $btnDefault }}
-              {{ with $.btn }}{{ $btnText = . }}{{ end }}
+              {{ with $item.btn }}{{ $btnText = . }}{{ end }}
               {{ if and (eq $btnText $btnDefault) $isEN }}
-                {{ with $.btn_en }}{{ $btnText = . }}{{ end }}
+                {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
               {{ end }}
               {{ if and (eq $btnText $btnDefault) (not $isEN) }}
-                {{ with $.btn_es }}{{ $btnText = . }}{{ end }}
+                {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
               {{ end }}
 
               <a href="{{ . }}" target="_blank" rel="noopener"
