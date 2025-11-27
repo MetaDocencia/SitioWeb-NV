@@ -17,7 +17,7 @@ items:
     place: "California, Estados Unidos"
     title: "CZI Open Science Meeting 2025"
     summary: "Organizamos el panel “Funding as a Tool for a Global and Equitable Open Science”, junto a representantes de Wellcome Trust, Gates Foundation y Schmidt Sciences."
-    image: "/eventos/20251010_CZIOpenSciencemeeting.jpg"
+    image: "/media/eventos/20251010_CZIOpenSciencemeeting.jpg"
     image_alt: "Descripción de la imagen del evento 1."
     url: "hhttps://www.linkedin.com/posts/metadocencia_openscience-cienciaabierta-activity-7389314802176778240-cYCt?utm_source=share&utm_medium=member_desktop&rcm=ACoAABNeGFsBa8b-0Ed4SwoxH_MiSmGh1njjZQg"
 
