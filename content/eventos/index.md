@@ -19,7 +19,7 @@ items:
     place: "Virtual"
     title: "Fireside Chat Turing Way"
     summary: "Laura Ación nos representó en el Fireside Chat sobre buenas prácticas de gobernanza para la salud a largo plazo de las iniciativas abiertas."
-    image: "/media/eventos/20251030_TuringWayFiresidechat.jpeg"
+    image: "/media/eventos/20251030_TuringWayFiresidechat.jpg"
     image_alt: "Descripción de la imagen del Fireside Chat de The Turing Way."
     url: "https://www.software.ac.uk/news/final-governance-fireside-chat-good-governance-healthy-open-initiatives"
 
@@ -69,7 +69,7 @@ items:
     place: "Virtual"
     title: "OAI14"
     summary: "Acercamos una perspectiva latinoamericana sobre la integridad en la investigación y la Ciencia Abierta en el 14º Taller de la OAI sobre innovaciones en la comunicación académica."
-    image: "/media/eventos/20251110_OAI14.jpeg"
+    image: "/media/eventos/20251110_OAI14.jpg"
     image_alt: "Descripción de la imagen del evento OAI14."
     url: "https://oai.events/oai14/"
     materials_url: "https://vimeo.com/1137144009"
@@ -78,7 +78,7 @@ items:
     place: "Bogotá, Colombia. Híbrido."
     title: "CLACSO - X Conferencia Latinoamericana y Caribeña de Ciencias Sociales"
     summary: "María Ángela Petrizzo participó como panelista en el evento de lanzamiento del libro “Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio Dominique Babini” representando a MetaDocencia y compartiendo la experiencia que reunimos en el capítulo “Justicia epistémica y ciencia abierta en América Latina y el Caribe: el caso de MetaDocencia”."
-    image: "/media/eventos20250625_ CLACSO.jpg"
+    image: "/media/eventos20250625_CLACSO.jpg"
     url: "https://conferenciaclacso.org/"
     materials_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
 
