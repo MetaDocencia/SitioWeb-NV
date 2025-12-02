@@ -127,7 +127,7 @@ items:
   - date: "2025-04-25"
     place: "Virtual"
     title: "CZI Bioimaging Training"
-    summary: "Laura Ación compartió algunas lecciones aprendidas sobre grant writing."
+    summary: "Laura Ación compartió algunas lecciones aprendidas sobre cómo buscar y escribir propuestas para acceder a financiamientos científicos."
     image: "/media/eventos/20250425_CZIimagingtraining.jpg"
     image_alt: "Descripción de la imagen del evento CZI Bioimaging Training."
     materials_url: "https://doi.org/10.5281/zenodo.15277689"
