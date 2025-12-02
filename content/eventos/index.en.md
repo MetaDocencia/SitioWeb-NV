@@ -8,7 +8,7 @@ translationKey: "eventos"
 items:
   - date: "2025-12-11"
     place: "Buenos Aires, Argentina"
-    title: "8th International Meeting on Pharmaceutical Sciences"
+    title: "8va Reunión Internacional de Ciencias Farmacéuticas [8th International Meeting on Pharmaceutical Sciences]"
     summary: "We sponsored RICiFa 2025, an international meeting aimed at fostering integration and scientific exchange in an academic and social setting."
     image: "/media/eventos/20251211_RiCiFa.jpg"
     image_alt: "Photo from the 8th International Meeting on Pharmaceutical Sciences (RICiFa 2025)."
@@ -24,8 +24,8 @@ items:
 
   - date: "2025-11-25"
     place: "Virtual"
-    title: "Ibero-American Open Science Congress"
-    summary: "We shared the impact of our training through a poster and a video and supported MetaDocencia collaborator Magdalena Rocco as she presented two artistic pieces."
+    title: "Congreso Iberoamericano de Ciencia Abierta [Ibero-American Open Science Congress]"
+    summary: "We shared the impact of our training through a poster and a video, and supported MetaDocencia collaborator Magdalena Rocco as she presented two artistic pieces."
     image: "/media/eventos/20251120_CIbSE.jpg"
     image_alt: "Photo from the Ibero-American Open Science Congress 2025."
     url: "https://cienciaabierta.info"
@@ -77,7 +77,7 @@ items:
 
   - date: "2025-10-21"
     place: "Virtual"
-    title: 'Jornada "Open Science: From a Pending Agenda to Critical Appropriation"'
+    title: 'Jornada “Ciencia Abierta: De la agenda pendiente a la apropiación crítica” [“Open Science: From a Pending Agenda to Critical Appropriation”]'
     summary: "Verónica Xhardez and Paola Castaño, MetaDocencia collaborators and participants in the contextualization of NASA’s Open Science training for Latin America and in the 2024 ALTa Open Science cohorts, joined a dialogue on the challenges and opportunities of Open Science in the region."
     image: "/media/eventos/20251021_CAapropiacioncritica.jpg"
     image_alt: "Photo from the event Open Science: from a pending agenda to critical appropriation."
@@ -94,8 +94,8 @@ items:
 
   - date: "2025-09-17"
     place: "Córdoba, Argentina"
-    title: "XX National Meeting and IX International Meeting of the AACC"
-    summary: "We presented “Open Science Practices: changes in knowledge and perceived importance after a virtual training” at a meeting organized by the Argentine Association of Behavioral Sciences at the Faculty of Psychology, Universidad Nacional de Córdoba."
+    title: "XX Reunión Nacional y IX Encuentro Internacional de la AACC [20th National Meeting and 9th International Meeting of the AACC]"
+    summary: "We presented “Prácticas de Ciencia Abierta: cambios en conocimiento e importancia percibida tras una capacitación virtual” [“Open Science Practices: changes in knowledge and perceived importance after a virtual training”] at a meeting organized by the Argentine Association of Behavioral Sciences at the Faculty of Psychology, Universidad Nacional de Córdoba."
     image: "/media/eventos/20250913_AACC.jpeg"
     image_alt: "Photo from the AACC 2025 meeting."
     url: "https://www.aacconline.org.ar/reunion2025.html?v=2025091501"
@@ -103,8 +103,8 @@ items:
 
   - date: "2025-06-10"
     place: "Bogotá, Colombia. Hybrid."
-    title: "CLACSO – 10th Latin American and Caribbean Conference on Social Sciences"
-    summary: "María Ángela Petrizzo joined the launch of the book “Knowledge as a Common Good. Contributions from Latin America and the Caribbean to Open Science: Dominique Babini Prize” as a panelist, representing MetaDocencia and sharing our experience reflected in the chapter “Epistemic Justice and Open Science in Latin America and the Caribbean: the case of MetaDocencia”."
+    title: "CLACSO - X Conferencia Latinoamericana y Caribeña de Ciencias Sociales [CLACSO – 10th Latin American and Caribbean Conference on Social Sciences]"
+    summary: "María Ángela Petrizzo joined the launch of the book “Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio Dominique Babini” [“Knowledge as a Common Good. Contributions from Latin America and the Caribbean to Open Science: Dominique Babini Prize”] as a panelist, representing MetaDocencia and sharing our experience reflected in the chapter “Justicia epistémica y ciencia abierta en América Latina y el Caribe: el caso de MetaDocencia” [“Epistemic Justice and Open Science in Latin America and the Caribbean: the case of MetaDocencia”]."
     image: "/media/eventos/20250625_CLACSO.jpg"
     image_alt: "Photo from the CLACSO 2025 event."
     url: "https://conferenciaclacso.org/"
@@ -113,8 +113,8 @@ items:
 
   - date: "2025-05-21"
     place: "Buenos Aires, Argentina"
-    title: "Second Meeting for Fellows and Young Researchers at the Faculty of Exact and Natural Sciences (UBA)"
-    summary: "In the talk “Creative funding: your plan B (or your plan A) to secure funds”, we shared experiences and lessons learned on alternatives to traditional funding, such as foundations, philanthropy, international grants, and communities of practice."
+    title: "Segundas Jornadas para Becaries y Jóvenes Investigadorxs de la Facultad de Ciencias Exactas y Naturales de la UBA [Second Meeting for Fellows and Young Researchers at the Faculty of Exact and Natural Sciences (UBA)]"
+    summary: "In the talk “Financiamiento creativo: tu plan B (o tu plan A) para conseguir fondos” [“Creative funding: your plan B (or your plan A) to secure funds”], we shared experiences and lessons learned on alternatives to traditional funding, such as foundations, philanthropy, international grants, and communities of practice."
     image: "/media/eventos/20250525_JovenesInvestigadoresFCEN-UBA.jpg"
     image_alt: "Photo from the Second Meeting for Fellows and Young Researchers at the Faculty of Exact and Natural Sciences (UBA)."
     presentation_url: "https://doi.org/10.5281/zenodo.15526257"
@@ -122,7 +122,7 @@ items:
   - date: "2025-05-02"
     place: "Mexico City, Mexico. Hybrid."
     title: "Global Bioinformatics Education Summit 2025"
-    summary: "We collaborated in organizing the event and presented our community. In addition, current MetaDocencia collaborator Vanina Varni gave her talk “Empowerment through Inclusion”."
+    summary: "We collaborated in organizing the event and presented our community. In addition, current MetaDocencia collaborator Vanina Varni gave her talk “Empoderamiento a través de la inclusión” [“Empowerment through Inclusion”]."
     image: "/media/eventos/20250404_GEBI.jpeg"
     image_alt: "Photo from the Global Bioinformatics Education Summit 2025."
     url: "https://www.bioinfoedsummit.org/"
