@@ -98,6 +98,7 @@ items:
     image_alt: "Descripción de la imagen del evento de CLACSO 2025."
     url: "https://conferenciaclacso.org/"
     presentation_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
+    recording_url: "https://www.youtube.com/live/l11beBn4mxo?si=IC54IPggBxVF66Q-&t=6518"
 
   - date: "2025-05-21"
     place: "Buenos Aires, Argentina"
