@@ -12,6 +12,7 @@ items:
     summary: "Auspiciamos RICiFa 2025, una reunión internacional que tiene como objetivo promover un espacio de integración y conocimiento científico, en un marco académico y social."
     image: "/media/eventos/20251211_RiCiFa.jpg"
     image_alt: "Descripción de la imagen de la 8va Reunión Internacional de Ciencias Farmacéuticas (RICiFa 2025)."
+    url: "http://www.ricifa.com.ar/"
 
   - date: "2025-12-01"
     place: "Virtual"
