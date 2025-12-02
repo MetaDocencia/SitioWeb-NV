@@ -23,13 +23,10 @@ social:
   link: "mailto:rocco.mag@gmail.com"
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/ni_airo
-- icon: github
-  icon_pack: fab
-  link: https://github.com/4iro
+  link: https://x.com/MaggieRocco
 - icon: orcid
   icon_pack: ai
-  link: https://orcid.org/0000-0002-0912-2501
+  link: https://orcid.org/0009-0002-1603-5075
 superuser: false
 user_groups: ["Colaboradores"]
 ---
