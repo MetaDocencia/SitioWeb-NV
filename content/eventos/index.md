@@ -101,7 +101,7 @@ items:
     place: "Córdoba, Argentina"
     title: "FLISoL Córdoba 2025"
     summary: "Participamos de las charlas relámpago en el Festival Latinoamericano de Instalación de Software Libre, compartiendo nuestra experiencia haciendo Ciencia Abierta en comunidad."
-    image: "/media/eventos/20250310_FLISoLCba.png"
+    image: "/media/eventos/20250310_FLISoLCba.jpg"
     image_alt: "Descripción de la imagen del evento FLISoL Córdoba 2025."
     url: "https://flisol.info/FLISOL2025/Argentina/Cordoba"
     materials_url: "https://doi.org/10.5281/zenodo.15284956"
