@@ -131,6 +131,15 @@ items:
     image: "/media/eventos/20250425_CZIimagingtraining.jpg"
     image_alt: "Descripción de la imagen del evento CZI Bioimaging Training."
     materials_url: "https://doi.org/10.5281/zenodo.15277689"
+    
+  - date: "2025-04-10"
+    place: "Virtual"
+    title: "WDS Webinar Series on International Repository-related Policies"
+    summary: "Jesica Formoso participó del webinar organizado por el World Data System (WDS) sobre políticas de Datos Abiertos en América Latina, compartiendo reflexiones sobre el Sistema Nacional de Repositorios Digitales y la Ley 26.899 en Argentina."
+    image: "/media/eventos/20250410_WDSwebinarseries.jpg"
+    image_alt: "Descripción de la imagen del evento WDS Webinar."
+    materials_url: "https://doi.org/10.5281/zenodo.15190760"
+    url: "https://worlddatasystem.org/webinars/wds-webinars-past-recordings/"
 
   - date: "2025-03-14"
     place: "São Paulo, Brasil"
