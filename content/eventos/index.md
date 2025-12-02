@@ -22,6 +22,16 @@ items:
     image_alt: "Descripción de la imagen del evento LatinR 2025."
     url: "https://latinr.org"
 
+  - date: "2025-11-25"
+    place: "Virtual"
+    title: "Congreso Iberoamericano de Ciencia Abierta"
+    summary: "Contamos en póster y video el impacto de nuestra formación y acompañamos a Magdalena Rocco en la presentación de dos piezas artísticas."
+    image: "/media/eventos/20251120_CIbSE.jpg"
+    image_alt: "Descripción de la imagen del Congreso Iberoamericano de Ciencia Abierta 2025."
+    url: "https://cienciaabierta.info"
+    poster_url: "https://comunidad.cienciaabierta.info/t/32-impacto-positivo-de-una-capacitacion-virtual-en-ciencia-abierta-sobre-el-conocimiento-y-la-adopcion-de-buenas-practicas/474"
+    recording_url: "https://zenodo.org/records/17468650"
+
   - date: "2025-11-11"
     place: "Buenos Aires, Argentina"
     title: "1st Latin American hands-on workshop on open source AI/ML guided drug discovery"
@@ -46,7 +56,8 @@ items:
     image: "/media/eventos/20251110_OAI14.jpg"
     image_alt: "Descripción de la imagen del evento OAI14."
     url: "https://oai.events/oai14/"
-    grabacion_url: "https://vimeo.com/1137144009"
+    presentation_url: "https://doi.org/10.5281/zenodo.17604371"
+    recording_url: "https://vimeo.com/1137144009"
 
   - date: "2025-10-31"
     place: "Virtual"
@@ -71,7 +82,7 @@ items:
     image: "/media/eventos/20251021_CAapropiacioncritica.jpg"
     image_alt: "Descripción de la imagen de la jornada Ciencia Abierta: de la agenda pendiente a la apropiación crítica."
     url: "https://www.unq.edu.ar/noticias/ciencia-abierta-de-la-agenda-pendiente-a-la-apropiacion-critica/"
-    grabacion_url: "https://www.youtube.com/watch?v=RmU7YJ5I7xE"
+    recording_url: "https://www.youtube.com/watch?v=RmU7YJ5I7xE"
 
   - date: "2025-10-19"
     place: "California, Estados Unidos"
@@ -115,7 +126,8 @@ items:
     image: "/media/eventos/20250404_GEBI.jpeg"
     image_alt: "Descripción de la imagen del evento Global Bioinformatics Education Summit 2025."
     url: "https://www.bioinfoedsummit.org/"
-    presentation_url: "https://doi.org/10.5281/zenodo.15747932"
+    presentation_url: "https://doi.org/10.5281/zenodo.15521553"
+    poster_url: "https://doi.org/10.5281/zenodo.15747932"
 
   - date: "2025-04-27"
     place: "Córdoba, Argentina"
@@ -133,16 +145,16 @@ items:
     image: "/media/eventos/20250425_CZIimagingtraining.jpg"
     image_alt: "Descripción de la imagen del evento CZI Bioimaging Training."
     presentation_url: "https://doi.org/10.5281/zenodo.15277689"
-    
+
   - date: "2025-04-10"
     place: "Virtual"
     title: "WDS Webinar Series on International Repository-related Policies"
     summary: "Jesica Formoso participó del webinar organizado por el World Data System (WDS) sobre políticas de Datos Abiertos en América Latina, compartiendo reflexiones sobre el Sistema Nacional de Repositorios Digitales y la Ley 26.899 en Argentina."
     image: "/media/eventos/20250410_WDSwebinarseries.jpg"
     image_alt: "Descripción de la imagen del evento WDS Webinar."
+    url: "https://worlddatasystem.org/webinars/wds-webinars-past-recordings/"
     presentation_url: "https://doi.org/10.5281/zenodo.15190760"
     recording_url: "https://doi.org/10.5281/zenodo.15190760"
-    url: "https://worlddatasystem.org/webinars/wds-webinars-past-recordings/"
 
   - date: "2025-03-14"
     place: "São Paulo, Brasil"
