@@ -1,5 +1,6 @@
 ---
 title: "Eventos"
+subtitle: "2025"
 slug: "eventos"
 type: "eventos"
 translationKey: "eventos"
