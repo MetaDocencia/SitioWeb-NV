@@ -35,7 +35,7 @@ items:
     place: "Virtual"
     title: 'Jornada "Ciencia Abierta: De la agenda pendiente a la apropiación crítica"'
     summary: "Verónica Xhardez y Paola Castaño, colaboradoras de MetaDocencia y participantes del trabajo de contextualización de la formación en Ciencia Abierta de NASA para América Latina y de las cohortes ALTa Ciencia Abierta 2024, participaron de una jornada de diálogo sobre los desafíos y oportunidades de la Ciencia Abierta en la región."
-    image: "/media/eventos/20251021_CAapropiacioncrítica.png"
+    image: "/media/eventos/20251021_CAapropiacioncritica.jpg"
     image_alt: "Descripción de la imagen de la jornada Ciencia Abierta: de la agenda pendiente a la apropiación crítica."
     url: "https://www.unq.edu.ar/noticias/ciencia-abierta-de-la-agenda-pendiente-a-la-apropiacion-critica/"
     materials_url: "https://www.youtube.com/watch?v=RmU7YJ5I7xE"
