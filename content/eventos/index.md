@@ -37,7 +37,7 @@ items:
     image: "/media/eventos/20251112_LABImeeting.jpg"
     image_alt: "Descripción de la imagen del evento LABI Meeting 2025."
     url: "https://www.labimeeting.com"
-    materials_url: "https://doi.org/10.5281/zenodo.17546194"
+    presentation_url: "https://doi.org/10.5281/zenodo.17546194"
 
   - date: "2025-11-10"
     place: "Virtual"
@@ -46,7 +46,7 @@ items:
     image: "/media/eventos/20251110_OAI14.jpg"
     image_alt: "Descripción de la imagen del evento OAI14."
     url: "https://oai.events/oai14/"
-    materials_url: "https://vimeo.com/1137144009"
+    grabacion_url: "https://vimeo.com/1137144009"
 
   - date: "2025-10-31"
     place: "Virtual"
@@ -71,7 +71,7 @@ items:
     image: "/media/eventos/20251021_CAapropiacioncritica.jpg"
     image_alt: "Descripción de la imagen de la jornada Ciencia Abierta: de la agenda pendiente a la apropiación crítica."
     url: "https://www.unq.edu.ar/noticias/ciencia-abierta-de-la-agenda-pendiente-a-la-apropiacion-critica/"
-    materials_url: "https://www.youtube.com/watch?v=RmU7YJ5I7xE"
+    grabacion_url: "https://www.youtube.com/watch?v=RmU7YJ5I7xE"
 
   - date: "2025-10-19"
     place: "California, Estados Unidos"
@@ -88,7 +88,7 @@ items:
     image: "/media/eventos/20250913_AACC.jpeg"
     image_alt: "Descripción de la imagen del evento de la AACC 2025."
     url: "https://www.aacconline.org.ar/reunion2025.html?v=2025091501"
-    materials_url: "https://zenodo.org/records/17109741"
+    presentation_url: "https://zenodo.org/records/17109741"
 
   - date: "2025-06-10"
     place: "Bogotá, Colombia. Híbrido."
@@ -97,7 +97,7 @@ items:
     image: "/media/eventos/20250625_CLACSO.jpg"
     image_alt: "Descripción de la imagen del evento de CLACSO 2025."
     url: "https://conferenciaclacso.org/"
-    materials_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
+    presentation_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
 
   - date: "2025-05-21"
     place: "Buenos Aires, Argentina"
@@ -105,7 +105,7 @@ items:
     summary: "Nicolás Palopoli, en su charla “Financiamiento creativo: tu plan B (o tu plan A) para conseguir fondos”, compartió experiencias y aprendizajes sobre alternativas al financiamiento tradicional, como a través de fundaciones, filantropía, subsidios internacionales y comunidades de práctica."
     image: "/media/eventos/20250525_JovenesInvestigadoresFCEN-UBA.jpg"
     image_alt: "Descripción de la imagen de las Segundas Jornadas para Becaries y Jóvenes Investigadorxs de Exactas UBA."
-    materials_url: "https://doi.org/10.5281/zenodo.15526257"
+    presentation_url: "https://doi.org/10.5281/zenodo.15526257"
 
   - date: "2025-05-02"
     place: "Ciudad de México, México. Híbrido."
@@ -114,7 +114,7 @@ items:
     image: "/media/eventos/20250404_GEBI.jpeg"
     image_alt: "Descripción de la imagen del evento Global Bioinformatics Education Summit 2025."
     url: "https://www.bioinfoedsummit.org/"
-    materials_url: "https://doi.org/10.5281/zenodo.15747932"
+    presentation_url: "https://doi.org/10.5281/zenodo.15747932"
 
   - date: "2025-04-27"
     place: "Córdoba, Argentina"
@@ -123,7 +123,7 @@ items:
     image: "/media/eventos/20250310_FLISoLCba.jpg"
     image_alt: "Descripción de la imagen del evento FLISoL Córdoba 2025."
     url: "https://flisol.info/FLISOL2025/Argentina/Cordoba"
-    materials_url: "https://doi.org/10.5281/zenodo.15284956"
+    presentation_url: "https://doi.org/10.5281/zenodo.15284956"
 
   - date: "2025-04-25"
     place: "Virtual"
@@ -131,7 +131,7 @@ items:
     summary: "Laura Ación compartió algunas lecciones aprendidas sobre cómo buscar y escribir propuestas para acceder a financiamientos científicos."
     image: "/media/eventos/20250425_CZIimagingtraining.jpg"
     image_alt: "Descripción de la imagen del evento CZI Bioimaging Training."
-    materials_url: "https://doi.org/10.5281/zenodo.15277689"
+    presentation_url: "https://doi.org/10.5281/zenodo.15277689"
     
   - date: "2025-04-10"
     place: "Virtual"
@@ -139,7 +139,8 @@ items:
     summary: "Jesica Formoso participó del webinar organizado por el World Data System (WDS) sobre políticas de Datos Abiertos en América Latina, compartiendo reflexiones sobre el Sistema Nacional de Repositorios Digitales y la Ley 26.899 en Argentina."
     image: "/media/eventos/20250410_WDSwebinarseries.jpg"
     image_alt: "Descripción de la imagen del evento WDS Webinar."
-    materials_url: "https://doi.org/10.5281/zenodo.15190760"
+    presentation_url: "https://doi.org/10.5281/zenodo.15190760"
+    recording_url: "https://doi.org/10.5281/zenodo.15190760"
     url: "https://worlddatasystem.org/webinars/wds-webinars-past-recordings/"
 
   - date: "2025-03-14"
@@ -157,5 +158,5 @@ items:
     image: "/media/eventos/20250317_Khipu.jpg"
     image_alt: "Descripción de la imagen del evento Khipu AI 2025."
     url: "https://khipu.ai/"
-    materials_url: "https://doi.org/10.5281/zenodo.17781693"
+    presentation_url: "https://doi.org/10.5281/zenodo.17781693"
 ---
