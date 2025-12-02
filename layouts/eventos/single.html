@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
-{{ $btnDefault := cond $isEN "Learn more" "Ver más" }}
+{{ $btnDefault := cond $isEN "Learn more" "Más sobre el evento" }}
+{{ $materialsLabel := cond $isEN "Materials" "Materiales" }}
 {{ $empty := cond $isEN "No events loaded yet." "No hay eventos cargados aún." }}
 
 <section class="mx-auto px-6 py-10 max-w-6xl">
@@ -56,24 +57,36 @@
               </p>
             {{ end }}
 
-            <!-- Botón / enlace -->
-            {{ with $item.url }}
-              {{/* Texto del botón: se puede sobreescribir por item */}}
-              {{ $btnText := $btnDefault }}
-              {{ with $item.btn }}{{ $btnText = . }}{{ end }}
-              {{ if and (eq $btnText $btnDefault) $isEN }}
-                {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
-              {{ end }}
-              {{ if and (eq $btnText $btnDefault) (not $isEN) }}
-                {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
+            <!-- Enlaces -->
+            <div class="mt-4 flex flex-wrap gap-3 items-center">
+              <!-- Enlace principal -->
+              {{ with $item.url }}
+                {{/* Texto del botón: se puede sobreescribir por item */}}
+                {{ $btnText := $btnDefault }}
+                {{ with $item.btn }}{{ $btnText = . }}{{ end }}
+                {{ if and (eq $btnText $btnDefault) $isEN }}
+                  {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+                {{ if and (eq $btnText $btnDefault) (not $isEN) }}
+                  {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center text-sm font-semibold text-[#00506F] hover:underline">
+                  {{ $btnText }}
+                  <span aria-hidden="true" class="ml-1">↗</span>
+                </a>
               {{ end }}
 
-              <a href="{{ . }}" target="_blank" rel="noopener"
-                 class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
-                {{ $btnText }}
-                <span aria-hidden="true" class="ml-1">↗</span>
-              </a>
-            {{ end }}
+              <!-- Enlace a materiales -->
+              {{ with $item.materials_url }}
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center text-sm font-semibold text-[#00506F] hover:underline">
+                  {{ $materialsLabel }}
+                  <span aria-hidden="true" class="ml-1">↗</span>
+                </a>
+              {{ end }}
+            </div>
           </div>
         </article>
       {{ end }}
