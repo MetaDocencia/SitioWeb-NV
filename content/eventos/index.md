@@ -78,6 +78,7 @@ items:
     place: "Bogotá, Colombia. Híbrido."
     title: "CLACSO - X Conferencia Latinoamericana y Caribeña de Ciencias Sociales"
     summary: "María Ángela Petrizzo participó como panelista en el evento de lanzamiento del libro “Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta: Premio Dominique Babini” representando a MetaDocencia y compartiendo la experiencia que reunimos en el capítulo “Justicia epistémica y ciencia abierta en América Latina y el Caribe: el caso de MetaDocencia”."
+    image: "/media/eventos20250625_ CLACSO.jpg"
     url: "https://conferenciaclacso.org/"
     materials_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
 
