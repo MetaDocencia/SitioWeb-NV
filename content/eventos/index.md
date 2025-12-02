@@ -12,6 +12,7 @@ items:
     image: "/media/eventos/20251112_LABImeeting.jpg"
     image_alt: "Descripción de la imagen del evento LABI Meeting 2025."
     url: "https://www.labimeeting.com"
+    materials_url: "https://doi.org/10.5281/zenodo.17546194"
     
   - date: "2025-10-19"
     place: "California, Estados Unidos"
@@ -47,7 +48,7 @@ items:
     place: "Buenos Aires, Argentina"
     title: "Segundas Jornadas para Becaries y Jóvenes Investigadorxs de la Facultad de Ciencias Exactas y Naturales de la UBA"
     summary: "Nicolás Palopoli, en su charla “Financiamiento creativo: tu plan B (o tu plan A) para conseguir fondos”, compartió experiencias y aprendizajes sobre alternativas al financiamiento tradicional, como a través de fundaciones, filantropía, subsidios internacionales y comunidades de práctica."
-    url: "https://doi.org/10.5281/zenodo.15526257"
+    materials_url: "https://doi.org/10.5281/zenodo.15526257"
 
   - date: "2025-05-02"
     place: "Ciudad de México, México. Híbrido."
@@ -56,6 +57,7 @@ items:
     image: "/media/eventos/20250404_GEBI.jpeg"
     image_alt: "Descripción de la imagen del evento Global Bioinformatics Education Summit 2025."
     url: "https://www.bioinfoedsummit.org/"
+    materials_url: "https://doi.org/10.5281/zenodo.15747932"
 
   - date: "2025-04-27"
     place: "Córdoba, Argentina"
@@ -64,6 +66,7 @@ items:
     image: "/media/eventos/20250310_FLISoLCba.png"
     image_alt: "Descripción de la imagen del evento FLISoL Córdoba 2025."
     url: "https://flisol.info/FLISOL2025/Argentina/Cordoba"
+    materials_url: "https://doi.org/10.5281/zenodo.15284956"
 
   - date: "2025-03-10"
     place: "Santiago de Chile, Chile"
@@ -72,4 +75,22 @@ items:
     image: "/media/eventos/20250317_Khipu.jpg"
     image_alt: "Descripción de la imagen del evento Khipu AI 2025."
     url: "https://khipu.ai/"
+    materials_url: "https://doi.org/10.5281/zenodo.17781693"
+
+  - date: "2025-09-17"
+    place: "Córdoba, Argentina"
+    title: "XX Reunión Nacional y IX Encuentro Internacional de la AACC"
+    summary: "Jesica Formoso presentó “Prácticas de Ciencia Abierta: cambios en conocimiento e importancia percibida tras una capacitación virtual” en el evento organizado por la Asociación Argentina de Ciencias del Comportamiento en la Facultad de Psicología de la Universidad Nacional de Córdoba."
+    image: "/media/eventos/20250913_AACC.jpeg"
+    image_alt: "Descripción de la imagen del evento de la AACC 2025."
+    url: "https://www.aacconline.org.ar/reunion2025.html?v=2025091501"
+    materials_url: "https://zenodo.org/records/17109741"
+
+  - date: "2025-10-31"
+    place: "Virtual"
+    title: "Fireside Chat Turing Way"
+    summary: "Laura Ación nos representó en el Fireside Chat sobre buenas prácticas de gobernanza para la salud a largo plazo de las iniciativas abiertas."
+    image: "/media/eventos/20251030_TuringWayFiresidechat.jpeg"
+    image_alt: "Descripción de la imagen del Fireside Chat de The Turing Way."
+    url: "https://www.software.ac.uk/news/final-governance-fireside-chat-good-governance-healthy-open-initiatives"
 ---
