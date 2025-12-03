@@ -211,7 +211,7 @@ sections:
         - name: "Formación para enseñar"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de para multiplicar el aprendizaje y potenciar el impacto colectivo.
+            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de multiplicar el aprendizaje y potenciar el impacto colectivo.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/formacion-para-formar/">Ver más →</a>
