@@ -81,6 +81,6 @@ También contamos con el consejo de un equipo asesor internacional que nos guía
 
 ## Sigue en contacto
 
-Si te gustó esta iniciativa, si quieres tomar uno de nuestros cursos, si quieres ayudar, o si quieres replicar esta experiencia en tu país, siempre estamos dispuestas/os y nos hace muy felices recibir más personas en MetaDocencia. Hay [muchas maneras de participar](https://www.metadocencia.org/post/como-colaborar/), [escríbenos](https://www.metadocencia.org/#contact) y [síguenos](https://twitter.com/metadocencia) para continuar en contacto.
+Si te gustó esta iniciativa, si quieres tomar uno de nuestros cursos, si quieres ayudar, o si quieres replicar esta experiencia en tu país, siempre estamos dispuestas/os y nos hace muy felices recibir más personas en MetaDocencia. Hay [muchas maneras de participar](/cta), súmate.
 
 > Esta es la versión en Español del blog post en Inglés que escribimos como invitadas al [Blog de RStudio Education](https://education.rstudio.com/blog/2020/12/metadocencia/)
