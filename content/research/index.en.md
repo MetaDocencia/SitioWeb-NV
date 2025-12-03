@@ -4,6 +4,14 @@ slug: "research"
 type: "research"
 
 items:
+
+- date: "2025"
+  outlet: "Jesica Formoso, María Paz Míguez, Irene Vazano, Nicolás Palopoli, Laura Ación, Débora Burin"
+  title: "Positive impact of a virtual Open Science training on knowledge and the adoption of good practices [Impacto positivo de una capacitación virtual en Ciencia Abierta sobre el conocimiento y la adopción de buenas prácticas]"
+  summary: "Open Science (OS) promotes the democratization of knowledge through practices that foster transparency, open access, data sharing, and collaboration (Masuzzo & Martens, 2017; UNESCO, 2021). This study aims to evaluate the impact, in terms of knowledge and adoption of practices, of a virtual OS training course delivered to professionals and researchers in Latin America (MetaDocencia Team & OLS Team, 2023). The study is motivated by the scarcity of research that assesses the impact of OS training in Latin America, even though this type of capacity building is key to overcoming the cultural, technical, and structural barriers that hinder OS implementation in our region, and despite the existence of regional policy frameworks and repositories (Pitrelli & Arabito, 2015; Azevedo et al., 2022)."
+  url: "https://doi.org/10.5281/zenodo.17468649"
+  btn: "https://doi.org/10.5281/zenodo.17468649"
+
   - date: "2025"
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Perceived Barriers for Accessing International Research Funding among Latin American Researchers"
@@ -24,7 +32,16 @@ items:
     summary: "Open science can advance epistemic justice in Latin America and the Caribbean only when it is context-aware, community-driven, and supported by fair governance and funding. The MetaDocencia case shows how collaborative contextualization, equitable workflows, and regional networks can redistribute epistemic power and make science more inclusive and impactful."
     url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
     btn: "ISBN: 978-631-308-049-6"
-    
+
+
+- date: "2025"
+  outlet: "Jesica Formoso, María Cristina Nanton, Patricia Andrea Loto"
+  title: "Considerations on Open Science from researchers in the Global South: an analysis using NLP tools [Consideraciones sobre la Ciencia Abierta de investigadores e investigadoras del sur global: un análisis desde herramientas de NLP]"
+  summary: "Currently, the adoption of Open Science practices in Latin America faces both challenges and opportunities. In this study, we analyze the perceptions of 285 Spanish-speaking researchers and technicians regarding the perceived barriers to Open Science implementation and its impact on the relationship between the scientific community and the public. To do so, we follow a text mining approach using tools from the tidy ecosystem in R. The data were collected from registration forms in the context of an Open Science training conducted in 2024 by MetaDocencia, based on NASA materials adapted into Spanish. Classical NLP tools were applied, including frequency calculations, the computation of statistics such as tf-idf, sentiment analysis, and topic modeling on the collected responses. The results provide a structured overview of the main perceived challenges, such as institutional barriers and lack of incentives, as well as the expected benefits in terms of transparency and public trust. This study contributes to understanding how the research community perceives the transition to Open Science and offers key insights for designing strategies that facilitate its implementation."
+  url: "https://doi.org/10.5281/zenodo.17781692"
+  btn: "https://doi.org/10.5281/zenodo.17781692"
+
+
   - date: "2024"
     outlet: "Jesica Formoso, Nicolás Palópoli, Laura Acion, Debora Burín"
     title: "Design and Validation of the Online Teaching Self-Efficacy Questionnaire [Diseño y validación del Cuestionario de Autoeficacia Docente Online]"
