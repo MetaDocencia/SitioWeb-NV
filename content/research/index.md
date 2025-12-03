@@ -9,6 +9,7 @@ items:
     outlet: "Jesica Formoso, María Paz Míguez, Irene Vazano, Nicolás Palopoli, Laura Ación, Débora Burin"
     title: "Impacto positivo de una capacitación virtual en Ciencia Abierta sobre el conocimiento y la adopción de buenas prácticas"
     summary: "La Ciencia Abierta (CA) promueve la democratización del conocimiento mediante prácticas que fomentan la transparencia, el acceso abierto, el intercambio de datos y la colaboración (Masuzzo & Martens, 2017; UNESCO, 2021). Este estudio tiene por objetivo evaluar el impacto, en términos de conocimiento y adopción de prácticas, de una capacitación virtual en CA impartida a personas profesionales e investigadoras en América Latina (MetaDocencia Team & OLS Team, 2023). El estudio está motivado por la escasez de investigaciones que evalúen el impacto en América Latina de la capacitación en CA, a pesar de que este tipo de formación es clave para superar las barreras culturales, técnicas y estructurales que dificultan la implementación de la CA en nuestra región, e incluso a pesar de los marcos normativos y repositorios regionales existentes (Pitrelli & Arabito, 2015; Azevedo et al., 2022)."
+    category_es: "Póster científico"
     url: "https://doi.org/10.5281/zenodo.17468649"
     btn: "https://doi.org/10.5281/zenodo.17468649"
     
@@ -16,6 +17,7 @@ items:
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina [Perceived Barriers for Accessing International Research Funding among Latin American Researchers]"
     summary: "Las personas que investigan en América Latina se enfrentan a barreras estructurales, lingüísticas y culturales persistentes que limitan el acceso equitativo a la financiación internacional para la investigación. Nuestro estudio de métodos mixtos identificó obstáculos clave, como las limitaciones económicas, los criterios de elegibilidad desajustados y las diferencias retóricas, y propone estrategias como la capacitación sensible al contexto, la tutoría y el diseño de financiación inclusiva para abordarlos."
+    category_es: "Preprint"
     url: "https://doi.org/10.31222/osf.io/68ws5_v1"
     btn: "https://doi.org/10.31222/osf.io/68ws5_v1"
     
@@ -30,6 +32,7 @@ items:
     outlet: "Jesica Formoso, María Paz Míguez, Nicolás Palopoli, María Ángela Petrizzo, Laura Ación"
     title: "Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia (Premio “Dominique Babini”)"
     summary: "La Ciencia Abierta solo puede promover la justicia epistémica en América Latina y el Caribe cuando es consciente del contexto, está impulsada por la comunidad y cuenta con el respaldo de una gobernanza y una financiación justas. El caso de MetaDocencia muestra cómo la contextualización colaborativa, los flujos de trabajo equitativos y las redes regionales pueden redistribuir el poder epistémico y hacer que la ciencia sea más inclusiva e impactante."
+    category_es: "Capítulo de libro"
     url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
     btn: "ISBN: 978-631-308-049-6"
 
