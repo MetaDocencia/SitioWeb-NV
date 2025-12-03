@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
-{{ $subtitle := cond $isEN "We conduct and openly share research that informs and supports open science and education in Latin America." "Realizamos y compartimos abiertamente investigaciones que informan y apoyan la ciencia abierta y la educación en América Latina." }}
+{{ $subtitle := cond $isEN "We conduct and openly share research that informs and supports open science and education in Latin America. " "Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia." }}
 {{ $btn := cond $isEN "View publication" "Ver publicación" }}
 {{ $empty := cond $isEN "No publications loaded yet." "No hay publicaciones cargadas aún." }}
 
@@ -18,13 +18,8 @@
         <article class="py-6">
           <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
 
-            <!-- Left column: category + date + outlet -->
+            <!-- Left column: date + outlet -->
             <div class="sm:w-48 shrink-0 text-sm sm:mt-1">
-              {{ with .category }}
-                <div class="text-xs font-semibold uppercase tracking-wide text-right text-gray-600 dark:text-gray-300 mb-1">
-                  {{ . }}
-                </div>
-              {{ end }}
               <div class="text-gray-500 dark:text-gray-400">{{ .date }}</div>
               <div class="text-gray-700 dark:text-gray-300">{{ .outlet }}</div>
             </div>
