@@ -6,14 +6,6 @@ type: "eventos"
 translationKey: "eventos"
 
 items:
-  - date: "2025-12-11"
-    place: "Buenos Aires, Argentina"
-    title: "8va Reunión Internacional de Ciencias Farmacéuticas [8th International Meeting on Pharmaceutical Sciences]"
-    summary: "We sponsored RICiFa 2025, an international meeting aimed at fostering integration and scientific exchange in an academic and social setting."
-    image: "/media/eventos/20251211_RiCiFa.jpg"
-    image_alt: "Photo from the 8th International Meeting on Pharmaceutical Sciences (RICiFa 2025)."
-    url: "http://www.ricifa.com.ar/"
-
   - date: "2025-12-01"
     place: "Virtual"
     title: "LatinR 2025"
@@ -31,6 +23,14 @@ items:
     url: "https://cienciaabierta.info"
     poster_url: "https://comunidad.cienciaabierta.info/t/32-impacto-positivo-de-una-capacitacion-virtual-en-ciencia-abierta-sobre-el-conocimiento-y-la-adopcion-de-buenas-practicas/474"
     recording_url: "https://zenodo.org/records/17468650"
+
+  - date: "2025-11-12"
+    place: "Buenos Aires, Argentina"
+    title: "8va Reunión Internacional de Ciencias Farmacéuticas [8th International Meeting on Pharmaceutical Sciences]"
+    summary: "We sponsored RICiFa 2025, an international meeting aimed at fostering integration and scientific exchange in an academic and social setting."
+    image: "/media/eventos/20251211_RiCiFa.jpg"
+    image_alt: "Photo from the 8th International Meeting on Pharmaceutical Sciences (RICiFa 2025)."
+    url: "http://www.ricifa.com.ar/"
 
   - date: "2025-11-11"
     place: "Buenos Aires, Argentina"
