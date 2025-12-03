@@ -14,6 +14,13 @@ items:
     image_alt: "Photo from the LatinR 2025 event."
     url: "https://latinr.org"
 
+  - date: "2025-11-26"
+    place: "Buenos Aires, Argentina"
+    title: "Panel 20 años Maestría en Data Mining de la UBA [20th Anniversary Panel of UBA’s Master in Data Mining]"
+    summary: "We took part in the panel “Formación y trabajo en el futuro de la IA” [“Training and Work in the Future of AI”], where we discussed the main challenges that AI poses for career development, professional training, and jobs in data science."
+    image: "/media/eventos/20251126_MaestriaDataMiningUBA.jpg"
+    url: "https://datamining.dc.uba.ar/datamining/"
+
   - date: "2025-11-25"
     place: "Virtual"
     title: "Congreso Iberoamericano de Ciencia Abierta [Ibero-American Open Science Congress]"
