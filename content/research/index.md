@@ -25,6 +25,7 @@ items:
     outlet: "Jesica Formoso, Nicolás Palopoli, Paz Miguez, Irene Vazano, Julián Buede, María Cristina Nanton, Debora I. Burín, Laura Ación"
     title: "Cambios en los conocimientos, las prácticas y la importancia percibida de la Ciencia Abierta tras un programa de capacitación para las personas que investigan desde América Latina [Changes in Knowledge, Practices, and Perceived Importance of Open Science Following a Training Program for Latin American Researchers]"
     summary: "La Ciencia Abierta ofrece un camino hacia una investigación más transparente y equitativa, pero las personas que investigan desde América Latina se enfrentan a barreras culturales, estructurales e institucionales para su adopción. Este estudio de métodos mixtos reveló que la capacitación específica puede mejorar el conocimiento, la implementación y la importancia percibida de las prácticas de Ciencia Abierta, lo que ayuda a reducir estos obstáculos."
+    category_es: "Preprint"
     url: "https://doi.org/10.31222/osf.io/9pru8_v1"
     btn: "https://doi.org/10.31222/osf.io/9pru8_v1"
 
@@ -42,6 +43,7 @@ items:
 An Analysis Using NLP Tools]"
     summary: "Actualmente, la adopción de prácticas de Ciencia Abierta en América Latina enfrenta tanto desafíos como oportunidades. En este estudio, analizamos las percepciones de 285 investigadores y técnicos de habla hispana sobre las barreras percibidas para la implementación de la Ciencia Abierta y su impacto en la relación entre la comunidad científica y el público. Para ello, seguimos un enfoque de minería de textos utilizando herramientas del ecosistema tidy en R. Los datos se recopilaron a partir de formularios de inscripción en el contexto de una capacitación en Ciencia Abierta realizada en 2024 por MetaDocencia, basada en materiales de la NASA adaptados al español.
 Se aplicaron herramientas clásicas de PLN, incluyendo el cálculo de frecuencias, estadísticas como tf-idf, análisis de sentimientos y modelado de temas sobre las respuestas recopiladas. Los resultados ofrecen una visión panorámica estructurada de los principales desafíos percibidos, como las barreras institucionales y la falta de incentivos, así como de los beneficios esperados en términos de transparencia y confianza pública. Este estudio contribuye a comprender cómo la comunidad de investigación percibe la transición hacia la Ciencia Abierta y ofrece insumos clave para diseñar estrategias que faciliten su implementación."
+    category_es: "Póster científico"
     url: "https://doi.org/10.5281/zenodo.17781692"
     btn: "https://doi.org/10.5281/zenodo.17781692" 
     
@@ -49,6 +51,7 @@ Se aplicaron herramientas clásicas de PLN, incluyendo el cálculo de frecuencia
     outlet: "Jesica Formoso, Nicolás Palópoli, Laura Acion, Debora Burín"
     title: "Diseño y validación del Cuestionario de Autoeficacia Docente Online"
     summary: "La autoeficacia docente se refiere a la confianza de los profesores en su capacidad para enseñar de manera eficaz y gestionar el aprendizaje de los alumnos. Este estudio desarrolló y validó un cuestionario de autoevaluación de nueve ítems para evaluar la autoeficacia docente en línea entre educadores de secundaria, terciaria y universitaria, mostrando una sólida validez y fiabilidad del constructo."
+    category_es: "Artículo científico"
     url: "https://revistas.udec.cl/index.php/paideia/article/view/18404"
     btn: "https://doi.org/10.29393/PA72-4DVFB40004" 
 
@@ -56,6 +59,7 @@ Se aplicaron herramientas clásicas de PLN, incluyendo el cálculo de frecuencia
     outlet: "Laura Ación, Mariela Rajngewerc, Gregory Randall, Lorena Etcheverry"
     title: "La IA generativa plantea desafíos éticos a la Ciencia Abierta [Generative AI poses ethical challenges for open science]"
     summary: "La IA generativa desafía los fundamentos éticos de la Ciencia Abierta al explotar los resultados de investigaciones compartidos abiertamente para entrenar modelos potencialmente dañinos. Este artículo aboga por nuevos mecanismos de gobernanza que garanticen un uso responsable de los datos y recursos abiertos, preservando la equidad y el bien común en la producción de conocimiento científico."
+    category_es: "Artículo científico"
     url: "https://doi.org/10.1038/s41562-023-01740-4"
     btn: "https://doi.org/10.1038/s41562-023-01740-4"
 
@@ -63,6 +67,7 @@ Se aplicaron herramientas clásicas de PLN, incluyendo el cálculo de frecuencia
     outlet: "Yanina Bellini Saibene, Mine Dogucu, Nicolás Palopoli, Elio Campitelli, Laura Ación, Paola Corrales, Patricia Loto"
     title: "MetaDocencia: Enseñando a enseñar estadística y ciencia de datos online [MetaDocencia: Teaching Statistics And Data Science Online]"
     summary: "La enseñanza y el aprendizaje son actividades que requieren habilidades específicas. Las personas con formación en ciencia, tecnología, ingeniería y matemáticas que enseñan estadística y disciplinas relacionadas suelen carecer de una formación pedagógica adecuada durante su formación. Esta situación se agravó debido a la pandemia de COVID-19, especialmente entre los profesores de los países menos favorecidos. MetaDocencia es una comunidad docente interdisciplinaria que busca apoyar a los profesores hispanohablantes promoviendo métodos de enseñanza concretos, basados en la evidencia y centrados en el estudiante. En 26 meses desarrollamos cinco cursos con licencias abiertas e impartimos 81 ediciones gratuitas de estos cursos, llegando a 1163 profesores de 30 países. Las personas que han participado en nuestros cursos expresan un alto grado de satisfacción (Net Promoter Score > 80 %) y los consideran prácticos, útiles y novedosos (el 97 % indicó que aprendió algo nuevo)."
+    category_es: "Artículo científico"
     url: "https://discovery.ucl.ac.uk/id/eprint/10162721/"
     btn: "https://doi.org/10.52041/iase.icots11.t9a3"
 
