@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $isEN := eq .Site.Language.Lang "en" }}
-{{ $btnDefault := cond $isEN "Learn more" "Más sobre el evento" }}
+{{ $btnDefault := cond $isEN "Learn more" "Ir a la página del evento" }}
 {{ $empty := cond $isEN "No events loaded yet." "No hay eventos cargados aún." }}
 
 {{ $resourcesLabel := cond $isEN "Resources" "Recursos" }}
