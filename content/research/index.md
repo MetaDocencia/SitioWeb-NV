@@ -4,6 +4,14 @@ slug: "research"
 type: "research"
 
 items:
+
+  - date: "2025"
+    outlet: "Jesica Formoso, María Paz Míguez, Irene Vazano, Nicolás Palopoli, Laura Ación, Débora Burin"
+    title: "Impacto positivo de una capacitación virtual en Ciencia Abierta sobre el conocimiento y la adopción de buenas prácticas"
+    summary: "La Ciencia Abierta (CA) promueve la democratización del conocimiento mediante prácticas que fomentan la transparencia, el acceso abierto, el intercambio de datos y la colaboración (Masuzzo & Martens, 2017; UNESCO, 2021). Este estudio tiene por objetivo evaluar el impacto, en términos de conocimiento y adopción de prácticas, de una capacitación virtual en CA impartida a personas profesionales e investigadoras en América Latina (MetaDocencia Team & OLS Team, 2023). El estudio está motivado por la escasez de investigaciones que evalúen el impacto en América Latina de la capacitación en CA, a pesar de que este tipo de formación es clave para superar las barreras culturales, técnicas y estructurales que dificultan la implementación de la CA en nuestra región, e incluso a pesar de los marcos normativos y repositorios regionales existentes (Pitrelli & Arabito, 2015; Azevedo et al., 2022)."
+    url: "https://doi.org/10.5281/zenodo.17468649"
+    btn: "https://doi.org/10.5281/zenodo.17468649"
+    
   - date: "2025"
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina [Perceived Barriers for Accessing International Research Funding among Latin American Researchers]"
