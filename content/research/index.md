@@ -35,7 +35,8 @@ items:
 
   - date: "2025"
     outlet: "Jesica Formoso, María Cristina Nanton, Patricia Andrea Loto"
-    title: "Consideraciones sobre la Ciencia Abierta de investigadores e investigadoras del sur global : un análisis desde herramientas de NLP"
+    title: "Consideraciones sobre la Ciencia Abierta de investigadores e investigadoras del sur global : un análisis desde herramientas de NLP [Considerations on Open Science from Researchers in the Global South:
+An Analysis Using NLP Tools]"
     summary: "Actualmente, la adopción de prácticas de Ciencia Abierta en América Latina enfrenta tanto desafíos como oportunidades. En este estudio, analizamos las percepciones de 285 investigadores y técnicos de habla hispana sobre las barreras percibidas para la implementación de la Ciencia Abierta y su impacto en la relación entre la comunidad científica y el público. Para ello, seguimos un enfoque de minería de textos utilizando herramientas del ecosistema tidy en R. Los datos se recopilaron a partir de formularios de inscripción en el contexto de una capacitación en Ciencia Abierta realizada en 2024 por MetaDocencia, basada en materiales de la NASA adaptados al español.
 Se aplicaron herramientas clásicas de PLN, incluyendo el cálculo de frecuencias, estadísticas como tf-idf, análisis de sentimientos y modelado de temas sobre las respuestas recopiladas. Los resultados ofrecen una visión panorámica estructurada de los principales desafíos percibidos, como las barreras institucionales y la falta de incentivos, así como de los beneficios esperados en términos de transparencia y confianza pública. Este estudio contribuye a comprender cómo la comunidad de investigación percibe la transición hacia la Ciencia Abierta y ofrece insumos clave para diseñar estrategias que faciliten su implementación."
     url: "https://doi.org/10.5281/zenodo.17781692"
