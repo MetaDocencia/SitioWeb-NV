@@ -31,6 +31,8 @@ items:
     url: "https://cienciaabierta.info"
     poster_url: "https://comunidad.cienciaabierta.info/t/32-impacto-positivo-de-una-capacitacion-virtual-en-ciencia-abierta-sobre-el-conocimiento-y-la-adopcion-de-buenas-practicas/474"
     recording_url: "https://zenodo.org/records/17468650"
+    artistic_piece_url: "https://doi.org/10.5281/zenodo.17692688"
+    artistic_piece2_url: "https://doi.org/10.5281/zenodo.17692792"
 
   - date: "2025-11-11"
     place: "Buenos Aires, Argentina"
@@ -108,7 +110,7 @@ items:
     image: "/media/eventos/20250625_CLACSO.jpg"
     image_alt: "Descripción de la imagen del evento de CLACSO 2025."
     url: "https://conferenciaclacso.org/"
-    presentation_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
+    open_access_book_url: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
     recording_url: "https://www.youtube.com/live/l11beBn4mxo?si=IC54IPggBxVF66Q-&t=6518"
 
   - date: "2025-05-21"
