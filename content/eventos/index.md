@@ -6,13 +6,6 @@ type: "eventos"
 translationKey: "eventos"
 
 items:
-  - date: "2025-12-11"
-    place: "Buenos Aires, Argentina"
-    title: "8va Reunión Internacional de Ciencias Farmacéuticas"
-    summary: "Acompañamos a la organización de RICiFa 2025, una reunión internacional que tiene como objetivo promover un espacio de integración y conocimiento científico, en un marco académico y social."
-    image: "/media/eventos/20251211_RiCiFa.jpg"
-    image_alt: "Descripción de la imagen de la 8va Reunión Internacional de Ciencias Farmacéuticas (RICiFa 2025)."
-    url: "http://www.ricifa.com.ar/"
 
   - date: "2025-12-01"
     place: "Virtual"
@@ -33,6 +26,14 @@ items:
     recording_url: "https://zenodo.org/records/17468650"
     artistic_piece_url: "https://doi.org/10.5281/zenodo.17692688"
     artistic_piece2_url: "https://doi.org/10.5281/zenodo.17692792"
+
+  - date: "2025-11-12"
+    place: "Buenos Aires, Argentina"
+    title: "8va Reunión Internacional de Ciencias Farmacéuticas"
+    summary: "Acompañamos a la organización de RICiFa 2025, una reunión internacional que tiene como objetivo promover un espacio de integración y conocimiento científico, en un marco académico y social."
+    image: "/media/eventos/20251211_RiCiFa.jpg"
+    image_alt: "Descripción de la imagen de la 8va Reunión Internacional de Ciencias Farmacéuticas (RICiFa 2025)."
+    url: "http://www.ricifa.com.ar/"
 
   - date: "2025-11-11"
     place: "Buenos Aires, Argentina"
