@@ -238,11 +238,11 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "34"
-          description: "editions (388 hours)"
-        - statistic: "1,500+"
-          description: "people from 33 countries trained"
-        - statistic: "89%"
+        - statistic: "97"
+          description: "editions (396 hours)"
+        - statistic: "1,600+"
+          description: "people from 34 countries trained"
+        - statistic: ">85%"
           description: "Net Promoter Score"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
@@ -315,7 +315,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "40+"
+        - statistic: "32"
           description: "partner communities & alliances"
         - statistic: "60+"
           description: "collaborators"
