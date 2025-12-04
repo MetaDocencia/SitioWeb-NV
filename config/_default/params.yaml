@@ -50,7 +50,7 @@ footer:
       <div class="mdnv-footer-grid">
         <div class="mdnv-footer-left">
           <p>MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.</p>
-          <p>Publicado con <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.</p>
+          <p>Publicado con <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>. Con la tecnología de <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.</p>
         </div>
         <nav class="mdnv-footer-right" aria-label="Enlaces legales">
           <a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener">Pautas de Convivencia</a>
