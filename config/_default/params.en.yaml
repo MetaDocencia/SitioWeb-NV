@@ -22,7 +22,7 @@ footer:
       <div class="mdnv-footer-grid">
         <div class="mdnv-footer-left">
           <p>MetaDocencia is a fiscally sponsored project of <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.</p>
-          <p>Published with <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>.</p>
+          <p>Published with <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>. Powered by <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.</p>
         </div>
         <nav class="mdnv-footer-right" aria-label="Legal links">
           <a href="https://zenodo.org/records/13236270" target="_blank" rel="noopener">Community Guidelines</a>
