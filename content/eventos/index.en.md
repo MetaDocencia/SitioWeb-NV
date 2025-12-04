@@ -31,6 +31,15 @@ items:
     poster_url: "https://comunidad.cienciaabierta.info/t/32-impacto-positivo-de-una-capacitacion-virtual-en-ciencia-abierta-sobre-el-conocimiento-y-la-adopcion-de-buenas-practicas/474"
     recording_url: "https://zenodo.org/records/17468650"
 
+  - date: "2025-11-20"
+    place: "Virtual"
+    title: "Webinar: Desarrollo de capacidades y fomento de la colaboración [Webinar: Capacity building and fostering collaboration]"
+    summary: "We shared how we build capacities, promote infrastructure, and strengthen community around Open Science in a webinar organized by the Research Software Alliance (ReSA), the Research Data Alliance (RDA), and the Latin American Open Science Network (LA Referencia)."
+    image: "/media/eventos/20251120_resa_lareferencia_rda.jpg"
+    url: "https://recursos.lareferencia.info/alianza-cienciaabierta/"
+    presentation_url: "https://zenodo.org/records/17654682"
+    recording_url: "https://youtu.be/H_kBIc7qmBs?si=Danrig-n457QgscF&t=5211"
+
   - date: "2025-11-12"
     place: "Buenos Aires, Argentina"
     title: "8va Reunión Internacional de Ciencias Farmacéuticas [8th International Meeting on Pharmaceutical Sciences]"
