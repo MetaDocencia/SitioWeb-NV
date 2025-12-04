@@ -34,7 +34,7 @@ items:
   - date: "2025-11-20"
     place: "Virtual"
     title: "Webinar: Desarrollo de capacidades y fomento de la colaboración [Webinar: Capacity building and fostering collaboration]"
-    summary: "We shared how we build capacities, promote infrastructure, and strengthen community around Open Science in a webinar organized by the Research Software Alliance (ReSA), the Research Data Alliance (RDA), and the Latin American Open Science Network (LA Referencia)."
+    summary: "We shared how we train researchers, strengthen infrastructure, and foster community around Open Science in a webinar organized by the Research Software Alliance (ReSA), the Research Data Alliance (RDA), and the Latin American Open Science Network (LA Referencia)."
     image: "/media/eventos/20251120_resa_lareferencia_rda.jpg"
     url: "https://recursos.lareferencia.info/alianza-cienciaabierta/"
     presentation_url: "https://zenodo.org/records/17654682"
