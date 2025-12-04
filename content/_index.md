@@ -109,15 +109,15 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "+1.500"
+        - statistic: "1.500+"
           description: |
             personas  
             formadas
-        - statistic: "+6.000"
+        - statistic: "6.000+"
           description: |
             personas  
             conectadas
-        - statistic: "+200"
+        - statistic: "200+"
           description: |
             documentos  
             en Zenodo
