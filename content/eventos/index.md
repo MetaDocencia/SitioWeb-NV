@@ -34,6 +34,15 @@ items:
     artistic_piece_url: "https://doi.org/10.5281/zenodo.17692688"
     artistic_piece2_url: "https://doi.org/10.5281/zenodo.17692792"
 
+  - date: "2025-11-20"
+    place: "Virtual"
+    title: "Webinar: Desarrollo de capacidades y fomento de la colaboración"
+    summary: "Contamos cómo formamos capacidades, impulsamos infraestructura y construimos comunidad en torno a la Ciencia Abierta en el seminario web organizado por Research Software Alliance (ReSA), Research Data Alliance (RDA) y la Red Latinoamericana de Ciencia Abierta (LA Referencia)."
+    image: "/media/eventos/20251120_resa_lareferencia_rda.jpg"
+    url: "https://recursos.lareferencia.info/alianza-cienciaabierta/"
+    presentation_url: "https://zenodo.org/records/17654682"
+    recording_url: "https://youtu.be/H_kBIc7qmBs?si=Danrig-n457QgscF&t=5211"
+
   - date: "2025-11-12"
     place: "Buenos Aires, Argentina"
     title: "8va Reunión Internacional de Ciencias Farmacéuticas"
