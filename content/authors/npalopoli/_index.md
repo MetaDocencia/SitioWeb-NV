@@ -1,6 +1,7 @@
 ---
 title: "Nicolás Palopoli"
-aliases: /authors/npalopoli/
+aliases: 
+- /authors/npalopoli/
 bio: ""
 education:
   courses:
