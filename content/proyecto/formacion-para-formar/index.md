@@ -1,5 +1,5 @@
 ---
-title: "Formación para formar"
+title: "Formación para enseñar"
 summary: "Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de multiplicar el aprendizaje y potenciar el impacto colectivo."
 date: 2025-09-23
 tags:
