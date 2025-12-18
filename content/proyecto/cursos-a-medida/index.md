@@ -100,6 +100,7 @@ El plan de trabajo de este taller remoto y sincrónico de 3 horas abarca, entre 
 * [Plantilla de nuestro documento para notas compartidas](https://drive.google.com/file/d/1PK0mbRYke33qQIKcgmrlusJe6dIGYx9y/view?usp=sharing)
 * [Video del curso](https://youtu.be/awRCNo0PEZU)
 
+<a id="learnr"></a>
 ## Generando tutoriales interactivos con el paquete {learnr} _(No vigente)_
 El paquete {learnr} del lenguaje de programación R es útil para clases remotas, en forma sincrónica o asincrónica. Sin embargo, las personas pueden necesitar ayuda para comenzar a manejarlo.
 
@@ -111,6 +112,7 @@ Este taller de 2 horas cubrió desde los beneficios de los tutoriales interactiv
 * [Presentación que usamos en el curso](https://docs.google.com/presentation/d/1QLRUbERgEk85s8qK6mzmMJn7avQ_bEmTn_NzFYgqwkc/edit?usp=sharing) con notas ampliando el contenido para quienes dan la clase
 * [Video del curso](https://youtu.be/d7eXzRzEdC8)
 
+<a id="r"></a>
 ## Desde las hojas de cálculo a R _(No vigente)_
 Muchas personas que trabajan con datos en hojas de cálculo podrían beneficiarse de manejar esos datos en el lenguaje de programación R. Sin embargo pueden necesitar ayuda para incorporar el conocimiento que les permita comenzar a manejar R de manera eficiente y reproducible.
 
