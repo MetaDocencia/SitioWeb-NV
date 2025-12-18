@@ -39,7 +39,7 @@ Agradecemos especialmente a quienes colaboraron en el diseño, la organización 
 MetaDocencia ofrece instancias de formación adaptables a diferentes contextos y necesidades institucionales. Para coordinar propuestas o recibir más información, escribinos a formacion@metadocencia.org
 
 
-
+<a id="presente"></a>
 ## Presente! Recursos para Encuentros Activos (antes: Intro al ABC para enseñar online)
 Muchas de las personas que enseñan conocimientos científicos o técnicos no suelen haber recibido formación docente y necesitan herramientas para poder transmitir los contenidos de forma eficiente.
 
@@ -54,6 +54,7 @@ En este taller de 3 horas, se presentan conceptos pedagógicos esenciales; se im
 * [Plantilla de nuestro documento para notas compartidas](https://zenodo.org/records/7391035)
 * [Video del curso](https://youtu.be/P0kK6SsAImA)
 
+<a id="zoom"></a>
 ## Zoom Accesible con Lector de Pantalla
 La plataforma Zoom es una opción adecuada para mantener reuniones sincrónicas online, pero presenta desafíos para las personas que se apoyan en un lector de pantalla o son docentes de personas con discapacidad visual.
 
@@ -65,6 +66,7 @@ Mediante este taller práctico de 2 horas, MetaDocencia enseña habilidades téc
 * [Presentación que usamos en el curso](https://docs.google.com/presentation/d/1fbi8_JHPwFGuae8eY2yUVG8WA81g8uxoejEhnGmBShY/edit?usp=sharing) con instrucciones paso a paso de los ejercicios. 
 * [Video del curso](https://youtu.be/p8kjdVAtYsw)
 
+<a id="NASAearthdata"></a>
 ## Introducción al uso de datos NASA Earthdata Cloud para el monitoreo de cambios y disturbios ambientales
 La predicción y la gestión del riesgo de incendios forestales, sequías e inundaciones se han vuelto cada vez más desafiantes a la par del avance en el cambio climático. Estos riesgos naturales están intrínsecamente ligados a la variación en la distribución temporal y espacial del agua superficial, las precipitaciones, la vegetación y el uso del suelo.
 
@@ -83,6 +85,7 @@ Este proyecto incluyó la creación de materiales abiertos, en inglés y en espa
 * Determining Climate Risks with NASA Earthdata Cloud en Scipy 2024
 * [Video de una edición sincrónica](https://youtu.be/r68BUz7dKsQ)
 
+<a id="programar"></a>
 ## Cómo enseñar a programar online
 Las personas con conocimientos de programación que enseñan a otras personas suelen necesitar de más conocimientos sobre buenas prácticas pedagógicas. 
 
