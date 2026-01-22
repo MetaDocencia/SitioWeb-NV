@@ -21,10 +21,10 @@ sections:
           <a href="/en/institucional#institucional"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Institutional</a>
-          <a href="/en/institucional#vision"
+          <a href="/en/institucional/#vision"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Vision and mission</a>
-          <a href="/en/institucional#valores"
+          <a href="/en/institucional/#values"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md text-base"
              style="background:#C83737;color:#FFFFFF;">Our values</a>
         </div>
