@@ -6,6 +6,15 @@ type: "eventos"
 translationKey: "eventos"
 
 items:
+
+  - date: "2026-01-15"
+    place: "Puerto Rico"
+    title: "Train the Trainers at the Arecibo Observatory"
+    summary: "We facilitated a open, Spanish-language course for people who teach (or want to teach) programming and data science."
+    image: "/media/eventos/20260113_Arecibo.jpg"
+    image_alt: "Photo of the classroom in Arecibo during the Teaching Training course."
+    url: "https://metadocencia.github.io/formacion/"
+  
   - date: "2025-12-01"
     place: "Virtual"
     title: "LatinR 2025"
