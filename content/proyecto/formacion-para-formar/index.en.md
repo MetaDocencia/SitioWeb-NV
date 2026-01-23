@@ -23,7 +23,7 @@ It promotes active participation from everyone through group teaching demos, sel
 This Train the Trainer program is informed by and connected to similar open initiatives such as [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/index.html) and the Train the Trainer courses from [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) and [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills). Many concepts also draw from Greg Wilson’s foundational book [Teaching Tech Together](https://teachtogether.tech/es/). At times, MetaDocencia collaborates with organizations like CABANA to organize and facilitate the workshop.
 
 ## More information
-* [MetaDocencia Teaching Training course materials](https://metadocencia.github.io/entrenamiento-docente/index.html)
+* [MetaDocencia Teaching Training course materials](https://metadocencia.github.io/formacion/)
 * Blog post: [Teaching to Teach across Spanish-speaking Communities (Spanish)](/post/metadocencia_carpentries/)
 * [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/index.html)
 * [ELIXIR-GOBLET Train the Trainer course](https://elixir-europe.org/platforms/training/train-the-trainer)
