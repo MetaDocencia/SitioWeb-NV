@@ -24,7 +24,7 @@ Propone la participación activa de todas las personas mediante la práctica con
 Esta Formación para Formar se nutre y está relacionada con iniciativas abiertas similares como el [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) y los cursos Train the Trainer de [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) y de [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills). Además, muchos de sus conceptos provienen del libro [Enseñar tecnología en comunidad](https://teachtogether.tech/es/) de [Greg Wilson](http://third-bit.com/). En ocasiones, MetaDocencia colabora con organizaciones como CABANA para organizar y facilitar el taller.
 
 ## Más
-* Material del curso [Entrenamiento docente de MetaDocencia](https://metadocencia.github.io/entrenamiento-docente/index.html)
+* Material del curso [Entrenamiento docente de MetaDocencia](https://metadocencia.github.io/formacion/)
 * Blogpost: [Enseñando a enseñar entre comunidades en español](/post/metadocencia_carpentries/)
 * Curso [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) 
 * Curso [Train the Trainer de ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer)
