@@ -1,11 +1,19 @@
 ---
 title: "Eventos"
-subtitle: "2025"
+subtitle:
 slug: "eventos"
 type: "eventos"
 translationKey: "eventos"
 
 items:
+
+  - date: "2026-01-15"
+    place: "Puerto Rico"
+    title: "Formación para Enseñar en el Observatorio de Arecibo"
+    summary: "Facilitamos un curso gratuito y en español para quienes enseñan (o quieren enseñar) programación y ciencia de datos."
+    image: "/media/eventos/20260113_Arecibo.jpg"
+    image_alt: "Foto del aula en Arecibo durante la clase Formación para Enseñar."
+    url: "https://metadocencia.github.io/formacion/"
 
   - date: "2025-12-01"
     place: "Virtual"
