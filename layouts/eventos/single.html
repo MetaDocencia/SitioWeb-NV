@@ -25,131 +25,268 @@
     {{ end }}
   </p>
 
-  <!-- Subtítulo dinámico (por ejemplo, año) -->
-  {{ with .Params.subtitle }}
-    <h2
-      id="eventos-{{ . }}"
-      class="mt-4 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
-    >
-      {{ . }}
-    </h2>
-  {{ end }}
-
   {{ $items := .Params.items }}
+
   {{ if $items }}
-    <!-- Grid de tarjetas -->
-    <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-      {{ range $items }}
-        {{ $item := . }}
 
-        <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
-          
-          <!-- Imagen del evento -->
-          {{ with $item.image }}
-            <div class="aspect-[4/3] w-full overflow-hidden">
-              <img src="{{ . | safeURL }}"
-                   alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
-                   class="h-full w-full object-cover">
-            </div>
-          {{ end }}
+    {{/* Agrupación por año */}}
+    {{ $items2026 := where (where $items "date" "ge" "2026-01-01") "date" "lt" "2027-01-01" }}
+    {{ $items2025 := where (where $items "date" "ge" "2025-01-01") "date" "lt" "2026-01-01" }}
 
-          <!-- Contenido de la tarjeta -->
-          <div class="p-5 flex flex-col flex-1">
-            <!-- Meta: fecha + lugar -->
-            <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-              {{ with $item.date }}<span>{{ . }}</span>{{ end }}
-              {{ if and $item.date $item.place }} · {{ end }}
-              {{ with $item.place }}<span>{{ . }}</span>{{ end }}
-            </div>
+    {{/* ====== BLOQUE 2026 (si hay eventos) ====== */}}
+    {{ if $items2026 }}
+      <h2
+        id="eventos-2026"
+        class="mt-6 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
+      >
+        2026
+      </h2>
 
-            <!-- Título -->
-            <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
-              {{ $item.title }}
-            </h2>
+      <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {{ range sort $items2026 "date" "desc" }}
+          {{ $item := . }}
 
-            <!-- Bajada -->
-            {{ with $item.summary }}
-              <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
-                {{ . }}
-              </p>
-            {{ end }}
-
-            <!-- Enlace principal -->
-            {{ with $item.url }}
-              {{/* Texto del botón: se puede sobreescribir por item */}}
-              {{ $btnText := $btnDefault }}
-              {{ with $item.btn }}{{ $btnText = . }}{{ end }}
-              {{ if and (eq $btnText $btnDefault) $isEN }}
-                {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
-              {{ end }}
-              {{ if and (eq $btnText $btnDefault) (not $isEN) }}
-                {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
-              {{ end }}
-
-              <a href="{{ . }}" target="_blank" rel="noopener"
-                 class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
-                {{ $btnText }}
-              </a>
-            {{ end }}
-
-            <!-- Bloque de recursos -->
-            {{ $hasResources := or (or (or (or (or $item.presentation_url $item.poster_url) $item.recording_url) $item.artistic_piece_url) $item.artistic_piece2_url) $item.open_access_book_url }}
-            {{ if $hasResources }}
-              <div class="mt-4">
-                <p class="text-xs font-semibold text-gray-800 dark:text-gray-100">
-                  {{ $resourcesLabel }}:
-                </p>
-                <ul class="mt-1 text-xs text-gray-700 dark:text-gray-200 space-y-0.5 list-disc list-inside">
-                  {{ with $item.presentation_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $presentationLabel }}
-                      </a>
-                    </li>
-                  {{ end }}
-                  {{ with $item.poster_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $posterLabel }}
-                      </a>
-                    </li>
-                  {{ end }}
-                  {{ with $item.recording_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $recordingLabel }}
-                      </a>
-                    </li>
-                  {{ end }}
-                  {{ with $item.artistic_piece_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $artisticPieceLabel }}
-                      </a>
-                    </li>
-                  {{ end }}
-                  {{ with $item.artistic_piece2_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $artisticPiece2Label }}
-                      </a>
-                    </li>
-                  {{ end }}
-                  {{ with $item.open_access_book_url }}
-                    <li>
-                      <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                        {{ $openAccessBookLabel }}
-                      </a>
-                    </li>
-                  {{ end }}
-                </ul>
+          <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
+            
+            <!-- Imagen del evento -->
+            {{ with $item.image }}
+              <div class="aspect-[4/3] w-full overflow-hidden">
+                <img src="{{ . | safeURL }}"
+                     alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
+                     class="h-full w-full object-cover">
               </div>
             {{ end }}
 
-          </div>
-        </article>
+            <!-- Contenido de la tarjeta -->
+            <div class="p-5 flex flex-col flex-1">
+              <!-- Meta: fecha + lugar -->
+              <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                {{ with $item.date }}<span>{{ . }}</span>{{ end }}
+                {{ if and $item.date $item.place }} · {{ end }}
+                {{ with $item.place }}<span>{{ . }}</span>{{ end }}
+              </div>
+
+              <!-- Título -->
+              <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
+                {{ $item.title }}
+              </h2>
+
+              <!-- Bajada -->
+              {{ with $item.summary }}
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
+                  {{ . }}
+                </p>
+              {{ end }}
+
+              <!-- Enlace principal -->
+              {{ with $item.url }}
+                {{/* Texto del botón: se puede sobreescribir por item */}}
+                {{ $btnText := $btnDefault }}
+                {{ with $item.btn }}{{ $btnText = . }}{{ end }}
+                {{ if and (eq $btnText $btnDefault) $isEN }}
+                  {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+                {{ if and (eq $btnText $btnDefault) (not $isEN) }}
+                  {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
+                  {{ $btnText }}
+                </a>
+              {{ end }}
+
+              <!-- Bloque de recursos -->
+              {{ $hasResources := or (or (or (or (or $item.presentation_url $item.poster_url) $item.recording_url) $item.artistic_piece_url) $item.artistic_piece2_url) $item.open_access_book_url }}
+              {{ if $hasResources }}
+                <div class="mt-4">
+                  <p class="text-xs font-semibold text-gray-800 dark:text-gray-100">
+                    {{ $resourcesLabel }}:
+                  </p>
+                  <ul class="mt-1 text-xs text-gray-700 dark:text-gray-200 space-y-0.5 list-disc list-inside">
+                    {{ with $item.presentation_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $presentationLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.poster_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $posterLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.recording_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $recordingLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.artistic_piece_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $artisticPieceLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.artistic_piece2_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $artisticPiece2Label }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.open_access_book_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $openAccessBookLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              {{ end }}
+
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{/* ====== BLOQUE 2025 (usando subtitle si existe) ====== */}}
+    {{ if $items2025 }}
+      {{ with .Params.subtitle }}
+        <h2
+          id="eventos-{{ . }}"
+          class="mt-10 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
+        >
+          {{ . }}
+        </h2>
+      {{ else }}
+        <h2
+          id="eventos-2025"
+          class="mt-10 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
+        >
+          2025
+        </h2>
       {{ end }}
-    </div>
+
+      <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {{ range sort $items2025 "date" "desc" }}
+          {{ $item := . }}
+
+          <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
+            
+            <!-- Imagen del evento -->
+            {{ with $item.image }}
+              <div class="aspect-[4/3] w-full overflow-hidden">
+                <img src="{{ . | safeURL }}"
+                     alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
+                     class="h-full w-full object-cover">
+              </div>
+            {{ end }}
+
+            <!-- Contenido de la tarjeta -->
+            <div class="p-5 flex flex-col flex-1">
+              <!-- Meta: fecha + lugar -->
+              <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                {{ with $item.date }}<span>{{ . }}</span>{{ end }}
+                {{ if and $item.date $item.place }} · {{ end }}
+                {{ with $item.place }}<span>{{ . }}</span>{{ end }}
+              </div>
+
+              <!-- Título -->
+              <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
+                {{ $item.title }}
+              </h2>
+
+              <!-- Bajada -->
+              {{ with $item.summary }}
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
+                  {{ . }}
+                </p>
+              {{ end }}
+
+              <!-- Enlace principal -->
+              {{ with $item.url }}
+                {{ $btnText := $btnDefault }}
+                {{ with $item.btn }}{{ $btnText = . }}{{ end }}
+                {{ if and (eq $btnText $btnDefault) $isEN }}
+                  {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+                {{ if and (eq $btnText $btnDefault) (not $isEN) }}
+                  {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
+                {{ end }}
+
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
+                  {{ $btnText }}
+                </a>
+              {{ end }}
+
+              <!-- Bloque de recursos -->
+              {{ $hasResources := or (or (or (or (or $item.presentation_url $item.poster_url) $item.recording_url) $item.artistic_piece_url) $item.artistic_piece2_url) $item.open_access_book_url }}
+              {{ if $hasResources }}
+                <div class="mt-4">
+                  <p class="text-xs font-semibold text-gray-800 dark:text-gray-100">
+                    {{ $resourcesLabel }}:
+                  </p>
+                  <ul class="mt-1 text-xs text-gray-700 dark:text-gray-200 space-y-0.5 list-disc list-inside">
+                    {{ with $item.presentation_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $presentationLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.poster_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $posterLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.recording_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $recordingLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.artistic_piece_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $artisticPieceLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.artistic_piece2_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $artisticPiece2Label }}
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ with $item.open_access_book_url }}
+                      <li>
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                          {{ $openAccessBookLabel }}
+                        </a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              {{ end }}
+
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+
   {{ else }}
     <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">{{ $empty }}</p>
   {{ end }}
