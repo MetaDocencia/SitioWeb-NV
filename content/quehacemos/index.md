@@ -338,48 +338,46 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
-      # --- Nueva seccion (gris un poco más oscuro) ---
+  # ---------- NUEVA SECCIÓN FEATURES: producción y visibilidad ----------
+  - block: features
+    id: produccion-visibilidad
+    content:
+      title: "Producción y visibilidad"
+      items:
+        - name: "Publicaciones académicas"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Realizamos y compartimos abiertamente investigación que informa y respalda la Ciencia Abierta y la educación en América Latina.
+            <br>
+            <a href="https://metadocencia.org/research/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Ver más
+            </a>
+        - name: "MetaDocencia en los medios"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Conoce qué dicen de MetaDocencia en prensa y blogs.
+            <br>
+            <a href="https://metadocencia.org/prensas/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Ver más
+            </a>
+        - name: "Participaciones en eventos"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Organizamos, dictamos y acompañamos talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
+            <br>
+            <a href="https://metadocencia.org/eventos/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Ver más
+            </a>
+    design:
+      columns: 3
+      css_class: "bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100"
 
-    - block: features
-      id: produccion-visibilidad
-      content:
-        title: 
-        items:
-          - name: "Publicaciones académicas"
-            description: |
-              <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-              Realizamos y compartimos abiertamente investigación que informa y respalda la Ciencia Abierta y la educación en América Latina.
-              <br>
-              <a href="https://metadocencia.org/research/"
-                 class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-                 style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-                 Ver más
-              </a>
-          - name: "MetaDocencia en los medios"
-            description: |
-              <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-              Conoce qué dicen de MetaDocencia en prensa y blogs.
-              <br>
-              <a href="https://metadocencia.org/prensas/"
-                 class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-                 style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-                 Ver más
-              </a>
-          - name: "Participaciones en eventos"
-            description: |
-              <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-              Organizamos, dictamos y acompañamos talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
-              <br>
-              <a href="https://metadocencia.org/eventos/"
-                 class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-                 style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-                 Ver más
-              </a>
-      design:
-        columns: 3
-        css_class: "bg-gray-200 text-gray-900"
-
-    
   # === ESTILOS LOCALES para limitar el alto del HERO ===
   - block: markdown
     id: estilos-hero-que-hacemos
