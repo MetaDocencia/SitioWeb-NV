@@ -342,7 +342,7 @@ sections:
   - block: features
     id: produccion-visibilidad
     content:
-      title: "Producción y visibilidad"
+      title:
       items:
         - name: "Publicaciones académicas"
           description: |
