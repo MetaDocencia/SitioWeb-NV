@@ -338,42 +338,12 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
-      # --- Academic publications (gris un poco más oscuro) ---
-  - block: markdown
-    id: research-pubs
-    content:
-      text: |
-        <style>
-          /* Quitar espacio entre research y prensa */
-          section#research-pubs { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-          section#prensa        { margin-top: 0 !important;  padding-top: 0 !important;  }
-        </style>
+      # --- Nueva seccion (gris un poco más oscuro) ---
 
-        {{< cta_fullwidth
-            id="research-pubs"
-            title="Publicaciones académicas"
-            text="Realizamos y compartimos abiertamente investigación que informa y respalda la Ciencia Abierta y la educación en América Latina."
-            bg="#E5E7EB" color="#111827"
-            variant="background"
-            maxw="1600px"
-            content_maxw="900px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-
-        <a href="/research"
-           class="inline-block font-semibold px-4 py-2 rounded-md"
-           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-          Explora nuestras publicaciones académicas aquí
-        </a>
-
-        {{< /cta_fullwidth >}}
-  # ---------- NUEVA SECCIÓN FEATURES: producción y visibilidad ----------
-  - block: features
+    - block: features
     id: produccion-visibilidad
     content:
-      title: "Producción y visibilidad"
+      title: 
       items:
         - name: "Publicaciones académicas"
           description: |
@@ -407,36 +377,8 @@ sections:
             </a>
     design:
       columns: 3
-      css_class: "bg-gray-50 text-gray-900"
+      css_class: "bg-gray-200 text-gray-900"
 
-
-  # ======================
-  #  SECCIÓN FINAL: MetaDocencia en los medios (markdown centrado)
-  # ======================
-  - block: markdown
-    id: prensa
-    content:
-      text: |
-        {{< cta_fullwidth
-            id="prensa"
-            title="MetaDocencia en los medios"
-            text="Conoce qué dicen de MetaDocencia en prensa y blogs."
-            bg="#F3F4F6" color="#111827"
-            variant="background"
-            maxw="1600px"
-            content_maxw="900px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-  
-        <a href="/prensas/"
-           class="inline-block font-semibold px-4 py-2 rounded-md"
-           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;margin-top:1rem;">
-        Ver menciones
-        </a>
-  
-        {{< /cta_fullwidth >}}
     
   # === ESTILOS LOCALES para limitar el alto del HERO ===
   - block: markdown
