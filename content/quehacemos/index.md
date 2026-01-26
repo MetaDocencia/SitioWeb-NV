@@ -357,7 +357,7 @@ sections:
         - name: "MetaDocencia en los medios"
           description: |
             <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Conoce qué dicen de MetaDocencia en prensa y blogs.
+            Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia.
             <br>
             <a href="https://metadocencia.org/prensas/"
                class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
