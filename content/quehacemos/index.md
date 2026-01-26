@@ -367,7 +367,7 @@ sections:
         - name: "Participaciones en eventos"
           description: |
             <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Organizamos, dictamos y acompañamos talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta, fortalecer redes de colaboración y construir capacidades desde y para la región.
+            Organizamos, dictamos y acompañamos talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta.
             <br>
             <a href="https://metadocencia.org/eventos/"
                class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
