@@ -91,7 +91,7 @@ sections:
         - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
+            We provide tools and trusted guidance to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/gobernanza-2022/">Discover more →</a>
@@ -140,7 +140,6 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/revision-abierta/">Learn more →</a><br>
-    
         - name: "Open Data Processing"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -202,7 +201,7 @@ sections:
         - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
+            We design and deliver training cohorts in Spanish to advance the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/nasa-spanish/">Learn more →</a>
@@ -252,10 +251,10 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: "PhD in Economics, professor and researcher"
-          text: "Don’t miss this- They’re hyper-professional, and the work they do is excellent."
+          text: "Don’t miss this—They’re hyper-professional, and the work they do is excellent."
         - name: "Emmanuel Iarussi"
           role: "Scientist at CONICET and professor at UTDT, former Advisory Committee member"
-          text: "The course was excellent. You gave me back the drive to teach —online education can be far more human than I ever imagined."
+          text: "The course was excellent. You gave me back the drive to teach — online education can be far more human than I ever imagined."
         - name: "Marina Compagnucci"
           role: "Biologist and MetaDocencia contributor, with a key role in the design and adaptation of NASA Open Science content for Latin America."
           text: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It’s no surprise that creative proposals emerge when dialogue feels natural and reassuring."
@@ -289,7 +288,7 @@ sections:
         - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
+            We provide tools and trusted guidance to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/gobernanza-2022/">Learn more →</a>
@@ -337,64 +336,44 @@ sections:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
 
-      # --- Academic publications (gris un poco más oscuro) ---
-  - block: markdown
-    id: research-pubs
+  # ---------- NEW FEATURES SECTION: research, events, media ----------
+  - block: features
+    id: production-visibility
     content:
-      text: |
-        <style>
-          /* Quitar espacio entre research y prensa */
-          section#research-pubs { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-          section#prensa        { margin-top: 0 !important;  padding-top: 0 !important;  }
-        </style>
-
-        {{< cta_fullwidth
-            id="research-pubs"
-            title="Academic Publications"
-            text="We conduct and openly share research that informs and supports open science and education in Latin America."
-            bg="#E5E7EB" color="#111827"
-            variant="background"
-            maxw="1600px"
-            content_maxw="900px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-
-        <a href="/en/research"
-           class="inline-block font-semibold px-4 py-2 rounded-md"
-           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-          Explore our academic publications here
-        </a>
-
-        {{< /cta_fullwidth >}}
-
-  # ======================
-  #  FINAL SECTION: MetaDocencia in the Media
-  # ======================
-  - block: markdown
-    id: prensa
-    content:
-      text: |
-        {{< cta_fullwidth
-            id="prensa"
-            title="MetaDocencia in the Media"
-            text="Explore how the press is covering our impact in science and education"
-            bg="#F3F4F6" color="#111827"
-            variant="background"
-            maxw="1600px"
-            content_maxw="900px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-
-        <a href="/en/prensas/"
-           class="inline-block font-semibold px-4 py-2 rounded-md"
-           style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-          See mentions
-        </a>
-
-        {{< /cta_fullwidth >}}
+      title: "Research, events, and visibility"
+      items:
+        - name: "Academic Publications"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            We conduct and openly share research that informs and supports open science and education in Latin America.
+            <br>
+            <a href="https://metadocencia.org/en/research/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Learn more
+            </a>
+        - name: "Events"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            We participate in regional and international events by organizing, delivering, and supporting workshops, panels, and talks.
+            <br>
+            <a href="https://metadocencia.org/en/eventos/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Learn more
+            </a>
+        - name: "MetaDocencia in the Media"
+          description: |
+            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Explore how the press is covering our impact in science and education.
+            <br>
+            <a href="https://metadocencia.org/en/prensas/"
+               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
+               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
+               Learn more
+            </a>
+    design:
+      columns: 3
+      css_class: "bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100"
 
 ---
