@@ -91,7 +91,7 @@ sections:
         - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and trusted guidance to help people and organizations lead with purpose, efficiency, and lasting impact.
+            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/gobernanza-2022/">Discover more →</a>
@@ -140,6 +140,7 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/revision-abierta/">Learn more →</a><br>
+    
         - name: "Open Data Processing"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
@@ -201,7 +202,7 @@ sections:
         - name: "Contextualized Open Science Training"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We design and deliver training cohorts in Spanish to advance the principles and tools of Open Science, with support from NASA, and for Latin America.
+            We design and deliver training cohorts in Spanish to advance  the principles and tools of Open Science, with support from NASA, and for Latin America.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/nasa-spanish/">Learn more →</a>
@@ -251,10 +252,10 @@ sections:
       items:
         - name: "Walter Sosa Escudero"
           role: "PhD in Economics, professor and researcher"
-          text: "Don’t miss this—They’re hyper-professional, and the work they do is excellent."
+          text: "Don’t miss this- They’re hyper-professional, and the work they do is excellent."
         - name: "Emmanuel Iarussi"
           role: "Scientist at CONICET and professor at UTDT, former Advisory Committee member"
-          text: "The course was excellent. You gave me back the drive to teach — online education can be far more human than I ever imagined."
+          text: "The course was excellent. You gave me back the drive to teach —online education can be far more human than I ever imagined."
         - name: "Marina Compagnucci"
           role: "Biologist and MetaDocencia contributor, with a key role in the design and adaptation of NASA Open Science content for Latin America."
           text: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It’s no surprise that creative proposals emerge when dialogue feels natural and reassuring."
@@ -288,7 +289,7 @@ sections:
         - name: "Shaping Governance for Impact"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We provide tools and trusted guidance to help people and organizations lead with purpose, efficiency, and lasting impact.
+            We provide tools and trusted guidance  to help people and organizations lead with purpose, efficiency, and lasting impact.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/gobernanza-2022/">Learn more →</a>
@@ -365,7 +366,7 @@ sections:
         - name: "MetaDocencia in the Media"
           description: |
             <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Explore how the press is covering our impact in science and education.
+            Explore how the press is covering our impact in science and education
             <br>
             <a href="https://metadocencia.org/en/prensas/"
                class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
