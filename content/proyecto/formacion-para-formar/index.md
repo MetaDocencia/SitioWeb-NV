@@ -5,13 +5,16 @@ date: 2025-09-23
 tags:
   - Formación
   - Proyectos
+url: "/proyecto/formacion-para-ensenar/"
+aliases:
+  - "/proyecto/formacion-para-formar/"
 ---
 
 ## Necesitamos
 Muchas personas interesadas en enseñar no recibieron entrenamiento sobre cómo hacerlo en forma efectiva. Esto incluye a profesionales con amplio conocimiento sobre su disciplina que necesitan mejorar el diseño, la preparación y el dictado de sus clases.
 
 ## Ofrecemos
-La Formación para Formar de MetaDocencia atiende la demanda de habilidades pedagógicas prácticas en comunidades hispanohablantes dedicadas a la ciencia y la tecnología. 
+La Formación para enseñar de MetaDocencia atiende la demanda de habilidades pedagógicas prácticas en comunidades hispanohablantes dedicadas a la ciencia y la tecnología. 
 
 ## Somos
 Este curso se alinea con la misión y la trayectoria de MetaDocencia al fortalecer las capacidades docentes con recursos abiertos y accesibles. MetaDocencia trabaja habitual y directamente con personas de comunidades latinoamericanas y se asocia con organizaciones de todo el mundo para sumar apoyo institucional relevante.
@@ -21,7 +24,7 @@ Este curso se ofrece en modalidad virtual con una clase sincrónica semanal dura
 Combina sesiones de teoría y práctica sobre el diseño y la enseñanza de contenidos, desde la definición de la audiencia y los resultados esperados, cubriendo teoría de aprendizaje, memoria, carga cognitiva, estilos de evaluación, seguimiento y devoluciones, etc. 
 Propone la participación activa de todas las personas mediante la práctica con simulaciones grupales, ejercicios de autoevaluación, pausas a intervalos regulares y la participación en una reunión virtual posterior para demostrar las habilidades aprendidas y completar la certificación. Todos los materiales del curso están disponibles bajo licencia abierta y se da orientación para reutilizarlos.
 
-Esta Formación para Formar se nutre y está relacionada con iniciativas abiertas similares como el [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) y los cursos Train the Trainer de [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) y de [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills). Además, muchos de sus conceptos provienen del libro [Enseñar tecnología en comunidad](https://teachtogether.tech/es/) de [Greg Wilson](http://third-bit.com/). En ocasiones, MetaDocencia colabora con organizaciones como CABANA para organizar y facilitar el taller.
+Esta Formación para enseñar se nutre y está relacionada con iniciativas abiertas similares como el [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) y los cursos Train the Trainer de [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) y de [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills). Además, muchos de sus conceptos provienen del libro [Enseñar tecnología en comunidad](https://teachtogether.tech/es/) de [Greg Wilson](http://third-bit.com/). En ocasiones, MetaDocencia colabora con organizaciones como CABANA para organizar y facilitar el taller.
 
 ## Más
 * Material del curso [Entrenamiento docente de MetaDocencia](https://metadocencia.github.io/formacion/)
