@@ -18,5 +18,5 @@ Nuestra sincera gratitud a las más de 6.000 personas que participan, contribuye
 
 Encuentra el reporte completo también en Zenodo: https://doi.org/10.5281/zenodo.17943216
 
-<iframe src="https://docs.google.com/presentation/d/1aTdCqJ7j2b9GnIJeXPbn59_i-BYM_sKlh0tUSBH7ipk/edit?usp=sharing" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/1aTdCqJ7j2b9GnIJeXPbn59_i-BYM_sKlh0tUSBH7ipk/embed" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
