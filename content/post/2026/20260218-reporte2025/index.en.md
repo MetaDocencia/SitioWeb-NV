@@ -1,7 +1,7 @@
 ---
 title: "2025 Report"
 summary: "This report shares the main results from last year and the learnings that come from community-driven work."
-date: 2026-02-19
+date: 2026-02-18
 translationKey: "20260218-reporte2025"
 tags:
   - MetaDocencia
