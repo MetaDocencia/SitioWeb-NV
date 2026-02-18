@@ -20,7 +20,7 @@ interests:
 - Open Science
 name: Jesica Formoso
 weight: 4
-role: Impact Measurement 
+role: Research and Impact Measurement 
 social:
 - icon: envelope
   icon_pack: fas
@@ -46,5 +46,6 @@ As a community organizer at R-Ladies, Jesica promotes diversity and participatio
 Her certification as an instructor reflects her commitment to education and dissemination of data science skills.
 
 Inside the team, Jesi has won the Generosity Award for sharing her meticulous approach, her strong analytical skills, her joy and the unique dimension she brings from her psi perspective.
+
 
 
