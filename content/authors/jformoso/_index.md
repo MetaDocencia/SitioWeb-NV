@@ -19,7 +19,7 @@ interests:
 - Psicología cognitiva y experimental
 name: Jesica Formoso
 weight: 4
-role: Medición de Impacto
+role: Investigación y Medición de Impacto
 social:
 - icon: envelope
   icon_pack: fas
