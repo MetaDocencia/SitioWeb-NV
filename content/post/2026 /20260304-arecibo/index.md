@@ -1,7 +1,7 @@
 ---
 title: "Formación para enseñar: edición presencial en Arecibo (Puerto Rico)"
 summary: "Entre el 14 y el 16 de enero de 2026 facilitamos una edición presencial de Formación para enseñar en el Arecibo C3 STEM Center (Puerto Rico). El curso fue gratuito y en español, orientado a personas que enseñan (o quieren enseñar) programación y ciencia de datos."
-date: 2026-02-18
+date: 2026-03-04
 translationKey: "20260218-formacion-arecibo"
 authors:
   - jformoso
