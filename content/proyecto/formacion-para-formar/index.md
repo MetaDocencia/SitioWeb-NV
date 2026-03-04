@@ -20,7 +20,7 @@ La Formación para enseñar de MetaDocencia atiende la demanda de habilidades pe
 Este curso se alinea con la misión y la trayectoria de MetaDocencia al fortalecer las capacidades docentes con recursos abiertos y accesibles. MetaDocencia trabaja habitual y directamente con personas de comunidades latinoamericanas y se asocia con organizaciones de todo el mundo para sumar apoyo institucional relevante.
 
 ## Hacemos
-Este curso se ofrece en modalidad virtual con una clase sincrónica semanal durante 6 semanas. También está disponible en modalidad presencial con formato intensivo de 2 jornadas consecutivas.
+Este curso se ofrece tanto en modalidad virtual como presencial.
 Combina sesiones de teoría y práctica sobre el diseño y la enseñanza de contenidos, desde la definición de la audiencia y los resultados esperados, cubriendo teoría de aprendizaje, memoria, carga cognitiva, estilos de evaluación, seguimiento y devoluciones, etc. 
 Propone la participación activa de todas las personas mediante la práctica con simulaciones grupales, ejercicios de autoevaluación, pausas a intervalos regulares y la participación en una reunión virtual posterior para demostrar las habilidades aprendidas y completar la certificación. Todos los materiales del curso están disponibles bajo licencia abierta y se da orientación para reutilizarlos.
 
