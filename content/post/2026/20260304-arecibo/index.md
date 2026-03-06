@@ -25,13 +25,12 @@ Entre el 14 y el 16 de enero de 2026 facilitamos una edición presencial de [For
 ## Qué trabajamos durante el curso
 [Formación para enseñar](https://metadocencia.org/proyecto/formacion-para-ensenar/) está pensado para acompañar a comunidades hispanohablantes en el desarrollo de habilidades pedagógicas prácticas. El objetivo es multiplicar el aprendizaje y potenciar el impacto colectivo.
 Trabajamos, entre otros temas, en:
-Reconocer niveles de conocimiento y modelos mentales de la audiencia.
-Diseñar clases con objetivos claros y ejercicios simples para evitar la sobrecarga cognitiva.
-Construir entornos de enseñanza seguros y abiertos.
-Practicar programación en vivo (“live-coding”) con claridad.
-Dar y recibir retroalimentación para mejorar la enseñanza y el aprendizaje.
-La propuesta busca cubrir una necesidad frecuente: muchas personas con experiencia disciplinar no tuvieron formación específica para enseñar de forma efectiva.
-Podemos facilitar el curso tanto en modalidad virtual como presencial. 
+* Reconocer niveles de conocimiento y modelos mentales de la audiencia.
+* Diseñar clases con objetivos claros y ejercicios simples para evitar la sobrecarga cognitiva.
+* Construir entornos de enseñanza seguros y abiertos.
+* Practicar programación en vivo (“live coding”) con claridad.
+* Dar y recibir retroalimentación para mejorar la enseñanza y el aprendizaje.
+La propuesta busca cubrir una necesidad frecuente: muchas personas con experiencia disciplinar pueden beneficiarse de formación específica para enseñar de forma efectiva.
 
 ![Foto en el aula durante el taller. De espaldas 6 estudiantes sentados trabajando en computadoras. De frente María dando la clase acompañada de una presentación proyectada con el título "Ejercicio 8"](/img/20260304_arecibo2.jpg)
 
