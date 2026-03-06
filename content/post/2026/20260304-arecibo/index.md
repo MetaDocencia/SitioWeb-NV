@@ -38,6 +38,8 @@ La propuesta busca cubrir una necesidad frecuente: muchas personas con experienc
 Antes de visitar Arecibo renovamos los contenidos y actividades de [Formación para enseñar](https://metadocencia.org/proyecto/formacion-para-ensenar/).
 Los nuevos materiales están disponibles bajo licencia abierta para explorar, reutilizar y adaptar, en https://metadocencia.github.io/formacion/
 
+Podemos facilitar el curso tanto en modalidad virtual como presencial. 
+
 Es nuestro primer curso en usar la plantilla de cursos de MetaDocencia, adaptada del valioso [Workbench](https://carpentries.github.io/workbench/) de The Carpentries.
 La propuesta se nutre de iniciativas afines como el [Instructor Training](https://carpentries.github.io/instructor-training/index.html) de [The Carpentries](https://carpentries.org/), los cursos Train the Trainer de [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) y [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills) y el libro [Enseñar tecnología en comunidad](https://teachtogether.tech/es/) de [Greg Wilson](http://third-bit.com/).
 
