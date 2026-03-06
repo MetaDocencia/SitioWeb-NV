@@ -32,8 +32,8 @@ The program responds to a common need: many people with strong disciplinary expe
 ![Photo taken in the classroom during the workshop. Six students are seated with their backs to the camera, working on computers. María is facing the camera, teaching the class, accompanied by a projected presentation titled "Exercise 8."](/img/20260304_arecibo2.jpg)
 
 ## About the program
-Before visiting Arecibo, we updated the content and activities of our [Train the Trainer](https://metadocencia.org/en/proyecto/formacion-para-formar/). The new materials are openly licensed and available to explore, reuse, and adapt at:
-https://metadocencia.github.io/formacion/
+Before visiting Arecibo, we updated the content and activities of our [Train the Trainer](https://metadocencia.org/en/proyecto/formacion-para-formar/). The new materials are openly licensed and available to explore, reuse, and adapt at: https://metadocencia.github.io/formacion/
+
 This is our first course using MetaDocencia’s course template, adapted from The Carpentries’ [Workbench](https://carpentries.github.io/workbench/). The program draws on and connects with similar open initiatives such as [The Carpentries](https://carpentries.org/) [Instructor Training](https://carpentries.github.io/instructor-training/index.html), the Train the Trainer courses from [ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer) and [EMBL-EBI](https://www.ebi.ac.uk/training/trainer-support/expand-your-training-skills), and [Greg Wilson](http://third-bit.com/)’s book [Teaching Tech Together](https://teachtogether.tech/en/index.html).
 
 Did you like this publication? You can reuse it freely under CC BY 4.0 license, just remember to cite it.
