@@ -38,4 +38,4 @@ This is our first course using MetaDocencia’s course template, adapted from Th
 
 Did you like this publication? You can reuse it freely under CC BY 4.0 license, just remember to cite it.
 This is the recommended citation to use for reference:
-Jesica Formoso, Nicolás Palopoli, Julián Buede. (2026). Train the Trainer: In-person edition in Arecibo (Puerto Rico). Zenodo. https://doi.org/10.5281/zenodo.NNNNNN
+Jesica Formoso, Nicolás Palopoli, Julián Buede. (2026). Train the Trainer: In-person edition in Arecibo (Puerto Rico). Zenodo. [https://doi.org/10.5281/zenodo.18924253](https://doi.org/10.5281/zenodo.18924253)
