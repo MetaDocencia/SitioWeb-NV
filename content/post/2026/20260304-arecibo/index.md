@@ -45,5 +45,5 @@ La propuesta se nutre de iniciativas afines como el [Instructor Training](https:
 
 
 ¿Te gustó esta publicación? Puedes reutilizarla libremente bajo licencia CC by 4.0, solo tienes que citarla.
-Esta es la cita que te recomendamos usar para referenciarla: Jesica Formoso, Nicolás Palopoli, Julián Buede (2026). Formación para enseñar: edición presencial en Arecibo (Puerto Rico). Zenodo. https://doi.org/10.5281/zenodo.NNNNNNN
+Esta es la cita que te recomendamos usar para referenciarla: Jesica Formoso, Nicolás Palopoli, Julián Buede (2026). Formación para enseñar: edición presencial en Arecibo (Puerto Rico). Zenodo. [https://doi.org/10.5281/zenodo.18924197](https://doi.org/10.5281/zenodo.18924197)
 
