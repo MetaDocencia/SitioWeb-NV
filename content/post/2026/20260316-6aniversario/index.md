@@ -22,7 +22,7 @@ Impulsar la infraestructura de investigación mediante investigación rigurosa y
 
 ## Lanzamos “Herramientas de Ciencia Abierta”
 Este año celebramos el aniversario con una gran noticia: lanzamos Herramientas de Ciencia Abierta, una propuesta renovada de formación en Ciencia Abierta en español.
-Es un curso virtual, gratuito y en español, pensado para conocer principios de la Ciencia Abierta y avanzar hacia su implementación, con recursos abiertos y contextualizados, y una red de intercambio entre pares. En nuestras redes sociales compartimos toda la información sobre las inscripciones.
+Es un curso virtual, gratuito y en español, pensado para conocer principios de la Ciencia Abierta y avanzar hacia su implementación, con recursos abiertos y contextualizados, y una red de intercambio entre pares. En [Slack](https://w3id.org/metadocencia/slack) y nuestras redes sociales compartimos toda la información sobre las inscripciones.
 
 ![Curso virtual - 4 semanas. Herramientas de Ciencia Abierta. Un recorrido situado por sus principios y prácticas.](/img/20260313_HCA1.jpg) 
 
