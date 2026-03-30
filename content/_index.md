@@ -10,16 +10,17 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Inscripciones abiertas para Herramientas de Ciencia Abierta</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
-          <span class="block">Curso virtual, gratuito y en español</span>
+          <span class="block">Más colaboración.</span>
+          <span class="block">Menos barreras para saberes que transforman.</span>
         </p>
-        <a href="https://metadocencia.github.io/herramientas-de-ciencia-abierta-abril-2026/"
+        <a href="/cta"
            class="inline-block mt-6 text-lg md:text-xl font-extrabold px-7 py-4 rounded-2xl shadow-lg no-underline
                   bg-[#C83737] hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C83737]
                   text-white">
-          Conoce más
+          Súmate
         </a>
     design:
       spacing:
