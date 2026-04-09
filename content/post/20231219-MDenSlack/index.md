@@ -23,13 +23,12 @@ categories:
   - Institucional
 ---
 [Slack](https://w3id.org/metadocencia/slack) es una plataforma de mensajería online que usamos como espacio de encuentro, diálogo e intercambio de información y recursos. Permite generar canales temáticos, lo que facilita seguir conversaciones específicas sin perderse en el ruido general.
-
 ![Captura de la plataforma de Slack donde se ve cómo aparecen los intercambios en los distintos canales](/img/20260409_captura-slack.jpg) 
-
 *Imagen del Slack de MetaDocencia.*
 
 
 ## ¿Para qué lo usamos?
+
 En Slack construimos comunidad y mantenemos activo el intercambio. Usamos esta plataforma para:
 * anunciar novedades de nuestros proyectos y actividades
 * acompañar la cursada de nuestras propuestas de formación
@@ -45,6 +44,7 @@ La participación es libre y abierta para cualquier persona que quiera sumarse y
 2. Si todavía no tienes cuenta en Slack, puedes crearla en el momento. Por ejemplo, usando tu cuenta de Google.
 3. ¡Listo! Puedes usar Slack desde el navegador o descargando la app.
 
+
 **Video ¿Cómo sumarte al Slack de MetaDocencia?**
 {{< youtube uLOFKXXxMec >}}
 
@@ -53,6 +53,7 @@ La participación es libre y abierta para cualquier persona que quiera sumarse y
 Para que todas las personas se sientan cómodas y sepan cómo contribuir al intercambio, generamos una guía de participación en nuestro Slack. Incluye pautas y sugerencias de uso, instrucciones para configurar tu perfil y la descripción de cada uno de los canales públicos para conversar sobre temas específicos.
 
 [Guía para la participación en el Slack de MetaDocencia](https://zenodo.org/records/10028136)
+
 
 
 *¿Te gustó esta publicación? Puedes reutilizarla libremente bajo licencia CC by 4.0, solo tienes que citarla.* 
