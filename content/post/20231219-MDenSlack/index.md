@@ -8,7 +8,7 @@ linktitle: Slack 2023
 summary: Slack es una plataforma de mensajería online que usamos como espacio de encuentro, diálogo e intercambio de información y recursos. Allí construimos comunidad y mantenemos activo el intercambio."
 authors:
 - jbuede
-- ivazano
+- irene-vazano
 - npalopoli
 - laurel
 - melissa
