@@ -1,0 +1,127 @@
+# Testimonios de MetaDocencia
+# Campos:
+#   id:        identificador único (slug, sin tildes ni espacios)
+#   nombre:    nombre completo o handle
+#   rol:       cargo o rol (opcional)
+#   org:       organización (opcional)
+#   cita:      texto del testimonio
+#   categoria: formacion | comunidad | infraestructura
+#   año:       "2020", "2021", etc. — dejar vacío ("") si no se conoce
+#   link:      URL a la fuente original (opcional)
+
+- id: natsumi-shokida
+  nombre: "Natsumi Shokida"
+  rol: ""
+  org: ""
+  cita: "I would like all my master teachers to implement your tips and tools."
+  categoria: "formacion"
+  año: ""
+  link: ""
+
+- id: walter-sosa-escudero
+  nombre: "Walter Sosa Escudero"
+  rol: ""
+  org: ""
+  cita: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
+  categoria: "formacion"
+  año: "2021"
+  link: ""
+
+- id: emmanuel-iarussi
+  nombre: "Emmanuel Iarussi"
+  rol: ""
+  org: ""
+  cita: "El curso fue excelente. Me devolvieron el impulso de enseñar. Odiaba mucho todo acerca de tener que enseñar en línea, pero me mostraron que se puede hacer algo agradable. Ni siquiera podía imaginar la posibilidad de que esto fuera factible. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
+  categoria: "formacion"
+  año: "2020"
+  link: ""
+
+- id: fernando-torres
+  nombre: "Fernando Torres"
+  rol: ""
+  org: ""
+  cita: "Excelente el curso de hoy, súper claro, didáctico, aplicable, una recomendación buena tras otra, cierra por todos lados. Recomendable 100%. Y además, gratis. Infinitas gracias por tanta dedicación, empatía y compromiso."
+  categoria: "formacion"
+  año: "2020"
+  link: ""
+
+- id: lorena-laffitte
+  nombre: "Lorena Laffitte"
+  rol: ""
+  org: ""
+  cita: "Recién terminado. Espectacular, sumamente interesante y constructivo. Muchas gracias por compartir su experiencia y conocimiento, en esto que para muchos es nuevo y que además de todo requiere de creatividad, humildad y generosidad. Las tres estuvieron en el taller."
+  categoria: "formacion"
+  año: "2020"
+  link: ""
+
+- id: bynans1
+  nombre: "@bynans1"
+  rol: ""
+  org: ""
+  cita: 'Recién terminé el curso "Cómo aprender a programar online" de MetaDocencia. Es imperdible si enseñan programación de manera no presencial. Saber programar no es lo mismo que saber enseñar a programar, y aún con bastante experiencia dando clases online me llevé muchísimo de este taller gratuito de 1 mañana.'
+  categoria: "formacion"
+  año: "2021"
+  link: ""
+
+- id: andres-olivera
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: ""
+  cita: "Pocas ecuaciones son tan favorables como esta: Ciencia Abierta + Español + Certificado + Gratis = Transformación regional."
+  categoria: "formacion"
+  año: ""
+  link: ""
+
+- id: julio-zetter
+  nombre: "Julio Zetter"
+  rol: ""
+  org: ""
+  cita: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto, MetaDocencia."
+  categoria: "formacion"
+  año: ""
+  link: ""
+
+- id: jesica-niz
+  nombre: "Jesica Niz"
+  rol: ""
+  org: ""
+  cita: "Agradezco al equipo de MetaDocencia por su dedicación y por crear este espacio de aprendizaje tan enriquecedor."
+  categoria: "formacion"
+  año: ""
+  link: ""
+
+- id: laura-dillon
+  nombre: "Laura Dillon"
+  rol: ""
+  org: ""
+  cita: "Gracias al equipo de MetaDocencia que hacen una educación inclusiva real."
+  categoria: "formacion"
+  año: ""
+  link: ""
+
+- id: andres-kamaid
+  nombre: "Andrés Kamaid"
+  rol: "Investigador"
+  org: "Institut Pasteur Montevideo"
+  cita: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
+  categoria: "comunidad"
+  año: ""
+  link: ""
+
+- id: veronica-xhardez
+  nombre: "Verónica Xhardez"
+  rol: ""
+  org: "ARPHAI"
+  cita: "¡Cuánto aprendizaje colectivo por el camino! Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
+  categoria: "comunidad"
+  año: ""
+  link: ""
+
+- id: lisanna-paladin
+  nombre: "Lisanna Paladin"
+  rol: ""
+  org: "Bio-IT"
+  cita: "Really cool initiative from MetaDocencia, showcasing different (scientific) communities and interviewing them about how they build a sense of community in the first place."
+  categoria: "comunidad"
+  año: ""
+  link: ""
