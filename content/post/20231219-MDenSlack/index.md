@@ -59,4 +59,4 @@ Para que todas las personas se sientan cómodas y sepan cómo contribuir al inte
 *¿Te gustó esta publicación? Puedes reutilizarla libremente bajo licencia CC by 4.0, solo tienes que citarla.* 
 
 Esta es la cita que te recomendamos usar para referenciarla: 
-Buede, J., Vazano, I., Palopoli, N., Ascenzi, L., Black, M., Alonso, M., Pendino, R., & López, S. (2023). MetaDocencia en Slack. Zenodo. [https://doi.org/10.5281/zenodo.10402367](https://doi.org/10.5281/zenodo.10402367)
+Buede, J., Vazano, I., Palopoli, N., Ascenzi, L., Black, M., Alonso, M., Pendino, R., & López, S. (2026). MetaDocencia en Slack. Zenodo. [https://doi.org/10.5281/zenodo.10402367](https://doi.org/10.5281/zenodo.10402367)
