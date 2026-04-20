@@ -1,0 +1,681 @@
+# Testimonios de MetaDocencia
+# Campos:
+#   id:        identificador único (slug)
+#   nombre:    nombre completo (o @handle si no se conoce el nombre real)
+#   rol:       cargo o rol (opcional)
+#   org:       organización (opcional)
+#   cita:      texto del testimonio en español
+#   en_cita:   traducción al inglés (omitir si ya está en inglés en cita)
+#   categoria: formacion | comunidad | infraestructura | contextualizacion
+#   año:       "2020", "2021", etc. — dejar vacío ("") si no se conoce
+#   link:      URL a la fuente original (vacío si no se tiene)
+
+# ── INFRAESTRUCTURA ────────────────────────────────────────────────────
+
+- id: wolovick-2025
+  nombre: "Nicolás Wolovick"
+  rol: "Director"
+  org: "UNC Supercómputo"
+  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
+  en_cita: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+- id: olivera-2025
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: "Latin America Bioimaging"
+  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+  en_cita: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+- id: vanesa-ruiz-2023
+  nombre: "Vanesa Ruiz"
+  rol: ""
+  org: ""
+  cita: "Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen, realizando la contextualización de los contenidos de Ciencia Abierta para América Latina. ¡Un gran equipo colaborativo!"
+  en_cita: "Grateful to be part of MetaDocencia as an External Collaborator on the Polen Project, contextualizing Open Science content for Latin America. A wonderful collaborative team!"
+  categoria: "infraestructura"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ"
+
+# ── CONTEXTUALIZACIÓN ──────────────────────────────────────────────────
+
+- id: vera-jimena-2026
+  nombre: "María Jimena Vera"
+  rol: ""
+  org: ""
+  cita: "Tuve la enorme oportunidad de participar en la primera contextualización colectiva en 2024, orientada a fortalecer la accesibilidad y la pertinencia del curso para comunidades hispanohablantes, mediante su traducción y adaptación situada al contexto regional."
+  en_cita: "I had the enormous opportunity to participate in the first collective contextualization in 2024, aimed at strengthening the accessibility and relevance of the course for Spanish-speaking communities through its translation and situated adaptation to the regional context."
+  categoria: "contextualizacion"
+  año: "2026"
+  link: "https://www.linkedin.com/posts/verajimena_segunda-iteraci%C3%B3n-de-recursos-educativos-activity-7430385762501541888-zgzh"
+
+# ── FORMACIÓN ──────────────────────────────────────────────────────────
+
+- id: fernando-torres-2020
+  nombre: "Fernando Torres"
+  rol: ""
+  org: ""
+  cita: "Excelente el curso de hoy, súper claro, didáctico, aplicable, una recomendación buena tras otra, cierra por todos lados. Recomendable 100%. Y además, gratis. Infinitas gracias por tanta dedicación, empatía y compromiso."
+  en_cita: "Excellent workshop today — super clear, educational, practical, one good recommendation after another. It works on every level. Highly recommended, 100%. And free. Endless thanks for so much dedication, empathy, and commitment."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://twitter.com/torresf1973/status/1249007107153821696"
+
+- id: lorena-laffitte-2020
+  nombre: "Lorena Laffitte"
+  rol: ""
+  org: ""
+  cita: "Recién terminado. Espectacular, sumamente interesante y constructivo. Muchas gracias por compartir su experiencia y conocimiento, en esto que para muchos es nuevo y que además de todo requiere de creatividad, humildad y generosidad. Las tres estuvieron en el taller."
+  en_cita: "Just finished. Spectacular, extremely interesting and constructive. Thank you so much for sharing your experience and knowledge in something that is new for many of us and that requires creativity, humility, and generosity. All three were present throughout the workshop."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://twitter.com/lorelaffitte/status/1248992029037809664"
+
+- id: emmanuel-iarussi-2020
+  nombre: "Emmanuel Iarussi"
+  rol: ""
+  org: ""
+  cita: "El curso fue excelente. Me devolvieron el impulso de enseñar. Odiaba mucho todo acerca de tener que enseñar en línea, pero me mostraron que se puede hacer algo agradable. Ni siquiera podía imaginar la posibilidad de que esto fuera factible. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
+  en_cita: "The course was excellent. You gave me back the drive to teach — online education can be far more human than I ever imagined."
+  categoria: "formacion"
+  año: "2020"
+  link: ""
+
+- id: yuriko-sosa-2020
+  nombre: "Yuriko Sosa"
+  rol: ""
+  org: ""
+  cita: "Con mucha alegría, acabo de recibir la invitación para el taller Intro al ABC para enseñar online de MetaDocencia. ¡Ya quiero que sea viernes! Gracias por esto que hacen."
+  en_cita: "With great joy, I just received the invitation to MetaDocencia's Intro to the ABCs of Online Teaching workshop. I can't wait for Friday! Thank you for what you do."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://twitter.com/YkSosaP/status/1249068691347705858"
+
+- id: sol-osman-2020
+  nombre: "Sol Osman"
+  rol: ""
+  org: ""
+  cita: "Gracias MetaDocencia por el curso de Introducción al ABC para enseñar online. Útil y gratuito. Las mejores 3 horas invertidas en aprender algo nuevo."
+  en_cita: "Thank you MetaDocencia for the Introduction to the ABCs of Online Teaching course. Useful and free. The best 3 hours I've invested in learning something new."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://twitter.com/marisol_osman/status/1250077903171223553"
+
+- id: valentin-alvarez-2020
+  nombre: "Valentín Álvarez"
+  rol: ""
+  org: ""
+  cita: "A les docentes en la sala, aprovechen los recursos de MetaDocencia. Es de esas cosas que necesitabas y no lo sabías."
+  en_cita: "For the teachers in the room: take advantage of MetaDocencia's resources. It's one of those things you needed without even knowing it."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://twitter.com/valvarezmr/status/1250223788777709568"
+
+- id: hallucigeniaok-2020
+  nombre: "Martín Ezequiel Farina"
+  rol: ""
+  org: ""
+  cita: "MetaDocencia fue alta herramienta. De todas las materias virtuales en las que estuve como docente, la que mejor salió fue en la que les tres docentes hicimos el taller. No lo decimos nosotros. Miren las encuestas."
+  en_cita: "MetaDocencia was a great tool. Out of all the online courses I've been involved in as a teacher, the one that went best was the one where the three of us had done the workshop. We're not just saying that — look at the surveys."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://x.com/HallucigeniaOK/status/1337954763527303170"
+
+- id: romi-nahir-2020
+  nombre: "Romina Nahir"
+  rol: ""
+  org: ""
+  cita: "Mi primer cuatri fue desorganizado y muy difícil de encarar. Gracias a la ayuda de MetaDocencia y la certificación docente de The Carpentries, aprendí un montón de metodologías nuevas y de formas de acercarme a los alumnos detrás de la pantalla."
+  en_cita: "My first semester was disorganized and very hard to handle. Thanks to MetaDocencia's help and The Carpentries teaching certification, I learned a lot of new methodologies and ways to connect with students on the other side of the screen."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://x.com/romi_nahir/status/1341050097715589122"
+
+- id: crst-c-2020
+  nombre: "@Crst_C"
+  rol: ""
+  org: ""
+  cita: "Super recomiendo los cursos de MetaDocencia para esto y para pedagogía moderna y basada en evidencia. A mí me partió la cucuza."
+  en_cita: "I highly recommend MetaDocencia's courses for this and for modern, evidence-based pedagogy. It genuinely blew my mind."
+  categoria: "formacion"
+  año: "2020"
+  link: "https://x.com/Crst_C/status/1343580524124758017"
+
+- id: natsumi-shokida-2021
+  nombre: "Natsumi Shokida"
+  rol: ""
+  org: ""
+  cita: "I would like all my master teachers to implement your tips and tools."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/NatsuSh/status/1371559328969338882"
+
+- id: walter-sosa-escudero-2021
+  nombre: "Walter Sosa Escudero"
+  rol: "PhD en Economía, profesor e investigador"
+  en_rol: "PhD in Economics, professor and researcher"
+  org: ""
+  cita: "No se pierdan esto. Es gente hiperprofesional, es buenísimo el trabajo que hacen."
+  en_cita: "Don't miss this. They're hyper-professional, and the work they do is excellent."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/wsosaescudero/status/1370515859031138307"
+  destacado: true
+  orden_destacado: 4
+
+- id: sacha-renteria-2021
+  nombre: "Sacha Rentería"
+  rol: ""
+  org: ""
+  cita: "Gracias MetaDocencia porque le hago unos tutoriales increíbles a mis padres para los trámites en web y apps. No solo mis alumnos y yo nos hemos beneficiado de su hermosa iniciativa."
+  en_cita: "Thank you MetaDocencia — I now make incredible tutorials for my parents to help them with online forms and apps. Not only my students and I have benefited from your wonderful initiative."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/renteriasacha/status/1345482444934438913"
+
+- id: analia-calero-2021
+  nombre: "Analía Calero"
+  rol: ""
+  org: ""
+  cita: "Recomiendo mucho este curso de MetaDocencia para quienes damos clases online. Muchos tips aplican también para amenizar otros eventos virtuales sincrónicos."
+  en_cita: "I highly recommend this MetaDocencia course for anyone teaching online. Many of the tips also apply to livening up other synchronous virtual events."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/CaleroAnalia/status/1371573260551348225"
+
+- id: alejandra-apari-2021
+  nombre: "Alejandra Aparicio"
+  rol: ""
+  org: ""
+  cita: "Excelentes consejos, curso totalmente recomendado. Gracias por compartir su tiempo y aprendizaje."
+  en_cita: "Excellent advice, a course I fully recommend. Thank you for sharing your time and knowledge."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/AlejandraApari4/status/1382710769222086658"
+
+- id: skarlyg-2021
+  nombre: "Skarly Garcia"
+  rol: ""
+  org: ""
+  cita: "Conectada y feliz en el Taller Intro de MetaDocencia. Agradecida por esta iniciativa. Tremendo aporte a la educación."
+  en_cita: "Connected and happy at MetaDocencia's Intro Workshop. Grateful for this initiative. A tremendous contribution to education."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/skarlyg/status/1382679844400590849"
+
+- id: maria-cristina-nanton-2021
+  nombre: "María Cristina Nanton"
+  rol: ""
+  org: ""
+  cita: "Recién terminé el curso Cómo aprender a programar online de MetaDocencia. Es imperdible si enseñan programación de manera no presencial. Saber programar no es lo mismo que saber enseñar a programar, y aún con bastante experiencia dando clases online me llevé muchísimo de este taller gratuito de 1 mañana."
+  en_cita: "I just finished MetaDocencia's How to Teach Programming Online course. It's a must if you teach programming remotely. Knowing how to program is not the same as knowing how to teach it, and even with a lot of online teaching experience, I took away so much from this free, half-day workshop."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/bynans1/status/1385976035255144454"
+
+- id: monica-la-2000-2021
+  nombre: "Monica Alonso"
+  rol: ""
+  org: ""
+  cita: "Los cursos de MetaDocencia son geniales."
+  en_cita: "MetaDocencia's courses are great."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/MonicaLA2000/status/1386304416467374089"
+
+- id: va-garcia-alonso-2021
+  nombre: "Alonso García"
+  rol: ""
+  org: ""
+  cita: "Cartón lleno a los talleres de MetaDocencia. Hoy, dos profes de lujo. Gracias a todo el equipo detrás de estas actividades y tutoriales por armarlos y compartirlos gratuitamente."
+  en_cita: "Full marks to MetaDocencia's workshops. Today, two outstanding instructors. Thanks to the whole team behind these activities and tutorials for putting them together and sharing them for free."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/VA_GarciaAlonso/status/1391122687519567878"
+
+- id: jupanago-2021
+  nombre: "Juan Pablo Narvaez-Gomez"
+  rol: ""
+  org: ""
+  cita: "Hice el curso Introducción al ABC para enseñar online de MetaDocencia. Una experiencia directa, clara y amable de cómo se enseña a través del ejemplo. Lo recomiendo 100%. Sus clases no volverán a ser las mismas después de asistir a este curso."
+  en_cita: "I took MetaDocencia's Introduction to the ABCs of Online Teaching course. A direct, clear, and friendly experience of how to teach by example. I recommend it 100%. Your classes will never be the same after attending this course."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/jupanago/status/1433450784839151618"
+
+- id: tuqmano-2021
+  nombre: "JP Ruiz Nicolini"
+  rol: ""
+  org: ""
+  cita: "Pudimos aplicar varios de los muchos grandes consejos aprendidos en el taller de MetaDocencia para enseñanza en línea. Una vez más, recomendadísimo."
+  en_cita: "We were able to apply several of the many great tips learned at MetaDocencia's online teaching workshop. Once again, highly recommended."
+  categoria: "formacion"
+  año: "2021"
+  link: "https://twitter.com/TuQmano/status/1435260701505896455"
+
+- id: mtenaespinoza-2023
+  nombre: "Martín Adalberto Tena Espinoza de los Monteros"
+  rol: ""
+  org: ""
+  cita: "Gracias a este grupo de estudio de MetaDocencia, me involucré con la iniciativa OpenScience de NASA. ¡Ahora tengo mi certificado!"
+  en_cita: "Thanks to this MetaDocencia study group, I got involved with NASA's Open Science initiative. I now have my certificate!"
+  categoria: "formacion"
+  año: "2023"
+  link: "https://x.com/mtenaespinoza/status/1768412329488581009"
+
+- id: flor-blanco-esmoris-2023
+  nombre: "Flor Blanco Esmoris"
+  rol: ""
+  org: ""
+  cita: "Estoy participando como asistente en el Curso ALTa Ciencia Abierta de MetaDocencia junto a la NASA. Aprendemos que no existe una única manera de hacer Ciencia Abierta y que adaptarla a nuestros contextos es clave. Estoy emocionada por lo que viene y por compartir estas experiencias con otros profesionales de la región."
+  en_cita: "I'm participating as a teaching assistant in MetaDocencia's ALTa Open Science Course alongside NASA. We learn that there is no single way to do Open Science and that adapting it to our contexts is key. I'm excited about what's ahead and about sharing these experiences with other professionals in the region."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/florblancoesmoris_cienciaabierta-openscience-metadocencia-activity-7252761127661527043-F3c_"
+
+- id: psinetlab-2023
+  nombre: "PsiNet LAB"
+  rol: ""
+  org: ""
+  cita: "Queremos expresar nuestro más sincero agradecimiento a MetaDocencia por las valiosas sesiones educativas en Ciencia Abierta. Disfrutamos de contenidos contextualizados que nos impulsan a crecer como comunidad científica. Gracias por promover el conocimiento accesible."
+  en_cita: "We would like to express our sincere gratitude to MetaDocencia for the valuable Open Science educational sessions. We enjoyed contextualized content that drives us to grow as a scientific community. Thank you for promoting accessible knowledge."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/psinet-lab_nasatops-psinetlab-metadocencia-activity-7251805080725635072-s1Tb"
+
+- id: rodolfo-guerrero-millan-2023
+  nombre: "Rodolfo Esteban Guerrero Millán"
+  rol: ""
+  org: ""
+  cita: "Agradecer a MetaDocencia por las 6 semanas de talleres y material entregado para poder investigar de mejor forma fuentes abiertas que hay en la red y también poder contribuir a los proyectos que se están generando en América Latina."
+  en_cita: "Thank you to MetaDocencia for the 6 weeks of workshops and materials provided to better investigate open sources available online and to contribute to projects being developed across Latin America."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/rodolfo-esteban-guerrero-millan-52467393_metadocencia-activity-7250227743643041794-JdJC"
+
+- id: ariana-bardauil-2023
+  nombre: "Ariana Bardauil"
+  rol: ""
+  org: ""
+  cita: "Tengo un certificado de la NASA. Completé un hermoso curso sobre Principios de Ciencia Abierta dictado por MetaDocencia. Lo recomiendo muchísimo: ofrece una gran cantidad de herramientas, metodologías y consejos prácticos muy útiles para el trabajo diario con datos."
+  en_cita: "I have a NASA certificate. I completed a wonderful course on Open Science Principles taught by MetaDocencia. I highly recommend it: it offers a great range of tools, methodologies, and practical tips that are very useful for everyday work with data."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/ariana-bardauil_cienciaabierta-nasa-metadocencia-activity-7249209795663024128-3ZbU"
+
+- id: carla-macchia-de-sanchez-2023
+  nombre: "Carla Lorena Macchia de Sánchez"
+  rol: ""
+  org: ""
+  cita: "Quiero expresar mi agradecimiento a todo el equipo de MetaDocencia y a cada uno de los compañeros, por todos los aprendizajes y su calidez. La misión de MetaDocencia es construir capacidades científicas y técnicas en forma responsable y con mirada local, a través de la co-creación de redes, espacios de aprendizaje y recursos accesibles para comunidades hispanohablantes."
+  en_cita: "I want to express my gratitude to the entire MetaDocencia team and each of my fellow participants, for all the learning and the warmth. MetaDocencia's mission is to build scientific and technical capacity responsibly and with a local perspective, through the co-creation of networks, learning spaces, and accessible resources for Spanish-speaking communities."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/carla-lorena-macchia-de-s%C3%A1nchez-1b0a257_altaca-cienciaabierta-openscience-activity-7276249078856880128-xHOl"
+
+- id: wolmer-espinoza-2023
+  nombre: "Wolmer Espinoza"
+  rol: ""
+  org: ""
+  cita: "Esta formación me permitió adquirir herramientas y conocimientos para hacer que la ciencia sea más accesible, justa y relevante para nuestras realidades en América Latina. Me motivó a indagar más sobre la justicia epistémica y a buscar aportar a un espacio de intercambio inclusivo."
+  en_cita: "This training gave me tools and knowledge to make science more accessible, fair, and relevant to our realities in Latin America. It motivated me to explore epistemic justice further and to contribute to an inclusive space for exchange."
+  categoria: "formacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/wolmeresp_cienciaabierta-activity-7258988283748040704-MiPN"
+
+- id: lacion-altaca-2024
+  nombre: "Laura Ación"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Como dicen mis hijos: ALTaCA no me gustó, ME ENCANTÓ. Estuvo increíblemente bueno este primer ciclo. Y esto recién empieza."
+  en_cita: "As my kids would say: I didn't just like ALTaCA — I LOVED it. This first cycle was incredibly good. And this is just the beginning."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/_lacion_/status/1819110513621483572"
+
+- id: biodiversidata-2024
+  nombre: "Biodiversidata"
+  rol: ""
+  org: ""
+  cita: "Compartimos y recomendamos el curso de MetaDocencia de ALTa Ciencia Abierta."
+  en_cita: "We share and recommend MetaDocencia's ALTa Open Science course."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/biodiversidata/status/1823017484473049315"
+
+- id: zjbb-2024
+  nombre: "Zulemma Bazurto Blacio"
+  rol: ""
+  org: ""
+  cita: "Gracias MetaDocencia por ayudar a introducir en América Latina formación en Ciencia Abierta."
+  en_cita: "Thank you MetaDocencia for helping bring Open Science training to Latin America."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/Zjbb/status/1842242189260177917"
+
+- id: lauraamorosar-2024
+  nombre: "Laura Amorós Dillon"
+  rol: ""
+  org: ""
+  cita: "¡Lo logré! Me llegó el certificado de NASA Open Science. Y eso que iba como la tortuga al final, lentamente, aprobé y llegué a la misma meta que los demás. Gracias al equipo de MetaDocencia que hacen una educación inclusiva real."
+  en_cita: "I did it! My NASA Open Science certificate arrived. Even as the slowest one at the end, I kept going and reached the same goal as everyone else. Thank you to the MetaDocencia team for making education truly inclusive."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/lauraamorosar/status/1841815563678494792"
+
+- id: natayadev-2024
+  nombre: "Nata Flores"
+  rol: ""
+  org: ""
+  cita: "Llegó el badge. Gracias MetaDocencia por la capacitación de ALTaCA en Ciencia Abierta. Si les interesa capacitarse recomiendo que den una vueltita por su web."
+  en_cita: "The badge arrived. Thank you MetaDocencia for the ALTaCA Open Science training. If you're interested in learning, I recommend visiting their website."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/natayadev/status/1866606190194724912"
+
+- id: raulsancar-2024
+  nombre: "Raúl Sancar"
+  rol: ""
+  org: ""
+  cita: "Agradezco a NASA TOPS y MetaDocencia por los conocimientos compartidos. Los certificados del Taller ALTaCA me motivan a contribuir a la Ciencia Abierta y crecer profesionalmente."
+  en_cita: "I thank NASA TOPS and MetaDocencia for the knowledge shared. The ALTaCA Workshop certificates motivate me to contribute to Open Science and grow professionally."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/RAULSANCAR/status/1867668861543493997"
+
+- id: jesica-niz
+  nombre: "Jesica Niz"
+  rol: ""
+  org: ""
+  cita: "Agradezco al equipo de MetaDocencia por su dedicación y por crear este espacio de aprendizaje tan enriquecedor."
+  en_cita: "I thank the MetaDocencia team for their dedication and for creating such an enriching learning space."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://www.linkedin.com/posts/jesicanizcomunicadorasocial_cienciaabierta-openscience-cienciaabierta-activity-7270886450777243648-1_Z8"
+
+- id: andres-olivera-2024
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: ""
+  cita: "Pocas ecuaciones son tan favorables como esta: Ciencia Abierta + Español + Certificado + Gratis = Transformación regional."
+  en_cita: "Few equations are as favorable as this one: Open Science + Spanish + Certificate + Free = Regional transformation."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://x.com/A_Olivera_/status/1836931689114677490"
+
+- id: julio-zetter
+  nombre: "Julio Zetter"
+  rol: "Coordinador en Jefe de la base de datos y hemeroteca virtual SciELO México"
+  en_rol: "Chief Coordinator of the SciELO México database and virtual journal archive"
+  org: ""
+  cita: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia."
+  en_cita: "All that's left is to thank the instructors who made this course possible, which is undoubtedly the seed of great outcomes. Thank you so much, MetaDocencia."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://www.linkedin.com/posts/juliozetter_cienciaabierta-metadocencia-openscience-activity-7273696161471017984-j6KC"
+  destacado: true
+  orden_destacado: 2
+
+# ── COMUNIDAD ──────────────────────────────────────────────────────────
+
+- id: thecarpentries-2020
+  nombre: "The Carpentries"
+  rol: ""
+  org: ""
+  cita: "We love MetaDocencia and are so grateful for the work you are doing to empower RLadies in Latin America!"
+  categoria: "comunidad"
+  año: "2020"
+  link: "https://x.com/thecarpentries/status/1343908743742959616"
+
+- id: kari-jordan-2020
+  nombre: "Kari Jordan"
+  rol: ""
+  org: "The Carpentries"
+  cita: "Attending the Open Source Community call I learned about MetaDocencia and I cannot be more excited about this project!"
+  categoria: "comunidad"
+  año: "2020"
+  link: "https://x.com/DrKariLJordan/status/1310964334089195521"
+
+- id: emmanuel-iarussi-2021-comunidad
+  nombre: "Emmanuel Iarussi"
+  rol: ""
+  org: ""
+  cita: "Super merecido financiamiento internacional para la gente de MetaDocencia. Felicitaciones por el trabajo tan noble que hicieron durante la pandemia y que siguen haciendo."
+  en_cita: "Thoroughly well-deserved international funding for the folks at MetaDocencia. Congratulations for the incredibly valuable work you did during the pandemic and continue to do."
+  categoria: "comunidad"
+  año: "2021"
+  link: "https://twitter.com/emmaiarussi/status/1455583855063158786"
+
+- id: carly-strasser
+  nombre: "Carly Strasser"
+  rol: "Entonces Directora Senior de Programas de CZI, tras co-organizar el primer evento de CZI Open Science en Latinoamérica"
+  en_rol: "Former Senior Program Director at CZI, after co-organizing the first CZI Open Science event in Latin America"
+  org: ""
+  cita: "Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con ustedes."
+  en_cita: "I'm in awe of the professionalism, thoughtfulness, and kindness of everyone from MetaDocencia. It was a special treat to be able to work with you all."
+  categoria: "comunidad"
+  año: "2023"
+  link: ""
+  destacado: true
+  orden_destacado: 1
+
+- id: andres-kamaid
+  nombre: "Andrés Kamaid"
+  rol: "Investigador, Advanced Bioimaging Unit, Institut Pasteur Montevideo"
+  en_rol: "Researcher, Advanced Bioimaging Unit, Institut Pasteur Montevideo"
+  org: ""
+  cita: "Les quiero agradecer por el trabajo realizado. Además de vuestros aportes conceptuales y prácticos que nos han permitido avanzar mucho, vuestra calidez y amabilidad han hecho este proceso muy pero muy disfrutable. Voy a extrañar estas reuniones."
+  en_cita: "I want to thank you for the work done so far. In addition to your conceptual and practical contributions, which have enabled us to make significant progress, your warmth and kindness have made this process truly enjoyable. I will miss our meetings."
+  categoria: "comunidad"
+  año: "2024"
+  link: ""
+  destacado: true
+  orden_destacado: 5
+
+- id: lisanna-paladin-2023
+  nombre: "Lisanna Paladin"
+  rol: ""
+  org: "Bio-IT"
+  cita: "Really cool initiative from MetaDocencia, showcasing different (scientific) communities and interviewing them about how they build a sense of community in the first place."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/lisanna-paladin-3913b6102_bio-it-es-una-iniciativa-comunitaria-activity-7224161591548653568-osBP"
+
+- id: romina-pendino-comunidad-2023
+  nombre: "Romina Pendino"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Desde MetaDocencia nos propusimos crear un espacio de crecimiento que ayude a fortalecer los vínculos, que habilite el crecimiento personal y a la vez colectivo, que respete individualidades y sea de verdadera escucha activa. Y al parecer, vamos por muy buen camino."
+  en_cita: "At MetaDocencia we set out to create a growth space that helps strengthen bonds, enables personal and collective development, respects individuality, and truly listens. And it seems we are on a very good path."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/rominapendino_espacios-de-crecimiento-para-aprender-a-dar-activity-7129911983482560512-0X5m"
+
+- id: liz-hare-2023
+  nombre: "Liz Hare"
+  rol: "PhD"
+  org: ""
+  cita: "This is an important and helpful blog post from MetaDocencia about fostering communities that are truly inclusive. It was clear to me that it represented a lot of hard experiences on the part of the authors to give this good guidance."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/liz-hare-phd-1a50925_a-bingo-card-of-some-suggested-actionable-activity-7289785540743188480-nzkt"
+
+- id: latambio-imaging-2023
+  nombre: "Latambio Imaging"
+  rol: ""
+  org: ""
+  cita: "Gracias MetaDocencia por acompañarnos durante este proceso. La construcción colaborativa de nuestra gobernanza es uno de los desafíos más importantes para nuestra comunidad, un proceso continuo que esperamos seguir compartiendo."
+  en_cita: "Thank you MetaDocencia for accompanying us throughout this process. The collaborative construction of our governance is one of the most important challenges for our community — an ongoing process that we hope to keep sharing."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/latambioimaging_trabajo-intercomunidades-la-experiencia-activity-7276994163840077824-rUWA"
+
+- id: petrizzo-2023
+  nombre: "Maria Ángela Petrizzo Páez"
+  rol: ""
+  org: ""
+  cita: "Un súper merecido reconocimiento a MetaDocencia como iniciativa promotora de Ciencia Abierta en nuestra región."
+  en_cita: "A thoroughly well-deserved recognition for MetaDocencia as a promoter of Open Science in our region."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/petrizzo_libreria-clacso-conocimiento-como-bien-activity-7333801062581129217-LRSR"
+
+- id: veronica-xhardez-2023
+  nombre: "Verónica Xhardez"
+  rol: "Docente e investigadora en UNTREF, investigadora en CIECTI y coordinadora técnica de ARPHAI"
+  en_rol: "Professor and researcher at UNTREF, researcher at CIECTI, and technical coordinator of ARPHAI"
+  org: ""
+  cita: "¡Cuánto aprendizaje colectivo por el camino! Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
+  en_cita: "So much collective learning along the way! Congratulations and thank you for being a space for co-production, interdisciplinarity, and mutual care."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/xhardez/status/1769388708116021694"
+  destacado: true
+  orden_destacado: 6
+
+- id: xhardez-agradecimiento-2023
+  nombre: "Verónica Xhardez"
+  rol: ""
+  org: "ARPHAI"
+  cita: "Gracias a ustedes por abrirse y dejarme pasar. Aprendí más de lo que aporté."
+  en_cita: "Thank you for opening up and letting me in. I learned more than I contributed."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/xhardez/status/1767628592773554347"
+
+- id: malena-espanol-2023
+  nombre: "Malena Español"
+  rol: ""
+  org: ""
+  cita: "¡Super admiro a Laura Ación y a todo el equipo de MetaDocencia! Son lo más."
+  en_cita: "I truly admire Laura Ación and the entire MetaDocencia team! They are the best."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/EspanolMalena/status/1765790393705410664"
+
+- id: ni-airo-2023
+  nombre: "Irene Vazano"
+  rol: ""
+  org: ""
+  cita: "Feliz cumpleaños a la comunidad que es mi otro hogar. Qué orgullo vernos crecer."
+  en_cita: "Happy birthday to the community that is my other home. How proud I am to see us grow."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/ni_airo/status/1768688164061761744"
+
+- id: lacion-cumple-2023
+  nombre: "Laura Ación"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Un cumple más en que soy toda emoción, orgullo y agradecimiento. Es un honor inmenso ser parte y seguir contribuyendo al crecimiento de este hermoso equipo y comunidad."
+  en_cita: "Another birthday where I am all emotion, pride, and gratitude. It is an immense honor to be part of this and to keep contributing to the growth of this wonderful team and community."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/_lacion_/status/1768739960985727237"
+
+- id: lacion-manzanita-2023
+  nombre: "Laura Ación"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "A year of tons of growth and production at MetaDocencia comes to an end, thanks to this outstanding team that generates it every day. I don't know what I would do these difficult days without you all. No doubt, the best of my career."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/_lacion_/status/1738269305165283737"
+
+- id: npalopoli-2023
+  nombre: "Nicolás Palopoli"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Comenzamos el quinto año de MetaDocencia con más ganas que nunca. Un espacio de aprendizaje colectivo, de juego con compromiso, de apoyar a la ciencia desde un lugar complementario. Una propuesta de encuentro que construimos cada semana y siempre está abierta a que te sumes."
+  en_cita: "We begin MetaDocencia's fifth year with more enthusiasm than ever. A space for collective learning, for playful commitment, for supporting science from a complementary angle. A gathering we build each week — and it's always open for you to join."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/NPalopoli/status/1769743770193461666"
+
+- id: patricia-loto-retrospectiva-2023
+  nombre: "Patricia Loto"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Hermosa retrospectiva de todo lo hecho durante el año, donde hubo mucho trabajo en equipo, desafíos compartidos y grandes proyectos."
+  en_cita: "A beautiful retrospective of everything accomplished during the year — so much teamwork, shared challenges, and great projects."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/patriloto/status/1749946132141146390"
+
+- id: patricia-loto-nasa-2023
+  nombre: "Patricia Loto"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Estoy muy contenta de haber participado de este evento de OpenScience de NASA y de haber compartido esta experiencia junto al equipo de MetaDocencia. Fue una experiencia increíble y de mucho aprendizaje."
+  en_cita: "I am very happy to have participated in NASA's Open Science event and to have shared this experience alongside the MetaDocencia team. It was an incredible and very enriching experience."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://x.com/patriloto/status/1763685555525591446"
+
+- id: julian-buede-2023
+  nombre: "Julián Buede"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "En mi onboarding a MetaDocencia me quedó resonando mucho la importancia de la crítica constructiva. La MEC es una encuesta que permite dar y recibir feedback de manera horizontal. Creo que es una práctica que puede adaptarse e implementarse en otros contextos, organizaciones y equipos que quieran fortalecer el bienestar, la transparencia, la integridad y la confianza."
+  en_cita: "During my MetaDocencia onboarding, the importance of constructive feedback really stayed with me. The MEC is a survey that enables horizontal feedback. I think it's a practice that can be adapted and implemented in other contexts, organizations, and teams that want to strengthen well-being, transparency, integrity, and trust."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/julianbuede_blogmd-activity-7128752082429358081-4Ki2"
+
+- id: romina-pendino-formacion-2023
+  nombre: "Romina Pendino"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "Cerramos el año de la mejor manera: en comunidad. Gracias a quienes se sumaron este año a las cohortes ALTa Ciencia Abierta y gracias al equipazo de MetaDocencia por motorizar esta iniciativa regional."
+  en_cita: "We closed the year the best way: as a community. Thank you to all who joined this year's ALTa Open Science cohorts, and thank you to the amazing MetaDocencia team for driving this regional initiative."
+  categoria: "comunidad"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/rominapendino_cienciaabierta-activity-7265772529208737793-QZq7"
+
+- id: marina-compagnucci
+  nombre: "Marina Compagnucci"
+  rol: "Bióloga y colaboradora de MetaDocencia"
+  en_rol: "Biologist and MetaDocencia collaborator"
+  org: ""
+  cita: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio."
+  en_cita: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It's no surprise that creative proposals emerge when dialogue feels natural and reassuring."
+  categoria: "comunidad"
+  año: "2025"
+  link: ""
+  destacado: true
+  orden_destacado: 3
+
+- id: patricia-loto-2024
+  nombre: "Patricia Loto"
+  rol: ""
+  org: "MetaDocencia"
+  cita: "¡Qué gratificante ser parte de esta iniciativa junto al equipazo de MetaDocencia!"
+  en_cita: "How gratifying it is to be part of this initiative alongside the amazing MetaDocencia team!"
+  categoria: "comunidad"
+  año: "2024"
+  link: "https://x.com/patriloto/status/1811791385676140795"
+
+- id: sape-by-2024
+  nombre: "Sara Petti"
+  rol: ""
+  org: ""
+  cita: "Qué bonito compartir lo que hacemos con las comunidades de conocimiento abierto con MetaDocencia."
+  en_cita: "How wonderful to share what we do with open knowledge communities alongside MetaDocencia."
+  categoria: "comunidad"
+  año: "2024"
+  link: "https://x.com/Sape_BY/status/1821314868118745513"
+
+- id: research-software-alliance-2026
+  nombre: "Research Software Alliance"
+  rol: ""
+  org: ""
+  cita: "Estamos encantados de haber podido colaborar con MetaDocencia y les felicitamos por sus logros en 2025."
+  en_cita: "We're delighted to have been able to engage with MetaDocencia and congratulate them on their achievements in 2025."
+  categoria: "comunidad"
+  año: "2026"
+  link: "https://www.linkedin.com/posts/research-software-alliance_reportemd-activity-7430385246191374336-ydGh"
