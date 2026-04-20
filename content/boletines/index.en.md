@@ -37,6 +37,8 @@ sections:
 
         <div class="newsletter-archive">
           <ul>
+            <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19411205">We turned 6: Happy anniversary, community! | MetaDocencia Notes 29</a></li>
+            <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19409769">Our Community, Our Impact | MetaDocencia Notes 28</a></li>
             <li><a class="nl-btn" href="https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=940bfbc5e8">Thank you for being part of our journey in 2025! | MetaDocencia Notes N° 27</a></li>
             <li><a class="nl-btn" href="https://us19.campaign-archive.com/?u=92fb89ce82f9689a3b083bb35&id=a009a758c8">🌐 New website, new stories | Notes From MetaDocencia N° 26</a></li>
             <li><a class="nl-btn" href="https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=bc2af35f24">Thinking Big from the Global South: Science, Research, and Funding 🌎 | Notes From MetaDocencia N° 24</a></li>
