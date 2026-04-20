@@ -11,7 +11,34 @@
 
 # ── FORMACIÓN ──────────────────────────────────────────────────────────
 
-- id: fernando-torres-2020
+- id: wolovick-2025
+  nombre: "Nicolás Wolovick"
+  rol: "Director"
+  org: "UNC Supercómputo"
+  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+- id: olivera-2025
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: "Latin America Bioimaging"
+  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+  - id: fernando-torres-2020
+  nombre: "Fernando Torres"
+  rol: ""
+  org: ""
+  cita: "Excelente el curso de hoy, súper claro, didáctico, aplicable, una recomendación buena tras otra, cierra por todos lados. Recomendable 100%. Y además, gratis. Infinitas gracias por tanta dedicación, empatía y compromiso."
+  categoria: "formacion"
+  año: "2020"
+  link: https://twitter.com/torresf1973/status/1249007107153821696
+
+  - id: fernando-torres-2020
   nombre: "Fernando Torres"
   rol: ""
   org: ""
@@ -316,7 +343,7 @@
   org: ""
   cita: "Agradezco al equipo de MetaDocencia por su dedicación y por crear este espacio de aprendizaje tan enriquecedor."
   categoria: "formacion"
-  año: ""
+  año: "2024"
   link: https://www.linkedin.com/posts/jesicanizcomunicadorasocial_cienciaabierta-openscience-cienciaabierta-activity-7270886450777243648-1_Z8
 
 - id: andres-olivera-2024
@@ -334,7 +361,7 @@
   org: ""
   cita: "No cabe más que agradecer a los instructores que hicieron posible este curso, que sin duda es la semilla de grandes frutos. Gracias por tanto MetaDocencia."
   categoria: "formacion"
-  año: ""
+  año: "2024"
   link: https://www.linkedin.com/posts/juliozetter_cienciaabierta-metadocencia-openscience-activity-7273696161471017984-j6KC
   destacado: true
   orden_destacado: 2
@@ -347,7 +374,7 @@
   org: ""
   cita: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio."
   categoria: "infraestructura"
-  año: ""
+  año: "2025"
   link: ""
   destacado: true
   orden_destacado: 3
@@ -383,11 +410,11 @@
 
 - id: carly-strasser
   nombre: "Carly Strasser"
-  rol: "Directora Senior de programas, CZI"
+  rol: "Entonces Directora Senior de Programas de CZI, tras co-organizar el primer evento de CZI Open Science en Latinoamérica"
   org: ""
   cita: "Estoy impresionada por la profesionalidad, la consideración y la amabilidad de todo el equipo de MetaDocencia. Ha sido un placer poder trabajar con ustedes."
   categoria: "comunidad"
-  año: ""
+  año: "2023"
   link: ""
   destacado: true
   orden_destacado: 1
