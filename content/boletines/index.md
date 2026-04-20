@@ -37,6 +37,8 @@ sections:
 
         <div class="newsletter-archive">
           <ul>
+            <li><a class="nl-btn" href="https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=fbaccd0a03"> Cumplimos 6 años: ¡feliz aniversario, comunidad! | Apuntes MetaDocentes N° 29</a></li>
+            <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19409526"> Nuestra comunidad, Nuestro impacto | Apuntes MetaDocentes N° 28</a></li>
             <li><a class="nl-btn" href="https://us19.campaign-archive.com/?e=__test_email__&u=92fb89ce82f9689a3b083bb35&id=722756358a"> ¡Gracias por acompañarnos en 2025! | Apuntes MetaDocentes N° 27</a></li>
             <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19407507?e=798f36b789"> 🌐 Nuevo sitio, nuevas historias | Apuntes MetaDocentes N° 26</a></li>
             <li><a class="nl-btn" href="https://mailchi.mp/metadocencia/construyendo-en-comunidad-newsletter-n-19405446?e=798f36b789">Ciencia abierta que conecta: satélites, formación y comunidad 🌎 | Apuntes MetaDocentes N° 25</a></li>
