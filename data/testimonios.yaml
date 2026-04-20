@@ -56,6 +56,16 @@
 
 # ── FORMACIÓN ──────────────────────────────────────────────────────────
 
+- id: rogelio-dillon-2024
+  nombre: "Rogelio Dillon"
+  rol: ""
+  org: ""
+  cita: "Los que me conocen desde hace muchos años, sospecho que están sonriendo porque yo siempre comparto lo que sé sin ningún limite. Es decir, siempre la Ciencia Abierta está en mí. A lo largo de los años, he enfrentado obstáculos y críticas, pero nunca he dejado de lado mi pasión por enseñar.  Agradezco al equipo de Meta Docencia su dedicación y apoyo para renovar mi espíritu y descubrir las nuevas herramientas, a fin de continuar promoviendo la Ciencia Abierta."
+  en_cita: "Those of you who know me for many years, I suspect you are smiling because I always share what I know without any limits. In other words, Open Science is always in me. Over the years, I have faced obstacles and criticism, but I have never let go of my passion for teaching. I thank the MetaDocencia team for their dedication and support to renew my spirit and discover new tools, to continue promoting Open Science."
+  categoria: "formacion"
+  año: "2024"
+  link: "https://www.facebook.com/share/p/1CTGzf9CoM/"
+
 - id: fernando-torres-2020
   nombre: "Fernando Torres"
   rol: ""
@@ -422,6 +432,24 @@
   orden_destacado: 2
 
 # ── COMUNIDAD ──────────────────────────────────────────────────────────
+
+- id: aleksandra-lazin-2025
+  nombre: "Aleksandra Lazić"
+  rol: ""
+  org: ""
+  en_cita: "What a fun format for providing recommendations! Take a look at @metadocencia.org BINGO CARD of some actionable steps towards greater empowerment and project engagement of minoritized persons."
+  categoria: "comunidad"
+  año: "2025"
+  link: "https://bsky.app/profile/alelazic.bsky.social/post/3lgqsssm3zk2n"
+
+- id: liz-hare-2025
+  nombre: "Liz Hare"
+  rol: ""
+  org: ""
+  en_cita: "This is a really important and helpful blog post about building inclusive communities; As I read their words, I could tell they were sharing knowledge gained by hard experience and that they are serious about really doing the work required. Can't recommend strongly enough!"
+  categoria: "comunidad"
+  año: "2025"
+  link: "https://bsky.app/profile/lizhare.bsky.social/post/3lgqlhnydb52q"
 
 - id: thecarpentries-2020
   nombre: "The Carpentries"
