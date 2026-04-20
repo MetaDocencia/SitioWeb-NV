@@ -11,7 +11,17 @@
 #   link:      URL a la fuente original (vacío si no se tiene)
 
 
-# ── CONTEXTUALIZACIÓN ──────────────────────────────────────────────────
+# ── 2026 ──────────────────────────────────────────────────
+
+- id: scielo-2026
+  nombre: "Scielo México"
+  rol: ""
+  org: ""
+  cita: "Desde SciELO México felicitamos a MetaDocencia  por su sexto aniversario, destacando su valiosa contribución al fortalecimiento de la ciencia abierta en la región. A lo largo de estos años, han construido una comunidad sólida, promoviendo la formación, la colaboración y el acceso al conocimiento."
+  en_cita: "From SciELO Mexico, we congratulate MetaDocencia on its sixth anniversary, highlighting its valuable contribution to strengthening open science in the region. Over these years, you have built a strong community, promoting training, collaboration, and access to knowledge."
+  categoria: "comunidad"
+  año: "2026"
+  link: "https://www.facebook.com/share/p/1Eae1p2zbL/"
 
 - id: vera-jimena-2026
   nombre: "María Jimena Vera"
