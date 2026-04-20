@@ -10,37 +10,6 @@
 #   año:       "2020", "2021", etc. — dejar vacío ("") si no se conoce
 #   link:      URL a la fuente original (vacío si no se tiene)
 
-# ── INFRAESTRUCTURA ────────────────────────────────────────────────────
-
-- id: wolovick-2025
-  nombre: "Nicolás Wolovick"
-  rol: "Director"
-  org: "UNC Supercómputo"
-  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
-  en_cita: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
-  categoria: "infraestructura"
-  año: "2025"
-  link: ""
-
-- id: olivera-2025
-  nombre: "Andrés Olivera"
-  rol: ""
-  org: "Latin America Bioimaging"
-  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
-  en_cita: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
-  categoria: "infraestructura"
-  año: "2025"
-  link: ""
-
-- id: vanesa-ruiz-2023
-  nombre: "Vanesa Ruiz"
-  rol: ""
-  org: ""
-  cita: "Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen, realizando la contextualización de los contenidos de Ciencia Abierta para América Latina. ¡Un gran equipo colaborativo!"
-  en_cita: "Grateful to be part of MetaDocencia as an External Collaborator on the Polen Project, contextualizing Open Science content for Latin America. A wonderful collaborative team!"
-  categoria: "infraestructura"
-  año: "2023"
-  link: "https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ"
 
 # ── CONTEXTUALIZACIÓN ──────────────────────────────────────────────────
 
@@ -50,7 +19,7 @@
   org: ""
   cita: "Tuve la enorme oportunidad de participar en la primera contextualización colectiva en 2024, orientada a fortalecer la accesibilidad y la pertinencia del curso para comunidades hispanohablantes, mediante su traducción y adaptación situada al contexto regional."
   en_cita: "I had the enormous opportunity to participate in the first collective contextualization in 2024, aimed at strengthening the accessibility and relevance of the course for Spanish-speaking communities through its translation and situated adaptation to the regional context."
-  categoria: "contextualizacion"
+  categoria: "infraestructura"
   año: "2026"
   link: "https://www.linkedin.com/posts/verajimena_segunda-iteraci%C3%B3n-de-recursos-educativos-activity-7430385762501541888-zgzh"
 
@@ -430,6 +399,38 @@
   link: "https://www.linkedin.com/posts/juliozetter_cienciaabierta-metadocencia-openscience-activity-7273696161471017984-j6KC"
   destacado: true
   orden_destacado: 2
+
+# ── INFRAESTRUCTURA ────────────────────────────────────────────────────
+
+- id: wolovick-2025
+  nombre: "Nicolás Wolovick"
+  rol: "Director"
+  org: "UNC Supercómputo"
+  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
+  en_cita: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+- id: olivera-2025
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: "Latin America Bioimaging"
+  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+  en_cita: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
+  categoria: "infraestructura"
+  año: "2025"
+  link: ""
+
+- id: vanesa-ruiz-2023
+  nombre: "Vanesa Ruiz"
+  rol: ""
+  org: ""
+  cita: "Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen, realizando la contextualización de los contenidos de Ciencia Abierta para América Latina. ¡Un gran equipo colaborativo!"
+  en_cita: "Grateful to be part of MetaDocencia as an External Collaborator on the Polen Project, contextualizing Open Science content for Latin America. A wonderful collaborative team!"
+  categoria: "infraestructura"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ"
 
 # ── COMUNIDAD ──────────────────────────────────────────────────────────
 
