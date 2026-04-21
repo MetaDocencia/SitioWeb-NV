@@ -1,0 +1,134 @@
+{{ define "main" }}
+{{ $isEN := eq .Site.Language.Lang "en" }}
+{{ $subtitle := cond $isEN
+  "We conduct and openly share research that informs and supports open science and education in Latin America."
+  "Realizamos y compartimos abiertamente investigación que informa y acompaña la ciencia abierta y la educación en América Latina."
+}}
+{{ $btn := cond $isEN "View publication" "Ver publicación" }}
+{{ $empty := cond $isEN "No publications loaded yet." "No hay publicaciones cargadas aún." }}
+
+<section class="mx-auto px-6 py-10 max-w-4xl">
+
+  <!-- Title -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+  <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ $subtitle }}</p>
+
+  <!-- List -->
+  <div class="mt-6 divide-y divide-gray-200 dark:divide-gray-800">
+    {{ $items := .Params.items }}
+    {{ if $items }}
+      {{ range $items }}
+        <article class="py-6">
+          <div class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+
+            <!-- Left column: date + outlet -->
+            <div class="sm:w-48 shrink-0 text-sm sm:mt-1">
+              <div class="text-gray-500 dark:text-gray-400">{{ .date }}</div>
+              <div class="text-gray-700 dark:text-gray-300">{{ .outlet }}</div>
+            </div>
+
+            <!-- Right column: content -->
+            <div class="min-w-0">
+
+              {{/* ===== Etiquetas de categoría =====
+                   Soporta:
+                   - categories_es / categories_en: lista de strings (múltiples tags)
+                   - category_es / category_en: string único (un solo tag)
+                   - category: fallback único sin idioma
+              */}}
+              {{ $categories := slice }}
+              {{ if $isEN }}
+                {{ if .categories_en }}
+                  {{ $categories = .categories_en }}
+                {{ else if .category_en }}
+                  {{ $categories = slice .category_en }}
+                {{ else if .category }}
+                  {{ $categories = slice .category }}
+                {{ end }}
+              {{ else }}
+                {{ if .categories_es }}
+                  {{ $categories = .categories_es }}
+                {{ else if .category_es }}
+                  {{ $categories = slice .category_es }}
+                {{ else if .category }}
+                  {{ $categories = slice .category }}
+                {{ end }}
+              {{ end }}
+
+              {{ if gt (len $categories) 0 }}
+                <div class="mb-1 sm:mb-2 flex flex-wrap gap-1">
+                  {{ range $categories }}
+                    <span class="text-xs font-semibold text-[#00506F] bg-[#00506F]/5 rounded-full px-2 py-0.5 inline-flex">
+                      {{ . }}
+                    </span>
+                  {{ end }}
+                </div>
+              {{ end }}
+
+              <h2 class="text-xl font-semibold leading-snug">{{ .title }}</h2>
+
+              {{ with .summary }}
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . }}</p>
+              {{ end }}
+
+              {{/* ===== Botones =====
+                   Si se define `links` (lista de {url, label_es, label_en}), renderiza varios botones.
+                   Si no, mantiene el comportamiento original (.url + .btn / .btn_es / .btn_en).
+              */}}
+              {{ if .links }}
+                <div class="mt-3 flex flex-wrap gap-2">
+                  {{ range .links }}
+                    {{ $label := "" }}
+                    {{ if $isEN }}
+                      {{ if .label_en }}{{ $label = .label_en }}
+                      {{ else if .label }}{{ $label = .label }}
+                      {{ else }}{{ $label = $btn }}{{ end }}
+                    {{ else }}
+                      {{ if .label_es }}{{ $label = .label_es }}
+                      {{ else if .label }}{{ $label = .label }}
+                      {{ else }}{{ $label = $btn }}{{ end }}
+                    {{ end }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center rounded-md px-3 py-1 text-sm font-semibold
+                              bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+                      {{ $label }}
+                    </a>
+                  {{ end }}
+                </div>
+              {{ else }}
+                {{/* Botón único con texto personalizado por item (comportamiento anterior) */}}
+                {{ $itemBtn := $btn }}
+                {{ with .btn }}{{ $itemBtn = . }}{{ end }}
+                {{ if and (eq $itemBtn $btn) $isEN }}
+                  {{ with .btn_en }}{{ $itemBtn = . }}{{ end }}
+                {{ end }}
+                {{ if and (eq $itemBtn $btn) (not $isEN) }}
+                  {{ with .btn_es }}{{ $itemBtn = . }}{{ end }}
+                {{ end }}
+
+                {{ with .url }}
+                  <a href="{{ . }}" target="_blank" rel="noopener"
+                     class="inline-flex items-center mt-3 rounded-md px-3 py-1 text-sm font-semibold
+                            bg-gray-900 text-white dark:bg-white dark:text-gray-900">
+                    {{ $itemBtn }}
+                  </a>
+                {{ end }}
+              {{ end }}
+            </div>
+
+          </div>
+        </article>
+      {{ end }}
+    {{ else }}
+      <p class="text-sm text-gray-500 dark:text-gray-400">{{ $empty }}</p>
+    {{ end }}
+  </div>
+
+</section>
+
+<!-- Minimal styles for consistency with /post -->
+<style>
+  .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
+  .prose img { height: auto; }
+</style>
+{{ end }}
