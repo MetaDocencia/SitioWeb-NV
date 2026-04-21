@@ -259,7 +259,7 @@ items:
 
   - date: "2024-06-11"
     place: "Boston, United States"
-    title: "Reunión Anual de Ciencia Abierta 2024 de la Chan Zuckerberg Initiative [Chan Zuckerberg Initiative 2024 Open Science Annual Meeting]"
+    title: "Chan Zuckerberg Initiative 2024 Open Science Annual Meeting"
     image: "/media/eventos/20240611_CZIOpenScienceMeeting.jpeg"
     image_alt: "Photo from the Chan Zuckerberg Initiative 2024 Open Science Annual Meeting."
 
@@ -326,7 +326,7 @@ items:
 
   - date: "2023-04-20"
     place: "Buenos Aires, Argentina. Hybrid."
-    title: "Reunión Anual de Ciencia Abierta 2023 de la Chan Zuckerberg Initiative [Chan Zuckerberg Initiative 2023 Open Science Annual Meeting]"
+    title: "Chan Zuckerberg Initiative 2023 Open Science Annual Meeting"
     image: "/media/eventos/20230420_CZIOpenScienceMeeting.jpeg"
     image_alt: "Photo from the Chan Zuckerberg Initiative 2023 Open Science Annual Meeting."
     url: "https://chanzuckerberg.com/blog/open-science-latin-america-argentina/"
@@ -349,7 +349,7 @@ items:
 
   - date: "2022-04-14"
     place: "Buenos Aires, Argentina. Hybrid."
-    title: "Reunión Anual de Ciencia Abierta 2022 de la Chan Zuckerberg Initiative [Chan Zuckerberg Initiative 2022 Open Science Annual Meeting]"
+    title: "Chan Zuckerberg Initiative 2022 Open Science Annual Meeting"
     image: "/media/eventos/20220414_CZIOpenScienceMeeting.jpeg"
     image_alt: "Photo from the Chan Zuckerberg Initiative 2022 Open Science Annual Meeting."
     url: "https://metadocencia.org/post/acciones-promover-ca-panel/"
