@@ -5,14 +5,6 @@ type: "research"
 
 items:
 
-  - date: "2025"
-    outlet: "Jesica Formoso, María Paz Míguez, Irene Vazano, Nicolás Palopoli, Laura Ación, Débora Burin"
-    title: "Positive impact of a virtual Open Science training on knowledge and the adoption of good practices [Impacto positivo de una capacitación virtual en Ciencia Abierta sobre el conocimiento y la adopción de buenas prácticas]"
-    summary: "Open Science (OS) promotes the democratization of knowledge through practices that foster transparency, open access, data sharing, and collaboration. This study aims to evaluate the impact, in terms of knowledge and adoption of practices, of a virtual OS training course delivered to professionals and researchers in Latin America."
-    category_en: "Scientific poster"
-    url: "https://doi.org/10.5281/zenodo.17468649"
-    btn: "https://doi.org/10.5281/zenodo.17468649"
-
   - date: "2026"
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Perceived Barriers for Accessing International Research Funding among Latin American Researchers"
@@ -27,6 +19,14 @@ items:
       - label_es: "Preprint (2025)"
         label_en: "Preprint (2025)"
         url: "https://doi.org/10.31222/osf.io/68ws5_v1"
+      
+  - date: "2025"
+    outlet: "Jesica Formoso, María Paz Míguez, Irene Vazano, Nicolás Palopoli, Laura Ación, Débora Burin"
+    title: "Positive impact of a virtual Open Science training on knowledge and the adoption of good practices [Impacto positivo de una capacitación virtual en Ciencia Abierta sobre el conocimiento y la adopción de buenas prácticas]"
+    summary: "Open Science (OS) promotes the democratization of knowledge through practices that foster transparency, open access, data sharing, and collaboration. This study aims to evaluate the impact, in terms of knowledge and adoption of practices, of a virtual OS training course delivered to professionals and researchers in Latin America."
+    category_en: "Scientific poster"
+    url: "https://doi.org/10.5281/zenodo.17468649"
+    btn: "https://doi.org/10.5281/zenodo.17468649"
 
   - date: "2025"
     outlet: "Jesica Formoso, Nicolás Palopoli, Paz Miguez, Irene Vazano, Julián Buede, María Cristina Nanton, Debora I. Burín, Laura Ación"
