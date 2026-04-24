@@ -28,6 +28,7 @@ Esta Formación para enseñar se nutre y está relacionada con iniciativas abier
 
 ## Más
 * Material del curso [Entrenamiento docente de MetaDocencia](https://metadocencia.github.io/formacion/)
+* Blogpost: [Formación para enseñar: edición presencial en Arecibo (Puerto Rico)](/post/2026/20260304-arecibo/)
 * Blogpost: [Enseñando a enseñar entre comunidades en español](/post/metadocencia_carpentries/)
 * Curso [Entrenamiento de Instructores de The Carpentries](https://carpentries.github.io/instructor-training/index.html) 
 * Curso [Train the Trainer de ELIXIR-GOBLET](https://elixir-europe.org/platforms/training/train-the-trainer)
