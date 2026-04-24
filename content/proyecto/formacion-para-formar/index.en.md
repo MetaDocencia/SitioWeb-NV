@@ -24,6 +24,7 @@ This Train the Trainer program is informed by and connected to similar open init
 
 ## More information
 * [MetaDocencia Teaching Training course materials](https://metadocencia.github.io/formacion/)
+* Blog post: [Train the Trainer: In-person edition in Arecibo (Puerto Rico)](/en/post/2026/20260304-arecibo/)
 * Blog post: [Teaching to Teach across Spanish-speaking Communities (Spanish)](/post/metadocencia_carpentries/)
 * [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/index.html)
 * [ELIXIR-GOBLET Train the Trainer course](https://elixir-europe.org/platforms/training/train-the-trainer)
