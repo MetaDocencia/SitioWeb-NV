@@ -7,6 +7,24 @@ translationKey: "eventos"
 
 items:
 
+  - date: "2026-04-25"
+    place: "Córdoba, Argentina"
+    title: "FLISoL Córdoba 2026"
+    summary: "Presentamos "Cultura abierta para la Ciencia", una charla relámpago que exploró principios y desafíos que comparten el Software Libre y la Ciencia Abierta"
+    image: "/media/eventos/20260425_FLISoL.jpg"
+    image_alt: "Foto del Julián junto a la presentación."
+    url: "https://eventol.flisol.org.ar/events/flisol-cordoba-2026/activity/734/"
+    presentation_url: "https://doi.org/10.5281/zenodo.19769479"
+
+    
+  - date: "2026-04-22"
+    place: "Buenos Aires, Argentina"
+    title: "Latin American Women in Neuroscience Meeting"
+    summary: "Participamos con la charla "De aprender en comunidad a construir una ciencia más equitativa""
+    image: "/media/eventos/20260422_LAWNM.jpg"
+    image_alt: "Foto del Jesica junto a la presentación."
+    url: "https://www.instagram.com/mujeresneurolatam/"
+
   - date: "2026-01-15"
     place: "Puerto Rico"
     title: "Formación para Enseñar en el Observatorio de Arecibo"
