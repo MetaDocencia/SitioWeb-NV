@@ -13,7 +13,7 @@ sections:
       title: <span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Qué hacemos</span>
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
-          Fortalecemos el ecosistema científico latinoamericano con infraestructura, formación y comunidad
+          Fortalecemos el ecosistema científico latinoamericano con:
         </p>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           <a href="#infra"
