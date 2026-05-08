@@ -7,6 +7,15 @@ translationKey: "eventos"
 
 items:
 
+  - date: "2026-04-29"
+    place: "Buenos Aires, Argentina"
+    title: "Seminario: De la crisis de reproducibilidad a la ciencia abierta"
+    summary: "Dictamos este seminario en el encuentro organizado por el equipo de Estudiantes Investigadores UAI, el Centro de Altos Estudios en Desarrollo Humano y Psicología (CAEDHPSI) y PsicoUAI"
+    image: "/media/eventos/20260429_SeminarioReproducibilidadUAI.jpg"
+    image_alt: "Foto del Jesica junto a la presentación."
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdddDVJva9dnmxKSXBA3BX38bWdsoy2Fl8dCGcMdl-caRLaIg/viewform"
+    presentation_url: "https://zenodo.org/records/19767676"
+
   - date: "2026-04-25"
     place: "Córdoba, Argentina"
     title: "FLISoL Córdoba 2026"
