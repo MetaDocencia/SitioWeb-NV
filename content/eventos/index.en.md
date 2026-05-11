@@ -25,7 +25,7 @@ items:
     url: "https://eventol.flisol.org.ar/events/flisol-cordoba-2026/activity/734/"
     presentation_url: "https://doi.org/10.5281/zenodo.19769479"
 
-- date: "2026-04-22"
+  - date: "2026-04-22"
     place: "Buenos Aires, Argentina"
     title: "Latin American Women in Neuroscience Meeting"
     summary: "We delivered the talk \"De aprender en comunidad a construir una ciencia más equitativa\" [\"From Learning in Community to Building a More Equitable Science\"]."
