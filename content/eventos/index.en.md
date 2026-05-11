@@ -28,7 +28,7 @@ items:
   - date: "2026-04-22"
     place: "Buenos Aires, Argentina"
     title: "Latin American Women in Neuroscience Meeting"
-    summary: "We delivered the talk \"De aprender en comunidad a construir una ciencia más equitativa\" [\"From Learning in Community to Building a More Equitable Science\"]."
+    summary: "We delivered the talk \"De aprender en comunidad a construir una ciencia más equitativa\" [\"Community Learning to Building a More Equitable Science\"]."
     image: "/media/eventos/20260422_LAWNM.jpg"
     image_alt: "Photo of Jesica next to the presentation."
     url: "https://www.instagram.com/mujeresneurolatam/"
