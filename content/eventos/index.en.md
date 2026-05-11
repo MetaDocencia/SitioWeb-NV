@@ -7,6 +7,24 @@ translationKey: "eventos"
 
 items:
 
+  - date: "2026-04-29"
+    place: "Buenos Aires, Argentina"
+    title: "Seminario: De la crisis de reproducibilidad a la ciencia abierta [Seminar: From the Reproducibility Crisis to Open Science]"
+    summary: "We delivered this seminar at the event organized by Estudiantes Investigadores UAI [UAI Student Researchers], the Centro de Altos Estudios en Desarrollo Humano y Psicología (CAEDHPSI) [Center for Advanced Studies in Human Development and Psychology], and PsicoUAI."
+    image: "/media/eventos/20260429_SeminarioReproducibilidadUAI.jpg"
+    image_alt: "Photo of Jesica next to the presentation."
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSdddDVJva9dnmxKSXBA3BX38bWdsoy2Fl8dCGcMdl-caRLaIg/viewform"
+    presentation_url: "https://zenodo.org/records/19767676"
+
+  - date: "2026-04-25"
+    place: "Córdoba, Argentina"
+    title: "FLISoL Córdoba 2026"
+    summary: "We presented \"Cultura abierta para la Ciencia\" [\"Open Culture for Science\"], a lightning talk that explored principles and challenges shared by Free Software and Open Science."
+    image: "/media/eventos/20260425_FLISoL.jpg"
+    image_alt: "Photo of Julián next to the presentation."
+    url: "https://eventol.flisol.org.ar/events/flisol-cordoba-2026/activity/734/"
+    presentation_url: "https://doi.org/10.5281/zenodo.19769479"
+
   - date: "2026-01-15"
     place: "Puerto Rico"
     title: "Train the Trainers at the Arecibo Observatory"
