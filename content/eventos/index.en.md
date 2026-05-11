@@ -25,6 +25,14 @@ items:
     url: "https://eventol.flisol.org.ar/events/flisol-cordoba-2026/activity/734/"
     presentation_url: "https://doi.org/10.5281/zenodo.19769479"
 
+- date: "2026-04-22"
+    place: "Buenos Aires, Argentina"
+    title: "Latin American Women in Neuroscience Meeting"
+    summary: "We delivered the talk \"De aprender en comunidad a construir una ciencia más equitativa\" [\"From Learning in Community to Building a More Equitable Science\"]."
+    image: "/media/eventos/20260422_LAWNM.jpg"
+    image_alt: "Photo of Jesica next to the presentation."
+    url: "https://www.instagram.com/mujeresneurolatam/"
+
   - date: "2026-01-15"
     place: "Puerto Rico"
     title: "Train the Trainers at the Arecibo Observatory"
