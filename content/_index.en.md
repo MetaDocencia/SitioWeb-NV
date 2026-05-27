@@ -120,7 +120,7 @@ sections:
         - statistic: "6,000+"
           description: |
             persons connected
-        - statistic: "200+"
+        - statistic: "240+"
           description: |
             documents on Zenodo
     
