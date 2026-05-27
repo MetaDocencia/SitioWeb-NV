@@ -117,7 +117,7 @@ sections:
           description: |
             personas  
             conectadas
-        - statistic: "200+"
+        - statistic: "240+"
           description: |
             documentos  
             en Zenodo
