@@ -168,7 +168,7 @@ sections:
       items:
         - statistic: "85.000+"
           description: "palabras contextualizadas"
-        - statistic: "200+"
+        - statistic: "240+"
           description: "documentos en Zenodo"
         - statistic: "10"
           description: "comunidades latinoamericanas acompañadas desde Catalyst"
@@ -250,10 +250,10 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "97"
-          description: "ediciones (396 horas)"
-        - statistic: "1.600+"
-          description: "personas de 34 países formadas"
+        - statistic: "99"
+          description: "ediciones (430 horas)"
+        - statistic: "1.700+"
+          description: "personas de 33 países formadas"
         - statistic: ">85%"
           description: "Net Promoter Score"
     design:
