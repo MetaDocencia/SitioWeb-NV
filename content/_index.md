@@ -109,7 +109,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "1.600+"
+        - statistic: "1.700+"
           description: |
             personas  
             formadas
