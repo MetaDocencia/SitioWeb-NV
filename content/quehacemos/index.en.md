@@ -165,7 +165,7 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "200+"
+        - statistic: "240+"
           description: "documents on Zenodo"
         - statistic: "85,000+"
           description: "contextualized words"
@@ -249,10 +249,10 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "97"
-          description: "editions (396 hours)"
-        - statistic: "1,600+"
-          description: "people from 34 countries trained"
+        - statistic: "99"
+          description: "editions (430 hours)"
+        - statistic: "1,700+"
+          description: "people from 33 countries trained"
         - statistic: ">85%"
           description: "Net Promoter Score"
     design:
