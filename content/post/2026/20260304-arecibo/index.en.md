@@ -1,6 +1,6 @@
 ---
 title: "Train the Trainer: In-person edition  in Arecibo (Puerto Rico)"
-summary: "Entre el 14 y el 16 de enero de 2026 facilitamos una edición presencial de Formación para enseñar en el Arecibo C3 STEM Center (Puerto Rico)."
+summary: "From January 14 to 16, 2026, we facilitated an in-person edition of Train the Trainer at the Arecibo C3 STEM Center (Puerto Rico)."
 date: 2026-03-04
 translationKey: "20260218-formacion-arecibo"
 authors:
