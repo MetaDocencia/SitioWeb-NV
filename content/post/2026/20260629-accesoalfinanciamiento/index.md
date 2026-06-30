@@ -14,7 +14,7 @@ author: []
 
 ---
 
-Las personas que investigan desde América Latina enfrentan una serie de obstáculos comunes para acceder al financiamiento científico internacional. Estudiamos esas barreras en un trabajo que publicamos en acceso abierto, primero como *preprint* y luego como artículo bajo revisión de pares en la revista PLOS ONE.
+Las personas que investigan desde América Latina enfrentan una serie de obstáculos comunes para acceder al financiamiento científico internacional. Estudiamos esas barreras en un trabajo que publicamos en acceso abierto, primero como *preprint* y luego como artículo bajo revisión de pares en la revista [PLOS ONE](https://journals.plos.org/plosone/).
 
 ### Qué estudiamos
 
@@ -28,7 +28,7 @@ Identificamos que se trata de barreras estructurales, no de dificultades aislada
 
 Publicamos el trabajo en dos etapas, siguiendo prácticas de ciencia abierta.
 
-En septiembre de 2025 publicamos un *preprint* en MetaArXiv, alojado por Open Science Framework (OSF): una versión preliminar del artículo, disponible para leer y comentar antes de la revisión por pares. Luego lo enviamos a PLOS ONE, donde fue revisado por pares y aceptado para su publicación con acceso abierto. A partir de abril de 2026, cualquier persona puede leerlo, citarlo y reutilizarlo sin barreras de pago.
+En septiembre de 2025 publicamos un *preprint* en MetaArXiv, alojado por Open Science Framework (OSF): una versión preliminar del artículo, disponible para leer y comentar antes de la revisión por pares. También abrimos los datos y el código de análisis en la misma plataforma. Luego lo enviamos a PLOS ONE, donde fue revisado por pares y aceptado para su publicación con acceso abierto. A partir de abril de 2026, cualquier persona puede leerlo, citarlo y reutilizarlo sin barreras de pago.
 
 Las dos versiones están disponibles:
 
