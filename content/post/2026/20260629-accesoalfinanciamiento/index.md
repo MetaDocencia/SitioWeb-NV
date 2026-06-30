@@ -1,12 +1,13 @@
 ---
 title: "Barreras al financiamiento de la investigación en América Latina: del preprint a PLOS ONE"
 summary: "Publicamos en acceso abierto un estudio sobre los obstáculos que enfrentan quienes investigan desde América Latina para acceder al financiamiento internacional. Repasamos el trabajo, su proceso de publicación abierta y cómo lo difundimos."
-date: 2026-06-29
+date: 2026-06-11
 translationKey: "barreras-financiamiento-investigacion"
 tags:
   - investigación
   - Ciencia Abierta
   - Acceso Abierto
+  - MetaDocencia
 categories:
   - Institucional
 author: []
@@ -38,15 +39,11 @@ Las dos versiones están disponibles:
 
 Acompañamos cada versión con publicaciones de textos breves en redes sociales, en las que destacamos los hallazgos principales, dimos reconocimiento a quienes participaron e incluimos el enlace a la fuente. Algunas de ellas:
 
-{{< rawhtml >}}
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7455610965934444544" height="543" width="100%" frameborder="0" allowfullscreen title="Publicación de MetaDocencia en LinkedIn sobre el artículo"></iframe>
-{{< /rawhtml >}}
 
 Para resumir los resultados preparamos también un carrusel, que recorre las barreras y las estrategias en lenguaje accesible:
 
-{{< rawhtml >}}
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7473080663861161984" height="700" width="100%" frameborder="0" allowfullscreen title="Carrusel de MetaDocencia en LinkedIn con los resultados de la investigación"></iframe>
-{{< /rawhtml >}}
 
 ### Por qué lo difundimos
 
