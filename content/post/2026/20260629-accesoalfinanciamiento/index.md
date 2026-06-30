@@ -1,13 +1,12 @@
 ---
 title: "Barreras al financiamiento de la investigación en América Latina: del preprint a PLOS ONE"
 summary: "Publicamos en acceso abierto un estudio sobre los obstáculos que enfrentan quienes investigan desde América Latina para acceder al financiamiento internacional. Repasamos el trabajo, su proceso de publicación abierta y cómo lo difundimos."
-date: 2026-06-11
+date: 2026-06-29
 translationKey: "barreras-financiamiento-investigacion"
 tags:
   - investigación
   - Ciencia Abierta
   - Acceso Abierto
-  - MetaDocencia
 categories:
   - Institucional
 author: []
