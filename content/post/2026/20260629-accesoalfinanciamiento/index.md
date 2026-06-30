@@ -10,7 +10,7 @@ tags:
 categories:
   - Institucional
 author: []
-toc: false
+
 ---
 
 Las personas que investigan desde América Latina enfrentan una serie de obstáculos comunes para acceder al financiamiento científico internacional. Estudiamos esas barreras en un trabajo que publicamos en acceso abierto, primero como *preprint* y luego como artículo bajo revisión de pares en la revista PLOS ONE.
