@@ -36,12 +36,13 @@ user_groups: ["Equipo y Consejo Asesor"]
 
 **Experiencia y Trayectoria**
 
-Irene es Licenciada en  Bibliotecología en la UCSE-DABA. Desde que Irene se sumó en los inicios de MetaDocencia, aporta todo su conocimiento sobre bibliotecas académicas y su especialización en el área de tecnología.
-Ha trabajado como profesional independiente en diversos proyectos digitales, desempeñando roles de administración y garantizando la calidad de accesibilidad. 
+## Experiencia y Trayectoria
 
-Irene es instructora certificada por The Carpentries, lo que subraya su compromiso con la enseñanza y la difusión de habilidades en el ámbito digital. Además, participa activamente en MetaDocencia contribuyendo al fortalecimiento de la comunidad.
+Irene es licenciada en bibliotecología por la UCSE-DABA. Se sumó a MetaDocencia en sus inicios, aportando su formación en bibliotecas académicas y su conocimiento en infraestructura tecnológica y en preservación digital. Ha trabajado como profesional independiente y en relación de dependencia en diversos proyectos digitales, desempeñando roles de administración de sistemas y especialista en accesibilidad digital.
 
-Hacia adentro del equipo, Ire ha ganado el Premio Transformación por su desempeño a cargo del área de Infraestructura con gran capacidad para documentar y transformar nuestros tutoriales en una biblioteca digital codiciada y hermosa.
+Coordina el área de Infraestructura desde 2022, liderando el desarrollo y el mantenimiento de los sistemas tecnológicos que sustentan la operación de la organización, así como la documentación y la preservación digital de los materiales generados por la comunidad. Desde 2024, coordina también el área de Contextualización, promoviendo el desarrollo de una mirada latinoamericana en todos los proyectos en los que MetaDocencia trabaja para apoyar a distintas comunidades hispanohablantes.
+
+Es instructora certificada por The Carpentries y coautora de la lección "A Path to Open, Inclusive, and Collaborative Science for Librarians", desarrollada junto a Jessica Formoso e incorporada al currículum de Library Carpentry como parte del proyecto UCLA IMLS Open Science. Cuenta, además, con formación en administración de repositorios digitales (DSpace) y en accesibilidad web (WCAG 2.2 AA). Integra el Consejo Asesor de MetaDocencia en la gestión actual.
 
 ## Publicaciones
 
