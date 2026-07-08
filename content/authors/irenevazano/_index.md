@@ -42,7 +42,7 @@ Irene es licenciada en bibliotecología por la UCSE-DABA. Se sumó a MetaDocenci
 
 Coordina el área de Infraestructura desde 2022, liderando el desarrollo y el mantenimiento de los sistemas tecnológicos que sustentan la operación de la organización, así como la documentación y la preservación digital de los materiales generados por la comunidad. Desde 2024, coordina también el área de Contextualización, promoviendo el desarrollo de una mirada latinoamericana en todos los proyectos en los que MetaDocencia trabaja para apoyar a distintas comunidades hispanohablantes.
 
-Es instructora certificada por The Carpentries y coautora de la lección "A Path to Open, Inclusive, and Collaborative Science for Librarians", desarrollada junto a Jessica Formoso e incorporada al currículum de Library Carpentry como parte del proyecto UCLA IMLS Open Science. Cuenta, además, con formación en administración de repositorios digitales (DSpace) y en accesibilidad web (WCAG 2.2 AA). Integra el Consejo Asesor de MetaDocencia en la gestión actual.
+Es instructora certificada por The Carpentries y coautora de la lección "A Path to Open, Inclusive, and Collaborative Science for Librarians", desarrollada junto a Jesica Formoso e incorporada al currículum de Library Carpentry como parte del proyecto UCLA IMLS Open Science. Cuenta, además, con formación en administración de repositorios digitales (DSpace) y en accesibilidad web (WCAG 2.2 AA). Integra el Consejo Asesor de MetaDocencia en la gestión actual.
 
 ## Publicaciones
 
