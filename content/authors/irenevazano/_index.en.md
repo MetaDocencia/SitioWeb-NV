@@ -36,11 +36,14 @@ user_groups:
 ---
 **Experience and Track Record**
 
-Irene has a degree in Library Science from UCSE-DABA. Since Irene joined MetaDocencia at the beginning, she has brought all her knowledge about academic libraries and her specialization in the area of technology. She has worked as a freelancer in several digital projects, fulfilling management roles and ensuring the quality of accessibility.
+## Experience and Background
 
-Irene is a certified instructor for The Carpentries, which underscores her commitment to teaching and disseminating digital skills. She is also an active participant in MetaDocencia, contributing to the strengthening of the community.
+Irene holds a degree in Library Science from UCSE-DABA. She joined MetaDocencia in its early days, bringing her background in academic libraries along with her knowledge of technological infrastructure and digital preservation. She has worked both as an independent professional and as an employee on various digital projects, taking on roles in systems administration and digital accessibility.
 
-Inside the team, Ire has won the Transformation Award for her performance in charge of the infrastructure area with great ability to document and transform our tutorials into a valuable and beautiful digital library.
+She has coordinated the Infrastructure area since 2022, leading the development and maintenance of the technological systems that support the organization's operations, as well as the documentation and digital preservation of the materials produced by the community. Since 2024, she has also coordinated the Contextualization area, promoting a Latin American perspective across MetaDocencia's projects to support diverse Spanish-speaking communities.
+
+She is a certified Carpentries instructor and co-author of the lesson "A Path to Open, Inclusive, and Collaborative Science for Librarians" developed together with Jesica Formoso and incorporated into the Library Carpentry curriculum as part of the UCLA IMLS Open Science project. She also holds training in digital repository administration (DSpace) and web accessibility (WCAG 2.2 AA). She currently serves on MetaDocencia's
+Advisory Council.
 
 ## Publicaciones
 
