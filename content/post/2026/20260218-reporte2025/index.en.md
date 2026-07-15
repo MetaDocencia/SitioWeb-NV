@@ -13,6 +13,6 @@ This report shares the main results from last year and the learnings that come f
 
 Our heartfelt thanks to the 6,000+ people who engage with, contribute to, and amplify our work, and the dozens of institutions and organizations that have invested in our mission since 2020.
 
-Find the full report also on Zenodo: https://zenodo.org/records/17943831
+Find the full report also on Zenodo: https://doi.org/10.5281/zenodo.17943831
 
 <iframe src="https://docs.google.com/presentation/d/1dC3Q_aiCzEIqXAiUMpHiMnwXD_Wvy3YwpAIGGt6WpWU/embed" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
