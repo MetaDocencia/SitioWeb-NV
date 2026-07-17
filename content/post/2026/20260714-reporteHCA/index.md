@@ -31,15 +31,19 @@ El primer encuentro, [Fundamentos de Ciencia Abierta](https://metadocencia.githu
 
 En el segundo encuentro revisamos y reflexionamos sobre qué son y qué beneficios traen los [Datos Abiertos](https://metadocencia.github.io/herramientas-de-ciencia-abierta/DatosAbiertosE2.html). Presentamos el Plan de Gestión de Datos (PGD) y su importancia. Repasamos ejemplos y aspectos importantes de un PGD. También hablamos sobre metadatos, licencias y repositorios para hacer Ciencia Abierta. [Presentación encuentro 2](https://doi.org/10.5281/zenodo.18891558)
 
-![25 participantes de la primera edición del curso saludando a cámara.](/img/20260507_HCA1cierre.jpg)
-*25 participantes de la primera edición del curso saludando a cámara.*
+<figure class="md-figure">
+  <img src="/img/20260507_HCA1cierre.jpg" alt="25 participantes de la primera edición del curso saludando a cámara.">
+  <figcaption>Participantes de la primera edición del curso saludando a cámara.</figcaption>
+</figure>
 
 En el tercer encuentro hablamos sobre qué es el [Código Abierto](https://metadocencia.github.io/herramientas-de-ciencia-abierta/CodigoAbiertoE3.html), distintas herramientas para facilitar la apertura de software y cómo gestionarlo desde el principio mediante un Plan de Gestión de Software (PGS). También hablamos de buenas prácticas para que nuestro código sea fácil de encontrar, accesible y reutilizable. [Presentación encuentro 3](https://doi.org/10.5281/zenodo.18894415)
 
 El último encuentro buscó profundizar sobre las distintas formas de publicar [Resultados Abiertos](https://metadocencia.github.io/herramientas-de-ciencia-abierta/ResultadosAbiertosE4.html). Compartimos herramientas que pueden ayudarnos a gestionar la apertura de proyectos de investigación y buenas prácticas para la generación de reportes acordes a los principios FAIR. [Presentación encuentro 4](https://doi.org/10.5281/zenodo.18894630)
 
-![36 participantes de la segunda edición del curso saludando a cámara.](/img/20260714_HCA2cierre.jpg)
-*36 participantes de la segunda edición del curso saludando a cámara.*
+<figure class="md-figure">
+  <img src="/img/20260714_HCA2cierre.jpg" alt="36 participantes de la segunda edición del curso saludando a cámara.">
+  <figcaption>Participantes de la segunda edición del curso saludando a cámara.</figcaption>
+</figure>
 
 ### Lo que dejó cada edición
 
@@ -81,6 +85,9 @@ Algunos testimonios de quienes participaron:
 </div>
 
 <style>
+.md-figure{margin:1.5rem 0}
+.md-figure img{display:block;width:100%;height:auto;border-radius:8px}
+.md-figure figcaption{margin-top:.5rem;font-style:italic;font-size:.9rem;opacity:.8;line-height:1.4}
 .md-testi{position:relative;display:flex;align-items:center;gap:.5rem;margin:1.5rem 0}
 .md-testi__track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
 .md-testi__card{flex:0 0 min(85%,340px);scroll-snap-align:start;margin:0;padding:1.25rem 1.5rem;border:1px solid rgba(127,127,127,.28);border-radius:14px;background:rgba(127,127,127,.07);display:flex;flex-direction:column;justify-content:space-between}
