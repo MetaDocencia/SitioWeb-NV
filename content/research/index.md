@@ -6,6 +6,14 @@ type: "research"
 items:
 
   - date: "2026"
+    outlet: "Laura Acion, Laura Ascenzi, Alejandra Daniela Calero, Paola Castaño, Jesica Formoso, Patricia Andrea Loto, Paz Míguez, Francisco Palm, Nicolás Palopoli, Romina Pendino, Maria Angela Petrizzo Páez, Driselda Sánchez-Aguirre, Irene Vazano, Verónica Xhardez"
+    title: "Más que una insignia de la NASA: MetaDocencia y el desarrollo de capacidades para comunidades de Ciencia Abierta en América Latina [More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America]"
+    summary: "Este artículo explora cómo las comunidades de práctica de América Latina impulsan la Ciencia Abierta mediante el desarrollo de capacidades desde las bases y la redistribución de recursos. A partir de la adaptación de 2024 del curso Open Science 101 de la NASA, muestra cómo los esfuerzos impulsados por trabajo voluntario habilitan y, al mismo tiempo, limitan la participación equitativa y la sostenibilidad a largo plazo."
+    category_es: "Artículo científico"
+    url: "https://doi.org/10.1080/02691728.2026.2669558"
+    btn: "https://doi.org/10.1080/02691728.2026.2669558"
+
+  - date: "2026"
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina [Perceived Barriers for Accessing International Research Funding among Latin American Researchers]"
     summary: "Las personas que investigan en América Latina se enfrentan a barreras estructurales, lingüísticas y culturales persistentes que limitan el acceso equitativo a la financiación internacional para la investigación. Nuestro estudio de métodos mixtos identificó obstáculos clave, como las limitaciones económicas, los criterios de elegibilidad desajustados y las diferencias retóricas, y propone estrategias como la capacitación sensible al contexto, la tutoría y el diseño de financiación inclusiva para abordarlos."
