@@ -6,6 +6,14 @@ type: "research"
 items:
 
   - date: "2026"
+    outlet: "Laura Acion, Laura Ascenzi, Alejandra Daniela Calero, Paola Castaño, Jesica Formoso, Patricia Andrea Loto, Paz Míguez, Francisco Palm, Nicolás Palopoli, Romina Pendino, Maria Angela Petrizzo Páez, Driselda Sánchez-Aguirre, Irene Vazano, Verónica Xhardez"
+    title: "More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America"
+    summary: "This paper explores how Latin American communities of practice advance Open Science through grassroots capacity building and resource redistribution. Focusing on the 2024 adaptation of NASA’s Open Science 101, it shows how volunteer-driven efforts both enable and constrain equitable participation and long-term sustainability."
+    category_en: "Academic paper"
+    url: "https://doi.org/10.1080/02691728.2026.2669558"
+    btn: "https://doi.org/10.1080/02691728.2026.2669558"
+
+  - date: "2026"
     outlet: "Jesica Formoso, Paz Miguez, Nicolás Palopoli, Irene Vazano, Julián Buede, Juan Pablo Barreyro, Laura Ación"
     title: "Perceived Barriers for Accessing International Research Funding among Latin American Researchers"
     summary: "Researchers in Latin America face persistent structural, linguistic, and cultural barriers that limit equitable access to international research funding. Our mixed-methods study identified key obstacles, such as economic constraints, misaligned eligibility criteria, and rhetorical differences, and proposes strategies like context-sensitive training, mentorship, and inclusive funding design to address them."
