@@ -1,6 +1,6 @@
 ---
 title: "Herramientas de Ciencia Abierta: Two Editions in the First Half of 2026"
-summary: "In the first half of 2026 we ran two editions of our course Herramientas de Ciencia Abierta. We look back at how they went, what we covered in each session, and the resources that remain open to keep using."
+summary: "In the first half of 2026 we ran two editions of our course Herramientas de Ciencia Abierta. We look back on them, what was covered in each session, and the many open resources that were shared."
 date: 2026-06-11
 translationKey: "reporte-hca"
 tags:
