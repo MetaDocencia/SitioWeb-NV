@@ -118,3 +118,4 @@ Puedes conocer más de este y otros proyectos de formación en nuestra [sección
 ---
 
 *¿Te gustó esta publicación? Puedes reutilizarla libremente bajo licencia CC by 4.0, solo tienes que citarla.*
+Esta es la cita que te recomendamos usar para referenciarla: Irene Vazano, Laura Ación, Jesica Formoso, Paz Míguez, Nicolás Palopoli, Julián Buede (2026). Herramientas de Ciencia Abierta: dos ediciones en el primer semestre de 2026. Zenodo. https://doi.org/10.5281/zenodo.21648286
