@@ -9,7 +9,7 @@ categories:
   - Institutional
 ---
 
-![MetaDocencia, six years in community. Thank you for walking this path with MetaDocencia!](/img/20260313_Aniversario.jpg) 
+![MetaDocencia, six years in community. Thank you for walking this path with MetaDocencia!](/img/20260313_AniversarioEN.jpg) 
 
 We want to take this anniversary to thank the community that has been with us since 2020 and everyone who joined along the way. Over these six years, more than 90 team members and collaborators have worked alongside more than 30 communities, trained more than 1,600 people, connected more than 6,000, and published more than 200 resources on Zenodo. To everyone who is always by our side: thank you for being part of this shared effort and collective growth!
 
