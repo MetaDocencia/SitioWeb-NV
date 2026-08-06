@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-home
     content:
-      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Potenciemos la presencia de América Latina en la ciencia global.</span>'
       text: |
         <p class="text-white text-xl md:text-2xl">
           <span class="block">Más colaboración.</span>
