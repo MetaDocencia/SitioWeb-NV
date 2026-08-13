@@ -469,6 +469,46 @@
   año: "2026"
   link: "https://www.linkedin.com/posts/mariocaceres25_gis-activity-7469047957233987584-6vPf"
 
+- id: reyna-alfaro-2026
+  nombre: "Reyna Margarita Alfaro"
+  rol: "Bibliotecóloga del Sistema Bibliotecario de la Universidad Francisco Gavidia (El Salvador)"
+  org: ""
+  cita: "La biblioteca es un aliado estratégico para impulsar la Ciencia Abierta; por lo cual, para los profesionales en esta área es fundamental el contar con conocimientos sobre el tema. La formación recibida por medio de MetaDocencia y el gran equipo de profesionales que lo conforman, ha sido muy significativa a nivel personal y profesional. ¡Muchas gracias MetaDocencia por esta experiencia formativa!"
+  en_cita: "The library is a strategic ally for promoting Open Science; therefore, professionals in this field need knowledge on the subject. The training received through MetaDocencia and the great team of professionals who make it up has been very significant at a personal and professional level. Thank you very much MetaDocencia for this formative experience!"
+  categoria: "formacion"
+  año: "2026"
+  link: ""
+
+- id: pavel-popoca-cruz-2026
+  nombre: "Pavel Ernesto Popoca Cruz"
+  rol: "Académico y promotor del código abierto y software libre"
+  org: ""
+  cita: "El curso de Herramientas de Ciencia Abierta es excelente por su contenido y enfoque pero más aún por la experiencia y calidez de las personas instructoras y el equipo que lo coordina. Como académico y promotor del código abierto y software libre, fue para mí un curso muy enriquecedor que me ayudó a ampliar y fortalecer mis conocimientos e incluso me ha motivado a involucrarme más en la Ciencia Abierta."
+  en_cita: "The Open Science Tools course is excellent in its content and approach, but even more so in the experience and warmth of the instructors and the coordinating team. As an academic and promoter of open code and free software, it was a very enriching course that helped me expand and strengthen my knowledge and has even motivated me to get more involved in Open Science."
+  categoria: "formacion"
+  año: "2026"
+  link: ""
+
+- id: claudia-cifuentes-2026
+  nombre: "Claudia Cifuentes Roca"
+  rol: ""
+  org: ""
+  cita: "En mayo concluyeron los encuentros de Herramientas de Ciencia Abierta, organizados por MetaDocencia. Fue una excelente oportunidad para seguir fortaleciendo conocimientos de prácticas abiertas en investigación."
+  en_cita: "In May, the Open Science Tools sessions organized by MetaDocencia concluded. It was an excellent opportunity to continue strengthening knowledge of open practices in research."
+  categoria: "formacion"
+  año: "2026"
+  link: "https://www.linkedin.com/posts/cpcifuentesr_nasa-open-science-101-was-issued-by-nasa-activity-7483329664405565441-nwTm"
+
+- id: ana-lorena-rojas-2026
+  nombre: "Ana Lorena Rojas Sabogal"
+  rol: ""
+  org: ""
+  cita: "Me alegra compartir que completé la certificación Herramientas de Ciencia Abierta (Open Science 101) de MetaDocencia y NASA. Cada aprendizaje fortalece mi compromiso con una investigación más abierta, colaborativa y reproducible."
+  en_cita: "I am happy to share that I completed the Open Science Tools (Open Science 101) certification from MetaDocencia and NASA. Each learning experience strengthens my commitment to more open, collaborative, and reproducible research."
+  categoria: "formacion"
+  año: "2026"
+  link: "https://www.linkedin.com/posts/lorena-rojas_nasa-open-science-101-was-issued-by-nasa-activity-7483145295711768576-7GrB"
+
 # ── INVESTIGACIÓN ──────────────────────────────────────────────────────
 
 - id: petrizzo-more-than-nasa-2025
@@ -789,3 +829,12 @@
   categoria: "comunidad"
   año: "2026"
   link: "https://hublac.org/wp-content/uploads/Una-vision-colectiva-para-el-futuro-de-la-ciencia-y-la-investigacion-en-America-Latina-y-el-Caribe_jun_26.pdf"
+
+- id: bioinformatics-espanol-2026
+  nombre: "Bioinformatics in Español"
+  rol: "Artículo «Bioinformatics in Español: expanding open, diverse, and collaborative science through SEH2Bioinfo» (Bioinformatics Advances)"
+  org: ""
+  cita: "At the same time, initiatives such as MetaDocencia, RiaBio, and OpenCon prioritize inclusive scientific education and the creation of open educational resources in Spanish. Taken together, these initiatives have established Spanish as a pivotal medium for education, scientific outreach, and regional collaboration. While English remains indispensable for global visibility, Spanish increasingly anchors open, locally grounded science, especially in bioinformatics, where open access to cutting-edge tools, networked collaboration to share opportunities and resources, and multilingual dissemination are critical to progress."
+  categoria: "comunidad"
+  año: "2026"
+  link: "https://academic.oup.com/bioinformaticsadvances/article/6/1/vbag182/8753158"
