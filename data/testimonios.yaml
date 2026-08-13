@@ -1,4 +1,4 @@
-# Testimonios de MetaDocencia
+# Reconocimiento — MetaDocencia
 # Campos:
 #   id:        identificador único (slug)
 #   nombre:    nombre completo (o @handle si no se conoce el nombre real)
@@ -6,44 +6,9 @@
 #   org:       organización (opcional)
 #   cita:      texto del testimonio en español
 #   en_cita:   traducción al inglés (omitir si ya está en inglés en cita)
-#   categoria: formacion | comunidad | infraestructura
+#   categoria: formacion | comunidad | investigacion
 #   año:       "2020", "2021", etc. — dejar vacío ("") si no se conoce
 #   link:      URL a la fuente original (vacío si no se tiene)
-
-# ── INFRAESTRUCTURA ────────────────────────────────────────────────────
-
-- id: wolovick-2025
-  nombre: "Nicolás Wolovick"
-  rol: "Director"
-  org: "UNC Supercómputo"
-  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
-  en_cita: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
-  categoria: "infraestructura"
-  año: "2025"
-  link: ""
-
-- id: olivera-2025
-  nombre: "Andrés Olivera"
-  rol: ""
-  org: "Latin America Bioimaging"
-  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
-  en_cita: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
-  categoria: "infraestructura"
-  año: "2025"
-  link: ""
-
-- id: marina-compagnucci
-  nombre: "Marina Compagnucci"
-  rol: "Bióloga y colaboradora de MetaDocencia"
-  en_rol: "Biologist and MetaDocencia collaborator"
-  org: ""
-  cita: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio."
-  en_cita: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It's no surprise that creative proposals emerge when dialogue feels natural and reassuring."
-  categoria: "comunidad"
-  año: "2025"
-  link: ""
-  destacado: true
-  orden_destacado: 3
 
 # ── FORMACIÓN ──────────────────────────────────────────────────────────
 
@@ -504,7 +469,82 @@
   año: "2026"
   link: "https://www.linkedin.com/posts/mariocaceres25_gis-activity-7469047957233987584-6vPf"
 
+# ── INVESTIGACIÓN ──────────────────────────────────────────────────────
+
+- id: petrizzo-more-than-nasa-2025
+  nombre: "María Ángela Petrizzo Páez"
+  rol: "Co-autora del artículo «More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America»"
+  org: ""
+  cita: "Este artículo no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más!"
+  en_cita: "This article not only describes the MetaDocencia experience, but also draws from it to identify analytical categories that I consider key to studying the future sustainability of Open Science practice adoption. My gratitude to Paola Castaño for leading this collective work with rigor and consistency, and to everyone on the MetaDocencia team who came along for the ride. Onwards!"
+  categoria: "investigacion"
+  año: "2025"
+  link: "https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH"
+
+- id: marina-fernandez-2025
+  nombre: "Marina Fernandez"
+  rol: "Sobre el artículo «Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina» (PLOS One)"
+  org: ""
+  cita: "¡Lectura recomendada en PLOS One! Un nuevo artículo analiza por qué a los investigadores en Latinoamérica nos cuesta tanto acceder a fondos internacionales. El estudio pone sobre la mesa obstáculos reales de nuestro día a día: la barrera del inglés, el poco apoyo administrativo en nuestras instituciones y la dificultad para armar redes con el \"Norte Global\". Aprovecho para dejar mis ¡felicitaciones a MetaDocencia! por su trabajo incansable apoyando a la ciencia latinoamericana y apostando siempre por la ciencia abierta. ¡Ese es exactamente el camino que necesitamos en la región!"
+  en_cita: "Recommended reading in PLOS One! A new article analyzes why researchers in Latin America struggle so much to access international funding. The study highlights real day-to-day obstacles: the language barrier, limited administrative support at our institutions, and the difficulty of building networks with the 'Global North'. I take this opportunity to congratulate MetaDocencia for their tireless work supporting Latin American science and always championing open science. That is exactly the path our region needs!"
+  categoria: "investigacion"
+  año: "2025"
+  link: "https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY"
+
+- id: petrizzo-2023
+  nombre: "Maria Ángela Petrizzo Páez"
+  rol: "Sobre el capítulo «Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia» (Premio «Dominique Babini», CLACSO)"
+  org: ""
+  cita: "Un súper merecido reconocimiento a MetaDocencia como iniciativa promotora de Ciencia Abierta en nuestra región a través de la publicación de este capítulo."
+  en_cita: "A thoroughly well-deserved recognition for MetaDocencia as a promoter of Open Science in our region through the publication of this chapter."
+  categoria: "investigacion"
+  año: "2023"
+  link: "https://www.linkedin.com/posts/petrizzo_libreria-clacso-conocimiento-como-bien-activity-7333801062581129217-LRSR"
+
+- id: premio-dominique-babini
+  nombre: "Premio Dominique Babini (CLACSO)"
+  rol: "Reconocimiento al capítulo «Justicia epistémica y ciencia abierta en América Latina y el Caribe. El caso de MetaDocencia»"
+  org: ""
+  cita: "El Premio Dominique Babini celebra el conocimiento como bien común y reconoce experiencias, reflexiones y prácticas en torno a la ciencia abierta desde América Latina y el Caribe. Este libro reúne ensayos e investigaciones seleccionadas en la primera edición del premio, impulsado por CLACSO junto a aliados regionales e internacionales. Con una perspectiva situada y crítica, las autoras y autores abordan desafíos globales del acceso abierto, prácticas de justicia cognitiva y experiencias innovadoras que amplían los horizontes de la producción académica."
+  en_cita: "The Dominique Babini Prize celebrates knowledge as a common good and recognizes experiences, reflections, and practices around open science from Latin America and the Caribbean. This book brings together essays and research selected in the first edition of the prize, driven by CLACSO alongside regional and international allies. With a situated and critical perspective, the authors address global challenges of open access, cognitive justice practices, and innovative experiences that broaden the horizons of academic production."
+  categoria: "investigacion"
+  año: "2023"
+  link: "https://libreria.clacso.org/publicacion.php?p=4470&c=2"
+
 # ── COMUNIDAD ──────────────────────────────────────────────────────────
+
+- id: wolovick-2025
+  nombre: "Nicolás Wolovick"
+  rol: "Director"
+  org: "UNC Supercómputo"
+  cita: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
+  en_cita: "Participating in the Catalyst project was very important for UNC Supercomputing. We learned how to navigate a funding and collaboration ecosystem that was new to us. We met others and made ourselves known; we valued and were valued within larger networks across Latin America and Africa. The plan to set up a local cloud for JupyterHub is a project that continues to progress and has great potential now and in the future."
+  categoria: "comunidad"
+  año: "2025"
+  link: ""
+
+- id: olivera-2025
+  nombre: "Andrés Olivera"
+  rol: ""
+  org: "Latin America Bioimaging"
+  cita: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+  en_cita: "Participating in Catalyst allowed us to test and determine the infrastructure needed for a sustainable ecosystem with trained local leaders. We confirmed that open access to this infrastructure is vital to drive local research and amplify regional scientific impact."
+  categoria: "comunidad"
+  año: "2025"
+  link: ""
+
+- id: marina-compagnucci
+  nombre: "Marina Compagnucci"
+  rol: "Bióloga y colaboradora de MetaDocencia"
+  en_rol: "Biologist and MetaDocencia collaborator"
+  org: ""
+  cita: "Trabajar con MetaDocencia es sentirse orgullosamente parte de un equipo atento, cálido, diverso, responsable y comprometido con su objetivo y con las personas que hacen a MetaDocencia. No es de extrañar la creatividad de las propuestas cuando es natural la comodidad y la tranquilidad del diálogo en ese espacio."
+  en_cita: "Working with MetaDocencia means being part of a team that is attentive, warm, diverse, and committed to its mission and people. It's no surprise that creative proposals emerge when dialogue feels natural and reassuring."
+  categoria: "comunidad"
+  año: "2025"
+  link: ""
+  destacado: true
+  orden_destacado: 3
 
 - id: thecarpentries-2020
   nombre: "The Carpentries"
@@ -585,7 +625,7 @@
   org: ""
   cita: "Agradecida de formar parte de MetaDocencia como Colaboradora Externa en el Proyecto Polen, realizando la contextualización de los contenidos de Ciencia Abierta para América Latina. ¡Un gran equipo colaborativo!"
   en_cita: "Grateful to be part of MetaDocencia as an External Collaborator on the Polen Project, contextualizing Open Science content for Latin America. A wonderful collaborative team!"
-  categoria: "infraestructura"
+  categoria: "comunidad"
   año: "2023"
   link: "https://www.linkedin.com/posts/pt-rt-vanesaruiz_vanesa-ruiz-metadocencia-activity-7216809333840351233-RDAZ"
 
@@ -607,16 +647,6 @@
   categoria: "comunidad"
   año: "2023"
   link: "https://www.linkedin.com/posts/latambioimaging_trabajo-intercomunidades-la-experiencia-activity-7276994163840077824-rUWA"
-
-- id: petrizzo-2023
-  nombre: "Maria Ángela Petrizzo Páez"
-  rol: ""
-  org: ""
-  cita: "Un súper merecido reconocimiento a MetaDocencia como iniciativa promotora de Ciencia Abierta en nuestra región."
-  en_cita: "A thoroughly well-deserved recognition for MetaDocencia as a promoter of Open Science in our region."
-  categoria: "comunidad"
-  año: "2023"
-  link: "https://www.linkedin.com/posts/petrizzo_libreria-clacso-conocimiento-como-bien-activity-7333801062581129217-LRSR"
 
 - id: veronica-xhardez-2023
   nombre: "Verónica Xhardez"
@@ -749,3 +779,13 @@
   categoria: "comunidad"
   año: "2024"
   link: "https://x.com/Sape_BY/status/1821314868118745513"
+
+- id: hub-lac-2026
+  nombre: "Hub de Evidencias de Latinoamérica y el Caribe (Hub LAC)"
+  rol: "En «Una visión colectiva para el futuro de la ciencia y la investigación en América Latina y el Caribe»"
+  org: ""
+  cita: "MetaDocencia muestra que es posible crear organizaciones alineadas con los principios de la ciencia abierta y colaborativa sin renunciar a la aspiración de legitimidad dentro del sistema científico tradicional."
+  en_cita: "MetaDocencia shows that it is possible to create organizations aligned with the principles of open and collaborative science without giving up the aspiration of legitimacy within the traditional scientific system."
+  categoria: "comunidad"
+  año: "2026"
+  link: "https://hublac.org/wp-content/uploads/Una-vision-colectiva-para-el-futuro-de-la-ciencia-y-la-investigacion-en-America-Latina-y-el-Caribe_jun_26.pdf"
