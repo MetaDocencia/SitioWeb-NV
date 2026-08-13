@@ -9,10 +9,10 @@
 {{ $labelSinFecha  := cond $esES "Sin fecha"      "Undated" }}
 {{ $labelFormacion        := cond $esES "Formación"         "Training" }}
 {{ $labelComunidad        := cond $esES "Comunidad"         "Community" }}
-{{ $labelInfra            := cond $esES "Infraestructura"   "Infrastructure" }}
+{{ $labelInvestigacion    := cond $esES "Investigación"     "Research" }}
 {{ $labelContextualizacion := cond $esES "Contextualización" "Contextualization" }}
-{{ $labelResultado := cond $esES "testimonios"    "testimonials" }}
-{{ $labelVacio     := cond $esES "No hay testimonios con estos filtros." "No testimonials match these filters." }}
+{{ $labelResultado := cond $esES "reconocimientos" "recognitions" }}
+{{ $labelVacio     := cond $esES "No hay reconocimientos con estos filtros." "No recognitions match these filters." }}
 
 {{/* ─── Años únicos disponibles (ordenados desc) ──────────────── */}}
 {{ $años := slice }}
@@ -42,7 +42,7 @@
 
   {{/* ── Testimonios destacados ────────────────────────────────── */}}
   {{ if $destacados }}
-  <div class="testimonios-destacados" aria-label="{{ cond $esES "Testimonios destacados" "Featured testimonials" }}">
+  <div class="testimonios-destacados" aria-label="{{ cond $esES "Reconocimientos destacados" "Featured recognitions" }}">
     {{ range $destacados }}
     {{ $citaDest := cond $esES .cita (.en_cita | default .cita) }}
     <article class="destacado-card">
@@ -60,10 +60,10 @@
   {{ end }}
 
   {{/* ── Título sección grid ──────────────────────────────────────── */}}
-  <p class="testimonios-mas">{{ cond $esES "Más testimonios" "More testimonials" }}</p>
+  <p class="testimonios-mas">{{ cond $esES "Más reconocimientos" "More recognitions" }}</p>
 
   {{/* ── Filtros ─────────────────────────────────────────────────── */}}
-  <div class="testimonios-filtros" role="search" aria-label="{{ cond $esES "Filtros de testimonios" "Testimonial filters" }}">
+  <div class="testimonios-filtros" role="search" aria-label="{{ cond $esES "Filtros de reconocimientos" "Recognition filters" }}">
 
     <div class="filtro-grupo">
       <span class="filtro-etiqueta" id="label-cat">{{ $labelCat }}</span>
@@ -71,7 +71,7 @@
         <button class="filtro-btn activo" data-value="todos" type="button">{{ $labelTodas }}</button>
         <button class="filtro-btn" data-value="formacion" type="button">{{ $labelFormacion }}</button>
         <button class="filtro-btn" data-value="comunidad" type="button">{{ $labelComunidad }}</button>
-        <button class="filtro-btn" data-value="infraestructura" type="button">{{ $labelInfra }}</button>
+        <button class="filtro-btn" data-value="investigacion" type="button">{{ $labelInvestigacion }}</button>
       </div>
     </div>
 
