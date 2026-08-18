@@ -16,9 +16,9 @@ sections:
           Fortalecemos el ecosistema científico latinoamericano con:
         </p>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
-          <a href="#infra"
+          <a href="#investigacion"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
-             style="background:#00506F;color:#FFFFFF;">Infraestructura</a>
+             style="background:#00506F;color:#FFFFFF;">Investigación</a>
           <a href="#formacion"
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
              style="background:#C83737;color:#FFFFFF;">Formación</a>
@@ -47,15 +47,15 @@ sections:
     id: pilares
     content:
       items:
-        - name: "Impulsamos infraestructura"
+        - name: "Hacemos investigación"
           description: |
             <div style="height:4px;background:#00506F;border-radius:6px;margin:0 0 0.75rem 0;"></div>
-            Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
+            Analizamos evidencia y construimos estrategias para fortalecer el ecosistema científico. Medimos y publicamos el impacto de programas y acciones de manera participativa y abierta.
             <br>
-            <a href="#infra"
+            <a href="#investigacion"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#00506F;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Proyectos
+               Ver más
             </a>
         - name: "Formamos capacidades"
           description: |
@@ -65,7 +65,7 @@ sections:
             <a href="#formacion"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#C83737;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Proyectos
+               Ver más
             </a>
         - name: "Construimos comunidad"
           description: |
@@ -75,7 +75,7 @@ sections:
             <a href="#comunidad"
                class="mt-3 inline-block no-underline font-semibold"
                style="background:#F77B20;color:#FFFFFF;padding:0.5rem 0.9rem;border-radius:0.5rem;">
-               Proyectos
+               Ver más
             </a>
     design:
       columns: 3
@@ -101,92 +101,97 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/nasa-spanish/">Ver más →</a>
-        - name: "Gobernanza comunitaria"
+        - name: "Barreras al financiamiento para la investigación"
           description: |
-            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos herramientas y asesoramiento en gobernanza para que personas y organizaciones logren mayor impacto y eficiencia.
+            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Publicamos un estudio que identifica algunas barreras en el acceso equitativo a la financiación internacional para las personas que investigan en América Latina y propone estrategias para mitigarlas.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/gobernanza-2022/">Ver más →</a>
+               href="https://metadocencia.org/research/">Ver todas las publicaciones académicas →</a>
     design:
       columns: 3
 
   # ======================
-  #  SECCIÓN: INFRA (AZUL) — usa shortcode cta_fullwidth
+  #  SECCIÓN: INVESTIGACIÓN (AZUL) — usa shortcode cta_fullwidth
   # ======================
   - block: markdown
-    id: infra
+    id: investigacion
     content:
       text: |
         {{< cta_fullwidth
-            id="infra"
-            title="Impulsamos infraestructura"
+            id="investigacion"
+            title="Hacemos investigación"
             bg="#00506F"
             color="#FFFFFF"
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
         >}}
-        Promovemos infraestructura científica y tecnológica que soporta la producción, gestión y reutilización de conocimiento.
+        Analizamos evidencia y construimos estrategias para fortalecer el ecosistema científico. Medimos y publicamos el impacto de programas y acciones de manera participativa y abierta.
         {{</ cta_fullwidth >}}
 
   - block: features
-    id: infra-proyectos
+    id: investigacion-proyectos
     content:
       items:
-        - name: "Proyecto Catalyst"
-          description: |
-            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Facilitamos la accesibilidad y la utilidad de la infraestructura  de cómputo en la nube para comunidades globales de biociencias.
-            <br>
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/catalyst/">Ver más →</a>
-        - name: "Contextualización"
-          description: |
-            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
-            <br>
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/contextualizacion/">Ver más →</a>
-        - name: "Revisión abierta y equitativa"
-          description: |
-            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints y conjuntos de datos académicos.
-            <br>
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/revision-abierta/">Ver más →</a><br>
         - name: "Procesamiento de datos abiertos"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             Buscamos garantizar el acceso a computación de alto rendimiento (HPC) para redes de investigación nacionales y regionales de Latinoamérica.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/datosabiertos-latam/">Ver más →</a><br>
+               href="/proyecto/datosabiertos-latam/">Ver más →</a>
+        - name: "Revisión abierta y equitativa"
+          description: |
+            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Empoderamos redes latinoamericanas para promover la revisión por pares abierta y equitativa de preprints y conjuntos de datos académicos.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/revision-abierta/">Ver más →</a>
+        - name: "Barreras al financiamiento para la investigación"
+          description: |
+            <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Publicamos un estudio que identifica algunas barreras en el acceso equitativo a la financiación internacional para las personas que investigan en América Latina y propone estrategias para mitigarlas.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://metadocencia.org/research/">Ver todas las publicaciones académicas →</a>
     design:
-      columns: 4
+      columns: 3
 
   - block: stats
     content:
       items:
-        - statistic: "85.000+"
-          description: "palabras contextualizadas"
         - statistic: "240+"
           description: "documentos en Zenodo"
-        - statistic: "10"
-          description: "comunidades latinoamericanas acompañadas desde Catalyst"
+        - statistic: "44.000+"
+          description: "vistas"
+        - statistic: "30.000+"
+          description: "descargas"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
   - block: testimonials
     content:
       items:
-        - name: "Nicolás Wolovick"
-          role: "Director UNC Supercómputo"
-          text: "Participar en el proyecto Catalyst resultó muy importante para UNC Supercómputo. Aprendimos a movernos en un ecosistema de financiamiento y colaboración que nos resultaba novedoso. Conocimos y nos hicimos conocer, valoramos y nos valoraron en redes más grandes con Latinoamérica y África. El plan de montar una nube local para JupyterHub es un proyecto que sigue progresando y que tiene mucho potencial en presente y en futuro."
-        - name: "Andrés Olivera"
-          role: "Network Manager, LABI"
-          text: "Participar en Catalyst nos permitió probar y determinar la infraestructura necesaria para un ecosistema sostenible con líderes locales capacitados. Comprobamos que el acceso abierto a esta infraestructura es vital para impulsar investigaciones locales y amplificar el impacto científico regional."
+        - name: "María Ángela Petrizzo Páez"
+          role: "Co-autora del artículo [“More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)"
+          text: "Este artículo no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más!"
+        - name: "Marina Fernandez"
+          role: "Sobre el artículo [“Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina”](https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY)"
+          text: "¡Lectura recomendada en PLOS One! Un nuevo artículo analiza por qué a los investigadores en Latinoamérica nos cuesta tanto acceder a fondos internacionales. El estudio pone sobre la mesa obstáculos reales de nuestro día a día: la barrera del inglés, el poco apoyo administrativo en nuestras instituciones y la dificultad para armar redes con el Norte Global. Aprovecho para dejar mis felicitaciones a MetaDocencia por su trabajo incansable apoyando a la ciencia latinoamericana y apostando siempre por la ciencia abierta. Ese es exactamente el camino que necesitamos en la región."
     design:
       spacing:
-        padding: ["2rem", 0, "2rem", 0]
+        padding: ["2rem", 0, "1rem", 0]
+
+  - block: markdown
+    id: testimonios-investigacion-cta
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="https://metadocencia.org/testimonios/">Lee más testimonios →</a>
+        </p>
+    design:
+      spacing:
+        padding: ["0rem", 0, "2rem", 0]
 
   # ======================
   #  SECCIÓN: FORMACIÓN (ROJO) — usa shortcode cta_fullwidth
@@ -211,37 +216,37 @@ sections:
       title: ""
       text: ""
       items:
-        - name: "Formación en Ciencia Abierta"
+        - name: "Ciencia Abierta"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Con el apoyo de la NASA, diseñamos cohortes en español, pensadas para América Latina, para promover principios y herramientas de Ciencia Abierta.
+            Con el apoyo de la NASA, diseñamos cohortes de formación en español para promover principios y herramientas de Ciencia Abierta.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/nasa-spanish/">Ver más →</a>
-
-        - name: "Formación para enseñar"
-          description: |
-            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas a fin de multiplicar el aprendizaje y potenciar el impacto colectivo.
-            <br>
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/formacion-para-formar/">Ver más →</a>
-
-        - name: "Cursos a medida"
-          description: |
-            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Diseñamos cursos y capacitaciones a medida, adaptados a las necesidades de cada institución o comunidad, para fortalecer capacidades en ciencia abierta, análisis de datos y herramientas digitales.
-            <br>
-            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/cursos-a-medida/">Ver más →</a>
+               href="/proyecto/nasa-spanish/">Súmate →</a>
 
         - name: "Cómo obtener financiamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
+            Ofrecemos formación estratégica para investigadores, para mejorar su acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/acceso-financiacion/">Ver más →</a>
+
+        - name: "Enseñamos habilidades"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas para multiplicar el aprendizaje y potenciar el impacto colectivo.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/formacion-para-formar/">Ver más →</a>
+
+        - name: "Diseñamos cursos"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Adaptados a las necesidades de tu institución o comunidad para fortalecer capacidades en IA, Ciencia Abierta, análisis de datos y herramientas digitales.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/cursos-a-medida/">Contáctanos →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -250,11 +255,11 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "99"
-          description: "ediciones (430 horas)"
+        - statistic: "100"
+          description: "ediciones (430+ horas)"
         - statistic: "1.700+"
           description: "personas de 33 países formadas"
-        - statistic: ">85%"
+        - statistic: "85%+"
           description: "Net Promoter Score"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
@@ -273,7 +278,19 @@ sections:
           text: "El curso fue excelente. Me devolvieron el impulso de enseñar. Enseñar en línea puede ser mucho más humano de lo que podría haber imaginado."
     design:
       spacing:
-        padding: ["2rem", 0, "2rem", 0]
+        padding: ["2rem", 0, "1rem", 0]
+
+  - block: markdown
+    id: testimonios-formacion-cta
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="https://metadocencia.org/testimonios/">Lee más testimonios →</a>
+        </p>
+    design:
+      spacing:
+        padding: ["0rem", 0, "2rem", 0]
 
   # ======================
   #  SECCIÓN: COMUNIDAD (NARANJA) — usa shortcode cta_fullwidth
@@ -315,10 +332,35 @@ sections:
         - name: "Mapeo de Ciencia Abierta en Latinoamérica"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Repositorio colaborativo de información sobre Ciencia Abierta en español.
+            Repositorio colaborativo de información sobre Ciencia Abierta en español. Proyecto a incubar.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/mapeo-comunidades/">Ver más →</a><br>
+               href="/proyecto/mapeo-comunidades/">Ver más →</a>
+        - name: "Proyecto Catalyst"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Facilitamos la accesibilidad y la utilidad de la infraestructura de cómputo en la nube para comunidades globales de biociencias.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/catalyst/">Ver más →</a>
+        - name: "Contextualización"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/contextualizacion/">Ver más →</a>
+        - name: "Voces y participaciones"
+          description: |
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            <a class="inline-block font-semibold underline underline-offset-4"
+               href="https://metadocencia.org/testimonios/">Reconocimiento de la comunidad →</a>
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://metadocencia.org/prensas/">Notas en medios →</a>
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="https://metadocencia.org/eventos/">Participaciones en eventos →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -327,10 +369,10 @@ sections:
   - block: stats
     content:
       items:
-        - statistic: "32"
+        - statistic: "30+"
           description: "comunidades amigas y alianzas"
         - statistic: "60+"
-          description: "personas que colaboran con MetaDocencia"
+          description: "personas colaboradoras"
         - statistic: "6.000+"
           description: "personas conectadas"
     design:
@@ -347,47 +389,19 @@ sections:
           text: "¡Cuánto aprendizaje colectivo por el camino! Felicitaciones y gracias por ser un ámbito de coproducción, interdisciplina y cuidado mutuo."
     design:
       spacing:
-        padding: ["2rem", 0, "2rem", 0]
+        padding: ["2rem", 0, "1rem", 0]
 
-  # ---------- NUEVA SECCIÓN FEATURES: producción y visibilidad ----------
-  - block: features
-    id: produccion-visibilidad
+  - block: markdown
+    id: testimonios-comunidad-cta
     content:
-      title:
-      items:
-        - name: "Publicaciones académicas"
-          description: |
-            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Realizamos y compartimos abiertamente investigación que informa y respalda la Ciencia Abierta y la educación en América Latina.
-            <br>
-            <a href="https://metadocencia.org/research/"
-               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-               Ver más
-            </a>
-        - name: "MetaDocencia en los medios"
-          description: |
-            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Notas y entrevistas publicadas en medios de comunicación sobre MetaDocencia.
-            <br>
-            <a href="https://metadocencia.org/prensas/"
-               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-               Ver más
-            </a>
-        - name: "Participaciones en eventos"
-          description: |
-            <div style="height:3px;background:#111827;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Organizamos, dictamos y acompañamos talleres, paneles y presentaciones que ayudan a visibilizar perspectivas latinoamericanas sobre Ciencia Abierta.
-            <br>
-            <a href="https://metadocencia.org/eventos/"
-               class="mt-2 inline-block font-semibold px-4 py-2 rounded-md"
-               style="background:#FFFFFF;color:#111827;border:1px solid #111827;text-decoration:none;">
-               Ver más
-            </a>
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="https://metadocencia.org/testimonios/">Lee más testimonios →</a>
+        </p>
     design:
-      columns: 3
-      css_class: "bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100"
+      spacing:
+        padding: ["0rem", 0, "2rem", 0]
 
   # === ESTILOS LOCALES para limitar el alto del HERO ===
   - block: markdown
