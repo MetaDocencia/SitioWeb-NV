@@ -96,7 +96,7 @@ sections:
             Trabajamos para que la producción, la comunicación y la aplicación de saberes científicos y técnicos sean globalmente equitativos.
           feature_icon: check   # no afecta; lo ocultamos por CSS
           features:
-            - "Impulsamos infraestructura"
+            - "Hacemos investigación"
             - "Formamos capacidades"
             - "Construimos comunidad"
           image: "circuloES.png"
