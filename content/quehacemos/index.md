@@ -403,6 +403,63 @@ sections:
       spacing:
         padding: ["0rem", 0, "2rem", 0]
 
+
+  # ===== CTA final =====
+  - block: markdown
+    id: apoya
+    content:
+      title: ""
+      text: |
+        {{< cta_fullwidth
+            id="apoya"
+            title="Apoya a la ciencia latinoamericana"
+            text=""
+            button_text="Aquí te contamos cómo"
+            button_url="/cta/"
+            bg="#F3F4F6" color="#111827" btn_bg="#C83737" btn_fg="#FFFFFF"
+            variant="background"
+            maxw="1600px"
+            content_maxw="1100px"
+            align="center"
+            py="2.5rem" px="clamp(1rem,4vw,3rem)"
+            inner="raw"
+        >}}
+        <p>Nuestras redes:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             Twitter
+          </a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             LinkedIn
+          </a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             YouTube
+          </a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             Instagram
+          </a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             Mastodon
+          </a>
+          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
+             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
+             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
+             Bluesky
+          </a>
+        </div>
+        {{< /cta_fullwidth >}}
+
+
   # === ESTILOS LOCALES para limitar el alto del HERO ===
   - block: markdown
     id: estilos-hero-que-hacemos
