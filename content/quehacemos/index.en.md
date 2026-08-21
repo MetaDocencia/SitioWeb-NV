@@ -93,7 +93,7 @@ sections:
         - name: "Contextualization of Open Resources"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We develop high-quality Spanish resources for Latin America based on material originally published in other languages.
+            We develop high-quality resources in Spanish, adapted to local contexts, based on material originally published in other languages.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/contextualizacion/">Discover more →</a>
@@ -349,7 +349,7 @@ sections:
         - name: "Contextualization"
           description: |
             <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            We develop high-quality Spanish resources for Latin America based on material originally published in other languages.
+            We develop high-quality resources in Spanish, adapted to local contexts, based on material originally published in other languages.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/contextualizacion/">Learn more →</a>
