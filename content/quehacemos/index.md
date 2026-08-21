@@ -246,7 +246,7 @@ sections:
             Adaptados a las necesidades de tu institución o comunidad para fortalecer capacidades en IA, Ciencia Abierta, análisis de datos y herramientas digitales.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/cursos-a-medida/">Contáctanos →</a>
+               href="/cta/">Contáctanos →</a>
 
         # TODO: confirmar el destino de "Enseñamos habilidades".
         # Provisorio: /proyecto/cursos-a-medida/ (mismo destino que "Diseñamos cursos").
