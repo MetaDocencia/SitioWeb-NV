@@ -93,7 +93,7 @@ sections:
             Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-               href="/proyecto/acceso-financiacion/">Ver más →</a>
+               href="/proyecto/contextualizacion/">Ver más →</a>
         - name: "Formación en Ciencia Abierta"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
