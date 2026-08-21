@@ -101,10 +101,10 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/nasa-spanish/">Ver más →</a>
-        - name: "Barreras al financiamiento para la investigación"
+        - name: "Publicaciones académicas"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Publicamos un estudio que identifica algunas barreras en el acceso equitativo a la financiación internacional para las personas que investigan en América Latina y propone estrategias para mitigarlas.
+            Realizamos y compartimos abiertamente investigación que informa y acompaña la Ciencia Abierta y la educación en América Latina.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="https://metadocencia.org/research/">Ver todas las publicaciones académicas →</a>
@@ -172,10 +172,10 @@ sections:
     content:
       items:
         - name: "María Ángela Petrizzo Páez"
-          role: "Co-autora del artículo “More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”"
+          role: "Co-autora del artículo [“More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)"
           text: "Este artículo no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más!"
         - name: "Marina Fernandez"
-          role: "Sobre el artículo “Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina”"
+          role: "Sobre el artículo [“Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina”](https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY)"
           text: "¡Lectura recomendada en PLOS One! Un nuevo artículo analiza por qué a los investigadores en Latinoamérica nos cuesta tanto acceder a fondos internacionales. El estudio pone sobre la mesa obstáculos reales de nuestro día a día: la barrera del inglés, el poco apoyo administrativo en nuestras instituciones y la dificultad para armar redes con el Norte Global. Aprovecho para dejar mis felicitaciones a MetaDocencia por su trabajo incansable apoyando a la ciencia latinoamericana y apostando siempre por la ciencia abierta. Ese es exactamente el camino que necesitamos en la región."
     design:
       spacing:
@@ -227,15 +227,15 @@ sections:
         - name: "Cómo obtener financiamiento para iniciativas científicas"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, para mejorar su acceso a financiación internacional.
+            Ofrecemos formación estratégica para investigadores para mejorar su acceso a financiación internacional.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/acceso-financiacion/">Ver más →</a>
 
-        - name: "Enseñamos habilidades"
+        - name: "Formación para enseñar"
           description: |
             <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Creamos un Train-the-Trainers en español para instruir y certificar habilidades pedagógicas y prácticas para multiplicar el aprendizaje y potenciar el impacto colectivo.
+            Creamos un curso Train-the-Trainer en español que desarrolla y certifica habilidades pedagógicas y prácticas que multiplican el aprendizaje y potencian el impacto colectivo.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/formacion-para-formar/">Ver más →</a>
@@ -247,6 +247,16 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/cursos-a-medida/">Contáctanos →</a>
+
+        # TODO: confirmar el destino de "Enseñamos habilidades".
+        # Provisorio: /proyecto/cursos-a-medida/ (mismo destino que "Diseñamos cursos").
+        - name: "Enseñamos habilidades"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Desde 2020, enseñamos cursos participativos e impulsamos espacios de aprendizaje que combinan pedagogía y tecnología.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/cursos-a-medida/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
@@ -402,63 +412,6 @@ sections:
     design:
       spacing:
         padding: ["0rem", 0, "2rem", 0]
-
-
-  # ===== CTA final =====
-  - block: markdown
-    id: apoya
-    content:
-      title: ""
-      text: |
-        {{< cta_fullwidth
-            id="apoya"
-            title="Apoya a la ciencia latinoamericana"
-            text=""
-            button_text="Aquí te contamos cómo"
-            button_url="/cta/"
-            bg="#F3F4F6" color="#111827" btn_bg="#C83737" btn_fg="#FFFFFF"
-            variant="background"
-            maxw="1600px"
-            content_maxw="1100px"
-            align="center"
-            py="2.5rem" px="clamp(1rem,4vw,3rem)"
-            inner="raw"
-        >}}
-        <p>Nuestras redes:</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Twitter
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             LinkedIn
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             YouTube
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Instagram
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Mastodon
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Bluesky
-          </a>
-        </div>
-        {{< /cta_fullwidth >}}
-
 
   # === ESTILOS LOCALES para limitar el alto del HERO ===
   - block: markdown
