@@ -101,7 +101,7 @@ sections:
             We cultivate the Latin American scientific ecosystem through infrastructure, training, and community.
           feature_icon: check   # not used; hidden via CSS
           features:
-            - "Enhancing infrastructure"
+            - "Conducting research"
             - "Training for researchers"
             - "Fostering community"
           image: "circuloEN.png"
