@@ -87,10 +87,10 @@ sections:
     content:
       title: "Proyectos destacados"
       items:
-        - name: "Cómo obtener financiamiento para iniciativas científicas"
+        - name: "Contextualización"
           description: |
-            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-            Ofrecemos formación estratégica para investigadores, fortaleciendo capacidades y redes para mejorar el acceso a financiación internacional.
+            <div style="height:3px;background:#F77B20;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Desarrollamos recursos de calidad en español a partir de material originalmente publicado en otro idioma.
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/acceso-financiacion/">Ver más →</a>
