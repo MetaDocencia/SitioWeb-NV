@@ -98,7 +98,7 @@ sections:
               }
             </style>
   
-            We cultivate the Latin American scientific ecosystem through infrastructure, training, and community.
+            We cultivate the Latin American scientific ecosystem through research, training, and community.
           feature_icon: check   # not used; hidden via CSS
           features:
             - "Conducting research"
