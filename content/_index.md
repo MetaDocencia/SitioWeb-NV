@@ -99,7 +99,7 @@ sections:
             - "Hacemos investigación"
             - "Formamos capacidades"
             - "Construimos comunidad"
-          image: "circuloES.png"
+          image: "circuloES1.png"
           button:
             text: "Lee más sobre nuestros proyectos"
             url: "/que-hacemos"
