@@ -262,7 +262,7 @@ sections:
           description: "editions (430+ hours)"
         - statistic: "1,700+"
           description: "people from 33 countries trained"
-        - statistic: "85%"
+        - statistic: ">85%"
           description: "Net Promoter Score"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
