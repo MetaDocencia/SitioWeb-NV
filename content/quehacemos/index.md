@@ -269,7 +269,7 @@ sections:
           description: "ediciones (430+ horas)"
         - statistic: "1.700+"
           description: "personas de 33 países formadas"
-        - statistic: "85%+"
+        - statistic: ">85%+"
           description: "Net Promoter Score"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
