@@ -175,10 +175,10 @@ sections:
     content:
       items:
         - name: "María Ángela Petrizzo Páez"
-          role: "Co-author of [“More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)"
+          role: "Co-author of “More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”"
           text: "This article not only recounts the MetaDocencia experience, but also draws on it to address categories of analysis that, in my view, are key to studying the future sustainability of Open Science practices. My thanks to Paola Castaño, for leading this collective work with rigor and persistence, and to everyone on the MetaDocencia team who came along for the ride. Here's to what comes next."
         - name: "Marina Fernandez"
-          role: "On the article [“Perceived Barriers for Accessing International Research Funding among Latin American Researchers”](https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY)"
+          role: "On the article “Perceived Barriers for Accessing International Research Funding among Latin American Researchers”"
           text: "Recommended reading in PLOS One. A new article looks at why researchers in Latin America struggle so much to access international funding. The study puts real, everyday obstacles on the table: the language barrier, the limited administrative support at our institutions, and the difficulty of building networks with the Global North. I want to congratulate MetaDocencia for their tireless work supporting Latin American science and their ongoing commitment to open science. That is exactly the path our region needs."
     design:
       spacing:
