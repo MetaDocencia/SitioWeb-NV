@@ -104,7 +104,7 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/nasa-spanish/">Discover more →</a>
-        - name: "Academic publications"
+        - name: "Academic Publications"
           description: |
             <div style="height:3px;background:#00506F;border-radius:6px;margin:0 0 0.5rem 0;"></div>
             We do research and openly share results that inform and support open science and education in Latin America and beyond.
