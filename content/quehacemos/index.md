@@ -172,7 +172,7 @@ sections:
     content:
       items:
         - name: "María Ángela Petrizzo Páez"
-          role: 'Co-autora del artículo "More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America"'
+          role: 'Co-autora del artículo "[More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)"'
           text: "[Este artículo](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH) no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más!"
         - name: "Marina Fernandez"
           role: 'Sobre el artículo "Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina"'
