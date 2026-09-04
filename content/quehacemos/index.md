@@ -168,15 +168,19 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
-  - block: testimonials
+    - block: testimonials
     content:
       items:
         - name: "María Ángela Petrizzo Páez"
-          role: "Co-autora del artículo [More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)"
-          text: "Este artículo no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más!"
+          role: "Coautora del artículo “More than a NASA Badge: MetaDocencia and Capacity Building for Open Science Communities in Latin America”"
+          text: >-
+            Este artículo no sólo relata la experiencia en MetaDocencia, sino que también aborda, a partir de esa experiencia, categorías de análisis que, a mi juicio, son clave en el estudio hacia el futuro de la sostenibilidad en la adopción de prácticas de Ciencia Abierta. Mi agradecimiento a Paola Castaño, por comandar con rigurosidad y constancia este trabajo colectivo y a todas las personas que integran el equipo de MetaDocencia y que se montaron en este carro. ¡Vamos por más! [Ver la publicación en LinkedIn →](https://www.linkedin.com/posts/petrizzo_more-than-a-nasa-badge-metadocencia-and-activity-7484579691627167744-PyAH)
+
         - name: "Marina Fernandez"
-          role: "Sobre el artículo [Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina](https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY)"
-          text: "¡Lectura recomendada en PLOS One! Un nuevo artículo analiza por qué a los investigadores en Latinoamérica nos cuesta tanto acceder a fondos internacionales. El estudio pone sobre la mesa obstáculos reales de nuestro día a día: la barrera del inglés, el poco apoyo administrativo en nuestras instituciones y la dificultad para armar redes con el Norte Global. Aprovecho para dejar mis felicitaciones a MetaDocencia por su trabajo incansable apoyando a la ciencia latinoamericana y apostando siempre por la ciencia abierta. Ese es exactamente el camino que necesitamos en la región."
+          role: "Sobre el artículo “Barreras al acceso al financiamiento internacional para la investigación, según la percepción de personas dedicadas a investigar en América Latina”"
+          text: >-
+            ¡Lectura recomendada en PLOS One! Un nuevo artículo analiza por qué a los investigadores en Latinoamérica nos cuesta tanto acceder a fondos internacionales. El estudio pone sobre la mesa obstáculos reales de nuestro día a día: la barrera del inglés, el poco apoyo administrativo en nuestras instituciones y la dificultad para armar redes con el Norte Global. Aprovecho para dejar mis felicitaciones a MetaDocencia por su trabajo incansable apoyando a la ciencia latinoamericana y apostando siempre por la ciencia abierta. Ese es exactamente el camino que necesitamos en la región. [Ver la publicación en LinkedIn →](https://www.linkedin.com/posts/marina-fernandez-63999b29_barreras-en-el-acceso-a-financiamiento-en-activity-7475179419288952832-wnnY)
+
     design:
       spacing:
         padding: ["2rem", 0, "1rem", 0]
