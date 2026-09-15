@@ -20,6 +20,10 @@ user_groups:
 -  Comunidades amigas
 ---
 
+### Conócela en este video
+
+{{< youtube C10aJYkHoeA >}} 
+
 ### Sobre Cúmulo
 
 **Cúmulo** es una agencia y productora de contenidos para la educación y la ciencia. Acompaña a docentes, equipos de investigación y organizaciones a convertir su conocimiento y su trabajo en materiales visuales, audiovisuales y escritos, accesibles para sus audiencias. Su equipo y comunidad reúne a docentes y profesionales de la pedagogía, la divulgación, la ilustración, el audiovisual y el diseño, que trabajan en el cruce entre la creatividad y el aprendizaje. Ha producido materiales educativos y de divulgación científica para instituciones como la Universidad Nacional de Córdoba.
