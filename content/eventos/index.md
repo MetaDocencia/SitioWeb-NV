@@ -389,7 +389,7 @@ items:
     place: "Virtual"
     title: "Congreso Iberoamericano de Ciencia Abierta"
     summary: "Melissa Black y Laurel Ascenzi representaron a MetaDocencia en el Primer Congreso Iberoamericano de Ciencia Abierta. El evento se propuso generar un espacio de diálogo iberoamericano entre la academia, el Estado y la sociedad civil sobre el derecho a la ciencia y la importancia de promover transformaciones en la forma como se comprende la ciencia desde una mirada inclusiva, abierta, participativa y responsable."
-    image: "/media/eventos/20221123_CongresoIbCA.jpg"
+    image: "/media/eventos/20221101_CongresoIbCA.jpg"
     image_alt: "Descripción de la imagen del Congreso Iberoamericano de Ciencia Abierta."
     url: "https://oei.int/oficinas/ecuador/noticias/asi-fue-el-1er-congreso-iberoamericano-de-ciencia-abierta/"
     presentation_url: "https://docs.google.com/presentation/d/e/2PACX-1vSoeHIPli3ET3LiaUk_lAaJmZU7Szx-9Q7a0OzMvlgtqbrHfhFMvYNOOKU_P3q-lJCHh3YBcCQwIhLE/pub?start=false&loop=false&delayms=3000"
@@ -398,7 +398,7 @@ items:
     place: "Rosario, Argentina"
     title: "ICOTS-11"
     summary: "Nicolás Palopoli, en representación de varios coautores del equipo, presentó el trabajo realizado durante los primeros dos años de MetaDocencia en la conferencia internacional de enseñanza de estadística ICOTS-11."
-    image: "/media/eventos/20220903_ICOTS11.jpg"
+    image: "/media/eventos/20220911_ICOTS11.jpg"
     image_alt: "Descripción de la imagen del evento ICOTS-11."
     presentation_url: "https://docs.google.com/presentation/d/e/2PACX-1vTLUxYjf2V0T1eBfc5VqDI-8Vjce1YNWsdDN6sJlhFtDK9_egtNCvnuLznwQPGKIgvj30f1fR2E_kq8/pub?start=false&loop=false&delayms=3000"
 
@@ -558,7 +558,7 @@ items:
     place: "Virtual"
     title: "Plataforma de Asistencia Estadística INTA"
     summary: "Yanina Bellini Saibene presentó MetaDocencia en su charla \"Comunidades de práctica para I+D y T+E: R y colegas\" para la Plataforma de Asistencia Estadística del INTA y la Red INTAJoven."
-    image: "/media/eventos/220201023_INTA.jpg"
+    image: "/media/eventos/20201023_INTA.jpg"
     presentation_url: "https://docs.google.com/presentation/d/1jFA5xQ0i5qdSv-N3wktu2ZqHaXgtJh5Ue_CIKTWQCzY/edit?usp=sharing"
 
   - date: "2020-10-03"
