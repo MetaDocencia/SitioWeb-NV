@@ -7,6 +7,32 @@ translationKey: "eventos"
 
 items:
 
+  - date: "2026-10-07"
+    place: "Virtual"
+    title: "Beyond Visibility: How Do We Make Peer Review Truly Valued?"
+    summary: "Participamos en una mesa redonda abierta sobre reconocimiento de la revisión por pares en los sistemas de evaluación científica, organizada por PREreview y DORA."
+    image: "/media/eventos/20261007_PREreviewDORA.jpg"
+    image_alt: "Descripción de la imagen del evento Beyond Visibility organizado por PREreview y DORA."
+    url: "https://us02web.zoom.us/meeting/register/Cn_XcxgVT7q7gTqFaCL4hw#/registration"
+
+  - date: "2026-09-22"
+    place: "Buenos Aires, Argentina. Híbrido."
+    title: "Nerdearla 2026"
+    summary: "Fuimos Community Partners de Nerdearla 2026, apoyando la difusión y acompañando a otras comunidades de tecnología."
+    image: "/media/eventos/20260922_Nerdearla.jpg"
+    image_alt: "Descripción de la imagen de Nerdearla 2026."
+    url: "https://nerdearla.com/argentina/"
+    recording_url: "https://app.swapcard.com/event/nerdearla-2026/planning/UGxhbm5pbmdfNDY0NTcyOQ=="
+
+  - date: "2026-08-25"
+    place: "Virtual"
+    title: "Research Software Latinoamérica (RSLA26)"
+    summary: "Presentamos un flujo de trabajo en R para publicar datos abiertos siguiendo los principios FAIR en la primera conferencia internacional de software de investigación en Latinoamérica."
+    image: "/media/eventos/20260825_RSLA.jpg"
+    image_alt: "Descripción de la imagen de Research Software Latinoamérica (RSLA26)."
+    url: "https://rs-latam.org/programa.html"
+
+
   - date: "2026-04-29"
     place: "Buenos Aires, Argentina"
     title: "Seminario: De la crisis de reproducibilidad a la ciencia abierta"
@@ -28,7 +54,7 @@ items:
   - date: "2026-04-22"
     place: "Buenos Aires, Argentina"
     title: "Latin American Women in Neuroscience Meeting"
-    summary: "Participamos con la charla De aprender en comunidad a construir una ciencia más equitativa"
+    summary: "Compartimos la charla \"De aprender en comunidad a construir una ciencia más equitativa\", explorando el impacto de las comunidades de práctica en el desarrollo profesional y personal, y por qué las redes no son un \"extra\" sino infraestructura con el potencial de nivelar desigualdades estructurales de acceso, visibilidad y colaboración."
     image: "/media/eventos/20260422_LAWNM.jpg"
     image_alt: "Foto del Jesica junto a la presentación."
     url: "https://www.instagram.com/mujeresneurolatam/"
