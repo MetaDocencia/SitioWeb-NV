@@ -32,4 +32,4 @@ user_groups:
 
 Realiza ediciones en Buenos Aires, Santiago de Chile, Ciudad de México y Madrid, con la participación de más de 1.000 oradoras y oradores de todo el mundo. Cada charla y taller se transmite en vivo y luego se publica de forma libre en YouTube.
 
-En 2026 llegó a su 13.ª edición en Buenos Aires y sigue ampliando su misión de ofrecer un evento de nivel internacional y 100 % gratuito a cada vez más personas de la comunidad tecnológica hispanohablante.
+En 2026 llegó a su 13.ª edición en Buenos Aires y sigue ampliando su misión de ofrecer un evento de nivel internacional y 100% gratuito a cada vez más personas de la comunidad tecnológica hispanohablante.
