@@ -558,13 +558,8 @@ items:
     place: "Virtual"
     title: "Plataforma de Asistencia Estadística INTA"
     summary: "Yanina Bellini Saibene presentó MetaDocencia en su charla \"Comunidades de práctica para I+D y T+E: R y colegas\" para la Plataforma de Asistencia Estadística del INTA y la Red INTAJoven."
+    image: "/media/eventos/220201023_INTA.jpg"
     presentation_url: "https://docs.google.com/presentation/d/1jFA5xQ0i5qdSv-N3wktu2ZqHaXgtJh5Ue_CIKTWQCzY/edit?usp=sharing"
-
-  - date: "2020-10-22"
-    place: "Virtual"
-    title: "Open Life Science - Segunda cohorte"
-    summary: "Laura Ación realizó una presentación interna sobre MetaDocencia para la segunda cohorte de Open Life Science."
-    url: "https://openlifesci.org/ols-2"
 
   - date: "2020-10-03"
     place: "Virtual"
