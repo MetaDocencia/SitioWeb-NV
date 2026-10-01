@@ -344,7 +344,7 @@ items:
   - date: "2024-01-15"
     place: "Virtual"
     title: "Teaching Programming to Non-Programmers"
-    summary: "Participamos del evento \"Teaching Programming to Non-Programmers\" dictado en el marco de la escuela de invierno de la Universidad de Edimburgo."
+    summary: "Patirica Loto participó del evento \"Teaching Programming to Non-Programmers\" dictado en el marco de la escuela de invierno de la Universidad de Edimburgo."
     image: "/media/eventos/20240115_TeachingProgramming.jpg"
     image_alt: "Descripción de la imagen del evento Teaching Programming to Non-Programmers."
     url: "https://pairprogramming.ed.ac.uk/category/winter-school/"
@@ -396,7 +396,8 @@ items:
     place: "Montevideo, Uruguay"
     title: "LatinR 2023"
     summary: "Presentamos un trabajo sobre traducción de R base y una shiny app para el \"Mapeo de comunidades, organizaciones y eventos de Ciencia Abierta en Latinoamérica\" en LatinR 2023."
-    url: "https://2023.latin-r.com/"
+    image: "/media/eventos/20231018_LatinR.jpg"
+    url: "https://2023.latinr.org/"
 
   - date: "2023-09-09"
     place: "Amsterdam, Holanda"
@@ -410,6 +411,7 @@ items:
     place: "Virtual"
     title: "Sustainability Research and Innovation Congress 2023 (SRI2023)"
     summary: "Participamos del Taller sobre Ciencia Abierta para la Sostenibilidad en el marco del Sustainability Research and Innovation Congress 2023, junto a Irene Ramos (CONABIO, México) y Enrique González Lozada (Universidad Autónoma de México)."
+    image: "/media/eventos/20230626_SRI.jpg"
     presentation_url: "https://doi.org/10.5281/zenodo.8115322"
 
   - date: "2023-05-15"
