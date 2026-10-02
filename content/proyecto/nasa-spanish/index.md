@@ -28,5 +28,7 @@ MetaDocencia acumula más de 5 años formando a comunidades hispanohablantes en 
 * [Workbench curso “Herramientas de Ciencia Abierta”](https://metadocencia.github.io/herramientas-de-ciencia-abierta/)
 * Grants NASA en [Zenodo](https://zenodo.org/records/8215455) y [OGrants](https://www.ogrants.org/grants/team_metadocencia_2023) 
 * [Premio “Dominique Babini”. Libro Conocimiento como bien común. Aportes desde América Latina y el Caribe a la ciencia abierta](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
-* [Reporte de enseñanza Ciencia Abierta 2024](https://zenodo.org/records/15882571) 
+* [Reporte de enseñanza Ciencia Abierta 2024](https://zenodo.org/records/15882571)
+* Blogpost: [Herramientas de Ciencia Abierta: dos ediciones en el primer semestre de 2026](/post/2026/20260714-reportehca/)
+
 
