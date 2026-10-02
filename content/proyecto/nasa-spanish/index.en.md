@@ -25,5 +25,6 @@ A key milestone was the  Spanish contextualization of NASA Open Science content,
 * Blog post [2024 Report](/en/post/2025/20250313-reporte2024/)
 * Blog post ["We started to transform toward Open Science together with NASA: 10 points!"](/en/post/nasatops/) 
 * [Epistemic Justice and Open Science in Latin America and the Caribbean: The Case of MetaDocencia (“Dominique Babini” Award)](https://libreria.clacso.org/publicacion.php?p=4470&c=2)
-* [Data report in Zenodo](https://zenodo.org/records/15882571) 
+* [Data report in Zenodo](https://zenodo.org/records/15882571)
+* Blog post: [Herramientas de Ciencia Abierta: Two Editions in the First Half of 2026](/en/post/2026/20260714-reportehca/)
 
