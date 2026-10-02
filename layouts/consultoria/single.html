@@ -1,0 +1,152 @@
+{{ define "main" }}
+<section class="mx-auto px-6 py-10 max-w-6xl">
+
+  <!-- Título -->
+  <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">{{ .Title }}</h1>
+
+  <!-- Bajada -->
+  {{ with .Params.intro }}
+    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-3xl">{{ . | markdownify }}</p>
+  {{ end }}
+
+  <!-- ============ SERVICIOS ============ -->
+  {{ with .Params.servicios }}
+    {{ with .title }}
+      <h2 id="servicios" class="mt-10 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50">{{ . }}</h2>
+    {{ end }}
+    {{ with .summary }}
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-3xl">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ with .areas }}
+      <div class="mt-4 grid gap-6 md:grid-cols-3">
+        {{ range . }}
+          {{ $color := default "#00506F" .color }}
+          <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col"
+                   style="border-top: 3px solid {{ $color }}">
+            <div class="p-5 flex flex-col flex-1">
+              <h3 class="text-lg font-semibold leading-snug" style="color: {{ $color }}">{{ .name }}</h3>
+              <ul class="md-cons-list mt-3 text-sm text-gray-700 dark:text-gray-200" style="--md-cons-bullet: {{ $color }}">
+                {{ range .items }}
+                  <li>{{ . | markdownify }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <!-- ============ CONTACTO ============ -->
+  {{ with .Params.cta }}
+    <div class="md-cons-cta mt-12">
+      <div>
+        {{ with .title }}
+          <h2 class="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50">{{ . }}</h2>
+        {{ end }}
+        {{ with .summary }}
+          <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . | markdownify }}</p>
+        {{ end }}
+      </div>
+      {{ with .button_url }}
+        <a class="md-cons-btn" href="{{ . }}">{{ $.Params.cta.button_text }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <!-- ============ EXPERIENCIAS ============ -->
+  {{ with .Params.experiencias }}
+    {{ with .title }}
+      <h2 id="experiencias" class="mt-12 text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50">{{ . }}</h2>
+    {{ end }}
+    {{ with .summary }}
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-3xl">{{ . | markdownify }}</p>
+    {{ end }}
+
+    {{ with .items }}
+      <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {{ range . }}
+          {{ $item := . }}
+          <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
+
+            {{ with $item.image }}
+              <div class="aspect-[4/3] w-full overflow-hidden">
+                <img src="{{ . | safeURL }}"
+                     alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
+                     class="h-full w-full object-cover">
+              </div>
+            {{ end }}
+
+            <div class="p-5 flex flex-col flex-1">
+              <!-- Meta: año + lugar + área -->
+              <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                {{ with $item.date }}<span>{{ . }}</span>{{ end }}
+                {{ if and $item.date $item.place }} · {{ end }}
+                {{ with $item.place }}<span>{{ . }}</span>{{ end }}
+                {{ with $item.area }}
+                  {{ if or $item.date $item.place }} · {{ end }}
+                  <span style="color: {{ default "#00506F" $item.area_color }}; font-weight: 700">{{ . }}</span>
+                {{ end }}
+              </div>
+
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">{{ $item.title }}</h3>
+
+              {{ with $item.summary }}
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">{{ . }}</p>
+              {{ end }}
+
+              {{ with $item.url }}
+                <a href="{{ . }}" target="_blank" rel="noopener"
+                   class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
+                  {{ default "Más información" $item.btn }}
+                </a>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <!-- ============ TESTIMONIOS ============ -->
+  {{ with .Params.testimonios }}
+    <div class="md-cons-quotes mt-12">
+      {{ range . }}
+        <figure class="md-cons-quote">
+          <blockquote>{{ .quote }}</blockquote>
+          <figcaption>
+            <strong>{{ .author }}</strong>
+            {{ with .role }}<span>{{ . }}</span>{{ end }}
+          </figcaption>
+        </figure>
+      {{ end }}
+    </div>
+  {{ end }}
+
+</section>
+
+<!-- Estilos mínimos locales -->
+<style>
+  .md-cons-list { list-style: none; padding: 0; margin-bottom: 0; }
+  .md-cons-list li { position: relative; padding-left: 16px; margin-top: 8px; line-height: 1.5; }
+  .md-cons-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--md-cons-bullet, #00506F); }
+
+  .md-cons-cta { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between; background: #f3f7f9; border: 1px solid #dbe6eb; border-radius: .75rem; padding: 1.75rem; }
+  html.dark .md-cons-cta { background: #152028; border-color: #1f2f3a; }
+  .md-cons-cta > div:first-child { flex: 1 1 22rem; }
+  .md-cons-btn { display: inline-block; text-align: center; background: #00506F; color: #fff; border: 1px solid #00506F; border-radius: .375rem; padding: .6rem 1.1rem; font-size: .9rem; font-weight: 600; text-decoration: none; }
+  .md-cons-btn:hover { background: #003d55; color: #fff; }
+  html.dark .md-cons-btn { background: #9fd3e6; border-color: #9fd3e6; color: #0b1a21; }
+
+  .md-cons-quotes { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .md-cons-quotes { grid-template-columns: 1fr 1fr; } }
+  .md-cons-quote { text-align: center; padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: space-between; }
+  .md-cons-quote::before { content: "\201C"; display: block; font-size: 72px; line-height: 1; color: #9ca3af; font-family: Georgia, serif; }
+  .md-cons-quote blockquote { margin: 0; border: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; color: #111827; font-style: normal; }
+  html.dark .md-cons-quote blockquote { color: #f3f4f6; }
+  .md-cons-quote figcaption { margin-top: 1.25rem; font-size: .95rem; color: #374151; display: flex; flex-direction: column; gap: 4px; }
+  .md-cons-quote figcaption span { font-size: .85rem; color: #6b7280; }
+  html.dark .md-cons-quote figcaption { color: #e5e7eb; }
+</style>
+{{ end }}
