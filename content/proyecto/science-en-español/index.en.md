@@ -25,13 +25,13 @@ We work at the intersection of Open Science, education and community building. O
 
 The project combines four interconnected activities.
 
-**Community-informed content selection.** We work with communities, partners and subject-matter experts to identify the scientific resources whose contextualization brings the greatest value to Spanish-speaking audiences.
+**1. Community-informed content selection.** We work with communities, partners and subject-matter experts to identify the scientific resources whose contextualization brings the greatest value to Spanish-speaking audiences.
 
-**Contextualization into Spanish.** We translate and adapt the selected resources collaboratively. We consider terminology, cultural relevance, examples, assumptions and ways of communicating knowledge that vary across countries and communities, so the resources reflect local contexts, experiences and ways of learning.
+**2. Contextualization into Spanish.** We translate and adapt the selected resources collaboratively. We consider terminology, cultural relevance, examples, assumptions and ways of communicating knowledge that vary across countries and communities, so the resources reflect local contexts, experiences and ways of learning.
 
-**Online learning cohorts.** Contextualized resources become the foundation for short, online learning experiences in Spanish. Participants explore science, practice communicating and applying it, exchange experiences with peers and develop ways to bring the resources into their own communities.
+**3. Online learning cohorts.** Contextualized resources become the foundation for short, online learning experiences in Spanish. Participants explore science, practice communicating and applying it, exchange experiences with peers and develop ways to bring the resources into their own communities.
 
-**Community and multiplier effects.** We invite participants, experts, partners and other users of the resources to join a supportive online community, where they ask questions, exchange experiences, adapt materials, identify new opportunities and collaborate. What we learn in each cycle improves both the resources and the cohorts that follow.
+**4. Community and multiplier effects.** We invite participants, experts, partners and other users of the resources to join a supportive online community, where they ask questions, exchange experiences, adapt materials, identify new opportunities and collaborate. What we learn in each cycle improves both the resources and the cohorts that follow.
 
 ## The impact
 
