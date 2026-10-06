@@ -57,17 +57,17 @@ sections:
     content:
       title: "MetaDocencia by the Numbers"
       items:
-        - statistic: "32"
+        - statistic: "34"
           description: "strategic partners"
         - statistic: "60+"
           description: "active collaborators"
-        - statistic: "1,070+"
+        - statistic: "1,300+"
           description: "members on Slack"
         - statistic: "6,000+"
           description: "followers on social media"
         - statistic: "2,600+"
           description: "active newsletter subscribers"
-        - statistic: "5+"
+        - statistic: "6+"
           description: "years together"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
