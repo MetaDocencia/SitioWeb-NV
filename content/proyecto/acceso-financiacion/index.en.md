@@ -13,7 +13,7 @@ Researchers in low- and middle-income countries, such as most in Latin America, 
 ### The Strategy
 This project aims to provide persons from Latin America conducting research in Spanish with access to a safe and collaborative peer community where knowledge, contacts, and high-quality advice are freely shared by mentors with a proven track record of securing funding. This support will help increase participation and improve the chances of success in pursuing international funding.
 
-#### Why MetaDocencia
+### Why MetaDocencia
 MetaDocencia promotes equitable science and research. The development of this project began in 2023, when MetaDocencia recognized the need to democratize knowledge about fundraising within the Spanish-speaking research community in Latin America as an essential step toward advancing equity. Members of MetaDocencia, along with representatives from CZI Open Science, OLS, and other stakeholders, met in person at the [NumFOCUS](https://numfocus.org/) [DISC Unconference 2023](https://numfocus.medium.com/disc-unconference-2023-designing-inclusivity-in-open-source-14019cbdb3cb) and co-created an [initial curriculum](https://github.com/MetaDocencia/AccesoFinanciacion/blob/main/hidden-curriculum.md).
 
 ### The Plan 
