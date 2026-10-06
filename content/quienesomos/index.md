@@ -57,11 +57,11 @@ sections:
     content:
       title: "MetaDocencia en números"
       items:
-        - statistic: "32"
+        - statistic: "34"
           description: "alianzas y patrocinadores"
         - statistic: "60+"
           description: "personas colaboran con MetaDocencia"
-        - statistic: "1.070+"
+        - statistic: "1.300+"
           description: "integrantes en Slack"
         - statistic: "6.000+"
           description: "personas conectadas"
