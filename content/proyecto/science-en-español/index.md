@@ -25,13 +25,13 @@ Trabajamos en el cruce entre Ciencia Abierta, educación y construcción de comu
 
 El proyecto combina cuatro actividades conectadas entre sí.
 
-**Selección de contenidos junto a la comunidad.** Trabajamos con comunidades, organizaciones aliadas y personas especialistas en cada tema para identificar los recursos científicos cuya contextualización aporta más valor a las audiencias hispanohablantes.
+**1. Selección de contenidos junto a la comunidad.** Trabajamos con comunidades, organizaciones aliadas y personas especialistas en cada tema para identificar los recursos científicos cuya contextualización aporta más valor a las audiencias hispanohablantes.
 
-**Contextualización al español.** Traducimos y adaptamos los recursos seleccionados de forma colaborativa. Tenemos en cuenta la terminología, la relevancia cultural, los ejemplos, los supuestos y las formas de comunicar saberes, que cambian entre países y comunidades, para que reflejen contextos, experiencias y modos de aprender locales.
+**2. Contextualización al español.** Traducimos y adaptamos los recursos seleccionados de forma colaborativa. Tenemos en cuenta la terminología, la relevancia cultural, los ejemplos, los supuestos y las formas de comunicar saberes, que cambian entre países y comunidades, para que reflejen contextos, experiencias y modos de aprender locales.
 
-**Cohortes de aprendizaje en línea.** Los recursos contextualizados son la base de experiencias de aprendizaje breves, en línea y en español. Quienes participan exploran temas científicos, practican cómo comunicarlos y aplicarlos, intercambian experiencias con sus pares y encuentran formas de llevar los recursos a sus propias comunidades.
+**3. Cohortes de aprendizaje en línea.** Los recursos contextualizados son la base de experiencias de aprendizaje breves, en línea y en español. Quienes participan exploran temas científicos, practican cómo comunicarlos y aplicarlos, intercambian experiencias con sus pares y encuentran formas de llevar los recursos a sus propias comunidades.
 
-**Comunidad y efecto multiplicador.** Invitamos a participantes, especialistas, organizaciones aliadas y a quienes usan los recursos a sumarse a una comunidad en línea de acompañamiento, donde hacen preguntas, comparten experiencias, adaptan materiales, detectan nuevas oportunidades y colaboran. Lo que aprendemos en cada ciclo mejora tanto los recursos como las próximas cohortes.
+**4. Comunidad y efecto multiplicador.** Invitamos a participantes, especialistas, organizaciones aliadas y a quienes usan los recursos a sumarse a una comunidad en línea de acompañamiento, donde hacen preguntas, comparten experiencias, adaptan materiales, detectan nuevas oportunidades y colaboran. Lo que aprendemos en cada ciclo mejora tanto los recursos como las próximas cohortes.
 
 ## El impacto
 
