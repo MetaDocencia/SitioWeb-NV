@@ -67,8 +67,8 @@ sections:
           description: "personas conectadas"
         - statistic: "2.600+"
           description: "suscripciones activas a nuestro boletín"
-        - statistic: "10%+"
-          description: "porcentaje de interacción (LinkedIn 2025)"
+        - statistic: "6%+"
+          description: "años en comunidad"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
       spacing:
