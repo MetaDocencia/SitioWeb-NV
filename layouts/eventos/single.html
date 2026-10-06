@@ -11,6 +11,10 @@
 {{ $artisticPiece2Label := cond $isEN "Artistic piece 2" "Pieza artística 2" }}
 {{ $openAccessBookLabel := cond $isEN "Open access book" "Libro en acceso abierto" }}
 
+{{ $yearLabel := cond $isEN "Year" "Año" }}
+{{ $allLabel := cond $isEN "All" "Todos" }}
+{{ $countLabel := cond $isEN "participations" "participaciones" }}
+
 <section class="mx-auto px-6 py-10 max-w-6xl">
 
   <!-- Title -->
@@ -39,6 +43,36 @@
     {{ end }}
     {{ $years = sort $years "value" "desc" }}
 
+    {{/* ====== Filtros por año + contador ====== */}}
+    <div class="mt-8" data-filter-root>
+      <div class="flex items-start gap-3 flex-wrap text-sm">
+        <span class="font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-300 pt-1.5">{{ $yearLabel }}</span>
+        <div class="flex flex-wrap gap-2">
+          <button type="button"
+                  data-year="all"
+                  data-year-count="{{ len $items }}"
+                  class="year-pill is-active">
+            {{ $allLabel }}
+          </button>
+          {{ range $years }}
+            {{ $yStart := printf "%s-01-01" . }}
+            {{ $yNext := printf "%d-01-01" (add (int .) 1) }}
+            {{ $cnt := len (where (where $items "date" "ge" $yStart) "date" "lt" $yNext) }}
+            <button type="button"
+                    data-year="{{ . }}"
+                    data-year-count="{{ $cnt }}"
+                    class="year-pill">
+              {{ . }}
+            </button>
+          {{ end }}
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+        <span data-count-num class="font-semibold">{{ len $items }}</span>
+        <span>{{ $countLabel }}</span>
+      </p>
+    </div>
+
     {{/* Un bloque por año */}}
     {{ range $idx, $year := $years }}
       {{ $yStart := printf "%s-01-01" $year }}
@@ -46,124 +80,126 @@
       {{ $yearItems := where (where $items "date" "ge" $yStart) "date" "lt" $yNext }}
 
       {{ if $yearItems }}
-        <h2
-          id="eventos-{{ $year }}"
-          class="{{ if eq $idx 0 }}mt-6{{ else }}mt-10{{ end }} text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
-        >
-          {{ $year }}
-        </h2>
+        <div data-year-block="{{ $year }}">
+          <h2
+            id="eventos-{{ $year }}"
+            class="{{ if eq $idx 0 }}mt-8{{ else }}mt-10{{ end }} text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-50"
+          >
+            {{ $year }}
+          </h2>
 
-        <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {{ range sort $yearItems "date" "desc" }}
-            {{ $item := . }}
+          <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {{ range sort $yearItems "date" "desc" }}
+              {{ $item := . }}
 
-            <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
+              <article class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200/70 dark:border-gray-800 overflow-hidden flex flex-col">
 
-              <!-- Imagen del evento -->
-              {{ with $item.image }}
-                <div class="aspect-[4/3] w-full overflow-hidden">
-                  <img src="{{ . | safeURL }}"
-                       alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
-                       class="h-full w-full object-cover">
-                </div>
-              {{ end }}
-
-              <!-- Contenido de la tarjeta -->
-              <div class="p-5 flex flex-col flex-1">
-                <!-- Meta: fecha + lugar -->
-                <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-                  {{ with $item.date }}<span>{{ . }}</span>{{ end }}
-                  {{ if and $item.date $item.place }} · {{ end }}
-                  {{ with $item.place }}<span>{{ . }}</span>{{ end }}
-                </div>
-
-                <!-- Título -->
-                <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
-                  {{ $item.title }}
-                </h2>
-
-                <!-- Bajada -->
-                {{ with $item.summary }}
-                  <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
-                    {{ . }}
-                  </p>
-                {{ end }}
-
-                <!-- Enlace principal -->
-                {{ with $item.url }}
-                  {{/* Texto del botón: se puede sobreescribir por item */}}
-                  {{ $btnText := $btnDefault }}
-                  {{ with $item.btn }}{{ $btnText = . }}{{ end }}
-                  {{ if and (eq $btnText $btnDefault) $isEN }}
-                    {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
-                  {{ end }}
-                  {{ if and (eq $btnText $btnDefault) (not $isEN) }}
-                    {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
-                  {{ end }}
-
-                  <a href="{{ . }}" target="_blank" rel="noopener"
-                     class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
-                    {{ $btnText }}
-                  </a>
-                {{ end }}
-
-                <!-- Bloque de recursos -->
-                {{ $hasResources := or (or (or (or (or $item.presentation_url $item.poster_url) $item.recording_url) $item.artistic_piece_url) $item.artistic_piece2_url) $item.open_access_book_url }}
-                {{ if $hasResources }}
-                  <div class="mt-4">
-                    <p class="text-xs font-semibold text-gray-800 dark:text-gray-100">
-                      {{ $resourcesLabel }}:
-                    </p>
-                    <ul class="mt-1 text-xs text-gray-700 dark:text-gray-200 space-y-0.5 list-disc list-inside">
-                      {{ with $item.presentation_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $presentationLabel }}
-                          </a>
-                        </li>
-                      {{ end }}
-                      {{ with $item.poster_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $posterLabel }}
-                          </a>
-                        </li>
-                      {{ end }}
-                      {{ with $item.recording_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $recordingLabel }}
-                          </a>
-                        </li>
-                      {{ end }}
-                      {{ with $item.artistic_piece_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $artisticPieceLabel }}
-                          </a>
-                        </li>
-                      {{ end }}
-                      {{ with $item.artistic_piece2_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $artisticPiece2Label }}
-                          </a>
-                        </li>
-                      {{ end }}
-                      {{ with $item.open_access_book_url }}
-                        <li>
-                          <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
-                            {{ $openAccessBookLabel }}
-                          </a>
-                        </li>
-                      {{ end }}
-                    </ul>
+                <!-- Imagen del evento -->
+                {{ with $item.image }}
+                  <div class="aspect-[4/3] w-full overflow-hidden">
+                    <img src="{{ . | safeURL }}"
+                         alt="{{ with $item.image_alt }}{{ . }}{{ else }}{{ $item.title }}{{ end }}"
+                         class="h-full w-full object-cover">
                   </div>
                 {{ end }}
 
-              </div>
-            </article>
-          {{ end }}
+                <!-- Contenido de la tarjeta -->
+                <div class="p-5 flex flex-col flex-1">
+                  <!-- Meta: fecha + lugar -->
+                  <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+                    {{ with $item.date }}<span>{{ . }}</span>{{ end }}
+                    {{ if and $item.date $item.place }} · {{ end }}
+                    {{ with $item.place }}<span>{{ . }}</span>{{ end }}
+                  </div>
+
+                  <!-- Título -->
+                  <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-50 leading-snug">
+                    {{ $item.title }}
+                  </h2>
+
+                  <!-- Bajada -->
+                  {{ with $item.summary }}
+                    <p class="mt-2 text-sm text-gray-700 dark:text-gray-200">
+                      {{ . }}
+                    </p>
+                  {{ end }}
+
+                  <!-- Enlace principal -->
+                  {{ with $item.url }}
+                    {{/* Texto del botón: se puede sobreescribir por item */}}
+                    {{ $btnText := $btnDefault }}
+                    {{ with $item.btn }}{{ $btnText = . }}{{ end }}
+                    {{ if and (eq $btnText $btnDefault) $isEN }}
+                      {{ with $item.btn_en }}{{ $btnText = . }}{{ end }}
+                    {{ end }}
+                    {{ if and (eq $btnText $btnDefault) (not $isEN) }}
+                      {{ with $item.btn_es }}{{ $btnText = . }}{{ end }}
+                    {{ end }}
+
+                    <a href="{{ . }}" target="_blank" rel="noopener"
+                       class="inline-flex items-center mt-4 text-sm font-semibold text-[#00506F] hover:underline">
+                      {{ $btnText }}
+                    </a>
+                  {{ end }}
+
+                  <!-- Bloque de recursos -->
+                  {{ $hasResources := or (or (or (or (or $item.presentation_url $item.poster_url) $item.recording_url) $item.artistic_piece_url) $item.artistic_piece2_url) $item.open_access_book_url }}
+                  {{ if $hasResources }}
+                    <div class="mt-4">
+                      <p class="text-xs font-semibold text-gray-800 dark:text-gray-100">
+                        {{ $resourcesLabel }}:
+                      </p>
+                      <ul class="mt-1 text-xs text-gray-700 dark:text-gray-200 space-y-0.5 list-disc list-inside">
+                        {{ with $item.presentation_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $presentationLabel }}
+                            </a>
+                          </li>
+                        {{ end }}
+                        {{ with $item.poster_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $posterLabel }}
+                            </a>
+                          </li>
+                        {{ end }}
+                        {{ with $item.recording_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $recordingLabel }}
+                            </a>
+                          </li>
+                        {{ end }}
+                        {{ with $item.artistic_piece_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $artisticPieceLabel }}
+                            </a>
+                          </li>
+                        {{ end }}
+                        {{ with $item.artistic_piece2_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $artisticPiece2Label }}
+                            </a>
+                          </li>
+                        {{ end }}
+                        {{ with $item.open_access_book_url }}
+                          <li>
+                            <a href="{{ . }}" target="_blank" rel="noopener" class="hover:underline">
+                              {{ $openAccessBookLabel }}
+                            </a>
+                          </li>
+                        {{ end }}
+                      </ul>
+                    </div>
+                  {{ end }}
+
+                </div>
+              </article>
+            {{ end }}
+          </div>
         </div>
       {{ end }}
     {{ end }}
@@ -174,9 +210,78 @@
 
 </section>
 
-<!-- Estilos mínimos locales -->
+<!-- Estilos locales -->
 <style>
   .prose iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
   .prose img { height: auto; }
+
+  .year-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 1rem;
+    border-radius: 9999px;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .year-pill:hover {
+    background-color: #e5e7eb;
+  }
+  .year-pill.is-active {
+    background-color: #C8302A;
+    color: #ffffff;
+    border-color: #C8302A;
+  }
+  .year-pill.is-active:hover {
+    background-color: #a92822;
+    border-color: #a92822;
+  }
+  .dark .year-pill {
+    background-color: #1f2937;
+    color: #d1d5db;
+    border-color: #374151;
+  }
+  .dark .year-pill:hover {
+    background-color: #374151;
+  }
+  .dark .year-pill.is-active {
+    background-color: #C8302A;
+    color: #ffffff;
+    border-color: #C8302A;
+  }
 </style>
+
+<!-- Filtrado por año -->
+<script>
+  (function () {
+    var root = document.querySelector('[data-filter-root]');
+    if (!root) return;
+    var buttons = root.querySelectorAll('button[data-year]');
+    var countNum = root.querySelector('[data-count-num]');
+    var blocks = document.querySelectorAll('[data-year-block]');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var year = btn.getAttribute('data-year');
+        buttons.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        blocks.forEach(function (block) {
+          if (year === 'all' || block.getAttribute('data-year-block') === year) {
+            block.hidden = false;
+          } else {
+            block.hidden = true;
+          }
+        });
+        if (countNum) {
+          countNum.textContent = btn.getAttribute('data-year-count');
+        }
+      });
+    });
+  })();
+</script>
 {{ end }}
