@@ -1,36 +1,47 @@
 ---
-title: "Science en Español"
-summary: "Fostering Contextualized Resources, Online Learning, and Community Support."
-date: 2026-10-05
+title: "Science en español"
+summary: "Contextualizamos al español recursos científicos confiables y los convertimos en experiencias de aprendizaje abiertas, con cohortes en línea y una comunidad que los adapta y los comparte."
+date: 2026-10-06
 tags:
-  - Training
-  - Projects
+  - Formación
+  - Proyectos
 ---
 
-## In a nutshell
-**MetaDocencia will contextualize high-quality science resources into Spanish and turn them into open, accessible learning experiences. Through online cohorts and community support, the project will strengthen science understanding and communication while enabling reuse of the resources. This project will create a sustainable pathway for more science in Spanish-speaking communities.**
+En MetaDocencia contextualizamos al español recursos científicos de calidad y los convertimos en experiencias de aprendizaje abiertas y accesibles. A través de cohortes en línea y del acompañamiento de una comunidad, el proyecto fortalece la comprensión y la comunicación de la ciencia, y facilita que esos recursos se reutilicen. Así abrimos un camino sostenible para que haya más ciencia en las comunidades hispanohablantes.
 
-## The Problem
-Science literacy supports informed decision-making and is essential for navigating misinformation. Developing science literacy requires sustained opportunities to appreciate how science works and is practiced. Unfortunately, for many Spanish speakers in Latin America, the US, and beyond, it is often hard to find the kind of culturally relevant, reliable, and accurate scientific information created primarily for native English audiences.
+## El problema
 
-## The Solution
-We propose to advance science literacy by removing language and cultural barriers that limit awareness of, engagement with, and participation in science among Spanish-speaking communities. Together with scientific organizations, content creators, experts, and community members, MetaDocencia will identify valuable existing science resources (e.g. open NASA materials), contextualize them into Spanish, transform them into accessible learning experiences, and support a community that can use, adapt, and disseminate them. The resulting resources will be openly available, reusable, and designed to generate lasting impact.
+La alfabetización científica ayuda a tomar decisiones informadas y es clave para hacer frente a la desinformación. Desarrollarla requiere oportunidades sostenidas para entender cómo funciona la ciencia y cómo se practica. Sin embargo, muchas personas hispanohablantes de América Latina, Estados Unidos y otras regiones no encuentran con facilidad información científica confiable, precisa y culturalmente relevante como la que existe, sobre todo, para audiencias de habla inglesa.
 
-## Why MetaDocencia
-MetaDocencia works at the intersection of open science, education, and community building. Our mission is to strengthen scientific and technical capacities through accessible resources, learning spaces, and networks grounded in local perspectives. Our previous work has shown that contextualization becomes especially powerful when it is combined with active learning, peer exchange, and opportunities for participants to bring their own experiences into the learning process. This project brings those strengths together into a model that can be applied to resources from many scientific disciplines and organizations.
+## La solución
 
+Impulsamos la alfabetización científica y reducimos las barreras lingüísticas y culturales que limitan el acercamiento, el interés y la participación de las comunidades hispanohablantes en la ciencia. Junto con organizaciones científicas, personas creadoras de contenido, especialistas y miembros de la comunidad identificamos recursos científicos valiosos que ya existen, por ejemplo materiales abiertos de la NASA. Después los contextualizamos al español, los transformamos en experiencias de aprendizaje accesibles y acompañamos a una comunidad que los usa, los adapta y los difunde. Los recursos que produce el proyecto son abiertos, reutilizables y están pensados para generar un impacto duradero.
 
-## The Working Model
-The project combines four interconnected activities:
-_1. Community-informed content selection_
-We will work with communities, partners, and subject-matter experts to identify scientific resources whose contextualization could have the greatest value for Spanish-speaking audiences.
-_2. Contextualization into Spanish_
-Selected resources will be collaboratively translated and adapted, considering terminology, cultural relevance, examples, assumptions, and ways of communicating knowledge that vary across countries and communities to reflect local contexts, experiences, or ways of learning.
-_3. Online learning cohorts_
-Contextualized resources will become the foundation for short, online learning experiences in Spanish. Participants will explore science, practice communicating and applying it, exchange experiences with peers, and develop ways to bring the resources into their communities.
-_4. Community and multiplier effects_
-Participants, experts, partners, and other users of the resources will be invited 2To participate in an online, supportive community where they can ask questions, exchange experiences, adapt materials, identify new opportunities, and collaborate. Feedback from each cycle will improve both the resources and future learning cohorts.
+## Por qué MetaDocencia
 
-## Expected Impact
-The primary audience includes Spanish-speaking youth, adults, families, and other lifelong learners interested in engaging with science but facing language and cultural barriers to accessing science knowledge. The project will increase the availability and use of trustworthy, culturally relevant, openly licensed science resources in Spanish, while also developing the capacity of people to communicate and apply those resources.
-In the short term, participants will gain better access to scientific information and the opportunities to understand, interpret, use, and share it. Over time, learning cohorts and community participation are expected to strengthen participants' confidence and capacity to communicate science. Impact will extend beyond direct participants. Because we will share materials, documentation, and reusable workflows openly, educators, researchers, communicators, organizations, and other partners can reuse and adapt them independently.
+Trabajamos en el cruce entre Ciencia Abierta, educación y construcción de comunidad. Nuestra misión es construir capacidades científicas y técnicas con perspectiva local mediante redes, espacios de aprendizaje y recursos accesibles. Nuestra experiencia muestra que la contextualización gana fuerza cuando se combina con aprendizaje activo, intercambio entre pares y oportunidades para que cada participante sume sus propias experiencias al proceso. Este proyecto reúne esas fortalezas en un modelo que se puede aplicar a recursos de muchas disciplinas y organizaciones científicas.
+
+## El modelo de trabajo
+
+El proyecto combina cuatro actividades conectadas entre sí.
+
+**Selección de contenidos junto a la comunidad.** Trabajamos con comunidades, organizaciones aliadas y personas especialistas en cada tema para identificar los recursos científicos cuya contextualización aporta más valor a las audiencias hispanohablantes.
+
+**Contextualización al español.** Traducimos y adaptamos los recursos seleccionados de forma colaborativa. Tenemos en cuenta la terminología, la relevancia cultural, los ejemplos, los supuestos y las formas de comunicar saberes, que cambian entre países y comunidades, para que reflejen contextos, experiencias y modos de aprender locales.
+
+**Cohortes de aprendizaje en línea.** Los recursos contextualizados son la base de experiencias de aprendizaje breves, en línea y en español. Quienes participan exploran temas científicos, practican cómo comunicarlos y aplicarlos, intercambian experiencias con sus pares y encuentran formas de llevar los recursos a sus propias comunidades.
+
+**Comunidad y efecto multiplicador.** Invitamos a participantes, especialistas, organizaciones aliadas y a quienes usan los recursos a sumarse a una comunidad en línea de acompañamiento, donde hacen preguntas, comparten experiencias, adaptan materiales, detectan nuevas oportunidades y colaboran. Lo que aprendemos en cada ciclo mejora tanto los recursos como las próximas cohortes.
+
+## El impacto
+
+La audiencia principal está formada por jóvenes, personas adultas, familias y otras personas hispanohablantes que siguen aprendiendo a lo largo de la vida, con interés en acercarse a la ciencia y con barreras lingüísticas y culturales para acceder a sus saberes. El proyecto amplía la disponibilidad y el uso de recursos científicos en español confiables, culturalmente relevantes y de licencia abierta, y fortalece las capacidades de las personas para comunicarlos y aplicarlos.
+
+A corto plazo, quienes participan ganan acceso a información científica y oportunidades para comprenderla, interpretarla, usarla y compartirla. Con el tiempo, las cohortes y la vida en comunidad fortalecen la confianza y la capacidad para comunicar ciencia. El impacto va más allá de quienes participan directamente, porque compartimos de manera abierta materiales, documentación y flujos de trabajo reutilizables que docentes, personas que investigan o comunican y organizaciones aliadas pueden adaptar por su cuenta.
+
+<!-- TODO: completar con enlaces reales (recursos contextualizados, inscripción a cohortes, repositorio en Zenodo, blogposts relacionados)
+## Más información
+
+* [Nombre del recurso](URL)
+* [Nombre del recurso](URL)
+-->
