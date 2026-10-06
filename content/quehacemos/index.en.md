@@ -251,13 +251,13 @@ sections:
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/en/proyecto/cursos-a-medida/">Learn more →</a>
 
-            - name: "Science en Español"
-              description: |
-                <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
-                We contextualize trusted science resources into Spanish and turn them into open learning experiences, supported by online cohorts and a community that adapts and shares them.
-              <br>
-              <a class="mt-2 inline-block font-semibold underline underline-offset-4"
-                 href="/en/proyecto/science-en-espanol/">Learn more →</a>
+        - name: "Science en Español"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            We contextualize trusted science resources into Spanish and turn them into open learning experiences, supported by online cohorts and a community that adapts and shares them.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/en/proyecto/science-en-espanol/">Learn more →</a>
 
     design:
       spacing:
