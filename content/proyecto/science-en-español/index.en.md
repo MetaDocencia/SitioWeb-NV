@@ -31,7 +31,7 @@ The project combines four interconnected activities.
 
 **3. Online learning cohorts.** Contextualized resources become the foundation for short, online learning experiences in Spanish. Participants explore science, practice communicating and applying it, exchange experiences with peers and develop ways to bring the resources into their own communities.
 
-**4. Community and multiplier effects.** We invite participants, experts, partners and other users of the resources to join a supportive online community, where they ask questions, exchange experiences, adapt materials, identify new opportunities and collaborate. What we learn in each cycle improves both the resources and the cohorts that follow.
+**4. Community and multiplier effects.** We invite participants, experts, partners and other users of the resources to join a supportive online community, where they ask questions, exchange experiences, adapt materials, identify new opportunities and collaborate. Feedback from each cycle will improve both the resources and future learning cohorts.
 
 ## The impact
 
