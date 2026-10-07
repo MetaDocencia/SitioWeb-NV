@@ -8,8 +8,7 @@ intro: "[Nuestro equipo](/quienes-somos/) reúne experiencia en investigación, 
 
 servicios:
   title: "Qué ofrecemos"
-  summary: "Esta es una lista no exhaustiva de servicios, organizada según nuestras [áreas de trabajo](/que-hacemos/). También diseñamos propuestas a medida según lo que necesite cada proyecto."
-  areas:
+  summary: "Diseñamos propuestas a medida según las necesidades de cada proyecto. Esta es una lista no exhaustiva de servicios, organizada según nuestras [áreas de trabajo](/que-hacemos/)":
     - name: "Investigación"
       color: "#00506F"
       items:
@@ -38,7 +37,6 @@ servicios:
 
 cta:
   title: "¿Tienes un proyecto en mente?"
-  summary: "Escríbenos y cuéntanos qué necesitas. Armamos cada propuesta a medida, en español o en inglés."
   button_text: "Escríbenos a info@metadocencia.org"
   button_url: "mailto:info@metadocencia.org"
 
