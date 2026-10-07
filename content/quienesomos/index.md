@@ -67,7 +67,7 @@ sections:
           description: "personas conectadas"
         - statistic: "2.600+"
           description: "suscripciones activas a nuestro boletín"
-        - statistic: "6%+"
+        - statistic: "6+"
           description: "años en comunidad"
     design:
       css_class: "bg-gray-100 dark:bg-gray-900"
