@@ -26,7 +26,7 @@ user_groups:
 
 Research Software Engineering (RSE, por sus siglas en inglés) es un campo emergente que reconoce la importancia del software en la investigación actual. Quienes cumplen este rol combinan conocimientos de desarrollo de software con una comprensión del trabajo de investigación académica.
 
-Entre sus objetivos se encuentran:
+RSE Argentina tiene como objetivos:
 
 1. Conectar a profesionales que comparten desafíos similares en el rol de RSE.
 2. Promover el reconocimiento institucional del rol de RSE.
