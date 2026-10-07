@@ -8,7 +8,7 @@ intro: "[Our team](/en/quienes-somos/) brings together experience in research, t
 
 servicios:
   title: "What We Offer"
-  summary: "This is a non-exhaustive list of services, organized around our [areas of work](/en/que-hacemos/). We also design tailored proposals based on what each project needs."
+  summary: "We design tailored proposals based on the needs of each project.\\\nThis is a non-exhaustive list of services, organized around our [areas of work](/en/que-hacemos/)."
   areas:
     - name: "Research"
       color: "#00506F"
@@ -38,7 +38,6 @@ servicios:
 
 cta:
   title: "Do You Have a Project in Mind?"
-  summary: "Write to us and tell us what you need. We put together every proposal from scratch, in Spanish or in English."
   button_text: "Write to us at info@metadocencia.org"
   button_url: "mailto:info@metadocencia.org"
 
