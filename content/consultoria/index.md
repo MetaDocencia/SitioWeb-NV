@@ -37,6 +37,7 @@ servicios:
 
 cta:
   title: "¿Tienes un proyecto en mente?"
+  summary: 
   button_text: "Escríbenos a info@metadocencia.org"
   button_url: "mailto:info@metadocencia.org"
 
