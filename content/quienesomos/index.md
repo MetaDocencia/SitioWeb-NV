@@ -57,7 +57,7 @@ sections:
     content:
       title: "MetaDocencia en números"
       items:
-        - statistic: "34"
+        - statistic: "35+"
           description: "alianzas y patrocinadores"
         - statistic: "60+"
           description: "personas colaboran con MetaDocencia"
