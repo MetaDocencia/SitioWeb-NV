@@ -26,7 +26,7 @@ user_groups:
 
 Research Software Engineering (RSE) is an emerging field that recognizes the importance of software in today's research. Research Software Engineers combine software development skills with an understanding of academic research.
 
-Its goals include:
+RSE Argentina aims to:
 
 1. Connecting professionals who face similar challenges in the RSE role.
 2. Promoting institutional recognition of the RSE role.
