@@ -19,6 +19,6 @@ user_groups:
 
 ### Sobre RSLA
 
-**[Research Software Latinoamérica (RSLA)](https://www.linkedin.com/company/rs-latam/)** busca fortalecer el ecosistema de software de investigación en América Latina, promoviendo la colaboración, la reproducibilidad y la soberanía tecnológica.
+**[Research Software Latinoamérica (RSLA)](https://rs-latam.org/)** busca fortalecer el ecosistema de software de investigación en América Latina, promoviendo la colaboración, la reproducibilidad y la soberanía tecnológica.
 
 Sus actividades se centran en el intercambio de experiencias, la construcción de comunidades y el diálogo sobre el desarrollo, uso y mantenimiento de software científico. Reúne a personas que investigan, desarrollan software, trabajan con datos, brindan servicios de información, impulsan comunidades o financian la ciencia.
