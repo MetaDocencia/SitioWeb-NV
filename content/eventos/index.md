@@ -10,7 +10,7 @@ items:
   - date: "2026-10-07"
     place: "Virtual"
     title: "Beyond Visibility: How Do We Make Peer Review Truly Valued?"
-    summary: "Laura Ación participará en una mesa redonda abierta sobre reconocimiento de la revisión por pares en los sistemas de evaluación científica, organizada por PREreview y DORA."
+    summary: "Participamos en una mesa redonda abierta sobre reconocimiento de la revisión por pares en los sistemas de evaluación científica, organizada por PREreview y DORA."
     image: "/media/eventos/20261007_PREreviewDORA.jpg"
     image_alt: "Descripción de la imagen del evento Beyond Visibility organizado por PREreview y DORA."
     url: "https://us02web.zoom.us/meeting/register/Cn_XcxgVT7q7gTqFaCL4hw#/registration"
@@ -18,7 +18,7 @@ items:
   - date: "2026-09-22"
     place: "Buenos Aires, Argentina. Híbrido."
     title: "Nerdearla 2026"
-    summary: "Nos sumamos como Community Partners y presentamos quiénes somos y qué hacemos en la plataforma de videos Swap Card de comunidades aliadas."
+    summary: "Fuimos Community Partners de Nerdearla 2026, apoyando la difusión y acompañando a otras comunidades de tecnología."
     image: "/media/eventos/20260922_Nerdearla.jpg"
     image_alt: "Descripción de la imagen de Nerdearla 2026."
     url: "https://nerdearla.com/argentina/"
@@ -31,7 +31,6 @@ items:
     image: "/media/eventos/20260825_RSLA.jpg"
     image_alt: "Descripción de la imagen de Research Software Latinoamérica (RSLA26)."
     url: "https://rs-latam.org/programa.html"
-
 
   - date: "2026-04-29"
     place: "Buenos Aires, Argentina"
@@ -251,6 +250,16 @@ items:
     image_alt: "Descripción de la imagen del evento Khipu AI 2025."
     url: "https://khipu.ai/"
     presentation_url: "https://doi.org/10.5281/zenodo.17781693"
+
+  - date: "2024-12-14"
+    place: "Virtual"
+    title: "Espacio Mental: De la idea a la innovación en investigación psicológica"
+    summary: "Participamos del día 2 del evento. Hablamos sobre Ciencia Abierta y presentamos nuestra propuesta de formación."
+    image: "/media/eventos/20241214_EspacioMental.jpg"
+    image_alt: "Descripción de la imagen del evento Espacio Mental: De la idea a la innovación en investigación psicológica."
+    url: "https://psinetlab.dpdns.org/investigaciones/programas/espacio-mental/"
+    presentation_url: "https://doi.org/10.5281/zenodo.14477546"
+    recording_url: "https://youtu.be/1ltYtxupG4I?si=Qdn3z41hHp5b-qzW&t=4537"
 
   - date: "2024-12-02"
     place: "Virtual"
