@@ -19,7 +19,7 @@ user_groups:
 
 ### About R en Buenos Aires
 
-**[R en Buenos Aires](https://renbaires.github.io/)** is the local community of practice for R users. It promotes collaboration, knowledge sharing, and the use of R as a free software tool across disciplines.
+**[R en Buenos Aires](https://renbaires.github.io/)** is a community of practice for R users based in Buenos Aires, Argentina. It promotes collaboration, knowledge sharing, and the use of R as a free software tool across disciplines.
 
 Its goal is to create spaces that bring together diverse experiences around R, encourage peer learning, and connect people with different levels of experience and fields of work.
 
