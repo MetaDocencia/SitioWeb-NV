@@ -149,12 +149,7 @@ sections:
     content:
       title: "Equipo y Consejo Asesor"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboran con MetaDocencia (gris claro) ---
   - block: markdown
@@ -162,12 +157,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Comunidades Amigas (gris claro) ---
   - block: markdown
@@ -175,12 +165,7 @@ sections:
     content:
       title: "Comunidades Amigas"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
         
   # --- Confían en MetaDocencia ---
   - block: markdown
@@ -188,12 +173,7 @@ sections:
     content:
       title: "Confían en MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
         
   # ===== CTA final =====
   - block: markdown
@@ -271,10 +251,6 @@ sections:
             padding-top: .25rem !important; /* pequeño respiro interno arriba */
           }
 
-          /* Compactar espacio propio de los colapsables */
-          .mdnv-collapsible { margin-top: .35rem; margin-bottom: .4rem; }
-          .mdnv-collapsible[open] { margin-bottom: .6rem; }
-
           /* ====== Grid 2→1, con centrado vertical solo del texto ====== */
           [data-2col] { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:stretch; }
           @media (max-width: 900px) { [data-2col] { grid-template-columns: 1fr; } }
@@ -284,11 +260,6 @@ sections:
           /* Wrapper 16:9 para iframes */
           [data-16x9]{ position:relative; width:100%; padding-top:56.25%; border-radius:.5rem; overflow:hidden; }
           [data-16x9] iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:.5rem; }
-
-          /* Estética de los toggles */
-          .mdnv-collapsible > summary::-webkit-details-marker { display:none; }
-          .mdnv-collapsible > summary::after { content:"▾"; margin-left:.5rem; display:inline-block; transition:transform .15s ease; }
-          .mdnv-collapsible[open] > summary::after { transform:rotate(180deg); }
 
           /* Tipos en nombres */
           section#equipo-y-consejo-asesor .mdnv-people-name,
