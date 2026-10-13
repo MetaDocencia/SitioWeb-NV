@@ -700,3 +700,110 @@ section#solutions.features-unify .item * {
 /* iOS: evitar attachment fijo aunque venga del tema */
 @supports (-webkit-touch-callout: none) {
   #hero-home { background-attachment: scroll !important; }
+
+
+/* =============================================================
+   Ajustes para celular — MetaDocencia
+   Pegar al final del archivo que genera /css/custom.min.css
+   (normalmente assets/css/custom.css).
+
+   Dos arreglos:
+   1. Barra superior: la marca y la hamburguesa comparten fila; las
+      acciones bajan a una fila propia y el botón Súmate deja de pisarse.
+   2. Bloque de métricas (stats): pasa a una sola columna en pantallas
+      chicas, donde tres columnas fijas hacían que los números se
+      superpusieran.
+
+   Probado a 390px sobre la página publicada.
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   1. Barra superior en celular y tablet (hasta 1023px)
+
+   Causa del problema: .navbar es flex con wrap y en el DOM la
+   hamburguesa (order-3) va después del bloque de acciones
+   (order-1, con ml-auto). Con la marca ocupando 142px y las
+   acciones 290px no entran juntas en 390px, así que las acciones
+   saltan de fila y arrastran la hamburguesa contra el botón Súmate.
+
+   Solución: la hamburguesa sube a la fila de la marca, pegada al
+   borde derecho, y las acciones ocupan una fila completa debajo.
+   ------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .navbar {
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: .25rem;
+  }
+
+  /* la hamburguesa, a la derecha de la marca */
+  .navbar > label {
+    order: 1;
+    margin-left: auto;
+    flex: 0 0 auto;
+    padding-left: .75rem;
+  }
+
+  /* buscar, modo oscuro, idioma y Súmate, en su propia fila */
+  .navbar > div.order-1 {
+    order: 2;
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-end;
+    padding-bottom: .25rem;
+  }
+
+  /* el menú desplegable sigue siendo lo último */
+  .navbar > #nav-menu {
+    order: 3;
+  }
+
+  /* el separador del selector de idioma sobra en esta fila */
+  .navbar > div.order-1 > div.mr-5 {
+    margin-right: .5rem;
+  }
+}
+
+/* OPCIONAL — marca abreviada en pantallas muy chicas.
+   Si preferís que diga MD en vez de MetaDocencia, descomentá este
+   bloque. El nombre completo queda en el HTML para buscadores y
+   lectores de pantalla; solo cambia lo que se ve.
+
+@media (max-width: 380px) {
+  .navbar-brand { font-size: 0; }
+  .navbar-brand::after {
+    content: "MD";
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+*/
+
+
+/* -------------------------------------------------------------
+   2. Bloque de métricas (stats) en celular
+
+   Causa del problema: el bloque trae grid-cols-3 sin variante
+   responsive, así que en un celular quedan tres columnas de unos
+   118px y los números de 36px se desbordan unos sobre otros.
+   La clase row-gap-8 que trae el bloque es de una versión vieja de
+   Tailwind y ya no genera separación, por eso tampoco había aire.
+   ------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .blox-stats .grid.grid-cols-3 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* los separadores verticales no tienen sentido en una columna */
+  .blox-stats .grid.grid-cols-3 > div {
+    border: 0;
+  }
+
+  /* el bloque trae py-16, demasiado alto para una columna */
+  .blox-stats .px-4.py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
