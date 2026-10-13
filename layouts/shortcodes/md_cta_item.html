@@ -12,14 +12,17 @@
     btn_fg    color del texto del botón     (opcional; por defecto blanco)
 
   El cuerpo va como contenido interno y admite markdown.
+  Arriba de 1024px el título queda a la izquierda y el cuerpo a la derecha.
 */ -}}
 {{- partial "md_cta_css.html" . -}}
 {{- $accent := .Get "accent" | default "#00506F" -}}
 {{- $url := .Get "btn_url" | default "" -}}
 <section class="md-cta-item"{{ with .Get "id" }} id="{{ . }}"{{ end }} style="{{ printf "--md-cta-accent:%s" $accent | safeCSS }}">
   <span class="md-cta-item__bar" aria-hidden="true"></span>
-  <div class="md-cta-item__main">
+  <div class="md-cta-item__head">
     <h2 class="md-cta-item__title">{{ .Get "title" }}</h2>
+  </div>
+  <div class="md-cta-item__main">
     <div class="md-cta-item__body">
       {{ .Inner | markdownify }}
     </div>

@@ -5,25 +5,46 @@
   a assets/css/custom.css y deja este partial vacío.
 
   Decisiones:
-  - Ningún color de texto fijo fuera del hero: el cuerpo hereda el color del tema,
-    así la página sigue funcionando en modo oscuro sin reglas extra.
-  - Los separadores usan color-mix sobre currentColor por el mismo motivo.
+  - El bloque markdown de Hugo Blox limita el ancho del texto; las primeras reglas
+    liberan ese contenedor solo donde está esta maqueta.
+  - Ningún color de texto fijo fuera de la entrada: el cuerpo hereda el color del
+    tema, así la página sigue funcionando en modo oscuro sin reglas extra.
   - Botón: radio 4px, padding .625rem/1.25rem y peso 600, igual que el resto del sitio.
 */ -}}
 {{- $p := .Page -}}
 {{- if not ($p.Scratch.Get "md_cta_css") -}}
 {{- $p.Scratch.Set "md_cta_css" true -}}
 <style>
+/* ---------- ancho ----------
+   El contenedor del bloque markdown limita el texto a una columna angosta.
+   Lo liberamos únicamente en los contenedores que envuelven esta maqueta.
+   Para cambiar el ancho de toda la página, tocar --md-cta-max y nada más.      */
+:is(div,section,article):has(> .md-cta-hero),
+:is(div,section,article):has(> .md-cta-item),
+:is(div,section,article):has(> :is(div,section,article) > .md-cta-item){
+  max-width:none !important;
+  width:100%;
+}
+
+.md-cta-hero,
+.md-cta-item{
+  --md-cta-max:80rem;   /* 1280px. Para igualar las tarjetas del resto del sitio: 64rem */
+}
+
 /* ---------- entrada: título de la página + boletín ---------- */
 .md-cta-hero{
   background:#00506F;
   color:#fff;
   padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2.5rem);
 }
-.md-cta-hero__in{max-width:48rem;margin-inline:auto}
+.md-cta-hero__in{
+  box-sizing:border-box;
+  max-width:var(--md-cta-max);
+  margin-inline:auto;
+}
 .md-cta-hero__title{
   margin:0;color:#fff;
-  font-size:clamp(2rem,6vw,3.75rem);
+  font-size:clamp(2rem,5.5vw,3.75rem);
   font-weight:700;line-height:1.05;letter-spacing:-.025em;
   text-wrap:balance;
 }
@@ -32,7 +53,8 @@
   font-size:1.25rem;font-weight:700;line-height:1.3;
 }
 .md-cta-hero__lead{
-  margin:0;font-size:1.125rem;line-height:1.625;color:rgba(255,255,255,.92);
+  margin:0;max-width:46ch;
+  font-size:1.125rem;line-height:1.625;color:rgba(255,255,255,.92);
 }
 .md-cta-hero__form{margin-top:1.25rem}
 .md-cta-hero__more{margin:1rem 0 0}
@@ -43,26 +65,33 @@
 /* ---------- lista: una sección por forma de participar ---------- */
 .md-cta-item{
   box-sizing:border-box;
-  max-width:64rem;margin-inline:auto;
-  padding-block:clamp(1.75rem,4vw,2.75rem);
+  max-width:var(--md-cta-max);margin-inline:auto;
+  padding-block:clamp(1.75rem,4vw,3rem);
   padding-inline:clamp(1rem,4vw,2.5rem);
   display:grid;
   grid-template-columns:4px minmax(0,1fr);
-  gap:clamp(1rem,3vw,1.75rem);
+  grid-template-areas:
+    "bar head"
+    "bar main";
+  column-gap:clamp(1rem,3vw,1.75rem);
+  row-gap:.5rem;
   border-top:1px solid color-mix(in srgb, currentColor 18%, transparent);
 }
 .md-cta-item:first-of-type{border-top:0}
 .md-cta-item__bar{
+  grid-area:bar;
   border-radius:2px;
   background:var(--md-cta-accent,#00506F);
 }
+.md-cta-item__head{grid-area:head}
+.md-cta-item__main{grid-area:main;min-width:0}
 .md-cta-item__title{
-  margin:0 0 .5rem;
-  font-size:clamp(1.5rem,3.5vw,2.25rem);
+  margin:0;
+  font-size:clamp(1.5rem,3.2vw,2.25rem);
   font-weight:700;line-height:1.12;letter-spacing:-.025em;
   text-wrap:balance;
 }
-.md-cta-item__body{font-size:1.125rem;line-height:1.625}
+.md-cta-item__body{font-size:1.125rem;line-height:1.625;max-width:62ch}
 .md-cta-item__body p{margin:0 0 .75rem}
 .md-cta-item__body p:last-child{margin-bottom:0}
 .md-cta-item__actions{
@@ -87,9 +116,30 @@
   outline:2px solid currentColor;outline-offset:2px;
 }
 
+/* ---------- pantallas anchas: dos columnas ----------
+   Arriba de 1024px el título pasa a la izquierda y el cuerpo a la derecha.
+   Así la página usa el ancho disponible sin estirar las líneas de texto.
+   Para volver a una sola columna, borrar este bloque entero.               */
+@media (min-width:64em){
+  .md-cta-hero__in{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(2rem,5vw,4rem);
+    align-items:start;
+  }
+  .md-cta-hero__sub{margin-top:0}
+
+  .md-cta-item{
+    grid-template-columns:4px minmax(0,20rem) minmax(0,1fr);
+    grid-template-areas:"bar head main";
+    column-gap:clamp(1.5rem,4vw,3rem);
+  }
+  .md-cta-item__actions{margin-top:1rem}
+}
+
 /* ---------- celular ---------- */
 @media (max-width:640px){
-  .md-cta-item{grid-template-columns:3px minmax(0,1fr);gap:.875rem}
+  .md-cta-item{grid-template-columns:3px minmax(0,1fr);column-gap:.875rem}
   .md-cta-item__actions{flex-direction:column;align-items:stretch;gap:.75rem}
   .md-cta-item__btn{text-align:center;padding:.8125rem 1.25rem}
   .md-cta-item__link{text-align:center}
