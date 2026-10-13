@@ -120,17 +120,7 @@ sections:
           }
           :root.dark section#solutions a { color:#FFFFFF !important; }
 
-          /* ===== Colapsables y márgenes ===== */
-          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-          .mdnv-collapsible > summary::after {
-            content: "▾";
-            margin-left: .5rem;
-            display: inline-block;
-            transition: transform .15s ease;
-          }
-          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+          /* ===== Márgenes de las secciones de personas ===== */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#anteriores,
@@ -166,12 +156,7 @@ sections:
     content:
       title: "Team and Advisory Committee"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Team and Advisory Committee" columns=9 gapx="8rem" gapy="3rem" >}}
 
   # --- Contributors ---
   - block: markdown
@@ -179,12 +164,7 @@ sections:
     content:
       title: "Contributors"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Fellow Communities ---
   - block: markdown
@@ -192,12 +172,7 @@ sections:
     content:
       title: "Fellow Communities"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="Fellow Communities" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Fellow Communities" columns=10 gapx="8rem" gapy="3rem" >}}
         
   # --- trust ---
   - block: markdown
@@ -205,12 +180,7 @@ sections:
     content:
       title: "They Trust MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="trust" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="trust" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Former Contributors ---
   - block: markdown
@@ -218,12 +188,7 @@ sections:
     content:
       title: "Former Contributors"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Show/hide</summary>
-          <div class="mt-2">
-            {{< people_list group="Former Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Former Contributors" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: markdown
