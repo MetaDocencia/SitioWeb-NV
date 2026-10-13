@@ -120,17 +120,7 @@ sections:
           }
           :root.dark section#solutions a { color:#FFFFFF !important; }
 
-          /* ===== Colapsables y márgenes ===== */
-          .mdnv-collapsible > summary::-webkit-details-marker { display: none; }
-          .mdnv-collapsible > summary::after {
-            content: "▾";
-            margin-left: .5rem;
-            display: inline-block;
-            transition: transform .15s ease;
-          }
-          .mdnv-collapsible[open] > summary::after { transform: rotate(180deg); }
-          .mdnv-collapsible { margin-top: .25rem; margin-bottom: .65rem; }
-          .mdnv-collapsible[open] { margin-bottom: 1rem; }
+          /* ===== Márgenes de las secciones de personas ===== */
           section#equipo-y-consejo-asesor,
           section#colaboradores,
           section#confian,
@@ -166,12 +156,7 @@ sections:
     content:
       title: "Equipo y Consejo Asesor"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Equipo y Consejo Asesor" columns=9 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboran con MetaDocencia ---
   - block: markdown
@@ -179,12 +164,7 @@ sections:
     content:
       title: "Colaboran con MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Colaboradores" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Comunidades Amigas ---
   - block: markdown
@@ -192,12 +172,7 @@ sections:
     content:
       title: "Comunidades Amigas"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Comunidades amigas" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- confian ---
   - block: markdown
@@ -205,12 +180,7 @@ sections:
     content:
       title: "Confían en MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Confían en MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # --- Colaboraron con MetaDocencia ---
   - block: markdown
@@ -218,12 +188,7 @@ sections:
     content:
       title: "Colaboraron con MetaDocencia"
       text: |
-        <details class="mdnv-collapsible" open>
-          <summary class="cursor-pointer select-none text-sm opacity-80">Mostrar/ocultar</summary>
-          <div class="mt-2">
-            {{< people_list group="Colaboraron con MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
-          </div>
-        </details>
+        {{< people_list group="Colaboraron con MetaDocencia" columns=10 gapx="8rem" gapy="3rem" >}}
 
   # ===== CTA final =====
   - block: markdown
