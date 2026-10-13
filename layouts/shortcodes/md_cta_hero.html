@@ -1,0 +1,39 @@
+{{- /*
+  md_cta_hero — banda de entrada de /cta/: título de la página + boletín.
+
+  Parámetros:
+    title     título de la página (h1)
+    subtitle  título de la sección del boletín (h2)
+    lead      texto de presentación (admite markdown)
+    link_text texto del enlace secundario
+    link_url  destino del enlace secundario
+
+  El contenido interno es el formulario. Se pasa como inner para que el
+  shortcode {{< mc_form >}} se procese normalmente:
+
+    {{< md_cta_hero title="..." subtitle="..." >}}
+    {{< mc_form >}}
+    {{< /md_cta_hero >}}
+*/ -}}
+{{- partial "md_cta_css.html" . -}}
+<section class="md-cta-hero">
+  <div class="md-cta-hero__in">
+    {{- with .Get "title" }}
+    <h1 class="md-cta-hero__title">{{ . }}</h1>
+    {{- end }}
+    {{- with .Get "subtitle" }}
+    <h2 class="md-cta-hero__sub">{{ . }}</h2>
+    {{- end }}
+    {{- with .Get "lead" }}
+    <p class="md-cta-hero__lead">{{ . | markdownify }}</p>
+    {{- end }}
+    <div class="md-cta-hero__form">
+      {{ .Inner }}
+    </div>
+    {{- with .Get "link_text" }}
+    <p class="md-cta-hero__more">
+      <a href="{{ $.Get "link_url" | relLangURL }}">{{ . }}</a>
+    </p>
+    {{- end }}
+  </div>
+</section>

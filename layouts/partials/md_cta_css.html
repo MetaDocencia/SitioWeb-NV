@@ -1,0 +1,102 @@
+{{- /*
+  Estilos de la página /cta/ (propuesta A: entrada y lista).
+  Se inyectan una sola vez por página, aunque los shortcodes se usen varias veces.
+  Si prefieres moverlos al CSS global del sitio, copia el contenido de <style>
+  a assets/css/custom.css y deja este partial vacío.
+
+  Decisiones:
+  - Ningún color de texto fijo fuera del hero: el cuerpo hereda el color del tema,
+    así la página sigue funcionando en modo oscuro sin reglas extra.
+  - Los separadores usan color-mix sobre currentColor por el mismo motivo.
+  - Botón: radio 4px, padding .625rem/1.25rem y peso 600, igual que el resto del sitio.
+*/ -}}
+{{- $p := .Page -}}
+{{- if not ($p.Scratch.Get "md_cta_css") -}}
+{{- $p.Scratch.Set "md_cta_css" true -}}
+<style>
+/* ---------- entrada: título de la página + boletín ---------- */
+.md-cta-hero{
+  background:#00506F;
+  color:#fff;
+  padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2.5rem);
+}
+.md-cta-hero__in{max-width:48rem;margin-inline:auto}
+.md-cta-hero__title{
+  margin:0;color:#fff;
+  font-size:clamp(2rem,6vw,3.75rem);
+  font-weight:700;line-height:1.05;letter-spacing:-.025em;
+  text-wrap:balance;
+}
+.md-cta-hero__sub{
+  margin:1.75rem 0 .35rem;color:#fff;
+  font-size:1.25rem;font-weight:700;line-height:1.3;
+}
+.md-cta-hero__lead{
+  margin:0;font-size:1.125rem;line-height:1.625;color:rgba(255,255,255,.92);
+}
+.md-cta-hero__form{margin-top:1.25rem}
+.md-cta-hero__more{margin:1rem 0 0}
+.md-cta-hero__more a{
+  color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;
+}
+
+/* ---------- lista: una sección por forma de participar ---------- */
+.md-cta-item{
+  box-sizing:border-box;
+  max-width:64rem;margin-inline:auto;
+  padding-block:clamp(1.75rem,4vw,2.75rem);
+  padding-inline:clamp(1rem,4vw,2.5rem);
+  display:grid;
+  grid-template-columns:4px minmax(0,1fr);
+  gap:clamp(1rem,3vw,1.75rem);
+  border-top:1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+.md-cta-item:first-of-type{border-top:0}
+.md-cta-item__bar{
+  border-radius:2px;
+  background:var(--md-cta-accent,#00506F);
+}
+.md-cta-item__title{
+  margin:0 0 .5rem;
+  font-size:clamp(1.5rem,3.5vw,2.25rem);
+  font-weight:700;line-height:1.12;letter-spacing:-.025em;
+  text-wrap:balance;
+}
+.md-cta-item__body{font-size:1.125rem;line-height:1.625}
+.md-cta-item__body p{margin:0 0 .75rem}
+.md-cta-item__body p:last-child{margin-bottom:0}
+.md-cta-item__actions{
+  display:flex;flex-wrap:wrap;align-items:center;
+  gap:.875rem 1.125rem;margin-top:1.25rem;
+}
+.md-cta-item__link{
+  font-weight:600;text-decoration:underline;text-underline-offset:3px;
+}
+.md-cta-item__btn{
+  display:inline-block;
+  padding:.625rem 1.25rem;
+  border:2px solid transparent;border-radius:.25rem;
+  font-weight:600;line-height:1.5;text-decoration:none;
+  background:var(--md-cta-accent,#00506F);color:#fff;
+  transition:filter .15s ease;
+}
+.md-cta-item__btn:hover{filter:brightness(.92)}
+.md-cta-item__btn:focus-visible,
+.md-cta-item__link:focus-visible,
+.md-cta-hero__more a:focus-visible{
+  outline:2px solid currentColor;outline-offset:2px;
+}
+
+/* ---------- celular ---------- */
+@media (max-width:640px){
+  .md-cta-item{grid-template-columns:3px minmax(0,1fr);gap:.875rem}
+  .md-cta-item__actions{flex-direction:column;align-items:stretch;gap:.75rem}
+  .md-cta-item__btn{text-align:center;padding:.8125rem 1.25rem}
+  .md-cta-item__link{text-align:center}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .md-cta-item__btn{transition:none}
+}
+</style>
+{{- end -}}

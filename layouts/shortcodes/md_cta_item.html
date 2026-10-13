@@ -1,0 +1,37 @@
+{{- /*
+  md_cta_item — una forma de participar dentro de la lista de /cta/.
+
+  Parámetros:
+    id        ancla de la sección (permite enlazar /cta/#slack)
+    title     título de la sección (h2)
+    accent    color del filete lateral y del botón (hex)
+    link_text texto del enlace secundario   (opcional)
+    link_url  destino del enlace secundario (opcional)
+    btn_text  texto del botón               (opcional)
+    btn_url   destino del botón             (opcional)
+    btn_fg    color del texto del botón     (opcional; por defecto blanco)
+
+  El cuerpo va como contenido interno y admite markdown.
+*/ -}}
+{{- partial "md_cta_css.html" . -}}
+{{- $accent := .Get "accent" | default "#00506F" -}}
+{{- $url := .Get "btn_url" | default "" -}}
+<section class="md-cta-item"{{ with .Get "id" }} id="{{ . }}"{{ end }} style="{{ printf "--md-cta-accent:%s" $accent | safeCSS }}">
+  <span class="md-cta-item__bar" aria-hidden="true"></span>
+  <div class="md-cta-item__main">
+    <h2 class="md-cta-item__title">{{ .Get "title" }}</h2>
+    <div class="md-cta-item__body">
+      {{ .Inner | markdownify }}
+    </div>
+    {{- if or (.Get "link_text") (.Get "btn_text") }}
+    <div class="md-cta-item__actions">
+      {{- with .Get "link_text" }}
+      <a class="md-cta-item__link" href="{{ $.Get "link_url" }}">{{ . }}</a>
+      {{- end }}
+      {{- with .Get "btn_text" }}
+      <a class="md-cta-item__btn" href="{{ $url }}"{{ with $.Get "btn_fg" }} style="{{ printf "color:%s" . | safeCSS }}"{{ end }}>{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</section>
