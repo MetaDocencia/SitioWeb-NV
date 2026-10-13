@@ -5,8 +5,9 @@
   a assets/css/custom.css y deja este partial vacío.
 
   Decisiones:
-  - El bloque markdown de Hugo Blox limita el ancho del texto; las primeras reglas
-    liberan ese contenedor solo donde está esta maqueta.
+  - El bloque markdown de Hugo Blox envuelve el contenido en varios contenedores,
+    uno de ellos con max-w-prose (595px) y items-center. Las primeras reglas
+    liberan esa cadena solo donde está esta maqueta.
   - Ningún color de texto fijo fuera de la entrada: el cuerpo hereda el color del
     tema, así la página sigue funcionando en modo oscuro sin reglas extra.
   - Botón: radio 4px, padding .625rem/1.25rem y peso 600, igual que el resto del sitio.
@@ -16,14 +17,15 @@
 {{- $p.Scratch.Set "md_cta_css" true -}}
 <style>
 /* ---------- ancho ----------
-   El contenedor del bloque markdown limita el texto a una columna angosta.
-   Lo liberamos únicamente en los contenedores que envuelven esta maqueta.
-   Para cambiar el ancho de toda la página, tocar --md-cta-max y nada más.      */
-:is(div,section,article):has(> .md-cta-hero),
-:is(div,section,article):has(> .md-cta-item),
-:is(div,section,article):has(> :is(div,section,article) > .md-cta-item){
+   Hugo Blox anida el contenido en .prose > .flex.max-w-prose.items-center, y es
+   ese contenedor el que recorta la página a 595px. Liberamos cualquier ancestro
+   que contenga la maqueta, no solo el padre directo.
+   Para cambiar el ancho de la página, tocar --md-cta-max y nada más.          */
+:is(div,article):has(.md-cta-hero),
+:is(div,article):has(.md-cta-item){
   max-width:none !important;
-  width:100%;
+  width:100% !important;
+  align-items:stretch !important;
 }
 
 .md-cta-hero,
@@ -42,23 +44,23 @@
   max-width:var(--md-cta-max);
   margin-inline:auto;
 }
-.md-cta-hero__title{
+.md-cta-hero .md-cta-hero__title{
   margin:0;color:#fff;
   font-size:clamp(2rem,5.5vw,3.75rem);
   font-weight:700;line-height:1.05;letter-spacing:-.025em;
   text-wrap:balance;
 }
-.md-cta-hero__sub{
+.md-cta-hero .md-cta-hero__sub{
   margin:1.75rem 0 .35rem;color:#fff;
   font-size:1.25rem;font-weight:700;line-height:1.3;
 }
-.md-cta-hero__lead{
+.md-cta-hero .md-cta-hero__lead{
   margin:0;max-width:46ch;
   font-size:1.125rem;line-height:1.625;color:rgba(255,255,255,.92);
 }
-.md-cta-hero__form{margin-top:1.25rem}
+.md-cta-hero__form{margin-top:1.25rem;max-width:36rem}
 .md-cta-hero__more{margin:1rem 0 0}
-.md-cta-hero__more a{
+.md-cta-hero .md-cta-hero__more a{
   color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;
 }
 
@@ -85,31 +87,32 @@
 }
 .md-cta-item__head{grid-area:head}
 .md-cta-item__main{grid-area:main;min-width:0}
-.md-cta-item__title{
+.md-cta-item .md-cta-item__title{
   margin:0;
   font-size:clamp(1.5rem,3.2vw,2.25rem);
   font-weight:700;line-height:1.12;letter-spacing:-.025em;
   text-wrap:balance;
 }
 .md-cta-item__body{font-size:1.125rem;line-height:1.625;max-width:62ch}
-.md-cta-item__body p{margin:0 0 .75rem}
-.md-cta-item__body p:last-child{margin-bottom:0}
+.md-cta-item .md-cta-item__body p{margin:0 0 .75rem}
+.md-cta-item .md-cta-item__body p:last-child{margin-bottom:0}
 .md-cta-item__actions{
   display:flex;flex-wrap:wrap;align-items:center;
   gap:.875rem 1.125rem;margin-top:1.25rem;
 }
-.md-cta-item__link{
+.md-cta-item .md-cta-item__link{
   font-weight:600;text-decoration:underline;text-underline-offset:3px;
 }
-.md-cta-item__btn{
+.md-cta-item .md-cta-item__btn{
   display:inline-block;
   padding:.625rem 1.25rem;
   border:2px solid transparent;border-radius:.25rem;
-  font-weight:600;line-height:1.5;text-decoration:none;
+  font-weight:600;line-height:1.5;
+  text-decoration:none !important;   /* el contenedor .prose subraya todos los enlaces */
   background:var(--md-cta-accent,#00506F);color:#fff;
   transition:filter .15s ease;
 }
-.md-cta-item__btn:hover{filter:brightness(.92)}
+.md-cta-item .md-cta-item__btn:hover{filter:brightness(.92)}
 .md-cta-item__btn:focus-visible,
 .md-cta-item__link:focus-visible,
 .md-cta-hero__more a:focus-visible{
@@ -117,18 +120,11 @@
 }
 
 /* ---------- pantallas anchas: dos columnas ----------
-   Arriba de 1024px el título pasa a la izquierda y el cuerpo a la derecha.
-   Así la página usa el ancho disponible sin estirar las líneas de texto.
-   Para volver a una sola columna, borrar este bloque entero.               */
+   En la lista, a partir de 1024px el título pasa a la izquierda y el cuerpo a la
+   derecha. En la entrada recién a partir de 1152px, para que el formulario de
+   Mailchimp tenga siempre al menos 500px y no se apriete.
+   Para volver a una sola columna, borrar el bloque que corresponda.          */
 @media (min-width:64em){
-  .md-cta-hero__in{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-    gap:clamp(2rem,5vw,4rem);
-    align-items:start;
-  }
-  .md-cta-hero__sub{margin-top:0}
-
   .md-cta-item{
     grid-template-columns:4px minmax(0,20rem) minmax(0,1fr);
     grid-template-areas:"bar head main";
@@ -137,16 +133,26 @@
   .md-cta-item__actions{margin-top:1rem}
 }
 
+@media (min-width:72em){
+  .md-cta-hero__in{
+    display:grid;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+    gap:clamp(2rem,5vw,4rem);
+    align-items:start;
+  }
+  .md-cta-hero .md-cta-hero__sub{margin-top:0}
+}
+
 /* ---------- celular ---------- */
 @media (max-width:640px){
   .md-cta-item{grid-template-columns:3px minmax(0,1fr);column-gap:.875rem}
   .md-cta-item__actions{flex-direction:column;align-items:stretch;gap:.75rem}
-  .md-cta-item__btn{text-align:center;padding:.8125rem 1.25rem}
-  .md-cta-item__link{text-align:center}
+  .md-cta-item .md-cta-item__btn{text-align:center;padding:.8125rem 1.25rem}
+  .md-cta-item .md-cta-item__link{text-align:center}
 }
 
 @media (prefers-reduced-motion:reduce){
-  .md-cta-item__btn{transition:none}
+  .md-cta-item .md-cta-item__btn{transition:none}
 }
 </style>
 {{- end -}}
