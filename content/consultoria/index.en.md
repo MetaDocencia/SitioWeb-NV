@@ -15,6 +15,7 @@ servicios:
       items:
         - "Situation assessments and improvement proposals for projects and institutions."
         - "Survey and data analysis with quantitative and qualitative approaches."
+        - "Design of open metrics dashboards that make a community’s reach and growth visible."
         - "Studies on Open Science in Latin America with a global perspective."
         - "Guidance on the responsible use of data for Data Science and Artificial Intelligence."
         - "Contextualization of academic, scientific and outreach resources for Spanish-speaking communities."
