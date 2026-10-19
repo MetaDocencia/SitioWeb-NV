@@ -52,13 +52,39 @@ footer:
           <p>MetaDocencia es un proyecto con patrocinio fiscal de <a href="https://www.codeforsociety.org/" target="_blank" rel="noopener">Code for Science &amp; Society</a>.</p>
           <p>Publicado con <a href="https://hugoblox.com/" target="_blank" rel="noopener">Hugo Blox</a>. Con la tecnología de <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.</p>
         </div>
-        <nav class="mdnv-footer-right" aria-label="Enlaces legales">
-          <a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener">Pautas de Convivencia</a>
-          <a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener">Política de Accesibilidad</a>
-          <a href="/licencia/">Licencia</a>
-        </nav>
+        <div class="mdnv-footer-right">
+          <!-- redes -->
+          <nav class="mdnv-footer-legal" aria-label="Enlaces legales">
+            <a href="https://zenodo.org/records/12534196" target="_blank" rel="noopener">Pautas de Convivencia</a>
+            <a href="https://zenodo.org/records/10514982" target="_blank" rel="noopener">Política de Accesibilidad</a>
+            <a href="/licencia/">Licencia</a>
+          </nav>
+        </div>
       </div>
   link_items: []   # vacío para no duplicar
+
+# Redes sociales del footer (sirve para ambos idiomas).
+# `icon` es el nombre del ícono en la librería de marcas de Hugo Blox.
+# El orden de esta lista es el orden en que se muestran.
+social:
+  - name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/company/metadocencia/
+  - name: Instagram
+    icon: instagram
+    url: https://www.instagram.com/metadocencia/
+  - name: YouTube
+    icon: youtube
+    url: https://www.youtube.com/@metadocencia
+  - name: Bluesky
+    icon: bluesky
+    url: https://bsky.app/profile/metadocencia.org
+  - name: Mastodon
+    icon: mastodon
+    url: https://floss.social/@MetaDocencia
+  - name: X (Twitter)
+    icon: x
+    url: https://x.com/metadocencia
 
 
 
