@@ -67,6 +67,9 @@ footer:
 # `icon` es el nombre del ícono en la librería de marcas de Hugo Blox.
 # El orden de esta lista es el orden en que se muestran.
 social:
+  - name: Slack
+    icon: slack
+    url: https://w3id.org/metadocencia/slack
   - name: LinkedIn
     icon: linkedin
     url: https://www.linkedin.com/company/metadocencia/
