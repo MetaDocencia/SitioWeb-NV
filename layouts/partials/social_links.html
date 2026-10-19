@@ -1,0 +1,21 @@
+{{/*
+  layouts/partials/social_links.html
+  Fila de íconos de redes sociales. La lista se edita en config/_default/params.yaml (clave `social`).
+  Los íconos salen de la librería de marcas que ya trae Hugo Blox (data/icons/brands.yaml),
+  así que no hace falta cargar Font Awesome ni archivos SVG sueltos.
+*/}}
+{{ $isEN := eq site.Language.Lang "en" }}
+{{ with site.Params.social }}
+<nav class="mdnv-social" aria-label="{{ if $isEN }}MetaDocencia on social media{{ else }}MetaDocencia en redes sociales{{ end }}">
+  <ul>
+    {{ range . }}
+      {{ $label := printf "MetaDocencia %s %s" (cond $isEN "on" "en") .name }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener me" aria-label="{{ $label }}" title="{{ .name }}">
+          {{ partial "functions/get_icon" (dict "name" (printf "brands/%s" .icon) "attributes" `aria-hidden="true" focusable="false"`) }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

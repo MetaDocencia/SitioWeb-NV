@@ -1,14 +1,16 @@
 {{/* layouts/partials/site_footer.html */}}
 {{ $footer := site.Params.footer }}
-<footer class="mt-12">
+{{ $social := partial "social_links.html" . }}
+<footer class="mdnv-footer">
   <div class="mx-auto max-w-6xl px-6 py-8 text-sm text-gray-600 dark:text-gray-300">
     {{ with $footer.lines }}
       {{ range . }}
-        <p class="mb-1">{{ . | safeHTML }}</p>
+        {{/* El marcador <!-- redes --> en params.yaml indica dónde van los íconos */}}
+        <div class="mdnv-footer-line">{{ replace . "<!-- redes -->" $social | safeHTML }}</div>
       {{ end }}
     {{ end }}
 
-    {{/* Línea extra con enlaces en texto (opcional si quieres separar) */}}
+    {{/* Línea extra con enlaces en texto (opcional) */}}
     {{ with $footer.link_items }}
       {{ $links := . }}
       <p class="mt-2">
