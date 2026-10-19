@@ -11,6 +11,10 @@ main:
     url: /que-hacemos/
     weight: 30
 
+  - name: Consultoría
+    url: /consultoria/
+    weight: 35
+
   - name: Blog
     url: /post/
     weight: 40
