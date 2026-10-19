@@ -15,6 +15,7 @@ servicios:
       items:
         - "Diagnósticos de situación y propuestas de mejora para proyectos e instituciones."
         - "Análisis de encuestas y datos con enfoques cuantitativos y cualitativos."
+        - "Diseño de tableros abiertos de métricas para visibilizar el alcance y el crecimiento de una comunidad."
         - "Estudios sobre Ciencia Abierta en América Latina con mirada global."
         - "Asesoramiento en uso responsable de datos para Ciencia de Datos e Inteligencia Artificial."
         - "Contextualización de recursos académicos, científicos y de divulgación para comunidades hispanohablantes."
