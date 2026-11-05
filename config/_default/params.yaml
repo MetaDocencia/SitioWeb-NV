@@ -96,3 +96,10 @@ social:
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
+
+# Permite mostrar páginas del sitio en un iframe solo desde el propio sitio
+# (lo usa /impacto/). Sin esto, Hugo Blox manda X-Frame-Options: DENY.
+security:
+  allow_frame: true
+  csp:
+    policy: "frame-ancestors 'self'"

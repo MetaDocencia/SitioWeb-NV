@@ -1,0 +1,49 @@
+{{ define "main" }}
+{{/* El HTML lo genera y lo sube el repo MetaDocencia/tablero-impacto. */}}
+<iframe id="tablero-impacto" src="/embed/impacto/" title="{{ .Title }}"
+        class="block w-full border-0" style="height: 100vh" scrolling="no"></iframe>
+
+<script>
+  (function () {
+    var marco = document.getElementById('tablero-impacto');
+
+    function ajustarAlto() {
+      marco.style.height = marco.contentDocument.documentElement.offsetHeight + 'px';
+    }
+
+    // Las anclas del tablero mueven la página; los enlaces externos se abren
+    // en otra pestaña y los internos, fuera del marco.
+    function prepararEnlaces(doc) {
+      var encabezado = document.querySelector('.page-header');
+      doc.querySelectorAll('a[href]').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href.charAt(0) === '#') {
+          a.addEventListener('click', function (e) {
+            var destino = doc.getElementById(decodeURIComponent(href.slice(1)));
+            if (!destino) return;
+            e.preventDefault();
+            var margen = (encabezado ? encabezado.offsetHeight : 0) + 16;
+            window.scrollTo({
+              top: window.scrollY + marco.getBoundingClientRect().top +
+                   destino.getBoundingClientRect().top - margen,
+              behavior: 'smooth'
+            });
+          });
+        } else if (a.hostname.replace(/^www\./, '') === location.hostname.replace(/^www\./, '')) {
+          a.target = '_top';
+        } else {
+          a.target = '_blank';
+          a.rel = 'noopener';
+        }
+      });
+    }
+
+    marco.addEventListener('load', function () {
+      prepararEnlaces(marco.contentDocument);
+      ajustarAlto();
+      new marco.contentWindow.ResizeObserver(ajustarAlto)
+        .observe(marco.contentDocument.documentElement);
+    });
+  })();
+</script>
+{{ end }}
