@@ -10,7 +10,7 @@ sections:
   - block: hero
     id: hero-qs
     content:
-      title: '<span class="block text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">Quiénes somos</span>'
+      title: '<span class="block text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow">Quiénes somos</span>'
       text: |
         <p class="text-white text-lg md:text-xl leading-snug max-w-4xl mx-auto">
           Somos una comunidad de personas y organizaciones que trabajan en red, de América Latina al mundo, desde 2020.
