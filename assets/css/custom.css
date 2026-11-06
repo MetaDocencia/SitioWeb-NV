@@ -758,7 +758,7 @@ section#solutions.features-unify .item * {
 /* iOS: evitar attachment fijo aunque venga del tema */
 @supports (-webkit-touch-callout: none) {
   #hero-home { background-attachment: scroll !important; }
-
+}
 
 /* =============================================================
    Ajustes para celular — MetaDocencia
