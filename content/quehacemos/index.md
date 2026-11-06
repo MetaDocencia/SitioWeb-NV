@@ -26,7 +26,7 @@ sections:
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
              style="background:#F77B20;color:#FFFFFF;">Comunidad</a>
         </div>
-        <div class="flex justify-center mt-4">
+        <div class="flex justify-center mt-6">
           <a href="/impacto/" class="cta-tablero"
              style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#FFFFFF;font-weight:600;font-size:1rem;line-height:1.5;text-decoration:none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -179,6 +179,20 @@ sections:
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
 
+  - block: markdown
+    id: tablero-investigacion
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="/impacto/">Ver tablero de impacto →</a>
+        </p>
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "2.5rem", 0]
+        margin: [0, 0, 0, 0]
+
   - block: testimonials
     content:
       items:
@@ -284,6 +298,20 @@ sections:
           description: "Net Promoter Score"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
+
+  - block: markdown
+    id: tablero-formacion
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="/impacto/">Ver tablero de impacto →</a>
+        </p>
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "2.5rem", 0]
+        margin: [0, 0, 0, 0]
 
   - block: testimonials
     content:
@@ -398,6 +426,20 @@ sections:
           description: "personas conectadas"
     design:
       css_class: "bg-gray-50 dark:bg-gray-900"
+
+  - block: markdown
+    id: tablero-comunidad
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="/impacto/">Ver tablero de impacto →</a>
+        </p>
+    design:
+      css_class: "bg-gray-50 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "2.5rem", 0]
+        margin: [0, 0, 0, 0]
 
   - block: testimonials
     content:
