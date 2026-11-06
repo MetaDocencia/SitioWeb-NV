@@ -27,11 +27,11 @@ sections:
              style="background:#F77B20;color:#FFFFFF;">Comunidad</a>
         </div>
         <div class="flex justify-center mt-5">
-  <a href="/impacto/" class="cta-tablero">
-    <svg …></svg>
-    Ver tablero de impacto
-  </a>
-</div>
+          <a href="/impacto/" class="cta-tablero">
+             <svg …></svg>
+             Ver tablero de impacto
+          </a>
+        </div>
     design:
       spacing:
         padding: ["0rem", 0, "0rem", 0]
