@@ -126,6 +126,23 @@ sections:
       spacing:
         padding: ["1rem", 0, "1rem", 0]
 
+  # Acceso al tablero, pegado al bloque de métricas de arriba.
+  # Lleva el mismo fondo y sin espacio superior; el margen negativo que lo
+  # acerca a las cifras está en assets/css/custom.css, con el id tablero-home.
+  - block: markdown
+    id: tablero-home
+    content:
+      text: |
+        <p class="text-center">
+          <a class="font-semibold underline underline-offset-4"
+             href="/impacto/">Ver tablero de impacto →</a>
+        </p>
+    design:
+      css_class: "bg-gray-100 dark:bg-gray-900"
+      spacing:
+        padding: ["0rem", 0, "1.5rem", 0]
+        margin: [0, 0, 0, 0]
+
   - block: testimonials
     content:
       title: ""
