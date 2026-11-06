@@ -981,3 +981,30 @@ h2 span,
 
    .blox-nombre-del-bloque h2 { font-weight: 700 !important; }
 */
+
+/* =============================================================
+   Enlace al tablero dentro de los bloques de métricas — Qué hacemos
+   Pegar al final de assets/css/custom.css.
+
+   El bloque stats trae 80px de aire interno abajo que no se puede tocar
+   desde el index.md, y el bloque del enlace suma los suyos: entre las
+   cifras y el enlace quedaban 168px. Estas reglas lo suben.
+
+   Medido sobre la página publicada:
+     escritorio  168px → 40px
+     celular     127px → 47px   (ahí el bloque ya tiene menos aire)
+   ============================================================= */
+
+#tablero-investigacion,
+#tablero-formacion,
+#tablero-comunidad {
+  margin-top: -8rem;
+}
+
+@media (max-width: 640px) {
+  #tablero-investigacion,
+  #tablero-formacion,
+  #tablero-comunidad {
+    margin-top: -5rem;
+  }
+}
