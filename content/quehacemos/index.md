@@ -26,10 +26,15 @@ sections:
              class="inline-block no-underline font-semibold px-5 py-2 rounded-md"
              style="background:#F77B20;color:#FFFFFF;">Comunidad</a>
         </div>
-        <div class="flex justify-center mt-5">
-          <a href="/impacto/" class="cta-tablero">
-             <svg …></svg>
-             Ver tablero de impacto
+        <div class="flex justify-center mt-4">
+          <a href="/impacto/" class="cta-tablero"
+             style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#FFFFFF;font-weight:600;font-size:1rem;line-height:1.5;text-decoration:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                 stroke-linecap="round" aria-hidden="true"
+                 style="width:16px;height:16px;flex:none;opacity:.9;">
+              <path d="M5 19V11"/><path d="M12 19V5"/><path d="M19 19v-6"/>
+            </svg>
+            Ver tablero de impacto
           </a>
         </div>
     design:
@@ -429,8 +434,8 @@ sections:
           /* ===== Qué hacemos: acotar alto del hero y reducir padding interno ===== */
           section#hero-que-hacemos.hero-max-bounded,
           section#hero-que-hacemos.hero-max-bounded .hero-bg {
-            max-height: 90vh;   /* replicado de Home */
-            min-height: 70vh;   /* replicado de Home */
+            max-height: 90vh;
+            min-height: 60vh;   /* era 70vh: se bajó al sumar el acceso al tablero */
           }
 
           /* Móvil: achicar un poco más y recortar padding interno */
@@ -445,6 +450,13 @@ sections:
               padding-bottom: .75rem !important;
             }
           }
+
         </style>
+
+        <!-- El estilo del acceso al tablero va escrito en el propio enlace, arriba
+             en el hero: el CSS agregado acá no sobrevive al armado del sitio.
+             El hover y el foco están en assets/css/custom.css, con la clase
+             .cta-tablero. -->
+
 
 ---
