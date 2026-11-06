@@ -1008,3 +1008,48 @@ h2 span,
     margin-top: -5rem;
   }
 }
+
+/* =============================================================
+   Ajustes del home — MetaDocencia
+   Pegar al final de assets/css/custom.css.
+   Medido sobre la página publicada.
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   1. Enlace al tablero, pegado a las métricas
+
+   El bloque stats trae aire interno que no se puede tocar desde el
+   _index.md. Sin esta regla el enlace queda a 136px de las cifras;
+   con ella, a 40px. En celular el bloque ya tiene menos aire, por eso
+   el valor es menor: ahí pasa de 95px a 47px.
+   ------------------------------------------------------------- */
+#tablero-home {
+  margin-top: -6rem;
+}
+
+@media (max-width: 640px) {
+  #tablero-home {
+    margin-top: -3rem;
+  }
+}
+
+
+/* -------------------------------------------------------------
+   2. Aire entre los logos y el bloque "Apoya a la ciencia
+      latinoamericana"
+
+   Eran 236px: el spacing de la página es 6rem, así que la sección de
+   logos cerraba con 96px y la de abajo abría con otros 96px, más lo
+   que agrega el contenedor del bloque. Quedan 92px.
+
+   Para acercarlos todavía más, bajá los dos valores a la par; si tocás
+   uno solo, el bloque gris queda descentrado respecto del blanco.
+   ------------------------------------------------------------- */
+#confian {
+  padding-bottom: 1.5rem !important;
+}
+
+#apoya {
+  padding-top: 1.5rem !important;
+}
