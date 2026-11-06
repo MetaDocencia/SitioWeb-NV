@@ -865,3 +865,78 @@ section#solutions.features-unify .item * {
     padding-bottom: 2.5rem;
   }
 }
+
+/* =============================================================
+   Cambio de idioma en un clic — MetaDocencia
+   Pegar al final del archivo que genera /css/custom.min.css
+   (el mismo donde van los ajustes de celular).
+
+   Qué hace: el selector de idioma deja de ser un desplegable y pasa a
+   ser un enlace directo al otro idioma. En español muestra "English",
+   en inglés muestra "Español", y en ambos casos lleva a la traducción
+   de la página en la que estás, no al inicio.
+
+   Por qué alcanza con CSS: el tema ya genera dentro del desplegable un
+   enlace con la URL correcta. Como el sitio tiene solo dos idiomas, esa
+   lista contiene siempre un único ítem. Lo que hacemos es ocultar el
+   botón que abre el menú y mostrar ese enlace en su lugar.
+
+   Probado en metadocencia.org en las dos versiones del sitio.
+   ============================================================= */
+
+/* el botón que abre el desplegable ya no hace falta */
+header .navbar div:has(> div > button + ul) > div > button {
+  display: none !important;
+}
+
+/* la lista deja de ser un menú flotante y se vuelve parte de la barra */
+header .navbar div:has(> div > button + ul) > div > ul {
+  position: static !important;
+  display: block !important;
+  inset: auto !important;
+  min-width: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  --tw-ring-shadow: 0 0 #0000 !important;
+  --tw-ring-offset-shadow: 0 0 #0000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: 1rem !important;
+}
+
+/* el enlace, con el aspecto del resto de la barra */
+header .navbar div:has(> div > button + ul) ul a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .4rem;
+  padding: .25rem .25rem !important;
+  color: inherit !important;
+  white-space: nowrap;
+}
+
+header .navbar div:has(> div > button + ul) ul a:hover {
+  background: transparent !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* el globo, dibujado con el color que corresponda en cada tema.
+   Si preferís solo el texto, borrá esta regla. */
+header .navbar div:has(> div > button + ul) ul a::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cellipse cx='12' cy='12' rx='4.2' ry='9'/%3E%3Cpath d='M3 12h18'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cellipse cx='12' cy='12' rx='4.2' ry='9'/%3E%3Cpath d='M3 12h18'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* si una página no tiene traducción, no queda nada que ofrecer:
+   el espacio se colapsa en lugar de mostrar un control vacío */
+header .navbar div:has(> div > button + ul):not(:has(ul a)) {
+  display: none !important;
+}
