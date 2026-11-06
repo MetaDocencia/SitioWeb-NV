@@ -200,39 +200,6 @@ sections:
             py="2.5rem" px="clamp(1rem,4vw,3rem)"
             inner="raw"
         >}}
-        <p>Our social media channels:</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mt-4">
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://twitter.com/metadocencia" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Twitter
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.linkedin.com/company/metadocencia/" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             LinkedIn
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.youtube.com/@metadocencia" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             YouTube
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://www.instagram.com/metadocencia/" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Instagram
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://floss.social/@MetaDocencia" target="_blank" rel="me noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Mastodon
-          </a>
-          <a class="inline-block text-center no-underline font-semibold px-3 py-1.5 rounded-full text-xs sm:text-sm"
-             href="https://bsky.app/profile/metadocencia.org" target="_blank" rel="noopener"
-             style="background:#FFFFFF;border:1px solid rgba(148,163,184,0.6);color:#111827;">
-             Bluesky
-          </a>
-        </div>
         {{< /cta_fullwidth >}}
 
   # ===== Estilos LOCALES solo para esta página (bloque invisible) =====
