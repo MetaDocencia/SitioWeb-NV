@@ -940,3 +940,44 @@ header .navbar div:has(> div > button + ul) ul a::before {
 header .navbar div:has(> div > button + ul):not(:has(ul a)) {
   display: none !important;
 }
+
+/* =============================================================
+   Títulos con la negrita del tablero de impacto — MetaDocencia
+   Pegar al final de assets/css/custom.css, después de lo que ya está.
+
+   Hallazgo: el tablero de /impacto/ NO usa otra tipografía. Usa la misma
+   Open Sans que el resto del sitio; lo que cambia es el peso.
+
+     Tablero   h1 y h2 → 800 (ExtraBold) · h3 → 700
+     Sitio     h1 y h2 → 700 (Bold)
+
+   Por eso se ve distinto. Este bloque lleva los títulos del sitio a 800,
+   que es el peso del tablero. No hace falta cargar ninguna fuente nueva:
+   Open Sans ya está disponible en el sitio con el peso 800 real, no
+   simulado (verificado comparando el ancho del mismo texto en 700 y 800).
+
+   Los h3 y menores se dejan como están, igual que en el tablero: así se
+   mantiene la diferencia entre el título de una sección y el de una
+   tarjeta dentro de ella.
+   ============================================================= */
+
+h1,
+h2,
+h1 span,
+h2 span,
+.hero h1,
+.hero h1 * {
+  font-weight: 800 !important;
+}
+
+/* El !important es necesario porque varios títulos del sitio traen la
+   clase font-bold o font-extrabold escrita en el HTML de los bloques, y
+   esas clases le ganan a un selector de elemento.
+
+   Alcance: afecta los h1 y h2 de todo el sitio — heros, Qué hacemos,
+   Quiénes somos, internas, entradas del blog y los títulos de /cta/.
+   Para dejar alguna sección fuera, agregá una regla después de este
+   bloque, por ejemplo:
+
+   .blox-nombre-del-bloque h2 { font-weight: 700 !important; }
+*/
