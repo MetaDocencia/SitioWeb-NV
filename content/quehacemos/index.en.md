@@ -29,12 +29,6 @@ sections:
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           <a href="/en/consultoria/" class="cta-tablero"
              style="display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.15rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#FFFFFF;font-weight:600;font-size:1rem;line-height:1.5;text-decoration:none;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
-                 style="width:16px;height:16px;flex:none;opacity:.9;">
-              <rect x="3" y="7" width="18" height="13" rx="2"/>
-              <path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/>
-            </svg>
             Consulting
           </a>
         </div>
