@@ -11,10 +11,6 @@ main:
     url: /en/que-hacemos/
     weight: 30
 
-  - name: Consulting
-    url: /en/consultoria/
-    weight: 35
-
   - name: Blog
     url: /en/post/
     weight: 40
