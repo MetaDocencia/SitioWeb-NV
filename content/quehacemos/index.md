@@ -281,6 +281,14 @@ sections:
             <br>
             <a class="mt-2 inline-block font-semibold underline underline-offset-4"
                href="/proyecto/cursos-a-medida/">Ver más →</a>
+
+        - name: "Science en español"
+          description: |
+            <div style="height:3px;background:#C83737;border-radius:6px;margin:0 0 0.5rem 0;"></div>
+            Contextualizamos al español recursos científicos confiables y los convertimos en experiencias de aprendizaje abiertas, con cohortes en línea y una comunidad que los adapta y los comparte.
+            <br>
+            <a class="mt-2 inline-block font-semibold underline underline-offset-4"
+               href="/proyecto/science-en-espanol/">Ver más →</a>
     design:
       spacing:
         padding: ["0.25rem", 0, "1rem", 0]
