@@ -39,9 +39,13 @@ The primary audience includes Spanish-speaking youth, adults, families and other
 
 In the short term, participants gain better access to scientific information and more opportunities to understand, interpret, use and share it. Over time, the learning cohorts and community participation strengthen confidence and capacity to communicate science. The impact extends beyond direct participants, because we share materials, documentation and reusable workflows openly, so educators, researchers, communicators, organizations and other partners can reuse and adapt them independently.
 
-<!-- TODO: add real links (contextualized resources, cohort registration, Zenodo repository, related blogposts)
 ## More information
 
-* [Resource name](URL)
-* [Resource name](URL)
--->
+* [Contextualized Open Science Training project](/en/proyecto/nasa-spanish/)
+* [Contextualization of Open Resources project](/en/proyecto/contextualizacion/)
+* ["Open Science Tools" course workbench (in Spanish)](https://metadocencia.github.io/herramientas-de-ciencia-abierta/)
+* [2024 Open Science Teaching Report (in Spanish)](https://zenodo.org/records/15882571)
+* From our blog: [Open Science Tools: two editions in the first half of 2026](/en/post/2026/20260714-reportehca/)
+* From our blog: [The collaborative experience behind the first Spanish contextualization of NASA's introductory Open Science course](/en/post/2024/20240704-recorridoaltaca/)
+* From our blog: [What do we mean when we talk about contextualization?](/en/post/2024/20240725-contextualizacion/)
+* From our blog: [Our path to contextualizing knowledge and teaching Open Science in Spanish](/en/post/2024/20240704-recorridoaltaca/)
